@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="阿姨別生氣，短捲髮豹紋阿姨用梗圖、踩坑日記、好物推薦，把台灣每天的瑣事講得好懂又好笑。">
+  <title>阿姨別生氣｜生活雷達</title>
+  <link rel="icon" href="assets/auntie-avatar-nav.jpg">
+  <meta property="og:image" content="assets/auntie-hero.jpg">
+  <meta property="og:image:width" content="1376">
+  <meta property="og:image:height" content="768">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --yellow: #ffd51f;
+      --yellow-deep: #f5b900;
+      --pink: #ff6f97;
+      --red: #e62a32;
+      --ink: #16130f;
+      --paper: #fffdf1;
+      --cream: #fff7cf;
+      --mint: #dff4e6;
+      --sky: #eaf5ff;
+      --line: 4px solid var(--ink);
+      --shadow: 7px 7px 0 var(--ink);
+      --radius: 16px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", system-ui, sans-serif;
+      background:
+        radial-gradient(circle at 2px 2px, rgba(22,19,15,.16) 1.5px, transparent 2px) 0 0 / 18px 18px,
+        linear-gradient(180deg, #ffda35 0%, #ffc82b 45%, #ffe067 100%);
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .shell {
+      width: min(1180px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 18px 0 54px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 12px 0;
+      background: linear-gradient(180deg, rgba(255,213,31,.96), rgba(255,213,31,.80));
+      border-bottom: var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    .brand-mini {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      font-weight: 1000;
+    }
+
+    .brand-mini img {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 3px solid var(--ink);
+      object-fit: cover;
+      background: white;
+    }
+
+    .brand-mini span {
+      display: block;
+      font-size: 18px;
+      line-height: 1.05;
+      white-space: nowrap;
+    }
+
+    .brand-mini small {
+      display: block;
+      color: rgba(22,19,15,.68);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+
+    .nav a,
+    .nav button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 7px 14px 8px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: var(--paper);
+      box-shadow: 3px 3px 0 var(--ink);
+      color: var(--ink);
+      font-weight: 1000;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: transform .16s ease, box-shadow .16s ease, background-color .16s ease;
+    }
+
+    .nav button {
+      background: var(--pink);
+      color: white;
+    }
+
+    .nav a:hover,
+    .nav button:hover {
+      transform: translate(-1px, -1px);
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .nav a:focus-visible,
+    .nav button:focus-visible,
+    .cta:focus-visible {
+      outline: 4px solid var(--red);
+      outline-offset: 4px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      border: var(--line);
+      border-radius: 0 0 26px 26px;
+      background: linear-gradient(to right, rgba(255,213,31,0.97) 0%, rgba(255,213,31,0.88) 40%, rgba(255,213,31,0.5) 60%, rgba(255,213,31,0.15) 76%, rgba(255,213,31,0) 100%), url('assets/auntie-hero.jpg') center / cover no-repeat;
+      box-shadow: var(--shadow);
+      min-height: 440px;
+    }
+
+    .hero-copy {
+      max-width: 56%;
+      padding: clamp(28px, 5vw, 64px);
+      z-index: 1;
+    }
+
+
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 15px 9px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: var(--ink);
+      color: white;
+      font-size: 16px;
+      font-weight: 1000;
+    }
+
+    h1 {
+      margin: 22px 0 18px;
+      font-size: clamp(52px, 8vw, 112px);
+      line-height: .98;
+      letter-spacing: 0;
+      font-weight: 1000;
+      text-shadow:
+        3px 3px 0 white,
+        6px 6px 0 var(--ink);
+    }
+
+    .pink {
+      color: var(--pink);
+      -webkit-text-stroke: 2px var(--ink);
+    }
+
+    .hero-copy p {
+      margin: 0;
+      max-width: 570px;
+      font-size: clamp(20px, 2.4vw, 30px);
+      line-height: 1.42;
+      font-weight: 1000;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 9px 18px 11px;
+      border: var(--line);
+      border-radius: 12px;
+      background: var(--paper);
+      box-shadow: 5px 5px 0 var(--ink);
+      font-weight: 1000;
+      transition: transform .16s ease, box-shadow .16s ease;
+    }
+
+    .cta.primary {
+      background: var(--pink);
+      color: white;
+    }
+
+    .cta:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 8px 8px 0 var(--ink);
+    }
+
+    .profile-row {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 18px;
+      align-items: end;
+      margin: -36px 22px 38px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .avatar {
+      width: 138px;
+      height: 138px;
+      border: var(--line);
+      border-radius: 50%;
+      background: white;
+      box-shadow: 5px 5px 0 var(--ink);
+      object-fit: cover;
+    }
+
+    .profile-title {
+      padding-bottom: 14px;
+    }
+
+    .profile-title h2 {
+      margin: 0;
+      font-size: clamp(28px, 3vw, 34px);
+      line-height: 1.16;
+      font-weight: 1000;
+    }
+
+    .profile-title p {
+      margin: 6px 0 0;
+      color: rgba(22,19,15,.72);
+      font-weight: 900;
+    }
+
+    .stats {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      padding-bottom: 12px;
+    }
+
+    .stat {
+      min-width: 108px;
+      padding: 10px 12px;
+      border: 3px solid var(--ink);
+      border-radius: 10px;
+      background: var(--paper);
+      box-shadow: 3px 3px 0 var(--ink);
+      font-weight: 1000;
+      text-align: center;
+    }
+
+    .ticker {
+      overflow: hidden;
+      margin: 0 0 38px;
+      border: var(--line);
+      border-radius: 16px;
+      background: var(--ink);
+      color: white;
+    }
+
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      gap: 12px;
+      padding: 12px 14px;
+      animation: ticker 34s linear infinite;
+    }
+
+    .ticker span {
+      padding: 6px 14px;
+      border: 2px solid rgba(255,255,255,.28);
+      border-radius: 999px;
+      white-space: nowrap;
+      font-weight: 1000;
+    }
+
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .section {
+      margin-top: 34px;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+      gap: 22px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(38px, 5.4vw, 66px);
+      line-height: 1.04;
+      font-weight: 1000;
+      text-shadow: 2px 2px 0 white, 4px 4px 0 var(--ink);
+    }
+
+    .section-head p {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      min-height: 210px;
+      padding: 19px;
+      border: var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .card:nth-child(2n) {
+      background: var(--sky);
+    }
+
+    .card:nth-child(3n) {
+      background: var(--mint);
+    }
+
+    .label {
+      display: inline-flex;
+      padding: 5px 10px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: var(--yellow);
+      font-size: 13px;
+      font-weight: 1000;
+    }
+
+    .card h3 {
+      margin: 18px 0 8px;
+      font-size: 30px;
+      line-height: 1.05;
+      font-weight: 1000;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 17px;
+      font-weight: 800;
+      overflow-wrap: anywhere;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 16px;
+    }
+
+    .story {
+      min-height: 300px;
+      padding: 26px;
+      border: var(--line);
+      border-radius: 18px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .story.feature {
+      background: linear-gradient(135deg, #fffdf1, #ffe7ef);
+    }
+
+    .story h3 {
+      margin: 14px 0 10px;
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1;
+      font-weight: 1000;
+    }
+
+    .story p {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 850;
+    }
+
+    .post-preview {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .post-line {
+      padding: 14px;
+      border: 3px solid var(--ink);
+      border-radius: 12px;
+      background: white;
+      font-weight: 950;
+    }
+
+    .memo {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .note {
+      transform: rotate(-1.2deg);
+      min-height: 150px;
+      padding: 18px;
+      border: 3px solid var(--ink);
+      border-radius: 8px;
+      background: #fff7a8;
+      box-shadow: 5px 5px 0 rgba(22,19,15,.82);
+      font-weight: 900;
+    }
+
+    .note:nth-child(even) {
+      transform: rotate(1.1deg);
+      background: #ffdce8;
+    }
+
+    .note strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 21px;
+      font-weight: 1000;
+    }
+
+    .footer {
+      margin-top: 44px;
+      padding: 24px;
+      border: var(--line);
+      border-radius: 18px;
+      background: var(--ink);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-weight: 900;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+    }
+
+    @media (max-width: 960px) {
+      .hero {
+        min-height: 380px;
+      }
+
+      .hero-copy {
+        max-width: 100%;
+      }
+
+      .topbar,
+      .profile-row,
+      .section-head {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        align-items: stretch;
+      }
+
+      .nav {
+        width: 100%;
+      }
+
+      .profile-row {
+        align-items: start;
+      }
+
+      .stats {
+        justify-content: flex-start;
+      }
+
+      .grid,
+      .memo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .shell {
+        width: min(100% - 22px, 1180px);
+      }
+
+      .topbar {
+        position: static;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .brand-mini {
+        width: 100%;
+      }
+
+      .brand-mini span {
+        font-size: 20px;
+      }
+
+      .nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow: visible;
+      }
+
+      .nav a,
+      .nav button {
+        width: 100%;
+        white-space: normal;
+      }
+
+      .hero {
+        min-height: 360px;
+      }
+
+      .hero-copy {
+        max-width: 100%;
+        width: 100%;
+        padding: 28px 22px 24px;
+        background: linear-gradient(180deg, rgba(255,213,31,0.9), rgba(255,213,31,0.78));
+      }
+
+      h1 {
+        margin-top: 18px;
+        font-size: clamp(48px, 15vw, 68px);
+        line-height: 1.02;
+      }
+
+      .hero-copy p {
+        max-width: 100%;
+        font-size: clamp(18px, 5.5vw, 22px);
+        line-height: 1.48;
+      }
+
+      .section-head {
+        gap: 14px;
+      }
+
+      .section-head h2 {
+        font-size: clamp(34px, 10.5vw, 48px);
+        line-height: 1.14;
+        text-shadow: 2px 2px 0 white, 3px 3px 0 var(--ink);
+      }
+
+      .hero-actions {
+        margin-top: 20px;
+      }
+
+      .profile-row {
+        margin-top: -22px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .grid,
+      .memo {
+        grid-template-columns: 1fr;
+      }
+
+      .footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-track {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell" id="top">
+    <header class="topbar">
+      <a class="brand-mini" href="#top" aria-label="回到首頁">
+        <img src="assets/auntie-avatar-nav.jpg" alt="阿姨別生氣導覽小頭像，短捲棕髮與像素墨鏡近臉版">
+        <span>阿姨別生氣<small>生活梗圖部</small></span>
+      </a>
+      <nav class="nav" aria-label="網站導覽">
+        <a href="#radar">生活雷達</a>
+        <a href="#stories">踩坑日記</a>
+        <a href="#picks">好物推薦</a>
+        <button type="button" id="shuffle">換一句碎念</button>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <span class="pill">生活梗圖 · 踩坑日記 · 好物推薦</span>
+        <h1 id="heroTitle">阿姨<span class="pink">別</span><br>生氣</h1>
+        <p>台灣每天都很吵，阿姨幫你把天氣、荷包、交通、家庭群組整理成看得懂的版本。不講官腔，只講今天出門會不會煩。</p>
+        <div class="hero-actions">
+          <a class="cta primary" href="#radar">看今天重點</a>
+          <a class="cta" href="#stories">看阿姨踩坑</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="profile-row" aria-label="社群資料">
+      <img class="avatar" src="assets/auntie-avatar-profile.jpg" alt="阿姨別生氣社群圓章頭像，豹紋阿姨戴像素墨鏡比出自信手勢">
+      <div class="profile-title">
+        <h2>阿姨別生氣</h2>
+        <p>@auntienomad · 麻瓜也看得懂的台灣生活情報</p>
+      </div>
+      <div class="stats">
+        <div class="stat">4 合 1<br>內容路線</div>
+        <div class="stat">婆媽友善<br>大字版</div>
+        <div class="stat">每日更新<br><span id="clock">台北</span></div>
+      </div>
+    </div>
+
+    <div class="ticker" aria-label="今日跑馬燈">
+      <div class="ticker-track">
+        <span>台北午後容易悶，傘帶著不要鐵齒</span>
+        <span>看到限時優惠先停三秒，買便宜不等於省錢</span>
+        <span>家庭群組截圖不要急著轉，先查證才是真孝順</span>
+        <span>外送費先看清楚，別讓小錢天天漏</span>
+        <span>台北午後容易悶，傘帶著不要鐵齒</span>
+        <span>看到限時優惠先停三秒，買便宜不等於省錢</span>
+        <span>家庭群組截圖不要急著轉，先查證才是真孝順</span>
+        <span>外送費先看清楚，別讓小錢天天漏</span>
+      </div>
+    </div>
+
+    <main>
+      <section class="section" id="radar" aria-labelledby="radarTitle">
+        <div class="section-head">
+          <h2 id="radarTitle">今天的<br><span class="pink">生活雷達</span></h2>
+          <p>不是新聞台，也不是股市老師。這裡只放阿姨今天會拿來碎念家人的資訊。</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <span class="label">天氣</span>
+            <h3>29°C</h3>
+            <p>悶熱偏高，包包放一把小傘。曬衣可以，但別跟午後雷陣雨賭氣。</p>
+          </article>
+          <article class="card">
+            <span class="label">交通</span>
+            <h3>+10 分</h3>
+            <p>尖峰先多抓十分鐘。人多不是你的錯，但遲到會變成你的事。</p>
+          </article>
+          <article class="card">
+            <span class="label">荷包</span>
+            <h3>先比價</h3>
+            <p>看到限時優惠先停三秒。買便宜不等於省錢，吃灰才是真的貴。</p>
+          </article>
+          <article class="card">
+            <span class="label">阿姨碎念</span>
+            <h3 id="tipTitle">先喝水</h3>
+            <p id="tipText">很多脾氣不是人生太難，是水喝太少、手機滑太久。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="stories" aria-labelledby="storiesTitle">
+        <div class="section-head">
+          <h2 id="storiesTitle">踩坑日記</h2>
+          <p>阿姨不是都對，阿姨只是踩過坑以後，知道哪裡比較滑。</p>
+        </div>
+        <div class="story-grid">
+          <article class="story feature">
+            <span class="label">今日主篇</span>
+            <h3>訂閱制不是每個月一點點，是一年後嚇一跳。</h3>
+            <p>阿姨以前也覺得 99 元還好，後來發現家裡有五個 99，冰箱還比 App 更常被打開。今天先查一下信用卡固定扣款，刪掉三個沒在用的。</p>
+            <div class="post-preview">
+              <div class="post-line">可以發文：你以為自己在省時間，其實是在養一排自動扣款。</div>
+              <div class="post-line">可以留言：先去查訂閱清單，查完回來我們一起假裝沒哭。</div>
+            </div>
+          </article>
+          <article class="story">
+            <span class="label">家庭群組</span>
+            <h3>長輩轉傳不要直接開砲。</h3>
+            <p>先丟查證連結，再補一句「這個很多人被騙」。你是來救家人，不是來開庭。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="picks" aria-labelledby="picksTitle">
+        <div class="section-head">
+          <h2 id="picksTitle">好物推薦</h2>
+          <p>阿姨推薦不是叫你亂買，是幫你少買三個沒用的。</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <span class="label">通勤</span>
+            <h3>小摺傘</h3>
+            <p>重點不是可愛，是打開不會翻、收起來不會滴到整個包。</p>
+          </article>
+          <article class="card">
+            <span class="label">家用</span>
+            <h3>透明收納盒</h3>
+            <p>看得到才會用。看不到的東西，最後都會變成重複購買。</p>
+          </article>
+          <article class="card">
+            <span class="label">學生</span>
+            <h3>耐摔水壺</h3>
+            <p>不要再買那種漂亮但難洗的。喝水是目的，不是供奉。</p>
+          </article>
+          <article class="card">
+            <span class="label">手機</span>
+            <h3>長輩大字設定</h3>
+            <p>幫媽媽把字調大，不要等她把手機拿到一公尺外看。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="memoTitle">
+        <div class="section-head">
+          <h2 id="memoTitle">冰箱便條紙</h2>
+          <p>每天看一次，真的會少一點火氣。</p>
+        </div>
+        <div class="memo">
+          <div class="note"><strong>出門前</strong>手機、鑰匙、錢包、雨傘。四個有三個就會少一場災難。</div>
+          <div class="note"><strong>買東西前</strong>這是需要，還是今天很累想被安慰？兩種都可以，但不要搞混。</div>
+          <div class="note"><strong>家庭群組</strong>先查證，再回話。不要把愛家人的心，用吵架的方式送出去。</div>
+          <div class="note"><strong>睡前</strong>明天要帶的東西放門口。這不是強迫症，是救明天的自己。</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>OpenClaw 排版整合 · 阿姨別生氣生活雷達 · 角色設計持續迭代中</span>
+      <a href="#top">回到上面</a>
+    </footer>
+  </div>
+
+  <script>
+    const tips = [
+      ["先喝水", "很多脾氣不是人生太難，是水喝太少、手機滑太久。"],
+      ["先看冰箱", "買菜前先看冰箱，不然你買的不是食物，是重複的罪惡感。"],
+      ["先留十分鐘", "台灣交通最會教你謙卑，出門多抓十分鐘，心比較不會皺。"],
+      ["先別囤貨", "特價不是命令。家裡放到過期，就是花錢買內疚。"],
+      ["先查證", "長輩群組看到驚人消息，先查再轉。愛家人，不等於幫謠言長腳。"]
+    ];
+
+    const tipTitle = document.querySelector("#tipTitle");
+    const tipText = document.querySelector("#tipText");
+    const shuffle = document.querySelector("#shuffle");
+    const clock = document.querySelector("#clock");
+
+    function updateClock() {
+      const now = new Date();
+      clock.textContent = new Intl.DateTimeFormat("zh-TW", {
+        timeZone: "Asia/Taipei",
+        hour12: false,
+        weekday: "short",
+        hour: "2-digit",
+        minute: "2-digit"
+      }).format(now);
+    }
+
+    shuffle.addEventListener("click", () => {
+      const tip = tips[Math.floor(Math.random() * tips.length)];
+      tipTitle.textContent = tip[0];
+      tipText.textContent = tip[1];
+    });
+
+    updateClock();
+    setInterval(updateClock, 60000);
+  </script>
+</body>
+</html>
