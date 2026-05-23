@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shalun Swarm Lab | Physical AI Robot Playground</title>
+    <meta name="description" content="A local interactive Physical AI robot swarm playground inspired by Taiwan robotics and digital twin labs.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23051118'/%3E%3Ccircle cx='32' cy='32' r='18' fill='%2300e5c8'/%3E%3Cpath d='M20 36h24M24 26h16M29 18h6' stroke='%23ffcf5a' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="auntie-back" href="../../index.html#lab">← 阿姨實驗室</a>
+    <canvas id="lab" aria-label="沙崙機器人群體訓練場"></canvas>
+
+    <div class="hud hud-top">
+      <section class="brand" aria-label="專案名稱">
+        <span class="status-dot" aria-hidden="true"></span>
+        <div>
+          <strong>Shalun Swarm Lab</strong>
+          <span>Physical AI Robot Playground</span>
+        </div>
+      </section>
+
+      <section class="mission-panel" aria-label="任務模式">
+        <button class="mode active" data-mode="logistics" type="button">物流</button>
+        <button class="mode" data-mode="care" type="button">長照</button>
+        <button class="mode" data-mode="rescue" type="button">救災</button>
+        <button class="mode" data-mode="market" type="button">夜市</button>
+      </section>
+
+      <section class="readouts" aria-label="訓練狀態">
+        <span><b id="robotCount">28</b> bots</span>
+        <span><b id="beaconCount">0</b> beacons</span>
+        <span><b id="scoreCount">0</b> done</span>
+      </section>
+    </div>
+
+    <div class="hud hud-side">
+      <div>
+        <span class="label">Mission</span>
+        <strong id="missionName">物流搬運</strong>
+        <p id="missionCopy">點一下場地放任務信標，小車會自己分隊搬運。</p>
+      </div>
+      <div class="progress-wrap" aria-label="完成度">
+        <span>同步完成度</span>
+        <div class="progress"><i id="progressBar"></i></div>
+      </div>
+    </div>
+
+    <div class="hud hud-tools" aria-label="操作工具列">
+      <button id="toolBeacon" class="tool active" type="button" title="放置信標：B">信標</button>
+      <button id="toolObstacle" class="tool" type="button" title="放置障礙：O">障礙</button>
+      <button id="pauseBtn" class="tool icon" type="button" title="暫停：Space">Ⅱ</button>
+      <button id="resetBtn" class="tool icon" type="button" title="重置：R">↻</button>
+      <button id="soundBtn" class="tool icon active" type="button" title="音效">♪</button>
+    </div>
+
+    <div class="hint">
+      <span>Click / drag 放信標</span>
+      <span>右鍵放障礙</span>
+      <span>1-4 換任務</span>
+      <span>Space 暫停</span>
+    </div>
+
+    <div id="intro" class="intro" role="dialog" aria-modal="true" aria-labelledby="introTitle">
+      <div class="intro-panel">
+        <span class="intro-kicker">2026 Physical AI sandbox</span>
+        <h1 id="introTitle">沙崙群體機器人訓練場</h1>
+        <p>這不是新聞頁，也不是儀表板。這是一個本機可玩的數位孿生小實驗：放下任務信標、製造障礙，讓一群小型機器人自己編隊、避障、完成任務。</p>
+        <button id="startBtn" type="button">啟動訓練場</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
