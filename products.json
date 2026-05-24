@@ -1,0 +1,35 @@
+[
+  {
+    "id": "slot-001",
+    "status": "準備中",
+    "type": "新品 / 二手皆可",
+    "title": "商品卡位中",
+    "description": "之後每件商品會放照片、品名、狀態、價格、取貨方式，不會只丟一句「私訊」。",
+    "price": "等阿姨上貨",
+    "visual": "待上架",
+    "tags": ["照片", "品況", "價格"],
+    "available": false
+  },
+  {
+    "id": "new-clearance",
+    "status": "新品出清",
+    "type": "未拆 / 備品",
+    "title": "買多、未拆、備品",
+    "description": "適合放包裝完整、重複購買、尺寸不合或家裡囤太多的東西。",
+    "price": "低於原價",
+    "visual": "NEW",
+    "tags": ["未拆優先", "可標原價", "可標售價"],
+    "available": false
+  },
+  {
+    "id": "second-hand",
+    "status": "二手好物",
+    "type": "實拍 / 實價",
+    "title": "還能用就別浪費",
+    "description": "二手品會把刮痕、缺件、使用年限寫清楚。阿姨可以碎念，但不能唬爛。",
+    "price": "實拍實價",
+    "visual": "2nd",
+    "tags": ["狀態說明", "瑕疵標註", "面交 / 店到店"],
+    "available": false
+  }
+]

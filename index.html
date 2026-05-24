@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="阿姨別生氣，短捲髮豹紋阿姨用梗圖、踩坑日記、好物推薦，把台灣每天的瑣事講得好懂又好笑。">
+  <meta name="description" content="阿姨別生氣，短捲髮豹紋阿姨用梗圖、踩坑日記、互動實驗室、出清好物，把台灣每天的瑣事講得好懂又好笑。">
   <title>阿姨別生氣｜生活雷達</title>
   <link rel="icon" href="assets/auntie-avatar-nav.jpg">
   <meta property="og:image" content="assets/auntie-hero.jpg">
@@ -50,6 +50,18 @@
 
     button {
       font: inherit;
+    }
+
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
     }
 
     .shell {
@@ -179,20 +191,47 @@
       font-weight: 1000;
     }
 
-    h1 {
-      margin: 22px 0 18px;
-      font-size: clamp(52px, 8vw, 112px);
-      line-height: .98;
-      letter-spacing: 0;
-      font-weight: 1000;
-      text-shadow:
-        3px 3px 0 white,
-        6px 6px 0 var(--ink);
+    .comic-title {
+      display: block;
+      overflow: visible;
+      max-width: 100%;
     }
 
-    .pink {
-      color: var(--pink);
-      -webkit-text-stroke: 2px var(--ink);
+    .hero-title-svg {
+      width: min(100%, 430px);
+      margin: 22px 0 18px;
+    }
+
+    .section-title-svg {
+      width: min(100%, 420px);
+    }
+
+    .comic-title text {
+      font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", system-ui, sans-serif;
+      font-weight: 1000;
+      letter-spacing: 0;
+      paint-order: stroke fill;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+
+    .comic-title .shadow {
+      fill: var(--ink);
+      stroke: var(--ink);
+      stroke-width: 12px;
+      transform: translate(9px, 9px);
+    }
+
+    .comic-title .ink {
+      fill: var(--ink);
+      stroke: white;
+      stroke-width: 11px;
+    }
+
+    .comic-title .accent {
+      fill: var(--pink);
+      stroke: var(--ink);
+      stroke-width: 8px;
     }
 
     .hero-copy p {
@@ -322,6 +361,7 @@
 
     .section {
       margin-top: 34px;
+      scroll-margin-top: 94px;
     }
 
     .section-head {
@@ -330,14 +370,6 @@
       gap: 22px;
       align-items: end;
       margin-bottom: 18px;
-    }
-
-    .section-head h2 {
-      margin: 0;
-      font-size: clamp(38px, 5.4vw, 66px);
-      line-height: 1.04;
-      font-weight: 1000;
-      text-shadow: 2px 2px 0 white, 4px 4px 0 var(--ink);
     }
 
     .section-head p {
@@ -592,6 +624,7 @@
 
     .item-visual {
       min-height: 132px;
+      overflow: hidden;
       display: grid;
       place-items: center;
       margin-bottom: 16px;
@@ -605,6 +638,14 @@
       font-size: 44px;
       font-weight: 1000;
       text-align: center;
+    }
+
+    .item-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 132px;
+      display: block;
+      object-fit: cover;
     }
 
     .market-card h3 {
@@ -642,6 +683,34 @@
       font-size: 26px;
       line-height: 1.1;
       font-weight: 1000;
+    }
+
+    .product-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .product-actions a,
+    .product-actions span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 8px 12px 9px;
+      border: 3px solid var(--ink);
+      border-radius: 10px;
+      background: var(--pink);
+      color: white;
+      box-shadow: 3px 3px 0 var(--ink);
+      font-size: 14px;
+      font-weight: 1000;
+    }
+
+    .product-actions span {
+      background: var(--paper);
+      color: rgba(22,19,15,.68);
     }
 
     .market-note {
@@ -758,9 +827,11 @@
       }
 
       .topbar {
-        position: static;
+        position: sticky;
+        top: 0;
         flex-direction: column;
         align-items: stretch;
+        z-index: 20;
       }
 
       .brand-mini {
@@ -772,15 +843,25 @@
       }
 
       .nav {
-        display: grid;
-        grid-template-columns: 1fr;
-        overflow: visible;
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding: 0 2px 7px;
+        scrollbar-width: none;
+        scroll-snap-type: x proximity;
+      }
+
+      .nav::-webkit-scrollbar {
+        display: none;
       }
 
       .nav a,
       .nav button {
-        width: 100%;
-        white-space: normal;
+        flex: 0 0 auto;
+        width: auto;
+        min-width: 112px;
+        white-space: nowrap;
+        scroll-snap-align: start;
       }
 
       .hero {
@@ -794,10 +875,9 @@
         background: linear-gradient(180deg, rgba(255,213,31,0.9), rgba(255,213,31,0.78));
       }
 
-      h1 {
+      .hero-title-svg {
         margin-top: 18px;
-        font-size: clamp(48px, 15vw, 68px);
-        line-height: 1.02;
+        width: min(100%, 310px);
       }
 
       .hero-copy p {
@@ -810,10 +890,12 @@
         gap: 14px;
       }
 
-      .section-head h2 {
-        font-size: clamp(34px, 10.5vw, 48px);
-        line-height: 1.14;
-        text-shadow: 2px 2px 0 white, 3px 3px 0 var(--ink);
+      .section {
+        scroll-margin-top: 168px;
+      }
+
+      .section-title-svg {
+        width: min(100%, 300px);
       }
 
       .hero-actions {
@@ -866,7 +948,15 @@
     <section class="hero" aria-labelledby="heroTitle">
       <div class="hero-copy">
         <span class="pill">生活梗圖 · 踩坑日記 · 好物推薦</span>
-        <h1 id="heroTitle">阿姨<span class="pink">別</span><br>生氣</h1>
+        <h1 id="heroTitle" class="visually-hidden">阿姨別生氣</h1>
+        <svg class="comic-title hero-title-svg" viewBox="0 0 460 250" aria-hidden="true">
+          <text class="shadow" x="4" y="92" font-size="86">阿姨</text>
+          <text class="shadow" x="206" y="92" font-size="86">別</text>
+          <text class="shadow" x="4" y="210" font-size="86">生氣</text>
+          <text class="ink" x="4" y="92" font-size="86">阿姨</text>
+          <text class="accent" x="206" y="92" font-size="86">別</text>
+          <text class="ink" x="4" y="210" font-size="86">生氣</text>
+        </svg>
         <p>台灣每天都很吵，阿姨幫你把天氣、荷包、交通、家庭群組整理成看得懂的版本。不講官腔，只講今天出門會不會煩。</p>
         <div class="hero-actions">
           <a class="cta primary" href="#radar">看今天重點</a>
@@ -905,7 +995,13 @@
     <main>
       <section class="section" id="radar" aria-labelledby="radarTitle">
         <div class="section-head">
-          <h2 id="radarTitle">今天的<br><span class="pink">生活雷達</span></h2>
+          <h2 id="radarTitle" class="visually-hidden">今天的生活雷達</h2>
+          <svg class="comic-title section-title-svg" viewBox="0 0 440 150" aria-hidden="true">
+            <text class="shadow" x="4" y="58" font-size="54">今天的</text>
+            <text class="shadow" x="4" y="128" font-size="54">生活雷達</text>
+            <text class="ink" x="4" y="58" font-size="54">今天的</text>
+            <text class="accent" x="4" y="128" font-size="54">生活雷達</text>
+          </svg>
           <p>不是新聞台，也不是股市老師。這裡只放阿姨今天會拿來碎念家人的資訊。</p>
         </div>
         <div class="grid">
@@ -934,7 +1030,11 @@
 
       <section class="section" id="stories" aria-labelledby="storiesTitle">
         <div class="section-head">
-          <h2 id="storiesTitle">踩坑日記</h2>
+          <h2 id="storiesTitle" class="visually-hidden">踩坑日記</h2>
+          <svg class="comic-title section-title-svg" viewBox="0 0 440 86" aria-hidden="true">
+            <text class="shadow" x="4" y="62" font-size="58">踩坑日記</text>
+            <text class="ink" x="4" y="62" font-size="58">踩坑日記</text>
+          </svg>
           <p>阿姨不是都對，阿姨只是踩過坑以後，知道哪裡比較滑。</p>
         </div>
         <div class="story-grid">
@@ -957,7 +1057,13 @@
 
       <section class="section" id="lab" aria-labelledby="labTitle">
         <div class="section-head">
-          <h2 id="labTitle">阿姨<br><span class="pink">實驗室</span></h2>
+          <h2 id="labTitle" class="visually-hidden">阿姨實驗室</h2>
+          <svg class="comic-title section-title-svg" viewBox="0 0 440 150" aria-hidden="true">
+            <text class="shadow" x="4" y="58" font-size="54">阿姨</text>
+            <text class="shadow" x="4" y="128" font-size="54">實驗室</text>
+            <text class="ink" x="4" y="58" font-size="54">阿姨</text>
+            <text class="accent" x="4" y="128" font-size="54">實驗室</text>
+          </svg>
           <p>不是每次都要碎念，有時候也要讓大家點一點、玩一下，看看奇怪但有趣的東西會不會自己長出答案。</p>
         </div>
         <div class="lab-grid">
@@ -993,49 +1099,16 @@
 
       <section class="section" id="market" aria-labelledby="marketTitle">
         <div class="section-head">
-          <h2 id="marketTitle">阿姨<br><span class="pink">出清</span></h2>
+          <h2 id="marketTitle" class="visually-hidden">阿姨出清</h2>
+          <svg class="comic-title section-title-svg" viewBox="0 0 440 150" aria-hidden="true">
+            <text class="shadow" x="4" y="58" font-size="54">阿姨</text>
+            <text class="shadow" x="4" y="128" font-size="54">出清</text>
+            <text class="ink" x="4" y="58" font-size="54">阿姨</text>
+            <text class="accent" x="4" y="128" font-size="54">出清</text>
+          </svg>
           <p>新品、二手、買多了、用不到但還能好好用的東西，都放這裡低價出清。阿姨不畫大餅，品況講清楚再賣。</p>
         </div>
-        <div class="market-grid">
-          <article class="market-card">
-            <div class="item-visual" aria-hidden="true">待上架</div>
-            <span class="label">新品 / 二手皆可</span>
-            <h3>商品卡位中</h3>
-            <p>之後每件商品會放照片、品名、狀態、價格、取貨方式，不會只丟一句「私訊」。</p>
-            <div class="market-meta">
-              <span>照片</span>
-              <span>品況</span>
-              <span>價格</span>
-            </div>
-            <div class="price">等阿姨上貨</div>
-          </article>
-
-          <article class="market-card">
-            <div class="item-visual" aria-hidden="true">NEW</div>
-            <span class="label">新品出清</span>
-            <h3>買多、未拆、備品</h3>
-            <p>適合放包裝完整、重複購買、尺寸不合或家裡囤太多的東西。</p>
-            <div class="market-meta">
-              <span>未拆優先</span>
-              <span>可標原價</span>
-              <span>可標售價</span>
-            </div>
-            <div class="price">低於原價</div>
-          </article>
-
-          <article class="market-card">
-            <div class="item-visual" aria-hidden="true">2nd</div>
-            <span class="label">二手好物</span>
-            <h3>還能用就別浪費</h3>
-            <p>二手品會把刮痕、缺件、使用年限寫清楚。阿姨可以碎念，但不能唬爛。</p>
-            <div class="market-meta">
-              <span>狀態說明</span>
-              <span>瑕疵標註</span>
-              <span>面交 / 店到店</span>
-            </div>
-            <div class="price">實拍實價</div>
-          </article>
-        </div>
+        <div class="market-grid" id="marketGrid" aria-live="polite"></div>
         <div class="market-note">
           要上架的品項可以先準備：照片 1-3 張、品名、新品或二手、希望售價、所在縣市、寄送或面交方式。聯絡信箱：
           <a href="mailto:auntienomad@gmail.com?subject=%E9%98%BF%E5%A7%A8%E5%87%BA%E6%B8%85%E5%93%81%E4%B8%8A%E6%9E%B6">auntienomad@gmail.com</a>
@@ -1044,7 +1117,11 @@
 
       <section class="section" id="picks" aria-labelledby="picksTitle">
         <div class="section-head">
-          <h2 id="picksTitle">好物推薦</h2>
+          <h2 id="picksTitle" class="visually-hidden">好物推薦</h2>
+          <svg class="comic-title section-title-svg" viewBox="0 0 440 86" aria-hidden="true">
+            <text class="shadow" x="4" y="62" font-size="58">好物推薦</text>
+            <text class="ink" x="4" y="62" font-size="58">好物推薦</text>
+          </svg>
           <p>阿姨推薦不是叫你亂買，是幫你少買三個沒用的。</p>
         </div>
         <div class="grid">
@@ -1073,7 +1150,11 @@
 
       <section class="section" aria-labelledby="memoTitle">
         <div class="section-head">
-          <h2 id="memoTitle">冰箱便條紙</h2>
+          <h2 id="memoTitle" class="visually-hidden">冰箱便條紙</h2>
+          <svg class="comic-title section-title-svg" viewBox="0 0 440 86" aria-hidden="true">
+            <text class="shadow" x="4" y="62" font-size="58">冰箱便條紙</text>
+            <text class="ink" x="4" y="62" font-size="58">冰箱便條紙</text>
+          </svg>
           <p>每天看一次，真的會少一點火氣。</p>
         </div>
         <div class="memo">
@@ -1092,6 +1173,112 @@
   </div>
 
   <script>
+    const fallbackProducts = [
+      {
+        id: "slot-001",
+        status: "準備中",
+        type: "新品 / 二手皆可",
+        title: "商品卡位中",
+        description: "之後每件商品會放照片、品名、狀態、價格、取貨方式，不會只丟一句「私訊」。",
+        price: "等阿姨上貨",
+        visual: "待上架",
+        tags: ["照片", "品況", "價格"],
+        available: false
+      },
+      {
+        id: "new-clearance",
+        status: "新品出清",
+        type: "未拆 / 備品",
+        title: "買多、未拆、備品",
+        description: "適合放包裝完整、重複購買、尺寸不合或家裡囤太多的東西。",
+        price: "低於原價",
+        visual: "NEW",
+        tags: ["未拆優先", "可標原價", "可標售價"],
+        available: false
+      },
+      {
+        id: "second-hand",
+        status: "二手好物",
+        type: "實拍 / 實價",
+        title: "還能用就別浪費",
+        description: "二手品會把刮痕、缺件、使用年限寫清楚。阿姨可以碎念，但不能唬爛。",
+        price: "實拍實價",
+        visual: "2nd",
+        tags: ["狀態說明", "瑕疵標註", "面交 / 店到店"],
+        available: false
+      }
+    ];
+
+    const marketGrid = document.querySelector("#marketGrid");
+
+    function appendText(parent, tag, text, className) {
+      const element = document.createElement(tag);
+      if (className) element.className = className;
+      element.textContent = text;
+      parent.appendChild(element);
+      return element;
+    }
+
+    function renderProducts(products) {
+      if (!marketGrid) return;
+      marketGrid.replaceChildren();
+
+      products.forEach(product => {
+        const card = document.createElement("article");
+        card.className = "market-card";
+
+        const visual = document.createElement("div");
+        visual.className = "item-visual";
+        visual.setAttribute("aria-hidden", "true");
+        if (product.image) {
+          const image = document.createElement("img");
+          image.src = product.image;
+          image.alt = "";
+          visual.appendChild(image);
+        } else {
+          visual.textContent = product.visual || "待上架";
+        }
+        card.appendChild(visual);
+
+        appendText(card, "span", product.status || product.type || "出清品", "label");
+        appendText(card, "h3", product.title || "未命名商品");
+        appendText(card, "p", product.description || "商品資料整理中。");
+
+        const meta = document.createElement("div");
+        meta.className = "market-meta";
+        (product.tags || []).forEach(tag => appendText(meta, "span", tag));
+        card.appendChild(meta);
+
+        appendText(card, "div", product.price || "價格整理中", "price");
+
+        const actions = document.createElement("div");
+        actions.className = "product-actions";
+        if (product.available) {
+          const link = document.createElement("a");
+          link.href = `mailto:auntienomad@gmail.com?subject=${encodeURIComponent(`詢問阿姨出清：${product.title}`)}`;
+          link.textContent = "我要詢問";
+          actions.appendChild(link);
+        } else {
+          appendText(actions, "span", "整理中");
+        }
+        if (product.type) appendText(actions, "span", product.type);
+        card.appendChild(actions);
+
+        marketGrid.appendChild(card);
+      });
+    }
+
+    async function loadProducts() {
+      try {
+        const response = await fetch("products.json", { cache: "no-store" });
+        if (!response.ok) throw new Error("products.json unavailable");
+        const products = await response.json();
+        renderProducts(Array.isArray(products) ? products : fallbackProducts);
+      } catch (error) {
+        renderProducts(fallbackProducts);
+      }
+    }
+
     const tips = [
       ["先喝水", "很多脾氣不是人生太難，是水喝太少、手機滑太久。"],
       ["先看冰箱", "買菜前先看冰箱，不然你買的不是食物，是重複的罪惡感。"],
@@ -1122,6 +1309,7 @@
       tipText.textContent = tip[1];
     });
 
+    loadProducts();
     updateClock();
     setInterval(updateClock, 60000);
   </script>
