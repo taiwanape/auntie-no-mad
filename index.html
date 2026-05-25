@@ -433,31 +433,39 @@
     }
 
     .radar-zine {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      min-height: 118px;
+      padding: 16px;
       border: var(--line);
       border-radius: 14px;
       background: var(--paper);
-      box-shadow: 5px 5px 0 var(--ink);
-      overflow: hidden;
+      box-shadow: 4px 4px 0 var(--ink);
       color: inherit;
       text-decoration: none;
-      display: block;
-      transition: transform .16s ease, box-shadow .16s ease;
+      transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
     }
 
-    .radar-zine:hover {
+    .radar-zine:hover,
+    .radar-zine:focus-visible {
       transform: translate(-2px, -2px);
       box-shadow: 7px 7px 0 var(--ink);
+      background: #fff8cf;
+      outline: none;
     }
 
     .radar-zine:nth-child(2) {
-      background: var(--sky);
+      background: var(--paper);
     }
 
     .zine-art {
-      aspect-ratio: 12 / 5;
-      height: clamp(150px, 17vw, 210px);
-      border-bottom: var(--line);
-      background: var(--cream);
+      flex: 0 0 88px;
+      width: 88px;
+      height: 72px;
+      border: 3px solid var(--ink);
+      border-radius: 10px;
+      background: var(--ink);
       overflow: hidden;
     }
 
@@ -469,13 +477,14 @@
     }
 
     .zine-body {
-      padding: 14px 16px 16px;
+      min-width: 0;
+      padding: 0;
     }
 
     .zine-body h3 {
-      margin: 8px 0 6px;
-      font-size: clamp(20px, 2.25vw, 26px);
-      line-height: 1.05;
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.18;
       font-weight: 1000;
       display: -webkit-box;
       -webkit-line-clamp: 2;
@@ -484,10 +493,11 @@
     }
 
     .zine-body p {
-      margin: 0;
+      margin: 5px 0 0;
       font-size: 14px;
-      line-height: 1.45;
+      line-height: 1.42;
       font-weight: 850;
+      color: rgba(22,19,15,.62);
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -507,6 +517,11 @@
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
+    }
+
+    .radar-zine .zine-meta,
+    .radar-zine .zine-caption {
+      display: none;
     }
 
     .zine-caption strong {
@@ -548,15 +563,11 @@
     }
 
     .radar-zine .read-more {
-      margin-top: 10px;
-      padding: 7px 10px;
-      font-size: 13px;
-    }
-
-    @media (min-width: 900px) {
-      .radar-zine-grid {
-        max-width: 1080px;
-      }
+      margin-top: 9px;
+      padding: 5px 9px;
+      border-width: 2px;
+      font-size: 12px;
+      box-shadow: 2px 2px 0 var(--ink);
     }
 
     .story-grid {
@@ -1385,7 +1396,7 @@
               <h3>五月天大巨蛋搶票：手指比腦袋還早排隊。</h3>
               <p>台北大巨蛋演唱會門票開賣又讓社群變成大型壓力測試。阿姨看完只想說：搶票不是買票，是家庭網路、手速和情緒管理的聯合考。</p>
               <div class="zine-caption"><strong>點進去看：</strong>為什麼大家明知道會崩潰，還是準時坐在電腦前。</div>
-              <span class="read-more">讀完整篇</span>
+              <span class="read-more">讀故事</span>
             </div>
           </a>
 
@@ -1401,7 +1412,7 @@
               <h3 id="tipTitle">梅雨季來了：衣服不是沒乾，是在陽台修仙。</h3>
               <p id="tipText">中央氣象署的梅雨科普說，台灣 5、6 月常進入多雨期。阿姨翻譯：衣服會開始有自己的行程，除濕機也正式升格成家庭成員。</p>
               <div class="zine-caption"><strong>點進去看：</strong>梅雨季為什麼像是全家衣櫃的壓力測試。</div>
-              <span class="read-more">讀完整篇</span>
+              <span class="read-more">讀故事</span>
             </div>
           </a>
         </div>
