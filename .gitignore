@@ -2,3 +2,9 @@
 *.tmp
 .DS_Store
 Thumbs.db
+.playwright-cli/
+qa-*.png
+qa-*.pdf
+restore-points/
+assets/archive/
+assets/reference-only/
