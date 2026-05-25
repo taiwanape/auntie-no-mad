@@ -971,6 +971,17 @@
       border-radius: 14px;
       background: var(--paper);
       box-shadow: 4px 4px 0 var(--ink);
+      color: var(--ink);
+      text-decoration: none;
+      transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+    }
+
+    .watchlist-card:hover,
+    .watchlist-card:focus-visible {
+      transform: translate(-2px, -2px);
+      box-shadow: 7px 7px 0 var(--ink);
+      background: #fff8cf;
+      outline: none;
     }
 
     .wl-symbol {
@@ -1003,6 +1014,19 @@
       font-size: 14px;
       font-weight: 800;
       color: rgba(22,19,15,.62);
+    }
+
+    .wl-story-link {
+      display: inline-flex;
+      margin-top: 9px;
+      padding: 5px 9px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: var(--pink);
+      color: white;
+      font-size: 12px;
+      font-weight: 1000;
+      box-shadow: 2px 2px 0 var(--ink);
     }
 
     .etf-grid {
@@ -1426,34 +1450,38 @@
           </div>
           <p class="investing-desc">阿姨幫你挑了幾個大家最近在聊的股票跟 ETF，附上白話筆記。這些是「大家在看什麼」，不是「你該買什麼」。</p>
           <div class="watchlist-grid">
-            <article class="watchlist-card">
+            <a class="watchlist-card" href="stocks/2330-tsmc.html" aria-label="閱讀台積電近期故事">
               <span class="wl-symbol">2330</span>
               <div class="wl-info">
                 <div class="wl-name">台積電</div>
                 <div class="wl-note">護國神山，但股價高不代表穩賺。阿姨只說它新聞多，你要自己看。</div>
+                <span class="wl-story-link">讀故事</span>
               </div>
-            </article>
-            <article class="watchlist-card">
+            </a>
+            <a class="watchlist-card" href="stocks/0050-taiwan50.html" aria-label="閱讀元大台灣50近期故事">
               <span class="wl-symbol">0050</span>
               <div class="wl-info">
                 <div class="wl-name">元大台灣50</div>
                 <div class="wl-note">買一包等於買台灣前 50 大公司，不用挑股，但還是會跟著大盤一起晃。</div>
+                <span class="wl-story-link">讀故事</span>
               </div>
-            </article>
-            <article class="watchlist-card">
+            </a>
+            <a class="watchlist-card" href="stocks/0056-high-dividend.html" aria-label="閱讀元大高股息近期故事">
               <span class="wl-symbol">0056</span>
               <div class="wl-info">
                 <div class="wl-name">元大高股息</div>
                 <div class="wl-note">挑高配息的公司，喜歡領錢的感覺可以研究。但配息不是保證，今年有明年不一定。</div>
+                <span class="wl-story-link">讀故事</span>
               </div>
-            </article>
-            <article class="watchlist-card">
+            </a>
+            <a class="watchlist-card" href="stocks/00878-esg-dividend.html" aria-label="閱讀國泰永續高股息近期故事">
               <span class="wl-symbol">00878</span>
               <div class="wl-info">
                 <div class="wl-name">國泰永續高股息</div>
                 <div class="wl-note">近年人氣王，主打 ESG + 高股息。人多的地方阿姨會多看兩眼，不會跟著擠。</div>
+                <span class="wl-story-link">讀故事</span>
               </div>
-            </article>
+            </a>
           </div>
         </div>
 
