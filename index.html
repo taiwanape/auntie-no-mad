@@ -425,6 +425,110 @@
       overflow-wrap: anywhere;
     }
 
+    .radar-zine-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .radar-zine {
+      min-height: 430px;
+      border: var(--line);
+      border-radius: 18px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .radar-zine:nth-child(2) {
+      background: var(--sky);
+    }
+
+    .zine-art {
+      min-height: 178px;
+      padding: 16px;
+      border-bottom: var(--line);
+      background:
+        radial-gradient(circle at 18% 20%, rgba(255,255,255,.9) 0 7px, transparent 8px),
+        radial-gradient(circle at 78% 14%, rgba(255,111,151,.35) 0 18px, transparent 19px),
+        linear-gradient(135deg, rgba(255,213,31,.95), rgba(255,111,151,.24));
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .zine-panel {
+      min-height: 136px;
+      padding: 14px;
+      border: 3px solid var(--ink);
+      border-radius: 14px;
+      background: rgba(255,253,241,.92);
+      box-shadow: 4px 4px 0 var(--ink);
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      text-align: center;
+      font-weight: 1000;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .zine-panel::after {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 2px dashed rgba(22,19,15,.18);
+      border-radius: 10px;
+      pointer-events: none;
+    }
+
+    .zine-icon {
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1;
+    }
+
+    .zine-sfx {
+      margin-top: 8px;
+      padding: 4px 9px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: white;
+      font-size: 13px;
+      letter-spacing: 0;
+    }
+
+    .zine-body {
+      padding: 22px;
+    }
+
+    .zine-body h3 {
+      margin: 14px 0 10px;
+      font-size: clamp(30px, 3.8vw, 48px);
+      line-height: 1;
+      font-weight: 1000;
+    }
+
+    .zine-body p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.55;
+      font-weight: 850;
+    }
+
+    .zine-caption {
+      margin-top: 16px;
+      padding: 12px 14px;
+      border: 3px solid var(--ink);
+      border-radius: 12px;
+      background: white;
+      font-weight: 1000;
+    }
+
+    .zine-caption strong {
+      color: var(--pink);
+    }
+
     .story-grid {
       display: grid;
       grid-template-columns: 1.15fr .85fr;
@@ -1002,6 +1106,7 @@
 
       .grid,
       .lab-grid,
+      .radar-zine-grid,
       .market-grid,
       .memo {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1113,6 +1218,7 @@
 
       .grid,
       .lab-grid,
+      .radar-zine-grid,
       .market-grid,
       .memo {
         grid-template-columns: 1fr;
@@ -1210,28 +1316,45 @@
             <text class="ink" x="4" y="58" font-size="54">今天的</text>
             <text class="accent" x="4" y="128" font-size="54">生活雷達</text>
           </svg>
-          <p>不是新聞台，也不是股市老師。這裡只放阿姨今天會拿來碎念家人的資訊。</p>
+          <p>今天先不報天氣交通了，阿姨改抓兩個比較有畫面的日常荒謬：一個手指很忙，一個衣服很濕。</p>
         </div>
-        <div class="grid">
-          <article class="card">
-            <span class="label">天氣</span>
-            <h3>29°C</h3>
-            <p>悶熱偏高，包包放一把小傘。曬衣可以，但別跟午後雷陣雨賭氣。</p>
+        <div class="radar-zine-grid">
+          <article class="radar-zine">
+            <div class="zine-art" aria-hidden="true">
+              <div class="zine-panel">
+                <span class="zine-icon">🎫</span>
+                <span class="zine-sfx">F5 F5 F5</span>
+              </div>
+              <div class="zine-panel">
+                <span class="zine-icon">🍲</span>
+                <span class="zine-sfx">湯先滾</span>
+              </div>
+            </div>
+            <div class="zine-body">
+              <span class="label">社群雷達</span>
+              <h3>搶票手指，先不要離家出走。</h3>
+              <p>看到熱門演唱會、快閃優惠、限量聯名，很多人的手指會突然比腦袋早下班。阿姨建議：開賣前先登入、先吃飯、先深呼吸，不要邊煮湯邊刷新，最後票沒搶到，湯也變成火山。</p>
+              <div class="zine-caption"><strong>阿姨結論：</strong>秒殺活動不是購物，是心跳健檢。</div>
+            </div>
           </article>
-          <article class="card">
-            <span class="label">交通</span>
-            <h3>+10 分</h3>
-            <p>尖峰先多抓十分鐘。人多不是你的錯，但遲到會變成你的事。</p>
-          </article>
-          <article class="card">
-            <span class="label">荷包</span>
-            <h3>先比價</h3>
-            <p>看到限時優惠先停三秒。買便宜不等於省錢，吃灰才是真的貴。</p>
-          </article>
-          <article class="card">
-            <span class="label">阿姨碎念</span>
-            <h3 id="tipTitle">先喝水</h3>
-            <p id="tipText">很多脾氣不是人生太難，是水喝太少、手機滑太久。</p>
+
+          <article class="radar-zine">
+            <div class="zine-art" aria-hidden="true">
+              <div class="zine-panel">
+                <span class="zine-icon">🌧️</span>
+                <span class="zine-sfx">梅雨副本</span>
+              </div>
+              <div class="zine-panel">
+                <span class="zine-icon">👕</span>
+                <span class="zine-sfx">還沒乾</span>
+              </div>
+            </div>
+            <div class="zine-body">
+              <span class="label">生活怪談</span>
+              <h3 id="tipTitle">衣服在陽台修仙。</h3>
+              <p id="tipText">梅雨季一來，衣服不是曬乾，是在陽台進行長期靜置。昨天濕、今天潮、明天有一點人生味。阿姨宣布：除濕機不是家電，是家庭情緒穩定器。</p>
+              <div class="zine-caption"><strong>阿姨結論：</strong>衣服不乾時，不要懷疑自己，先懷疑天空。</div>
+            </div>
           </article>
         </div>
       </section>
@@ -1435,11 +1558,10 @@
 
   <script>
     const tips = [
-      ["先喝水", "很多脾氣不是人生太難，是水喝太少、手機滑太久。"],
-      ["先看冰箱", "買菜前先看冰箱，不然你買的不是食物，是重複的罪惡感。"],
-      ["先留十分鐘", "台灣交通最會教你謙卑，出門多抓十分鐘，心比較不會皺。"],
-      ["先別囤貨", "特價不是命令。家裡放到過期，就是花錢買內疚。"],
-      ["先查證", "長輩群組看到驚人消息，先查再轉。愛家人，不等於幫謠言長腳。"]
+      ["衣服在陽台修仙。", "梅雨季一來，衣服不是曬乾，是在陽台進行長期靜置。昨天濕、今天潮、明天有一點人生味。阿姨宣布：除濕機不是家電，是家庭情緒穩定器。"],
+      ["手指已經先排隊。", "熱門票券還沒開賣，手指已經開始 F5。阿姨提醒：先登入、先喝水、先不要罵 Wi-Fi，票沒有買到，血壓也不要一起上架。"],
+      ["折價券不是聖旨。", "看到限時優惠先停三秒。買便宜不等於省錢，買了用不到，才叫把錢放去角落長灰。"],
+      ["家庭群組先不要開炮。", "長輩轉傳怪消息，先丟查證連結，再補一句『這個很多人被騙』。你是來救家人，不是來主持法庭。"]
     ];
 
     const tipTitle = document.querySelector("#tipTitle");
