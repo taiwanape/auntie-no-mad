@@ -140,6 +140,25 @@
     @media (max-width: 640px) {
       .top { align-items: flex-start; flex-direction: column; }
       .back { width: 100%; justify-content: center; }
+      article { border-radius: 18px; }
+      .content { padding: 22px 20px 30px; }
+      .label {
+        font-size: 13px;
+        line-height: 1.25;
+        box-shadow: 2px 2px 0 var(--ink);
+      }
+      h1 {
+        font-size: clamp(26px, 7.8vw, 31px);
+        line-height: 1.22;
+        text-shadow: 2px 2px 0 white, 3px 3px 0 var(--ink);
+      }
+      .deck {
+        font-size: 18px;
+        line-height: 1.55;
+      }
+      p, li {
+        font-size: 17px;
+      }
     }
   </style>
 </head>
