@@ -4,5 +4,6 @@
 
 - 入口：`index.html`
 - 圖像資產：`assets/`
+- 生活雷達文章：`radar/`
 - 股市 ETF 區塊：示例觀察與教育資訊，不是投資建議
 - GitHub Pages：使用 `main` 分支根目錄發布

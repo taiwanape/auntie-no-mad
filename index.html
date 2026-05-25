@@ -438,6 +438,15 @@
       background: var(--paper);
       box-shadow: var(--shadow);
       overflow: hidden;
+      color: inherit;
+      text-decoration: none;
+      display: block;
+      transition: transform .16s ease, box-shadow .16s ease;
+    }
+
+    .radar-zine:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 9px 9px 0 var(--ink);
     }
 
     .radar-zine:nth-child(2) {
@@ -446,56 +455,17 @@
 
     .zine-art {
       min-height: 178px;
-      padding: 16px;
       border-bottom: var(--line);
-      background:
-        radial-gradient(circle at 18% 20%, rgba(255,255,255,.9) 0 7px, transparent 8px),
-        radial-gradient(circle at 78% 14%, rgba(255,111,151,.35) 0 18px, transparent 19px),
-        linear-gradient(135deg, rgba(255,213,31,.95), rgba(255,111,151,.24));
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      align-items: stretch;
+      background: var(--cream);
     }
 
-    .zine-panel {
-      min-height: 136px;
-      padding: 14px;
-      border: 3px solid var(--ink);
-      border-radius: 14px;
-      background: rgba(255,253,241,.92);
-      box-shadow: 4px 4px 0 var(--ink);
-      display: grid;
-      align-content: center;
-      justify-items: center;
-      text-align: center;
-      font-weight: 1000;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .zine-panel::after {
-      content: "";
-      position: absolute;
-      inset: 8px;
-      border: 2px dashed rgba(22,19,15,.18);
-      border-radius: 10px;
-      pointer-events: none;
-    }
-
-    .zine-icon {
-      font-size: clamp(42px, 7vw, 72px);
-      line-height: 1;
-    }
-
-    .zine-sfx {
-      margin-top: 8px;
-      padding: 4px 9px;
-      border: 2px solid var(--ink);
-      border-radius: 999px;
-      background: white;
-      font-size: 13px;
-      letter-spacing: 0;
+    .zine-art img {
+      width: 100%;
+      height: 100%;
+      min-height: 210px;
+      max-height: 260px;
+      object-fit: cover;
+      display: block;
     }
 
     .zine-body {
@@ -527,6 +497,33 @@
 
     .zine-caption strong {
       color: var(--pink);
+    }
+
+    .zine-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .zine-date {
+      font-size: 13px;
+      font-weight: 1000;
+      color: rgba(22,19,15,.58);
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 16px;
+      padding: 9px 12px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: var(--pink);
+      color: white;
+      font-weight: 1000;
+      box-shadow: 3px 3px 0 var(--ink);
     }
 
     .story-grid {
@@ -1316,46 +1313,40 @@
             <text class="ink" x="4" y="58" font-size="54">今天的</text>
             <text class="accent" x="4" y="128" font-size="54">生活雷達</text>
           </svg>
-          <p>今天先不報天氣交通了，阿姨改抓兩個比較有畫面的日常荒謬：一個手指很忙，一個衣服很濕。</p>
+          <p>這裡改成真實生活事件短文入口：有新聞、有來源、有阿姨碎念，點進去看完整小篇。</p>
         </div>
         <div class="radar-zine-grid">
-          <article class="radar-zine">
-            <div class="zine-art" aria-hidden="true">
-              <div class="zine-panel">
-                <span class="zine-icon">🎫</span>
-                <span class="zine-sfx">F5 F5 F5</span>
-              </div>
-              <div class="zine-panel">
-                <span class="zine-icon">🍲</span>
-                <span class="zine-sfx">湯先滾</span>
-              </div>
+          <a class="radar-zine" href="radar/ticket-panic.html">
+            <div class="zine-art">
+              <img src="assets/radar-ticket-panic.png" alt="阿姨邊看搶票頁面邊顧湯鍋的漫畫插圖">
             </div>
             <div class="zine-body">
-              <span class="label">社群雷達</span>
-              <h3>搶票手指，先不要離家出走。</h3>
-              <p>看到熱門演唱會、快閃優惠、限量聯名，很多人的手指會突然比腦袋早下班。阿姨建議：開賣前先登入、先吃飯、先深呼吸，不要邊煮湯邊刷新，最後票沒搶到，湯也變成火山。</p>
-              <div class="zine-caption"><strong>阿姨結論：</strong>秒殺活動不是購物，是心跳健檢。</div>
+              <div class="zine-meta">
+                <span class="label">娛樂熱點</span>
+                <span class="zine-date">真實事件整理</span>
+              </div>
+              <h3>五月天大巨蛋搶票：手指比腦袋還早排隊。</h3>
+              <p>台北大巨蛋演唱會門票開賣又讓社群變成大型壓力測試。阿姨看完只想說：搶票不是買票，是家庭網路、手速和情緒管理的聯合考。</p>
+              <div class="zine-caption"><strong>點進去看：</strong>為什麼大家明知道會崩潰，還是準時坐在電腦前。</div>
+              <span class="read-more">讀完整篇</span>
             </div>
-          </article>
+          </a>
 
-          <article class="radar-zine">
-            <div class="zine-art" aria-hidden="true">
-              <div class="zine-panel">
-                <span class="zine-icon">🌧️</span>
-                <span class="zine-sfx">梅雨副本</span>
-              </div>
-              <div class="zine-panel">
-                <span class="zine-icon">👕</span>
-                <span class="zine-sfx">還沒乾</span>
-              </div>
+          <a class="radar-zine" href="radar/plum-rain-laundry.html">
+            <div class="zine-art">
+              <img src="assets/radar-plum-rain-laundry.png" alt="阿姨拿著潮濕衣服看著梅雨陽台的漫畫插圖">
             </div>
             <div class="zine-body">
-              <span class="label">生活怪談</span>
-              <h3 id="tipTitle">衣服在陽台修仙。</h3>
-              <p id="tipText">梅雨季一來，衣服不是曬乾，是在陽台進行長期靜置。昨天濕、今天潮、明天有一點人生味。阿姨宣布：除濕機不是家電，是家庭情緒穩定器。</p>
-              <div class="zine-caption"><strong>阿姨結論：</strong>衣服不乾時，不要懷疑自己，先懷疑天空。</div>
+              <div class="zine-meta">
+                <span class="label">生活新聞</span>
+                <span class="zine-date">真實天氣背景</span>
+              </div>
+              <h3 id="tipTitle">梅雨季來了：衣服不是沒乾，是在陽台修仙。</h3>
+              <p id="tipText">中央氣象署的梅雨科普說，台灣 5、6 月常進入多雨期。阿姨翻譯：衣服會開始有自己的行程，除濕機也正式升格成家庭成員。</p>
+              <div class="zine-caption"><strong>點進去看：</strong>梅雨季為什麼像是全家衣櫃的壓力測試。</div>
+              <span class="read-more">讀完整篇</span>
             </div>
-          </article>
+          </a>
         </div>
       </section>
 
@@ -1558,7 +1549,7 @@
 
   <script>
     const tips = [
-      ["衣服在陽台修仙。", "梅雨季一來，衣服不是曬乾，是在陽台進行長期靜置。昨天濕、今天潮、明天有一點人生味。阿姨宣布：除濕機不是家電，是家庭情緒穩定器。"],
+      ["梅雨季來了：衣服不是沒乾，是在陽台修仙。", "中央氣象署的梅雨科普說，台灣 5、6 月常進入多雨期。阿姨翻譯：衣服會開始有自己的行程，除濕機也正式升格成家庭成員。"],
       ["手指已經先排隊。", "熱門票券還沒開賣，手指已經開始 F5。阿姨提醒：先登入、先喝水、先不要罵 Wi-Fi，票沒有買到，血壓也不要一起上架。"],
       ["折價券不是聖旨。", "看到限時優惠先停三秒。買便宜不等於省錢，買了用不到，才叫把錢放去角落長灰。"],
       ["家庭群組先不要開炮。", "長輩轉傳怪消息，先丟查證連結，再補一句『這個很多人被騙』。你是來救家人，不是來主持法庭。"]
