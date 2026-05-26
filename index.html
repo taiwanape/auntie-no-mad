@@ -1478,9 +1478,9 @@
         <a href="#radar">生活雷達</a>
         <a href="#stories">踩坑日記</a>
         <a href="#investing">股市ETF</a>
-        <a href="#converter">換算工具</a>
+        <a href="#tools">工具箱</a>
         <a href="#picks">好物推薦</a>
-        <a href="#archive">舊文章</a>
+        <a href="archive.html">舊文章</a>
         <button type="button" id="shuffle">換一句碎念</button>
       </nav>
     </header>
@@ -1587,23 +1587,40 @@
             <text class="shadow" x="4" y="62" font-size="58">踩坑日記</text>
             <text class="ink" x="4" y="62" font-size="58">踩坑日記</text>
           </svg>
-          <p>阿姨不是都對，阿姨只是踩過坑以後，知道哪裡比較滑。</p>
+          <p>這裡改成跟生活雷達一樣：小縮圖入口，點進去看完整故事。阿姨踩過的坑，你可以先繞開。</p>
         </div>
-        <div class="story-grid">
-          <article class="story feature">
-            <span class="label">今日主篇</span>
-            <h3>訂閱制不是每個月一點點，是一年後嚇一跳。</h3>
-            <p>阿姨以前也覺得 99 元還好，後來發現家裡有五個 99，冰箱還比 App 更常被打開。今天先查一下信用卡固定扣款，刪掉三個沒在用的。</p>
-            <div class="post-preview">
-              <div class="post-line">可以發文：你以為自己在省時間，其實是在養一排自動扣款。</div>
-              <div class="post-line">可以留言：先去查訂閱清單，查完回來我們一起假裝沒哭。</div>
+        <div class="radar-zine-grid">
+          <a class="radar-zine" href="stories/2026-05-27-social-scam.html">
+            <div class="zine-art">
+              <img src="assets/story-20260527-social-scam-thumb.png" alt="社群詐騙踩坑日記小縮圖，阿姨看著社群頁面提醒不要亂點">
             </div>
-          </article>
-          <article class="story">
-            <span class="label">家庭群組</span>
-            <h3>長輩轉傳不要直接開砲。</h3>
-            <p>先丟查證連結，再補一句「這個很多人被騙」。你是來救家人，不是來開庭。</p>
-          </article>
+            <div class="zine-body">
+              <div class="zine-meta">
+                <span class="label">社群踩坑</span>
+                <span class="zine-date">2026/05/27</span>
+              </div>
+              <h3>名人推薦？先不要跪，可能是詐騙在穿西裝。</h3>
+              <p>Meta 社群詐騙被點名，看到名人投資、限量優惠、保證獲利，阿姨先問一句：你有先查 165 嗎？</p>
+              <div class="zine-caption"><strong>點進去看：</strong>為什麼越像真的，越要先慢三秒。</div>
+              <span class="read-more">讀故事</span>
+            </div>
+          </a>
+
+          <a class="radar-zine" href="stories/2026-05-27-traffic-crowd.html">
+            <div class="zine-art">
+              <img src="assets/story-20260527-traffic-crowd-thumb.png" alt="交通朝聖踩坑日記小縮圖，阿姨拿手機提醒出門前先查路況">
+            </div>
+            <div class="zine-body">
+              <div class="zine-meta">
+                <span class="label">出遊踩坑</span>
+                <span class="zine-date">2026/05/27</span>
+              </div>
+              <h3>去熱門景點省時間，結果大家一起把時間塞住。</h3>
+              <p>新橋、新景點、新打卡點都很香，但朝聖人潮一來，導航紅到像阿姨的火氣。漂亮是真的，塞車也是真的。</p>
+              <div class="zine-caption"><strong>點進去看：</strong>熱門路線出門前要先想好的三件事。</div>
+              <span class="read-more">讀故事</span>
+            </div>
+          </a>
         </div>
       </section>
 
@@ -1724,68 +1741,32 @@
         </div>
       </section>
 
-      <section class="section" id="converter" aria-labelledby="converterTitle">
+      <section class="section" id="tools" aria-labelledby="toolsTitle">
         <div class="section-head">
-          <h2 id="converterTitle" class="visually-hidden">換算工具</h2>
+          <h2 id="toolsTitle" class="visually-hidden">阿姨工具箱</h2>
           <svg class="comic-title section-title-svg" viewBox="0 0 440 86" aria-hidden="true">
-            <text class="shadow" x="4" y="62" font-size="58">換算工具</text>
-            <text class="ink" x="4" y="62" font-size="58">換算工具</text>
+            <text class="shadow" x="4" y="62" font-size="58">阿姨工具箱</text>
+            <text class="ink" x="4" y="62" font-size="58">阿姨工具箱</text>
           </svg>
-          <p>煮菜、寄貨、買二手、看海外規格，公克公斤台斤磅一次換，不用再腦袋打結。</p>
+          <p>工具不要散在首頁。之後新增電費、匯率、尺寸、熱量換算，都會集中放這裡。</p>
         </div>
-        <div class="converter-panel">
-          <div class="converter-copy">
-            <div>
-              <span class="label">阿姨小工具</span>
-              <h3>重量單位<br>直接幫你換好。</h3>
+        <div class="watchlist-grid">
+          <a class="watchlist-card" href="tools/index.html" aria-label="進入阿姨工具箱">
+            <span class="wl-symbol">工具</span>
+            <div class="wl-info">
+              <div class="wl-name">單位換算機</div>
+              <div class="wl-note">公克、公斤、台斤、台兩、磅、盎司先集中在工具箱裡，之後新工具也放同一頁。</div>
+              <span class="wl-story-link">進工具箱</span>
             </div>
-            <p>輸入一個數字，選原本單位跟要換成的單位。阿姨先算，省得你在賣場、廚房、賣二手時一直估錯。</p>
-            <span class="converter-tip">1 台斤 = 600 公克，1 台兩 = 37.5 公克</span>
-          </div>
-          <div class="converter-card" aria-label="重量換算器">
-            <div class="converter-grid">
-              <label class="converter-field" for="convertValue">
-                數值
-                <input id="convertValue" type="number" inputmode="decimal" min="0" step="any" value="1000">
-              </label>
-              <label class="converter-field" for="convertFrom">
-                原本單位
-                <select id="convertFrom">
-                  <option value="g">公克 g</option>
-                  <option value="kg">公斤 kg</option>
-                  <option value="mg">毫克 mg</option>
-                  <option value="tonne">公噸 t</option>
-                  <option value="jin">台斤</option>
-                  <option value="tael">台兩</option>
-                  <option value="lb">磅 lb</option>
-                  <option value="oz">盎司 oz</option>
-                </select>
-              </label>
-              <label class="converter-field" for="convertTo">
-                換成單位
-                <select id="convertTo">
-                  <option value="kg">公斤 kg</option>
-                  <option value="g">公克 g</option>
-                  <option value="mg">毫克 mg</option>
-                  <option value="tonne">公噸 t</option>
-                  <option value="jin">台斤</option>
-                  <option value="tael">台兩</option>
-                  <option value="lb">磅 lb</option>
-                  <option value="oz">盎司 oz</option>
-                </select>
-              </label>
-              <div class="converter-result" aria-live="polite">
-                <strong id="convertResult">1 公斤</strong>
-                <span id="convertFormula">1000 公克 = 1 公斤</span>
-              </div>
+          </a>
+          <a class="watchlist-card" href="archive.html" aria-label="進入舊文章庫">
+            <span class="wl-symbol">舊文</span>
+            <div class="wl-info">
+              <div class="wl-name">舊文章庫</div>
+              <div class="wl-note">生活雷達、股市 ETF、以前的阿姨碎念集中收好，不再塞在首頁最底部。</div>
+              <span class="wl-story-link">看舊文</span>
             </div>
-            <div class="converter-quick" aria-label="常用換算">
-              <button type="button" data-convert-example="1000,g,kg">1000g → kg</button>
-              <button type="button" data-convert-example="1,jin,g">1 台斤 → g</button>
-              <button type="button" data-convert-example="1,lb,g">1 磅 → g</button>
-              <button type="button" data-convert-example="600,g,jin">600g → 台斤</button>
-            </div>
-          </div>
+          </a>
         </div>
       </section>
 
@@ -1839,66 +1820,6 @@
         </div>
       </section>
 
-      <section class="section" id="archive" aria-labelledby="archiveTitle">
-        <div class="section-head">
-          <h2 id="archiveTitle" class="visually-hidden">舊文章</h2>
-          <svg class="comic-title section-title-svg" viewBox="0 0 440 86" aria-hidden="true">
-            <text class="shadow" x="4" y="62" font-size="58">舊文章</text>
-            <text class="ink" x="4" y="62" font-size="58">舊文章</text>
-          </svg>
-          <p>舊內容沒有刪，先集中放這裡。之後文章變多，再整理成月份歸檔。</p>
-        </div>
-        <div class="watchlist-grid">
-          <a class="watchlist-card" href="radar/ticket-panic.html" aria-label="閱讀舊文 五月天大巨蛋搶票">
-            <span class="wl-symbol">生活</span>
-            <div class="wl-info">
-              <div class="wl-name">五月天大巨蛋搶票</div>
-              <div class="wl-note">舊生活雷達：搶票不是買票，是家庭網路、手速和情緒管理的聯合考。</div>
-              <span class="wl-story-link">讀舊文</span>
-            </div>
-          </a>
-          <a class="watchlist-card" href="radar/plum-rain-laundry.html" aria-label="閱讀舊文 梅雨季與曬衣危機">
-            <span class="wl-symbol">天氣</span>
-            <div class="wl-info">
-              <div class="wl-name">梅雨季與曬衣危機</div>
-              <div class="wl-note">舊生活雷達：衣服不是沒乾，是在陽台修仙。</div>
-              <span class="wl-story-link">讀舊文</span>
-            </div>
-          </a>
-          <a class="watchlist-card" href="stocks/2330-tsmc.html" aria-label="閱讀舊文 台積電 AI 產能故事">
-            <span class="wl-symbol">2330</span>
-            <div class="wl-info">
-              <div class="wl-name">台積電 AI 產能故事</div>
-              <div class="wl-note">舊股市故事：AI 晶片、先進封裝與產能鍋夠不夠大。</div>
-              <span class="wl-story-link">讀舊文</span>
-            </div>
-          </a>
-          <a class="watchlist-card" href="stocks/0050-taiwan50.html" aria-label="閱讀舊文 元大台灣50">
-            <span class="wl-symbol">0050</span>
-            <div class="wl-info">
-              <div class="wl-name">元大台灣50 基本故事</div>
-              <div class="wl-note">舊股市故事：買一包台灣前 50 大公司，但不是不會晃。</div>
-              <span class="wl-story-link">讀舊文</span>
-            </div>
-          </a>
-          <a class="watchlist-card" href="stocks/0056-high-dividend.html" aria-label="閱讀舊文 元大高股息">
-            <span class="wl-symbol">0056</span>
-            <div class="wl-info">
-              <div class="wl-name">元大高股息 基本故事</div>
-              <div class="wl-note">舊股市故事：配息不是免費雞腿，除息後也要看價格。</div>
-              <span class="wl-story-link">讀舊文</span>
-            </div>
-          </a>
-          <a class="watchlist-card" href="stocks/00878-esg-dividend.html" aria-label="閱讀舊文 國泰永續高股息">
-            <span class="wl-symbol">00878</span>
-            <div class="wl-info">
-              <div class="wl-name">國泰永續高股息 基本故事</div>
-              <div class="wl-note">舊股市故事：人氣很旺，但阿姨還是先看成分與風險。</div>
-              <span class="wl-story-link">讀舊文</span>
-            </div>
-          </a>
-        </div>
-      </section>
     </main>
 
     <footer class="footer">

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="阿姨別生氣工具箱：把公克、公斤、台斤、台兩、磅、盎司等日常單位集中換算。">
+  <title>阿姨工具箱｜阿姨別生氣</title>
+  <link rel="icon" href="../assets/auntie-avatar-nav.jpg">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    :root {
+      --yellow: #ffd51f;
+      --pink: #ff6f97;
+      --ink: #16130f;
+      --paper: #fffdf1;
+      --sky: #eaf5ff;
+      --line: 4px solid var(--ink);
+      --shadow: 7px 7px 0 var(--ink);
+    }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Arial", "Noto Sans TC", sans-serif;
+      background:
+        radial-gradient(circle at 1px 1px, rgba(22,19,15,.18) 1.6px, transparent 2px) 0 0 / 18px 18px,
+        var(--yellow);
+    }
+    .shell { width: min(100% - 28px, 980px); margin: 0 auto; padding: 28px 0 44px; }
+    .top { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+    .brand, .back { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 1000; }
+    .brand img { width: 44px; height: 44px; border: 3px solid var(--ink); border-radius: 50%; background: white; }
+    .back { padding: 9px 13px; border: 3px solid var(--ink); border-radius: 999px; background: white; box-shadow: 3px 3px 0 var(--ink); }
+    .hero, .tool-panel { border: var(--line); border-radius: 20px; background: var(--paper); box-shadow: var(--shadow); }
+    .hero { padding: clamp(22px, 5vw, 44px); margin-bottom: 18px; }
+    .label { display: inline-flex; padding: 6px 12px; border: 3px solid var(--ink); border-radius: 999px; background: var(--pink); color: white; font-size: 14px; font-weight: 1000; box-shadow: 3px 3px 0 var(--ink); }
+    h1 { margin: 18px 0 12px; font-size: clamp(42px, 8vw, 76px); line-height: .98; font-weight: 1000; text-shadow: 4px 4px 0 white, 7px 7px 0 var(--ink); letter-spacing: 0; }
+    .deck { margin: 0; max-width: 720px; font-size: 20px; line-height: 1.55; font-weight: 900; }
+    .tool-panel { display: grid; grid-template-columns: .82fr 1.18fr; gap: 18px; padding: 22px; }
+    .tool-copy { display: flex; flex-direction: column; justify-content: space-between; gap: 18px; }
+    .tool-copy h2 { margin: 0; font-size: clamp(30px, 4vw, 46px); line-height: 1; font-weight: 1000; }
+    .tool-copy p { margin: 0; font-size: 17px; line-height: 1.6; font-weight: 850; }
+    .tip { width: fit-content; padding: 8px 12px; border: 3px solid var(--ink); border-radius: 999px; background: var(--yellow); box-shadow: 3px 3px 0 var(--ink); font-size: 14px; font-weight: 1000; }
+    .converter-card { display: grid; gap: 14px; padding: 18px; border: 3px solid var(--ink); border-radius: 14px; background: var(--sky); }
+    .converter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .field { display: grid; gap: 6px; font-size: 14px; font-weight: 1000; }
+    .field input, .field select {
+      width: 100%;
+      min-height: 48px;
+      padding: 10px 12px;
+      border: 3px solid var(--ink);
+      border-radius: 10px;
+      background: white;
+      color: var(--ink);
+      font: inherit;
+      font-size: 18px;
+      font-weight: 950;
+    }
+    .result { display: grid; gap: 5px; padding: 16px; border: 3px solid var(--ink); border-radius: 12px; background: var(--ink); color: white; }
+    .result strong { color: var(--yellow); font-size: clamp(28px, 4vw, 42px); line-height: 1; font-weight: 1000; word-break: break-word; }
+    .result span { font-size: 14px; font-weight: 900; color: rgba(255,255,255,.82); }
+    .quick { display: flex; flex-wrap: wrap; gap: 8px; }
+    .quick button { min-height: 36px; padding: 7px 10px; border: 2px solid var(--ink); border-radius: 999px; background: #fff; box-shadow: 2px 2px 0 var(--ink); color: var(--ink); font-weight: 1000; cursor: pointer; }
+    .soon { margin-top: 18px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .soon div { padding: 14px; border: 3px solid var(--ink); border-radius: 14px; background: white; box-shadow: 4px 4px 0 var(--ink); font-weight: 1000; }
+    @media (max-width: 760px) {
+      .top { align-items: flex-start; flex-direction: column; }
+      .back { width: 100%; justify-content: center; }
+      .tool-panel, .converter-grid, .soon { grid-template-columns: 1fr; }
+      h1 { font-size: clamp(38px, 13vw, 54px); line-height: 1.08; text-shadow: 3px 3px 0 white, 5px 5px 0 var(--ink); }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="top">
+      <a class="brand" href="../index.html"><img src="../assets/auntie-avatar-nav.jpg" alt=""><span>阿姨別生氣</span></a>
+      <a class="back" href="../index.html#tools">回首頁工具箱</a>
+    </header>
+    <section class="hero">
+      <span class="label">阿姨工具箱</span>
+      <h1>日常換算，不用再猜。</h1>
+      <p class="deck">煮菜、寄貨、買二手、看海外規格，先用工具算清楚。以後新增工具也會集中在這裡。</p>
+    </section>
+    <section class="tool-panel" aria-labelledby="massTitle">
+      <div class="tool-copy">
+        <div>
+          <span class="label">重量單位</span>
+          <h2 id="massTitle">公克公斤台斤磅，一次換好。</h2>
+        </div>
+        <p>輸入數字，選原本單位跟要換成的單位。阿姨先算，省得你在賣場、廚房、賣二手時一直估錯。</p>
+        <span class="tip">1 台斤 = 600 公克，1 台兩 = 37.5 公克</span>
+      </div>
+      <div class="converter-card" aria-label="重量換算器">
+        <div class="converter-grid">
+          <label class="field" for="convertValue">數值<input id="convertValue" type="number" inputmode="decimal" min="0" step="any" value="1000"></label>
+          <label class="field" for="convertFrom">原本單位<select id="convertFrom"><option value="g">公克 g</option><option value="kg">公斤 kg</option><option value="mg">毫克 mg</option><option value="tonne">公噸 t</option><option value="jin">台斤</option><option value="tael">台兩</option><option value="lb">磅 lb</option><option value="oz">盎司 oz</option></select></label>
+          <label class="field" for="convertTo">換成單位<select id="convertTo"><option value="kg">公斤 kg</option><option value="g">公克 g</option><option value="mg">毫克 mg</option><option value="tonne">公噸 t</option><option value="jin">台斤</option><option value="tael">台兩</option><option value="lb">磅 lb</option><option value="oz">盎司 oz</option></select></label>
+          <div class="result" aria-live="polite"><strong id="convertResult">1 公斤</strong><span id="convertFormula">1000 公克 = 1 公斤</span></div>
+        </div>
+        <div class="quick" aria-label="常用換算">
+          <button type="button" data-convert-example="1000,g,kg">1000g → kg</button>
+          <button type="button" data-convert-example="1,jin,g">1 台斤 → g</button>
+          <button type="button" data-convert-example="1,lb,g">1 磅 → g</button>
+          <button type="button" data-convert-example="600,g,jin">600g → 台斤</button>
+        </div>
+      </div>
+    </section>
+    <section class="soon" aria-label="之後可新增的工具">
+      <div>電費估算<br><small>之後可加</small></div>
+      <div>尺寸換算<br><small>之後可加</small></div>
+      <div>匯率試算<br><small>之後可加</small></div>
+    </section>
+  </div>
+  <script>
+    const units = {
+      mg: { label: "毫克", grams: 0.001 },
+      g: { label: "公克", grams: 1 },
+      kg: { label: "公斤", grams: 1000 },
+      tonne: { label: "公噸", grams: 1000000 },
+      jin: { label: "台斤", grams: 600 },
+      tael: { label: "台兩", grams: 37.5 },
+      lb: { label: "磅", grams: 453.59237 },
+      oz: { label: "盎司", grams: 28.349523125 }
+    };
+    const value = document.querySelector("#convertValue");
+    const from = document.querySelector("#convertFrom");
+    const to = document.querySelector("#convertTo");
+    const result = document.querySelector("#convertResult");
+    const formula = document.querySelector("#convertFormula");
+    function fmt(number) {
+      return new Intl.NumberFormat("zh-TW", { maximumFractionDigits: number >= 100 ? 2 : 4 }).format(number);
+    }
+    function update() {
+      const input = Number(value.value);
+      const safeInput = Number.isFinite(input) ? input : 0;
+      const converted = safeInput * units[from.value].grams / units[to.value].grams;
+      result.textContent = `${fmt(converted)} ${units[to.value].label}`;
+      formula.textContent = `${fmt(safeInput)} ${units[from.value].label} = ${fmt(converted)} ${units[to.value].label}`;
+    }
+    document.querySelectorAll("[data-convert-example]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const [v, f, t] = button.dataset.convertExample.split(",");
+        value.value = v;
+        from.value = f;
+        to.value = t;
+        update();
+      });
+    });
+    [value, from, to].forEach((field) => {
+      field.addEventListener("input", update);
+      field.addEventListener("change", update);
+    });
+    update();
+  </script>
+</body>
+</html>
