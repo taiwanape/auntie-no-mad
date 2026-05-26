@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="阿姨別生氣股市 ETF 今日筆記：整理臺證所 2026/05/25 最新完整收盤資料，不是買賣建議。">
+  <meta name="description" content="阿姨別生氣股市 ETF 今日筆記：整理臺證所 2026/05/26 收盤資料，加入友達、聯電、英業達與 00919 的平民觀察清單。不是買賣建議。">
   <title>今日市場筆記 2026/05/26｜阿姨別生氣</title>
   <link rel="icon" href="../assets/auntie-avatar-nav.jpg">
   <style>
@@ -32,6 +32,7 @@
     .brand img { width: 44px; height: 44px; border: 3px solid var(--ink); border-radius: 50%; background: white; }
     .back { padding: 9px 13px; border: 3px solid var(--ink); border-radius: 999px; background: white; box-shadow: 3px 3px 0 var(--ink); }
     article { border: var(--line); border-radius: 22px; background: var(--paper); box-shadow: var(--shadow); overflow: hidden; }
+    .hero { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-bottom: var(--line); background: var(--yellow); }
     .content { padding: clamp(24px, 5vw, 48px); }
     .label { display: inline-flex; padding: 6px 12px; border: 3px solid var(--ink); border-radius: 999px; background: var(--pink); color: white; font-size: 14px; font-weight: 1000; box-shadow: 3px 3px 0 var(--ink); }
     h1 { margin: 18px 0 12px; font-size: clamp(38px, 7vw, 64px); line-height: 1.02; font-weight: 1000; text-shadow: 4px 4px 0 white, 7px 7px 0 var(--ink); letter-spacing: 0; }
@@ -41,7 +42,9 @@
     .market-card:nth-child(2n) { background: var(--sky); }
     .market-card h2 { margin: 0 0 8px; font-size: 28px; line-height: 1.15; font-weight: 1000; }
     .price { font-size: 34px; line-height: 1; font-weight: 1000; }
-    .change { margin-top: 6px; color: #e62a32; font-weight: 1000; }
+    .change { margin-top: 6px; font-weight: 1000; }
+    .change.up { color: #e62a32; }
+    .change.down { color: #0e8c3a; }
     p, li { font-size: 18px; line-height: 1.8; font-weight: 820; }
     h3 { margin: 30px 0 8px; font-size: 30px; line-height: 1.15; font-weight: 1000; }
     .note { margin: 22px 0; padding: 16px 18px; border: 3px solid var(--ink); border-radius: 14px; background: var(--mint); font-weight: 1000; }
@@ -74,47 +77,48 @@
     </header>
 
     <article>
+      <img class="hero" src="../assets/stock-20260526-market-watch.png" alt="阿姨用白板整理平民股票與 ETF 的漫畫插圖">
       <div class="content">
         <span class="label">股市 ETF · 2026/05/26 更新</span>
-        <h1>台股像剛喝三杯咖啡，但阿姨先看收盤單。</h1>
-        <p class="deck">臺證所目前最新完整收盤資料到 2026/05/25。今天先把 2330、0050、0056、00878 用白話整理一次。</p>
+        <h1>股票不是只看神山，阿姨今天看平民觀察股。</h1>
+        <p class="deck">臺證所 2026/05/26 交易資料：友達成交量大但收跌，聯電收紅，英業達回落，00919 高股息 ETF 小漲。</p>
 
-        <div class="note">阿姨一句話：漲很多不是叫你衝，是叫你先看清楚自己是投資，還是被熱鬧推著走。</div>
+        <div class="note">阿姨一句話：價格親民不是風險比較小，只是比較容易讓人手滑。先看故事，再看風險，最後才看錢包。</div>
 
         <div class="market-grid">
-          <section class="market-card" id="tsmc">
-            <h2>2330 台積電</h2>
-            <div class="price">2,310.00</div>
-            <div class="change">▲ +55.00</div>
-            <p>AI 題材還是市場主線，但台積電這種大型股，漲的時候大家都喊神，震盪時也會讓人懷疑人生。阿姨看的是產能、客戶需求與估值，不是只看今天紅不紅。</p>
+          <section class="market-card" id="auo">
+            <h2>2409 友達</h2>
+            <div class="price">22.00</div>
+            <div class="change down">▼ -2.40</div>
+            <p>友達今天成交量很大，代表市場有在看它，但收跌也提醒一件事：熱門不等於穩。面板股像客廳電視，大家都看得到，價格卻常常跟景氣、庫存和報價一起轉台。</p>
           </section>
 
-          <section class="market-card" id="taiwan50">
-            <h2>0050 元大台灣50</h2>
-            <div class="price">100.80</div>
-            <div class="change">▲ +3.50</div>
-            <p>0050 跟著台灣大型權值股走，市場強它通常會有感。優點是不用自己挑一堆股票，缺點是大盤跌的時候它也不會裝不認識。</p>
+          <section class="market-card" id="umc">
+            <h2>2303 聯電</h2>
+            <div class="price">130.50</div>
+            <div class="change up">▲ +5.50</div>
+            <p>半導體不是只有台積電這座神山。聯電走成熟製程，故事比較像穩穩開店的老闆：不一定天天上新聞，但報價、稼動率和車用工控需求一變，市場也會回頭看。</p>
           </section>
 
-          <section class="market-card" id="highdiv">
-            <h2>0056 元大高股息</h2>
-            <div class="price">48.35</div>
-            <div class="change">▲ +2.00</div>
-            <p>高股息 ETF 很容易讓人只盯配息，但配息不是免費雞腿。阿姨會看成分股、除息後價格、填息能力，不會只看殖利率漂亮就拍手。</p>
+          <section class="market-card" id="inventec">
+            <h2>2356 英業達</h2>
+            <div class="price">62.60</div>
+            <div class="change down">▼ -2.80</div>
+            <p>AI 伺服器題材還熱，但熱題材也會有冷氣開太強的時候。英業達今天回落，阿姨會看訂單、毛利和股價是不是已經先把期待吃光，不會只看到 AI 兩個字就鼓掌。</p>
           </section>
 
-          <section class="market-card" id="esgdiv">
-            <h2>00878 國泰永續高股息</h2>
-            <div class="price">29.48</div>
-            <div class="change">▲ +1.21</div>
-            <p>00878 人氣高，成交也熱，但人多的地方不代表地板比較軟。阿姨會先看它持股分散度、配息穩定性和波動，不會只因為大家都在聊就進場。</p>
+          <section class="market-card" id="etf00919">
+            <h2>00919 群益台灣精選高息</h2>
+            <div class="price">27.93</div>
+            <div class="change up">▲ +0.46</div>
+            <p>00919 價格門檻比較親民，又有高股息標籤，所以很容易被拿來當懶人選項。但阿姨要碎念：配息不是天上掉下來，是從淨值、成分股和市場波動裡面挪出來。</p>
           </section>
         </div>
 
         <h3>阿姨看今天盤面</h3>
-        <p>台灣加權指數 5/25 收在 43,644.40 點，上漲 1,376.43 點。這種盤看起來很熱鬧，但越熱鬧越要分清楚：你是長期配置，還是看到紅色數字就手癢。</p>
+        <p>台灣加權指數 5/26 收在 43,525.37 點，下跌 119.03 點。大盤小回頭，不代表市場沒戲，而是提醒大家：紅色題材和綠色帳面常常會同一天出現。</p>
 
-        <p>如果你是一般民眾，阿姨會建議先做三件事：確認自己的投資期限、確認可承受跌幅、確認這筆錢是不是短期生活費。沒有做完這三件事，再漂亮的 ETF 也只是讓你睡不好。</p>
+        <p>如果你是一般民眾，阿姨會建議先做三件事：確認這檔股票在賺什麼、確認自己能承受跌多少、確認這筆錢不是下個月房租。沒有做完這三件事，再便宜的股價也只是讓你睡不好。</p>
 
         <div class="risk-box">
           <h2>不是買賣建議</h2>
@@ -124,10 +128,10 @@
         <div class="sources">
           資料來源：
           <a href="https://www.twse.com.tw/rwd/zh/afterTrading/FMTQIK?date=20260526&response=json" target="_blank" rel="noreferrer">臺灣證券交易所市場成交資訊</a>、
-          <a href="https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260526&stockNo=2330&response=json" target="_blank" rel="noreferrer">2330 日成交資訊</a>、
-          <a href="https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260526&stockNo=0050&response=json" target="_blank" rel="noreferrer">0050 日成交資訊</a>、
-          <a href="https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260526&stockNo=0056&response=json" target="_blank" rel="noreferrer">0056 日成交資訊</a>、
-          <a href="https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260526&stockNo=00878&response=json" target="_blank" rel="noreferrer">00878 日成交資訊</a>
+          <a href="https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260526&stockNo=2409&response=json" target="_blank" rel="noreferrer">2409 日成交資訊</a>、
+          <a href="https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260526&stockNo=2303&response=json" target="_blank" rel="noreferrer">2303 日成交資訊</a>、
+          <a href="https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260526&stockNo=2356&response=json" target="_blank" rel="noreferrer">2356 日成交資訊</a>、
+          <a href="https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260526&stockNo=00919&response=json" target="_blank" rel="noreferrer">00919 日成交資訊</a>
         </div>
       </div>
     </article>
