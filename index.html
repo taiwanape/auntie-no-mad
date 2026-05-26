@@ -923,22 +923,107 @@
 
     .footer {
       margin-top: 44px;
-      padding: 24px;
+      padding: 0;
       border: var(--line);
-      border-radius: 18px;
-      background: var(--ink);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+      border-radius: 22px;
+      background: var(--paper);
+      color: var(--ink);
+      box-shadow: 6px 6px 0 var(--ink);
       font-weight: 900;
+      overflow: hidden;
     }
 
-    .footer a {
-      color: white;
+    .footer-main {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr);
+      gap: 22px;
+      padding: 24px;
+      align-items: start;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 0;
+      margin-bottom: 16px;
+    }
+
+    .footer-links a {
+      color: var(--ink);
       text-decoration: underline;
       text-decoration-thickness: 3px;
+      text-underline-offset: 4px;
+      padding-right: 14px;
+      margin-right: 14px;
+      border-right: 2px solid rgba(22, 19, 15, .22);
+      font-weight: 1000;
+    }
+
+    .footer-links a:last-child {
+      border-right: 0;
+      margin-right: 0;
+      padding-right: 0;
+    }
+
+    .footer-note {
+      margin: 0 0 16px;
+      max-width: 720px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(22, 19, 15, .76);
+    }
+
+    .footer-socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .social-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+      padding: 7px 13px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: white;
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: 3px 3px 0 var(--ink);
+      font-weight: 1000;
+    }
+
+    .social-pill.primary {
+      background: var(--pink);
+      color: white;
+    }
+
+    .footer-cta {
+      text-align: right;
+    }
+
+    .footer-cta strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 22px;
+      font-weight: 1000;
+    }
+
+    .footer-cta p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.65;
+      color: rgba(22, 19, 15, .76);
+    }
+
+    .footer-bottom {
+      border-top: 3px solid var(--ink);
+      padding: 12px 18px;
+      background: rgba(255, 111, 151, .12);
+      text-align: center;
+      font-size: 14px;
+      font-weight: 1000;
     }
 
     /* ── 股市ETF investing section ── */
@@ -1455,8 +1540,21 @@
       }
 
       .footer {
-        align-items: flex-start;
-        flex-direction: column;
+        border-radius: 18px;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+
+      .footer-cta {
+        text-align: left;
+      }
+
+      .footer-links a {
+        padding-right: 10px;
+        margin-right: 10px;
       }
     }
 
@@ -1822,9 +1920,31 @@
 
     </main>
 
-    <footer class="footer">
-      <span>OpenClaw 排版整合 · 阿姨別生氣生活雷達 · 角色設計持續迭代中</span>
-      <a href="#top">回到上面</a>
+    <footer class="footer" aria-label="網站頁尾">
+      <div class="footer-main">
+        <div class="footer-info">
+          <nav class="footer-links" aria-label="網站資訊">
+            <a href="about.html">關於阿姨</a>
+            <a href="contact.html#collab">合作提案</a>
+            <a href="privacy.html">隱私權聲明</a>
+            <a href="contact.html">聯絡阿姨</a>
+            <a href="contact.html#report">問題回報</a>
+            <a href="disclaimer.html">投資風險聲明</a>
+            <a href="copyright.html">著作權聲明</a>
+          </nav>
+          <p class="footer-note">本站整理生活事件、踩坑提醒與股市 ETF 教育內容；股市資訊僅供學習參考，不是投資建議。若內容引用公開資料，會盡量附上來源。</p>
+          <div class="footer-socials" aria-label="社群與聯絡方式">
+            <a class="social-pill primary" href="https://x.com/auntienomad" target="_blank" rel="noreferrer">X @auntienomad</a>
+            <a class="social-pill" href="mailto:auntienomad@gmail.com">Email</a>
+            <a class="social-pill" href="#top">回到上面</a>
+          </div>
+        </div>
+        <div class="footer-cta">
+          <strong>阿姨別生氣</strong>
+          <p>生活雷達、踩坑日記、股市 ETF 與實用工具，朝每天早上 7 點前更新前進。</p>
+        </div>
+      </div>
+      <div class="footer-bottom">阿姨別生氣 © 2026 All Rights Reserved.</div>
     </footer>
   </div>
 
