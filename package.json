@@ -6,6 +6,7 @@
   "scripts": {
     "update:daily": "node scripts/daily-update.mjs",
     "test": "node scripts/validate-content.mjs",
-    "generate:seo": "node scripts/generate-seo.mjs"
+    "generate:seo": "node scripts/generate-seo.mjs",
+    "test:x-api": "node scripts/test-x-api.mjs"
   }
 }

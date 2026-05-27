@@ -90,6 +90,29 @@ Actions → Daily Auntie Update → Run workflow
 
 腳本應保留 fallback：API 失敗時保留舊資料，不覆蓋首頁。
 
+## X API 測試
+
+安全測試腳本：
+
+```powershell
+npm run test:x-api
+```
+
+這個測試只驗證 X API 憑證是否能讀取目前登入帳號，不會發文。
+
+可用兩種設定方式擇一：
+
+- OAuth2：`X_BEARER_TOKEN`
+- OAuth1 user context：`X_API_KEY`、`X_API_SECRET`、`X_ACCESS_TOKEN`、`X_ACCESS_TOKEN_SECRET`
+
+GitHub Actions 手動測試：
+
+```text
+Actions → X API Smoke Test → Run workflow
+```
+
+如果要之後自動發文，還需要另外確認 token 有寫入貼文與上傳圖片權限；目前 smoke test 不會公開發布任何內容。
+
 ## 更新失敗怎麼查
 
 1. 到 GitHub Actions 查看 `Daily Auntie Update`
