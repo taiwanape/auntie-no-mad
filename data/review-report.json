@@ -1,6 +1,6 @@
 {
-  "date": "2026-05-27",
-  "generatedAt": "2026-05-27T15:48:57.226Z",
+  "date": "2026-05-28",
+  "generatedAt": "2026-05-27T22:56:55.395Z",
   "status": "approved",
   "checks": [
     "lifeRadar: 2 items checked",
@@ -25,6 +25,12 @@
       "url": "https://feeds.feedburner.com/rsscna/finance",
       "ok": true,
       "count": 20
+    },
+    {
+      "name": "臺灣證券交易所 STOCK_DAY_ALL",
+      "url": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?response=json",
+      "ok": true,
+      "count": 1361
     }
   ],
   "updatedSections": [
@@ -35,7 +41,5 @@
     "fridgeNotes",
     "archive"
   ],
-  "errors": [
-    "market fallback used: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
-  ]
+  "errors": []
 }
