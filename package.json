@@ -7,6 +7,7 @@
     "update:daily": "node scripts/daily-update.mjs",
     "test": "node scripts/validate-content.mjs",
     "generate:seo": "node scripts/generate-seo.mjs",
-    "test:x-api": "node scripts/test-x-api.mjs"
+    "test:x-api": "node scripts/test-x-api.mjs",
+    "post:x": "node scripts/post-x-manual.mjs"
   }
 }

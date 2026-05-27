@@ -1,0 +1,45 @@
+name: X Manual Post
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_post:
+        description: Type POST to publish to X
+        required: true
+        type: string
+      post_text:
+        description: Optional custom post text. Leave blank for the built-in auntie note.
+        required: false
+        type: string
+      post_image:
+        description: Optional image path in the repo.
+        required: false
+        default: social/x-trial-2026-05-28.png
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  post:
+    if: ${{ github.event.inputs.confirm_post == 'POST' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Publish X post
+        run: npm run post:x
+        env:
+          POST_TO_X: "true"
+          X_POST_TEXT: ${{ github.event.inputs.post_text }}
+          X_POST_IMAGE: ${{ github.event.inputs.post_image }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
