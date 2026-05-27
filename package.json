@@ -1,0 +1,11 @@
+{
+  "name": "auntie-no-mad",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update:daily": "node scripts/daily-update.mjs",
+    "test": "node scripts/validate-content.mjs",
+    "generate:seo": "node scripts/generate-seo.mjs"
+  }
+}

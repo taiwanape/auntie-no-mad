@@ -1,0 +1,304 @@
+{
+  "site": {
+    "name": "阿姨別生氣",
+    "url": "https://taiwanape.github.io/auntie-no-mad/",
+    "updatedAt": "2026-05-27T07:00:00+08:00",
+    "dailyNote": "看完整 5/27 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
+    "dailyNoteUrl": "stocks/2026-05-27-market-watch.html"
+  },
+  "lifeRadar": [
+    {
+      "title": "高鐵延誤退費別拖：一年內可以辦，但別拖到忘記。",
+      "date": "2026-05-27",
+      "category": "交通新聞",
+      "summary": "5/25 大延誤後，高鐵公布一年內可退費且免手續費。阿姨提醒：先留票根和付款紀錄，不要氣完就忘。",
+      "auntieComment": "退費不是靠記憶力，是靠你現在就把資料收好。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605265001.aspx",
+      "slug": "radar/2026-05-27-hsr-refund.html",
+      "thumbnail": "assets/radar-20260526-hsr-recovery-thumb.png",
+      "thumbnailAlt": "阿姨拿手機提醒高鐵退費的小封面縮圖",
+      "cta": "退費期限、資料和通勤族要記住的重點。"
+    },
+    {
+      "title": "先熱再變天：白天像烤箱，週末前記得看鋒面臉色。",
+      "date": "2026-05-27",
+      "category": "天氣新聞",
+      "summary": "台南昨天天氣衝到 39.5 度，27 到 28 日還是偏熱，29 日起鋒面接近。阿姨翻譯：先防曬補水，傘也別急著收。",
+      "auntieComment": "天氣不是在跟你商量，出門前看一下預報，少曬一點也少罵一點。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605260312.aspx",
+      "slug": "radar/2026-05-27-heat-front.html",
+      "thumbnail": "assets/radar-20260526-heat-jangmi-thumb.png",
+      "thumbnailAlt": "阿姨拿電扇與水瓶提醒高溫天氣的小封面縮圖",
+      "cta": "高溫、鋒面和週末行程怎麼一起準備。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "名人推薦？先不要跪，可能是詐騙在穿西裝。",
+      "date": "2026-05-27",
+      "category": "社群踩坑",
+      "summary": "Meta 社群詐騙越包越像真的，看到名人投資、限量優惠、保證獲利，阿姨先問一句：你有先查 165 嗎？",
+      "auntieComment": "越像真的越要慢三秒，急著按下去通常是錢包先跌倒。",
+      "sourceUrl": "https://news.pts.org.tw/article/809388",
+      "slug": "stories/2026-05-27-social-scam.html",
+      "thumbnail": "assets/story-20260527-social-scam-thumb.png",
+      "thumbnailAlt": "社群詐騙踩坑日記小縮圖，阿姨看著社群頁面提醒不要亂點",
+      "cta": "社群投資廣告先停三秒。"
+    },
+    {
+      "title": "熱門景點省時間，結果大家一起把時間塞住。",
+      "date": "2026-05-27",
+      "category": "出遊踩坑",
+      "summary": "新橋、新景點、新打卡路線很香，但週末人潮一來，導航比阿姨碎念還吵。出門前先查路況，別把放假變排隊。",
+      "auntieComment": "省時間不是走捷徑，是先確認大家是不是都想走同一條。",
+      "sourceUrl": "https://news.tvbs.com.tw/life/3206578",
+      "slug": "stories/2026-05-27-traffic-crowd.html",
+      "thumbnail": "assets/story-20260527-traffic-crowd-thumb.png",
+      "thumbnailAlt": "交通出遊踩坑日記小縮圖，阿姨提醒出門前先查路況",
+      "cta": "出遊前先查車潮，不要把假日塞成平日。"
+    }
+  ],
+  "stockOverview": {
+    "title": "股市ETF",
+    "date": "2026-05-27",
+    "category": "股市 ETF",
+    "summary": "今天用 5/26 收盤後的公開資料做早晨版整理：兩檔熱門股、一檔新星觀察、一檔高人氣但不能只看配息的 ETF。",
+    "auntieComment": "不是報明牌，是幫你把市場消息整理成白話文。",
+    "sourceUrl": "https://tw.stock.yahoo.com/",
+    "slug": "stocks/2026-05-27-market-watch.html",
+    "badge": "5/27 早晨版",
+    "marketCards": [
+      {
+        "label": "熱門股 2409",
+        "value": "友達",
+        "note": "量大先看風險",
+        "trend": "熱門股",
+        "tone": "down"
+      },
+      {
+        "label": "熱門股 2356",
+        "value": "英業達",
+        "note": "AI 題材續熱",
+        "trend": "熱門股",
+        "tone": "up"
+      },
+      {
+        "label": "新星 6770",
+        "value": "力積電",
+        "note": "外資回頭看",
+        "trend": "新星觀察",
+        "tone": "up"
+      },
+      {
+        "label": "風險題材 00919",
+        "value": "高股息 ETF",
+        "note": "別只看配息",
+        "trend": "不是投資建議",
+        "tone": "down"
+      }
+    ]
+  },
+  "stockWatchlist": [
+    {
+      "title": "友達",
+      "date": "2026-05-27",
+      "category": "熱門股",
+      "summary": "成交值排行靠前、討論度高，但面板景氣循環很硬。",
+      "auntieComment": "熱鬧可以看，衝之前先看自己懂不懂。",
+      "sourceUrl": "https://tw.stock.yahoo.com/news/%E4%B8%89%E5%A4%A7%E6%B3%95%E4%BA%BA%E8%B2%B7%E8%B6%85%E5%89%8D%E5%8D%81%E5%A4%A7%E6%8C%81%E8%82%A1-%E5%89%8D%E5%8D%81%E5%A4%A7%E6%88%90%E4%BA%A4%E5%80%BC%E5%A2%9E%E5%8A%A0%E8%82%A1-%E5%89%8D%E5%8D%81%E5%A4%A7%E5%A4%96%E8%B3%87%E8%B3%A3%E8%B6%85%E8%82%A1-052751604.html",
+      "slug": "stocks/2026-05-27-auo.html",
+      "ticker": "2409",
+      "name": "友達",
+      "type": "熱門股 A",
+      "reason": "成交值與討論度高，面板題材受到市場注意。",
+      "riskLevel": "中高",
+      "riskNote": "面板景氣循環大，價格波動可能很快。",
+      "suitableFor": "想練習看景氣循環與成交量的人。",
+      "notSuitableFor": "只想找穩定配息或不能接受劇烈波動的人。",
+      "disclaimer": "僅供教育與資訊參考，不是投資建議。",
+      "updatedAt": "2026-05-27T07:00:00+08:00"
+    },
+    {
+      "title": "英業達",
+      "date": "2026-05-27",
+      "category": "熱門股",
+      "summary": "AI 伺服器鏈還在市場視線中央，但題材股回檔也很常見。",
+      "auntieComment": "故事很熱，回檔也要會看。",
+      "sourceUrl": "https://tw.stock.yahoo.com/quote/2356.TW",
+      "slug": "stocks/2026-05-27-inventec.html",
+      "ticker": "2356",
+      "name": "英業達",
+      "type": "熱門股 B",
+      "reason": "AI 伺服器題材續熱，市場仍高度關注供應鏈。",
+      "riskLevel": "中",
+      "riskNote": "題材熱不代表每天都漲，仍要看訂單、毛利與估值。",
+      "suitableFor": "想理解 AI 伺服器供應鏈的人。",
+      "notSuitableFor": "把 AI 題材當穩贏答案的人。",
+      "disclaimer": "僅供教育與資訊參考，不是投資建議。",
+      "updatedAt": "2026-05-27T07:00:00+08:00"
+    },
+    {
+      "title": "力積電",
+      "date": "2026-05-27",
+      "category": "新星觀察",
+      "summary": "不是台股主角團，但外資買超題材讓它重新被看見。",
+      "auntieComment": "越不顯眼的名字，越要先做功課。",
+      "sourceUrl": "https://tw.stock.yahoo.com/quote/6770.TW",
+      "slug": "stocks/2026-05-27-psmc.html",
+      "ticker": "6770",
+      "name": "力積電",
+      "type": "新星觀察股",
+      "reason": "外資買超與半導體題材讓市場重新注意。",
+      "riskLevel": "中高",
+      "riskNote": "成熟製程與記憶體景氣循環明顯，反轉不一定延續。",
+      "suitableFor": "願意研究二線半導體與景氣循環的人。",
+      "notSuitableFor": "只看短線熱度、沒有停損規劃的人。",
+      "disclaimer": "僅供教育與資訊參考，不是投資建議。",
+      "updatedAt": "2026-05-27T07:00:00+08:00"
+    },
+    {
+      "title": "群益台灣精選高息",
+      "date": "2026-05-27",
+      "category": "風險題材 ETF",
+      "summary": "高股息很香，但只看配息最容易把 ETF 當紅包袋。",
+      "auntieComment": "人氣越高，越要看淨值和填息。",
+      "sourceUrl": "https://tw.stock.yahoo.com/quote/00919.TW/dividend",
+      "slug": "stocks/2026-05-27-00919.html",
+      "ticker": "00919",
+      "name": "群益台灣精選高息",
+      "type": "風險題材 / 高人氣 ETF",
+      "reason": "高股息 ETF 人氣高，但配息、淨值與填息風險不能忽略。",
+      "riskLevel": "中",
+      "riskNote": "配息不等於獲利，成分股與淨值變化仍有風險。",
+      "suitableFor": "想學 ETF 配息與成分股觀念的人。",
+      "notSuitableFor": "只看殖利率、不看淨值與成本的人。",
+      "disclaimer": "僅供教育與資訊參考，不是投資建議。",
+      "updatedAt": "2026-05-27T07:00:00+08:00"
+    }
+  ],
+  "etfGuide": [
+    {
+      "title": "市值型",
+      "date": "2026-05-27",
+      "category": "ETF 懶人包",
+      "summary": "買大間的公司就對了。0050、006208 都算這類。跟著大盤走，大盤跌你也會跌，沒有穩賺這種事。",
+      "auntieComment": "看起來穩，不代表不會跌。",
+      "sourceUrl": "https://www.twse.com.tw/",
+      "slug": "etf-market-cap"
+    },
+    {
+      "title": "高股息型",
+      "date": "2026-05-27",
+      "category": "ETF 懶人包",
+      "summary": "想要多拿股息，0056、00878、00919 都算這類。但息越迷人，越要問自己：配息來源、淨值和填息你有比較關心嗎？",
+      "auntieComment": "不要只看紅包袋，也要看袋子裡是不是自己的錢。",
+      "sourceUrl": "https://tw.stock.yahoo.com/",
+      "slug": "etf-dividend"
+    },
+    {
+      "title": "主題 / 國際型",
+      "date": "2026-05-27",
+      "category": "ETF 懶人包",
+      "summary": "只買某個產業或國家，AI、電動車、越南、印度、同族群，主題越集中，晃動越大，心臟先練好。",
+      "auntieComment": "題材越炫，越要先確認自己懂不懂。",
+      "sourceUrl": "https://www.twse.com.tw/",
+      "slug": "etf-theme-global"
+    }
+  ],
+  "goodPicks": [
+    {
+      "title": "小摺傘",
+      "date": "2026-05-27",
+      "category": "通勤",
+      "summary": "重點不是可愛，是打開不會翻、收起來不會滴到整個包。",
+      "auntieComment": "便宜可以，不能一陣風就投降。",
+      "sourceUrl": "",
+      "slug": "pick-folding-umbrella"
+    },
+    {
+      "title": "透明收納盒",
+      "date": "2026-05-27",
+      "category": "家用",
+      "summary": "看得到才會用。看不到的東西，最後都會變成重複購買。",
+      "auntieComment": "找不到東西的人，先不要怪記憶力。",
+      "sourceUrl": "",
+      "slug": "pick-clear-storage"
+    },
+    {
+      "title": "耐摔水壺",
+      "date": "2026-05-27",
+      "category": "學生",
+      "summary": "不要買貴到摔壞先信誓旦旦的。喝水是目的，不是供奉。",
+      "auntieComment": "水壺要服務你，不是讓你每天擔心它。",
+      "sourceUrl": "",
+      "slug": "pick-water-bottle"
+    },
+    {
+      "title": "長輩大字設定",
+      "date": "2026-05-27",
+      "category": "手機",
+      "summary": "幫媽媽把字調大，不要等她把手機拿到一公尺外看。",
+      "auntieComment": "字太小不是時髦，是家裡火氣來源。",
+      "sourceUrl": "",
+      "slug": "pick-large-font"
+    }
+  ],
+  "fridgeNotes": [
+    {
+      "title": "出門前",
+      "date": "2026-05-27",
+      "category": "冰箱便條紙",
+      "summary": "手機、鑰匙、錢包、雨傘。四個有三個就會少一場災難。",
+      "auntieComment": "少帶一個可以，少帶腦袋不行。",
+      "sourceUrl": "",
+      "slug": "note-before-leaving"
+    },
+    {
+      "title": "買東西前",
+      "date": "2026-05-27",
+      "category": "冰箱便條紙",
+      "summary": "這是需要，還是今天很累想被安慰？兩種都可以，但不要搞混。",
+      "auntieComment": "慰勞自己可以，但不要假裝是剛需。",
+      "sourceUrl": "",
+      "slug": "note-before-buying"
+    },
+    {
+      "title": "家庭群組",
+      "date": "2026-05-27",
+      "category": "冰箱便條紙",
+      "summary": "先查證，再回話。不要把愛家人的心，用吵架的方式送出去。",
+      "auntieComment": "先救資訊，再救感情。",
+      "sourceUrl": "",
+      "slug": "note-family-chat"
+    },
+    {
+      "title": "睡前",
+      "date": "2026-05-27",
+      "category": "冰箱便條紙",
+      "summary": "明天要帶的東西放門口。這不是強迫症，是救明天的自己。",
+      "auntieComment": "今天晚上的你，救一下明天早上的你。",
+      "sourceUrl": "",
+      "slug": "note-before-sleep"
+    }
+  ],
+  "archive": [
+    {
+      "title": "今日市場筆記 2026/05/27",
+      "date": "2026-05-27",
+      "category": "股市 ETF",
+      "summary": "友達、英業達、力積電與 00919 的早晨觀察。",
+      "auntieComment": "每天四檔，重點是學會看分類，不是跟著喊衝。",
+      "sourceUrl": "https://tw.stock.yahoo.com/",
+      "slug": "stocks/2026-05-27-market-watch.html"
+    },
+    {
+      "title": "高鐵延誤退費別拖",
+      "date": "2026-05-27",
+      "category": "生活雷達",
+      "summary": "一年內可辦退費，別把權益忘在票根裡。",
+      "auntieComment": "先收資料，再收脾氣。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605265001.aspx",
+      "slug": "radar/2026-05-27-hsr-refund.html"
+    }
+  ]
+}

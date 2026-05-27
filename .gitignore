@@ -5,6 +5,8 @@ Thumbs.db
 .playwright-cli/
 qa-*.png
 qa-*.pdf
+qa/
+qa-local/
 restore-points/
 assets/archive/
 assets/reference-only/

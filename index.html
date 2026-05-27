@@ -3,20 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="阿姨別生氣，短捲髮豹紋阿姨用梗圖、踩坑日記、股票 ETF 觀察與好物推薦，把台灣每天的瑣事講得好懂又好笑。">
-  <title>阿姨別生氣｜生活雷達</title>
+  <title>阿姨別生氣｜生活雷達、踩坑日記與股市 ETF 白話整理</title>
+  <meta name="description" content="阿姨別生氣每天整理台灣生活新聞、踩坑提醒、股市 ETF 教育內容與實用工具，用阿姨碎念把複雜事情講成看得懂的版本。">
+  <link rel="canonical" href="https://taiwanape.github.io/auntie-no-mad/">
   <meta property="og:site_name" content="阿姨別生氣">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="阿姨別生氣">
-  <meta property="og:description" content="把生活大小事、台股與 ETF 用阿姨看得懂的方式整理給你。">
+  <meta property="og:title" content="阿姨別生氣｜生活雷達、踩坑日記與股市 ETF 白話整理">
+  <meta property="og:description" content="每天整理台灣生活新聞、踩坑提醒、股市 ETF 教育內容與實用工具。阿姨不講官腔，只講今天出門會不會煩。">
   <meta property="og:url" content="https://taiwanape.github.io/auntie-no-mad/">
-  <meta property="og:image" content="https://raw.githubusercontent.com/taiwanape/auntie-no-mad/73399caf9dff21329392b43c38a4bf0ba5cae719/assets/og/og-home.jpg">
+  <meta property="og:image" content="https://taiwanape.github.io/auntie-no-mad/assets/auntie-hero.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="阿姨別生氣">
-  <meta name="twitter:description" content="把生活大小事、台股與 ETF 用阿姨看得懂的方式整理給你。">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/taiwanape/auntie-no-mad/73399caf9dff21329392b43c38a4bf0ba5cae719/assets/og/og-home.jpg">
+  <meta name="twitter:title" content="阿姨別生氣｜生活雷達、踩坑日記與股市 ETF 白話整理">
+  <meta name="twitter:description" content="每天整理台灣生活新聞、踩坑提醒、股市 ETF 教育內容與實用工具。阿姨不講官腔，只講今天出門會不會煩。">
+  <meta name="twitter:image" content="https://taiwanape.github.io/auntie-no-mad/assets/auntie-hero.jpg">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "阿姨別生氣",
+      "url": "https://taiwanape.github.io/auntie-no-mad/",
+      "description": "每天整理台灣生活新聞、踩坑提醒、股市 ETF 教育內容與實用工具。",
+      "publisher": {
+        "@type": "Organization",
+        "name": "阿姨別生氣",
+        "url": "https://taiwanape.github.io/auntie-no-mad/"
+      }
+    }
+  </script>
   <link rel="icon" href="assets/auntie-avatar-nav.jpg">
   <style>
     *, *::before, *::after {
@@ -1824,7 +1839,7 @@
               </div>
             </a>
           </div>
-          <p class="investing-desc"><a href="stocks/2026-05-27-market-watch.html">看完整 5/27 早晨市場筆記</a>，把四檔分類、理由、風險和來源一次看完。</p>
+          <p class="investing-desc" data-daily-market-link="true"><a href="stocks/2026-05-27-market-watch.html">看完整 5/27 早晨市場筆記</a>，把四檔分類、理由、風險和來源一次看完。</p>
         </div>
 
         <!-- ETF懶人包 -->
@@ -1991,7 +2006,7 @@
   </div>
 
   <script>
-    const tips = [
+    let tips = [
       ["全台熱到週四：薔蜜在旁邊排隊取號。", "高溫還沒下班，熱帶性低氣壓又在海上醞釀。阿姨翻譯：今天先補水防曬，週末再看天空要不要加戲。"],
       ["高鐵今天恢復正常。", "官方說班表回來了，但通勤族的心臟還在候補。阿姨提醒：出門前先看 App，保護行程也保護血壓。"],
       ["手指已經先排隊。", "熱門票券還沒開賣，手指已經開始 F5。阿姨提醒：先登入、先喝水、先不要罵 Wi-Fi，票沒有買到，血壓也不要一起上架。"],
@@ -2021,11 +2036,149 @@
       }).format(now);
     }
 
-    shuffle.addEventListener("click", () => {
+    shuffle?.addEventListener("click", () => {
       const tip = tips[Math.floor(Math.random() * tips.length)];
-      tipTitle.textContent = tip[0];
-      tipText.textContent = tip[1];
+      if (tipTitle && tipText) {
+        tipTitle.textContent = tip[0];
+        tipText.textContent = tip[1];
+      }
     });
+
+    const escapeHtml = (value = "") => String(value)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+
+    const sourceText = (item) => item?.sourceUrl ? "" : "來源待補";
+
+    function renderArticleCards(selector, items = []) {
+      const container = document.querySelector(selector);
+      if (!container || !Array.isArray(items) || items.length === 0) return;
+
+      container.innerHTML = items.map((item) => `
+        <a class="radar-zine" href="${escapeHtml(item.slug || "#")}">
+          <div class="zine-art">
+            <img src="${escapeHtml(item.thumbnail || "assets/auntie-hero.jpg")}" alt="${escapeHtml(item.thumbnailAlt || item.title)}">
+          </div>
+          <div class="zine-body">
+            <div class="zine-meta">
+              <span class="label">${escapeHtml(item.category || "生活")}</span>
+              <span class="zine-date">${escapeHtml((item.date || "").replaceAll("-", "/"))}</span>
+            </div>
+            <h3>${escapeHtml(item.title || "阿姨還在整理")}</h3>
+            <p>${escapeHtml(item.summary || "資料整理中，先別急著生氣。")}</p>
+            <div class="zine-caption"><strong>點進去看：</strong>${escapeHtml(item.cta || item.auntieComment || sourceText(item) || "完整內容。")}</div>
+            <span class="read-more">讀故事</span>
+          </div>
+        </a>
+      `).join("");
+    }
+
+    function renderMarketCards(content) {
+      const container = document.querySelector("#investing .radar-grid");
+      if (!container || !content?.marketCards?.length) return;
+
+      container.innerHTML = content.marketCards.map((item) => `
+        <article class="radar-card">
+          <div class="index-name">${escapeHtml(item.label)}</div>
+          <div class="index-value">${escapeHtml(item.value)} <span class="index-unit">${escapeHtml(item.note)}</span></div>
+          <div class="index-change ${item.tone === "up" ? "change-up" : item.tone === "down" ? "change-down" : "change-neutral"}">${escapeHtml(item.trend)}</div>
+        </article>
+      `).join("");
+
+      const badge = document.querySelector("#radarSubTitle + .example-badge");
+      if (badge && content.badge) badge.textContent = content.badge;
+
+      const desc = document.querySelector("#radarSubTitle")?.closest(".investing-block")?.querySelector(".investing-desc");
+      if (desc && content.summary) desc.textContent = content.summary;
+    }
+
+    function renderStockWatchlist(site, items = []) {
+      const container = document.querySelector("#investing .watchlist-grid");
+      if (!container || !Array.isArray(items) || items.length === 0) return;
+
+      container.innerHTML = items.map((item) => `
+        <a class="watchlist-card" href="${escapeHtml(item.slug || "#")}" aria-label="閱讀${escapeHtml(item.name || item.title)}今日股票故事">
+          <span class="wl-symbol">${escapeHtml(item.ticker || item.category || "ETF")}</span>
+          <div class="wl-info">
+            <div class="wl-name">${escapeHtml(item.name || item.title)}</div>
+            <div class="wl-note">${escapeHtml(`${item.category || item.type || "觀察"}。${item.summary || item.reason || "資料整理中。"} 阿姨的理由：${item.auntieComment || item.riskNote || "先看懂，再煩惱。"}`)}</div>
+            <span class="wl-story-link">讀個股故事</span>
+          </div>
+        </a>
+      `).join("");
+
+      const block = container.closest(".investing-block");
+      const desc = block?.querySelector(".investing-desc");
+      if (desc) desc.textContent = "今天固定四檔，分類也講清楚：兩檔熱門股、一檔新星觀察、一檔高人氣但風險也高的 ETF。每檔都附阿姨白話理由，但仍然不是買賣建議。";
+
+      let dailyLink = block?.querySelector("[data-daily-market-link]");
+      if (!dailyLink && block) {
+        dailyLink = document.createElement("p");
+        dailyLink.className = "investing-desc";
+        dailyLink.dataset.dailyMarketLink = "true";
+        block.appendChild(dailyLink);
+      }
+      if (dailyLink && site?.dailyNoteUrl) {
+        dailyLink.innerHTML = `<a href="${escapeHtml(site.dailyNoteUrl)}">${escapeHtml(site.dailyNote || "看完整市場筆記")}</a>`;
+      }
+    }
+
+    function renderSimpleCards(selector, items = []) {
+      const container = document.querySelector(selector);
+      if (!container || !Array.isArray(items) || items.length === 0) return;
+
+      container.innerHTML = items.map((item) => `
+        <article class="card">
+          <span class="label">${escapeHtml(item.category || "阿姨")}</span>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.summary || item.auntieComment || "資料整理中。")}</p>
+        </article>
+      `).join("");
+    }
+
+    function renderEtfGuide(items = []) {
+      const container = document.querySelector("#investing .etf-grid");
+      if (!container || !Array.isArray(items) || items.length === 0) return;
+
+      container.innerHTML = items.map((item) => `
+        <article class="etf-card">
+          <h4>${escapeHtml(item.title)}</h4>
+          <p>${escapeHtml(item.summary)}</p>
+        </article>
+      `).join("");
+    }
+
+    function renderFridgeNotes(items = []) {
+      const container = document.querySelector("[aria-labelledby='memoTitle'] .memo");
+      if (!container || !Array.isArray(items) || items.length === 0) return;
+
+      container.innerHTML = items.map((item) => `
+        <div class="note"><strong>${escapeHtml(item.title)}</strong>${escapeHtml(item.summary)}</div>
+      `).join("");
+
+      tips = items.map((item) => [item.title, item.auntieComment || item.summary]);
+    }
+
+    async function loadSiteContent() {
+      try {
+        const response = await fetch("data/site-content.json", { cache: "no-store" });
+        if (!response.ok) throw new Error("content data unavailable");
+        const content = await response.json();
+
+        renderArticleCards("#radar .radar-zine-grid", content.lifeRadar);
+        renderArticleCards("#stories .radar-zine-grid", content.pitfalls);
+        renderMarketCards(content.stockOverview);
+        renderStockWatchlist(content.site, content.stockWatchlist);
+        renderEtfGuide(content.etfGuide);
+        renderSimpleCards("#picks .grid", content.goodPicks);
+        renderFridgeNotes(content.fridgeNotes);
+      } catch (error) {
+        console.warn("阿姨資料檔讀不到，先保留靜態備份內容：", error);
+      }
+    }
 
     async function updateVisitorCount() {
       if (!visitorCount) return;
@@ -2093,6 +2246,7 @@
       field?.addEventListener("change", updateConverter);
     });
 
+    loadSiteContent();
     updateClock();
     updateVisitorCount();
     updateConverter();
