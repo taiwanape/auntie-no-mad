@@ -14,7 +14,7 @@ on:
       post_image:
         description: Optional image path in the repo.
         required: false
-        default: social/x-trial-2026-05-28.png
+        default: social/x-heat-2026-05-28.png
         type: string
 
 permissions:
