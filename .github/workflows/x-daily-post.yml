@@ -1,0 +1,36 @@
+name: X Daily Post
+
+on:
+  schedule:
+    # 06:45 Asia/Taipei. GitHub cron is UTC.
+    - cron: "45 22 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate content before posting
+        run: npm test
+
+      - name: Publish daily X post
+        run: npm run post:x
+        env:
+          POST_TO_X: "true"
+          X_POST_SOURCE: "daily-content"
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}

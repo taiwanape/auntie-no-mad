@@ -4,16 +4,16 @@ import path from "node:path";
 
 const root = process.cwd();
 const defaultText = [
-  "今天出門三件事：",
+  "台北昨天 38.3°C，五月高溫紀錄直接被刷新。",
   "",
-  "水先喝，別跟太陽硬碰硬。",
-  "傘先帶，天氣比群組還會變臉。",
-  "訊息先別亂回，已讀不等於上班。",
+  "阿姨翻譯：天氣不是熱，是在烤人情緒。",
+  "今天水先喝、傘先帶，冷氣別一口氣轉 18 度，電費也會生氣。",
   "",
-  "阿姨不是都對，阿姨只是先幫你少煩一次。",
+  "來源：中央社",
+  "https://www.cna.com.tw/news/ahel/202605270353.aspx",
   "#阿姨別生氣 #生活雷達"
 ].join("\n");
-const defaultImage = "social/x-trial-2026-05-28.png";
+const defaultImage = "social/x-heat-2026-05-28.png";
 
 const credentials = {
   apiKey: process.env.X_API_KEY,
@@ -79,6 +79,43 @@ function validateTweetText(text) {
   return text;
 }
 
+function compact(text, maxLength) {
+  const clean = String(text || "")
+    .replace(/（中央社.*?）/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if ([...clean].length <= maxLength) return clean;
+  return `${[...clean].slice(0, maxLength - 1).join("")}…`;
+}
+
+function buildDailyTweetFromContent() {
+  const contentPath = path.join(root, "data", "site-content.json");
+  const content = JSON.parse(fs.readFileSync(contentPath, "utf8"));
+  const item = content.lifeRadar?.[0] || content.pitfalls?.[0];
+  if (!item) throw new Error("No daily lifeRadar or pitfalls content found.");
+
+  const categoryTag = item.category?.includes("踩坑") ? "#踩坑日記" : "#生活雷達";
+  const sourceLabel = item.sourceName || "公開來源";
+  const summary = compact(item.summary, 54);
+  const auntieComment = compact(item.auntieComment || "先看來源，再決定要不要緊張。", 38);
+  const text = [
+    compact(item.title, 36),
+    "",
+    `阿姨翻譯：${auntieComment}`,
+    `重點：${summary}`,
+    "",
+    `來源：${sourceLabel}`,
+    item.sourceUrl || content.site?.url || "https://taiwanape.github.io/auntie-no-mad/",
+    `#阿姨別生氣 ${categoryTag}`
+  ].join("\n");
+
+  return {
+    text: validateTweetText(text),
+    imagePath: item.hero || item.thumbnail || defaultImage,
+    sourceSlug: item.slug
+  };
+}
+
 async function uploadMedia(imagePath) {
   const baseUrl = "https://upload.twitter.com/1.1/media/upload.json";
   const absolutePath = path.join(root, imagePath);
@@ -130,13 +167,17 @@ async function main() {
   const shouldPost = process.env.POST_TO_X === "true";
   if (shouldPost) assertCredentials();
 
-  const text = validateTweetText(process.env.X_POST_TEXT?.trim() || defaultText);
-  const imagePath = process.env.X_POST_IMAGE?.trim() || defaultImage;
+  const dailyPost =
+    process.env.X_POST_SOURCE === "daily-content" ? buildDailyTweetFromContent() : null;
+  const text = validateTweetText(process.env.X_POST_TEXT?.trim() || dailyPost?.text || defaultText);
+  const imagePath = process.env.X_POST_IMAGE?.trim() || dailyPost?.imagePath || defaultImage;
 
   console.log(
     JSON.stringify(
       {
         mode: shouldPost ? "post" : "dry-run",
+        source: process.env.X_POST_SOURCE || "manual-default",
+        sourceSlug: dailyPost?.sourceSlug,
         imagePath,
         text
       },

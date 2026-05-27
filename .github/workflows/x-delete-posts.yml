@@ -1,0 +1,45 @@
+name: X Delete Posts
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_delete:
+        description: Type DELETE to delete recent X posts
+        required: true
+        type: string
+      delete_max:
+        description: Number of recent posts to delete
+        required: false
+        default: "10"
+        type: string
+      delete_ids:
+        description: Optional comma-separated tweet IDs. Leave blank to delete recent posts.
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  delete:
+    if: ${{ github.event.inputs.confirm_delete == 'DELETE' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Delete recent X posts
+        run: npm run delete:x-posts
+        env:
+          DELETE_FROM_X: "true"
+          X_DELETE_MAX: ${{ github.event.inputs.delete_max }}
+          X_DELETE_IDS: ${{ github.event.inputs.delete_ids }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
