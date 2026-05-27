@@ -1,0 +1,41 @@
+{
+  "date": "2026-05-27",
+  "generatedAt": "2026-05-27T15:48:57.226Z",
+  "status": "approved",
+  "checks": [
+    "lifeRadar: 2 items checked",
+    "pitfalls: 2 items checked",
+    "stockWatchlist: 4 items checked"
+  ],
+  "sources": [
+    {
+      "name": "中央社生活醫藥",
+      "url": "https://feeds.feedburner.com/rsscna/lifehealth",
+      "ok": true,
+      "count": 20
+    },
+    {
+      "name": "中央社社會新聞",
+      "url": "https://feeds.feedburner.com/rsscna/social",
+      "ok": true,
+      "count": 20
+    },
+    {
+      "name": "中央社財經新聞",
+      "url": "https://feeds.feedburner.com/rsscna/finance",
+      "ok": true,
+      "count": 20
+    }
+  ],
+  "updatedSections": [
+    "lifeRadar",
+    "pitfalls",
+    "stockOverview",
+    "stockWatchlist",
+    "fridgeNotes",
+    "archive"
+  ],
+  "errors": [
+    "market fallback used: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+  ]
+}

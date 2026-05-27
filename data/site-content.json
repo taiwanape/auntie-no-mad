@@ -3,33 +3,37 @@
     "name": "阿姨別生氣",
     "url": "https://taiwanape.github.io/auntie-no-mad/",
     "updatedAt": "2026-05-27T07:00:00+08:00",
-    "dailyNote": "看完整 5/27 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
+    "dailyNote": "看完整 2026/05/27 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-05-27-market-watch.html"
   },
   "lifeRadar": [
     {
-      "title": "高鐵延誤退費別拖：一年內可以辦，但別拖到忘記。",
+      "title": "台北氣象站午後38.3度 刷新5月高溫紀錄",
       "date": "2026-05-27",
-      "category": "交通新聞",
-      "summary": "5/25 大延誤後，高鐵公布一年內可退費且免手續費。阿姨提醒：先留票根和付款紀錄，不要氣完就忘。",
-      "auntieComment": "退費不是靠記憶力，是靠你現在就把資料收好。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605265001.aspx",
-      "slug": "radar/2026-05-27-hsr-refund.html",
+      "category": "生活新聞",
+      "summary": "（中央社記者張雄風台北27日電）氣象署表示，今天下午2時許，台北氣象站高溫達攝氏38.3度，刷新該站5月最高溫紀錄；此外，受西南風持續吹拂影響，夜晚、清晨的低溫仍偏高，今天清晨台北站最低溫仍有28.7度。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "auntieComment": "新聞不是拿來焦慮的，是拿來少踩一個坑的。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605270353.aspx",
+      "slug": "radar/2026-05-27-life-1.html",
       "thumbnail": "assets/radar-20260526-hsr-recovery-thumb.png",
-      "thumbnailAlt": "阿姨拿手機提醒高鐵退費的小封面縮圖",
-      "cta": "退費期限、資料和通勤族要記住的重點。"
+      "thumbnailAlt": "阿姨整理台北氣象站午後38.3度 刷新5月高溫紀錄的生活雷達縮圖",
+      "cta": "新聞重點、阿姨白話翻譯與你今天可以先做的事。",
+      "sourceName": "中央社生活醫藥",
+      "hero": "assets/radar-20260526-hsr-recovery.png"
     },
     {
-      "title": "先熱再變天：白天像烤箱，週末前記得看鋒面臉色。",
+      "title": "婚假陪產假天數加碼 補助職代津貼每日800元",
       "date": "2026-05-27",
-      "category": "天氣新聞",
-      "summary": "台南昨天天氣衝到 39.5 度，27 到 28 日還是偏熱，29 日起鋒面接近。阿姨翻譯：先防曬補水，傘也別急著收。",
-      "auntieComment": "天氣不是在跟你商量，出門前看一下預報，少曬一點也少罵一點。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605260312.aspx",
-      "slug": "radar/2026-05-27-heat-front.html",
+      "category": "民生資訊",
+      "summary": "（中央社記者吳欣紜台北27日電）政府宣布「台灣人口對策新戰略」18項措施，包含加碼婚假、產假、陪產假天數，新增薪資由政府負擔，若企業發職代津貼、新聘替代人力也有補助，其中職代津貼補助為每日800元。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "auntieComment": "新聞不是拿來焦慮的，是拿來少踩一個坑的。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605270328.aspx",
+      "slug": "radar/2026-05-27-life-2.html",
       "thumbnail": "assets/radar-20260526-heat-jangmi-thumb.png",
-      "thumbnailAlt": "阿姨拿電扇與水瓶提醒高溫天氣的小封面縮圖",
-      "cta": "高溫、鋒面和週末行程怎麼一起準備。"
+      "thumbnailAlt": "阿姨整理婚假陪產假天數加碼 補助職代津貼每日800元的生活雷達縮圖",
+      "cta": "新聞重點、阿姨白話翻譯與你今天可以先做的事。",
+      "sourceName": "中央社生活醫藥",
+      "hero": "assets/radar-20260526-heat-jangmi.png"
     }
   ],
   "pitfalls": [
@@ -245,6 +249,15 @@
   ],
   "fridgeNotes": [
     {
+      "title": "今天先查來源",
+      "date": "2026-05-27",
+      "category": "冰箱便條紙",
+      "summary": "看到驚人消息先停三秒，來源比情緒重要。",
+      "auntieComment": "心急可以，手不要急著轉傳。",
+      "sourceUrl": "",
+      "slug": "note-2026-05-27-source"
+    },
+    {
       "title": "出門前",
       "date": "2026-05-27",
       "category": "冰箱便條紙",
@@ -270,15 +283,6 @@
       "auntieComment": "先救資訊，再救感情。",
       "sourceUrl": "",
       "slug": "note-family-chat"
-    },
-    {
-      "title": "睡前",
-      "date": "2026-05-27",
-      "category": "冰箱便條紙",
-      "summary": "明天要帶的東西放門口。這不是強迫症，是救明天的自己。",
-      "auntieComment": "今天晚上的你，救一下明天早上的你。",
-      "sourceUrl": "",
-      "slug": "note-before-sleep"
     }
   ],
   "archive": [
@@ -290,6 +294,24 @@
       "auntieComment": "每天四檔，重點是學會看分類，不是跟著喊衝。",
       "sourceUrl": "https://tw.stock.yahoo.com/",
       "slug": "stocks/2026-05-27-market-watch.html"
+    },
+    {
+      "title": "台北氣象站午後38.3度 刷新5月高溫紀錄",
+      "date": "2026-05-27",
+      "category": "生活新聞",
+      "summary": "（中央社記者張雄風台北27日電）氣象署表示，今天下午2時許，台北氣象站高溫達攝氏38.3度，刷新該站5月最高溫紀錄；此外，受西南風持續吹拂影響，夜晚、清晨的低溫仍偏高，今天清晨台北站最低溫仍有28.7度。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "auntieComment": "新聞不是拿來焦慮的，是拿來少踩一個坑的。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605270353.aspx",
+      "slug": "radar/2026-05-27-life-1.html"
+    },
+    {
+      "title": "婚假陪產假天數加碼 補助職代津貼每日800元",
+      "date": "2026-05-27",
+      "category": "民生資訊",
+      "summary": "（中央社記者吳欣紜台北27日電）政府宣布「台灣人口對策新戰略」18項措施，包含加碼婚假、產假、陪產假天數，新增薪資由政府負擔，若企業發職代津貼、新聘替代人力也有補助，其中職代津貼補助為每日800元。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "auntieComment": "新聞不是拿來焦慮的，是拿來少踩一個坑的。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605270328.aspx",
+      "slug": "radar/2026-05-27-life-2.html"
     },
     {
       "title": "高鐵延誤退費別拖",
