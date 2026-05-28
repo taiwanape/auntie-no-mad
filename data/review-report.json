@@ -1,9 +1,9 @@
 {
   "date": "2026-05-28",
-  "generatedAt": "2026-05-28T02:49:57.840Z",
+  "generatedAt": "2026-05-28T02:57:35.773Z",
   "status": "approved",
   "checks": [
-    "daily images: 0/9 generated or reused",
+    "daily images: skipped because GENERATE_DAILY_IMAGES is not true",
     "lifeRadar: 2 items checked",
     "pitfalls: 2 items checked",
     "stockWatchlist: 4 items checked"
@@ -32,15 +32,6 @@
       "url": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?response=json",
       "ok": true,
       "count": 1361
-    },
-    {
-      "name": "OpenAI Images API",
-      "url": "https://platform.openai.com/docs/guides/images/image-generation",
-      "ok": false,
-      "count": 0,
-      "model": "gpt-image-1",
-      "quality": "medium",
-      "size": "1536x1024"
     }
   ],
   "updatedSections": [
@@ -52,7 +43,5 @@
     "archive",
     "generatedImages"
   ],
-  "errors": [
-    "daily image fallback used for life-1: Billing hard limit has been reached."
-  ]
+  "errors": []
 }

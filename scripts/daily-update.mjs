@@ -344,8 +344,9 @@ function buildLifeItems(news) {
 }
 
 function buildPitfallItems(news) {
-  const hardBlockedTopics = ["議長", "連署案", "選舉", "涉貪", "貪污", "判刑", "判決", "勒贖", "拘禁", "凌虐", "殺人", "投毒", "毒駕", "毒品", "灼傷", "火警", "聲押", "羈押"];
+  const hardBlockedTopics = ["議長", "連署案", "選舉", "涉貪", "貪污", "判刑", "判決", "勒贖", "拘禁", "凌虐", "殺人", "投毒", "毒駕", "毒品", "灼傷", "火警", "骨折", "摔落", "起火"];
   const isPublicFriendly = (item) => !hardBlockedTopics.some((keyword) => `${item.title} ${item.description}`.includes(keyword));
+  const hasPitfallAngle = (item) => ["詐騙", "假投資", "假冒", "謊稱", "不明成分", "個資", "查詢個資", "醫療行為", "中醫", "兜售", "問診", "消費", "交通違規", "拒檢", "罰", "糾紛", "社群"].some((keyword) => `${item.title} ${item.description}`.includes(keyword));
   const uniqueByLink = (items) => {
     const seen = new Set();
     return items.filter((item) => {
@@ -354,15 +355,15 @@ function buildPitfallItems(news) {
       return true;
     });
   };
-  const primary = pickNews(news, "pitfall", 20, ["詐騙", "交通", "旅遊", "消費", "罰", "糾紛", "個資", "社群", "假投資", "假冒", "違規"])
+  const primary = pickNews(news, "pitfall", 20, ["詐騙", "假投資", "假冒", "謊稱", "不明成分", "個資", "查詢個資", "社群", "消費", "糾紛"])
     .filter((item) => item.score > 0)
+    .filter(hasPitfallAngle)
     .filter(isPublicFriendly);
-  const relaxed = pickNews(news, "pitfall", 20, ["個資", "中醫", "醫療", "火警", "鷹架", "交通違規", "拒檢", "事故", "違規", "快篩", "詐"])
+  const relaxed = pickNews(news, "pitfall", 20, ["個資", "中醫", "醫療行為", "問診", "兜售", "不明成分", "交通違規", "拒檢", "罰", "違規", "詐"])
     .filter((item) => item.score > 0)
+    .filter(hasPitfallAngle)
     .filter(isPublicFriendly);
-  const lifeFallback = pickNews(news, "life", 10, ["高溫", "天氣", "交通", "補助", "消費", "醫療", "假", "津貼"])
-    .filter((item) => item.score > 0);
-  const picked = uniqueByLink([...primary, ...relaxed, ...lifeFallback]).slice(0, 2);
+  const picked = uniqueByLink([...primary, ...relaxed]).slice(0, 2);
   if (picked.length < 2) return content.pitfalls;
 
   return picked.slice(0, 2).map((item, index) => {
