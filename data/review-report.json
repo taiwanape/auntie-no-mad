@@ -1,9 +1,9 @@
 {
   "date": "2026-05-29",
-  "generatedAt": "2026-05-28T16:55:22.653Z",
+  "generatedAt": "2026-05-28T19:39:52.487Z",
   "status": "approved",
   "checks": [
-    "daily images: 9/9 replaced with approved AI-generated raster images by Codex QA",
+    "daily images: 9/9 ready (0 OpenAI, 9 approved fallback, 0 reused)",
     "lifeRadar: 2 items checked",
     "pitfalls: 2 items checked",
     "stockWatchlist: 4 items checked"
@@ -36,12 +36,19 @@
     {
       "name": "OpenAI Images API",
       "url": "https://platform.openai.com/docs/guides/images/image-generation",
-      "ok": true,
-      "count": 9,
+      "ok": false,
+      "count": 0,
       "model": "gpt-image-1",
       "quality": "medium",
       "size": "1536x1024",
-      "note": "Manual Codex AI image replacement approved after SVG fallback quality rejection."
+      "error": "Billing hard limit has been reached."
+    },
+    {
+      "name": "Approved Auntie raster image library",
+      "url": "docs/VOICE_GUIDE.md",
+      "ok": true,
+      "count": 9,
+      "reason": "Used only when OpenAI image generation is unavailable; low-quality SVG fallback is disabled."
     }
   ],
   "proposedSections": [
