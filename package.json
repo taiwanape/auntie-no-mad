@@ -9,6 +9,8 @@
     "generate:seo": "node scripts/generate-seo.mjs",
     "test:x-api": "node scripts/test-x-api.mjs",
     "post:x": "node scripts/post-x-manual.mjs",
-    "delete:x-posts": "node scripts/delete-x-posts.mjs"
+    "delete:x-posts": "node scripts/delete-x-posts.mjs",
+    "summarize:daily": "node scripts/write-action-summary.mjs daily",
+    "summarize:x": "node scripts/write-action-summary.mjs x-post"
   }
 }

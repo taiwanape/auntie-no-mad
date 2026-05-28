@@ -39,6 +39,10 @@ jobs:
       - name: Validate content
         run: npm test
 
+      - name: Summarize daily update
+        if: always()
+        run: npm run summarize:daily
+
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"

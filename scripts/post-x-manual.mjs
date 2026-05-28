@@ -79,6 +79,16 @@ function validateTweetText(text) {
   return text;
 }
 
+function emitResult(result) {
+  const output = JSON.stringify(result, null, 2);
+  const resultPath = process.env.POST_X_RESULT_PATH;
+  if (resultPath) {
+    fs.mkdirSync(path.dirname(path.join(root, resultPath)), { recursive: true });
+    fs.writeFileSync(path.join(root, resultPath), `${output}\n`, "utf8");
+  }
+  console.log(output);
+}
+
 function compact(text, maxLength) {
   const clean = String(text || "")
     .replace(/（中央社.*?）/g, "")
@@ -181,42 +191,32 @@ async function main() {
   const dailyPost =
     process.env.X_POST_SOURCE === "daily-content" ? buildDailyTweetFromContent() : null;
   if (dailyPost?.skip) {
-    console.log(JSON.stringify({ mode: "skip", reason: dailyPost.reason }, null, 2));
+    emitResult({ mode: "skip", reason: dailyPost.reason });
     return;
   }
   const text = validateTweetText(process.env.X_POST_TEXT?.trim() || dailyPost?.text || defaultText);
   const imagePath = process.env.X_POST_IMAGE?.trim() || dailyPost?.imagePath || defaultImage;
 
-  console.log(
-    JSON.stringify(
-      {
-        mode: shouldPost ? "post" : "dry-run",
-        source: process.env.X_POST_SOURCE || "manual-default",
-        sourceSlug: dailyPost?.sourceSlug,
-        imagePath,
-        text
-      },
-      null,
-      2
-    )
-  );
+  emitResult({
+    mode: shouldPost ? "post" : "dry-run",
+    source: process.env.X_POST_SOURCE || "manual-default",
+    sourceSlug: dailyPost?.sourceSlug,
+    imagePath,
+    text
+  });
 
   if (!shouldPost) return;
 
   const mediaId = await uploadMedia(imagePath);
   const tweet = await createTweet(text, mediaId);
-  console.log(
-    JSON.stringify(
-      {
-        ok: true,
-        tweetId: tweet.data?.id,
-        text: tweet.data?.text,
-        url: tweet.data?.id ? `https://x.com/auntienomad/status/${tweet.data.id}` : undefined
-      },
-      null,
-      2
-    )
-  );
+  emitResult({
+    ok: true,
+    tweetId: tweet.data?.id,
+    text: tweet.data?.text,
+    url: tweet.data?.id ? `https://x.com/auntienomad/status/${tweet.data.id}` : undefined,
+    sourceSlug: dailyPost?.sourceSlug,
+    imagePath
+  });
 }
 
 main().catch((error) => {
