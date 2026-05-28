@@ -273,6 +273,19 @@ if (content.stockOverview) {
 });
 
 const indexHtml = fs.readFileSync(path.join(root, "index.html"), "utf8");
+["sitemap.xml", "robots.txt", "rss.xml", "feed.json"].forEach((file) => {
+  assert(fileExists(file), `SEO/feed file missing: ${file}`);
+});
+assert(indexHtml.includes('type="application/rss+xml"'), "index.html must advertise rss.xml");
+assert(indexHtml.includes('type="application/feed+json"'), "index.html must advertise feed.json");
+
+const jsonFeedPath = path.join(root, "feed.json");
+if (fs.existsSync(jsonFeedPath)) {
+  const feed = JSON.parse(fs.readFileSync(jsonFeedPath, "utf8"));
+  assert(feed.version && Array.isArray(feed.items), "feed.json must be valid JSON Feed");
+  assert(feed.items.length > 0, "feed.json must contain at least one item");
+}
+
 for (const [index, script] of [...indexHtml.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]).entries()) {
   try {
     new Function(script);

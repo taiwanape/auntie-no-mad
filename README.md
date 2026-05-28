@@ -226,3 +226,27 @@ data/site-content.json
 2. 有 timeout
 3. 有 fallback
 4. 失敗時保留舊資料
+
+## 推廣與營運
+
+營運手冊在：
+
+```text
+docs/GROWTH_PLAYBOOK.md
+```
+
+目前網站已加入：
+
+- 首頁分享按鈕
+- `rss.xml`
+- `feed.json`
+- `sitemap.xml`
+- `robots.txt`
+- GitHub Actions 每日更新後會一併提交 SEO / feed 檔案
+
+固定節奏：
+
+- 每天 7 點前確認自動更新完成
+- 每天至少一篇社群圖文導回網站
+- 每週檢查 Search Console、來訪數、熱門文章
+- 每週把表現好的文章做成延伸題材或懶人包

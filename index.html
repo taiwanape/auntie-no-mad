@@ -6,6 +6,8 @@
   <title>阿姨別生氣｜生活雷達、踩坑日記與股市 ETF 白話整理</title>
   <meta name="description" content="阿姨別生氣每天整理台灣生活新聞、踩坑提醒、股市 ETF 教育內容與實用工具，用阿姨碎念把複雜事情講成看得懂的版本。">
   <link rel="canonical" href="https://taiwanape.github.io/auntie-no-mad/">
+  <link rel="alternate" type="application/rss+xml" title="阿姨別生氣 RSS" href="https://taiwanape.github.io/auntie-no-mad/rss.xml">
+  <link rel="alternate" type="application/feed+json" title="阿姨別生氣 JSON Feed" href="https://taiwanape.github.io/auntie-no-mad/feed.json">
   <meta property="og:site_name" content="阿姨別生氣">
   <meta property="og:type" content="website">
   <meta property="og:title" content="阿姨別生氣｜生活雷達、踩坑日記與股市 ETF 白話整理">
@@ -271,6 +273,31 @@
       gap: 12px;
       flex-wrap: wrap;
       margin-top: 24px;
+    }
+
+    .share-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-top: 16px;
+      font-weight: 1000;
+    }
+
+    .share-strip a,
+    .share-strip button {
+      min-height: 42px;
+      padding: 8px 14px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: var(--paper);
+      box-shadow: 3px 3px 0 var(--ink);
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    .share-strip .hot {
+      background: var(--mint);
     }
 
     .cta {
@@ -1636,6 +1663,11 @@
           <a class="cta" href="#stories">看阿姨踩坑</a>
           <a class="cta" href="#investing">看股市ETF</a>
         </div>
+        <div class="share-strip" aria-label="分享與訂閱">
+          <button type="button" id="shareSite" class="hot">分享給朋友</button>
+          <a href="rss.xml">RSS 訂閱</a>
+          <a href="feed.json">JSON Feed</a>
+        </div>
       </div>
     </section>
 
@@ -2024,6 +2056,7 @@
     const convertTo = document.querySelector("#convertTo");
     const convertResult = document.querySelector("#convertResult");
     const convertFormula = document.querySelector("#convertFormula");
+    const shareSite = document.querySelector("#shareSite");
 
     function updateClock() {
       const now = new Date();
@@ -2042,6 +2075,23 @@
         tipTitle.textContent = tip[0];
         tipText.textContent = tip[1];
       }
+    });
+
+    shareSite?.addEventListener("click", async () => {
+      const shareData = {
+        title: "阿姨別生氣",
+        text: "台灣生活雷達、踩坑提醒和股市 ETF 白話整理，阿姨幫你講成人話。",
+        url: "https://taiwanape.github.io/auntie-no-mad/"
+      };
+      if (navigator.share) {
+        await navigator.share(shareData).catch(() => {});
+        return;
+      }
+      await navigator.clipboard?.writeText(shareData.url);
+      shareSite.textContent = "連結已複製";
+      setTimeout(() => {
+        shareSite.textContent = "分享給朋友";
+      }, 1800);
     });
 
     const escapeHtml = (value = "") => String(value)

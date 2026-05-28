@@ -1,0 +1,130 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "阿姨別生氣",
+  "home_page_url": "https://taiwanape.github.io/auntie-no-mad/",
+  "feed_url": "https://taiwanape.github.io/auntie-no-mad/feed.json",
+  "description": "每天整理台灣生活雷達、踩坑提醒、股市 ETF 白話觀察與實用工具。阿姨不講官腔，只講今天出門會不會煩。",
+  "language": "zh-TW",
+  "items": [
+    {
+      "id": "https://taiwanape.github.io/auntie-no-mad/radar/2026-05-27-hsr-refund.html",
+      "url": "https://taiwanape.github.io/auntie-no-mad/radar/2026-05-27-hsr-refund.html",
+      "title": "高鐵延誤退費別拖：一年內可以辦，但別拖到忘記。",
+      "summary": "5/25 高鐵號誌異常造成大亂，5/26 清晨修復後恢復正常營運。阿姨提醒：出門前還是先看 App，該退費也別放到忘記。",
+      "content_text": "5/25 高鐵號誌異常造成大亂，5/26 清晨修復後恢復正常營運。阿姨提醒：出門前還是先看 App，該退費也別放到忘記。\n\n不是叫你焦慮，是叫你把權益放進口袋。",
+      "date_published": "2026-05-26T16:00:00.000Z",
+      "tags": [
+        "生活雷達"
+      ],
+      "external_url": "https://www.cna.com.tw/news/ahel/202605265001.aspx"
+    },
+    {
+      "id": "https://taiwanape.github.io/auntie-no-mad/radar/2026-05-27-heat-front.html",
+      "url": "https://taiwanape.github.io/auntie-no-mad/radar/2026-05-27-heat-front.html",
+      "title": "先熱再變天：白天像烤箱，週末前記得看鋒面臉色。",
+      "summary": "高溫還在撐場，週末前鋒面接近，天氣會從曬衣模式切到看天吃飯模式。",
+      "content_text": "高溫還在撐場，週末前鋒面接近，天氣會從曬衣模式切到看天吃飯模式。\n\n傘跟水都先放包包，出門才不會跟天空吵架。",
+      "date_published": "2026-05-26T16:00:00.000Z",
+      "tags": [
+        "生活雷達"
+      ],
+      "external_url": "https://www.cna.com.tw/news/ahel/202605260312.aspx"
+    },
+    {
+      "id": "https://taiwanape.github.io/auntie-no-mad/stories/2026-05-27-social-scam.html",
+      "url": "https://taiwanape.github.io/auntie-no-mad/stories/2026-05-27-social-scam.html",
+      "title": "名人推薦？先不要跪，可能是詐騙在穿西裝。",
+      "summary": "Meta 廣告庫裡常見冒用名人、假投資、假優惠內容，越像好康越要先查來源。",
+      "content_text": "Meta 廣告庫裡常見冒用名人、假投資、假優惠內容，越像好康越要先查來源。\n\n看到保證賺、限時搶，先不要熱血，先冷眼。",
+      "date_published": "2026-05-26T16:00:00.000Z",
+      "tags": [
+        "踩坑日記"
+      ],
+      "external_url": "https://news.pts.org.tw/article/809388"
+    },
+    {
+      "id": "https://taiwanape.github.io/auntie-no-mad/stories/2026-05-27-traffic-crowd.html",
+      "url": "https://taiwanape.github.io/auntie-no-mad/stories/2026-05-27-traffic-crowd.html",
+      "title": "熱門景點省時間，結果大家一起把時間塞住。",
+      "summary": "旅遊或活動人潮一多，最容易踩到停車、排隊、接駁資訊不清楚的坑。",
+      "content_text": "旅遊或活動人潮一多，最容易踩到停車、排隊、接駁資訊不清楚的坑。\n\n省時間不是提早衝，是先查路線跟替代方案。",
+      "date_published": "2026-05-26T16:00:00.000Z",
+      "tags": [
+        "踩坑日記"
+      ],
+      "external_url": "https://news.tvbs.com.tw/life/3206578"
+    },
+    {
+      "id": "https://taiwanape.github.io/auntie-no-mad/stocks/2026-05-27-market-watch.html",
+      "url": "https://taiwanape.github.io/auntie-no-mad/stocks/2026-05-27-market-watch.html",
+      "title": "今日市場筆記 2026/05/27",
+      "summary": "友達、英業達、力積電與 00919 的早晨觀察。",
+      "content_text": "友達、英業達、力積電與 00919 的早晨觀察。\n\n這是資料整理，不是報明牌。",
+      "date_published": "2026-05-26T16:00:00.000Z",
+      "tags": [
+        "股市 ETF"
+      ],
+      "external_url": "https://tw.stock.yahoo.com/"
+    },
+    {
+      "id": "https://taiwanape.github.io/auntie-no-mad/stocks/2026-05-26-market-watch.html",
+      "url": "https://taiwanape.github.io/auntie-no-mad/stocks/2026-05-26-market-watch.html",
+      "title": "股市ETF",
+      "summary": "圖文相符版先保留四檔觀察：友達、英業達、聯電與 00919。阿姨提醒：這是公開資訊整理，不是買賣建議。",
+      "content_text": "圖文相符版先保留四檔觀察：友達、英業達、聯電與 00919。阿姨提醒：這是公開資訊整理，不是買賣建議。\n\n先看分類和風險，不要看到紅綠燈就衝。",
+      "date_published": "2026-05-25T16:00:00.000Z",
+      "tags": [
+        "股市 ETF"
+      ],
+      "external_url": "https://tw.stock.yahoo.com/"
+    },
+    {
+      "id": "https://taiwanape.github.io/auntie-no-mad/stocks/2026-05-26-auo.html",
+      "url": "https://taiwanape.github.io/auntie-no-mad/stocks/2026-05-26-auo.html",
+      "title": "友達",
+      "summary": "面板股題材熱起來時，散戶很容易只看漲跌，忘了這一類景氣循環也很有脾氣。",
+      "content_text": "面板股題材熱起來時，散戶很容易只看漲跌，忘了這一類景氣循環也很有脾氣。\n\n面板不是特價菜，不是便宜就能閉眼拿。",
+      "date_published": "2026-05-25T16:00:00.000Z",
+      "tags": [
+        "熱門觀察股"
+      ],
+      "external_url": "https://tw.stock.yahoo.com/quote/2409.TW"
+    },
+    {
+      "id": "https://taiwanape.github.io/auntie-no-mad/stocks/2026-05-26-inventec.html",
+      "url": "https://taiwanape.github.io/auntie-no-mad/stocks/2026-05-26-inventec.html",
+      "title": "英業達",
+      "summary": "AI 伺服器題材讓市場一直盯著供應鏈，但題材熱不代表每天都紅。",
+      "content_text": "AI 伺服器題材讓市場一直盯著供應鏈，但題材熱不代表每天都紅。\n\nAI 很香，但股價不是聞香水。",
+      "date_published": "2026-05-25T16:00:00.000Z",
+      "tags": [
+        "熱門題材股"
+      ],
+      "external_url": "https://tw.stock.yahoo.com/quote/2356.TW"
+    },
+    {
+      "id": "https://taiwanape.github.io/auntie-no-mad/stocks/2026-05-26-umc.html",
+      "url": "https://taiwanape.github.io/auntie-no-mad/stocks/2026-05-26-umc.html",
+      "title": "聯電",
+      "summary": "聯電不像台積電那麼神，但成熟製程也有自己的節奏，適合拿來看半導體不同面向。",
+      "content_text": "聯電不像台積電那麼神，但成熟製程也有自己的節奏，適合拿來看半導體不同面向。\n\n不是神山也能觀察，重點是別把故事聽成保證。",
+      "date_published": "2026-05-25T16:00:00.000Z",
+      "tags": [
+        "新星觀察"
+      ],
+      "external_url": "https://tw.stock.yahoo.com/quote/2303.TW"
+    },
+    {
+      "id": "https://taiwanape.github.io/auntie-no-mad/stocks/2026-05-26-00919.html",
+      "url": "https://taiwanape.github.io/auntie-no-mad/stocks/2026-05-26-00919.html",
+      "title": "群益台灣精選高息",
+      "summary": "高股息 ETF 很容易被配息吸引，但配息、淨值、成分股與填息風險都要一起看。",
+      "content_text": "高股息 ETF 很容易被配息吸引，但配息、淨值、成分股與填息風險都要一起看。\n\n息很香沒錯，但不要只聞香味。",
+      "date_published": "2026-05-25T16:00:00.000Z",
+      "tags": [
+        "高人氣 ETF"
+      ],
+      "external_url": "https://tw.stock.yahoo.com/quote/00919.TW/dividend"
+    }
+  ]
+}
