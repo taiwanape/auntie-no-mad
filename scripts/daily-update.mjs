@@ -245,8 +245,16 @@ async function enrichGeneratedImages(nextContent) {
   const requiredTotal = Math.min(max, targets.length);
 
   if (!imageGeneration.enabled) {
-    review.checks.push("daily images: skipped because GENERATE_DAILY_IMAGES is not true");
-    return { required: false, generated: 0, total: requiredTotal, createdAssetPaths: [] };
+    review.errors.push("daily images required: set GENERATE_DAILY_IMAGES=true before updating public content");
+    review.sources.push({
+      name: "OpenAI Images API",
+      url: "https://platform.openai.com/docs/guides/images/image-generation",
+      ok: false,
+      count: 0,
+      reason: "GENERATOR_DISABLED"
+    });
+    review.checks.push(`daily images: 0/${requiredTotal} generated or reused`);
+    return { required: true, generated: 0, total: requiredTotal, createdAssetPaths: [] };
   }
 
   if (!process.env.OPENAI_API_KEY) {
