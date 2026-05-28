@@ -1,7 +1,7 @@
 {
   "date": "2026-05-28",
-  "generatedAt": "2026-05-28T03:00:47.646Z",
-  "status": "approved",
+  "generatedAt": "2026-05-28T03:25:37.586Z",
+  "status": "rejected",
   "checks": [
     "daily images: 0/9 generated or reused",
     "lifeRadar: 2 items checked",
@@ -43,7 +43,7 @@
       "size": "1536x1024"
     }
   ],
-  "updatedSections": [
+  "proposedSections": [
     "lifeRadar",
     "pitfalls",
     "stockOverview",
@@ -52,7 +52,9 @@
     "archive",
     "generatedImages"
   ],
+  "updatedSections": [],
   "errors": [
-    "daily image fallback used for life-1: Billing hard limit has been reached."
+    "daily image fallback used for life-1: Billing hard limit has been reached.",
+    "daily images required but only 0/9 were generated or reused"
   ]
 }

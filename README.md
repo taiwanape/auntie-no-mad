@@ -94,7 +94,7 @@ Actions → Daily Auntie Update → Run workflow
 - `OPENAI_IMAGE_SIZE`：預設 `1536x1024`
 - `OPENAI_IMAGE_LIMIT`：預設每日最多 9 張
 
-若 OpenAI API 失敗、額度不足、或帳號花費上限擋住，腳本會保留既有圖片並在 `data/review-report.json` 記錄原因。
+若 OpenAI API 失敗、額度不足、或帳號花費上限擋住，腳本會把當天更新標成 `rejected`，保留既有正式資料與圖片，不會把只有文字、沒有新圖的半成品推到首頁；原因會寫在 `data/review-report.json`。
 
 ## X API 測試
 

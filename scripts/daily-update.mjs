@@ -60,6 +60,7 @@ const review = {
   status: "pending",
   checks: [],
   sources: [],
+  proposedSections: [],
   updatedSections: [],
   errors: []
 };
@@ -202,17 +203,7 @@ async function generateOpenAIImage(prompt, outputPath) {
 }
 
 async function enrichGeneratedImages(nextContent) {
-  if (!imageGeneration.enabled) {
-    review.checks.push("daily images: skipped because GENERATE_DAILY_IMAGES is not true");
-    return;
-  }
-  if (!process.env.OPENAI_API_KEY) {
-    review.errors.push("daily images skipped: OPENAI_API_KEY is missing");
-    return;
-  }
-
   const dir = `assets/generated/${taipeiDate}`;
-  ensureDir(dir);
   const targets = [
     ...nextContent.lifeRadar.map((item, index) => ({ section: "life", item, prefix: `life-${index + 1}` })),
     ...nextContent.pitfalls.map((item, index) => ({ section: "pitfall", item, prefix: `pitfall-${index + 1}` })),
@@ -220,7 +211,31 @@ async function enrichGeneratedImages(nextContent) {
     ...nextContent.stockWatchlist.map((item, index) => ({ section: "stock", item, prefix: `stock-${index + 1}-${item.ticker}` }))
   ];
   const max = Number.isFinite(imageGeneration.limit) && imageGeneration.limit > 0 ? imageGeneration.limit : targets.length;
+  const requiredTotal = Math.min(max, targets.length);
+
+  if (!imageGeneration.enabled) {
+    review.checks.push("daily images: skipped because GENERATE_DAILY_IMAGES is not true");
+    return { required: false, generated: 0, total: requiredTotal, createdAssetPaths: [] };
+  }
+
+  if (!process.env.OPENAI_API_KEY) {
+    review.errors.push("daily images skipped: OPENAI_API_KEY is missing");
+    review.sources.push({
+      name: "OpenAI Images API",
+      url: "https://platform.openai.com/docs/guides/images/image-generation",
+      ok: false,
+      count: 0,
+      model: imageGeneration.model,
+      quality: imageGeneration.quality,
+      size: imageGeneration.size
+    });
+    review.checks.push(`daily images: 0/${requiredTotal} generated or reused`);
+    return { required: true, generated: 0, total: requiredTotal, createdAssetPaths: [] };
+  }
+
+  ensureDir(dir);
   let generated = 0;
+  const createdAssetPaths = [];
 
   for (const target of targets.slice(0, max)) {
     const file = `${target.prefix}-${makeSlugPart(target.item.title || target.item.name).slice(0, 40)}.png`;
@@ -229,6 +244,7 @@ async function enrichGeneratedImages(nextContent) {
     try {
       if (!fs.existsSync(outputPath)) {
         await generateOpenAIImage(imagePromptFor(target), outputPath);
+        createdAssetPaths.push(assetPath);
       }
       if (target.section === "stock") {
         target.item.image = assetPath;
@@ -255,7 +271,8 @@ async function enrichGeneratedImages(nextContent) {
     quality: imageGeneration.quality,
     size: imageGeneration.size
   });
-  review.checks.push(`daily images: ${generated}/${Math.min(max, targets.length)} generated or reused`);
+  review.checks.push(`daily images: ${generated}/${requiredTotal} generated or reused`);
+  return { required: true, generated, total: requiredTotal, createdAssetPaths };
 }
 
 async function fetchText(url) {
@@ -778,6 +795,17 @@ function mergeArchive(existingArchive = [], additions = []) {
   return [...map.values()].slice(0, 60);
 }
 
+function cleanupGeneratedAssets(assetPaths = []) {
+  assetPaths.forEach((assetPath) => {
+    try {
+      const fullPath = path.join(root, assetPath);
+      if (fs.existsSync(fullPath)) fs.unlinkSync(fullPath);
+    } catch (error) {
+      review.errors.push(`cleanup generated image failed for ${assetPath}: ${error.message}`);
+    }
+  });
+}
+
 async function main() {
   const news = await collectNews();
   let stockItems = content.stockWatchlist;
@@ -830,22 +858,29 @@ async function main() {
     ])
   };
 
-  await enrichGeneratedImages(nextContent);
+  const imageResult = await enrichGeneratedImages(nextContent);
 
   const result = reviewProposed(nextContent);
+  const proposedSections = ["lifeRadar", "pitfalls", "stockOverview", "stockWatchlist", "fridgeNotes", "archive", "generatedImages"];
+  if (imageResult?.required && imageResult.generated < imageResult.total) {
+    result.errors.unshift(`daily images required but only ${imageResult.generated}/${imageResult.total} were generated or reused`);
+  }
   review.checks.push(...result.checks);
-  review.updatedSections.push("lifeRadar", "pitfalls", "stockOverview", "stockWatchlist", "fridgeNotes", "archive", "generatedImages");
+  review.proposedSections.push(...proposedSections);
   review.errors.push(...result.errors);
 
-  if (!result.ok) {
+  if (review.errors.length || !result.ok) {
     review.status = "rejected";
-    fs.writeFileSync(reportPath, JSON.stringify(review, null, 2));
+    cleanupGeneratedAssets(imageResult?.createdAssetPaths);
+    review.updatedSections = [];
+    fs.writeFileSync(reportPath, JSON.stringify(review, null, 2) + "\n");
     console.error("Daily update rejected:");
-    result.errors.forEach((error) => console.error(`- ${error}`));
-    process.exit(1);
+    review.errors.forEach((error) => console.error(`- ${error}`));
+    return;
   }
 
   review.status = "approved";
+  review.updatedSections.push(...proposedSections);
   writePages(nextContent);
   fs.writeFileSync(dataPath, JSON.stringify(nextContent, null, 2) + "\n");
   fs.writeFileSync(reportPath, JSON.stringify(review, null, 2) + "\n");
