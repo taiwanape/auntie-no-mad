@@ -1,9 +1,9 @@
 {
   "date": "2026-05-29",
-  "generatedAt": "2026-05-28T19:39:52.487Z",
+  "generatedAt": "2026-05-28T22:01:46.544Z",
   "status": "approved",
   "checks": [
-    "daily images: 9/9 ready (0 OpenAI, 9 approved fallback, 0 reused)",
+    "daily images: 9/9 ready (0 OpenAI, 0 approved fallback, 9 reused)",
     "lifeRadar: 2 items checked",
     "pitfalls: 2 items checked",
     "stockWatchlist: 4 items checked"
