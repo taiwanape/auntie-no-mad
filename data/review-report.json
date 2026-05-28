@@ -1,9 +1,9 @@
 {
-  "date": "2026-05-28",
-  "generatedAt": "2026-05-28T04:04:45.189Z",
-  "status": "rejected",
+  "date": "2026-05-29",
+  "generatedAt": "2026-05-28T16:43:43.665Z",
+  "status": "approved",
   "checks": [
-    "daily images: 0/9 generated or reused",
+    "daily images: 9/9 ready (0 OpenAI, 9 fallback, 0 reused)",
     "lifeRadar: 2 items checked",
     "pitfalls: 2 items checked",
     "stockWatchlist: 4 items checked"
@@ -40,7 +40,14 @@
       "count": 0,
       "model": "gpt-image-1",
       "quality": "medium",
-      "size": "1536x1024"
+      "size": "1536x1024",
+      "error": "OPENAI_API_KEY is missing"
+    },
+    {
+      "name": "Auntie local branded fallback image generator",
+      "url": "scripts/daily-update.mjs",
+      "ok": true,
+      "count": 9
     }
   ],
   "proposedSections": [
@@ -52,9 +59,14 @@
     "archive",
     "generatedImages"
   ],
-  "updatedSections": [],
-  "errors": [
-    "daily image fallback used for life-1: Billing hard limit has been reached.",
-    "daily images required but only 0/9 were generated or reused"
-  ]
+  "updatedSections": [
+    "lifeRadar",
+    "pitfalls",
+    "stockOverview",
+    "stockWatchlist",
+    "fridgeNotes",
+    "archive",
+    "generatedImages"
+  ],
+  "errors": []
 }

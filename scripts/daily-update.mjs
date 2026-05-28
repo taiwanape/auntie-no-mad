@@ -70,7 +70,8 @@ const imageGeneration = {
   model: process.env.OPENAI_IMAGE_MODEL || "gpt-image-1",
   quality: process.env.OPENAI_IMAGE_QUALITY || "medium",
   size: process.env.OPENAI_IMAGE_SIZE || "1536x1024",
-  limit: Number.parseInt(process.env.OPENAI_IMAGE_LIMIT || "9", 10)
+  limit: Number.parseInt(process.env.OPENAI_IMAGE_LIMIT || "9", 10),
+  fallbackEnabled: process.env.GENERATE_FALLBACK_IMAGES !== "false"
 };
 
 const fridgeNotePool = [
@@ -154,6 +155,14 @@ function makeSlugPart(value = "") {
   return cleaned || "auntie-note";
 }
 
+function makeAssetId(value = "") {
+  let hash = 5381;
+  for (const char of String(value)) {
+    hash = ((hash << 5) + hash) ^ char.codePointAt(0);
+  }
+  return Math.abs(hash >>> 0).toString(36).padStart(6, "0");
+}
+
 function cleanPromptText(value = "", maxLength = 120) {
   const cleaned = stripHtml(value)
     .replace(/（中央社.*?）/g, "")
@@ -233,6 +242,208 @@ async function generateOpenAIImage(prompt, outputPath) {
   fs.writeFileSync(outputPath, Buffer.from(b64, "base64"));
 }
 
+function svgEscape(value = "") {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
+function fallbackSceneFor(target) {
+  if (target.section === "stock" || target.section === "market") return "stock";
+  const text = `${target.item.title || ""} ${target.item.summary || ""} ${target.item.reason || ""}`;
+  if (/雨|颱|天氣|梅雨|高溫|熱|鋒面|衣|傘|水/.test(text)) return "weather";
+  if (/高鐵|台鐵|捷運|交通|車|機場|路況|排隊/.test(text)) return "transit";
+  if (/詐騙|假|個資|簡訊|LINE|社群|客服|盜|投資/.test(text)) return "scam";
+  if (/票|搶|演唱會|活動|人潮/.test(text)) return "ticket";
+  return "life";
+}
+
+function auntieSvg(x, y, scale = 1) {
+  const s = scale;
+  const leopardDots = Array.from({ length: 22 }, (_, index) => {
+    const px = x + (index % 6) * 28 * s - 88 * s;
+    const py = y + Math.floor(index / 6) * 23 * s + 84 * s;
+    return `<circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="${(7 * s).toFixed(1)}" fill="#1b130e" opacity=".78"/>`;
+  }).join("");
+
+  const curls = [
+    [-96, -98, 50], [-52, -126, 56], [5, -132, 58], [64, -118, 54], [108, -80, 46],
+    [-122, -48, 46], [-92, 6, 42], [-34, 22, 42], [34, 20, 42], [88, -8, 42]
+  ].map(([cx, cy, r]) => `<circle cx="${(x + cx * s).toFixed(1)}" cy="${(y + cy * s).toFixed(1)}" r="${(r * s).toFixed(1)}" fill="#3a2117" stroke="#15110e" stroke-width="${(7 * s).toFixed(1)}"/>`).join("");
+
+  return `
+    <g transform="translate(0 0)">
+      <ellipse cx="${x}" cy="${y + 32 * s}" rx="${142 * s}" ry="${152 * s}" fill="#fff7d6" stroke="#fff" stroke-width="${24 * s}"/>
+      ${curls}
+      <ellipse cx="${x}" cy="${y - 36 * s}" rx="${94 * s}" ry="${84 * s}" fill="#ffd0ad" stroke="#15110e" stroke-width="${7 * s}"/>
+      <path d="M ${x - 64 * s} ${y - 66 * s} Q ${x - 22 * s} ${y - 96 * s} ${x + 8 * s} ${y - 80 * s} Q ${x + 34 * s} ${y - 104 * s} ${x + 72 * s} ${y - 66 * s}" fill="none" stroke="#3a2117" stroke-width="${9 * s}" stroke-linecap="round"/>
+      <rect x="${x - 86 * s}" y="${y - 52 * s}" width="${76 * s}" height="${31 * s}" rx="${4 * s}" fill="#070707"/>
+      <rect x="${x + 10 * s}" y="${y - 52 * s}" width="${76 * s}" height="${31 * s}" rx="${4 * s}" fill="#070707"/>
+      <rect x="${x - 10 * s}" y="${y - 43 * s}" width="${22 * s}" height="${8 * s}" fill="#070707"/>
+      <g fill="#fff">
+        <rect x="${x - 65 * s}" y="${y - 48 * s}" width="${10 * s}" height="${10 * s}"/><rect x="${x - 53 * s}" y="${y - 38 * s}" width="${10 * s}" height="${10 * s}"/><rect x="${x - 41 * s}" y="${y - 48 * s}" width="${10 * s}" height="${10 * s}"/>
+        <rect x="${x + 30 * s}" y="${y - 48 * s}" width="${10 * s}" height="${10 * s}"/><rect x="${x + 42 * s}" y="${y - 38 * s}" width="${10 * s}" height="${10 * s}"/><rect x="${x + 54 * s}" y="${y - 48 * s}" width="${10 * s}" height="${10 * s}"/>
+      </g>
+      <circle cx="${x - 58 * s}" cy="${y - 6 * s}" r="${14 * s}" fill="#ff8e8e" opacity=".7"/>
+      <circle cx="${x + 58 * s}" cy="${y - 6 * s}" r="${14 * s}" fill="#ff8e8e" opacity=".7"/>
+      <path d="M ${x - 32 * s} ${y + 22 * s} Q ${x + 8 * s} ${y + 48 * s} ${x + 48 * s} ${y + 12 * s}" fill="none" stroke="#15110e" stroke-width="${7 * s}" stroke-linecap="round"/>
+      <circle cx="${x - 105 * s}" cy="${y - 22 * s}" r="${15 * s}" fill="none" stroke="#f5b22a" stroke-width="${8 * s}"/>
+      <circle cx="${x + 105 * s}" cy="${y - 22 * s}" r="${15 * s}" fill="none" stroke="#f5b22a" stroke-width="${8 * s}"/>
+      <path d="M ${x - 130 * s} ${y + 98 * s} C ${x - 92 * s} ${y + 44 * s}, ${x + 92 * s} ${y + 44 * s}, ${x + 134 * s} ${y + 98 * s} L ${x + 166 * s} ${y + 246 * s} L ${x - 166 * s} ${y + 246 * s} Z" fill="#b87927" stroke="#15110e" stroke-width="${7 * s}"/>
+      ${leopardDots}
+      <path d="M ${x - 84 * s} ${y + 80 * s} L ${x + 84 * s} ${y + 80 * s} L ${x + 112 * s} ${y + 246 * s} L ${x - 112 * s} ${y + 246 * s} Z" fill="#15110e" stroke="#15110e" stroke-width="${6 * s}"/>
+      <path d="M ${x - 18 * s} ${y + 140 * s} C ${x - 8 * s} ${y + 122 * s}, ${x + 18 * s} ${y + 122 * s}, ${x + 24 * s} ${y + 143 * s} C ${x + 12 * s} ${y + 165 * s}, ${x} ${y + 172 * s}, ${x - 18 * s} ${y + 140 * s} Z" fill="#ff5f9c"/>
+    </g>`;
+}
+
+function stickerShape(kind, x, y, s = 1) {
+  const stroke = `stroke="#15110e" stroke-width="${5 * s}" stroke-linejoin="round" stroke-linecap="round"`;
+  if (kind === "weather") {
+    return `
+      <g transform="translate(${x} ${y}) scale(${s})">
+        <path d="M20 92 C18 56 55 44 76 64 C92 25 151 37 154 83 C190 82 204 130 170 149 L50 149 C20 149 2 119 20 92Z" fill="#4b596b" ${stroke}/>
+        <path d="M54 170 L28 226 M96 170 L70 226 M140 170 L114 226" stroke="#4aa3ff" stroke-width="${5 * s}" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+        <path d="M220 68 Q278 22 342 72 Q276 70 220 68Z" fill="#ff5f9c" ${stroke}/>
+        <path d="M282 70 L282 180 Q282 214 316 198" fill="none" ${stroke}/>
+        <rect x="220" y="198" width="122" height="86" rx="14" fill="#fff8d8" ${stroke}/>
+        <path d="M244 232 H318 M244 258 H300" ${stroke} fill="none"/>
+      </g>`;
+  }
+  if (kind === "transit") {
+    return `
+      <g transform="translate(${x} ${y}) scale(${s})">
+        <rect x="16" y="30" width="224" height="150" rx="28" fill="#fff8d8" ${stroke}/>
+        <rect x="42" y="58" width="76" height="54" rx="10" fill="#9bd7ff" ${stroke}/>
+        <rect x="136" y="58" width="76" height="54" rx="10" fill="#9bd7ff" ${stroke}/>
+        <circle cx="72" cy="170" r="16" fill="#15110e"/><circle cx="184" cy="170" r="16" fill="#15110e"/>
+        <path d="M38 222 H218 M66 196 L40 246 M190 196 L216 246" ${stroke} fill="none"/>
+        <circle cx="312" cy="78" r="54" fill="#ff5f9c" ${stroke}/>
+        <path d="M312 42 V82 L342 102" ${stroke} fill="none"/>
+      </g>`;
+  }
+  if (kind === "scam") {
+    return `
+      <g transform="translate(${x} ${y}) scale(${s})">
+        <rect x="34" y="18" width="132" height="242" rx="22" fill="#fff8d8" ${stroke}/>
+        <rect x="52" y="50" width="96" height="150" rx="8" fill="#ffd329" ${stroke}/>
+        <path d="M72 84 H130 M72 118 H126 M72 152 H112" ${stroke} fill="none"/>
+        <path d="M238 40 L342 226 H134 Z" fill="#ff5f9c" ${stroke}/>
+        <path d="M238 102 V166 M238 196 V204" ${stroke} fill="none"/>
+        <path d="M250 280 C210 250 226 206 268 214 C290 172 354 198 342 250 C384 252 392 308 350 320 L246 320 C214 318 212 286 250 280Z" fill="#fff" ${stroke}/>
+      </g>`;
+  }
+  if (kind === "ticket") {
+    return `
+      <g transform="translate(${x} ${y}) scale(${s})">
+        <rect x="20" y="70" width="300" height="180" rx="18" fill="#fff8d8" ${stroke}/>
+        <rect x="46" y="106" width="248" height="92" rx="10" fill="#ff5f9c" ${stroke}/>
+        <circle cx="70" cy="222" r="14" fill="#15110e"/><circle cx="112" cy="222" r="14" fill="#15110e"/><circle cx="154" cy="222" r="14" fill="#15110e"/>
+        <path d="M232 36 L336 62 L306 166 L202 140 Z" fill="#ffd329" ${stroke}/>
+        <path d="M234 94 H294 M228 118 H288" ${stroke} fill="none"/>
+      </g>`;
+  }
+  if (kind === "stock") {
+    return `
+      <g transform="translate(${x} ${y}) scale(${s})">
+        <rect x="14" y="30" width="300" height="208" rx="22" fill="#fff8d8" ${stroke}/>
+        <rect x="44" y="70" width="70" height="118" rx="10" fill="#ff9cc0" ${stroke}/>
+        <rect x="132" y="96" width="70" height="92" rx="10" fill="#b7d989" ${stroke}/>
+        <rect x="220" y="52" width="70" height="136" rx="10" fill="#ffd329" ${stroke}/>
+        <path d="M58 182 C94 134 122 160 152 118 C184 76 212 98 278 68" ${stroke} fill="none"/>
+        <path d="M92 282 C78 226 152 214 166 270 C210 238 260 286 212 328 L120 328 C86 328 74 306 92 282Z" fill="#ff9cc0" ${stroke}/>
+        <circle cx="130" cy="276" r="10" fill="#15110e"/>
+        <rect x="262" y="246" width="94" height="86" rx="14" fill="#15110e"/>
+        <circle cx="286" cy="270" r="6" fill="#fff8d8"/><circle cx="316" cy="270" r="6" fill="#fff8d8"/><circle cx="286" cy="300" r="6" fill="#fff8d8"/><circle cx="316" cy="300" r="6" fill="#fff8d8"/>
+      </g>`;
+  }
+  return `
+    <g transform="translate(${x} ${y}) scale(${s})">
+      <rect x="18" y="48" width="214" height="150" rx="22" fill="#fff8d8" ${stroke}/>
+      <circle cx="76" cy="106" r="20" fill="#ff5f9c" ${stroke}/>
+      <path d="M126 128 L170 84 L210 126" ${stroke} fill="none"/>
+      <rect x="246" y="30" width="112" height="190" rx="24" fill="#fff" ${stroke}/>
+      <circle cx="302" cy="126" r="34" fill="#ffd329" ${stroke}/>
+      <path d="M56 260 H194 M86 232 L66 288 M168 232 L188 288" ${stroke} fill="none"/>
+    </g>`;
+}
+
+function fallbackSvg(target, variant) {
+  const scene = fallbackSceneFor(target);
+  const isThumb = variant === "thumb";
+  const width = isThumb ? 720 : 1536;
+  const height = isThumb ? 720 : 1024;
+  const accent = scene === "scam" ? "#ff5f9c" : scene === "weather" ? "#78c7ff" : scene === "stock" ? "#b7d989" : "#ff9cc0";
+  const title = svgEscape(target.item.title || target.item.name || "Auntie note");
+  const heroIcon = stickerShape(scene, isThumb ? 62 : 110, isThumb ? 62 : 120, isThumb ? 1.25 : 1.35);
+  const auntie = auntieSvg(isThumb ? 520 : 1140, isThumb ? 390 : 430, isThumb ? 0.72 : 1.18);
+  const miniAuntie = auntieSvg(386, 396, 0.54);
+
+  if (isThumb) {
+    return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${title}">
+  <defs>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="6" cy="6" r="3" fill="#15110e" opacity=".16"/></pattern>
+  </defs>
+  <rect width="720" height="720" rx="58" fill="#ffd329"/>
+  <rect width="720" height="720" rx="58" fill="url(#dots)"/>
+  <rect x="24" y="24" width="672" height="672" rx="48" fill="none" stroke="#15110e" stroke-width="16"/>
+  <circle cx="150" cy="150" r="88" fill="${accent}" stroke="#fff8d8" stroke-width="14"/>
+  ${heroIcon}
+  <circle cx="492" cy="468" r="190" fill="#fff8d8" stroke="#15110e" stroke-width="12"/>
+  ${miniAuntie}
+  <path d="M102 520 C172 468 242 548 312 498" fill="none" stroke="#15110e" stroke-width="14" stroke-linecap="round"/>
+  <path d="M90 92 l26 22 l-26 22 l-26 -22z" fill="#fff" stroke="#15110e" stroke-width="8"/>
+  <path d="M610 118 l34 30 l-34 30 l-34 -30z" fill="#fff" stroke="#15110e" stroke-width="8"/>
+</svg>`;
+  }
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${title}">
+  <defs>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse"><circle cx="7" cy="7" r="3.2" fill="#15110e" opacity=".13"/></pattern>
+    <linearGradient id="warm" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ffd329"/><stop offset="1" stop-color="#ffe86c"/></linearGradient>
+  </defs>
+  <rect width="1536" height="1024" fill="url(#warm)"/>
+  <rect width="1536" height="1024" fill="url(#dots)"/>
+  <rect x="44" y="44" width="1448" height="936" rx="44" fill="none" stroke="#15110e" stroke-width="18"/>
+  <circle cx="1138" cy="506" r="346" fill="#fff8d8" stroke="#fff" stroke-width="24"/>
+  <circle cx="302" cy="284" r="122" fill="${accent}" opacity=".9" stroke="#fff8d8" stroke-width="18"/>
+  ${heroIcon}
+  ${auntie}
+  <g stroke="#15110e" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M1220 110 l42 42 l-42 42 l-42 -42z" fill="#fff"/>
+    <path d="M1360 250 l34 34 l-34 34 l-34 -34z" fill="#fff"/>
+    <path d="M242 784 C360 704 490 824 620 742"/>
+  </g>
+  <path d="M890 184 C912 136 984 138 1002 194 C1036 158 1098 190 1084 246 C1148 240 1164 326 1102 344 C1092 398 1008 396 990 352 C938 392 872 350 896 292 C844 268 848 200 890 184Z" fill="#fff7d6" opacity=".62"/>
+</svg>`;
+}
+
+function writeFallbackImage(target, assetPath, variant) {
+  const outputPath = path.join(root, assetPath);
+  if (!fs.existsSync(outputPath)) {
+    fs.writeFileSync(outputPath, fallbackSvg(target, variant), "utf8");
+    return true;
+  }
+  return false;
+}
+
+function assignTargetImage(target, assetPath, thumbPath = assetPath) {
+  if (target.section === "stock") {
+    target.item.image = assetPath;
+    return;
+  }
+  if (target.section === "market") {
+    target.item.hero = assetPath;
+    return;
+  }
+  target.item.hero = assetPath;
+  target.item.thumbnail = thumbPath;
+  target.item.thumbnailAlt = target.item.thumbnailAlt || `${target.item.title} 的阿姨別生氣今日圖`;
+}
+
 async function enrichGeneratedImages(nextContent) {
   const dir = `assets/generated/${taipeiDate}`;
   const targets = [
@@ -257,61 +468,77 @@ async function enrichGeneratedImages(nextContent) {
     return { required: true, generated: 0, total: requiredTotal, createdAssetPaths: [] };
   }
 
-  if (!process.env.OPENAI_API_KEY) {
-    review.errors.push("daily images skipped: OPENAI_API_KEY is missing");
-    review.sources.push({
-      name: "OpenAI Images API",
-      url: "https://platform.openai.com/docs/guides/images/image-generation",
-      ok: false,
-      count: 0,
-      model: imageGeneration.model,
-      quality: imageGeneration.quality,
-      size: imageGeneration.size
-    });
-    review.checks.push(`daily images: 0/${requiredTotal} generated or reused`);
-    return { required: true, generated: 0, total: requiredTotal, createdAssetPaths: [] };
-  }
-
   ensureDir(dir);
-  let generated = 0;
+  let ready = 0;
+  let openAiGenerated = 0;
+  let fallbackGenerated = 0;
+  let reused = 0;
+  let openAiError = "";
   const createdAssetPaths = [];
 
   for (const target of targets.slice(0, max)) {
-    const file = `${target.prefix}-${makeSlugPart(target.item.title || target.item.name).slice(0, 40)}.png`;
-    const assetPath = `${dir}/${file}`;
-    const outputPath = path.join(root, assetPath);
+    const baseName = `${target.prefix}-${makeAssetId(target.item.title || target.item.name || target.prefix)}`;
+    const openAiAssetPath = `${dir}/${baseName}.png`;
+    const fallbackAssetPath = `${dir}/${baseName}.svg`;
+    const fallbackThumbPath = `${dir}/${baseName}-thumb.svg`;
+    const openAiOutputPath = path.join(root, openAiAssetPath);
     try {
-      if (!fs.existsSync(outputPath)) {
-        await generateOpenAIImage(imagePromptFor(target), outputPath);
-        createdAssetPaths.push(assetPath);
+      if (process.env.OPENAI_API_KEY) {
+        if (!fs.existsSync(openAiOutputPath)) {
+          await generateOpenAIImage(imagePromptFor(target), openAiOutputPath);
+          createdAssetPaths.push(openAiAssetPath);
+          openAiGenerated += 1;
+        } else {
+          reused += 1;
+        }
+        assignTargetImage(target, openAiAssetPath);
+        ready += 1;
+        continue;
       }
-      if (target.section === "stock") {
-        target.item.image = assetPath;
-      } else if (target.section === "market") {
-        target.item.hero = assetPath;
-      } else {
-        target.item.hero = assetPath;
-        target.item.thumbnail = assetPath;
-        target.item.thumbnailAlt = `${target.item.title} 的阿姨別生氣今日生成圖`;
-      }
-      generated += 1;
+      openAiError = "OPENAI_API_KEY is missing";
+      throw new Error(openAiError);
     } catch (error) {
-      review.errors.push(`daily image fallback used for ${target.prefix}: ${error.message}`);
-      if (/billing|hard limit|quota/i.test(error.message)) break;
+      openAiError = error.message;
+      if (!imageGeneration.fallbackEnabled) {
+        review.errors.push(`daily image generation failed for ${target.prefix}: ${error.message}`);
+        continue;
+      }
+
+      const heroCreated = writeFallbackImage(target, fallbackAssetPath, "hero");
+      const thumbCreated = target.section === "life" || target.section === "pitfall"
+        ? writeFallbackImage(target, fallbackThumbPath, "thumb")
+        : false;
+      if (heroCreated) createdAssetPaths.push(fallbackAssetPath);
+      if (thumbCreated) createdAssetPaths.push(fallbackThumbPath);
+      fallbackGenerated += heroCreated || thumbCreated ? 1 : 0;
+      if (!heroCreated && !thumbCreated) reused += 1;
+      assignTargetImage(target, fallbackAssetPath, target.section === "life" || target.section === "pitfall" ? fallbackThumbPath : fallbackAssetPath);
+      ready += 1;
     }
   }
 
   review.sources.push({
     name: "OpenAI Images API",
     url: "https://platform.openai.com/docs/guides/images/image-generation",
-    ok: generated > 0,
-    count: generated,
+    ok: openAiGenerated > 0,
+    count: openAiGenerated,
     model: imageGeneration.model,
     quality: imageGeneration.quality,
-    size: imageGeneration.size
+    size: imageGeneration.size,
+    error: openAiGenerated > 0 ? undefined : openAiError || undefined
   });
-  review.checks.push(`daily images: ${generated}/${requiredTotal} generated or reused`);
-  return { required: true, generated, total: requiredTotal, createdAssetPaths };
+
+  if (fallbackGenerated > 0 || reused > 0) {
+    review.sources.push({
+      name: "Auntie local branded fallback image generator",
+      url: "scripts/daily-update.mjs",
+      ok: true,
+      count: fallbackGenerated + reused
+    });
+  }
+
+  review.checks.push(`daily images: ${ready}/${requiredTotal} ready (${openAiGenerated} OpenAI, ${fallbackGenerated} fallback, ${reused} reused)`);
+  return { required: true, generated: ready, total: requiredTotal, createdAssetPaths };
 }
 
 async function fetchText(url) {
@@ -321,7 +548,8 @@ async function fetchText(url) {
     const response = await fetch(url, {
       signal: controller.signal,
       headers: {
-        "user-agent": "auntie-no-mad-daily-updater/1.0"
+        "accept": "application/json,text/xml,application/xml,text/html;q=0.9,*/*;q=0.8",
+        "user-agent": "Mozilla/5.0 (compatible; AuntieNoMadDailyUpdater/1.0; +https://auntienomad.com)"
       }
     });
     if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
@@ -402,7 +630,7 @@ function buildLifeItems(news) {
 function buildPitfallItems(news) {
   const hardBlockedTopics = ["議長", "連署案", "選舉", "涉貪", "貪污", "判刑", "判決", "勒贖", "拘禁", "凌虐", "殺人", "投毒", "毒駕", "毒品", "灼傷", "火警", "骨折", "摔落", "起火"];
   const isPublicFriendly = (item) => !hardBlockedTopics.some((keyword) => `${item.title} ${item.description}`.includes(keyword));
-  const hasPitfallAngle = (item) => ["詐騙", "假投資", "假冒", "謊稱", "不明成分", "個資", "查詢個資", "醫療行為", "中醫", "兜售", "問診", "消費", "交通違規", "拒檢", "罰", "糾紛", "社群"].some((keyword) => `${item.title} ${item.description}`.includes(keyword));
+  const hasPitfallAngle = (item) => ["詐騙", "假投資", "假冒", "謊稱", "詐財", "網戀", "匯款", "假軍官", "警方", "警察", "不明成分", "個資", "查詢個資", "醫療行為", "中醫", "兜售", "問診", "消費", "交通違規", "拒檢", "吊銷", "罰", "違規", "糾紛", "社群"].some((keyword) => `${item.title} ${item.description}`.includes(keyword));
   const uniqueByLink = (items) => {
     const seen = new Set();
     return items.filter((item) => {
@@ -419,8 +647,11 @@ function buildPitfallItems(news) {
     .filter((item) => item.score > 0)
     .filter(hasPitfallAngle)
     .filter(isPublicFriendly);
-  const picked = uniqueByLink([...primary, ...relaxed]).slice(0, 2);
-  if (picked.length < 2) return content.pitfalls;
+  const dailyFriendlyFallback = pickNews(news, "pitfall", 20, ["詐", "假", "匯款", "違規", "警方", "警察", "罰", "交通", "駕", "車", "市府"])
+    .filter(isPublicFriendly)
+    .filter((item) => item.score > 0 || hasPitfallAngle(item));
+  const picked = uniqueByLink([...primary, ...relaxed, ...dailyFriendlyFallback]).slice(0, 2);
+  if (picked.length < 1) return [];
 
   return picked.slice(0, 2).map((item, index) => {
     const slug = `stories/${taipeiDate}-pitfall-${index + 1}.html`;
