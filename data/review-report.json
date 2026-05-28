@@ -1,9 +1,9 @@
 {
   "date": "2026-05-29",
-  "generatedAt": "2026-05-28T16:43:43.665Z",
+  "generatedAt": "2026-05-28T16:49:35.260Z",
   "status": "approved",
   "checks": [
-    "daily images: 9/9 ready (0 OpenAI, 9 fallback, 0 reused)",
+    "daily images: 9/9 ready (0 OpenAI, 0 fallback, 9 reused)",
     "lifeRadar: 2 items checked",
     "pitfalls: 2 items checked",
     "stockWatchlist: 4 items checked"
@@ -41,7 +41,7 @@
       "model": "gpt-image-1",
       "quality": "medium",
       "size": "1536x1024",
-      "error": "OPENAI_API_KEY is missing"
+      "error": "Billing hard limit has been reached."
     },
     {
       "name": "Auntie local branded fallback image generator",
