@@ -37,7 +37,7 @@ jobs:
           OPENAI_IMAGE_QUALITY: "medium"
           OPENAI_IMAGE_SIZE: "1536x1024"
           OPENAI_IMAGE_LIMIT: "9"
-          GENERATE_FALLBACK_IMAGES: "true"
+          GENERATE_FALLBACK_IMAGES: "false"
 
       - name: Generate SEO files
         run: npm run generate:seo

@@ -15,11 +15,11 @@
       "auntieComment": "新聞不是拿來焦慮的，是拿來少踩一個坑的。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202605280337.aspx",
       "slug": "radar/2026-05-29-life-1.html",
-      "thumbnail": "assets/generated/2026-05-29/life-1-19dqui9-thumb.svg",
+      "thumbnail": "assets/generated/2026-05-29/life-1-ai-thumb.jpg",
       "thumbnailAlt": "阿姨整理捷運三鶯線拚年中通車 尖峰最短班距擬2.2分鐘的生活雷達縮圖",
       "cta": "新聞重點、阿姨白話翻譯與你今天可以先做的事。",
       "sourceName": "中央社生活醫藥",
-      "hero": "assets/generated/2026-05-29/life-1-19dqui9.svg"
+      "hero": "assets/generated/2026-05-29/life-1-ai.jpg"
     },
     {
       "title": "鋒面影響入夜中部以北防雷雨 薔蜜最快29日晚間轉中颱",
@@ -29,11 +29,11 @@
       "auntieComment": "新聞不是拿來焦慮的，是拿來少踩一個坑的。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202605280263.aspx",
       "slug": "radar/2026-05-29-life-2.html",
-      "thumbnail": "assets/generated/2026-05-29/life-2-10y1nbd-thumb.svg",
+      "thumbnail": "assets/generated/2026-05-29/life-2-ai-thumb.jpg",
       "thumbnailAlt": "阿姨整理鋒面影響入夜中部以北防雷雨 薔蜜最快29日晚間轉中颱的生活雷達縮圖",
       "cta": "新聞重點、阿姨白話翻譯與你今天可以先做的事。",
       "sourceName": "中央社生活醫藥",
-      "hero": "assets/generated/2026-05-29/life-2-10y1nbd.svg"
+      "hero": "assets/generated/2026-05-29/life-2-ai.jpg"
     }
   ],
   "pitfalls": [
@@ -45,11 +45,11 @@
       "auntieComment": "不是你笨，是套路越來越會穿西裝。",
       "sourceUrl": "https://www.cna.com.tw/news/asoc/202605280219.aspx",
       "slug": "stories/2026-05-29-pitfall-1.html",
-      "thumbnail": "assets/generated/2026-05-29/pitfall-1-1n3ydl-thumb.svg",
+      "thumbnail": "assets/generated/2026-05-29/pitfall-1-ai-thumb.jpg",
       "thumbnailAlt": "阿姨整理台中婦網戀假軍官 匯款前求證警方保住32萬的踩坑日記縮圖",
       "cta": "先看懂套路，別把錢包推出去。",
       "sourceName": "中央社社會新聞",
-      "hero": "assets/generated/2026-05-29/pitfall-1-1n3ydl.svg"
+      "hero": "assets/generated/2026-05-29/pitfall-1-ai.jpg"
     },
     {
       "title": "新北男假結婚真詐財 彰檢警搜索住處查獲百萬現金",
@@ -59,11 +59,11 @@
       "auntieComment": "不是你笨，是套路越來越會穿西裝。",
       "sourceUrl": "https://www.cna.com.tw/news/asoc/202605280240.aspx",
       "slug": "stories/2026-05-29-pitfall-2.html",
-      "thumbnail": "assets/generated/2026-05-29/pitfall-2-1qyicp8-thumb.svg",
+      "thumbnail": "assets/generated/2026-05-29/pitfall-2-ai-thumb.jpg",
       "thumbnailAlt": "阿姨整理新北男假結婚真詐財 彰檢警搜索住處查獲百萬現金的踩坑日記縮圖",
       "cta": "先看懂套路，別把錢包推出去。",
       "sourceName": "中央社社會新聞",
-      "hero": "assets/generated/2026-05-29/pitfall-2-1qyicp8.svg"
+      "hero": "assets/generated/2026-05-29/pitfall-2-ai.jpg"
     }
   ],
   "stockOverview": {
@@ -105,7 +105,7 @@
         "tone": "down"
       }
     ],
-    "hero": "assets/generated/2026-05-29/stock-overview-1jfljyp.svg"
+    "hero": "assets/generated/2026-05-29/stock-overview-ai.jpg"
   },
   "stockWatchlist": [
     {
@@ -129,7 +129,7 @@
       "close": "324.00",
       "change": "+12.00",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-05-29/stock-1-2408-3f1khp.svg"
+      "image": "assets/generated/2026-05-29/stock-2408-ai.jpg"
     },
     {
       "title": "聯發科",
@@ -152,7 +152,7 @@
       "close": "4,410.00",
       "change": "-230.00",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-05-29/stock-2-2454-2lh59j.svg"
+      "image": "assets/generated/2026-05-29/stock-2454-ai.jpg"
     },
     {
       "title": "力積電",
@@ -175,7 +175,7 @@
       "close": "80.70",
       "change": "+5.90",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-05-29/stock-3-6770-3f959k.svg"
+      "image": "assets/generated/2026-05-29/stock-6770-ai.jpg"
     },
     {
       "title": "群益台灣精選高息",
@@ -198,7 +198,7 @@
       "close": "28.41",
       "change": "-0.44",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-05-29/stock-4-00919-u1gsax.svg"
+      "image": "assets/generated/2026-05-29/stock-00919-ai.jpg"
     }
   ],
   "etfGuide": [

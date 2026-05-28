@@ -71,7 +71,7 @@ const imageGeneration = {
   quality: process.env.OPENAI_IMAGE_QUALITY || "medium",
   size: process.env.OPENAI_IMAGE_SIZE || "1536x1024",
   limit: Number.parseInt(process.env.OPENAI_IMAGE_LIMIT || "9", 10),
-  fallbackEnabled: process.env.GENERATE_FALLBACK_IMAGES !== "false"
+  fallbackEnabled: process.env.GENERATE_FALLBACK_IMAGES === "true"
 };
 
 const fridgeNotePool = [
@@ -175,10 +175,11 @@ function imagePromptFor(target) {
   const title = cleanPromptText(target.item.title, 70);
   const summary = cleanPromptText(target.item.summary || target.item.reason, 140);
   const commonStyle = [
-    "Create a polished 16:9 landscape editorial comic illustration for the Taiwanese brand '阿姨別生氣'.",
-    "Bright yellow halftone background, thick black outlines, sticker-comic framing, cream and pink accents.",
+    "Create a polished 16:9 landscape editorial comic illustration for the Taiwanese lifestyle brand '阿姨別生氣' / Auntie No Mad.",
+    "Quality bar: finished AI-generated editorial art, not SVG, not flat vector, not childish clip-art, not a low-effort collage.",
+    "Visual style: bright yellow halftone background, thick black outlines, white sticker borders, comic cover energy, cream and hot-pink accents, playful Taiwan social-media illustration.",
     "Main character: cute middle-aged Taiwanese auntie, curly dark-brown short hair, rounded face, fuller body, black pixel sunglasses, gold hoop earrings, leopard-print top, black apron with a small pink heart.",
-    "No words, no Chinese text, no fake letters, no watermark, no logo, no stock photo look, no 3D render, no distorted hands or face."
+    "No unreadable text, no fake Chinese, no fake letters, no watermark, no logo, no stock photo look, no 3D render, no distorted hands or face."
   ].join(" ");
 
   if (target.section === "stock") {
@@ -203,7 +204,7 @@ function imagePromptFor(target) {
       commonStyle,
       `Topic: ${title}.`,
       `Story angle: ${summary}`,
-      "Scene: auntie warning the viewer about a daily-life trap, with phone, message bubbles, receipt, street or home-life props depending on the topic; humorous, practical, and slightly dramatic."
+      "Scene: auntie warning the viewer about a daily-life trap, with phone, message bubbles, receipt, street or home-life props depending on the topic; humorous, practical, and slightly dramatic. Short Traditional Chinese warning labels are allowed only if crisp and legible, such as '別匯款', '先查證', or '打165'."
     ].join(" ");
   }
 
@@ -499,21 +500,8 @@ async function enrichGeneratedImages(nextContent) {
       throw new Error(openAiError);
     } catch (error) {
       openAiError = error.message;
-      if (!imageGeneration.fallbackEnabled) {
-        review.errors.push(`daily image generation failed for ${target.prefix}: ${error.message}`);
-        continue;
-      }
-
-      const heroCreated = writeFallbackImage(target, fallbackAssetPath, "hero");
-      const thumbCreated = target.section === "life" || target.section === "pitfall"
-        ? writeFallbackImage(target, fallbackThumbPath, "thumb")
-        : false;
-      if (heroCreated) createdAssetPaths.push(fallbackAssetPath);
-      if (thumbCreated) createdAssetPaths.push(fallbackThumbPath);
-      fallbackGenerated += heroCreated || thumbCreated ? 1 : 0;
-      if (!heroCreated && !thumbCreated) reused += 1;
-      assignTargetImage(target, fallbackAssetPath, target.section === "life" || target.section === "pitfall" ? fallbackThumbPath : fallbackAssetPath);
-      ready += 1;
+      review.errors.push(`daily image generation failed for ${target.prefix}: ${error.message}; low-quality local fallback images are disabled by the Auntie image QA policy`);
+      continue;
     }
   }
 
@@ -527,15 +515,6 @@ async function enrichGeneratedImages(nextContent) {
     size: imageGeneration.size,
     error: openAiGenerated > 0 ? undefined : openAiError || undefined
   });
-
-  if (fallbackGenerated > 0 || reused > 0) {
-    review.sources.push({
-      name: "Auntie local branded fallback image generator",
-      url: "scripts/daily-update.mjs",
-      ok: true,
-      count: fallbackGenerated + reused
-    });
-  }
 
   review.checks.push(`daily images: ${ready}/${requiredTotal} ready (${openAiGenerated} OpenAI, ${fallbackGenerated} fallback, ${reused} reused)`);
   return { required: true, generated: ready, total: requiredTotal, createdAssetPaths };
