@@ -91,6 +91,17 @@ function compact(text, maxLength) {
 function buildDailyTweetFromContent() {
   const contentPath = path.join(root, "data", "site-content.json");
   const content = JSON.parse(fs.readFileSync(contentPath, "utf8"));
+  if (process.env.REQUIRE_DAILY_IMAGES === "true") {
+    const reportPath = path.join(root, "data", "review-report.json");
+    const report = JSON.parse(fs.readFileSync(reportPath, "utf8"));
+    const imageSource = (report.sources || []).find((source) => source.name === "OpenAI Images API");
+    if (!imageSource?.ok || Number(imageSource.count || 0) <= 0) {
+      return {
+        skip: true,
+        reason: `Daily X post skipped because generated images are not ready: ${report.errors?.join("; ") || "no generated image count"}`
+      };
+    }
+  }
   const item = content.lifeRadar?.[0] || content.pitfalls?.[0];
   if (!item) throw new Error("No daily lifeRadar or pitfalls content found.");
 
@@ -169,6 +180,10 @@ async function main() {
 
   const dailyPost =
     process.env.X_POST_SOURCE === "daily-content" ? buildDailyTweetFromContent() : null;
+  if (dailyPost?.skip) {
+    console.log(JSON.stringify({ mode: "skip", reason: dailyPost.reason }, null, 2));
+    return;
+  }
   const text = validateTweetText(process.env.X_POST_TEXT?.trim() || dailyPost?.text || defaultText);
   const imagePath = process.env.X_POST_IMAGE?.trim() || dailyPost?.imagePath || defaultImage;
 
