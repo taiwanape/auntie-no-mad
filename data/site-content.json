@@ -8,29 +8,29 @@
   },
   "lifeRadar": [
     {
-      "title": "台北氣象站午後38.3度 刷新5月高溫紀錄",
+      "title": "新北台南花蓮防38度高溫 吳德榮：29日轉雨降溫",
       "date": "2026-05-28",
       "category": "生活新聞",
-      "summary": "（中央社記者張雄風台北27日電）氣象署表示，今天下午2時許，台北氣象站高溫達攝氏38.3度，刷新該站5月最高溫紀錄；此外，受西南風持續吹拂影響，夜晚、清晨的低溫仍偏高，今天清晨台北站最低溫仍有28.7度。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "summary": "（中央社記者黃巧雯台北28日電）氣象署今天針對大台北等12縣市發布高溫資訊，其中新北、台南及花蓮留意可能連續出現攝氏38度極端高溫。氣象專家吳德榮表示，明天梅雨季第4波鋒面南下，將轉雨降溫。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
       "auntieComment": "新聞不是拿來焦慮的，是拿來少踩一個坑的。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605270353.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605280025.aspx",
       "slug": "radar/2026-05-28-life-1.html",
       "thumbnail": "assets/radar-20260526-hsr-recovery-thumb.png",
-      "thumbnailAlt": "阿姨整理台北氣象站午後38.3度 刷新5月高溫紀錄的生活雷達縮圖",
+      "thumbnailAlt": "阿姨整理新北台南花蓮防38度高溫 吳德榮：29日轉雨降溫的生活雷達縮圖",
       "cta": "新聞重點、阿姨白話翻譯與你今天可以先做的事。",
       "sourceName": "中央社生活醫藥",
       "hero": "assets/radar-20260526-hsr-recovery.png"
     },
     {
-      "title": "婚假陪產假天數加碼 補助職代津貼每日800元",
+      "title": "台北氣象站午後38.3度 刷新5月高溫紀錄",
       "date": "2026-05-28",
       "category": "民生資訊",
-      "summary": "（中央社記者吳欣紜台北27日電）政府宣布「台灣人口對策新戰略」18項措施，包含加碼婚假、產假、陪產假天數，新增薪資由政府負擔，若企業發職代津貼、新聘替代人力也有補助，其中職代津貼補助為每日800元。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "summary": "（中央社記者張雄風台北27日電）氣象署表示，今天下午2時許，台北氣象站高溫達攝氏38.3度，刷新該站5月最高溫紀錄；此外，受西南風持續吹拂影響，夜晚、清晨的低溫仍偏高，今天清晨台北站最低溫仍有28.7度。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
       "auntieComment": "新聞不是拿來焦慮的，是拿來少踩一個坑的。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605270328.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605270353.aspx",
       "slug": "radar/2026-05-28-life-2.html",
       "thumbnail": "assets/radar-20260526-heat-jangmi-thumb.png",
-      "thumbnailAlt": "阿姨整理婚假陪產假天數加碼 補助職代津貼每日800元的生活雷達縮圖",
+      "thumbnailAlt": "阿姨整理台北氣象站午後38.3度 刷新5月高溫紀錄的生活雷達縮圖",
       "cta": "新聞重點、阿姨白話翻譯與你今天可以先做的事。",
       "sourceName": "中央社生活醫藥",
       "hero": "assets/radar-20260526-heat-jangmi.png"
@@ -38,28 +38,32 @@
   ],
   "pitfalls": [
     {
-      "title": "名人推薦？先不要跪，可能是詐騙在穿西裝。",
-      "date": "2026-05-27",
-      "category": "社群踩坑",
-      "summary": "Meta 社群詐騙越包越像真的，看到名人投資、限量優惠、保證獲利，阿姨先問一句：你有先查 165 嗎？",
-      "auntieComment": "越像真的越要慢三秒，急著按下去通常是錢包先跌倒。",
-      "sourceUrl": "https://news.pts.org.tw/article/809388",
-      "slug": "stories/2026-05-27-social-scam.html",
+      "title": "男子瑞芳拆鷹架突倒塌 3公尺高處摔落骨折",
+      "date": "2026-05-28",
+      "category": "踩坑提醒",
+      "summary": "（中央社記者王朝鈺新北市27日電）新北市瑞芳區三爪子坑路一間民宅整修外牆，39歲蕭姓男子今天下午拆除鷹架時，鷹架突然倒塌，蕭男從3公尺高處摔落至地面，造成肋骨骨折、雙側肺部挫傷，所幸意識清楚送醫治療。 阿姨提醒：越急、越便宜、越像好康，越要先停三秒。",
+      "auntieComment": "不是你笨，是套路越來越會穿西裝。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202605270315.aspx",
+      "slug": "stories/2026-05-28-pitfall-1.html",
       "thumbnail": "assets/story-20260527-social-scam-thumb.png",
-      "thumbnailAlt": "社群詐騙踩坑日記小縮圖，阿姨看著社群頁面提醒不要亂點",
-      "cta": "社群投資廣告先停三秒。"
+      "thumbnailAlt": "阿姨整理男子瑞芳拆鷹架突倒塌 3公尺高處摔落骨折的踩坑日記縮圖",
+      "cta": "先看懂套路，別把錢包推出去。",
+      "sourceName": "中央社社會新聞",
+      "hero": "assets/story-20260527-social-scam.png"
     },
     {
-      "title": "熱門景點省時間，結果大家一起把時間塞住。",
-      "date": "2026-05-27",
-      "category": "出遊踩坑",
-      "summary": "新橋、新景點、新打卡路線很香，但週末人潮一來，導航比阿姨碎念還吵。出門前先查路況，別把放假變排隊。",
-      "auntieComment": "省時間不是走捷徑，是先確認大家是不是都想走同一條。",
-      "sourceUrl": "https://news.tvbs.com.tw/life/3206578",
-      "slug": "stories/2026-05-27-traffic-crowd.html",
+      "title": "婚假陪產假天數加碼 補助職代津貼每日800元",
+      "date": "2026-05-28",
+      "category": "生活踩坑",
+      "summary": "（中央社記者吳欣紜台北27日電）政府宣布「台灣人口對策新戰略」18項措施，包含加碼婚假、產假、陪產假天數，新增薪資由政府負擔，若企業發職代津貼、新聘替代人力也有補助，其中職代津貼補助為每日800元。 阿姨提醒：越急、越便宜、越像好康，越要先停三秒。",
+      "auntieComment": "不是你笨，是套路越來越會穿西裝。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605270328.aspx",
+      "slug": "stories/2026-05-28-pitfall-2.html",
       "thumbnail": "assets/story-20260527-traffic-crowd-thumb.png",
-      "thumbnailAlt": "交通出遊踩坑日記小縮圖，阿姨提醒出門前先查路況",
-      "cta": "出遊前先查車潮，不要把假日塞成平日。"
+      "thumbnailAlt": "阿姨整理婚假陪產假天數加碼 補助職代津貼每日800元的踩坑日記縮圖",
+      "cta": "先看懂套路，別把錢包推出去。",
+      "sourceName": "中央社生活醫藥",
+      "hero": "assets/story-20260527-traffic-crowd.png"
     }
   ],
   "stockOverview": {
@@ -281,24 +285,6 @@
       "auntieComment": "心急可以，手不要急著轉傳。",
       "sourceUrl": "",
       "slug": "note-2026-05-27-source"
-    },
-    {
-      "title": "出門前",
-      "date": "2026-05-27",
-      "category": "冰箱便條紙",
-      "summary": "手機、鑰匙、錢包、雨傘。四個有三個就會少一場災難。",
-      "auntieComment": "少帶一個可以，少帶腦袋不行。",
-      "sourceUrl": "",
-      "slug": "note-before-leaving"
-    },
-    {
-      "title": "買東西前",
-      "date": "2026-05-27",
-      "category": "冰箱便條紙",
-      "summary": "這是需要，還是今天很累想被安慰？兩種都可以，但不要搞混。",
-      "auntieComment": "慰勞自己可以，但不要假裝是剛需。",
-      "sourceUrl": "",
-      "slug": "note-before-buying"
     }
   ],
   "archive": [

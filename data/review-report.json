@@ -1,8 +1,9 @@
 {
   "date": "2026-05-28",
-  "generatedAt": "2026-05-27T22:56:55.395Z",
+  "generatedAt": "2026-05-28T02:42:42.896Z",
   "status": "approved",
   "checks": [
+    "daily images: skipped because GENERATE_DAILY_IMAGES is not true",
     "lifeRadar: 2 items checked",
     "pitfalls: 2 items checked",
     "stockWatchlist: 4 items checked"
@@ -39,7 +40,8 @@
     "stockOverview",
     "stockWatchlist",
     "fridgeNotes",
-    "archive"
+    "archive",
+    "generatedImages"
   ],
   "errors": []
 }

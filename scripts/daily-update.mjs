@@ -64,6 +64,14 @@ const review = {
   errors: []
 };
 
+const imageGeneration = {
+  enabled: process.env.GENERATE_DAILY_IMAGES === "true",
+  model: process.env.OPENAI_IMAGE_MODEL || "gpt-image-1",
+  quality: process.env.OPENAI_IMAGE_QUALITY || "medium",
+  size: process.env.OPENAI_IMAGE_SIZE || "1536x1024",
+  limit: Number.parseInt(process.env.OPENAI_IMAGE_LIMIT || "9", 10)
+};
+
 function getTaipeiDate() {
   const parts = new Intl.DateTimeFormat("en-CA", {
     timeZone: "Asia/Taipei",
@@ -114,9 +122,145 @@ function makeSlugPart(value = "") {
   return cleaned || "auntie-note";
 }
 
+function cleanPromptText(value = "", maxLength = 120) {
+  const cleaned = stripHtml(value)
+    .replace(/（中央社.*?）/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  return [...cleaned].slice(0, maxLength).join("");
+}
+
+function imagePromptFor(target) {
+  const title = cleanPromptText(target.item.title, 70);
+  const summary = cleanPromptText(target.item.summary || target.item.reason, 140);
+  const commonStyle = [
+    "Create a polished 16:9 landscape editorial comic illustration for the Taiwanese brand '阿姨別生氣'.",
+    "Bright yellow halftone background, thick black outlines, sticker-comic framing, cream and pink accents.",
+    "Main character: cute middle-aged Taiwanese auntie, curly dark-brown short hair, rounded face, fuller body, black pixel sunglasses, gold hoop earrings, leopard-print top, black apron with a small pink heart.",
+    "No words, no Chinese text, no fake letters, no watermark, no logo, no stock photo look, no 3D render, no distorted hands or face."
+  ].join(" ");
+
+  if (target.section === "stock") {
+    return [
+      commonStyle,
+      `Topic: Taiwanese stock/ETF observation for ${target.item.ticker} ${target.item.name}.`,
+      `Story angle: ${summary}`,
+      "Scene: auntie at a desk with a tablet showing simple chart icons, sticky notes, calculator, coffee, piggy bank, and warning triangle stickers; make it educational and funny, not financial-advisor serious."
+    ].join(" ");
+  }
+
+  if (target.section === "market") {
+    return [
+      commonStyle,
+      "Topic: daily Taiwanese stock and ETF watchlist overview.",
+      "Scene: auntie reviewing four colorful cards on a large tablet, with chart stickers, a piggy bank, calculator, coffee, and a big caution sign; playful but trustworthy."
+    ].join(" ");
+  }
+
+  if (target.section === "pitfall") {
+    return [
+      commonStyle,
+      `Topic: ${title}.`,
+      `Story angle: ${summary}`,
+      "Scene: auntie warning the viewer about a daily-life trap, with phone, message bubbles, receipt, street or home-life props depending on the topic; humorous, practical, and slightly dramatic."
+    ].join(" ");
+  }
+
+  return [
+    commonStyle,
+    `Topic: ${title}.`,
+    `Story angle: ${summary}`,
+    "Scene: auntie reacting to a real Taiwan life/news situation with household or commute props; make it feel like a clickable lifestyle article cover."
+  ].join(" ");
+}
+
+async function generateOpenAIImage(prompt, outputPath) {
+  const response = await fetch("https://api.openai.com/v1/images/generations", {
+    method: "POST",
+    headers: {
+      authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+      "content-type": "application/json",
+      "user-agent": "auntie-no-mad-daily-image-generator/1.0"
+    },
+    body: JSON.stringify({
+      model: imageGeneration.model,
+      prompt,
+      size: imageGeneration.size,
+      quality: imageGeneration.quality,
+      n: 1
+    })
+  });
+
+  const body = await response.json().catch(async () => ({ error: { message: await response.text() } }));
+  if (!response.ok) {
+    throw new Error(body.error?.message || `OpenAI image generation failed: ${response.status}`);
+  }
+
+  const b64 = body.data?.[0]?.b64_json;
+  if (!b64) throw new Error("OpenAI image generation returned no b64_json");
+  fs.writeFileSync(outputPath, Buffer.from(b64, "base64"));
+}
+
+async function enrichGeneratedImages(nextContent) {
+  if (!imageGeneration.enabled) {
+    review.checks.push("daily images: skipped because GENERATE_DAILY_IMAGES is not true");
+    return;
+  }
+  if (!process.env.OPENAI_API_KEY) {
+    review.errors.push("daily images skipped: OPENAI_API_KEY is missing");
+    return;
+  }
+
+  const dir = `assets/generated/${taipeiDate}`;
+  ensureDir(dir);
+  const targets = [
+    ...nextContent.lifeRadar.map((item, index) => ({ section: "life", item, prefix: `life-${index + 1}` })),
+    ...nextContent.pitfalls.map((item, index) => ({ section: "pitfall", item, prefix: `pitfall-${index + 1}` })),
+    { section: "market", item: nextContent.stockOverview, prefix: "stock-overview" },
+    ...nextContent.stockWatchlist.map((item, index) => ({ section: "stock", item, prefix: `stock-${index + 1}-${item.ticker}` }))
+  ];
+  const max = Number.isFinite(imageGeneration.limit) && imageGeneration.limit > 0 ? imageGeneration.limit : targets.length;
+  let generated = 0;
+
+  for (const target of targets.slice(0, max)) {
+    const file = `${target.prefix}-${makeSlugPart(target.item.title || target.item.name).slice(0, 40)}.png`;
+    const assetPath = `${dir}/${file}`;
+    const outputPath = path.join(root, assetPath);
+    try {
+      if (!fs.existsSync(outputPath)) {
+        await generateOpenAIImage(imagePromptFor(target), outputPath);
+      }
+      if (target.section === "stock") {
+        target.item.image = assetPath;
+      } else if (target.section === "market") {
+        target.item.hero = assetPath;
+      } else {
+        target.item.hero = assetPath;
+        target.item.thumbnail = assetPath;
+        target.item.thumbnailAlt = `${target.item.title} 的阿姨別生氣今日生成圖`;
+      }
+      generated += 1;
+    } catch (error) {
+      review.errors.push(`daily image fallback used for ${target.prefix}: ${error.message}`);
+      if (/billing|hard limit|quota/i.test(error.message)) break;
+    }
+  }
+
+  review.sources.push({
+    name: "OpenAI Images API",
+    url: "https://platform.openai.com/docs/guides/images/image-generation",
+    ok: generated > 0,
+    count: generated,
+    model: imageGeneration.model,
+    quality: imageGeneration.quality,
+    size: imageGeneration.size
+  });
+  review.checks.push(`daily images: ${generated}/${Math.min(max, targets.length)} generated or reused`);
+}
+
 async function fetchText(url) {
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 12000);
+  const timer = setTimeout(() => controller.abort(), 25000);
   try {
     const response = await fetch(url, {
       signal: controller.signal,
@@ -200,11 +344,25 @@ function buildLifeItems(news) {
 }
 
 function buildPitfallItems(news) {
-  const blockedTopics = ["議長", "聲押", "更審", "連署案", "法院", "地檢", "判刑", "判決", "涉貪", "選舉", "車手", "拘禁", "凌虐", "毒駕", "取締", "毒品"];
-  const picked = pickNews(news, "pitfall", 8, ["詐騙", "交通", "旅遊", "消費", "罰", "糾紛", "個資", "社群", "假投資", "假冒", "違規"])
+  const hardBlockedTopics = ["議長", "連署案", "選舉", "涉貪", "貪污", "判刑", "判決", "勒贖", "拘禁", "凌虐", "殺人", "投毒", "毒駕", "毒品", "灼傷", "火警", "聲押", "羈押"];
+  const isPublicFriendly = (item) => !hardBlockedTopics.some((keyword) => `${item.title} ${item.description}`.includes(keyword));
+  const uniqueByLink = (items) => {
+    const seen = new Set();
+    return items.filter((item) => {
+      if (seen.has(item.link)) return false;
+      seen.add(item.link);
+      return true;
+    });
+  };
+  const primary = pickNews(news, "pitfall", 20, ["詐騙", "交通", "旅遊", "消費", "罰", "糾紛", "個資", "社群", "假投資", "假冒", "違規"])
     .filter((item) => item.score > 0)
-    .filter((item) => !blockedTopics.some((keyword) => `${item.title} ${item.description}`.includes(keyword)))
-    .slice(0, 2);
+    .filter(isPublicFriendly);
+  const relaxed = pickNews(news, "pitfall", 20, ["個資", "中醫", "醫療", "火警", "鷹架", "交通違規", "拒檢", "事故", "違規", "快篩", "詐"])
+    .filter((item) => item.score > 0)
+    .filter(isPublicFriendly);
+  const lifeFallback = pickNews(news, "life", 10, ["高溫", "天氣", "交通", "補助", "消費", "醫療", "假", "津貼"])
+    .filter((item) => item.score > 0);
+  const picked = uniqueByLink([...primary, ...relaxed, ...lifeFallback]).slice(0, 2);
   if (picked.length < 2) return content.pitfalls;
 
   return picked.slice(0, 2).map((item, index) => {
@@ -347,6 +505,7 @@ function reviewProposed(nextContent) {
   function checkArray(name, items, min) {
     if (!Array.isArray(items) || items.length < min) errors.push(`${name}: insufficient items`);
     (items || []).forEach((item) => {
+      if (item.date !== taipeiDate) errors.push(`${name}: stale date on ${item.title || "unknown"}`);
       required.forEach((field) => {
         if (!item[field]) errors.push(`${name}: missing ${field} on ${item.title || "unknown"}`);
       });
@@ -494,7 +653,9 @@ function stockDetails(item) {
 
 function marketTemplate(stockOverview, stockItems) {
   const pageUrl = `https://taiwanape.github.io/auntie-no-mad/${stockOverview.slug}`;
-  const imageUrl = "https://taiwanape.github.io/auntie-no-mad/assets/stock-20260526-market-watch.png";
+  const hero = stockOverview.hero || assets.stocks.default;
+  const heroPath = hero.startsWith("assets/") ? `../${hero}` : hero;
+  const imageUrl = `https://taiwanape.github.io/auntie-no-mad/${hero}`;
   const marketJsonLd = structuredData({
     "@context": "https://schema.org",
     "@type": "Article",
@@ -567,7 +728,7 @@ ${marketJsonLd}
       <a class="back" href="../index.html#investing">回股市 ETF</a>
     </header>
     <article>
-      <img class="hero" src="../assets/stock-20260526-market-watch.png" alt="阿姨整理股市觀察清單的漫畫插圖">
+      <img class="hero" src="${htmlEscape(heroPath)}" alt="阿姨整理股市觀察清單的漫畫插圖">
       <div class="content">
         <span class="label">股市 ETF · ${htmlEscape(stockOverview.date)}</span>
         <h1>${htmlEscape(stockOverview.date)} 早晨市場筆記</h1>
@@ -620,6 +781,15 @@ async function main() {
   const news = await collectNews();
   let stockItems = content.stockWatchlist;
   let stockOverview = content.stockOverview;
+  const todayFridgeNote = {
+    title: "今天先查來源",
+    date: taipeiDate,
+    category: "冰箱便條紙",
+    summary: "看到驚人消息先停三秒，來源比情緒重要。",
+    auntieComment: "心急可以，手不要急著轉傳。",
+    sourceUrl: "",
+    slug: `note-${taipeiDate}-source`
+  };
 
   try {
     const marketRows = await collectMarket();
@@ -642,16 +812,8 @@ async function main() {
     stockOverview,
     stockWatchlist: stockItems,
     fridgeNotes: [
-      {
-        title: "今天先查來源",
-        date: taipeiDate,
-        category: "冰箱便條紙",
-        summary: "看到驚人消息先停三秒，來源比情緒重要。",
-        auntieComment: "心急可以，手不要急著轉傳。",
-        sourceUrl: "",
-        slug: `note-${taipeiDate}-source`
-      },
-      ...(content.fridgeNotes || []).slice(0, 3)
+      todayFridgeNote,
+      ...(content.fridgeNotes || []).filter((item) => item.slug !== todayFridgeNote.slug).slice(0, 3)
     ],
     archive: mergeArchive(content.archive, [
       {
@@ -667,9 +829,11 @@ async function main() {
     ])
   };
 
+  await enrichGeneratedImages(nextContent);
+
   const result = reviewProposed(nextContent);
   review.checks.push(...result.checks);
-  review.updatedSections.push("lifeRadar", "pitfalls", "stockOverview", "stockWatchlist", "fridgeNotes", "archive");
+  review.updatedSections.push("lifeRadar", "pitfalls", "stockOverview", "stockWatchlist", "fridgeNotes", "archive", "generatedImages");
   review.errors.push(...result.errors);
 
   if (!result.ok) {

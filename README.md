@@ -65,11 +65,13 @@ GitHub Actions workflow：
 
 1. 抓取公開 RSS / 公開市場資料
 2. 產生候選內容
-3. 執行內容審核
-4. 通過才寫入 `data/site-content.json` 與文章頁
-5. 產生 `sitemap.xml` 與 `robots.txt`
-6. 執行 `npm test`
-7. 有變更才自動 commit / push
+3. 使用 OpenAI Images API 產生每日圖文圖片
+4. 圖片生成失敗時保留舊圖，不讓首頁壞掉
+5. 執行內容審核
+6. 通過才寫入 `data/site-content.json` 與文章頁
+7. 產生 `sitemap.xml` 與 `robots.txt`
+8. 執行 `npm test`
+9. 有變更才自動 commit / push
 
 ## 手動觸發 GitHub Actions
 
@@ -81,14 +83,18 @@ Actions → Daily Auntie Update → Run workflow
 
 ## Secrets
 
-目前不需要任何付費 API key，也不需要 secrets。
+每日自動生成圖片需要 GitHub Secret：
 
-如果未來要接付費或需要授權的資料源，建議新增 GitHub Secrets，例如：
+- `OPENAI_API_KEY`：OpenAI API key，用於每日產生生活雷達、踩坑日記、股市 ETF 的文章圖。
 
-- `NEWS_API_KEY`
-- `MARKET_DATA_API_KEY`
+可選設定：
 
-腳本應保留 fallback：API 失敗時保留舊資料，不覆蓋首頁。
+- `OPENAI_IMAGE_MODEL`：預設由 workflow 設為 `gpt-image-1`
+- `OPENAI_IMAGE_QUALITY`：預設 `medium`
+- `OPENAI_IMAGE_SIZE`：預設 `1536x1024`
+- `OPENAI_IMAGE_LIMIT`：預設每日最多 9 張
+
+若 OpenAI API 失敗、額度不足、或帳號花費上限擋住，腳本會保留既有圖片並在 `data/review-report.json` 記錄原因。
 
 ## X API 測試
 
