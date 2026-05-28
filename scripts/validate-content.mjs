@@ -91,11 +91,8 @@ assert(content.stockWatchlist?.length === 4, "stockWatchlist must contain exactl
 ["etfGuide", "goodPicks", "fridgeNotes", "archive"].forEach((section) => {
   assert(Array.isArray(content[section]), `${section} must be an array`);
   (content[section] || []).forEach((item) => {
-    const fields = section === "goodPicks" || section === "fridgeNotes"
-      ? requiredArticleFields.filter((field) => field !== "sourceUrl")
-      : requiredArticleFields;
-    checkFields(section, item, fields);
-    if (!item.sourceUrl) warnings.push(`${section}: sourceUrl missing for ${item.title}; UI should treat as 來源待補`);
+    checkFields(section, item, requiredArticleFields);
+    if (item.sourceUrl) assert(/^https?:\/\//.test(item.sourceUrl), `${section}: sourceUrl must be public URL on ${item.title}`);
     if (["archive"].includes(section)) checkLocalSlug(section, item.slug);
   });
 });

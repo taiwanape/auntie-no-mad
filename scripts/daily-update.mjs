@@ -73,6 +73,37 @@ const imageGeneration = {
   limit: Number.parseInt(process.env.OPENAI_IMAGE_LIMIT || "9", 10)
 };
 
+const fridgeNotePool = [
+  {
+    key: "source",
+    title: "今天先查來源",
+    summary: "看到驚人消息先停三秒，來源比情緒重要。",
+    auntieComment: "心急可以，手不要急著轉傳。",
+    sourceUrl: "https://tfc-taiwan.org.tw/"
+  },
+  {
+    key: "receipt",
+    title: "收據先別丟",
+    summary: "退貨、報帳、保固，很多麻煩都是一張紙救回來的。",
+    auntieComment: "不是叫你囤垃圾，是叫你留證據。",
+    sourceUrl: "https://cpc.ey.gov.tw/"
+  },
+  {
+    key: "weather",
+    title: "出門先看天氣",
+    summary: "台灣的天氣很會演，晴天出門也要留一手。",
+    auntieComment: "傘不是迷信，是給自己留台階。",
+    sourceUrl: "https://www.cwa.gov.tw/V8/C/"
+  },
+  {
+    key: "password",
+    title: "密碼不要共用",
+    summary: "一組密碼走天下，最後通常是帳號一起出事。",
+    auntieComment: "方便過頭，就會變別人方便。",
+    sourceUrl: "https://moda.gov.tw/"
+  }
+];
+
 function getTaipeiDate() {
   const parts = new Intl.DateTimeFormat("en-CA", {
     timeZone: "Asia/Taipei",
@@ -790,9 +821,26 @@ function writePages(nextContent) {
 function mergeArchive(existingArchive = [], additions = []) {
   const map = new Map();
   [...additions, ...existingArchive].forEach((item) => {
-    map.set(item.slug, item);
+    const key = item.sourceUrl
+      ? `${item.title || ""}::${item.sourceUrl}`
+      : item.slug || `${item.title || ""}::${item.date || ""}`;
+    if (!map.has(key)) map.set(key, item);
   });
   return [...map.values()].slice(0, 60);
+}
+
+function buildTodayFridgeNote() {
+  const dayIndex = Number.parseInt(taipeiDate.replaceAll("-", ""), 10) % fridgeNotePool.length;
+  const note = fridgeNotePool[dayIndex];
+  return {
+    title: note.title,
+    date: taipeiDate,
+    category: "冰箱便條紙",
+    summary: note.summary,
+    auntieComment: note.auntieComment,
+    sourceUrl: note.sourceUrl,
+    slug: `note-${taipeiDate}-${note.key}`
+  };
 }
 
 function cleanupGeneratedAssets(assetPaths = []) {
@@ -810,15 +858,7 @@ async function main() {
   const news = await collectNews();
   let stockItems = content.stockWatchlist;
   let stockOverview = content.stockOverview;
-  const todayFridgeNote = {
-    title: "今天先查來源",
-    date: taipeiDate,
-    category: "冰箱便條紙",
-    summary: "看到驚人消息先停三秒，來源比情緒重要。",
-    auntieComment: "心急可以，手不要急著轉傳。",
-    sourceUrl: "",
-    slug: `note-${taipeiDate}-source`
-  };
+  const todayFridgeNote = buildTodayFridgeNote();
 
   try {
     const marketRows = await collectMarket();
@@ -842,7 +882,9 @@ async function main() {
     stockWatchlist: stockItems,
     fridgeNotes: [
       todayFridgeNote,
-      ...(content.fridgeNotes || []).filter((item) => item.slug !== todayFridgeNote.slug).slice(0, 3)
+      ...(content.fridgeNotes || [])
+        .filter((item) => item.slug !== todayFridgeNote.slug && item.title !== todayFridgeNote.title)
+        .slice(0, 3)
     ],
     archive: mergeArchive(content.archive, [
       {
