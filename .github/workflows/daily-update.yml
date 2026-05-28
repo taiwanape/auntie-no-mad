@@ -4,6 +4,8 @@ on:
   schedule:
     # 04:00 Asia/Taipei. GitHub cron is UTC; this leaves room for GitHub queue delays before 07:00.
     - cron: "0 20 * * *"
+    # 06:00 Asia/Taipei backup run in case GitHub's first scheduled run is delayed or skipped.
+    - cron: "0 22 * * *"
   workflow_dispatch:
 
 permissions:
@@ -37,7 +39,6 @@ jobs:
           OPENAI_IMAGE_QUALITY: "medium"
           OPENAI_IMAGE_SIZE: "1536x1024"
           OPENAI_IMAGE_LIMIT: "9"
-          GENERATE_FALLBACK_IMAGES: "false"
 
       - name: Generate SEO files
         run: npm run generate:seo

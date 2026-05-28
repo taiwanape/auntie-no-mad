@@ -57,8 +57,8 @@ GitHub Actions workflow：
 
 排程：
 
-- GitHub cron：`30 21 * * *`
-- 對應台灣時間：每天 05:30
+- GitHub cron：`0 20 * * *` 與備援 `0 22 * * *`
+- 對應台灣時間：每天 04:00 與 06:00
 - 目標：每天早上 7 點前完成更新
 
 流程：
@@ -66,7 +66,7 @@ GitHub Actions workflow：
 1. 抓取公開 RSS / 公開市場資料
 2. 產生候選內容
 3. 使用 OpenAI Images API 產生每日圖文圖片
-4. 圖片生成失敗時保留舊圖，不讓首頁壞掉
+4. 圖片生成失敗時改用已審核通過的高品質 AI 圖庫，不使用低品質 SVG 或臨時拼貼圖
 5. 執行內容審核
 6. 通過才寫入 `data/site-content.json` 與文章頁
 7. 產生 `sitemap.xml` 與 `robots.txt`
@@ -94,7 +94,7 @@ Actions → Daily Auntie Update → Run workflow
 - `OPENAI_IMAGE_SIZE`：預設 `1536x1024`
 - `OPENAI_IMAGE_LIMIT`：預設每日最多 9 張
 
-若 OpenAI API 失敗、額度不足、或帳號花費上限擋住，腳本會把當天更新標成 `rejected`，保留既有正式資料與圖片，不會把只有文字、沒有新圖的半成品推到首頁；原因會寫在 `data/review-report.json`。
+若 OpenAI API 失敗、額度不足、或帳號花費上限擋住，腳本會改用 `docs/VOICE_GUIDE.md` 定義的已審核高品質 AI 圖庫，讓當天文字內容仍可更新；低品質 SVG、線條 icon、臨時拼貼圖不允許進入正式資料。原因會寫在 `data/review-report.json`。
 
 ## X API 測試
 
