@@ -151,17 +151,7 @@ function checkAsset(section, item, field) {
   if (!assetPath) return;
   assert(fileExists(assetPath), `${section}: ${field} file does not exist for ${item.title || item.slug}: ${assetPath}`);
   if (assetPath.endsWith(".svg") && fileExists(assetPath)) {
-    const svg = fs.readFileSync(path.join(root, assetPath), "utf8");
-    assert(/<svg[\s>]/.test(svg) && svg.includes("</svg>"), `${section}: SVG asset is malformed for ${item.title || item.slug}: ${assetPath}`);
-    const tags = svg.match(/<[^!?][^>]*>/g) || [];
-    tags.forEach((tag) => {
-      const seen = new Set();
-      [...tag.matchAll(/\s([a-zA-Z_:][-.\w:]*)=/g)].forEach((match) => {
-        const attr = match[1];
-        assert(!seen.has(attr), `${section}: SVG asset has duplicate ${attr} attribute for ${item.title || item.slug}: ${assetPath}`);
-        seen.add(attr);
-      });
-    });
+    assert(false, `${section}: SVG image assets are not allowed for public content: ${assetPath}`);
   }
 }
 
