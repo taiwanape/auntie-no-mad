@@ -43,6 +43,45 @@
       box-shadow: 5px 5px 0 var(--ink);
     }
 
+    .today-promo {
+      display: grid;
+      grid-template-columns: minmax(220px, .72fr) minmax(0, 1fr);
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 22px;
+      background: var(--yellow);
+    }
+
+    .today-promo img,
+    .today-promo .empty-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border: 3px solid var(--ink);
+      border-radius: 14px;
+      background: var(--yellow);
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    .today-promo-copy {
+      display: grid;
+      gap: 10px;
+    }
+
+    .today-promo-copy h2 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 54px);
+      line-height: 1.05;
+      font-weight: 1000;
+    }
+
+    .today-promo-copy p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.5;
+      font-weight: 900;
+    }
+
     .share-card img,
     .post-card img {
       width: 100%;
@@ -131,6 +170,7 @@
     }
 
     @media (max-width: 760px) {
+      .today-promo,
       .share-grid,
       .post-grid {
         grid-template-columns: 1fr;
@@ -158,6 +198,19 @@
         <div class="notice" id="updatedAt">讀取今日分享素材中...</div>
       </section>
 
+      <section class="card today-promo" id="todayPromo" aria-label="今日固定導流入口">
+        <div class="empty-image">今日必看<br>整理中</div>
+        <div class="today-promo-copy">
+          <span class="label">固定導流入口</span>
+          <h2>今天就先丟這條</h2>
+          <p>這條會固定導回今日必看頁，明天更新後還是同一個入口，適合放限動、貼文、社群簡介。</p>
+          <div class="button-row">
+            <a class="primary" href="today.html">打開今日必看</a>
+            <button type="button" data-copy="阿姨別生氣今日必看：https://taiwanape.github.io/auntie-no-mad/today.html?utm_source=copy&amp;utm_medium=social&amp;utm_campaign=today_page">複製今日入口</button>
+          </div>
+        </div>
+      </section>
+
       <section class="card">
         <span class="label">可轉傳入口</span>
         <h2>今天最適合拿來引流的內容</h2>
@@ -176,6 +229,8 @@
 
   <script>
     const SITE_BASE = "https://taiwanape.github.io/auntie-no-mad/";
+    const TODAY_URL = `${SITE_BASE}today.html`;
+    const todayPromo = document.querySelector("#todayPromo");
     const shareItems = document.querySelector("#shareItems");
     const socialPosts = document.querySelector("#socialPosts");
     const updatedAt = document.querySelector("#updatedAt");
@@ -191,6 +246,27 @@
       if (!href) return "";
       if (/^https?:\/\//.test(href)) return href;
       return new URL(href, SITE_BASE).href;
+    };
+
+    const withUtm = (href, source, campaign = "today_page") => {
+      const url = new URL(absoluteUrl(href));
+      url.searchParams.set("utm_source", source);
+      url.searchParams.set("utm_medium", "social");
+      url.searchParams.set("utm_campaign", campaign);
+      return url.href;
+    };
+
+    const todayShareLinks = (title, summary) => {
+      const lineUrl = withUtm(TODAY_URL, "line");
+      const facebookUrl = withUtm(TODAY_URL, "facebook");
+      const xUrl = withUtm(TODAY_URL, "x");
+      const xText = `${title}\n${summary}\n\n${xUrl}`;
+      return {
+        copyUrl: withUtm(TODAY_URL, "copy"),
+        line: `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(lineUrl)}`,
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(facebookUrl)}`,
+        x: `https://twitter.com/intent/tweet?text=${encodeURIComponent(xText)}`
+      };
     };
 
     async function copyText(text, button) {
@@ -209,6 +285,37 @@
     function imageBlock(path, alt) {
       if (!path) return `<div class="empty-image">即時新聞入口<br>回首頁看最新整理</div>`;
       return `<img src="${escapeHtml(path)}" alt="${escapeHtml(alt || "阿姨別生氣分享圖")}">`;
+    }
+
+    function pickPrimaryItem(pack, posts) {
+      const primaryTitle = posts?.source?.primaryTitle;
+      return (pack.items || []).find((item) => item.title === primaryTitle) ||
+        (pack.items || []).find((item) => item.kind === "pitfall") ||
+        (pack.items || [])[0];
+    }
+
+    function renderTodayPromo(pack, posts) {
+      const item = pickPrimaryItem(pack, posts);
+      if (!item || !todayPromo) return;
+      const title = item.title || posts?.source?.primaryTitle || "今日必看";
+      const summary = item.summary || "阿姨把今天最值得點的內容先整理好。";
+      const links = todayShareLinks(title, summary);
+      const copyText = `${title}\n${summary}\n\n阿姨別生氣今日必看：${links.copyUrl}`;
+      todayPromo.innerHTML = `
+        ${imageBlock(item.imagePath, item.imageAlt || title)}
+        <div class="today-promo-copy">
+          <span class="label">固定導流入口</span>
+          <h2>${escapeHtml(title)}</h2>
+          <p>${escapeHtml(summary)}</p>
+          <div class="button-row">
+            <a class="primary" href="today.html?utm_source=share_pack&utm_medium=internal&utm_campaign=today_page">打開今日必看</a>
+            <button type="button" data-copy="${escapeHtml(copyText)}">複製今日入口</button>
+            <a href="${escapeHtml(links.line)}" target="_blank" rel="noreferrer">LINE</a>
+            <a href="${escapeHtml(links.facebook)}" target="_blank" rel="noreferrer">FB</a>
+            <a href="${escapeHtml(links.x)}" target="_blank" rel="noreferrer">X</a>
+          </div>
+        </div>
+      `;
     }
 
     function renderSharePack(pack) {
@@ -260,6 +367,7 @@
       fetch("data/share-pack.json").then((response) => response.json()),
       fetch("data/social-posts.json").then((response) => response.json())
     ]).then(([pack, posts]) => {
+      renderTodayPromo(pack, posts);
       renderSharePack(pack);
       renderSocialPosts(posts);
     }).catch(() => {
