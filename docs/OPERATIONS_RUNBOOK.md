@@ -11,7 +11,9 @@ Run from `C:\Users\taiwa\Documents\AuntieNoMad\website`:
 ```powershell
 npm run ops:health
 npm test
+npm run test:x-queue
 npm run test:x-api
+npm run test:x-profile
 ```
 
 Check:
@@ -20,6 +22,8 @@ Check:
 - Public site is reachable.
 - `data/review-report.json` is approved or has a clear fallback.
 - X API resolves `@auntienomad`.
+- X profile still matches the real-person, non-ecommerce positioning.
+- `data/x-content-queue.json` has enough planned, sourced, real-person concepts.
 - Latest X post is not generic, broken, or off-brand.
 
 ## Site Maintenance
@@ -67,6 +71,8 @@ Avoid:
 
 ```powershell
 npm run test:x-api
+npm run test:x-profile
+npm run test:x-queue
 npm run post:x
 npm run delete:x-posts
 ```

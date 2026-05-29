@@ -67,6 +67,7 @@ npm run test:x-api
 - Current profile assets:
   - `social/x-profile-generated-20260529/x-profile-avatar-generated-20260529.jpg`
   - `social/x-profile-generated-20260529/x-profile-cover-generated-20260529.jpg`
+- X content queue: `data/x-content-queue.json`
 - Recent verified posts:
   - `https://x.com/auntienomad/status/2060318220754763933`
   - `https://x.com/auntienomad/status/2060202163700396065`
@@ -77,6 +78,7 @@ Useful commands:
 ```powershell
 npm run test:x-api
 npm run test:x-profile
+npm run test:x-queue
 npm run post:x
 npm run delete:x-posts
 ```

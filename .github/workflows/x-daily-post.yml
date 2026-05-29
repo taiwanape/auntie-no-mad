@@ -28,7 +28,17 @@ jobs:
           npm run generate:social-posts
 
       - name: Validate content before posting
-        run: npm test
+        run: |
+          npm test
+          npm run test:x-queue
+
+      - name: Audit X profile positioning
+        run: npm run test:x-profile
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
 
       - name: Publish daily X post
         run: |

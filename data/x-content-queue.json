@@ -1,0 +1,178 @@
+{
+  "updatedAt": "2026-05-29",
+  "account": "@auntienomad",
+  "positioning": {
+    "oneLine": "性感、知性、話題感強的真人版阿姨，把熱搜和生活風險講成人聽得懂的版本。",
+    "tone": ["直接", "成熟", "挑逗但有腦", "台灣口語", "有來源"],
+    "promise": "尺度可以大一點，但每則都要有梗、有資訊、有品牌辨識度。"
+  },
+  "visualDefaults": {
+    "characterLock": "photorealistic adult Taiwanese Auntie woman, short dark curly hair, gold hoop earrings, leopard-pattern outer layer, fitted black outfit, small pink heart accent, curvy body, confident intelligent gaze",
+    "layoutLock": "yellow halftone background, black rounded pill label, huge heavy black headline with thick white stroke and black shadow, pink keyword emphasis, 16:9 X post image",
+    "negativePrompt": "no collage, no cartoon, no pixel sunglasses, no product display pose, no hand-held product, no shopping callout, no nudity, no explicit sex act, no cheap lingerie ad framing"
+  },
+  "cadence": {
+    "dailyAnchor": "one sourced visual post",
+    "dailyLightTouch": "one short text post or reply tied to the anchor topic",
+    "weeklyMix": {
+      "tech-ai": 2,
+      "money-caution": 2,
+      "life-radar": 2,
+      "culture-meme": 1
+    }
+  },
+  "entries": [
+    {
+      "id": "2026-05-29-nvidia-taiwan-ai",
+      "status": "published",
+      "pillar": "tech-ai",
+      "spiceLevel": 3,
+      "topicHook": "1500億不是情話",
+      "angle": "把 AI 供應鏈新聞翻成台灣人聽得懂的荷包提醒。",
+      "copyDraft": "1500億不是情話。\n\n黃仁勳說，輝達在台支出可能走向每年1500億美元，還把台灣點名成AI革命震央。\n\n阿姨翻譯：這不是告白，是供應鏈被點名。可以心跳，錢包先冷靜。\n\n來源：Reuters\n#阿姨別生氣 #科技新聞 #AI",
+      "sourcePlan": {
+        "required": true,
+        "sourceName": "Reuters",
+        "sourceDate": "2026-05-27",
+        "sourceUrl": "https://m.investing.com/news/stock-market-news/nvidia-to-spend-150-billion-a-year-in-taiwan-epicentre-of-ai-revolution-says-ceo-4711555?ampMode=1"
+      },
+      "imagePath": "social/x-post-nvidia-taiwan-20260529/x-post-nvidia-taiwan-20260529.png",
+      "publishedUrl": "https://x.com/auntienomad/status/2060318220754763933",
+      "imagePrompt": "Photorealistic editorial X post image, adult Taiwanese woman with short dark curly hair, gold hoop earrings, leopard-pattern blazer, fitted black top, small pink heart accent, curvy body, confident intelligent gaze, yellow halftone AI circuit background, right-side character with left-side text space, sexy but tasteful, no product props."
+    },
+    {
+      "id": "ai-heat-electric-bill",
+      "status": "planned",
+      "pillar": "tech-ai",
+      "spiceLevel": 4,
+      "topicHook": "AI很熱，電費更熱",
+      "angle": "用資料中心、電力、用電壓力當話題，把 AI 狂熱拉回民生帳單。",
+      "copyDraft": "AI很熱，電費更熱。\n\n阿姨翻譯：科技新聞不是只看股價，也要看誰在幫它吹冷氣。\n\n今天先興奮三秒，第四秒記得看帳單。\n#阿姨別生氣 #AI",
+      "sourcePlan": {
+        "required": true,
+        "query": "AI data center electricity demand Taiwan official Reuters CNA",
+        "preferredSources": ["Reuters", "CNA", "official energy statistics"]
+      },
+      "imagePrompt": "Photorealistic editorial X post image, same adult Taiwanese Auntie character, short dark curls, gold hoop earrings, leopard outer layer slightly open over black outfit, pink heart accent, standing in warm yellow server-room glow, direct teasing gaze, no hand-held object, no ecommerce setup, leave left text space."
+    },
+    {
+      "id": "scam-suit-romance",
+      "status": "planned",
+      "pillar": "life-radar",
+      "spiceLevel": 3,
+      "topicHook": "詐騙也會穿西裝",
+      "angle": "把感情詐騙、假投資、假客服講成成熟提醒，不罵受害者。",
+      "copyDraft": "詐騙也會穿西裝。\n\n阿姨翻譯：不是你笨，是套路越來越會裝熟。\n\n會急著叫你轉帳的，不是愛情，是劇本。\n#阿姨別生氣 #防詐",
+      "sourcePlan": {
+        "required": true,
+        "query": "台灣 詐騙 假投資 假軍官 警方 2026",
+        "preferredSources": ["CNA", "police official release"]
+      },
+      "imagePrompt": "Photorealistic editorial image, same Auntie character in leopard blouse and black fitted outfit with pink heart accent, leaning near a yellow wall of blurred warning-message graphics, confident protective gaze, mature sensual styling, no phone in hand, no product prop, no cheap crime-board collage."
+    },
+    {
+      "id": "etf-dividend-not-flirting",
+      "status": "planned",
+      "pillar": "money-caution",
+      "spiceLevel": 3,
+      "topicHook": "配息不是撒嬌",
+      "angle": "把高股息 ETF 熱度轉成費用、淨值、現金流的白話提醒。",
+      "copyDraft": "配息不是撒嬌。\n\n阿姨翻譯：錢會回你，不代表它愛你；有時候只是從你口袋換個方向回來。\n\n看懂再心動。\n#阿姨別生氣 #ETF",
+      "sourcePlan": {
+        "required": true,
+        "query": "台灣 高股息 ETF 配息 淨值 費用 官方 公開說明書",
+        "preferredSources": ["TWSE", "fund prospectus", "issuer official data"]
+      },
+      "imagePrompt": "Photorealistic editorial X image, same Auntie character, short curls, gold hoops, leopard jacket over black dress, pink heart accent, yellow financial chart background, poised and seductive but serious expression, left-side headline space, no trading app screenshot, no buy-sell signal."
+    },
+    {
+      "id": "heat-not-sexy-dangerous",
+      "status": "planned",
+      "pillar": "life-radar",
+      "spiceLevel": 4,
+      "topicHook": "熱到不是性感，是危險",
+      "angle": "高溫、熱傷害、電費和通勤防護，用大尺度標題但落在有用提醒。",
+      "copyDraft": "熱到不是性感，是危險。\n\n阿姨翻譯：流汗可以有魅力，中暑沒有。\n\n水先喝，行程先鬆，冷氣別跟錢包互相傷害。\n#阿姨別生氣 #生活雷達",
+      "sourcePlan": {
+        "required": true,
+        "query": "台灣 高溫 熱傷害 中央氣象署 衛福部 2026",
+        "preferredSources": ["Central Weather Administration", "Ministry of Health", "CNA"]
+      },
+      "imagePrompt": "Photorealistic real-person Auntie character, slightly dewy skin, leopard layer over black top, gold hoops, pink heart accent, yellow summer heat background, intense eye contact, tasteful sensual editorial look, no revealing nudity, no cheap glamour pose, large empty text area."
+    },
+    {
+      "id": "algorithm-watches-better-than-ex",
+      "status": "planned",
+      "pillar": "tech-ai",
+      "spiceLevel": 4,
+      "topicHook": "演算法比前任還黏",
+      "angle": "用平台推薦、隱私、資料追蹤做有梗的科技提醒。",
+      "copyDraft": "演算法比前任還黏。\n\n阿姨翻譯：你以為只是滑一下，它已經在幫你安排下一個衝動。\n\n別怕被懂，怕的是被賣得太準。\n#阿姨別生氣 #科技新聞",
+      "sourcePlan": {
+        "required": true,
+        "query": "platform algorithm privacy recommendation data tracking official report",
+        "preferredSources": ["official platform policy", "regulator report", "Reuters"]
+      },
+      "imagePrompt": "Photorealistic editorial portrait of same Auntie character, leopard outer layer, black outfit, gold hoops, pink heart, yellow digital interface glow behind her, knowing gaze, mature suggestive mood, no phone in hand, no app logo recreation, no ecommerce frame."
+    },
+    {
+      "id": "family-group-not-court",
+      "status": "planned",
+      "pillar": "culture-meme",
+      "spiceLevel": 2,
+      "topicHook": "家庭群組不是法院",
+      "angle": "針對長輩群組謠言、假消息、轉傳焦慮，做可分享的吐槽提醒。",
+      "copyDraft": "家庭群組不是法院。\n\n阿姨翻譯：轉傳不會變真，貼三個驚嘆號也不會比較官方。\n\n先查證，再孝順。\n#阿姨別生氣 #家庭群組",
+      "sourcePlan": {
+        "required": true,
+        "query": "台灣 假訊息 查核 家庭群組 近期 熱門",
+        "preferredSources": ["Taiwan FactCheck Center", "MyGoPen", "official agency"]
+      },
+      "imagePrompt": "Photorealistic Auntie character in leopard blouse and black outfit, yellow halftone background with abstract chat bubbles, eyebrow-raised amused expression, confident and warm, no phone prop, no screenshots, no mocking victims."
+    },
+    {
+      "id": "traffic-crush-not-romance",
+      "status": "planned",
+      "pillar": "life-radar",
+      "spiceLevel": 3,
+      "topicHook": "擠在一起不是曖昧",
+      "angle": "交通、捷運、高鐵、活動人潮，做通勤避雷和時間提醒。",
+      "copyDraft": "擠在一起不是曖昧。\n\n阿姨翻譯：人潮會靠近你，行程不一定會原諒你。\n\n早點出門，是成熟人的性感。\n#阿姨別生氣 #交通雷達",
+      "sourcePlan": {
+        "required": true,
+        "query": "台灣 交通 人潮 捷運 高鐵 活動 2026 官方",
+        "preferredSources": ["transport operator official notice", "CNA", "city government"]
+      },
+      "imagePrompt": "Photorealistic editorial Auntie character, same face and body type, leopard layer over black fitted outfit, gold hoops, pink heart, yellow urban transit background, composed direct gaze, mature sensual style, no tickets in hand, no product advertisement."
+    },
+    {
+      "id": "typhoon-day-not-wishing-well",
+      "status": "planned",
+      "pillar": "life-radar",
+      "spiceLevel": 2,
+      "topicHook": "颱風假不是許願池",
+      "angle": "颱風、停班停課、防災物資，用酸甜語氣拉回安全。",
+      "copyDraft": "颱風假不是許願池。\n\n阿姨翻譯：你可以期待放假，但不要把安全交給運氣。\n\n先看官方，再看窗外。\n#阿姨別生氣 #生活雷達",
+      "sourcePlan": {
+        "required": true,
+        "query": "颱風 停班停課 台灣 官方 2026",
+        "preferredSources": ["Central Weather Administration", "local government", "CNA"]
+      },
+      "imagePrompt": "Photorealistic same Auntie character, leopard outer layer and black outfit, yellow storm-warning graphic background, calm confident protective expression, tasteful mature styling, no umbrella prop, no disaster sensationalism."
+    },
+    {
+      "id": "grown-up-sexy-has-a-point",
+      "status": "planned",
+      "pillar": "culture-meme",
+      "spiceLevel": 4,
+      "topicHook": "大人感不是露多少",
+      "angle": "品牌自我介紹型貼文：把性感、知性、有話題性的帳號定位講清楚。",
+      "copyDraft": "大人感不是露多少。\n\n阿姨翻譯：真正讓人停下來看的，是你敢不敢把話講到重點。\n\n熱搜我來翻，情緒你先坐好。\n#阿姨別生氣",
+      "sourcePlan": {
+        "required": false,
+        "note": "brand-positioning evergreen post"
+      },
+      "imagePrompt": "Photorealistic hero image of same adult Taiwanese Auntie character, short dark curly hair, gold hoop earrings, leopard-pattern outer layer over fitted black outfit, pink heart accent, strong mature eye contact, yellow halftone studio background, sensual but refined, no nudity, no product pose, leave room for bold headline."
+    }
+  ]
+}

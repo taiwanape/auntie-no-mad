@@ -58,6 +58,8 @@ The account is not an ecommerce channel and should not look like a product ad. E
 - Weekly pattern: two tech/AI posts, two money caution posts, two life radar posts, one meme or culture post.
 - Each visual post should use a fresh generated pose or scene while preserving the same character identity.
 - Do not post a sourced claim unless the source URL, source name, and date are available in the working notes or post asset.
+- Campaign queue: maintain `data/x-content-queue.json` with at least six planned real-person X concepts and one published example.
+- Queue audit: run `npm run test:x-queue` before scheduled or manual content work.
 
 ## Post Gate
 
