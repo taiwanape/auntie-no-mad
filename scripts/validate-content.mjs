@@ -257,6 +257,35 @@ if (fs.existsSync(jsonFeedPath)) {
   assert(feed.items.length > 0, "feed.json must contain at least one item");
 }
 
+const sharePackPath = path.join(root, "data", "share-pack.json");
+assert(fileExists("data/share-pack.json"), "data/share-pack.json missing; run npm run generate:share-pack");
+if (fs.existsSync(sharePackPath)) {
+  const sharePack = JSON.parse(fs.readFileSync(sharePackPath, "utf8"));
+  assert(sharePack.site?.homepageShareUrl, "share-pack: homepageShareUrl is required");
+  assert(
+    String(sharePack.site?.homepageShareUrl || "").includes("utm_source=copy"),
+    "share-pack: homepageShareUrl must include copy UTM tracking"
+  );
+  assert(Array.isArray(sharePack.items), "share-pack: items must be an array");
+  assert(sharePack.items.length >= 3, "share-pack: must contain at least 3 share items");
+  (sharePack.items || []).forEach((item) => {
+    assert(item.kind, "share-pack: each item needs kind");
+    assert(item.title, `share-pack: ${item.kind || "item"} needs title`);
+    assert(item.summary, `share-pack: ${item.kind || "item"} needs summary`);
+    assert(/^https?:\/\//.test(item.articleUrl || ""), `share-pack: ${item.kind} articleUrl must be public URL`);
+    assert(/^https?:\/\//.test(item.copyUrl || ""), `share-pack: ${item.kind} copyUrl must be public URL`);
+    assert(String(item.copyUrl || "").includes("utm_source=copy"), `share-pack: ${item.kind} copyUrl missing copy UTM`);
+    assert(String(item.shareText || "").includes(item.title), `share-pack: ${item.kind} shareText must include title`);
+    ["line", "facebook", "x"].forEach((platform) => {
+      const link = item.platformLinks?.[platform] || "";
+      const decoded = decodeURIComponent(link);
+      assert(/^https?:\/\//.test(link), `share-pack: ${item.kind} ${platform} link must be URL`);
+      assert(decoded.includes(`utm_source=${platform}`), `share-pack: ${item.kind} ${platform} link missing UTM`);
+    });
+    assert(!/\.svg(?:[?#"]|$)/i.test(JSON.stringify(item)), `share-pack: ${item.kind} must not reference SVG assets`);
+  });
+}
+
 for (const [index, script] of [...indexHtml.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]).entries()) {
   try {
     new Function(script);

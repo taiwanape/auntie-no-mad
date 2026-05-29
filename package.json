@@ -8,6 +8,7 @@
     "update:live-news": "node scripts/update-live-news.mjs",
     "test": "node scripts/validate-content.mjs",
     "generate:seo": "node scripts/generate-seo.mjs",
+    "generate:share-pack": "node scripts/generate-share-pack.mjs",
     "test:x-api": "node scripts/test-x-api.mjs",
     "ops:health": "node scripts/ops-health-check.mjs",
     "post:x": "node scripts/post-x-manual.mjs",

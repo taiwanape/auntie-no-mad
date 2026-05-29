@@ -2492,7 +2492,7 @@
       const shareData = {
         title: "阿姨別生氣",
         text: "台灣生活雷達、踩坑提醒和股市 ETF 白話整理，阿姨幫你講成人話。",
-        url: "https://taiwanape.github.io/auntie-no-mad/"
+        url: `${SITE_BASE}?utm_source=web_share&utm_medium=social&utm_campaign=homepage_share`
       };
       if (navigator.share) {
         await navigator.share(shareData).catch(() => {});
@@ -2537,6 +2537,13 @@
       if (/^https?:\/\//.test(href)) return href;
       return new URL(href, SITE_BASE).href;
     };
+    const utmUrl = (href = "", source = "copy", campaign = "daily_hook") => {
+      const url = new URL(absoluteUrl(href));
+      url.searchParams.set("utm_source", source);
+      url.searchParams.set("utm_medium", "social");
+      url.searchParams.set("utm_campaign", campaign);
+      return url.href;
+    };
 
     function buildShareText(hook) {
       return `${hook.title}\n${hook.summary}\n\n阿姨別生氣幫你整理成人話：${hook.url}`;
@@ -2576,10 +2583,14 @@
       if (!hooks.length) return;
 
       container.innerHTML = hooks.map((hook, index) => {
-        const url = absoluteUrl(hook.href);
-        const shareText = buildShareText({ ...hook, url });
-        const encodedUrl = encodeURIComponent(url);
-        const encodedText = encodeURIComponent(shareText);
+        const copyUrl = utmUrl(hook.href, "copy", "daily_hook");
+        const lineUrl = utmUrl(hook.href, "line", "daily_hook");
+        const facebookUrl = utmUrl(hook.href, "facebook", "daily_hook");
+        const xUrl = utmUrl(hook.href, "x", "daily_hook");
+        const shareText = buildShareText({ ...hook, url: copyUrl });
+        const encodedLineUrl = encodeURIComponent(lineUrl);
+        const encodedFacebookUrl = encodeURIComponent(facebookUrl);
+        const encodedText = encodeURIComponent(buildShareText({ ...hook, url: xUrl }));
         return `
           <article class="hook-card">
             <div class="hook-top">
@@ -2591,8 +2602,8 @@
             <div class="hook-actions">
               <a href="${escapeHtml(hook.href || "#")}">${escapeHtml(hook.cta || "看完整")}</a>
               <button type="button" data-copy-share="${escapeHtml(shareText)}">複製分享文</button>
-              <a href="https://social-plugins.line.me/lineit/share?url=${encodedUrl}" target="_blank" rel="noreferrer">LINE</a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}" target="_blank" rel="noreferrer">FB</a>
+              <a href="https://social-plugins.line.me/lineit/share?url=${encodedLineUrl}" target="_blank" rel="noreferrer">LINE</a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=${encodedFacebookUrl}" target="_blank" rel="noreferrer">FB</a>
               <a href="https://twitter.com/intent/tweet?text=${encodedText}" target="_blank" rel="noreferrer">X</a>
             </div>
           </article>

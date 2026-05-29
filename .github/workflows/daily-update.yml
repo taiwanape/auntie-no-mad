@@ -49,6 +49,9 @@ jobs:
       - name: Generate SEO files
         run: npm run generate:seo
 
+      - name: Generate share pack
+        run: npm run generate:share-pack
+
       - name: Validate content
         run: npm test
 
