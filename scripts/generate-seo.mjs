@@ -6,6 +6,11 @@ const siteUrl = "https://taiwanape.github.io/auntie-no-mad/";
 const content = JSON.parse(fs.readFileSync(path.join(root, "data", "site-content.json"), "utf8"));
 const siteTitle = "阿姨別生氣";
 const siteDescription = "每天整理台灣生活雷達、踩坑提醒、股市 ETF 白話觀察與實用工具。阿姨不講官腔，只講今天出門會不會煩。";
+const socialLinks = [
+  "https://x.com/auntienomad",
+  "https://www.instagram.com/auntienomad/",
+  "https://www.facebook.com/profile.php?id=61553234457401"
+];
 
 const dataSlugs = [
   ...(content.lifeRadar || []),
@@ -128,4 +133,73 @@ const jsonFeed = {
 fs.writeFileSync(path.join(root, "rss.xml"), rss);
 fs.writeFileSync(path.join(root, "feed.json"), `${JSON.stringify(jsonFeed, null, 2)}\n`);
 
-console.log(`Generated sitemap.xml with ${urls.size} URLs, robots.txt, rss.xml, and feed.json.`);
+const manifest = {
+  name: "阿姨別生氣",
+  short_name: "阿姨別生氣",
+  description: siteDescription,
+  lang: "zh-TW",
+  start_url: `${siteUrl}?utm_source=web_app_manifest&utm_medium=owned&utm_campaign=install`,
+  scope: siteUrl,
+  display: "standalone",
+  background_color: "#ffd51f",
+  theme_color: "#ffd51f",
+  icons: [
+    {
+      src: `${siteUrl}assets/auntie-avatar-nav.jpg`,
+      sizes: "192x192",
+      type: "image/jpeg",
+      purpose: "any"
+    }
+  ],
+  shortcuts: [
+    {
+      name: "今日分享包",
+      short_name: "分享包",
+      url: `${siteUrl}share.html?utm_source=web_app_manifest&utm_medium=owned&utm_campaign=share_pack`,
+      description: "拿今天可轉傳的文章、圖文與社群文案。"
+    },
+    {
+      name: "即時新聞",
+      short_name: "即時",
+      url: `${siteUrl}#live`,
+      description: "看阿姨整理的即時新聞入口。"
+    },
+    {
+      name: "工具箱",
+      short_name: "工具",
+      url: `${siteUrl}tools/index.html`,
+      description: "打開阿姨的小工具。"
+    }
+  ]
+};
+
+const latestItems = feedItems.slice(0, 8);
+const llms = [
+  "# 阿姨別生氣",
+  "",
+  "> 台灣生活雷達、踩坑提醒、股市 ETF 白話觀察與實用工具。語氣白話、有一點碎念，重點是幫一般人看懂生活大小事。",
+  "",
+  `- Website: ${siteUrl}`,
+  `- RSS: ${siteUrl}rss.xml`,
+  `- JSON Feed: ${siteUrl}feed.json`,
+  `- Sitemap: ${siteUrl}sitemap.xml`,
+  `- Share kit: ${siteUrl}share.html`,
+  `- X: ${socialLinks[0]}`,
+  `- Instagram: ${socialLinks[1]}`,
+  `- Facebook: ${socialLinks[2]}`,
+  "",
+  "## Content Rules",
+  "",
+  "- 所有新聞與市場內容都要保留來源連結。",
+  "- 股市 ETF 內容只做教育與資訊整理，不是投資建議。",
+  "- 內容風格：白話、犀利但不惡毒、像阿姨提醒晚輩，不要像新聞機器人。",
+  "",
+  "## Latest Public Articles",
+  "",
+  ...latestItems.map((item) => `- [${item.title}](${absoluteUrl(item.slug)}) — ${item.category || "阿姨別生氣"}`)
+].join("\n");
+
+fs.writeFileSync(path.join(root, "site.webmanifest"), `${JSON.stringify(manifest, null, 2)}\n`);
+fs.writeFileSync(path.join(root, "llms.txt"), `${llms}\n`, "utf8");
+
+console.log(`Generated sitemap.xml with ${urls.size} URLs, robots.txt, rss.xml, feed.json, site.webmanifest, and llms.txt.`);

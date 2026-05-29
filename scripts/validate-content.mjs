@@ -256,12 +256,14 @@ if (content.stockOverview) {
 });
 
 const indexHtml = fs.readFileSync(path.join(root, "index.html"), "utf8");
-["sitemap.xml", "robots.txt", "rss.xml", "feed.json", "share.html"].forEach((file) => {
+["sitemap.xml", "robots.txt", "rss.xml", "feed.json", "site.webmanifest", "llms.txt", "share.html"].forEach((file) => {
   assert(fileExists(file), `SEO/feed file missing: ${file}`);
 });
 assert(fileExists("article-growth.js"), "article-growth.js missing");
 assert(indexHtml.includes('type="application/rss+xml"'), "index.html must advertise rss.xml");
 assert(indexHtml.includes('type="application/feed+json"'), "index.html must advertise feed.json");
+assert(indexHtml.includes('rel="manifest"'), "index.html must expose site.webmanifest");
+assert(indexHtml.includes('rel="me"'), "index.html must expose official social links");
 
 const jsonFeedPath = path.join(root, "feed.json");
 if (fs.existsSync(jsonFeedPath)) {
@@ -357,6 +359,9 @@ const shareHtml = fs.readFileSync(path.join(root, "share.html"), "utf8");
 assert(shareHtml.includes("data/share-pack.json"), "share.html must load data/share-pack.json");
 assert(shareHtml.includes("data/social-posts.json"), "share.html must load data/social-posts.json");
 assert(shareHtml.includes("今日分享包"), "share.html must identify itself as the daily share pack");
+assert(shareHtml.includes('rel="canonical"'), "share.html must include canonical URL");
+assert(shareHtml.includes('rel="alternate"'), "share.html must expose feed alternates");
+assert(shareHtml.includes('rel="manifest"'), "share.html must expose site.webmanifest");
 for (const [index, script] of [...shareHtml.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]).entries()) {
   try {
     new Function(script);
@@ -364,6 +369,21 @@ for (const [index, script] of [...shareHtml.matchAll(/<script>([\s\S]*?)<\/scrip
     errors.push(`share.html inline script ${index + 1} syntax error: ${error.message}`);
   }
 }
+
+const webManifest = JSON.parse(fs.readFileSync(path.join(root, "site.webmanifest"), "utf8"));
+assert(webManifest.name === "阿姨別生氣", "site.webmanifest must use the site name");
+assert(Array.isArray(webManifest.shortcuts) && webManifest.shortcuts.length >= 3, "site.webmanifest must expose growth shortcuts");
+assert(JSON.stringify(webManifest).includes("share.html"), "site.webmanifest must include share pack shortcut");
+const llmsTxt = fs.readFileSync(path.join(root, "llms.txt"), "utf8");
+assert(llmsTxt.includes("# 阿姨別生氣"), "llms.txt must identify the site");
+assert(llmsTxt.includes("RSS:"), "llms.txt must mention RSS");
+assert(llmsTxt.includes("Share kit:"), "llms.txt must mention share kit");
+
+["daily-update.yml", "live-news-update.yml"].forEach((workflowFile) => {
+  const workflow = fs.readFileSync(path.join(root, ".github", "workflows", workflowFile), "utf8");
+  assert(workflow.includes("site.webmanifest"), `${workflowFile} must commit site.webmanifest updates`);
+  assert(workflow.includes("llms.txt"), `${workflowFile} must commit llms.txt updates`);
+});
 
 if (warnings.length) {
   console.warn("Content warnings:");

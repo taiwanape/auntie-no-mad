@@ -787,11 +787,21 @@ function articleTemplate(item, section) {
     },
     author: {
       "@type": "Organization",
-      name: "阿姨別生氣"
+      name: "阿姨別生氣",
+      sameAs: [
+        "https://x.com/auntienomad",
+        "https://www.instagram.com/auntienomad/",
+        "https://www.facebook.com/profile.php?id=61553234457401"
+      ]
     },
     publisher: {
       "@type": "Organization",
       name: "阿姨別生氣",
+      sameAs: [
+        "https://x.com/auntienomad",
+        "https://www.instagram.com/auntienomad/",
+        "https://www.facebook.com/profile.php?id=61553234457401"
+      ],
       logo: {
         "@type": "ImageObject",
         url: "https://taiwanape.github.io/auntie-no-mad/assets/auntie-avatar-nav.jpg"
@@ -815,6 +825,12 @@ function articleTemplate(item, section) {
   <meta name="twitter:title" content="${htmlEscape(item.title)}">
   <meta name="twitter:description" content="${htmlEscape(item.summary)}">
   <meta name="twitter:image" content="${htmlEscape(imageUrl)}">
+  <link rel="alternate" type="application/rss+xml" title="阿姨別生氣 RSS" href="https://taiwanape.github.io/auntie-no-mad/rss.xml">
+  <link rel="alternate" type="application/feed+json" title="阿姨別生氣 JSON Feed" href="https://taiwanape.github.io/auntie-no-mad/feed.json">
+  <link rel="manifest" href="${base}site.webmanifest">
+  <link rel="me" href="https://x.com/auntienomad">
+  <link rel="me" href="https://www.instagram.com/auntienomad/">
+  <link rel="me" href="https://www.facebook.com/profile.php?id=61553234457401">
   <script type="application/ld+json">
 ${articleJsonLd}
   </script>
@@ -889,11 +905,21 @@ function marketTemplate(stockOverview, stockItems) {
     },
     author: {
       "@type": "Organization",
-      name: "阿姨別生氣"
+      name: "阿姨別生氣",
+      sameAs: [
+        "https://x.com/auntienomad",
+        "https://www.instagram.com/auntienomad/",
+        "https://www.facebook.com/profile.php?id=61553234457401"
+      ]
     },
     publisher: {
       "@type": "Organization",
       name: "阿姨別生氣",
+      sameAs: [
+        "https://x.com/auntienomad",
+        "https://www.instagram.com/auntienomad/",
+        "https://www.facebook.com/profile.php?id=61553234457401"
+      ],
       logo: {
         "@type": "ImageObject",
         url: "https://taiwanape.github.io/auntie-no-mad/assets/auntie-avatar-nav.jpg"
@@ -923,6 +949,12 @@ function marketTemplate(stockOverview, stockItems) {
   <meta name="twitter:title" content="${htmlEscape(stockOverview.title)} ${htmlEscape(stockOverview.date)}">
   <meta name="twitter:description" content="${htmlEscape(stockOverview.summary)}">
   <meta name="twitter:image" content="${htmlEscape(imageUrl)}">
+  <link rel="alternate" type="application/rss+xml" title="阿姨別生氣 RSS" href="https://taiwanape.github.io/auntie-no-mad/rss.xml">
+  <link rel="alternate" type="application/feed+json" title="阿姨別生氣 JSON Feed" href="https://taiwanape.github.io/auntie-no-mad/feed.json">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="me" href="https://x.com/auntienomad">
+  <link rel="me" href="https://www.instagram.com/auntienomad/">
+  <link rel="me" href="https://www.facebook.com/profile.php?id=61553234457401">
   <script type="application/ld+json">
 ${marketJsonLd}
   </script>
