@@ -26,6 +26,7 @@ http://127.0.0.1:8098/
 
 ```powershell
 npm test
+npm run test:social-previews
 npm run ops:health
 npm run test:domain
 ```
@@ -86,11 +87,14 @@ powershell -ExecutionPolicy Bypass -File scripts\setup-meta-secrets.ps1
 3. 產生或保留符合品質標準的圖片。
 4. 產生文章頁、SEO、RSS、JSON Feed、分享包與社群文案。
 5. 執行 `npm test`。
-6. 通過後 commit 並由 GitHub Pages 部署。
+6. 執行 `npm run test:social-previews`，確認首頁、今日頁、社群入口、分享包與文章頁都有可用的 OG / X 預覽圖、alt、canonical 與 UTM 分享連結。
+7. 通過後 commit 並由 GitHub Pages 部署。
 
 如果資料或圖片產生失敗，應保留前一天可用內容，不要讓首頁壞掉。
 
-`ops-health-check.yml` 會在每日更新、社群發文與 Pages 部署後跑總巡檢：內容驗證、X 發文素材 dry-run、Meta 發文素材 dry-run、自訂網域 HTTPS 狀態、GitHub Actions 最新執行狀態都會檢查一次。Meta token 尚未設定時，Meta dry-run 只會列出缺少的 secrets，不會亂發文。
+`ops-health-check.yml` 會在每日更新、社群發文與 Pages 部署後跑總巡檢：內容驗證、社群預覽稽核、X 發文素材 dry-run、Meta 發文素材 dry-run、自訂網域 HTTPS 狀態、GitHub Actions 最新執行狀態都會檢查一次。Meta token 尚未設定時，Meta dry-run 只會列出缺少的 secrets，不會亂發文。
+
+07:00（Asia/Taipei）之後，`ops:health` 會把 `data/site-content.json` 與 `data/review-report.json` 的日期、以及 Daily Auntie Update 當天是否跑過列為硬性檢查，避免出現「workflow 綠燈但首頁還是昨天內容」的假安全。
 
 ## SEO 與分享
 
@@ -105,6 +109,13 @@ powershell -ExecutionPolicy Bypass -File scripts\setup-meta-secrets.ps1
 - `today.html`
 
 首頁與文章頁要保留正常的 title、description、OG tags、JSON-LD 與來源連結。
+
+`scripts/audit-social-previews.mjs` 會檢查：
+
+- `index.html`、`today.html`、`links.html`、`share.html` 與當日文章頁的 OG / X 預覽資料。
+- 預覽圖必須存在、不可是 SVG、尺寸不能太小。
+- 分享包至少 3 則要有可分享圖片。
+- LINE / FB / X 連結必須回到本站並帶 UTM。
 
 ## 內容風格
 

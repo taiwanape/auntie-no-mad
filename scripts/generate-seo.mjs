@@ -119,6 +119,14 @@ function updateHomepageMeta() {
   html = setMetaContent(html, "name=twitter:title", title);
   html = setMetaContent(html, "name=twitter:description", description);
   html = setMetaContent(html, "name=twitter:image", imageUrl);
+  if (html.includes('name="twitter:image:alt"')) {
+    html = setMetaContent(html, "name=twitter:image:alt", imageAlt);
+  } else {
+    html = html.replace(
+      /(<meta\s+name="twitter:image"\s+content="[^"]*">)/,
+      `$1\n  <meta name="twitter:image:alt" content="${escapeXml(imageAlt)}">`
+    );
+  }
 
   if (html.includes('property="og:image:alt"')) {
     html = setMetaContent(html, "property=og:image:alt", imageAlt);

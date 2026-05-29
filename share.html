@@ -5,10 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>今日分享包｜阿姨別生氣</title>
   <meta name="description" content="阿姨別生氣每日分享包：整理今天最適合轉傳的生活新聞、踩坑提醒、股市 ETF 觀察，以及可直接複製的 X、Facebook、Instagram 文案。">
+  <meta property="og:site_name" content="阿姨別生氣">
+  <meta property="og:type" content="website">
   <meta property="og:title" content="今日分享包｜阿姨別生氣">
   <meta property="og:description" content="一頁拿到今天可以轉傳的阿姨圖文、社群文案與官網導流連結。">
   <meta property="og:image" content="https://taiwanape.github.io/auntie-no-mad/assets/auntie-hero.jpg">
+  <meta property="og:image:alt" content="阿姨別生氣今日分享包主視覺">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://taiwanape.github.io/auntie-no-mad/share.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="今日分享包｜阿姨別生氣">
+  <meta name="twitter:description" content="一頁拿到今天可以轉傳的阿姨圖文、社群文案與官網導流連結。">
+  <meta name="twitter:image" content="https://taiwanape.github.io/auntie-no-mad/assets/auntie-hero.jpg">
+  <meta name="twitter:image:alt" content="阿姨別生氣今日分享包主視覺">
   <link rel="canonical" href="https://taiwanape.github.io/auntie-no-mad/share.html">
   <link rel="alternate" type="application/rss+xml" title="阿姨別生氣 RSS" href="https://taiwanape.github.io/auntie-no-mad/rss.xml">
   <link rel="alternate" type="application/feed+json" title="阿姨別生氣 JSON Feed" href="https://taiwanape.github.io/auntie-no-mad/feed.json">
@@ -478,9 +488,11 @@
       copyText(button.dataset.copy || "", button);
     });
 
+    const dataVersion = Date.now().toString(36);
+
     Promise.all([
-      fetch("data/share-pack.json").then((response) => response.json()),
-      fetch("data/social-posts.json").then((response) => response.json())
+      fetch(`data/share-pack.json?v=${dataVersion}`, { cache: "no-store" }).then((response) => response.json()),
+      fetch(`data/social-posts.json?v=${dataVersion}`, { cache: "no-store" }).then((response) => response.json())
     ]).then(([pack, posts]) => {
       renderTodayPromo(pack, posts);
       renderCampaignCopies(pack, posts);

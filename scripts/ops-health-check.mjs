@@ -18,6 +18,14 @@ const checks = [];
 const warnings = [];
 const errors = [];
 const details = {};
+const taipeiNow = new Date();
+const taipeiDate = getTaipeiDate(taipeiNow);
+const taipeiHour = Number(new Intl.DateTimeFormat("en-US", {
+  timeZone: "Asia/Taipei",
+  hour: "2-digit",
+  hour12: false
+}).format(taipeiNow));
+const taipeiDayStartMs = Date.parse(`${taipeiDate}T00:00:00+08:00`);
 
 function addCheck(name, ok, message, meta = {}) {
   checks.push({ name, ok, message, ...meta });
@@ -26,6 +34,33 @@ function addCheck(name, ok, message, meta = {}) {
 
 function addWarning(message) {
   warnings.push(message);
+}
+
+function getTaipeiDate(date = new Date()) {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Taipei",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(date);
+  const map = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return `${map.year}-${map.month}-${map.day}`;
+}
+
+function localDatePart(value = "") {
+  return String(value).match(/\d{4}-\d{2}-\d{2}/)?.[0] || "";
+}
+
+function addFreshnessCheck(name, ok, message) {
+  if (ok) {
+    addCheck(name, true, message);
+    return;
+  }
+  if (taipeiHour >= 7) {
+    addCheck(name, false, message);
+  } else {
+    addWarning(`${name}: ${message}; still before 07:00 Asia/Taipei grace window`);
+  }
 }
 
 function readJson(relativePath) {
@@ -140,6 +175,7 @@ function checkLocalContent() {
   const report = readJson("data/review-report.json");
   details.content = {
     siteUpdatedAt: content.site?.updatedAt,
+    expectedDate: taipeiDate,
     lifeRadar: content.lifeRadar?.length || 0,
     pitfalls: content.pitfalls?.length || 0,
     liveNews: content.liveNews?.length || 0,
@@ -157,6 +193,11 @@ function checkLocalContent() {
   addCheck("pitfalls count", (content.pitfalls?.length || 0) >= 2, `${content.pitfalls?.length || 0} items`);
   addCheck("live news count", (content.liveNews?.length || 0) >= 3, `${content.liveNews?.length || 0} items`);
   addCheck("stock watchlist count", (content.stockWatchlist?.length || 0) === 4, `${content.stockWatchlist?.length || 0} items`);
+  addFreshnessCheck(
+    "daily content freshness",
+    localDatePart(content.site?.updatedAt) === taipeiDate && report.date === taipeiDate,
+    `expected ${taipeiDate}, siteUpdatedAt ${content.site?.updatedAt || "missing"}, review date ${report.date || "missing"}`
+  );
 
   const imageSource = (report.sources || []).find((source) => source.name === "OpenAI Images API");
   const fallbackSource = (report.sources || []).find((source) => source.name === "Approved Auntie raster image library");
@@ -217,6 +258,20 @@ function checkGitHubActions() {
     }
     const ok = latest.conclusion === "success" || latest.status === "in_progress" || latest.status === "queued";
     addCheck(`workflow ${workflow}`, ok, `${latest.status}/${latest.conclusion || "pending"} at ${latest.createdAt}`, { url: latest.url });
+
+    if (workflow === "Daily Auntie Update") {
+      const latestRunMs = latest.createdAt ? Date.parse(latest.createdAt) : 0;
+      details.dailyWorkflowFreshness = {
+        expectedDate: taipeiDate,
+        latestCreatedAt: latest.createdAt,
+        latestRunIsToday: latestRunMs >= taipeiDayStartMs
+      };
+      addFreshnessCheck(
+        "daily workflow freshness",
+        latestRunMs >= taipeiDayStartMs,
+        `latest Daily Auntie Update is ${latest.createdAt || "missing"}, expected a run on ${taipeiDate} Asia/Taipei`
+      );
+    }
 
     if (workflow === "X Daily Post" && latest.conclusion === "success") {
       const view = spawnSync("gh", [

@@ -45,6 +45,9 @@ jobs:
       - name: Validate site content
         run: npm test
 
+      - name: Audit social previews
+        run: npm run test:social-previews
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
 

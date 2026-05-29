@@ -12,6 +12,7 @@
     "generate:social-posts": "node scripts/generate-social-posts.mjs",
     "generate:today": "node scripts/generate-today-page.mjs",
     "generate:links": "node scripts/generate-links-page.mjs",
+    "test:social-previews": "node scripts/audit-social-previews.mjs",
     "test:x-queue": "node scripts/validate-x-content-queue.mjs",
     "test:x-api": "node scripts/test-x-api.mjs",
     "test:domain": "node scripts/check-domain-health.mjs",

@@ -469,9 +469,13 @@ assert(shareHtml.includes("today.html?utm_source=copy"), "share.html today promo
 assert(shareHtml.includes('withUtm(TODAY_URL, "line")'), "share.html today promo must expose a LINE link for the stable today URL");
 assert(shareHtml.includes('withUtm(TODAY_URL, "facebook")'), "share.html today promo must expose a Facebook link for the stable today URL");
 assert(shareHtml.includes('withUtm(TODAY_URL, "x")'), "share.html today promo must expose an X link for the stable today URL");
+assert(shareHtml.includes('cache: "no-store"'), "share.html must bypass cached share JSON after daily updates");
+assert(shareHtml.includes("dataVersion"), "share.html must cache-bust daily share JSON requests");
 assert(shareHtml.includes('rel="canonical"'), "share.html must include canonical URL");
 assert(shareHtml.includes('rel="alternate"'), "share.html must expose feed alternates");
 assert(shareHtml.includes('rel="manifest"'), "share.html must expose site.webmanifest");
+assert(shareHtml.includes('name="twitter:image"'), "share.html must include a Twitter/X preview image");
+assert(shareHtml.includes('name="twitter:image:alt"'), "share.html must include a Twitter/X preview image alt");
 assert(shareHtml.includes("overflow: hidden"), "share.html cards must clip accidental visual overflow");
 assert(shareHtml.includes("overflow-wrap: anywhere"), "share.html must wrap long URLs and post text inside cards");
 assert(shareHtml.includes(".share-card > *"), "share.html must force card children to respect card width");
@@ -487,6 +491,8 @@ const todayHtml = fs.readFileSync(path.join(root, "today.html"), "utf8");
 assert(todayHtml.includes("今日必看"), "today.html must identify itself as the today landing page");
 assert(todayHtml.includes('rel="canonical"'), "today.html must include canonical URL");
 assert(todayHtml.includes('property="og:image"'), "today.html must include an OG image");
+assert(todayHtml.includes('property="og:image:alt"'), "today.html must include an OG image alt");
+assert(todayHtml.includes('name="twitter:image:alt"'), "today.html must include a Twitter/X image alt");
 assert(todayHtml.includes("data-copy"), "today.html must provide a copyable share text");
 assert(todayHtml.includes("today.html?utm_source=copy"), "today.html copy text must share the stable today landing URL");
 assert(todayHtml.includes("today.html%3Futm_source%3Dline"), "today.html LINE button must share the stable today landing URL");
@@ -516,6 +522,7 @@ assert(linksHtml.includes("instagram.com/auntienomad"), "links.html must link to
 assert(linksHtml.includes("facebook.com/profile.php?id=61553234457401"), "links.html must link to Facebook");
 assert(linksHtml.includes("x.com/auntienomad"), "links.html must link to X");
 assert(linksHtml.includes('property="og:image"'), "links.html must include an OG image");
+assert(linksHtml.includes('name="twitter:image:alt"'), "links.html must include a Twitter/X image alt");
 assert(linksHtml.includes('type="application/ld+json"'), "links.html must include JSON-LD");
 assert(!/\.svg(?:[?#"]|$)/i.test(linksHtml), "links.html must not reference SVG assets");
 for (const [index, script] of [...linksHtml.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]).entries()) {
@@ -545,8 +552,12 @@ assert(llmsTxt.includes("Today page:"), "llms.txt must mention today page");
   assert(workflow.includes("today.html"), `${workflowFile} must commit today.html updates`);
   assert(workflow.includes("links.html"), `${workflowFile} must commit social link page updates`);
   assert(workflow.includes("generate:links"), `${workflowFile} must regenerate social link page`);
+  assert(workflow.includes("test:social-previews"), `${workflowFile} must audit social previews`);
   assert(workflow.includes("index.html"), `${workflowFile} must commit homepage preview updates`);
 });
+
+const pagesWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "pages.yml"), "utf8");
+assert(pagesWorkflow.includes("test:social-previews"), "pages.yml must audit social previews before deploying");
 
 const xDailyWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "x-daily-post.yml"), "utf8");
 assert(xDailyWorkflow.includes("test:x-daily-post"), "x-daily-post.yml must dry-run daily X content before posting");
@@ -554,6 +565,7 @@ assert(xDailyWorkflow.includes("FAIL_ON_SKIP"), "x-daily-post.yml must fail inst
 
 const opsHealthWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "ops-health-check.yml"), "utf8");
 assert(opsHealthWorkflow.includes("npm test"), "ops-health-check.yml must run content validation");
+assert(opsHealthWorkflow.includes("test:social-previews"), "ops-health-check.yml must audit social previews");
 assert(opsHealthWorkflow.includes("test:x-daily-post"), "ops-health-check.yml must verify X daily post readiness");
 assert(opsHealthWorkflow.includes("test:meta-post"), "ops-health-check.yml must verify Meta daily post readiness");
 assert(opsHealthWorkflow.includes("test:domain"), "ops-health-check.yml must check the public custom domain");

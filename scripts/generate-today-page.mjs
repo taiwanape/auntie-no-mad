@@ -78,6 +78,7 @@ const description = cleanText(primary.summary || "阿姨幫你把今天最值得
 const articleUrl = primary.articleUrl || siteUrl;
 const todayUrl = `${siteUrl}today.html`;
 const imageUrl = absoluteUrl(primary.imagePath || "assets/auntie-hero.jpg");
+const imageAlt = cleanText(primary.imageAlt || primary.title || "阿姨別生氣今日必看圖文");
 const copyText = `${primary.title}\n${description}\n\n阿姨別生氣今日必看：${todayUrl}?utm_source=copy&utm_medium=social&utm_campaign=today_page`;
 const nativeShareUrl = withUtm(todayUrl, "native", "today_page");
 const nativeShareText = `阿姨別生氣幫你整理成人話：${description}`;
@@ -115,10 +116,14 @@ const html = `<!DOCTYPE html>
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${escapeHtml(todayUrl)}">
   <meta property="og:image" content="${escapeHtml(imageUrl)}">
+  <meta property="og:image:alt" content="${escapeHtml(imageAlt)}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(title)}">
   <meta name="twitter:description" content="${escapeHtml(description)}">
   <meta name="twitter:image" content="${escapeHtml(imageUrl)}">
+  <meta name="twitter:image:alt" content="${escapeHtml(imageAlt)}">
   <link rel="icon" href="assets/auntie-avatar-nav.jpg">
   <link rel="stylesheet" href="site-info.css">
   <style>

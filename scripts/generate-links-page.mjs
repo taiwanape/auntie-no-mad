@@ -152,10 +152,13 @@ const html = `<!DOCTYPE html>
   <meta property="og:url" content="${escapeHtml(linksPageUrl)}">
   <meta property="og:image" content="${escapeHtml(ogImage)}">
   <meta property="og:image:alt" content="${escapeHtml(primaryTitle)}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(`${siteName}｜社群入口`)}">
   <meta name="twitter:description" content="${escapeHtml(description)}">
   <meta name="twitter:image" content="${escapeHtml(ogImage)}">
+  <meta name="twitter:image:alt" content="${escapeHtml(primaryTitle)}">
   <link rel="icon" href="assets/auntie-avatar-nav.jpg">
   <link rel="stylesheet" href="site-info.css">
   <style>

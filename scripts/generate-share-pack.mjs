@@ -111,8 +111,10 @@ const stockItem = content.stockOverview
     }
   : null;
 
+const liveNewsShareItem = (content.liveNews || []).find((item) => item.hero || item.thumbnail || item.image);
+
 const items = [
-  buildItem("live-news", content.liveNews?.[0], "#live", "live_news"),
+  buildItem("live-news", liveNewsShareItem, "#live", "live_news"),
   buildItem("life-radar", content.lifeRadar?.[0], "#radar", "daily_life_radar"),
   buildItem("pitfall", content.pitfalls?.[0], "#stories", "daily_pitfall"),
   buildItem("stock-watch", stockItem, "#investing", "daily_stock_watch")

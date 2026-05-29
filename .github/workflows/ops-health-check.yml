@@ -27,6 +27,9 @@ jobs:
       - name: Validate site content and growth pages
         run: npm test
 
+      - name: Audit social previews
+        run: npm run test:social-previews
+
       - name: Validate X daily post readiness
         run: npm run test:x-daily-post
 

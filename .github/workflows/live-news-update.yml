@@ -52,6 +52,9 @@ jobs:
       - name: Validate content
         run: npm test
 
+      - name: Audit social previews
+        run: npm run test:social-previews
+
       - name: Commit changes
         id: changes
         run: |
