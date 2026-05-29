@@ -327,9 +327,12 @@ assert(indexHtml.includes('rel="me"'), "index.html must expose official social l
 assert(indexHtml.includes("floating-share"), "index.html must keep a persistent sharing entry point");
 assert(indexHtml.includes("quickCopySite"), "index.html must support one-tap homepage copy sharing");
 assert(indexHtml.includes("today.html"), "index.html must link to the stable today landing page");
+assert(indexHtml.includes("links.html?utm_source=top_nav"), "index.html top navigation must link to the social entry page");
+assert(indexHtml.includes("links.html?utm_source=homepage"), "index.html hero actions must link to the social entry page");
 assert(indexHtml.includes("daily-reminder.ics"), "index.html must offer a daily return reminder");
 assert(indexHtml.includes("growth-funnel"), "index.html must include the first-visit growth funnel");
 assert(indexHtml.includes("homepage_funnel"), "index.html growth funnel links must use UTM tracking");
+assert(indexHtml.includes("link_in_bio"), "index.html must promote the social link-in-bio page");
 assert(indexHtml.includes("拿今日分享包"), "index.html growth funnel must lead visitors to the share pack");
 assert(indexHtml.includes("data-install-app"), "index.html must offer an add-to-home-screen action");
 assert(indexHtml.includes("beforeinstallprompt"), "index.html must handle browser install prompts when available");
@@ -446,6 +449,7 @@ try {
   new Function(articleGrowthJs);
   assert(articleGrowthJs.includes("growth-actions"), "article-growth.js must render the article retention CTA");
   assert(articleGrowthJs.includes("share.html"), "article-growth.js must link article readers to the share pack");
+  assert(articleGrowthJs.includes("links.html?utm_source=article_cta"), "article-growth.js must link article readers to the social entry page");
 } catch (error) {
   errors.push(`article-growth.js syntax error: ${error.message}`);
 }

@@ -122,6 +122,7 @@
           <span>別只看一篇就走，阿姨今天整理的重點都放好了。</span>
         </div>
         <a href="../index.html?utm_source=article_cta&utm_medium=internal&utm_campaign=today_all">看今日全部</a>
+        <a href="../links.html?utm_source=article_cta&utm_medium=internal&utm_campaign=link_in_bio">社群入口</a>
         <a href="../share.html?utm_source=article_cta&utm_medium=internal&utm_campaign=share_pack">拿分享包</a>
         <a href="../index.html?utm_source=article_cta&utm_medium=internal&utm_campaign=live_news#live">看即時新聞</a>
       </div>
