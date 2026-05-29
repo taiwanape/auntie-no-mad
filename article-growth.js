@@ -52,6 +52,115 @@
     return `${title}\n${compact(summary, 58)}\n\n阿姨別生氣幫你整理成人話：${url}`;
   }
 
+  function injectStickyStyles() {
+    if ($("#articleStickyStyles")) return;
+    const style = document.createElement("style");
+    style.id = "articleStickyStyles";
+    style.textContent = `
+      body.has-sticky-article-bar { padding-bottom: 88px; }
+      .article-sticky-bar {
+        position: fixed;
+        left: 50%;
+        bottom: 12px;
+        z-index: 30;
+        width: min(calc(100% - 24px), 760px);
+        transform: translateX(-50%);
+        display: grid;
+        grid-template-columns: 1fr auto auto auto;
+        gap: 8px;
+        align-items: center;
+        padding: 10px;
+        border: 4px solid var(--ink, #16130f);
+        border-radius: 20px;
+        background: rgba(255, 253, 241, .96);
+        box-shadow: 0 8px 0 var(--ink, #16130f);
+        backdrop-filter: blur(8px);
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(-50%, calc(100% + 24px));
+        transition: opacity .18s ease, transform .18s ease;
+      }
+      .article-sticky-bar.is-visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, 0);
+      }
+      .article-sticky-bar strong {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 15px;
+        font-weight: 1000;
+      }
+      .article-sticky-bar a,
+      .article-sticky-bar button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 38px;
+        padding: 8px 12px;
+        border: 3px solid var(--ink, #16130f);
+        border-radius: 999px;
+        background: white;
+        color: var(--ink, #16130f);
+        box-shadow: 2px 2px 0 var(--ink, #16130f);
+        font: inherit;
+        font-size: 14px;
+        font-weight: 1000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .article-sticky-bar a:first-of-type {
+        background: var(--pink, #ff6f97);
+        color: white;
+      }
+      @media (max-width: 560px) {
+        body.has-sticky-article-bar { padding-bottom: 150px; }
+        .article-sticky-bar {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          bottom: 8px;
+          border-radius: 16px;
+        }
+        .article-sticky-bar strong {
+          grid-column: 1 / -1;
+          white-space: normal;
+          line-height: 1.25;
+        }
+        .article-sticky-bar a,
+        .article-sticky-bar button {
+          width: 100%;
+          min-height: 42px;
+          padding-inline: 8px;
+          font-size: 13px;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  function renderStickyBar({ title, summary, nativeUrl, shareText, lineUrl } = {}) {
+    if ($(".article-sticky-bar")) return;
+    injectStickyStyles();
+    document.body.classList.add("has-sticky-article-bar");
+    const bar = document.createElement("aside");
+    bar.className = "article-sticky-bar";
+    bar.setAttribute("aria-label", "文章快速導流");
+    bar.innerHTML = `
+      <strong>${escapeHtml(compact(title || "阿姨別生氣今日重點", 30))}</strong>
+      <a href="../today.html?utm_source=article_sticky&utm_medium=internal&utm_campaign=today_page">今日必看</a>
+      <button type="button" data-native-share data-native-title="${escapeHtml(title || document.title)}" data-native-text="${escapeHtml(`阿姨別生氣幫你整理成人話：${compact(summary || "", 58)}`)}" data-native-url="${escapeHtml(nativeUrl || window.location.href)}">手機分享</button>
+      <a href="${lineUrl || "../share.html?utm_source=article_sticky&utm_medium=internal&utm_campaign=share_pack"}" target="_blank" rel="noreferrer">LINE</a>
+    `;
+    document.body.appendChild(bar);
+    const update = () => {
+      const shouldShow = window.scrollY > Math.min(420, window.innerHeight * 0.55);
+      bar.classList.toggle("is-visible", shouldShow);
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+  }
+
   function relatedItems(content, slug) {
     const items = flattenContent(content);
     const current = items.find((item) => normalizeSlug(item.slug) === slug);
@@ -119,6 +228,7 @@
     const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(withUtm(currentItem?.slug || currentSlug(), "facebook", "article_share"))}`;
     const xText = buildShareText(title, summary, withUtm(currentItem?.slug || currentSlug(), "x", "article_share"));
     const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(xText)}`;
+    renderStickyBar({ title, summary, nativeUrl, shareText, lineUrl });
 
     const section = document.createElement("section");
     section.className = "article-growth";
