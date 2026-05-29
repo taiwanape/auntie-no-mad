@@ -486,6 +486,174 @@
       to { transform: translateX(-50%); }
     }
 
+    .first-click {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(280px, .88fr);
+      gap: 14px;
+      margin: 0 0 28px;
+    }
+
+    .first-click-card,
+    .first-click-side {
+      min-width: 0;
+      border: var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .first-click-card {
+      display: grid;
+      grid-template-columns: minmax(0, .92fr) minmax(240px, .76fr);
+      gap: 16px;
+      padding: 20px;
+      background: linear-gradient(135deg, #15130f 0%, #2a2419 56%, #ff5f9c 100%);
+      color: white;
+    }
+
+    .first-click-copy {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .first-click-kicker {
+      width: fit-content;
+      max-width: 100%;
+      margin-bottom: 12px;
+      padding: 7px 12px;
+      border: 3px solid currentColor;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: var(--ink);
+      font-weight: 1000;
+      font-size: 15px;
+    }
+
+    .first-click-card h2 {
+      margin: 0;
+      font-size: clamp(31px, 4.2vw, 54px);
+      line-height: 1.03;
+      font-weight: 1000;
+      overflow-wrap: anywhere;
+    }
+
+    .first-click-card p {
+      margin: 13px 0 0;
+      font-size: 18px;
+      line-height: 1.55;
+      font-weight: 900;
+      color: rgba(255,255,255,.88);
+    }
+
+    .first-click-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: auto;
+      padding-top: 18px;
+    }
+
+    .first-click-actions a,
+    .first-click-actions button {
+      min-height: 42px;
+      padding: 8px 13px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: white;
+      box-shadow: 3px 3px 0 var(--ink);
+      color: var(--ink);
+      font: inherit;
+      font-weight: 1000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .first-click-actions .primary {
+      background: var(--pink);
+      color: white;
+    }
+
+    .first-click-visual {
+      min-width: 0;
+      min-height: 260px;
+      border: 4px solid white;
+      border-radius: 14px;
+      background: var(--yellow);
+      overflow: hidden;
+    }
+
+    .first-click-visual img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .first-click-side {
+      display: grid;
+      gap: 10px;
+      padding: 12px;
+      background: rgba(255, 253, 241, .9);
+    }
+
+    .first-click-mini {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      gap: 10px;
+      min-width: 0;
+      padding: 10px;
+      border: 3px solid var(--ink);
+      border-radius: 14px;
+      background: white;
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: 3px 3px 0 var(--ink);
+    }
+
+    .first-click-mini img {
+      display: block;
+      width: 96px;
+      max-width: 100%;
+      height: 82px;
+      border: 3px solid var(--ink);
+      border-radius: 10px;
+      object-fit: cover;
+      background: var(--yellow);
+    }
+
+    .first-click-mini span {
+      display: inline-flex;
+      width: fit-content;
+      max-width: 100%;
+      margin-bottom: 5px;
+      padding: 4px 8px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: var(--pink);
+      color: white;
+      font-size: 12px;
+      font-weight: 1000;
+    }
+
+    .first-click-mini strong {
+      display: block;
+      font-size: 17px;
+      line-height: 1.25;
+      font-weight: 1000;
+      overflow-wrap: anywhere;
+    }
+
+    .first-click-mini small {
+      display: block;
+      margin-top: 5px;
+      color: rgba(22,19,15,.68);
+      font-size: 13px;
+      line-height: 1.38;
+      font-weight: 900;
+    }
+
     .growth-funnel {
       margin: 0 0 30px;
       padding: 20px;
@@ -1880,6 +2048,14 @@
         justify-content: flex-start;
       }
 
+      .first-click {
+        grid-template-columns: 1fr;
+      }
+
+      .first-click-card {
+        grid-template-columns: minmax(0, 1fr) minmax(220px, .72fr);
+      }
+
       .grid,
       .lab-grid,
       .radar-zine-grid,
@@ -2055,6 +2231,42 @@
         margin-right: 0;
       }
 
+      .first-click-card,
+      .first-click-mini {
+        grid-template-columns: 1fr;
+      }
+
+      .first-click-card {
+        padding: 14px;
+      }
+
+      .first-click-card h2 {
+        font-size: clamp(27px, 8vw, 38px);
+        word-break: break-word;
+      }
+
+      .first-click-card p {
+        font-size: 16px;
+      }
+
+      .first-click-actions a,
+      .first-click-actions button {
+        flex: 1 1 100%;
+        min-width: 0;
+        overflow-wrap: anywhere;
+      }
+
+      .first-click-visual {
+        min-height: auto;
+        aspect-ratio: 16 / 9;
+      }
+
+      .first-click-mini img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+      }
+
       .grid,
       .lab-grid,
       .radar-zine-grid,
@@ -2218,6 +2430,41 @@
     </div>
 
     <main>
+      <section class="first-click" id="firstClick" aria-labelledby="firstClickTitle">
+        <article class="first-click-card">
+          <div class="first-click-copy">
+            <span class="first-click-kicker">今天先點這裡</span>
+            <h2 id="firstClickTitle">三分鐘看完今天最該注意的一件事。</h2>
+            <p>阿姨會每天換掉這裡：有新聞、有來源、有白話提醒，先看這篇再去忙。</p>
+            <div class="first-click-actions">
+              <a class="primary" href="today.html?utm_source=homepage_entry&utm_medium=internal&utm_campaign=first_click">打開今日必看</a>
+              <a href="share.html?utm_source=homepage_entry&utm_medium=internal&utm_campaign=share_pack">拿分享包</a>
+            </div>
+          </div>
+          <div class="first-click-visual">
+            <img src="assets/auntie-hero.jpg" alt="阿姨別生氣今日必看圖文">
+          </div>
+        </article>
+        <div class="first-click-side" aria-label="更多今日入口">
+          <a class="first-click-mini" href="#radar">
+            <img src="assets/auntie-avatar.jpg" alt="生活雷達縮圖">
+            <div>
+              <span>生活雷達</span>
+              <strong>先看今天生活大小事</strong>
+              <small>天氣、交通、民生消息先整理成人話。</small>
+            </div>
+          </a>
+          <a class="first-click-mini" href="#investing">
+            <img src="assets/auntie-hero.jpg" alt="股市 ETF 縮圖">
+            <div>
+              <span>股市 ETF</span>
+              <strong>四檔觀察，不是報明牌</strong>
+              <small>熱門股、新星股、風險題材都要看風險。</small>
+            </div>
+          </a>
+        </div>
+      </section>
+
       <section class="growth-funnel" aria-labelledby="growthFunnelTitle">
         <div class="growth-funnel-head">
           <h2 id="growthFunnelTitle">第一次來？先照阿姨這樣逛。</h2>
@@ -2845,6 +3092,83 @@
       return `${hook.title}\n${hook.summary}\n\n阿姨別生氣幫你整理成人話：${hook.url}`;
     }
 
+    function renderFirstClick(content = {}) {
+      const root = document.querySelector("#firstClick");
+      if (!root) return;
+
+      const stock = content.stockOverview && {
+        title: content.stockOverview.title === "股市ETF"
+          ? `阿姨今天看市場：${(content.stockOverview.marketCards || []).slice(0, 2).map((item) => item.value).join("、") || "四檔觀察"}`
+          : content.stockOverview.title,
+        category: "股市 ETF",
+        summary: content.stockOverview.auntieComment || content.stockOverview.summary,
+        auntieComment: "不是報明牌，是先把風險看懂。",
+        slug: content.site?.dailyNoteUrl || content.stockOverview.slug || "#investing",
+        thumbnail: content.stockOverview.hero || "assets/auntie-hero.jpg",
+        cta: content.site?.dailyNote || "看今天四檔觀察和風險提醒。"
+      };
+
+      const items = [
+        content.pitfalls?.[0],
+        content.lifeRadar?.[0],
+        stock
+      ].filter(Boolean);
+
+      if (!items.length) return;
+
+      const primary = items[0];
+      const sideItems = items.slice(1, 3);
+      const primaryHref = utmUrl(primary.slug || "#", "homepage_entry", "first_click");
+      const primaryImage = primary.hero || primary.thumbnail || "assets/auntie-hero.jpg";
+      const primarySummary = primary.auntieComment || primary.cta || primary.summary || "今天先看這篇，少一點焦慮，多一點準備。";
+      const shareText = buildShareText({
+        title: primary.title,
+        summary: primarySummary,
+        url: primaryHref
+      });
+
+      root.innerHTML = `
+        <article class="first-click-card">
+          <div class="first-click-copy">
+            <span class="first-click-kicker">今天先點這裡</span>
+            <h2 id="firstClickTitle">${escapeHtml(primary.title || "三分鐘看完今天最該注意的一件事。")}</h2>
+            <p>${escapeHtml(primarySummary)}</p>
+            <div class="first-click-actions">
+              <a class="primary" href="${escapeHtml(primaryHref)}">打開這篇</a>
+              <button type="button" data-first-click-copy>複製分享文</button>
+              <a href="share.html?utm_source=homepage_entry&utm_medium=internal&utm_campaign=share_pack">拿分享包</a>
+            </div>
+          </div>
+          <a class="first-click-visual" href="${escapeHtml(primaryHref)}" aria-label="打開${escapeHtml(primary.title || "今日必看")}">
+            <img src="${escapeHtml(primaryImage)}" alt="${escapeHtml(primary.thumbnailAlt || primary.title || "阿姨別生氣今日必看圖文")}">
+          </a>
+        </article>
+        <div class="first-click-side" aria-label="更多今日入口">
+          ${sideItems.map((item) => {
+            const href = utmUrl(item.slug || "#", "homepage_entry", "first_click_side");
+            const image = item.hero || item.thumbnail || "assets/auntie-avatar.jpg";
+            return `
+              <a class="first-click-mini" href="${escapeHtml(href)}">
+                <img src="${escapeHtml(image)}" alt="${escapeHtml(item.thumbnailAlt || item.title || "今日入口縮圖")}">
+                <div>
+                  <span>${escapeHtml(item.category || "今日入口")}</span>
+                  <strong>${escapeHtml(item.title || "先看這篇")}</strong>
+                  <small>${escapeHtml(item.auntieComment || item.cta || item.summary || "有來源、有白話，點進去看完整內容。")}</small>
+                </div>
+              </a>
+            `;
+          }).join("")}
+        </div>
+      `;
+
+      root.querySelector("[data-first-click-copy]")?.addEventListener("click", async (event) => {
+        const button = event.currentTarget;
+        const ok = await copyText(shareText);
+        button.textContent = ok ? "已複製" : "複製失敗";
+        setTimeout(() => { button.textContent = "複製分享文"; }, 1600);
+      });
+    }
+
     function renderGrowthHooks(content = {}) {
       const container = document.querySelector(".hook-grid");
       if (!container) return;
@@ -3073,6 +3397,7 @@
         if (!response.ok) throw new Error("content data unavailable");
         const content = await response.json();
 
+        renderFirstClick(content);
         renderGrowthHooks(content);
         renderLiveNews(content.liveNews, content.site?.liveNewsUpdatedAt);
         renderArticleCards("#radar .radar-zine-grid", content.lifeRadar);
