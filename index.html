@@ -480,6 +480,89 @@
       to { transform: translateX(-50%); }
     }
 
+    .growth-funnel {
+      margin: 0 0 30px;
+      padding: 20px;
+      border: var(--line);
+      border-radius: 18px;
+      background: rgba(255, 253, 241, .78);
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .growth-funnel-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .growth-funnel-head h2 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.05;
+      font-weight: 1000;
+    }
+
+    .growth-funnel-head p {
+      max-width: 420px;
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.55;
+      font-weight: 900;
+    }
+
+    .growth-funnel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .growth-step {
+      display: grid;
+      gap: 8px;
+      min-width: 0;
+      padding: 16px;
+      border: 3px solid var(--ink);
+      border-radius: 16px;
+      background: white;
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: 4px 4px 0 var(--ink);
+      transition: transform .16s ease, box-shadow .16s ease;
+    }
+
+    .growth-step:hover,
+    .growth-step:focus-visible {
+      transform: translate(-2px, -2px);
+      box-shadow: 7px 7px 0 var(--ink);
+      outline: none;
+    }
+
+    .growth-step .step-number {
+      width: fit-content;
+      padding: 5px 10px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: var(--pink);
+      color: white;
+      font-size: 13px;
+      font-weight: 1000;
+    }
+
+    .growth-step strong {
+      font-size: 22px;
+      line-height: 1.16;
+      font-weight: 1000;
+    }
+
+    .growth-step span:last-child {
+      font-size: 15px;
+      line-height: 1.45;
+      font-weight: 900;
+      color: rgba(22, 19, 15, .72);
+    }
+
     .hook-section {
       margin-top: 26px;
     }
@@ -2119,6 +2202,30 @@
     </div>
 
     <main>
+      <section class="growth-funnel" aria-labelledby="growthFunnelTitle">
+        <div class="growth-funnel-head">
+          <h2 id="growthFunnelTitle">第一次來？先照阿姨這樣逛。</h2>
+          <p>不要在首頁迷路。先看今日必看，覺得有用就設提醒，再把分享包丟給朋友。</p>
+        </div>
+        <div class="growth-funnel-grid">
+          <a class="growth-step" href="today.html?utm_source=homepage_funnel&utm_medium=internal&utm_campaign=today">
+            <span class="step-number">01</span>
+            <strong>先看今日必看</strong>
+            <span>每天自動換一篇最值得點的內容，懶人先看這裡。</span>
+          </a>
+          <a class="growth-step" href="daily-reminder.ics" download="auntie-no-mad-daily-reminder.ics">
+            <span class="step-number">02</span>
+            <strong>設每天 7 點提醒</strong>
+            <span>放進手機日曆，明天早上不用靠記憶力。</span>
+          </a>
+          <a class="growth-step" href="share.html?utm_source=homepage_funnel&utm_medium=internal&utm_campaign=share_pack">
+            <span class="step-number">03</span>
+            <strong>拿今日分享包</strong>
+            <span>文案、圖片、LINE/FB/X 連結先幫你排好。</span>
+          </a>
+        </div>
+      </section>
+
       <section class="section hook-section" id="daily-hook" aria-labelledby="hookTitle">
         <div class="section-head">
           <div>

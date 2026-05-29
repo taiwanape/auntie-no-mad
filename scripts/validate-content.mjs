@@ -268,6 +268,9 @@ assert(indexHtml.includes("floating-share"), "index.html must keep a persistent 
 assert(indexHtml.includes("quickCopySite"), "index.html must support one-tap homepage copy sharing");
 assert(indexHtml.includes("today.html"), "index.html must link to the stable today landing page");
 assert(indexHtml.includes("daily-reminder.ics"), "index.html must offer a daily return reminder");
+assert(indexHtml.includes("growth-funnel"), "index.html must include the first-visit growth funnel");
+assert(indexHtml.includes("homepage_funnel"), "index.html growth funnel links must use UTM tracking");
+assert(indexHtml.includes("拿今日分享包"), "index.html growth funnel must lead visitors to the share pack");
 
 const reminderIcs = fs.readFileSync(path.join(root, "daily-reminder.ics"), "utf8");
 assert(reminderIcs.includes("RRULE:FREQ=DAILY"), "daily-reminder.ics must be a daily recurring reminder");
