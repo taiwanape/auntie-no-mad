@@ -419,6 +419,135 @@
       to { transform: translateX(-50%); }
     }
 
+    .hook-section {
+      margin-top: 26px;
+    }
+
+    .hook-section .section-head {
+      align-items: center;
+    }
+
+    .hook-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .hook-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 270px;
+      padding: 18px;
+      border: var(--line);
+      border-radius: 16px;
+      background: #fffdf1;
+      box-shadow: var(--shadow);
+      color: inherit;
+      text-decoration: none;
+      transition: transform .16s ease, box-shadow .16s ease;
+    }
+
+    .hook-card:nth-child(1) {
+      background: linear-gradient(135deg, #15130f 0%, #2a2419 56%, #ff5f9c 100%);
+      color: white;
+    }
+
+    .hook-card:nth-child(2) {
+      background: var(--sky);
+    }
+
+    .hook-card:nth-child(3) {
+      background: var(--mint);
+    }
+
+    .hook-card:hover,
+    .hook-card:focus-visible {
+      transform: translate(-2px, -2px);
+      box-shadow: 9px 9px 0 var(--ink);
+      outline: none;
+    }
+
+    .hook-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .hook-label,
+    .hook-rank {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid currentColor;
+      border-radius: 999px;
+      font-weight: 1000;
+    }
+
+    .hook-label {
+      padding: 6px 10px;
+      background: var(--pink);
+      color: white;
+      font-size: 14px;
+    }
+
+    .hook-rank {
+      flex: 0 0 auto;
+      width: 42px;
+      height: 42px;
+      background: var(--yellow);
+      color: var(--ink);
+      box-shadow: 3px 3px 0 currentColor;
+    }
+
+    .hook-card h3 {
+      margin: 0;
+      font-size: clamp(25px, 2.6vw, 36px);
+      line-height: 1.08;
+      font-weight: 1000;
+      overflow-wrap: anywhere;
+    }
+
+    .hook-card p {
+      margin: 12px 0 0;
+      font-size: 16px;
+      line-height: 1.44;
+      font-weight: 900;
+      color: rgba(22,19,15,.72);
+    }
+
+    .hook-card:nth-child(1) p {
+      color: rgba(255,255,255,.84);
+    }
+
+    .hook-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 18px;
+    }
+
+    .hook-actions a,
+    .hook-actions button {
+      min-height: 40px;
+      padding: 7px 11px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: white;
+      box-shadow: 3px 3px 0 var(--ink);
+      color: var(--ink);
+      font-weight: 1000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .hook-actions button {
+      background: var(--pink);
+      color: white;
+    }
+
     .live-board {
       display: grid;
       grid-template-columns: minmax(260px, .9fr) minmax(0, 1.35fr);
@@ -1597,6 +1726,7 @@
       .grid,
       .lab-grid,
       .radar-zine-grid,
+      .hook-grid,
       .live-list,
       .market-grid,
       .memo {
@@ -1629,8 +1759,18 @@
     }
 
     @media (max-width: 640px) {
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
       .shell {
-        width: min(100% - 22px, 1180px);
+        width: 100%;
+        max-width: 390px;
+        padding-left: 10px;
+        padding-right: 10px;
+        overflow-x: hidden;
       }
 
       .topbar {
@@ -1678,8 +1818,17 @@
       .hero-copy {
         max-width: 100%;
         width: 100%;
-        padding: 28px 22px 24px;
+        min-width: 0;
+        padding: 28px 18px 24px;
         background: linear-gradient(180deg, rgba(255,213,31,0.9), rgba(255,213,31,0.78));
+      }
+
+      .pill {
+        max-width: 100%;
+        flex-wrap: wrap;
+        border-radius: 18px;
+        font-size: 14px;
+        line-height: 1.25;
       }
 
       .hero-title-svg {
@@ -1688,13 +1837,21 @@
       }
 
       .hero-copy p {
-        max-width: 100%;
-        font-size: clamp(18px, 5.5vw, 22px);
+        max-width: 15.5em;
+        font-size: clamp(17px, 5vw, 20px);
         line-height: 1.48;
+        overflow-wrap: anywhere;
+        word-break: break-all;
       }
 
       .section-head {
         gap: 14px;
+      }
+
+      .section-head p {
+        max-width: 18em;
+        overflow-wrap: anywhere;
+        word-break: break-all;
       }
 
       .section {
@@ -1709,6 +1866,16 @@
         margin-top: 20px;
       }
 
+      .hero-actions .cta,
+      .share-strip a,
+      .share-strip button {
+        flex: 1 1 100%;
+        min-width: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: normal;
+      }
+
       .profile-row {
         margin-top: -22px;
         margin-left: 0;
@@ -1718,10 +1885,30 @@
       .grid,
       .lab-grid,
       .radar-zine-grid,
+      .hook-grid,
       .live-list,
       .market-grid,
       .memo {
         grid-template-columns: 1fr;
+      }
+
+      .hook-card {
+        min-height: auto;
+        min-width: 0;
+        overflow: hidden;
+      }
+
+      .hook-card h3 {
+        font-size: clamp(22px, 7vw, 30px);
+        overflow-wrap: anywhere;
+        word-break: break-all;
+      }
+
+      .hook-actions a,
+      .hook-actions button {
+        flex: 1 1 100%;
+        min-width: 0;
+        overflow-wrap: anywhere;
       }
 
       .radar-grid,
@@ -1843,6 +2030,54 @@
     </div>
 
     <main>
+      <section class="section hook-section" id="daily-hook" aria-labelledby="hookTitle">
+        <div class="section-head">
+          <div>
+            <h2 id="hookTitle" class="visually-hidden">今日必看三件事</h2>
+            <svg class="comic-title section-title-svg" viewBox="0 0 440 86" aria-hidden="true">
+              <text class="shadow" x="4" y="62" font-size="58">今日必看</text>
+              <text class="accent" x="4" y="62" font-size="58">今日必看</text>
+            </svg>
+          </div>
+          <p>先挑三件最適合轉給朋友的重點：有來源、有阿姨碎念，點進去看完整內容。</p>
+        </div>
+        <div class="hook-grid" aria-label="今日最值得點閱與分享的三件事">
+          <article class="hook-card">
+            <div class="hook-top">
+              <span class="hook-label">先看這個</span>
+              <span class="hook-rank">01</span>
+            </div>
+            <h3>今天資料載入中</h3>
+            <p>等資料檔進來，阿姨會自動挑出最值得點的一篇。</p>
+            <div class="hook-actions">
+              <a href="#live">看即時新聞</a>
+            </div>
+          </article>
+          <article class="hook-card">
+            <div class="hook-top">
+              <span class="hook-label">轉給群組</span>
+              <span class="hook-rank">02</span>
+            </div>
+            <h3>生活雷達整理中</h3>
+            <p>這裡會放今天最容易影響生活的小事。</p>
+            <div class="hook-actions">
+              <a href="#radar">看生活雷達</a>
+            </div>
+          </article>
+          <article class="hook-card">
+            <div class="hook-top">
+              <span class="hook-label">少踩一坑</span>
+              <span class="hook-rank">03</span>
+            </div>
+            <h3>阿姨正在挑重點</h3>
+            <p>踩坑、股市、工具箱，阿姨會挑一個今天最該注意的。</p>
+            <div class="hook-actions">
+              <a href="#stories">看踩坑日記</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="section" id="live" aria-labelledby="liveTitle">
         <div class="section-head">
           <h2 id="liveTitle" class="visually-hidden">即時新聞</h2>
@@ -2232,6 +2467,7 @@
     const convertResult = document.querySelector("#convertResult");
     const convertFormula = document.querySelector("#convertFormula");
     const shareSite = document.querySelector("#shareSite");
+    const SITE_BASE = "https://taiwanape.github.io/auntie-no-mad/";
 
     function updateClock() {
       const now = new Date();
@@ -2269,6 +2505,24 @@
       }, 1800);
     });
 
+    async function copyText(text) {
+      try {
+        await navigator.clipboard?.writeText(text);
+        return true;
+      } catch (error) {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.select();
+        const copied = document.execCommand("copy");
+        textarea.remove();
+        return copied;
+      }
+    }
+
     const escapeHtml = (value = "") => String(value)
       .replaceAll("&", "&amp;")
       .replaceAll("<", "&lt;")
@@ -2278,6 +2532,84 @@
 
     const sourceText = (item) => item?.sourceUrl ? "" : "來源待補";
     const linkAttrs = (href = "") => /^https?:\/\//.test(href) ? ' target="_blank" rel="noreferrer"' : "";
+    const absoluteUrl = (href = "") => {
+      if (!href || href === "#") return SITE_BASE;
+      if (/^https?:\/\//.test(href)) return href;
+      return new URL(href, SITE_BASE).href;
+    };
+
+    function buildShareText(hook) {
+      return `${hook.title}\n${hook.summary}\n\n阿姨別生氣幫你整理成人話：${hook.url}`;
+    }
+
+    function renderGrowthHooks(content = {}) {
+      const container = document.querySelector(".hook-grid");
+      if (!container) return;
+
+      const life = content.lifeRadar?.[0];
+      const pitfall = content.pitfalls?.[0];
+      const stock = content.stockOverview;
+      const hooks = [
+        life && {
+          label: "轉給群組",
+          title: life.title,
+          summary: life.auntieComment || life.cta || life.summary,
+          href: life.slug,
+          cta: "看生活重點"
+        },
+        pitfall && {
+          label: "少踩一坑",
+          title: pitfall.title,
+          summary: pitfall.auntieComment || pitfall.cta || pitfall.summary,
+          href: pitfall.slug,
+          cta: "看踩坑故事"
+        },
+        stock && {
+          label: "荷包先看",
+          title: stock.title === "股市ETF" ? `今天股市四件事：${(stock.marketCards || []).slice(0, 2).map((item) => item.value).join("、") || "熱門股與 ETF"}` : stock.title,
+          summary: stock.auntieComment || stock.summary,
+          href: content.site?.dailyNoteUrl || stock.slug || "#investing",
+          cta: "看股市白話"
+        }
+      ].filter(Boolean).slice(0, 3);
+
+      if (!hooks.length) return;
+
+      container.innerHTML = hooks.map((hook, index) => {
+        const url = absoluteUrl(hook.href);
+        const shareText = buildShareText({ ...hook, url });
+        const encodedUrl = encodeURIComponent(url);
+        const encodedText = encodeURIComponent(shareText);
+        return `
+          <article class="hook-card">
+            <div class="hook-top">
+              <span class="hook-label">${escapeHtml(hook.label)}</span>
+              <span class="hook-rank">${String(index + 1).padStart(2, "0")}</span>
+            </div>
+            <h3>${escapeHtml(hook.title)}</h3>
+            <p>${escapeHtml(hook.summary || "阿姨整理中，先別急著生氣。")}</p>
+            <div class="hook-actions">
+              <a href="${escapeHtml(hook.href || "#")}">${escapeHtml(hook.cta || "看完整")}</a>
+              <button type="button" data-copy-share="${escapeHtml(shareText)}">複製分享文</button>
+              <a href="https://social-plugins.line.me/lineit/share?url=${encodedUrl}" target="_blank" rel="noreferrer">LINE</a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}" target="_blank" rel="noreferrer">FB</a>
+              <a href="https://twitter.com/intent/tweet?text=${encodedText}" target="_blank" rel="noreferrer">X</a>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    document.addEventListener("click", async (event) => {
+      const button = event.target.closest("[data-copy-share]");
+      if (!button) return;
+      const originalText = button.textContent;
+      const ok = await copyText(button.dataset.copyShare || "");
+      button.textContent = ok ? "已複製" : "複製失敗";
+      setTimeout(() => {
+        button.textContent = originalText;
+      }, 1600);
+    });
 
     function renderLiveNews(items = [], updatedAt = "") {
       const lead = document.querySelector("#live .live-lead");
@@ -2434,6 +2766,7 @@
         if (!response.ok) throw new Error("content data unavailable");
         const content = await response.json();
 
+        renderGrowthHooks(content);
         renderLiveNews(content.liveNews, content.site?.liveNewsUpdatedAt);
         renderArticleCards("#radar .radar-zine-grid", content.lifeRadar);
         renderArticleCards("#stories .radar-zine-grid", content.pitfalls);
