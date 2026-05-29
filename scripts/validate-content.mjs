@@ -460,6 +460,9 @@ assert(shareHtml.includes("data/social-posts.json"), "share.html must load data/
 assert(shareHtml.includes("今日分享包"), "share.html must identify itself as the daily share pack");
 assert(shareHtml.includes('id="todayPromo"'), "share.html must feature the stable today landing page");
 assert(shareHtml.includes("renderTodayPromo"), "share.html must render the stable today landing page promo from share data");
+assert(shareHtml.includes('id="campaignCopies"'), "share.html must provide copyable campaign templates");
+assert(shareHtml.includes("renderCampaignCopies"), "share.html must render LINE/FB/IG campaign copy templates");
+assert(shareHtml.includes("manual_share"), "share.html campaign templates must use manual_share tracking");
 assert(shareHtml.includes("today.html?utm_source=copy"), "share.html today promo must copy the stable today landing URL");
 assert(shareHtml.includes('withUtm(TODAY_URL, "line")'), "share.html today promo must expose a LINE link for the stable today URL");
 assert(shareHtml.includes('withUtm(TODAY_URL, "facebook")'), "share.html today promo must expose a Facebook link for the stable today URL");

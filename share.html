@@ -19,21 +19,35 @@
   <link rel="icon" href="assets/auntie-avatar-nav.jpg">
   <link rel="stylesheet" href="site-info.css">
   <style>
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
     .share-hero {
       display: grid;
       gap: 14px;
       margin-bottom: 18px;
     }
 
+    .share-hero h1,
+    .today-promo-copy h2,
+    .campaign-card h2 {
+      overflow-wrap: anywhere;
+    }
+
     .share-grid,
-    .post-grid {
+    .post-grid,
+    .campaign-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
     }
 
     .share-card,
-    .post-card {
+    .post-card,
+    .campaign-card {
       display: grid;
       gap: 12px;
       min-width: 0;
@@ -69,6 +83,7 @@
 
     .share-card > *,
     .post-card > *,
+    .campaign-card > *,
     .today-promo > * {
       min-width: 0;
     }
@@ -106,7 +121,8 @@
     }
 
     .share-card h2,
-    .post-card h2 {
+    .post-card h2,
+    .campaign-card h2 {
       margin: 0;
       font-size: 22px;
       line-height: 1.2;
@@ -114,6 +130,7 @@
 
     .share-card p,
     .post-card p,
+    .campaign-card p,
     .share-meta {
       min-width: 0;
       margin: 0;
@@ -180,6 +197,15 @@
       word-break: break-word;
     }
 
+    .campaign-card {
+      background: #fff7c8;
+    }
+
+    .campaign-card .post-text {
+      min-height: 220px;
+      background: #fffefa;
+    }
+
     .empty-image {
       display: grid;
       place-items: center;
@@ -195,9 +221,19 @@
     }
 
     @media (max-width: 760px) {
+      .share-hero h1 {
+        font-size: clamp(34px, 11vw, 44px);
+        line-height: 1.12;
+      }
+
+      .today-promo-copy h2 {
+        font-size: clamp(28px, 9.5vw, 40px);
+      }
+
       .today-promo,
       .share-grid,
-      .post-grid {
+      .post-grid,
+      .campaign-grid {
         grid-template-columns: 1fr;
       }
 
@@ -236,6 +272,13 @@
         </div>
       </section>
 
+      <section class="card" style="margin-top: 22px;">
+        <span class="label">直接拿去貼</span>
+        <h2>LINE 群、FB 社團、限動先用這三條</h2>
+        <p class="share-meta">文案會每天跟著今日主打更新，連結都帶追蹤碼。先用穩定 HTTPS 的 GitHub Pages 網址，等 auntienomad.com 憑證好了再切自訂網域。</p>
+        <div class="campaign-grid" id="campaignCopies"></div>
+      </section>
+
       <section class="card">
         <span class="label">可轉傳入口</span>
         <h2>今天最適合拿來引流的內容</h2>
@@ -258,6 +301,7 @@
     const todayPromo = document.querySelector("#todayPromo");
     const shareItems = document.querySelector("#shareItems");
     const socialPosts = document.querySelector("#socialPosts");
+    const campaignCopies = document.querySelector("#campaignCopies");
     const updatedAt = document.querySelector("#updatedAt");
 
     const escapeHtml = (value = "") => String(value)
@@ -343,6 +387,52 @@
       `;
     }
 
+    function campaignCopyTemplates(item) {
+      const title = item?.title || "今天的阿姨提醒";
+      const summary = item?.summary || "阿姨把今天最值得注意的生活新聞整理成人話。";
+      const auntieLine = item?.kind === "stock-watch"
+        ? "不是報明牌，是幫你把市場消息翻成人話。"
+        : item?.kind === "pitfall"
+          ? "不是你笨，是套路真的越來越會包裝。"
+          : "新聞不是拿來焦慮的，是拿來少踩一個坑的。";
+      const lineUrl = withUtm(TODAY_URL, "line_group", "manual_share");
+      const fbUrl = withUtm(TODAY_URL, "facebook_group", "manual_share");
+      const bioUrl = withUtm(TODAY_URL, "ig_story", "manual_share");
+      return [
+        {
+          label: "LINE 群",
+          title: "婆媽群先丟這版",
+          text: `${title}\n\n阿姨翻譯：${auntieLine}\n\n${summary}\n\n完整整理在這裡：${lineUrl}\n#阿姨別生氣`
+        },
+        {
+          label: "FB 社團",
+          title: "社團貼文不要太像廣告",
+          text: `今天看到這則有點值得注意：${title}\n\n${summary}\n\n阿姨碎念一下：${auntieLine}\n\n我把重點整理成比較好懂的版本，放這裡：${fbUrl}\n\n#阿姨別生氣 #生活雷達 #踩坑提醒`
+        },
+        {
+          label: "IG / 限動",
+          title: "限動配圖文這樣打",
+          text: `${title}\n\n阿姨白話：${auntieLine}\n\n今天先看這篇，其他等下再煩。\n\n入口：${bioUrl}\n\n#阿姨別生氣 #台灣生活`
+        }
+      ];
+    }
+
+    function renderCampaignCopies(pack, posts) {
+      if (!campaignCopies) return;
+      const item = pickPrimaryItem(pack, posts);
+      const templates = campaignCopyTemplates(item);
+      campaignCopies.innerHTML = templates.map((template) => `
+        <article class="campaign-card">
+          <div class="share-meta">${escapeHtml(template.label)} · manual_share</div>
+          <h2>${escapeHtml(template.title)}</h2>
+          <div class="post-text">${escapeHtml(template.text)}</div>
+          <div class="button-row">
+            <button class="primary" type="button" data-copy="${escapeHtml(template.text)}">複製這段</button>
+          </div>
+        </article>
+      `).join("");
+    }
+
     function renderSharePack(pack) {
       const items = pack.items || [];
       updatedAt.textContent = `更新時間：${new Date(pack.generatedAt || Date.now()).toLocaleString("zh-TW", { timeZone: "Asia/Taipei", hour12: false })}`;
@@ -393,6 +483,7 @@
       fetch("data/social-posts.json").then((response) => response.json())
     ]).then(([pack, posts]) => {
       renderTodayPromo(pack, posts);
+      renderCampaignCopies(pack, posts);
       renderSharePack(pack);
       renderSocialPosts(posts);
     }).catch(() => {
