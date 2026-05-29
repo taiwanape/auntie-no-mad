@@ -550,6 +550,13 @@ const xDailyWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "
 assert(xDailyWorkflow.includes("test:x-daily-post"), "x-daily-post.yml must dry-run daily X content before posting");
 assert(xDailyWorkflow.includes("FAIL_ON_SKIP"), "x-daily-post.yml must fail instead of silently skipping daily X posts");
 
+const opsHealthWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "ops-health-check.yml"), "utf8");
+assert(opsHealthWorkflow.includes("npm test"), "ops-health-check.yml must run content validation");
+assert(opsHealthWorkflow.includes("test:x-daily-post"), "ops-health-check.yml must verify X daily post readiness");
+assert(opsHealthWorkflow.includes("test:meta-post"), "ops-health-check.yml must verify Meta daily post readiness");
+assert(opsHealthWorkflow.includes("test:domain"), "ops-health-check.yml must check the public custom domain");
+assert(opsHealthWorkflow.includes("ENABLE_PAGES_HTTPS"), "ops-health-check.yml must retry GitHub Pages HTTPS enforcement");
+
 if (warnings.length) {
   console.warn("Content warnings:");
   warnings.forEach((message) => console.warn(`- ${message}`));

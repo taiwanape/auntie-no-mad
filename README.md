@@ -77,6 +77,7 @@ powershell -ExecutionPolicy Bypass -File scripts\setup-meta-secrets.ps1
 - `.github/workflows/domain-health-check.yml`
 - `.github/workflows/x-daily-post.yml`
 - `.github/workflows/meta-daily-post.yml`
+- `.github/workflows/ops-health-check.yml`
 
 每日更新流程會：
 
@@ -88,6 +89,8 @@ powershell -ExecutionPolicy Bypass -File scripts\setup-meta-secrets.ps1
 6. 通過後 commit 並由 GitHub Pages 部署。
 
 如果資料或圖片產生失敗，應保留前一天可用內容，不要讓首頁壞掉。
+
+`ops-health-check.yml` 會在每日更新、社群發文與 Pages 部署後跑總巡檢：內容驗證、X 發文素材 dry-run、Meta 發文素材 dry-run、自訂網域 HTTPS 狀態、GitHub Actions 最新執行狀態都會檢查一次。Meta token 尚未設定時，Meta dry-run 只會列出缺少的 secrets，不會亂發文。
 
 ## SEO 與分享
 

@@ -9,6 +9,7 @@ on:
 permissions:
   contents: read
   actions: read
+  pages: write
 
 jobs:
   health:
@@ -22,6 +23,23 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: "24"
+
+      - name: Validate site content and growth pages
+        run: npm test
+
+      - name: Validate X daily post readiness
+        run: npm run test:x-daily-post
+
+      - name: Validate Meta daily post readiness
+        run: npm run test:meta-post
+
+      - name: Check custom domain and retry HTTPS enforcement
+        run: npm run test:domain
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAGES_TOKEN || github.token }}
+          AUNTIE_CUSTOM_DOMAIN: auntienomad.com
+          ENABLE_PAGES_HTTPS: "true"
+          AUNTIE_DOMAIN_STRICT: "false"
 
       - name: Run operations health check
         run: npm run ops:health
