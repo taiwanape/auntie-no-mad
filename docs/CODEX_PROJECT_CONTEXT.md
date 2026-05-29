@@ -2,54 +2,83 @@
 
 Updated: 2026-05-29
 
-Compact working context for the Auntie NoMad project. Read this first, then inspect the current files before making changes.
+This is the compressed working context for the Auntie NoMad project. Use this file plus the current repo files as the source of truth.
 
 ## Ownership
 
-- Codex is the direct owner for site development, content operations, automation, deployment, SEO, X posting, and maintenance.
-- Work in `C:\Users\taiwa\Documents\AuntieNoMad`; the public website repo is `C:\Users\taiwa\Documents\AuntieNoMad\website`.
-- Never commit secrets: `.env.local`, API keys, OAuth tokens, GitHub secrets, cookies, or credential values.
-- Use current repo files and this context file for decisions. Ignore unrelated old sessions.
+- Codex is the direct technical and operations owner.
+- Do the work directly in `C:\Users\taiwa\Documents\AuntieNoMad`.
+- Public website repo/workdir: `C:\Users\taiwa\Documents\AuntieNoMad\website`.
+- Do not use external delegation workflows or unrelated old chat history for project decisions.
+- Never commit secrets, API keys, OAuth tokens, cookies, or local credential files.
 
 ## Public Targets
 
 - GitHub repo: `taiwanape/auntie-no-mad`
-- Stable public URL until HTTPS is ready: `https://taiwanape.github.io/auntie-no-mad/`
+- GitHub Pages URL: `https://taiwanape.github.io/auntie-no-mad/`
 - Custom domain: `auntienomad.com`
-- Current domain state: HTTP works; HTTPS is waiting for GitHub Pages certificate provisioning.
+- Current domain state: HTTP works; HTTPS may still wait for GitHub Pages certificate provisioning.
 - X account: `@auntienomad`
+- Instagram: `https://www.instagram.com/auntienomad/`
+- Facebook: `https://www.facebook.com/profile.php?id=61553234457401`
 
-## Product Direction
+## Product Goal
 
-- Goal: make Auntie NoMad a daily-updated, shareable Taiwanese life-info site.
-- Main sections: life radar, pitfall diary, stocks/ETF, tools, recommendations, archive, reminders, live news.
-- Voice: plain Taiwanese, useful, a little funny, Auntie-style nagging, sharp but not cruel.
-- Every sourced content item needs a real topic, a source URL, a hook, and a reason to exist.
-- Finance content is educational observation only. Never write buy/sell/target-price/guaranteed-profit language.
+Turn Auntie NoMad into a daily-updated Taiwanese life-info site that people want to click, read, and share.
 
-## Visual Quality Gate
+Main sections:
 
-- Public visuals must be high-quality raster/AI-style images, not SVG-like placeholders or childish collage art.
-- Keep the Auntie brand style: yellow halftone, bold black outlines, white sticker stroke, pink accent, expressive Auntie character.
-- Rejected: generic icons, random product props, empty poster layouts, fake UI text, low-quality vector doodles.
-- Article thumbnails may be icon-like, but must still look designed and consistent with the brand.
-- Large article images and social preview images should differ from thumbnails.
+- Life radar
+- Pitfall diary
+- Stocks / ETF
+- Live news
+- Tools
+- Recommendations
+- Archive
+- Share pack
+- Auntie reminders
 
-## Site Files
+Voice:
+
+- Plain, useful, a little funny.
+- Feels like an auntie warning younger people.
+- Sharp but not cruel.
+- Never sounds like a news bot or investment teacher.
+- Every sourced item needs a real source URL.
+
+Finance rules:
+
+- Educational observation only.
+- Never write buy, sell, target price, guaranteed profit, or stock-tip language.
+- Every market item needs a risk note and disclaimer.
+
+## Visual Quality Rules
+
+- Public images must be high-quality raster / AI-style images.
+- Keep the brand style: yellow halftone, bold black outline, white sticker stroke, pink accent, expressive Auntie character.
+- Do not publish childish collage, generic SVG-like placeholders, empty poster layouts, fake text, or random icons.
+- Thumbnails can be icon-like, but still need designed brand quality.
+- Large article images and thumbnails should not be identical.
+- If image generation fails, keep previous good images instead of replacing them with poor placeholders.
+
+## Key Files
 
 - Homepage: `index.html`
-- Main content data: `data/site-content.json`
+- Site data: `data/site-content.json`
 - Share pack: `data/share-pack.json`
-- Social post drafts: `data/social-posts.json`
-- X content queue: `data/x-content-queue.json`
-- Article growth module: `article-growth.js`
+- Social drafts: `data/social-posts.json`
+- X queue: `data/x-content-queue.json`
+- Review report: `data/review-report.json`
+- Article CTA module: `article-growth.js`
 - Core styles: `site-info.css`
-- Article pages: `radar/`, `stories/`, `stocks/`
+- Article folders: `radar/`, `stories/`, `stocks/`
+- SEO outputs: `sitemap.xml`, `robots.txt`, `rss.xml`, `feed.json`, `site.webmanifest`, `llms.txt`
 
-## Scripts
+## Key Scripts
+
+Run from `C:\Users\taiwa\Documents\AuntieNoMad\website`.
 
 ```powershell
-cd C:\Users\taiwa\Documents\AuntieNoMad\website
 npm test
 npm run ops:health
 npm run test:domain
@@ -59,23 +88,23 @@ npm run test:x-queue
 npm run test:x-readiness
 ```
 
-Key scripts:
+Important scripts:
 
-- `scripts/daily-update.mjs`: daily site content update.
+- `scripts/daily-update.mjs`: daily site update.
 - `scripts/update-live-news.mjs`: live news refresh.
-- `scripts/validate-content.mjs`: content and page validation.
-- `scripts/generate-seo.mjs`: sitemap, robots, feed, metadata support.
+- `scripts/validate-content.mjs`: validation and quality gates.
+- `scripts/generate-seo.mjs`: sitemap, robots, RSS, JSON Feed, manifest, `llms.txt`.
 - `scripts/generate-share-pack.mjs`: share metadata and UTM links.
-- `scripts/generate-social-posts.mjs`: platform post drafts.
-- `scripts/check-domain-health.mjs`: custom-domain HTTP/HTTPS check.
+- `scripts/generate-social-posts.mjs`: social post drafts.
+- `scripts/check-domain-health.mjs`: custom domain check.
 - `scripts/post-x-manual.mjs`: API-based X posting.
 
-## Automation
+## GitHub Actions
 
-- `daily-update.yml`: daily content generation and commit.
+- `daily-update.yml`: daily content generation before Taiwan morning.
 - `live-news-update.yml`: live news refresh.
 - `pages.yml`: GitHub Pages deploy.
-- `domain-health-check.yml`: retries HTTPS enforcement for `auntienomad.com`.
+- `domain-health-check.yml`: custom-domain HTTPS retry/check.
 - `ops-health-check.yml`: operational health check.
 - `x-daily-post.yml`: daily X post.
 - `x-api-smoke-test.yml`: X credential check.
@@ -84,18 +113,19 @@ Key scripts:
 
 ## Current Known State
 
-- Daily content and social-post files exist, but image quality must be watched closely.
-- Some OpenAI image calls may fail if billing/limit is not restored; do not replace good imagery with low-quality placeholders.
-- X credentials are configured locally and in GitHub Secrets; never print values.
-- X profile assets were updated to a real-person Auntie direction on 2026-05-29.
-- Custom-domain HTTPS is still pending certificate provisioning; no site-code fix is needed for that specific browser warning.
+- Daily content automation exists, but tomorrow morning must be checked for actual visible changes.
+- Image quality is the biggest risk. Reject poor fallback art.
+- OpenAI Images API may fail if billing or hard limit is blocked; text can update while new images fall back.
+- X credentials exist in GitHub Secrets and local setup; never print secret values.
+- Custom-domain HTTPS may still show browser warnings until GitHub finishes certificate provisioning.
 
-## Deployment Flow
+## Standard Work Protocol
 
-1. Check `git status --short --branch`.
-2. Inspect the actual files related to the request.
+1. Run `git status --short --branch`.
+2. Inspect only the relevant current files.
 3. Make focused changes.
-4. Run the relevant checks; at minimum run `npm test` for site changes.
+4. Run checks; for site changes, at least run `npm test`.
 5. Review `git diff`.
 6. Commit and push when the change should publish.
-7. Verify GitHub Actions and the public page.
+7. Watch GitHub Actions if deployment or automation changed.
+8. Verify the public page when needed.
