@@ -1,0 +1,66 @@
+name: Meta Daily Post
+
+on:
+  schedule:
+    # 07:15 Asia/Taipei. GitHub cron is UTC.
+    - cron: "15 23 * * *"
+  workflow_dispatch:
+    inputs:
+      post:
+        description: "Actually publish to Facebook / Instagram"
+        required: false
+        type: boolean
+        default: true
+      platforms:
+        description: "Comma-separated platforms: facebook,instagram"
+        required: false
+        type: string
+        default: "facebook,instagram"
+
+permissions:
+  contents: read
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+
+      - name: Prepare social post data
+        run: |
+          npm run generate:share-pack
+          npm run generate:social-posts
+
+      - name: Validate content before posting
+        run: |
+          npm test
+          npm run test:meta-post
+
+      - name: Publish Meta daily post
+        run: |
+          mkdir -p .tmp
+          npm run post:meta
+        env:
+          POST_TO_META: ${{ github.event_name == 'schedule' || github.event.inputs.post == 'true' }}
+          META_ALLOW_SKIP: "true"
+          META_PLATFORMS: ${{ github.event.inputs.platforms || 'facebook,instagram' }}
+          POST_META_RESULT_PATH: ".tmp/meta-post-result.json"
+          PUBLIC_SITE_URL: "https://taiwanape.github.io/auntie-no-mad/"
+          META_GRAPH_VERSION: ${{ secrets.META_GRAPH_VERSION || 'v23.0' }}
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+
+      - name: Summarize Meta post
+        if: always()
+        run: npm run summarize:meta
+        env:
+          POST_META_RESULT_PATH: ".tmp/meta-post-result.json"

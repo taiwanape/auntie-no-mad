@@ -10,7 +10,8 @@ const requiredWorkflows = [
   "Daily Auntie Update",
   "Live News Update",
   "Deploy GitHub Pages",
-  "X Daily Post"
+  "X Daily Post",
+  "Meta Daily Post"
 ];
 
 const checks = [];

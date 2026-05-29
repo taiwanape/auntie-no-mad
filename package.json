@@ -16,10 +16,13 @@
     "test:domain": "node scripts/check-domain-health.mjs",
     "test:x-profile": "node scripts/audit-x-profile.mjs",
     "test:x-readiness": "node scripts/audit-x-account-readiness.mjs",
+    "test:meta-post": "node scripts/post-meta-daily.mjs --dry-run",
     "ops:health": "node scripts/ops-health-check.mjs",
     "post:x": "node scripts/post-x-manual.mjs",
+    "post:meta": "node scripts/post-meta-daily.mjs",
     "delete:x-posts": "node scripts/delete-x-posts.mjs",
     "summarize:daily": "node scripts/write-action-summary.mjs daily",
-    "summarize:x": "node scripts/write-action-summary.mjs x-post"
+    "summarize:x": "node scripts/write-action-summary.mjs x-post",
+    "summarize:meta": "node scripts/write-action-summary.mjs meta-post"
   }
 }

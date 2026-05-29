@@ -39,6 +39,12 @@ npm run test:x-queue
 npm run test:x-readiness
 ```
 
+Meta / FB / IG 發文 dry-run：
+
+```powershell
+npm run test:meta-post
+```
+
 ## 主要內容資料
 
 - `data/site-content.json`：首頁主要內容。
@@ -63,6 +69,7 @@ npm run test:x-readiness
 - `.github/workflows/pages.yml`
 - `.github/workflows/domain-health-check.yml`
 - `.github/workflows/x-daily-post.yml`
+- `.github/workflows/meta-daily-post.yml`
 
 每日更新流程會：
 
@@ -119,5 +126,29 @@ GitHub Secrets 可能會用到：
 - `X_ACCESS_TOKEN`
 - `X_ACCESS_TOKEN_SECRET`
 - `X_BEARER_TOKEN`
+- `META_PAGE_ID`
+- `META_PAGE_ACCESS_TOKEN`
+- `IG_USER_ID`
+- `IG_ACCESS_TOKEN`
+- `META_GRAPH_VERSION`（可選，預設 `v23.0`）
 
 不要把任何 secret 寫進 repo。
+
+## FB / IG 自動發文
+
+`Meta Daily Post` workflow 會在每日內容更新後，把 `data/social-posts.json` 的 Facebook / Instagram 文案與圖片發出去。
+
+目前設計：
+
+- FB 粉絲頁：用 `META_PAGE_ID` + `META_PAGE_ACCESS_TOKEN` 發圖文。
+- IG：用 `IG_USER_ID` + `IG_ACCESS_TOKEN` 發單張圖文。
+- 圖片來源必須是公開網址；workflow 會用 GitHub Pages 的圖片網址。
+- 沒有 token 時 workflow 會安全略過並寫 summary，不會亂發或讓網站壞掉。
+- token 有填但權限錯誤時會失敗，方便檢查 Meta 權限。
+
+Meta App 權限通常需要：
+
+- Facebook Page：`pages_show_list`、`pages_read_engagement`、`pages_manage_posts`
+- Instagram：`instagram_basic`、`instagram_content_publish`
+
+IG 帳號必須是專業帳號，且已連到同一個 Facebook 粉絲頁。

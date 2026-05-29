@@ -231,9 +231,36 @@ function checkNoInvestmentAdvice(section, item) {
   );
 }
 
+function checkJsonArtifact(relativePath, label) {
+  if (!fileExists(relativePath)) return null;
+  const parsed = JSON.parse(fs.readFileSync(path.join(root, relativePath), "utf8"));
+  const serialized = JSON.stringify(parsed);
+  assert(!/\?{3,}/.test(serialized), `${label} contains question-mark mojibake such as ???`);
+  assert(!serialized.includes("\uFFFD"), `${label} contains replacement characters`);
+  assert(!/[銝嚗瘞]\S*[?]/.test(serialized), `${label} appears to contain mojibake text`);
+  return parsed;
+}
+
 const serializedData = JSON.stringify(content);
 assert(!/\?{3,}/.test(serializedData), "data/site-content.json contains question-mark mojibake such as ???");
 assert(!/[銝嚗瘞踹]\S*[?]/.test(serializedData), "data/site-content.json appears to contain mojibake text");
+
+const sharePack = checkJsonArtifact("data/share-pack.json", "data/share-pack.json");
+const socialPosts = checkJsonArtifact("data/social-posts.json", "data/social-posts.json");
+if (sharePack) {
+  assert(Array.isArray(sharePack.items), "data/share-pack.json must include items array");
+  (sharePack.items || []).forEach((item) => {
+    if (item.imagePath) checkAsset("sharePack", { ...item, shareImage: item.imagePath }, "shareImage");
+  });
+}
+if (socialPosts) {
+  ["x", "facebook", "instagram"].forEach((platform) => {
+    const post = socialPosts.posts?.[platform];
+    assert(post?.text, `data/social-posts.json missing ${platform} text`);
+    assert(post?.imagePath, `data/social-posts.json missing ${platform} imagePath`);
+    if (post?.imagePath) checkAsset("socialPosts", { ...post, socialImage: post.imagePath }, "socialImage");
+  });
+}
 
 ["lifeRadar", "pitfalls"].forEach((section) => {
   assert(Array.isArray(content[section]), `${section} must be an array`);

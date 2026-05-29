@@ -82,4 +82,31 @@ function xSummary() {
   ].join("");
 }
 
-writeSummary(mode === "x-post" ? xSummary() : dailySummary());
+function metaSummary() {
+  const resultPath = process.env.POST_META_RESULT_PATH || ".tmp/meta-post-result.json";
+  const result = readJson(resultPath);
+  if (!result) {
+    return [
+      line("## 阿姨別生氣 Meta 發文"),
+      line(`找不到結果檔 \`${resultPath}\`，請看 \`Publish Meta daily post\` log。`)
+    ].join("");
+  }
+
+  const rows = Object.entries(result.platforms || {})
+    .map(([platform, item]) => {
+      const status = item.mode === "posted" ? "posted" : item.mode === "skip" ? "skipped" : "dry-run";
+      const detail = item.response?.id || item.response?.post_id || item.reason || item.sourceTitle || "";
+      return line(`- ${platform}: ${status}${detail ? ` - ${detail}` : ""}`);
+    })
+    .join("");
+
+  return [
+    line("## 阿姨別生氣 Meta 發文"),
+    line(`**狀態** ${result.ok ? "ok" : "failed"} / ${result.mode || "unknown"}`),
+    result.error ? line(`**錯誤** ${result.error}`) : "",
+    result.reason ? line(`**原因** ${result.reason}`) : "",
+    rows || line("- 沒有平台結果")
+  ].join("");
+}
+
+writeSummary(mode === "x-post" ? xSummary() : mode === "meta-post" ? metaSummary() : dailySummary());
