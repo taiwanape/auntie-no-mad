@@ -450,6 +450,8 @@ try {
   assert(articleGrowthJs.includes("growth-actions"), "article-growth.js must render the article retention CTA");
   assert(articleGrowthJs.includes("share.html"), "article-growth.js must link article readers to the share pack");
   assert(articleGrowthJs.includes("links.html?utm_source=article_cta"), "article-growth.js must link article readers to the social entry page");
+  assert(articleGrowthJs.includes("social-arrival-nudge"), "article-growth.js must keep a social arrival nudge for referred visitors");
+  assert(articleGrowthJs.includes("article_arrival"), "article-growth.js social arrival nudge must use tracked internal links");
 } catch (error) {
   errors.push(`article-growth.js syntax error: ${error.message}`);
 }

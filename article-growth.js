@@ -63,9 +63,44 @@
     return mixed.slice(0, 3);
   }
 
+  function socialSourceLabel() {
+    const params = new URLSearchParams(window.location.search);
+    const source = String(params.get("utm_source") || "").toLowerCase();
+    const referrer = String(document.referrer || "").toLowerCase();
+    if (source.includes("line") || referrer.includes("line.me")) return "LINE";
+    if (source.includes("facebook") || source === "fb" || referrer.includes("facebook.com")) return "FB";
+    if (source === "x" || source.includes("x_daily") || referrer.includes("x.com") || referrer.includes("twitter.com")) return "X";
+    if (source.includes("instagram") || referrer.includes("instagram.com")) return "IG";
+    if (source.includes("link_in_bio")) return "社群入口";
+    return "";
+  }
+
+  function renderSocialArrivalNudge(article) {
+    if (!article || $(".social-arrival-nudge")) return;
+    const source = socialSourceLabel();
+    if (!source) return;
+
+    const nudge = document.createElement("section");
+    nudge.className = "article-growth social-arrival-nudge";
+    nudge.innerHTML = `
+      <div class="growth-actions" aria-label="社群來訪提示">
+        <div>
+          <strong>${escapeHtml(source)} 來的朋友，先別滑走</strong>
+          <span>這篇先看完，等等回今日必看。阿姨每天早上整理生活雷達、踩坑日記、股市 ETF，不講官腔。</span>
+        </div>
+        <a href="../today.html?utm_source=article_arrival&utm_medium=internal&utm_campaign=today_page">今日必看</a>
+        <a href="../daily-reminder.ics" download="auntie-no-mad-daily-reminder.ics">每天提醒</a>
+        <a href="../share.html?utm_source=article_arrival&utm_medium=internal&utm_campaign=share_pack">分享包</a>
+      </div>
+    `;
+    article.insertAdjacentElement("beforebegin", nudge);
+  }
+
   function render(currentItem, related) {
     const article = $("article");
-    if (!article || $(".article-growth")) return;
+    if (!article) return;
+    renderSocialArrivalNudge(article);
+    if ($(".article-growth:not(.social-arrival-nudge)")) return;
 
     const title =
       currentItem?.title ||
