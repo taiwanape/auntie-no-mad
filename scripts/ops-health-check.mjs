@@ -169,34 +169,46 @@ function checkLocalContent() {
 }
 
 function checkGitHubActions() {
-  const gh = spawnSync("gh", [
-    "run",
-    "list",
-    "--repo",
-    repo,
-    "--limit",
-    "40",
-    "--json",
-    "databaseId,workflowName,status,conclusion,createdAt,event,url,headBranch"
-  ], {
-    cwd: root,
-    encoding: "utf8",
-    windowsHide: true,
-    env: {
-      ...process.env,
-      GH_TOKEN: process.env.GH_TOKEN || process.env.GITHUB_TOKEN || process.env.GH_TOKEN
-    }
-  });
+  const ghBaseEnv = {
+    ...process.env,
+    GH_TOKEN: process.env.GH_TOKEN || process.env.GITHUB_TOKEN || process.env.GH_TOKEN
+  };
 
-  if (gh.status !== 0) {
-    addWarning(`Unable to inspect GitHub Actions with gh: ${(gh.stderr || gh.stdout || "").trim()}`);
-    return;
+  function latestWorkflowRun(workflow) {
+    const gh = spawnSync("gh", [
+      "run",
+      "list",
+      "--repo",
+      repo,
+      "--workflow",
+      workflow,
+      "--limit",
+      "1",
+      "--json",
+      "databaseId,workflowName,status,conclusion,createdAt,event,url,headBranch"
+    ], {
+      cwd: root,
+      encoding: "utf8",
+      windowsHide: true,
+      env: ghBaseEnv
+    });
+
+    if (gh.status !== 0) {
+      return { error: (gh.stderr || gh.stdout || "").trim() };
+    }
+
+    return { run: JSON.parse(gh.stdout)[0] || null };
   }
 
-  const runs = JSON.parse(gh.stdout);
   details.actions = {};
   for (const workflow of requiredWorkflows) {
-    const latest = runs.find((run) => run.workflowName === workflow);
+    const { run: latest, error } = latestWorkflowRun(workflow);
+    if (error) {
+      addWarning(`Unable to inspect GitHub Actions workflow ${workflow} with gh: ${error}`);
+      details.actions[workflow] = null;
+      continue;
+    }
+
     details.actions[workflow] = latest || null;
     if (!latest) {
       addCheck(`workflow ${workflow}`, false, "no recent run found");
@@ -217,10 +229,7 @@ function checkGitHubActions() {
         cwd: root,
         encoding: "utf8",
         windowsHide: true,
-        env: {
-          ...process.env,
-          GH_TOKEN: process.env.GH_TOKEN || process.env.GITHUB_TOKEN || process.env.GH_TOKEN
-        }
+        env: ghBaseEnv
       });
       if (view.status === 0) {
         if (/"mode":\s*"skip"/.test(view.stdout) || /skipped/i.test(view.stdout)) {
