@@ -1,8 +1,8 @@
-# 阿姨別生氣營運接手手冊
+# 阿姨別生氣營運維護手冊
 
 更新時間：2026-05-29
 
-這份文件是 Codex 接手「阿姨別生氣」網站與 X 帳號後的日常維運準則。之後內容更新、排程調整、錯誤修正、部署發布與 X 發文，都以這份文件、`docs/SITE_OPERATING_SPEC.md`、`docs/GROWTH_PLAYBOOK.md`、`docs/VOICE_GUIDE.md` 為準。
+這份文件是 Codex 維護「阿姨別生氣」網站與 X 帳號的日常維運準則。之後內容更新、排程調整、錯誤修正、部署發布與 X 發文，都以這份文件、`docs/CODEX_PROJECT_CONTEXT.md`、`docs/SITE_OPERATING_SPEC.md`、`docs/GROWTH_PLAYBOOK.md`、`docs/VOICE_GUIDE.md` 為準。
 
 ## 責任範圍
 

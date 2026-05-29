@@ -83,9 +83,9 @@
 5. 新增正式社群素材時納入 git；測試截圖、失敗草稿與 secrets 不納入 git。
 6. 逐步清理舊文件亂碼與過時說明。
 
-## 10. 接手狀態
+## 10. 維運狀態
 
 - 本機 `npm test`：2026-05-29 通過。
 - 本機 `npm run test:x-api`：2026-05-29 通過，確認帳號 `@auntienomad`。
 - GitHub workflows：2026-05-29 查詢時主要 workflow 皆為 active，近期 run 皆為 success。
-- 另見 `docs/OPERATIONS_RUNBOOK.md` 作為日常接手手冊。
+- 另見 `docs/CODEX_PROJECT_CONTEXT.md` 與 `docs/OPERATIONS_RUNBOOK.md` 作為日常維護依據。
