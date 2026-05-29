@@ -30,6 +30,7 @@ const staticUrls = [
   "archive.html",
   "today.html",
   "share.html",
+  "links.html",
   "tools/index.html",
   "tools/unit-converter.html"
 ];
