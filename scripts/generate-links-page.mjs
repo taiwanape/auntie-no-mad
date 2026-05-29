@@ -352,6 +352,39 @@ const html = `<!DOCTYPE html>
       gap: 10px;
     }
 
+    .return-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .return-row a {
+      display: grid;
+      gap: 4px;
+      min-height: 74px;
+      padding: 12px;
+      border: 3px solid var(--ink);
+      border-radius: 16px;
+      background: white;
+      color: var(--ink);
+      box-shadow: 3px 3px 0 var(--ink);
+      text-decoration: none;
+      font-weight: 1000;
+      text-align: center;
+      align-content: center;
+    }
+
+    .return-row a:first-child {
+      background: var(--pink);
+      color: white;
+    }
+
+    .return-row small {
+      font-size: 12px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
     .fine-print {
       margin: 16px 0 0;
       text-align: center;
@@ -378,7 +411,8 @@ const html = `<!DOCTYPE html>
       }
 
       .button-grid,
-      .social-row {
+      .social-row,
+      .return-row {
         grid-template-columns: 1fr;
       }
 
@@ -440,6 +474,24 @@ const html = `<!DOCTYPE html>
     <section class="link-panel" aria-labelledby="storyLinksTitle">
       <h2 id="storyLinksTitle">最新圖文入口</h2>
       ${articleCards || `<a class="story-link" href="${escapeHtml(todayUrl)}"><img src="${defaultImage}" alt="${escapeHtml(siteName)}"><span><small>今日重點</small><strong>今天先看阿姨整理</strong><em>資料正在更新，先進首頁看最新內容。</em></span></a>`}
+    </section>
+
+    <section class="link-panel" aria-labelledby="returnTitle">
+      <h2 id="returnTitle">明天也要回來看</h2>
+      <div class="return-row">
+        <a href="daily-reminder.ics" download="auntie-no-mad-daily-reminder.ics">
+          每天 7 點提醒
+          <small>加到行事曆</small>
+        </a>
+        <a href="rss.xml?utm_source=link_in_bio&utm_medium=owned&utm_campaign=rss">
+          RSS 訂閱
+          <small>給閱讀器</small>
+        </a>
+        <a href="feed.json?utm_source=link_in_bio&utm_medium=owned&utm_campaign=json_feed">
+          JSON Feed
+          <small>給工具接</small>
+        </a>
+      </div>
     </section>
 
     <section class="link-panel" aria-labelledby="socialTitle">

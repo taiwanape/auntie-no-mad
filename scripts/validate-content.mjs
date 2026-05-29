@@ -501,6 +501,9 @@ assert(linksHtml.includes("today.html"), "links.html must link to the stable tod
 assert(linksHtml.includes("share.html"), "links.html must link to the daily share pack");
 assert(linksHtml.includes("tools/index.html"), "links.html must link to the tools page");
 assert(linksHtml.includes("archive.html"), "links.html must link to archive");
+assert(linksHtml.includes("daily-reminder.ics"), "links.html must offer the daily calendar reminder");
+assert(linksHtml.includes("rss.xml?utm_source=link_in_bio"), "links.html must offer RSS subscription tracking");
+assert(linksHtml.includes("feed.json?utm_source=link_in_bio"), "links.html must offer JSON Feed subscription tracking");
 assert(linksHtml.includes("instagram.com/auntienomad"), "links.html must link to Instagram");
 assert(linksHtml.includes("facebook.com/profile.php?id=61553234457401"), "links.html must link to Facebook");
 assert(linksHtml.includes("x.com/auntienomad"), "links.html must link to X");
