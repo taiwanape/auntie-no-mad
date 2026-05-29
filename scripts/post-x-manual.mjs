@@ -146,6 +146,42 @@ function assertDailyPostImageReady(item, content, report) {
   };
 }
 
+function buildTweetFromSocialPosts() {
+  const socialPostsPath = path.join(root, "data", "social-posts.json");
+  if (!fs.existsSync(socialPostsPath)) {
+    throw new Error("data/social-posts.json not found. Run npm run generate:social-posts first.");
+  }
+
+  const socialPosts = JSON.parse(fs.readFileSync(socialPostsPath, "utf8"));
+  const xPost = socialPosts.posts?.x;
+  if (!xPost?.text || !xPost?.imagePath) {
+    throw new Error("data/social-posts.json does not contain a ready X post with text and imagePath.");
+  }
+
+  let imageReadiness = { ok: true, imagePath: xPost.imagePath, source: "social-posts" };
+  if (process.env.REQUIRE_DAILY_IMAGES === "true") {
+    const contentPath = path.join(root, "data", "site-content.json");
+    const reportPath = path.join(root, "data", "review-report.json");
+    const content = JSON.parse(fs.readFileSync(contentPath, "utf8"));
+    const report = JSON.parse(fs.readFileSync(reportPath, "utf8"));
+    imageReadiness = assertDailyPostImageReady({ hero: xPost.imagePath }, content, report);
+    if (!imageReadiness.ok) {
+      return {
+        skip: true,
+        reason: imageReadiness.reason,
+        imagePath: imageReadiness.imagePath
+      };
+    }
+  }
+
+  return {
+    text: validateTweetText(xPost.text),
+    imagePath: imageReadiness.imagePath,
+    sourceSlug: xPost.url || socialPosts.source?.primaryArticleUrl,
+    imageSource: imageReadiness.source || "social-posts"
+  };
+}
+
 function buildDailyTweetFromContent() {
   const contentPath = path.join(root, "data", "site-content.json");
   const content = JSON.parse(fs.readFileSync(contentPath, "utf8"));
@@ -241,7 +277,11 @@ async function main() {
   if (shouldPost) assertCredentials();
 
   const dailyPost =
-    process.env.X_POST_SOURCE === "daily-content" ? buildDailyTweetFromContent() : null;
+    process.env.X_POST_SOURCE === "social-posts"
+      ? buildTweetFromSocialPosts()
+      : process.env.X_POST_SOURCE === "daily-content"
+        ? buildDailyTweetFromContent()
+        : null;
   if (dailyPost?.skip) {
     emitResult({ mode: "skip", reason: dailyPost.reason });
     return;

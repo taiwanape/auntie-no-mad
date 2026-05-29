@@ -37,6 +37,9 @@ jobs:
       - name: Generate share pack
         run: npm run generate:share-pack
 
+      - name: Generate social post drafts
+        run: npm run generate:social-posts
+
       - name: Validate content
         run: npm test
 
@@ -45,7 +48,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/site-content.json data/share-pack.json sitemap.xml robots.txt rss.xml feed.json
+          git add data/site-content.json data/share-pack.json data/social-posts.json sitemap.xml robots.txt rss.xml feed.json
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No live news changes to commit."

@@ -35,12 +35,14 @@ npm test
 - 首頁 inline script 是否可解析
 - 文章 slug 是否存在
 - `data/share-pack.json` 是否存在，且分享連結都有 UTM 追蹤
+- `data/social-posts.json` 是否存在，且 X / Facebook / Instagram 都有可用貼文與圖片
 
 ## 內容資料位置
 
 - 首頁主要資料：`data/site-content.json`
 - 每日審核報告：`data/review-report.json`，由每日更新流程產生
 - 每日社群分享素材包：`data/share-pack.json`
+- 每日社群貼文草稿：`data/social-posts.json`
 - 即時新聞：`data/site-content.json` 的 `liveNews`
 - 生活雷達文章：`radar/`
 - 踩坑日記文章：`stories/`
@@ -74,8 +76,9 @@ GitHub Actions workflow：
 6. 通過才寫入 `data/site-content.json` 與文章頁
 7. 產生 `sitemap.xml` 與 `robots.txt`
 8. 產生 `data/share-pack.json`，提供官網、即時新聞、生活雷達、踩坑日記、股市 ETF 的分享文與 UTM 連結
-9. 執行 `npm test`
-10. 有變更才自動 commit / push
+9. 產生 `data/social-posts.json`，提供 X / Facebook / Instagram 每日導流貼文草稿
+10. 執行 `npm test`
+11. 有變更才自動 commit / push
 
 ## 即時新聞更新
 
@@ -271,9 +274,10 @@ docs/GROWTH_PLAYBOOK.md
 - `rss.xml`
 - `feed.json`
 - `data/share-pack.json`
+- `data/social-posts.json`
 - `sitemap.xml`
 - `robots.txt`
-- GitHub Actions 每日更新後會一併提交 SEO / feed / share pack 檔案
+- GitHub Actions 每日更新後會一併提交 SEO / feed / share pack / social posts 檔案
 
 固定節奏：
 

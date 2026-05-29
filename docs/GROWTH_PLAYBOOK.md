@@ -17,6 +17,7 @@
 - 確認首頁有更新生活雷達、踩坑日記、股市 ETF、冰箱便條紙。
 - 確認首頁「今日必看」三張卡都有指向當天文章，並且 LINE / FB / X 分享入口可用。
 - 確認 `data/share-pack.json` 已更新，裡面要有官網、即時新聞、生活雷達、踩坑日記、股市 ETF 的分享文和 UTM 連結。
+- 確認 `data/social-posts.json` 已更新，X / Facebook / Instagram 都要有當天導流貼文、圖片和 UTM 連結。
 - 查看 `data/review-report.json`，確認沒有來源缺失、圖片不相干或股市投資建議問題。
 - 抽查首頁手機版，尤其是大標、卡片、圖文不要溢出。
 
@@ -51,6 +52,7 @@
 - 每天更新後先檢查三張卡是否真的換到當天內容。
 - 每天自動產生 `data/share-pack.json`，這是社群小編或自動貼文腳本要拿的素材包。
 - 分享連結一律帶 UTM：`utm_source` 分 LINE、Facebook、X、copy，`utm_campaign` 分不同內容欄位，之後才看得出哪裡帶流量。
+- 每天自動產生 `data/social-posts.json`，這是實際導流貼文草稿。X 自動發文優先讀這份，不再臨時亂組文案。
 
 ### X
 

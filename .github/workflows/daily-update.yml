@@ -52,6 +52,9 @@ jobs:
       - name: Generate share pack
         run: npm run generate:share-pack
 
+      - name: Generate social post drafts
+        run: npm run generate:social-posts
+
       - name: Validate content
         run: npm test
 

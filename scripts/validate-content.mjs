@@ -275,15 +275,37 @@ if (fs.existsSync(sharePackPath)) {
     assert(/^https?:\/\//.test(item.articleUrl || ""), `share-pack: ${item.kind} articleUrl must be public URL`);
     assert(/^https?:\/\//.test(item.copyUrl || ""), `share-pack: ${item.kind} copyUrl must be public URL`);
     assert(String(item.copyUrl || "").includes("utm_source=copy"), `share-pack: ${item.kind} copyUrl missing copy UTM`);
+    if (item.imagePath) checkAsset("share-pack", { ...item, imageCandidate: item.imagePath }, "imageCandidate");
     assert(String(item.shareText || "").includes(item.title), `share-pack: ${item.kind} shareText must include title`);
     ["line", "facebook", "x"].forEach((platform) => {
       const link = item.platformLinks?.[platform] || "";
       const decoded = decodeURIComponent(link);
       assert(/^https?:\/\//.test(link), `share-pack: ${item.kind} ${platform} link must be URL`);
       assert(decoded.includes(`utm_source=${platform}`), `share-pack: ${item.kind} ${platform} link missing UTM`);
+      assert(
+        String(item.trackingUrls?.[platform] || "").includes(`utm_source=${platform}`),
+        `share-pack: ${item.kind} ${platform} trackingUrl missing UTM`
+      );
     });
     assert(!/\.svg(?:[?#"]|$)/i.test(JSON.stringify(item)), `share-pack: ${item.kind} must not reference SVG assets`);
   });
+}
+
+const socialPostsPath = path.join(root, "data", "social-posts.json");
+assert(fileExists("data/social-posts.json"), "data/social-posts.json missing; run npm run generate:social-posts");
+if (fs.existsSync(socialPostsPath)) {
+  const socialPosts = JSON.parse(fs.readFileSync(socialPostsPath, "utf8"));
+  ["x", "facebook", "instagram"].forEach((platform) => {
+    const post = socialPosts.posts?.[platform];
+    assert(post, `social-posts: ${platform} post is required`);
+    assert(post.text, `social-posts: ${platform} text is required`);
+    assert(/^https?:\/\//.test(post.url || ""), `social-posts: ${platform} url must be public URL`);
+    assert(String(post.url || "").includes(`utm_source=${platform === "x" ? "x_daily" : `${platform}_daily`}`), `social-posts: ${platform} url missing daily UTM`);
+    assert(post.imagePath, `social-posts: ${platform} imagePath is required`);
+    checkAsset("social-posts", { title: `${platform} post`, imageCandidate: post.imagePath }, "imageCandidate");
+    assert(!/\.svg(?:[?#"]|$)/i.test(JSON.stringify(post)), `social-posts: ${platform} must not reference SVG assets`);
+  });
+  assert([...String(socialPosts.posts?.x?.text || "")].length <= 270, "social-posts: X text must stay under 270 chars");
 }
 
 for (const [index, script] of [...indexHtml.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]).entries()) {

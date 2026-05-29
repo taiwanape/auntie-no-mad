@@ -22,6 +22,11 @@ jobs:
         with:
           node-version: "24"
 
+      - name: Prepare social post data
+        run: |
+          npm run generate:share-pack
+          npm run generate:social-posts
+
       - name: Validate content before posting
         run: npm test
 
@@ -32,7 +37,7 @@ jobs:
           npm run post:x | tee .tmp/x-post-output.log
         env:
           POST_TO_X: "true"
-          X_POST_SOURCE: "daily-content"
+          X_POST_SOURCE: "social-posts"
           REQUIRE_DAILY_IMAGES: "true"
           POST_X_RESULT_PATH: ".tmp/x-post-result.json"
           X_API_KEY: ${{ secrets.X_API_KEY }}

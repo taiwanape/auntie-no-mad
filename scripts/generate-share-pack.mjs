@@ -7,6 +7,8 @@ const outputPath = path.join(root, "data", "share-pack.json");
 
 const content = JSON.parse(fs.readFileSync(contentPath, "utf8"));
 const siteUrl = content.site?.url || "https://taiwanape.github.io/auntie-no-mad/";
+const generatedAt =
+  content.site?.liveNewsUpdatedAt || content.site?.updatedAt || new Date().toISOString();
 
 function absoluteUrl(href = "") {
   if (!href || href === "#") return siteUrl;
@@ -59,9 +61,20 @@ function buildItem(kind, item, fallbackHref, campaign) {
     kind,
     title,
     summary,
+    date: item.date || "",
+    category: item.category || "",
+    sourceName: item.sourceName || "",
     sourceUrl: item.sourceUrl || "",
+    imagePath: item.hero || item.thumbnail || item.image || "",
+    imageAlt: item.thumbnailAlt || item.imageAlt || item.title || "",
     articleUrl: absoluteUrl(href),
     copyUrl,
+    trackingUrls: {
+      copy: copyUrl,
+      line: lineUrl,
+      facebook: facebookUrl,
+      x: xUrl
+    },
     shareText: copyText,
     platformLinks: {
       line: `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(lineUrl)}`,
@@ -96,7 +109,7 @@ const items = [
 
 const homepageUrl = withUtm(siteUrl, "copy", "homepage_share");
 const sharePack = {
-  generatedAt: new Date().toISOString(),
+  generatedAt,
   site: {
     name: content.site?.name || "阿姨別生氣",
     url: siteUrl,
