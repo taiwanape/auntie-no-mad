@@ -358,7 +358,15 @@ const html = `<!DOCTYPE html>
       gap: 10px;
     }
 
-    .return-row a {
+    .entry-share-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .return-row a,
+    .entry-share-row a,
+    .entry-share-row button {
       display: grid;
       gap: 4px;
       min-height: 74px;
@@ -372,14 +380,18 @@ const html = `<!DOCTYPE html>
       font-weight: 1000;
       text-align: center;
       align-content: center;
+      font: inherit;
+      cursor: pointer;
     }
 
-    .return-row a:first-child {
+    .return-row a:first-child,
+    .entry-share-row button {
       background: var(--pink);
       color: white;
     }
 
-    .return-row small {
+    .return-row small,
+    .entry-share-row small {
       font-size: 12px;
       line-height: 1.25;
       font-weight: 900;
@@ -412,7 +424,8 @@ const html = `<!DOCTYPE html>
 
       .button-grid,
       .social-row,
-      .return-row {
+      .return-row,
+      .entry-share-row {
         grid-template-columns: 1fr;
       }
 
@@ -494,6 +507,20 @@ const html = `<!DOCTYPE html>
       </div>
     </section>
 
+    <section class="link-panel" aria-labelledby="entryShareTitle">
+      <h2 id="entryShareTitle">把這頁丟給朋友</h2>
+      <div class="entry-share-row">
+        <button type="button" data-share-entry data-title="${escapeHtml(`${siteName}｜每天把生活新聞講成人話`)}" data-text="${escapeHtml("這頁每天會換最新生活雷達、踩坑提醒、股市 ETF 白話整理。")}" data-url="${escapeHtml(withUtm("links.html", "native_share", "link_in_bio"))}">
+          一鍵分享入口
+          <small>手機會叫出分享選單</small>
+        </button>
+        <button type="button" data-copy-entry="${escapeHtml(`${siteName}：每天把生活新聞、踩坑提醒、股市 ETF 講成人話。\n${withUtm("links.html", "copy", "link_in_bio")}`)}">
+          複製入口連結
+          <small>貼到 LINE 群也可以</small>
+        </button>
+      </div>
+    </section>
+
     <section class="link-panel" aria-labelledby="socialTitle">
       <h2 id="socialTitle">追蹤阿姨</h2>
       <div class="social-row">
@@ -505,6 +532,39 @@ const html = `<!DOCTYPE html>
 
     <p class="fine-print">每日早上更新。股市內容是公開資訊整理，不是投資建議；錢袋自己顧，阿姨只幫你翻成人話。</p>
   </main>
+  <script>
+    document.addEventListener("click", async (event) => {
+      const shareButton = event.target.closest("[data-share-entry]");
+      if (shareButton) {
+        const shareData = {
+          title: shareButton.dataset.title || document.title,
+          text: shareButton.dataset.text || "",
+          url: shareButton.dataset.url || window.location.href
+        };
+        if (navigator.share) {
+          await navigator.share(shareData).catch(() => {});
+          return;
+        }
+        const text = [shareData.title, shareData.text, shareData.url].filter(Boolean).join("\\n");
+        await navigator.clipboard?.writeText(text);
+        const original = shareButton.firstChild.textContent;
+        shareButton.firstChild.textContent = "已複製入口";
+        setTimeout(() => {
+          shareButton.firstChild.textContent = original;
+        }, 1400);
+        return;
+      }
+
+      const copyButton = event.target.closest("[data-copy-entry]");
+      if (!copyButton) return;
+      const original = copyButton.firstChild.textContent;
+      const ok = await navigator.clipboard?.writeText(copyButton.dataset.copyEntry || "").then(() => true, () => false);
+      copyButton.firstChild.textContent = ok ? "已複製" : "複製失敗";
+      setTimeout(() => {
+        copyButton.firstChild.textContent = original;
+      }, 1400);
+    });
+  </script>
 </body>
 </html>
 `;

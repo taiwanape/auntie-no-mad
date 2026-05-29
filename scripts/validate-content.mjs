@@ -504,12 +504,23 @@ assert(linksHtml.includes("archive.html"), "links.html must link to archive");
 assert(linksHtml.includes("daily-reminder.ics"), "links.html must offer the daily calendar reminder");
 assert(linksHtml.includes("rss.xml?utm_source=link_in_bio"), "links.html must offer RSS subscription tracking");
 assert(linksHtml.includes("feed.json?utm_source=link_in_bio"), "links.html must offer JSON Feed subscription tracking");
+assert(linksHtml.includes("data-share-entry"), "links.html must offer native sharing for the social entry page");
+assert(linksHtml.includes("data-copy-entry"), "links.html must offer one-tap copying for the social entry page");
+assert(linksHtml.includes("native_share"), "links.html native share must use tracked UTM parameters");
 assert(linksHtml.includes("instagram.com/auntienomad"), "links.html must link to Instagram");
 assert(linksHtml.includes("facebook.com/profile.php?id=61553234457401"), "links.html must link to Facebook");
 assert(linksHtml.includes("x.com/auntienomad"), "links.html must link to X");
 assert(linksHtml.includes('property="og:image"'), "links.html must include an OG image");
 assert(linksHtml.includes('type="application/ld+json"'), "links.html must include JSON-LD");
 assert(!/\.svg(?:[?#"]|$)/i.test(linksHtml), "links.html must not reference SVG assets");
+for (const [index, script] of [...linksHtml.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]).entries()) {
+  if (script.includes("application/ld+json")) continue;
+  try {
+    new Function(script);
+  } catch (error) {
+    errors.push(`links.html inline script ${index + 1} syntax error: ${error.message}`);
+  }
+}
 
 const webManifest = JSON.parse(fs.readFileSync(path.join(root, "site.webmanifest"), "utf8"));
 assert(webManifest.name === "阿姨別生氣", "site.webmanifest must use the site name");
