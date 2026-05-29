@@ -64,8 +64,8 @@ npm run test:x-api
 - Use API only.
 - Verified account: `@auntienomad`.
 - Current profile assets:
-  - `social/x-real-editorial-20260529/x-profile-avatar-real-editorial-20260529.jpg`
-  - `social/x-real-editorial-20260529/x-profile-cover-real-editorial-20260529.jpg`
+  - `social/x-profile-intense-20260529/x-profile-avatar-intense-20260529.jpg`
+  - `social/x-profile-intense-20260529/x-profile-cover-intense-20260529.jpg`
 - Recent verified post: `https://x.com/auntienomad/status/2060202163700396065`
 - X credentials are local in `x-bot/.env.local` and remote in GitHub Secrets. Do not print or commit values.
 
@@ -96,7 +96,7 @@ Codex heartbeat:
 ## Known State
 
 - X API credentials were verified on 2026-05-29.
-- X avatar and banner were updated to the real-person direction.
+- X avatar and banner were updated to the larger, more alluring real-person direction.
 - Bad old X posts were deleted.
 - `ops-health-check.mjs` exists and has passed.
 - `post-x-manual.mjs` can use approved raster fallback images when OpenAI image generation is unavailable.
