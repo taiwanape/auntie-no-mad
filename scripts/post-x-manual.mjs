@@ -98,22 +98,73 @@ function compact(text, maxLength) {
   return `${[...clean].slice(0, maxLength - 1).join("")}…`;
 }
 
+function normalizeAssetPath(value = "") {
+  return String(value).replaceAll("\\", "/");
+}
+
+function assertDailyPostImageReady(item, content, report) {
+  const imagePath = normalizeAssetPath(item.hero || item.thumbnail || defaultImage);
+  const absoluteImagePath = path.join(root, imagePath);
+  const imageSource = (report.sources || []).find((source) => source.name === "OpenAI Images API");
+  const approvedFallback = (report.sources || []).find(
+    (source) => source.name === "Approved Auntie raster image library"
+  );
+  const imageExists = fs.existsSync(absoluteImagePath);
+  const imageIsRaster = /\.(png|jpe?g|webp)$/i.test(imagePath);
+  const generatedImageCount = Number(content.generatedImages?.length || 0);
+  const openAiImagesReady = Boolean(imageSource?.ok && Number(imageSource.count || 0) > 0);
+  const approvedFallbackReady = Boolean(approvedFallback?.ok && Number(approvedFallback.count || 0) > 0);
+
+  if (report.status !== "approved") {
+    return {
+      ok: false,
+      imagePath,
+      reason: `Daily X post skipped because review report is ${report.status || "missing"}: ${(report.errors || []).join("; ") || "no errors recorded"}`
+    };
+  }
+
+  if (!imageExists || !imageIsRaster) {
+    return {
+      ok: false,
+      imagePath,
+      reason: `Daily X post skipped because image is not a ready raster asset: ${imagePath}`
+    };
+  }
+
+  if (openAiImagesReady || generatedImageCount > 0 || approvedFallbackReady) {
+    return {
+      ok: true,
+      imagePath,
+      source: openAiImagesReady ? "openai-images" : generatedImageCount > 0 ? "generated-images" : "approved-raster-fallback"
+    };
+  }
+
+  return {
+    ok: false,
+    imagePath,
+    reason: `Daily X post skipped because no approved image source is ready: ${(report.errors || []).join("; ") || imageSource?.error || "no generated image count"}`
+  };
+}
+
 function buildDailyTweetFromContent() {
   const contentPath = path.join(root, "data", "site-content.json");
   const content = JSON.parse(fs.readFileSync(contentPath, "utf8"));
+  const item = content.lifeRadar?.[0] || content.pitfalls?.[0];
+  if (!item) throw new Error("No daily lifeRadar or pitfalls content found.");
+
+  let imageReadiness = { ok: true, imagePath: item.hero || item.thumbnail || defaultImage };
   if (process.env.REQUIRE_DAILY_IMAGES === "true") {
     const reportPath = path.join(root, "data", "review-report.json");
     const report = JSON.parse(fs.readFileSync(reportPath, "utf8"));
-    const imageSource = (report.sources || []).find((source) => source.name === "OpenAI Images API");
-    if (!imageSource?.ok || Number(imageSource.count || 0) <= 0) {
+    imageReadiness = assertDailyPostImageReady(item, content, report);
+    if (!imageReadiness.ok) {
       return {
         skip: true,
-        reason: `Daily X post skipped because generated images are not ready: ${report.errors?.join("; ") || "no generated image count"}`
+        reason: imageReadiness.reason,
+        imagePath: imageReadiness.imagePath
       };
     }
   }
-  const item = content.lifeRadar?.[0] || content.pitfalls?.[0];
-  if (!item) throw new Error("No daily lifeRadar or pitfalls content found.");
 
   const categoryTag = item.category?.includes("踩坑") ? "#踩坑日記" : "#生活雷達";
   const sourceLabel = item.sourceName || "公開來源";
@@ -132,8 +183,9 @@ function buildDailyTweetFromContent() {
 
   return {
     text: validateTweetText(text),
-    imagePath: item.hero || item.thumbnail || defaultImage,
-    sourceSlug: item.slug
+    imagePath: imageReadiness.imagePath,
+    sourceSlug: item.slug,
+    imageSource: imageReadiness.source
   };
 }
 
@@ -201,6 +253,7 @@ async function main() {
     mode: shouldPost ? "post" : "dry-run",
     source: process.env.X_POST_SOURCE || "manual-default",
     sourceSlug: dailyPost?.sourceSlug,
+    imageSource: dailyPost?.imageSource,
     imagePath,
     text
   });
@@ -215,6 +268,7 @@ async function main() {
     text: tweet.data?.text,
     url: tweet.data?.id ? `https://x.com/auntienomad/status/${tweet.data.id}` : undefined,
     sourceSlug: dailyPost?.sourceSlug,
+    imageSource: dailyPost?.imageSource,
     imagePath
   });
 }

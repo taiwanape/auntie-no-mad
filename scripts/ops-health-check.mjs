@@ -204,6 +204,32 @@ function checkGitHubActions() {
     }
     const ok = latest.conclusion === "success" || latest.status === "in_progress" || latest.status === "queued";
     addCheck(`workflow ${workflow}`, ok, `${latest.status}/${latest.conclusion || "pending"} at ${latest.createdAt}`, { url: latest.url });
+
+    if (workflow === "X Daily Post" && latest.conclusion === "success") {
+      const view = spawnSync("gh", [
+        "run",
+        "view",
+        String(latest.databaseId),
+        "--repo",
+        repo,
+        "--log"
+      ], {
+        cwd: root,
+        encoding: "utf8",
+        windowsHide: true,
+        env: {
+          ...process.env,
+          GH_TOKEN: process.env.GH_TOKEN || process.env.GITHUB_TOKEN || process.env.GH_TOKEN
+        }
+      });
+      if (view.status === 0) {
+        if (/"mode":\s*"skip"/.test(view.stdout) || /skipped/i.test(view.stdout)) {
+          addWarning(`Latest X Daily Post workflow completed but skipped publishing: ${latest.url}`);
+        }
+      } else {
+        addWarning(`Unable to inspect X Daily Post log: ${(view.stderr || view.stdout || "").trim()}`);
+      }
+    }
   }
 }
 

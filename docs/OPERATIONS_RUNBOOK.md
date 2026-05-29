@@ -45,6 +45,7 @@ GitHub Actions workflow：`.github/workflows/ops-health-check.yml`
 
 - 08:15 Asia/Taipei 每日執行。
 - 檢查本機內容驗證、公開首頁、主要 Actions、X API、profile 視覺與最新貼文。
+- 若 `X Daily Post` workflow 綠燈但實際輸出 `mode: skip`，列為 warning，避免「有跑但沒發」被忽略。
 - OpenAI 圖片額度失敗但合格 raster fallback 可用時，列為 warning；不把網站視為中斷。
 
 ## 內容更新規則
