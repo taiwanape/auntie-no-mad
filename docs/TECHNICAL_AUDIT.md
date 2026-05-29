@@ -1,6 +1,6 @@
 # 阿姨別生氣技術盤點報告
 
-更新時間：2026-05-27
+更新時間：2026-05-29
 
 ## 1. 目前專案架構
 
@@ -12,7 +12,7 @@
 - `assets/`：角色、文章主圖、縮圖與 OG 圖素材。
 - `archive.html`：舊文章入口。
 - `site-info.css` 與 `about.html`、`contact.html`、`privacy.html`、`disclaimer.html`、`copyright.html`：網站資訊頁。
-- `.github/`：目前存在資料夾，但尚未建立正式 GitHub Actions workflow。
+- `.github/workflows/`：已建立正式 GitHub Actions workflow，包含每日內容更新、即時新聞、GitHub Pages 部署、X API smoke test、X 每日發文、手動發文與刪文。
 
 ## 2. 使用技術棧
 
@@ -49,15 +49,13 @@
 - 執行資料驗證與禁止詞檢查。
 - 自動 commit / push。
 
-## 6. 可能問題
+## 6. 目前仍需注意的問題
 
-- 目前沒有正式 GitHub Actions workflow，無法保證 GitHub 端自動更新。
-- 之前的本機自動化會產生內容但可能卡在 commit / push，造成「本機有、公開站沒有」。
-- `README.md`、`archive.html`、`products.json` 內有部分亂碼，需逐步清理。
-- `qa/` 截圖曾被 commit，應改成不追蹤的本機 QA 產物。
-- 首頁資料仍有大量寫死內容，需要改成資料檔驅動。
+- `README.md`、舊 bot 文件或歷史草稿中仍可能有早期亂碼，需逐步清理；正式 `data/site-content.json` 已有驗證阻擋亂碼。
+- `qa/`、本機截圖與社群草稿應保持為本機 QA 產物，避免混入正式發布。
+- X 真人版視覺已開始接入，但舊 cartoon 視覺仍是網站主體；之後要區分「網站卡通角色」與「X 真人角色」的使用邊界。
 - 股市內容需要固定審核，避免變成投資建議。
-- SEO 檔案目前尚未完整：缺 `sitemap.xml`、`robots.txt`，部分頁面 OG 設定不足。
+- OpenAI 圖片 API 可能遇到 billing hard limit；流程已允許使用已審核 raster 圖庫，但仍需巡檢 `data/review-report.json`。
 
 ## 7. GitHub Pages 部署方式
 
@@ -68,23 +66,26 @@
 
 ## 8. GitHub Actions 狀態
 
-- `.github/` 資料夾存在。
-- 尚未建立正式 workflow。
-- 下一階段會新增 `.github/workflows/daily-update.yml`，支援排程與手動觸發。
+- `daily-update.yml`：每天 04:00 與 06:00 Asia/Taipei 更新主要內容。
+- `live-news-update.yml`：每天 07:00 到 23:30 Asia/Taipei 每 30 分鐘刷新即時新聞。
+- `pages.yml`：push 到 `main` 後部署 GitHub Pages。
+- `x-daily-post.yml`：每天 06:45 Asia/Taipei 以 API 發布每日 X 貼文。
+- `x-api-smoke-test.yml`：手動驗證 X API credentials。
+- `x-manual-post.yml`：手動 API 發文。
+- `x-delete-posts.yml`：手動 API 刪文。
 
-## 9. 建議改造順序
+## 9. 目前維運順序
 
-1. 先讓首頁資料從 `data/site-content.json` 讀取，保留 HTML fallback。
-2. 建立資料驗證與內容審核腳本。
-3. 建立每日更新腳本，失敗時保留舊資料。
-4. 建立 GitHub Actions workflow。
-5. 補 sitemap、robots、JSON-LD 與社群分享 metadata。
-6. 重寫 README 與維護文件。
-7. 移除舊的本機交接文件與桌面排程依賴，改由 GitHub Actions 維護。
+1. 每日巡檢 Actions、`npm test`、X API、`data/review-report.json`。
+2. 優先修正會影響公開首頁、資料來源、X 發文或 Pages 部署的錯誤。
+3. 維持內容資料由 `data/site-content.json` 驅動，SEO 檔案由 `scripts/generate-seo.mjs` 產生。
+4. X 發文走 API 腳本，不使用瀏覽器模式。
+5. 新增正式社群素材時納入 git；測試截圖、失敗草稿與 secrets 不納入 git。
+6. 逐步清理舊文件亂碼與過時說明。
 
-## 10. 第一個 PR / commit 建議修改
+## 10. 接手狀態
 
-- 新增 `docs/TECHNICAL_AUDIT.md`。
-- 新增 `data/site-content.json`。
-- 修改 `index.html`：加入資料渲染與 fallback 防護。
-- 後續小 commit 再加入 GitHub Actions、review report、SEO 與 README。
+- 本機 `npm test`：2026-05-29 通過。
+- 本機 `npm run test:x-api`：2026-05-29 通過，確認帳號 `@auntienomad`。
+- GitHub workflows：2026-05-29 查詢時主要 workflow 皆為 active，近期 run 皆為 success。
+- 另見 `docs/OPERATIONS_RUNBOOK.md` 作為日常接手手冊。
