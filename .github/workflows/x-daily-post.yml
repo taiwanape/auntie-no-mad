@@ -49,6 +49,7 @@ jobs:
           POST_TO_X: "true"
           X_POST_SOURCE: "social-posts"
           REQUIRE_DAILY_IMAGES: "true"
+          FAIL_ON_SKIP: "true"
           POST_X_RESULT_PATH: ".tmp/x-post-result.json"
           X_API_KEY: ${{ secrets.X_API_KEY }}
           X_API_SECRET: ${{ secrets.X_API_SECRET }}

@@ -284,6 +284,9 @@ async function main() {
         : null;
   if (dailyPost?.skip) {
     emitResult({ mode: "skip", reason: dailyPost.reason });
+    if (process.env.FAIL_ON_SKIP === "true") {
+      process.exit(1);
+    }
     return;
   }
   const text = validateTweetText(process.env.X_POST_TEXT?.trim() || dailyPost?.text || defaultText);
