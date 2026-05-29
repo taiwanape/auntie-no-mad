@@ -264,6 +264,8 @@ assert(indexHtml.includes('type="application/rss+xml"'), "index.html must advert
 assert(indexHtml.includes('type="application/feed+json"'), "index.html must advertise feed.json");
 assert(indexHtml.includes('rel="manifest"'), "index.html must expose site.webmanifest");
 assert(indexHtml.includes('rel="me"'), "index.html must expose official social links");
+assert(indexHtml.includes("floating-share"), "index.html must keep a persistent sharing entry point");
+assert(indexHtml.includes("quickCopySite"), "index.html must support one-tap homepage copy sharing");
 
 const jsonFeedPath = path.join(root, "feed.json");
 if (fs.existsSync(jsonFeedPath)) {

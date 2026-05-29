@@ -314,6 +314,53 @@
       background: var(--mint);
     }
 
+    .floating-share {
+      position: fixed;
+      right: max(18px, calc((100vw - 1180px) / 2 + 18px));
+      bottom: 18px;
+      z-index: 30;
+      display: none;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      border: 4px solid var(--ink);
+      border-radius: 999px;
+      background: rgba(255,253,241,.96);
+      box-shadow: 6px 6px 0 var(--ink);
+      backdrop-filter: blur(10px);
+    }
+
+    .floating-share a,
+    .floating-share button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 7px 13px 8px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: white;
+      color: var(--ink);
+      font-weight: 1000;
+      white-space: nowrap;
+      cursor: pointer;
+      box-shadow: 3px 3px 0 var(--ink);
+    }
+
+    .floating-share a {
+      background: var(--pink);
+      color: white;
+    }
+
+    .floating-share button:hover,
+    .floating-share a:hover,
+    .floating-share button:focus-visible,
+    .floating-share a:focus-visible {
+      transform: translate(-1px, -1px);
+      box-shadow: 5px 5px 0 var(--ink);
+      outline: none;
+    }
+
     .cta {
       display: inline-flex;
       align-items: center;
@@ -1890,6 +1937,22 @@
         white-space: normal;
       }
 
+      .floating-share {
+        display: flex;
+        right: 12px;
+        left: 12px;
+        bottom: 12px;
+        justify-content: center;
+        border-radius: 18px;
+      }
+
+      .floating-share a,
+      .floating-share button {
+        flex: 1 1 0;
+        min-width: 0;
+        padding-inline: 8px;
+      }
+
       .profile-row {
         margin-top: -22px;
         margin-left: 0;
@@ -1972,6 +2035,11 @@
 </head>
 <body>
   <div class="shell" id="top">
+    <div class="floating-share" aria-label="快速分享阿姨別生氣">
+      <a href="share.html?utm_source=site_float&utm_medium=internal&utm_campaign=share_pack">今日分享包</a>
+      <button type="button" id="quickCopySite">複製官網</button>
+    </div>
+
     <header class="topbar">
       <a class="brand-mini" href="#top" aria-label="回到首頁">
         <img src="assets/auntie-avatar-nav.jpg" alt="阿姨別生氣導覽小頭像，短捲棕髮與像素墨鏡近臉版">
@@ -2483,6 +2551,7 @@
     const convertResult = document.querySelector("#convertResult");
     const convertFormula = document.querySelector("#convertFormula");
     const shareSite = document.querySelector("#shareSite");
+    const quickCopySite = document.querySelector("#quickCopySite");
     const SITE_BASE = "https://taiwanape.github.io/auntie-no-mad/";
 
     function updateClock() {
@@ -2519,6 +2588,15 @@
       setTimeout(() => {
         shareSite.textContent = "分享給朋友";
       }, 1800);
+    });
+
+    quickCopySite?.addEventListener("click", async () => {
+      const url = `${SITE_BASE}?utm_source=site_float&utm_medium=social&utm_campaign=homepage_share`;
+      const ok = await copyText(`阿姨別生氣：每天把生活新聞、踩坑提醒、股市 ETF 變成人話。\n${url}`);
+      quickCopySite.textContent = ok ? "已複製" : "複製失敗";
+      setTimeout(() => {
+        quickCopySite.textContent = "複製官網";
+      }, 1600);
     });
 
     async function copyText(text) {
