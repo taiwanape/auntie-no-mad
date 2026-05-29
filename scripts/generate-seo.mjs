@@ -6,6 +6,7 @@ const siteUrl = "https://taiwanape.github.io/auntie-no-mad/";
 const content = JSON.parse(fs.readFileSync(path.join(root, "data", "site-content.json"), "utf8"));
 const siteTitle = "阿姨別生氣";
 const siteDescription = "每天整理台灣生活雷達、踩坑提醒、股市 ETF 白話觀察與實用工具。阿姨不講官腔，只講今天出門會不會煩。";
+const defaultOgImage = "assets/auntie-hero.jpg";
 const socialLinks = [
   "https://x.com/auntienomad",
   "https://www.instagram.com/auntienomad/",
@@ -48,6 +49,92 @@ function escapeXml(value = "") {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&apos;");
+}
+
+function compactText(value = "", maxLength = 90) {
+  const normalized = String(value).replace(/\s+/g, " ").trim();
+  if (normalized.length <= maxLength) return normalized;
+  return `${normalized.slice(0, maxLength - 1)}…`;
+}
+
+function pickHomepagePreviewItem() {
+  return [
+    ...(content.pitfalls || []),
+    ...(content.lifeRadar || []),
+    content.stockOverview,
+    ...(content.stockWatchlist || []),
+    ...(content.liveNews || [])
+  ].filter(Boolean).find((item) => item.title && (item.hero || item.thumbnail || item.image || item.summary || item.auntieComment));
+}
+
+function pickPreviewImage(item) {
+  const candidate = [item?.hero, item?.thumbnail, item?.image].filter(Boolean).map((value) => String(value).replaceAll("\\", "/"))[0];
+  if (!candidate || /\.svg(?:[?#]|$)/i.test(candidate)) return defaultOgImage;
+  return candidate;
+}
+
+function buildPreviewDescription(item) {
+  if (!item) return siteDescription;
+  const auntie = compactText(item.auntieComment || "", 42);
+  const title = compactText(item.title || "", 46);
+  const summary = compactText(item.summary || "", 46);
+  const combined = [
+    auntie && `阿姨碎念：${auntie}`,
+    title ? `今天看：${title}。` : summary
+  ].filter(Boolean).join(" ");
+  return combined || siteDescription;
+}
+
+function setMetaContent(html, selector, contentValue) {
+  const escaped = escapeXml(contentValue);
+  const pattern = selector.startsWith("property=")
+    ? new RegExp(`(<meta\\s+property="${selector.slice(9)}"\\s+content=")[^"]*(">)`)
+    : new RegExp(`(<meta\\s+name="${selector.slice(5)}"\\s+content=")[^"]*(">)`);
+
+  if (!pattern.test(html)) {
+    throw new Error(`Missing homepage meta tag for ${selector}`);
+  }
+
+  return html.replace(pattern, (_match, before, after) => `${before}${escaped}${after}`);
+}
+
+function updateHomepageMeta() {
+  const indexPath = path.join(root, "index.html");
+  let html = fs.readFileSync(indexPath, "utf8");
+  const preview = pickHomepagePreviewItem();
+  const previewTitle = preview?.title ? compactText(preview.title, 34) : "";
+  const title = previewTitle
+    ? `${siteTitle}｜今日必看：${previewTitle}`
+    : `${siteTitle}｜生活雷達、踩坑日記與股市 ETF 白話整理`;
+  const description = compactText(buildPreviewDescription(preview), 118);
+  const imageUrl = absoluteUrl(pickPreviewImage(preview));
+  const imageAlt = previewTitle ? `${siteTitle}今日必看：${previewTitle}` : siteTitle;
+
+  html = html.replace(/<title>[\s\S]*?<\/title>/, () => `<title>${escapeXml(title)}</title>`);
+  html = setMetaContent(html, "name=description", description);
+  html = setMetaContent(html, "property=og:title", title);
+  html = setMetaContent(html, "property=og:description", description);
+  html = setMetaContent(html, "property=og:image", imageUrl);
+  html = setMetaContent(html, "name=twitter:title", title);
+  html = setMetaContent(html, "name=twitter:description", description);
+  html = setMetaContent(html, "name=twitter:image", imageUrl);
+
+  if (html.includes('property="og:image:alt"')) {
+    html = setMetaContent(html, "property=og:image:alt", imageAlt);
+  } else {
+    html = html.replace(
+      /(<meta\s+property="og:image"\s+content="[^"]*">)/,
+      `$1\n  <meta property="og:image:alt" content="${escapeXml(imageAlt)}">`
+    );
+  }
+
+  html = html.replace(
+    /("description":\s*")[^"]*(",)/,
+    (_match, before, after) => `${before}${description.replaceAll("\\", "\\\\").replaceAll('"', '\\"')}${after}`
+  );
+
+  fs.writeFileSync(indexPath, html, "utf8");
+  return previewTitle || siteTitle;
 }
 
 function normalizeDate(value) {
@@ -210,4 +297,6 @@ const llms = [
 fs.writeFileSync(path.join(root, "site.webmanifest"), `${JSON.stringify(manifest, null, 2)}\n`);
 fs.writeFileSync(path.join(root, "llms.txt"), `${llms}\n`, "utf8");
 
-console.log(`Generated sitemap.xml with ${urls.size} URLs, robots.txt, rss.xml, feed.json, site.webmanifest, and llms.txt.`);
+const homepagePreviewTitle = updateHomepageMeta();
+
+console.log(`Generated sitemap.xml with ${urls.size} URLs, robots.txt, rss.xml, feed.json, site.webmanifest, llms.txt, and homepage preview for ${homepagePreviewTitle}.`);

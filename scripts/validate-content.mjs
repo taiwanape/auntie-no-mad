@@ -90,6 +90,23 @@ function normalizePath(value = "") {
   return String(value).replaceAll("\\", "/");
 }
 
+function pickHomepagePreviewItem() {
+  return [
+    ...(content.pitfalls || []),
+    ...(content.lifeRadar || []),
+    content.stockOverview,
+    ...(content.stockWatchlist || []),
+    ...(content.liveNews || [])
+  ].filter(Boolean).find((item) => item.title && (item.hero || item.thumbnail || item.image || item.summary || item.auntieComment));
+}
+
+function pickHomepagePreviewImage(item) {
+  const image = [item?.hero, item?.thumbnail, item?.image]
+    .filter(Boolean)
+    .map(normalizePath)[0];
+  return image || "assets/auntie-hero.jpg";
+}
+
 function fileExists(relativePath) {
   return fs.existsSync(path.join(root, relativePath));
 }
@@ -275,6 +292,23 @@ assert(indexHtml.includes("data-install-app"), "index.html must offer an add-to-
 assert(indexHtml.includes("beforeinstallprompt"), "index.html must handle browser install prompts when available");
 assert(indexHtml.includes("install_fallback"), "index.html install fallback must use UTM tracking");
 
+const homepagePreviewItem = pickHomepagePreviewItem();
+if (homepagePreviewItem) {
+  const titleNeedle = String(homepagePreviewItem.title).slice(0, 8);
+  const imageNeedle = pickHomepagePreviewImage(homepagePreviewItem);
+  assert(indexHtml.includes("今日必看"), "index.html social preview must advertise today's strongest story");
+  assert(indexHtml.includes(titleNeedle), `index.html social preview must include today's story title: ${homepagePreviewItem.title}`);
+  assert(indexHtml.includes(imageNeedle), `index.html social preview must use today's story image: ${imageNeedle}`);
+  assert(indexHtml.includes('property="og:image:alt"'), "index.html social preview must include og:image:alt");
+  assert(indexHtml.includes('name="twitter:image"'), "index.html social preview must include twitter:image");
+  if (imageNeedle !== "assets/auntie-hero.jpg") {
+    assert(
+      !indexHtml.includes('property="og:image" content="https://taiwanape.github.io/auntie-no-mad/assets/auntie-hero.jpg"'),
+      "index.html social preview must not fall back to the generic hero when a current story image exists"
+    );
+  }
+}
+
 const reminderIcs = fs.readFileSync(path.join(root, "daily-reminder.ics"), "utf8");
 assert(reminderIcs.includes("RRULE:FREQ=DAILY"), "daily-reminder.ics must be a daily recurring reminder");
 assert(reminderIcs.includes("utm_source=calendar"), "daily-reminder.ics must track calendar return visits");
@@ -427,6 +461,7 @@ assert(llmsTxt.includes("Today page:"), "llms.txt must mention today page");
   assert(workflow.includes("site.webmanifest"), `${workflowFile} must commit site.webmanifest updates`);
   assert(workflow.includes("llms.txt"), `${workflowFile} must commit llms.txt updates`);
   assert(workflow.includes("today.html"), `${workflowFile} must commit today.html updates`);
+  assert(workflow.includes("index.html"), `${workflowFile} must commit homepage preview updates`);
 });
 
 if (warnings.length) {
