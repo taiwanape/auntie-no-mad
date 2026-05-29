@@ -158,3 +158,17 @@ Meta App 權限通常需要：
 - Instagram：`instagram_basic`、`instagram_content_publish`
 
 IG 帳號必須是專業帳號，且已連到同一個 Facebook 粉絲頁。
+
+## 社群導流入口頁
+
+- `links.html` 是 IG 個人檔案、FB 粉專簡介、X 置頂貼文可放的入口頁。
+- 每次每日更新與即時新聞更新都會執行 `npm run generate:links`。
+- 入口頁會從 `data/share-pack.json` 讀取今日主打與最新圖文，不要手動硬改 `links.html`。
+- 所有按鈕會帶 `utm_source=link_in_bio`，方便之後從流量工具追蹤社群導流效果。
+- 若要本機重產：
+
+```powershell
+npm run generate:share-pack
+npm run generate:social-posts
+npm run generate:links
+```

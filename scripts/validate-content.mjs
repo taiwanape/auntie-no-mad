@@ -316,7 +316,7 @@ if (content.stockOverview) {
 });
 
 const indexHtml = fs.readFileSync(path.join(root, "index.html"), "utf8");
-["sitemap.xml", "robots.txt", "rss.xml", "feed.json", "site.webmanifest", "llms.txt", "share.html", "today.html", "daily-reminder.ics"].forEach((file) => {
+["sitemap.xml", "robots.txt", "rss.xml", "feed.json", "site.webmanifest", "llms.txt", "share.html", "today.html", "links.html", "daily-reminder.ics"].forEach((file) => {
   assert(fileExists(file), `SEO/feed file missing: ${file}`);
 });
 assert(fileExists("article-growth.js"), "article-growth.js missing");
@@ -491,6 +491,19 @@ for (const [index, script] of [...todayHtml.matchAll(/<script>([\s\S]*?)<\/scrip
   }
 }
 
+const linksHtml = fs.readFileSync(path.join(root, "links.html"), "utf8");
+assert(linksHtml.includes("link_in_bio"), "links.html must use link_in_bio UTM tracking");
+assert(linksHtml.includes("today.html"), "links.html must link to the stable today landing page");
+assert(linksHtml.includes("share.html"), "links.html must link to the daily share pack");
+assert(linksHtml.includes("tools/index.html"), "links.html must link to the tools page");
+assert(linksHtml.includes("archive.html"), "links.html must link to archive");
+assert(linksHtml.includes("instagram.com/auntienomad"), "links.html must link to Instagram");
+assert(linksHtml.includes("facebook.com/profile.php?id=61553234457401"), "links.html must link to Facebook");
+assert(linksHtml.includes("x.com/auntienomad"), "links.html must link to X");
+assert(linksHtml.includes('property="og:image"'), "links.html must include an OG image");
+assert(linksHtml.includes('type="application/ld+json"'), "links.html must include JSON-LD");
+assert(!/\.svg(?:[?#"]|$)/i.test(linksHtml), "links.html must not reference SVG assets");
+
 const webManifest = JSON.parse(fs.readFileSync(path.join(root, "site.webmanifest"), "utf8"));
 assert(webManifest.name === "阿姨別生氣", "site.webmanifest must use the site name");
 assert(Array.isArray(webManifest.shortcuts) && webManifest.shortcuts.length >= 3, "site.webmanifest must expose growth shortcuts");
@@ -507,6 +520,8 @@ assert(llmsTxt.includes("Today page:"), "llms.txt must mention today page");
   assert(workflow.includes("site.webmanifest"), `${workflowFile} must commit site.webmanifest updates`);
   assert(workflow.includes("llms.txt"), `${workflowFile} must commit llms.txt updates`);
   assert(workflow.includes("today.html"), `${workflowFile} must commit today.html updates`);
+  assert(workflow.includes("links.html"), `${workflowFile} must commit social link page updates`);
+  assert(workflow.includes("generate:links"), `${workflowFile} must regenerate social link page`);
   assert(workflow.includes("index.html"), `${workflowFile} must commit homepage preview updates`);
 });
 
