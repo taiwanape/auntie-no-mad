@@ -77,7 +77,9 @@
       $('meta[name="description"]')?.content ||
       "阿姨幫你把今天重點整理成人話。";
     const pageUrl = withUtm(currentItem?.slug || currentSlug(), "copy", "article_share");
+    const nativeUrl = withUtm(currentItem?.slug || currentSlug(), "native", "article_share");
     const shareText = buildShareText(title, summary, pageUrl);
+    const nativeShareText = `阿姨別生氣幫你整理成人話：${compact(summary, 58)}`;
     const lineUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(withUtm(currentItem?.slug || currentSlug(), "line", "article_share"))}`;
     const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(withUtm(currentItem?.slug || currentSlug(), "facebook", "article_share"))}`;
     const xText = buildShareText(title, summary, withUtm(currentItem?.slug || currentSlug(), "x", "article_share"));
@@ -91,6 +93,7 @@
           <strong>覺得有用就丟給朋友</strong>
           <span>阿姨碎念不是拿來收藏的，是拿來少踩坑的。</span>
         </div>
+        <button type="button" data-native-share data-native-title="${escapeHtml(title)}" data-native-text="${escapeHtml(nativeShareText)}" data-native-url="${escapeHtml(nativeUrl)}">手機分享</button>
         <button type="button" data-article-copy="${escapeHtml(shareText)}">複製分享文</button>
         <a href="${lineUrl}" target="_blank" rel="noreferrer">LINE</a>
         <a href="${facebookUrl}" target="_blank" rel="noreferrer">FB</a>
@@ -136,6 +139,24 @@
   }
 
   document.addEventListener("click", async (event) => {
+    const nativeButton = event.target.closest("[data-native-share]");
+    if (nativeButton) {
+      const title = nativeButton.getAttribute("data-native-title") || document.title;
+      const text = nativeButton.getAttribute("data-native-text") || "阿姨別生氣幫你整理成人話。";
+      const url = nativeButton.getAttribute("data-native-url") || window.location.href;
+      if (navigator.share) {
+        await navigator.share({ title, text, url }).catch(() => {});
+        return;
+      }
+      const original = nativeButton.textContent;
+      await navigator.clipboard?.writeText(`${title}\n${text}\n\n${url}`);
+      nativeButton.textContent = "連結已複製";
+      setTimeout(() => {
+        nativeButton.textContent = original || "手機分享";
+      }, 1400);
+      return;
+    }
+
     const button = event.target.closest("[data-article-copy]");
     if (!button) return;
     const text = button.getAttribute("data-article-copy") || "";

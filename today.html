@@ -178,6 +178,7 @@
           <p class="notice">這頁每天跟著最新內容更新。想轉給朋友，貼這一頁就好，阿姨會自己換今日重點。</p>
           <div class="button-row">
             <a class="primary" href="https://taiwanape.github.io/auntie-no-mad/stories/2026-05-29-pitfall-1.html">看完整整理</a>
+            <button type="button" data-native-share data-title="今日必看｜台中婦網戀假軍官 匯款前求證警方保住32萬" data-text="阿姨別生氣幫你整理成人話：不是你笨，是套路越來越會穿西裝。" data-url="https://taiwanape.github.io/auntie-no-mad/today.html?utm_source=native&amp;utm_medium=social&amp;utm_campaign=today_page">手機分享</button>
             <button type="button" data-copy="台中婦網戀假軍官 匯款前求證警方保住32萬
 不是你笨，是套路越來越會穿西裝。
 
@@ -214,6 +215,30 @@
 
   <script>
     document.addEventListener("click", async (event) => {
+      const nativeButton = event.target.closest("[data-native-share]");
+      if (nativeButton) {
+        const shareData = {
+          title: nativeButton.dataset.title || document.title,
+          text: nativeButton.dataset.text || "阿姨別生氣幫你整理成人話。",
+          url: nativeButton.dataset.url || window.location.href
+        };
+        if (navigator.share) {
+          await navigator.share(shareData).catch(() => {});
+          return;
+        }
+        const original = nativeButton.textContent;
+        try {
+          await navigator.clipboard.writeText(`${shareData.title}\n${shareData.text}\n\n${shareData.url}`);
+          nativeButton.textContent = "連結已複製";
+        } catch {
+          nativeButton.textContent = "複製失敗";
+        }
+        setTimeout(() => {
+          nativeButton.textContent = original;
+        }, 1400);
+        return;
+      }
+
       const button = event.target.closest("[data-copy]");
       if (!button) return;
       const original = button.textContent;

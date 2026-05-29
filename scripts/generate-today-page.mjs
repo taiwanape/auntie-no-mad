@@ -79,6 +79,8 @@ const articleUrl = primary.articleUrl || siteUrl;
 const todayUrl = `${siteUrl}today.html`;
 const imageUrl = absoluteUrl(primary.imagePath || "assets/auntie-hero.jpg");
 const copyText = `${primary.title}\n${description}\n\n阿姨別生氣今日必看：${todayUrl}?utm_source=copy&utm_medium=social&utm_campaign=today_page`;
+const nativeShareUrl = withUtm(todayUrl, "native", "today_page");
+const nativeShareText = `阿姨別生氣幫你整理成人話：${description}`;
 const xText = socialPosts.posts?.x?.text || copyText;
 const todayPlatformButtons = platformButtons({ url: todayUrl, title: primary.title, description });
 
@@ -273,6 +275,7 @@ const html = `<!DOCTYPE html>
           <p class="notice">這頁每天跟著最新內容更新。想轉給朋友，貼這一頁就好，阿姨會自己換今日重點。</p>
           <div class="button-row">
             <a class="primary" href="${escapeHtml(articleUrl)}">看完整整理</a>
+            <button type="button" data-native-share data-title="${escapeHtml(title)}" data-text="${escapeHtml(nativeShareText)}" data-url="${escapeHtml(nativeShareUrl)}">手機分享</button>
             <button type="button" data-copy="${escapeHtml(copyText)}">複製分享文</button>
             ${todayPlatformButtons}
           </div>
@@ -291,6 +294,30 @@ const html = `<!DOCTYPE html>
 
   <script>
     document.addEventListener("click", async (event) => {
+      const nativeButton = event.target.closest("[data-native-share]");
+      if (nativeButton) {
+        const shareData = {
+          title: nativeButton.dataset.title || document.title,
+          text: nativeButton.dataset.text || "阿姨別生氣幫你整理成人話。",
+          url: nativeButton.dataset.url || window.location.href
+        };
+        if (navigator.share) {
+          await navigator.share(shareData).catch(() => {});
+          return;
+        }
+        const original = nativeButton.textContent;
+        try {
+          await navigator.clipboard.writeText(\`\${shareData.title}\\n\${shareData.text}\\n\\n\${shareData.url}\`);
+          nativeButton.textContent = "連結已複製";
+        } catch {
+          nativeButton.textContent = "複製失敗";
+        }
+        setTimeout(() => {
+          nativeButton.textContent = original;
+        }, 1400);
+        return;
+      }
+
       const button = event.target.closest("[data-copy]");
       if (!button) return;
       const original = button.textContent;
