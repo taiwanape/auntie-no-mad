@@ -1,11 +1,12 @@
 {
-  "date": "2026-05-29",
-  "generatedAt": "2026-05-28T23:07:42.728Z",
+  "date": "2026-05-30",
+  "generatedAt": "2026-05-29T21:14:05.973Z",
   "status": "approved",
   "checks": [
-    "daily images: 9/9 ready (0 OpenAI, 0 approved fallback, 9 reused)",
+    "daily images: 9/9 ready (0 OpenAI, 9 approved fallback, 0 reused)",
     "lifeRadar: 2 items checked",
     "pitfalls: 2 items checked",
+    "liveNews: 6 items checked",
     "stockWatchlist: 4 items checked"
   ],
   "sources": [
@@ -28,10 +29,28 @@
       "count": 20
     },
     {
+      "name": "中央社科技新聞",
+      "url": "https://feeds.feedburner.com/rsscna/technology",
+      "ok": true,
+      "count": 20
+    },
+    {
+      "name": "中央社地方新聞",
+      "url": "https://feeds.feedburner.com/rsscna/local",
+      "ok": true,
+      "count": 20
+    },
+    {
+      "name": "中央社娛樂新聞",
+      "url": "https://feeds.feedburner.com/rsscna/stars",
+      "ok": true,
+      "count": 20
+    },
+    {
       "name": "臺灣證券交易所 STOCK_DAY_ALL",
       "url": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?response=json",
       "ok": true,
-      "count": 1361
+      "count": 1362
     },
     {
       "name": "OpenAI Images API",
@@ -52,6 +71,7 @@
     }
   ],
   "proposedSections": [
+    "liveNews",
     "lifeRadar",
     "pitfalls",
     "stockOverview",
@@ -61,6 +81,7 @@
     "generatedImages"
   ],
   "updatedSections": [
+    "liveNews",
     "lifeRadar",
     "pitfalls",
     "stockOverview",

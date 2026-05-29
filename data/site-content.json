@@ -2,91 +2,91 @@
   "site": {
     "name": "阿姨別生氣",
     "url": "https://taiwanape.github.io/auntie-no-mad/",
-    "updatedAt": "2026-05-29T07:00:00+08:00",
-    "dailyNote": "看完整 2026/05/29 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
-    "dailyNoteUrl": "stocks/2026-05-29-market-watch.html",
+    "updatedAt": "2026-05-30T07:00:00+08:00",
+    "dailyNote": "看完整 2026/05/30 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
+    "dailyNoteUrl": "stocks/2026-05-30-market-watch.html",
     "liveNewsUpdatedAt": "2026-05-29T17:53:14.297Z"
   },
   "lifeRadar": [
     {
-      "title": "捷運三鶯線拚年中通車 尖峰最短班距擬2.2分鐘",
-      "date": "2026-05-29",
+      "title": "氣象署發布豪雨特報 屏高台南有局部豪大雨發生機率",
+      "date": "2026-05-30",
       "category": "生活新聞",
-      "summary": "（中央社記者曹亞沿新北28日電）新北議員關切捷運三鶯線進度，市長侯友宜說，交通部今開會決定履勘日期，朝年中通車目標邁進。未來尖峰最短擬2.2分鐘一班，但初期尖峰時間班距約5至6分鐘，後續再逐步調整。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "summary": "（中央社台北30日電）中央氣象署發布豪雨特報，對流雲系發展旺盛，易有短延時強降雨，今(30)日屏東縣地區有局部大雨或豪雨，臺南及高雄地區有局部大雨發生的機率，請注意雷擊及強陣風，山區請慎防坍方、落石及溪水暴漲，低窪地區請慎防積水。（編輯：徐睿承）1150530 阿姨提醒：先看來源、再看自己今天會不會被影響。",
       "auntieComment": "新聞不是拿來焦慮的，是拿來少踩一個坑的。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605280337.aspx",
-      "slug": "radar/2026-05-29-life-1.html",
-      "thumbnail": "assets/generated/2026-05-29/life-1-19dqui9-approved.jpg",
-      "thumbnailAlt": "阿姨整理捷運三鶯線拚年中通車 尖峰最短班距擬2.2分鐘的生活雷達縮圖",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300006.aspx",
+      "slug": "radar/2026-05-30-life-1.html",
+      "thumbnail": "assets/generated/2026-05-30/life-1-1ijqvf3-approved.jpg",
+      "thumbnailAlt": "阿姨整理氣象署發布豪雨特報 屏高台南有局部豪大雨發生機率的生活雷達縮圖",
       "cta": "新聞重點、阿姨白話翻譯與你今天可以先做的事。",
       "sourceName": "中央社生活醫藥",
-      "hero": "assets/generated/2026-05-29/life-1-19dqui9-approved.jpg"
+      "hero": "assets/generated/2026-05-30/life-1-1ijqvf3-approved.jpg"
     },
     {
-      "title": "鋒面影響入夜中部以北防雷雨 薔蜜最快29日晚間轉中颱",
-      "date": "2026-05-29",
+      "title": "氣象署發布豪雨特報 屏東有局部大雨或豪雨發生機率",
+      "date": "2026-05-30",
       "category": "民生資訊",
-      "summary": "（中央社記者黃巧雯台北28日電）氣象署表示，今晚至明天，中部以北和宜蘭地區有陣雨或雷雨，其他地區午後有局部短暫雷陣雨；預估颱風薔蜜明晚至30日增強為中度颱風，5月31日、6月1日將最接近台灣。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "summary": "（中央社台北30日電）中央氣象署發布豪雨特報，對流雲系發展旺盛，易有短延時強降雨，今(30)日屏東縣地區有局部大雨或豪雨發生的機率，請注意雷擊及強陣風，山區請慎防坍方、落石及溪水暴漲，低窪地區請慎防積水。（編輯：徐睿承）1150530 阿姨提醒：先看來源、再看自己今天會不會被影響。",
       "auntieComment": "新聞不是拿來焦慮的，是拿來少踩一個坑的。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605280263.aspx",
-      "slug": "radar/2026-05-29-life-2.html",
-      "thumbnail": "assets/generated/2026-05-29/life-2-10y1nbd-approved.jpg",
-      "thumbnailAlt": "阿姨整理鋒面影響入夜中部以北防雷雨 薔蜜最快29日晚間轉中颱的生活雷達縮圖",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300003.aspx",
+      "slug": "radar/2026-05-30-life-2.html",
+      "thumbnail": "assets/generated/2026-05-30/life-2-8xeazj-approved.jpg",
+      "thumbnailAlt": "阿姨整理氣象署發布豪雨特報 屏東有局部大雨或豪雨發生機率的生活雷達縮圖",
       "cta": "新聞重點、阿姨白話翻譯與你今天可以先做的事。",
       "sourceName": "中央社生活醫藥",
-      "hero": "assets/generated/2026-05-29/life-2-10y1nbd-approved.jpg"
+      "hero": "assets/generated/2026-05-30/life-2-8xeazj-approved.jpg"
     }
   ],
   "pitfalls": [
     {
-      "title": "台中婦網戀假軍官 匯款前求證警方保住32萬",
-      "date": "2026-05-29",
+      "title": "打詐綱領2.0施行成效 查獲5055詐團、追贓33億元",
+      "date": "2026-05-30",
       "category": "踩坑提醒",
-      "summary": "（中央社記者蘇木春台中28日電）台中林姓女子與一名自稱美軍前軍官談網戀，對方稱要寄包裹給她，但要支付新台幣32萬元規費；她到郵局等待匯款時，手機滑到反詐騙資訊，到警局確認自己險被騙，成功保住積蓄。 阿姨提醒：越急、越便宜、越像好康，越要先停三秒。",
+      "summary": "（中央社記者謝君臨台北29日電）台高檢今天表示，打詐綱領2.0施行迄今懲詐成效，從去年1月至今年4月止，查獲詐欺集團5055團、起訴電信詐騙案件人數12.7萬餘人，偵審中和解、調解追贓返還金額達33億餘元。 阿姨提醒：越急、越便宜、越像好康，越要先停三秒。",
       "auntieComment": "不是你笨，是套路越來越會穿西裝。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202605280219.aspx",
-      "slug": "stories/2026-05-29-pitfall-1.html",
-      "thumbnail": "assets/generated/2026-05-29/pitfall-1-1n3ydl-approved.jpg",
-      "thumbnailAlt": "阿姨整理台中婦網戀假軍官 匯款前求證警方保住32萬的踩坑日記縮圖",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202605290324.aspx",
+      "slug": "stories/2026-05-30-pitfall-1.html",
+      "thumbnail": "assets/generated/2026-05-30/pitfall-1-1ec6gwo-approved.jpg",
+      "thumbnailAlt": "阿姨整理打詐綱領2.0施行成效 查獲5055詐團、追贓33億元的踩坑日記縮圖",
       "cta": "先看懂套路，別把錢包推出去。",
       "sourceName": "中央社社會新聞",
-      "hero": "assets/generated/2026-05-29/pitfall-1-1n3ydl-approved.jpg"
+      "hero": "assets/generated/2026-05-30/pitfall-1-1ec6gwo-approved.jpg"
     },
     {
-      "title": "新北男假結婚真詐財 彰檢警搜索住處查獲百萬現金",
-      "date": "2026-05-29",
+      "title": "基隆國門廣場發生男女脫序行為 警方掌握線索偵辦",
+      "date": "2026-05-30",
       "category": "生活踩坑",
-      "summary": "（中央社記者鄭維真彰化28日電）新北市羅姓男子涉嫌利用交友軟體，以假結婚真詐財手法向多名女子騙取財物，彰化地檢署26日指揮搜索並拘提，訊後認其涉詐欺取財犯嫌重大，且有滅證及再犯之虞，聲押獲准。 阿姨提醒：越急、越便宜、越像好康，越要先停三秒。",
+      "summary": "（中央社記者沈如峰基隆29日電）基隆市國門廣場最近一對男女在人工草皮從事脫序行為，影片在社群流傳，網友稱是擎天崗2.0事件。警方今天說，已鎖定當事人行蹤並通知散佈影像者到案說明，釐清案情。 阿姨提醒：越急、越便宜、越像好康，越要先停三秒。",
       "auntieComment": "不是你笨，是套路越來越會穿西裝。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202605280240.aspx",
-      "slug": "stories/2026-05-29-pitfall-2.html",
-      "thumbnail": "assets/generated/2026-05-29/pitfall-2-1qyicp8-approved.jpg",
-      "thumbnailAlt": "阿姨整理新北男假結婚真詐財 彰檢警搜索住處查獲百萬現金的踩坑日記縮圖",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202605290310.aspx",
+      "slug": "stories/2026-05-30-pitfall-2.html",
+      "thumbnail": "assets/generated/2026-05-30/pitfall-2-1xtba4p-approved.jpg",
+      "thumbnailAlt": "阿姨整理基隆國門廣場發生男女脫序行為 警方掌握線索偵辦的踩坑日記縮圖",
       "cta": "先看懂套路，別把錢包推出去。",
       "sourceName": "中央社社會新聞",
-      "hero": "assets/generated/2026-05-29/pitfall-2-1qyicp8-approved.jpg"
+      "hero": "assets/generated/2026-05-30/pitfall-2-1xtba4p-approved.jpg"
     }
   ],
   "stockOverview": {
     "title": "股市ETF",
-    "date": "2026-05-29",
+    "date": "2026-05-30",
     "category": "股市 ETF",
     "summary": "今天固定四檔：兩檔熱門股、一檔新星觀察、一檔高人氣但風險也要看的 ETF。每檔都附阿姨白話理由，但仍然不是買賣建議。",
     "auntieComment": "不是報明牌，是把市場消息整理成白話文。",
     "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?response=json",
-    "slug": "stocks/2026-05-29-market-watch.html",
+    "slug": "stocks/2026-05-30-market-watch.html",
     "badge": "早晨版",
     "marketCards": [
       {
-        "label": "熱門股 2408",
-        "value": "南亞科",
+        "label": "熱門股 2454",
+        "value": "聯發科",
         "note": "熱門股 A",
         "trend": "熱門股",
         "tone": "up"
       },
       {
-        "label": "熱門股 2454",
-        "value": "聯發科",
+        "label": "熱門股 2317",
+        "value": "鴻海",
         "note": "熱門股 B",
         "trend": "熱門股",
         "tone": "up"
@@ -106,63 +106,63 @@
         "tone": "down"
       }
     ],
-    "hero": "assets/generated/2026-05-29/stock-overview-1jfljyp-approved.jpg"
+    "hero": "assets/generated/2026-05-30/stock-overview-1jfljyp-approved.jpg"
   },
   "stockWatchlist": [
     {
-      "title": "南亞科",
-      "date": "2026-05-29",
-      "category": "熱門股",
-      "summary": "324.00 收盤，漲跌 +12.00。南亞科 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
-      "auntieComment": "熱鬧可以看，但不要把熱鬧當答案。",
-      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260528&stockNo=2408&response=json",
-      "slug": "stocks/2026-05-29-2408.html",
-      "ticker": "2408",
-      "name": "南亞科",
-      "type": "熱門股 A",
-      "reason": "南亞科 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
-      "riskLevel": "中高",
-      "riskNote": "成交熱度高時波動也常變大，追題材前要先看風險。",
-      "suitableFor": "想練習看成交量、題材與基本面的觀察者。",
-      "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
-      "disclaimer": "僅供教育與資訊參考，不是投資建議。",
-      "updatedAt": "2026-05-29T07:00:00+08:00",
-      "close": "324.00",
-      "change": "+12.00",
-      "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-05-29/stock-1-2408-3f1khp-approved.jpg"
-    },
-    {
       "title": "聯發科",
-      "date": "2026-05-29",
+      "date": "2026-05-30",
       "category": "熱門股",
-      "summary": "4,410.00 收盤，漲跌 -230.00。聯發科 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
+      "summary": "4,310.00 收盤，漲跌 -100.00。聯發科 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
       "auntieComment": "熱鬧可以看，但不要把熱鬧當答案。",
-      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260528&stockNo=2454&response=json",
-      "slug": "stocks/2026-05-29-2454.html",
+      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260529&stockNo=2454&response=json",
+      "slug": "stocks/2026-05-30-2454.html",
       "ticker": "2454",
       "name": "聯發科",
-      "type": "熱門股 B",
+      "type": "熱門股 A",
       "reason": "聯發科 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
       "riskLevel": "中高",
       "riskNote": "成交熱度高時波動也常變大，追題材前要先看風險。",
       "suitableFor": "想練習看成交量、題材與基本面的觀察者。",
       "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
       "disclaimer": "僅供教育與資訊參考，不是投資建議。",
-      "updatedAt": "2026-05-29T07:00:00+08:00",
-      "close": "4,410.00",
-      "change": "-230.00",
+      "updatedAt": "2026-05-30T07:00:00+08:00",
+      "close": "4,310.00",
+      "change": "-100.00",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-05-29/stock-2-2454-2lh59j-approved.jpg"
+      "image": "assets/generated/2026-05-30/stock-1-2454-2lh59j-approved.jpg"
+    },
+    {
+      "title": "鴻海",
+      "date": "2026-05-30",
+      "category": "熱門股",
+      "summary": "289.00 收盤，漲跌 +26.00。鴻海 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
+      "auntieComment": "熱鬧可以看，但不要把熱鬧當答案。",
+      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260529&stockNo=2317&response=json",
+      "slug": "stocks/2026-05-30-2317.html",
+      "ticker": "2317",
+      "name": "鴻海",
+      "type": "熱門股 B",
+      "reason": "鴻海 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
+      "riskLevel": "中高",
+      "riskNote": "成交熱度高時波動也常變大，追題材前要先看風險。",
+      "suitableFor": "想練習看成交量、題材與基本面的觀察者。",
+      "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
+      "disclaimer": "僅供教育與資訊參考，不是投資建議。",
+      "updatedAt": "2026-05-30T07:00:00+08:00",
+      "close": "289.00",
+      "change": "+26.00",
+      "sourceName": "臺灣證券交易所",
+      "image": "assets/generated/2026-05-30/stock-2-2317-02s6cp-approved.jpg"
     },
     {
       "title": "力積電",
-      "date": "2026-05-29",
+      "date": "2026-05-30",
       "category": "新星觀察",
-      "summary": "80.70 收盤，漲跌 +5.90。力積電 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
+      "summary": "88.70 收盤，漲跌 +8.00。力積電 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
       "auntieComment": "熱鬧可以看，但不要把熱鬧當答案。",
-      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260528&stockNo=6770&response=json",
-      "slug": "stocks/2026-05-29-6770.html",
+      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260529&stockNo=6770&response=json",
+      "slug": "stocks/2026-05-30-6770.html",
       "ticker": "6770",
       "name": "力積電",
       "type": "新星觀察股",
@@ -172,20 +172,20 @@
       "suitableFor": "想練習看成交量、題材與基本面的觀察者。",
       "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
       "disclaimer": "僅供教育與資訊參考，不是投資建議。",
-      "updatedAt": "2026-05-29T07:00:00+08:00",
-      "close": "80.70",
-      "change": "+5.90",
+      "updatedAt": "2026-05-30T07:00:00+08:00",
+      "close": "88.70",
+      "change": "+8.00",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-05-29/stock-3-6770-3f959k-approved.jpg"
+      "image": "assets/generated/2026-05-30/stock-3-6770-3f959k-approved.jpg"
     },
     {
       "title": "群益台灣精選高息",
-      "date": "2026-05-29",
+      "date": "2026-05-30",
       "category": "風險題材 ETF",
-      "summary": "28.41 收盤，漲跌 -0.44。高人氣 ETF 容易被配息吸引，但更要看淨值、成分股與填息。",
+      "summary": "29.01 收盤，漲跌 +0.60。高人氣 ETF 容易被配息吸引，但更要看淨值、成分股與填息。",
       "auntieComment": "息很香，但不要只聞香味，還要看成本。",
-      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260528&stockNo=00919&response=json",
-      "slug": "stocks/2026-05-29-00919.html",
+      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260529&stockNo=00919&response=json",
+      "slug": "stocks/2026-05-30-00919.html",
       "ticker": "00919",
       "name": "群益台灣精選高息",
       "type": "風險題材 / 高人氣 ETF",
@@ -195,11 +195,11 @@
       "suitableFor": "想練習看 ETF 配息、淨值與成分股的人。",
       "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
       "disclaimer": "僅供教育與資訊參考，不是投資建議。",
-      "updatedAt": "2026-05-29T07:00:00+08:00",
-      "close": "28.41",
-      "change": "-0.44",
+      "updatedAt": "2026-05-30T07:00:00+08:00",
+      "close": "29.01",
+      "change": "+0.60",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-05-29/stock-4-00919-u1gsax-approved.jpg"
+      "image": "assets/generated/2026-05-30/stock-4-00919-u1gsax-approved.jpg"
     }
   ],
   "etfGuide": [
@@ -271,6 +271,15 @@
   ],
   "fridgeNotes": [
     {
+      "title": "出門先看天氣",
+      "date": "2026-05-30",
+      "category": "冰箱便條紙",
+      "summary": "台灣的天氣很會演，晴天出門也要留一手。",
+      "auntieComment": "傘不是迷信，是給自己留台階。",
+      "sourceUrl": "https://www.cwa.gov.tw/V8/C/",
+      "slug": "note-2026-05-30-weather"
+    },
+    {
       "title": "收據先別丟",
       "date": "2026-05-29",
       "category": "冰箱便條紙",
@@ -290,6 +299,33 @@
     }
   ],
   "archive": [
+    {
+      "title": "今日市場筆記 2026/05/30",
+      "date": "2026-05-30",
+      "category": "股市 ETF",
+      "summary": "今天固定四檔：兩檔熱門股、一檔新星觀察、一檔高人氣但風險也要看的 ETF。每檔都附阿姨白話理由，但仍然不是買賣建議。",
+      "auntieComment": "不是報明牌，是把市場消息整理成白話文。",
+      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?response=json",
+      "slug": "stocks/2026-05-30-market-watch.html"
+    },
+    {
+      "title": "氣象署發布豪雨特報 屏高台南有局部豪大雨發生機率",
+      "date": "2026-05-30",
+      "category": "生活新聞",
+      "summary": "（中央社台北30日電）中央氣象署發布豪雨特報，對流雲系發展旺盛，易有短延時強降雨，今(30)日屏東縣地區有局部大雨或豪雨，臺南及高雄地區有局部大雨發生的機率，請注意雷擊及強陣風，山區請慎防坍方、落石及溪水暴漲，低窪地區請慎防積水。（編輯：徐睿承）1150530 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "auntieComment": "新聞不是拿來焦慮的，是拿來少踩一個坑的。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300006.aspx",
+      "slug": "radar/2026-05-30-life-1.html"
+    },
+    {
+      "title": "氣象署發布豪雨特報 屏東有局部大雨或豪雨發生機率",
+      "date": "2026-05-30",
+      "category": "民生資訊",
+      "summary": "（中央社台北30日電）中央氣象署發布豪雨特報，對流雲系發展旺盛，易有短延時強降雨，今(30)日屏東縣地區有局部大雨或豪雨發生的機率，請注意雷擊及強陣風，山區請慎防坍方、落石及溪水暴漲，低窪地區請慎防積水。（編輯：徐睿承）1150530 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "auntieComment": "新聞不是拿來焦慮的，是拿來少踩一個坑的。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300003.aspx",
+      "slug": "radar/2026-05-30-life-2.html"
+    },
     {
       "title": "今日市場筆記 2026/05/29",
       "date": "2026-05-29",
@@ -374,6 +410,42 @@
   ],
   "liveNews": [
     {
+      "title": "氣象署發布豪雨特報 屏高台南有局部豪大雨發生機率",
+      "date": "2026-05-30",
+      "category": "即時生活",
+      "summary": "中央氣象署發布豪雨特報，對流雲系發展旺盛，易有短延時強降雨，今(30)日屏東縣地區有局部大雨或豪雨，臺南及高雄地區有局部大雨發生的機率，請注意雷擊及強陣風，山區請慎防坍方、落石及溪水暴漲，低窪 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300006.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202605300006.aspx",
+      "sourceName": "中央社生活醫藥",
+      "publishedAt": "2026-05-29T18:42:16.000Z",
+      "displayTime": "05/30 02:42"
+    },
+    {
+      "title": "多空參雜 歐股互有漲跌",
+      "date": "2026-05-30",
+      "category": "即時財經",
+      "summary": "在投資人樂觀預期美伊將就延長停火達成協議之際，法國公布第1季經濟萎縮0.1%、5月通膨率攀升至2.4%，德國則公布5月通膨率減緩至2.6%，歐洲股市今天收盤互有漲跌。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202605300004.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202605300004.aspx",
+      "sourceName": "中央社財經新聞",
+      "publishedAt": "2026-05-29T17:29:10.000Z",
+      "displayTime": "05/30 01:29"
+    },
+    {
+      "title": "氣象署發布豪雨特報 屏東有局部大雨或豪雨發生機率",
+      "date": "2026-05-30",
+      "category": "即時生活",
+      "summary": "中央氣象署發布豪雨特報，對流雲系發展旺盛，易有短延時強降雨，今(30)日屏東縣地區有局部大雨或豪雨發生的機率，請注意雷擊及強陣風，山區請慎防坍方、落石及溪水暴漲，低窪地區請慎防積水。（編輯：徐 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300003.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202605300003.aspx",
+      "sourceName": "中央社生活醫藥",
+      "publishedAt": "2026-05-29T17:24:08.000Z",
+      "displayTime": "05/30 01:24"
+    },
+    {
       "title": "南投山區豪雨 花東及台中山區等地防大雨",
       "date": "2026-05-30",
       "category": "即時生活",
@@ -381,7 +453,7 @@
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202605290361.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202605290361.aspx",
-      "sourceName": "中央社生活",
+      "sourceName": "中央社生活醫藥",
       "publishedAt": "2026-05-29T15:01:53.000Z",
       "displayTime": "05/29 23:01"
     },
@@ -393,7 +465,7 @@
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202605290359.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202605290359.aspx",
-      "sourceName": "中央社生活",
+      "sourceName": "中央社生活醫藥",
       "publishedAt": "2026-05-29T14:44:46.000Z",
       "displayTime": "05/29 22:44"
     },
@@ -405,45 +477,9 @@
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
       "sourceUrl": "https://www.cna.com.tw/news/aopl/202605290358.aspx",
       "slug": "https://www.cna.com.tw/news/aopl/202605290358.aspx",
-      "sourceName": "中央社產經證券",
+      "sourceName": "中央社財經新聞",
       "publishedAt": "2026-05-29T14:44:44.000Z",
       "displayTime": "05/29 22:44"
-    },
-    {
-      "title": "宏碁跟進智慧眼鏡風潮 擴大AI PC陣容加速AI落地",
-      "date": "2026-05-30",
-      "category": "即時科技",
-      "summary": "台北國際電腦展（COMPUTEX）前夕，電腦品牌廠宏碁今天發表一系列新產品，除了擴大AI Copilot+ PC陣容，更推出融合人工智慧（AI）與擴增實境（AR）技術的智慧眼鏡，打破傳統螢幕限 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/ait/202605290355.aspx",
-      "slug": "https://www.cna.com.tw/news/ait/202605290355.aspx",
-      "sourceName": "中央社科技",
-      "publishedAt": "2026-05-29T14:27:37.000Z",
-      "displayTime": "05/29 22:27"
-    },
-    {
-      "title": "花蓮南區大雨 台30線南安段2處落石道路封閉",
-      "date": "2026-05-30",
-      "category": "即時生活",
-      "summary": "對流雲系發展旺盛，花蓮南區雨勢不斷，台30線往南安方向發生2處坍方，公路局緊急搶通單線，因持續降雨及零星落石，目前道路封閉，民眾須改道從卓富大橋通行。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605290352.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202605290352.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-05-29T14:17:31.000Z",
-      "displayTime": "05/29 22:17"
-    },
-    {
-      "title": "今彩539第115131期 頭獎槓龜",
-      "date": "2026-05-30",
-      "category": "即時生活",
-      "summary": "今彩539第115131期開獎，中獎號碼34、12、35、15、20；派彩結果，頭獎槓龜。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605290349.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202605290349.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-05-29T14:06:24.000Z",
-      "displayTime": "05/29 22:06"
     }
   ]
 }
