@@ -1,101 +1,117 @@
 # Auntie NoMad Codex Context
 
-Updated: 2026-05-29
+Updated: 2026-05-30
 
-This is the short working context for the Auntie NoMad project. Use this file plus the current repo files as the source of truth. Do not load unrelated legacy chats or external delegation workflows.
+This is the compressed working context for the Auntie NoMad project. Use this file plus the current repo files as the source of truth. Codex owns planning, implementation, testing, deployment, and operations directly in this workspace.
 
-## Workspace
+## Source Of Truth
 
 - Root workspace: `C:\Users\taiwa\Documents\AuntieNoMad`
 - Website repo: `C:\Users\taiwa\Documents\AuntieNoMad\website`
 - GitHub repo: `taiwanape/auntie-no-mad`
-- Public URLs:
-  - `https://taiwanape.github.io/auntie-no-mad/`
+- Current public URLs:
   - `http://auntienomad.com/`
-- Custom-domain HTTPS may still wait for GitHub Pages certificate provisioning.
+  - `https://taiwanape.github.io/auntie-no-mad/`
+- Custom-domain HTTPS is still pending if GitHub Pages has no certificate yet.
 - Never commit secrets, API keys, OAuth tokens, cookies, or local credential files.
 
-## Product Goal
+## Product Direction
 
-Make Auntie NoMad a daily-updated Taiwanese life-info site that people want to click, read, and share.
+Auntie NoMad is a daily-updated Taiwanese life-info site built to make people click, read, share, and come back.
 
-Main sections:
+Core sections:
 
-- Life radar
-- Pitfall diary
-- Stocks / ETF
-- Live news
-- Tools
-- Recommendations
-- Archive
-- Share pack
-- Auntie reminders
+- `lifeRadar`: Taiwan life news and useful public information.
+- `pitfalls`: scams, consumer traps, traffic, travel, social media warnings.
+- `stockWatchlist`: four educational stock / ETF observations per day.
+- `liveNews`: faster breaking-news style item.
+- `tools`: practical calculators and utilities.
+- `recommendations`: lightweight product or useful-item picks.
+- `archive`: old posts must remain reachable.
+- `sharePack` / `socialPosts`: reusable social copy and links.
 
-Voice:
+Tone:
 
 - Plain, useful, a little funny.
-- Sounds like an auntie warning younger people.
+- Like an auntie warning younger people.
 - Sharp but not cruel.
-- Not a news bot, investment teacher, or product catalog.
-- Every sourced item needs a real `sourceUrl`.
+- Never sounds like a news bot, investment teacher, or product catalog.
+- Every sourced content item needs a real `sourceUrl`; if missing, show a safe fallback.
 
 Finance rules:
 
 - Educational observation only.
 - Never write buy, sell, target price, guaranteed profit, or stock-tip language.
-- Every market item needs risk notes and a disclaimer.
+- Daily stock mix should be: two hot names, one rising / overlooked name, one risk theme or high-attention ETF.
+- Every market item needs `riskNote`, `suitableFor`, `notSuitableFor`, and a disclaimer.
 
-## Visual Rules
+## Visual Standard
 
-- Use high-quality raster / AI-style images.
-- Brand style: yellow halftone, bold black outline, white sticker stroke, pink accent, expressive Auntie character.
-- Do not publish childish collage, generic SVG-like placeholders, empty poster layouts, fake text, random icons, or image/content mismatches.
-- Thumbnails may feel icon-like, but must still look designed and on-brand.
-- Large article images and thumbnails should not be identical.
-- If image generation fails, keep previous good images or approved raster fallbacks. Do not replace good art with poor placeholders.
+Approved style: yellow halftone background, bold black outlines, white sticker stroke, pink accents, expressive Auntie character, polished raster / AI illustration quality.
 
-## Core Files
+Do not publish:
+
+- Childish collage or vector-placeholder art.
+- Generic SVG-like doodles.
+- Empty poster layouts.
+- Fake or unreadable text.
+- Image/content mismatch.
+- Reused identical large image and thumbnail for the same story.
+
+If new image generation fails, keep previous good art or approved raster fallbacks. Do not replace good images with low-quality placeholders.
+
+## Important Files
 
 - Homepage: `index.html`
-- Site data: `data/site-content.json`
-- Social drafts: `data/social-posts.json`
+- Main content data: `data/site-content.json`
 - Share pack: `data/share-pack.json`
+- Social post drafts: `data/social-posts.json`
 - X queue: `data/x-content-queue.json`
 - Review report: `data/review-report.json`
-- Today page: `today.html`
-- Share page: `share.html`
-- Growth CTA module: `article-growth.js`
-- Styles: `site-info.css`
-- Articles: `radar/`, `stories/`, `stocks/`
-- SEO outputs: `sitemap.xml`, `robots.txt`, `rss.xml`, `feed.json`, `site.webmanifest`, `llms.txt`
+- Today landing page: `today.html`
+- Share landing page: `share.html`
+- Article growth module: `article-growth.js`
+- Shared CSS: `site-info.css`
+- Article pages: `radar/`, `stories/`, `stocks/`
+- SEO / feeds: `sitemap.xml`, `robots.txt`, `rss.xml`, `feed.json`, `site.webmanifest`, `llms.txt`
+- Operations docs: `docs/OPERATIONS_RUNBOOK.md`, `docs/SITE_OPERATING_SPEC.md`, `docs/GROWTH_PLAYBOOK.md`, `docs/VOICE_GUIDE.md`
 
 ## Automation
 
 GitHub Actions:
 
 - `daily-update.yml`: daily site update before Taiwan morning.
-- `live-news-update.yml`: live news refresh.
+- `live-news-update.yml`: live-news refresh.
 - `pages.yml`: GitHub Pages deploy.
-- `domain-health-check.yml`: custom-domain HTTPS check.
-- `ops-health-check.yml`: operational health check.
-- X workflows: daily post, API smoke test, manual post, deletion helper.
+- `domain-health-check.yml`: custom-domain HTTPS health check.
+- `ops-health-check.yml`: overall site health check.
+- X workflows: API smoke test, daily post, manual post, deletion helper.
 
-Current known risks:
+Daily update must:
 
-- Daily updates must visibly change content and preserve old data if fetching fails.
-- Image generation may fail if API billing limits are hit; text can still update, but low-quality image fallbacks are not acceptable.
-- HTTPS for the custom domain may remain pending until GitHub finishes certificate provisioning.
+- Generate visibly fresh content before 07:00 Asia/Taipei.
+- Keep old data if fetching or review fails.
+- Include source links.
+- Run review checks before publishing.
+- Regenerate SEO, feeds, today page, share pack, and social drafts.
+- Avoid low-quality images even when image generation fails.
 
-## Standard Work Protocol
+Known risks:
+
+- `OPENAI_API_KEY` can hit billing limits; if image generation fails, text may update but images must stay approved quality.
+- Custom-domain HTTPS may remain unavailable until GitHub Pages provisions the certificate.
+- Social platform APIs depend on repo secrets and platform permissions.
+
+## Work Protocol
 
 1. Run `git status --short --branch`.
-2. Inspect current repo files, not old sessions.
+2. Inspect current repo files first.
 3. Make focused changes.
 4. Run checks; for site changes, at least run `npm test`.
 5. Review `git diff`.
 6. Commit and push when the change should publish.
-7. Watch GitHub Actions for deployment or automation changes.
-8. Verify public pages when the change affects the live site.
+7. Watch GitHub Actions for deploy / automation changes.
+8. Verify public pages when the live site is affected.
 
 Useful commands from `website`:
 
@@ -108,3 +124,10 @@ npm run test:x-profile
 npm run test:x-queue
 npm run test:x-readiness
 ```
+
+## Current Next Priorities
+
+- Confirm daily updates are visibly changing homepage data and public article pages.
+- Keep improving social/search previews so the homepage preview reflects today's strongest story.
+- Re-check `auntienomad.com` HTTPS until GitHub Pages can enforce HTTPS.
+- Improve content and image QA before any automated social publishing.
