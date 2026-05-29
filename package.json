@@ -9,6 +9,7 @@
     "test": "node scripts/validate-content.mjs",
     "generate:seo": "node scripts/generate-seo.mjs",
     "test:x-api": "node scripts/test-x-api.mjs",
+    "ops:health": "node scripts/ops-health-check.mjs",
     "post:x": "node scripts/post-x-manual.mjs",
     "delete:x-posts": "node scripts/delete-x-posts.mjs",
     "summarize:daily": "node scripts/write-action-summary.mjs daily",

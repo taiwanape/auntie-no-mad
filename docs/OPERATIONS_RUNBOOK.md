@@ -35,6 +35,18 @@ Codex 負責：
 
 巡檢正常時，回報簡短健康狀態；巡檢異常時，列出錯誤、影響範圍、建議修復步驟與是否需要立即處理。
 
+可重複執行的巡檢命令：
+
+```powershell
+npm run ops:health
+```
+
+GitHub Actions workflow：`.github/workflows/ops-health-check.yml`
+
+- 08:15 Asia/Taipei 每日執行。
+- 檢查本機內容驗證、公開首頁、主要 Actions、X API、profile 視覺與最新貼文。
+- OpenAI 圖片額度失敗但合格 raster fallback 可用時，列為 warning；不把網站視為中斷。
+
 ## 內容更新規則
 
 網站每日內容由 `scripts/daily-update.mjs` 產生，正式資料寫入 `data/site-content.json`。所有生活雷達、踩坑日記、股市 ETF 觀察都必須有公開來源。
@@ -121,4 +133,3 @@ GitHub Actions 失敗：
 - 不違反投資建議限制。
 - 不使用使用者明確拒絕過的視覺方向。
 - 先驗證再發布。
-
