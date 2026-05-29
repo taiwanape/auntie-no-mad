@@ -60,6 +60,7 @@ The account is not an ecommerce channel and should not look like a product ad. E
 - Do not post a sourced claim unless the source URL, source name, and date are available in the working notes or post asset.
 - Campaign queue: maintain `data/x-content-queue.json` with at least six planned real-person X concepts and one published example.
 - Queue audit: run `npm run test:x-queue` before scheduled or manual content work.
+- Readiness audit: run `npm run test:x-readiness` with X OAuth credentials when checking whether the account setup still satisfies the real-person X positioning.
 
 ## Post Gate
 

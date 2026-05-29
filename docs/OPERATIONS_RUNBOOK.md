@@ -14,6 +14,7 @@ npm test
 npm run test:x-queue
 npm run test:x-api
 npm run test:x-profile
+npm run test:x-readiness
 ```
 
 Check:
@@ -73,6 +74,7 @@ Avoid:
 npm run test:x-api
 npm run test:x-profile
 npm run test:x-queue
+npm run test:x-readiness
 npm run post:x
 npm run delete:x-posts
 ```

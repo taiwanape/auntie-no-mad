@@ -14,6 +14,7 @@
     "test:x-api": "node scripts/test-x-api.mjs",
     "test:domain": "node scripts/check-domain-health.mjs",
     "test:x-profile": "node scripts/audit-x-profile.mjs",
+    "test:x-readiness": "node scripts/audit-x-account-readiness.mjs",
     "ops:health": "node scripts/ops-health-check.mjs",
     "post:x": "node scripts/post-x-manual.mjs",
     "delete:x-posts": "node scripts/delete-x-posts.mjs",

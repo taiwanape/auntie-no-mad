@@ -56,6 +56,7 @@ npm run test:domain
 npm run test:x-api
 npm run test:x-profile
 npm run test:x-queue
+npm run test:x-readiness
 ```
 
 Key scripts:
