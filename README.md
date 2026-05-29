@@ -36,10 +36,12 @@ npm test
 - 文章 slug 是否存在
 - `data/share-pack.json` 是否存在，且分享連結都有 UTM 追蹤
 - `data/social-posts.json` 是否存在，且 X / Facebook / Instagram 都有可用貼文與圖片
+- 每日文章頁是否載入 `article-growth.js`，提供分享與相關文章導流模組
 
 ## 內容資料位置
 
 - 首頁主要資料：`data/site-content.json`
+- 文章頁分享與相關文章模組：`article-growth.js`
 - 每日審核報告：`data/review-report.json`，由每日更新流程產生
 - 每日社群分享素材包：`data/share-pack.json`
 - 每日社群貼文草稿：`data/social-posts.json`
@@ -74,11 +76,12 @@ GitHub Actions workflow：
 4. 圖片生成失敗時改用已審核通過的高品質 AI 圖庫，不使用低品質 SVG 或臨時拼貼圖
 5. 執行內容審核
 6. 通過才寫入 `data/site-content.json` 與文章頁
-7. 產生 `sitemap.xml` 與 `robots.txt`
-8. 產生 `data/share-pack.json`，提供官網、即時新聞、生活雷達、踩坑日記、股市 ETF 的分享文與 UTM 連結
-9. 產生 `data/social-posts.json`，提供 X / Facebook / Instagram 每日導流貼文草稿
-10. 執行 `npm test`
-11. 有變更才自動 commit / push
+7. 每篇文章頁自動載入 `article-growth.js`，顯示複製分享文、LINE / FB / X 分享和「接著看」相關文章
+8. 產生 `sitemap.xml` 與 `robots.txt`
+9. 產生 `data/share-pack.json`，提供官網、即時新聞、生活雷達、踩坑日記、股市 ETF 的分享文與 UTM 連結
+10. 產生 `data/social-posts.json`，提供 X / Facebook / Instagram 每日導流貼文草稿
+11. 執行 `npm test`
+12. 有變更才自動 commit / push
 
 ## 即時新聞更新
 

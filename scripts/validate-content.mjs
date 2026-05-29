@@ -144,6 +144,15 @@ function checkArticlePageImage(section, item) {
   );
 }
 
+function checkArticleGrowthScript(section, item) {
+  if (!item.slug || !fileExists(item.slug)) return;
+  const html = fs.readFileSync(path.join(root, item.slug), "utf8");
+  assert(
+    html.includes("article-growth.js"),
+    `${section}: article page ${item.slug} must include article-growth.js for sharing and related links`
+  );
+}
+
 function checkArticleImageMatch(section, item) {
   const assets = [item.thumbnail, item.hero].filter(Boolean).map(normalizePath);
   assets.forEach((assetPath) => {
@@ -204,6 +213,7 @@ assert(!/[銝嚗瘞踹]\S*[?]/.test(serializedData), "data/site-content.json app
     checkLocalSlug(section, item.slug);
     checkArticleImageMatch(section, item);
     checkArticlePageImage(section, item);
+    checkArticleGrowthScript(section, item);
   });
 });
 
@@ -224,6 +234,7 @@ assert(content.stockWatchlist?.length === 4, "stockWatchlist must contain exactl
   checkLocalSlug("stockWatchlist", item.slug);
   checkStockImageMatch(item);
   checkArticlePageImage("stockWatchlist", item);
+  checkArticleGrowthScript("stockWatchlist", item);
 });
 
 if (content.stockOverview) {
@@ -232,6 +243,7 @@ if (content.stockOverview) {
   checkAsset("stockOverview", content.stockOverview, "hero");
   checkLocalSlug("stockOverview", content.stockOverview.slug);
   checkArticlePageImage("stockOverview", content.stockOverview);
+  checkArticleGrowthScript("stockOverview", content.stockOverview);
 }
 
 ["etfGuide", "goodPicks", "fridgeNotes", "archive"].forEach((section) => {
@@ -247,6 +259,7 @@ const indexHtml = fs.readFileSync(path.join(root, "index.html"), "utf8");
 ["sitemap.xml", "robots.txt", "rss.xml", "feed.json"].forEach((file) => {
   assert(fileExists(file), `SEO/feed file missing: ${file}`);
 });
+assert(fileExists("article-growth.js"), "article-growth.js missing");
 assert(indexHtml.includes('type="application/rss+xml"'), "index.html must advertise rss.xml");
 assert(indexHtml.includes('type="application/feed+json"'), "index.html must advertise feed.json");
 
@@ -314,6 +327,12 @@ for (const [index, script] of [...indexHtml.matchAll(/<script>([\s\S]*?)<\/scrip
   } catch (error) {
     errors.push(`index.html inline script ${index + 1} syntax error: ${error.message}`);
   }
+}
+
+try {
+  new Function(fs.readFileSync(path.join(root, "article-growth.js"), "utf8"));
+} catch (error) {
+  errors.push(`article-growth.js syntax error: ${error.message}`);
 }
 
 if (warnings.length) {

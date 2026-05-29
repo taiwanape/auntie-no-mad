@@ -839,6 +839,7 @@ ${articleJsonLd}
     </article>
     <footer class="footer">阿姨別生氣 © 2026</footer>
   </div>
+  <script src="../article-growth.js" defer></script>
 </body>
 </html>
 `;
@@ -963,6 +964,7 @@ ${marketJsonLd}
       </div>
     </article>
   </div>
+  <script src="../article-growth.js" defer></script>
 </body>
 </html>
 `;

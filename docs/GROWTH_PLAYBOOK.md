@@ -53,6 +53,7 @@
 - 每天自動產生 `data/share-pack.json`，這是社群小編或自動貼文腳本要拿的素材包。
 - 分享連結一律帶 UTM：`utm_source` 分 LINE、Facebook、X、copy，`utm_campaign` 分不同內容欄位，之後才看得出哪裡帶流量。
 - 每天自動產生 `data/social-posts.json`，這是實際導流貼文草稿。X 自動發文優先讀這份，不再臨時亂組文案。
+- 每篇文章頁都要有文章內分享 CTA 和「接著看」相關文章。社群點進來的人不能只看一篇就被放生。
 
 ### X
 

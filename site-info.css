@@ -143,6 +143,115 @@ a {
   font-weight: 1000;
 }
 
+.article-growth {
+  margin-top: 24px;
+  display: grid;
+  gap: 18px;
+}
+
+.growth-share,
+.growth-related {
+  padding: 18px;
+  border: var(--line);
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.growth-share {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.growth-share div {
+  flex: 1 1 260px;
+}
+
+.growth-share strong,
+.growth-share span {
+  display: block;
+}
+
+.growth-share span,
+.related-grid em {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.45;
+  font-style: normal;
+  font-weight: 900;
+  color: rgba(22, 19, 15, .72);
+}
+
+.growth-share a,
+.growth-share button {
+  appearance: none;
+  min-height: 42px;
+  padding: 9px 13px;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: var(--pink);
+  color: white;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 1000;
+  text-decoration: none;
+  box-shadow: 3px 3px 0 var(--ink);
+  cursor: pointer;
+}
+
+.growth-share a:nth-of-type(1) {
+  background: var(--mint);
+  color: var(--ink);
+}
+
+.growth-share a:nth-of-type(2) {
+  background: white;
+  color: var(--ink);
+}
+
+.growth-share a:nth-of-type(3) {
+  background: var(--ink);
+}
+
+.growth-related h2 {
+  margin-top: 0;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.related-grid a {
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.related-grid span {
+  width: fit-content;
+  padding: 4px 9px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--yellow);
+  font-size: 12px;
+  font-weight: 1000;
+}
+
+.related-grid strong {
+  font-size: 18px;
+  line-height: 1.25;
+}
+
 @media (max-width: 640px) {
   .top {
     align-items: flex-start;
@@ -168,5 +277,15 @@ a {
   p,
   li {
     font-size: 17px;
+  }
+
+  .growth-share a,
+  .growth-share button {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr;
   }
 }
