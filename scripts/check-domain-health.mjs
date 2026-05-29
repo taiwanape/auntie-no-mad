@@ -119,6 +119,9 @@ if (shouldEnableHttps && pages?.ok && !pages.body.https_enforced) {
     log("Requested GitHub Pages HTTPS enforcement successfully.");
   } else if (enableResult) {
     log(`HTTPS enforcement not ready: ${enableResult.status} ${JSON.stringify(enableResult.body)}`);
+    if (enableResult.status === 403) {
+      log("The current token can check Pages state but cannot update Pages settings. Add GH_PAGES_TOKEN with Pages write/admin permission to enable automatic HTTPS enforcement from Actions.");
+    }
   }
 }
 
@@ -129,7 +132,10 @@ const summary = [
   `- HTTP: ${http.ok ? "ok" : "not ok"}${http.status ? ` (${http.status})` : ""}`,
   `- HTTPS: ${https.ok ? "ok" : "not ok"}${https.status ? ` (${https.status})` : ""}`,
   `- GitHub Pages HTTPS enforced: ${pages?.body ? String(Boolean(pages.body.https_enforced)) : "unknown"}`,
-  enableResult ? `- HTTPS enable attempt: ${enableResult.ok ? "ok" : `not ready (${enableResult.status})`}` : "- HTTPS enable attempt: skipped"
+  enableResult ? `- HTTPS enable attempt: ${enableResult.ok ? "ok" : `not ready (${enableResult.status})`}` : "- HTTPS enable attempt: skipped",
+  enableResult?.status === 403
+    ? "- Note: set `GH_PAGES_TOKEN` with repository Pages write/admin permission if Actions should enforce HTTPS automatically."
+    : ""
 ];
 writeSummary(summary);
 

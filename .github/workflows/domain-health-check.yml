@@ -26,7 +26,10 @@ jobs:
       - name: Check custom domain and try HTTPS enforcement
         run: npm run test:domain
         env:
-          GH_TOKEN: ${{ github.token }}
+          # GITHUB_TOKEN can read Pages state, but GitHub may reject Pages settings updates
+          # with 403. Set GH_PAGES_TOKEN to a fine-grained token with repository Pages
+          # write/admin permission if automatic HTTPS enforcement is needed.
+          GH_TOKEN: ${{ secrets.GH_PAGES_TOKEN || github.token }}
           AUNTIE_CUSTOM_DOMAIN: auntienomad.com
           ENABLE_PAGES_HTTPS: "true"
           AUNTIE_DOMAIN_STRICT: "false"

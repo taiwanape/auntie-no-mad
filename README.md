@@ -114,6 +114,8 @@ DNS 已指向 GitHub Pages，`CNAME` 檔案也已設定為 `auntienomad.com`。�
 - GitHub Pages 是否已 enforce HTTPS
 - 若憑證已存在，會嘗試自動啟用 HTTPS
 
+注意：GitHub 內建的 `GITHUB_TOKEN` 可能只能檢查狀態，不能修改 Pages 設定。若要讓 Actions 自動啟用 HTTPS，請新增 repository secret `GH_PAGES_TOKEN`，使用具備該 repo Pages write/admin 權限的 fine-grained token。
+
 ## 即時新聞更新
 
 即時新聞使用獨立 workflow：
