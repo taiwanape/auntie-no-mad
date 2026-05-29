@@ -36,6 +36,8 @@
     .post-card {
       display: grid;
       gap: 12px;
+      min-width: 0;
+      overflow: hidden;
       padding: 16px;
       border: var(--line);
       border-radius: 18px;
@@ -55,12 +57,20 @@
     .today-promo img,
     .today-promo .empty-image {
       width: 100%;
+      max-width: 100%;
+      min-width: 0;
       aspect-ratio: 16 / 9;
       object-fit: cover;
       border: 3px solid var(--ink);
       border-radius: 14px;
       background: var(--yellow);
       box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    .share-card > *,
+    .post-card > *,
+    .today-promo > * {
+      min-width: 0;
     }
 
     .today-promo-copy {
@@ -84,7 +94,10 @@
 
     .share-card img,
     .post-card img {
+      display: block;
       width: 100%;
+      max-width: 100%;
+      min-width: 0;
       aspect-ratio: 16 / 9;
       object-fit: cover;
       border: 3px solid var(--ink);
@@ -102,6 +115,7 @@
     .share-card p,
     .post-card p,
     .share-meta {
+      min-width: 0;
       margin: 0;
       font-size: 15px;
       line-height: 1.55;
@@ -112,10 +126,16 @@
       color: rgba(22, 19, 15, .66);
     }
 
+    .share-meta a {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
     .button-row {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
+      min-width: 0;
     }
 
     .button-row a,
@@ -136,6 +156,8 @@
       text-decoration: none;
       box-shadow: 3px 3px 0 var(--ink);
       cursor: pointer;
+      max-width: 100%;
+      white-space: normal;
     }
 
     .button-row .primary {
@@ -144,6 +166,7 @@
     }
 
     .post-text {
+      min-width: 0;
       min-height: 180px;
       padding: 12px;
       border: 3px solid var(--ink);
@@ -153,6 +176,8 @@
       font-size: 15px;
       line-height: 1.55;
       font-weight: 850;
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
     .empty-image {

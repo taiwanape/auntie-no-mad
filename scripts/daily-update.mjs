@@ -817,14 +817,20 @@ function articleTemplate(item, section) {
   <meta name="description" content="${htmlEscape(item.summary)}">
   <link rel="canonical" href="${htmlEscape(pageUrl)}">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="阿姨別生氣">
   <meta property="og:title" content="${htmlEscape(item.title)}">
   <meta property="og:description" content="${htmlEscape(item.summary)}">
   <meta property="og:url" content="${htmlEscape(pageUrl)}">
   <meta property="og:image" content="${htmlEscape(imageUrl)}">
+  <meta property="og:image:alt" content="${htmlEscape(`阿姨別生氣圖文：${item.title}`)}">
+  <meta property="article:published_time" content="${htmlEscape(item.date)}">
+  <meta property="article:modified_time" content="${htmlEscape(item.updatedAt || item.date)}">
+  <meta property="article:section" content="${htmlEscape(item.category)}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${htmlEscape(item.title)}">
   <meta name="twitter:description" content="${htmlEscape(item.summary)}">
   <meta name="twitter:image" content="${htmlEscape(imageUrl)}">
+  <meta name="twitter:image:alt" content="${htmlEscape(`阿姨別生氣圖文：${item.title}`)}">
   <link rel="alternate" type="application/rss+xml" title="阿姨別生氣 RSS" href="https://taiwanape.github.io/auntie-no-mad/rss.xml">
   <link rel="alternate" type="application/feed+json" title="阿姨別生氣 JSON Feed" href="https://taiwanape.github.io/auntie-no-mad/feed.json">
   <link rel="manifest" href="${base}site.webmanifest">
@@ -941,14 +947,20 @@ function marketTemplate(stockOverview, stockItems) {
   <meta name="description" content="${htmlEscape(stockOverview.summary)}">
   <link rel="canonical" href="${htmlEscape(pageUrl)}">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="阿姨別生氣">
   <meta property="og:title" content="${htmlEscape(stockOverview.title)} ${htmlEscape(stockOverview.date)}">
   <meta property="og:description" content="${htmlEscape(stockOverview.summary)}">
   <meta property="og:url" content="${htmlEscape(pageUrl)}">
   <meta property="og:image" content="${htmlEscape(imageUrl)}">
+  <meta property="og:image:alt" content="${htmlEscape(`阿姨別生氣圖文：${stockOverview.title}`)}">
+  <meta property="article:published_time" content="${htmlEscape(stockOverview.date)}">
+  <meta property="article:modified_time" content="${htmlEscape(stockOverview.updatedAt || stockOverview.date)}">
+  <meta property="article:section" content="${htmlEscape(stockOverview.category)}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${htmlEscape(stockOverview.title)} ${htmlEscape(stockOverview.date)}">
   <meta name="twitter:description" content="${htmlEscape(stockOverview.summary)}">
   <meta name="twitter:image" content="${htmlEscape(imageUrl)}">
+  <meta name="twitter:image:alt" content="${htmlEscape(`阿姨別生氣圖文：${stockOverview.title}`)}">
   <link rel="alternate" type="application/rss+xml" title="阿姨別生氣 RSS" href="https://taiwanape.github.io/auntie-no-mad/rss.xml">
   <link rel="alternate" type="application/feed+json" title="阿姨別生氣 JSON Feed" href="https://taiwanape.github.io/auntie-no-mad/feed.json">
   <link rel="manifest" href="../site.webmanifest">

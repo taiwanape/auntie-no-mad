@@ -161,6 +161,19 @@ function checkArticlePageImage(section, item) {
   );
 }
 
+function checkArticleSocialPreview(section, item) {
+  if (!item.slug || !fileExists(item.slug)) return;
+  const html = fs.readFileSync(path.join(root, item.slug), "utf8").replaceAll("\\", "/");
+  assert(!/\?{3,}/.test(html), `${section}: article page ${item.slug} contains question-mark mojibake such as ???`);
+  assert(html.includes('property="og:site_name"'), `${section}: article page ${item.slug} must include og:site_name`);
+  assert(html.includes('property="og:image:alt"'), `${section}: article page ${item.slug} must include og:image:alt`);
+  assert(html.includes('name="twitter:card" content="summary_large_image"'), `${section}: article page ${item.slug} must include summary_large_image twitter card`);
+  assert(html.includes('name="twitter:image"'), `${section}: article page ${item.slug} must include twitter:image`);
+  assert(html.includes('name="twitter:image:alt"'), `${section}: article page ${item.slug} must include twitter:image:alt`);
+  assert(html.includes('property="article:published_time"'), `${section}: article page ${item.slug} must include article:published_time`);
+  assert(html.includes('property="article:section"'), `${section}: article page ${item.slug} must include article:section`);
+}
+
 function checkArticleGrowthScript(section, item) {
   if (!item.slug || !fileExists(item.slug)) return;
   const html = fs.readFileSync(path.join(root, item.slug), "utf8");
@@ -230,6 +243,7 @@ assert(!/[銝嚗瘞踹]\S*[?]/.test(serializedData), "data/site-content.json app
     checkLocalSlug(section, item.slug);
     checkArticleImageMatch(section, item);
     checkArticlePageImage(section, item);
+    checkArticleSocialPreview(section, item);
     checkArticleGrowthScript(section, item);
   });
 });
@@ -251,6 +265,7 @@ assert(content.stockWatchlist?.length === 4, "stockWatchlist must contain exactl
   checkLocalSlug("stockWatchlist", item.slug);
   checkStockImageMatch(item);
   checkArticlePageImage("stockWatchlist", item);
+  checkArticleSocialPreview("stockWatchlist", item);
   checkArticleGrowthScript("stockWatchlist", item);
 });
 
@@ -260,6 +275,7 @@ if (content.stockOverview) {
   checkAsset("stockOverview", content.stockOverview, "hero");
   checkLocalSlug("stockOverview", content.stockOverview.slug);
   checkArticlePageImage("stockOverview", content.stockOverview);
+  checkArticleSocialPreview("stockOverview", content.stockOverview);
   checkArticleGrowthScript("stockOverview", content.stockOverview);
 }
 
@@ -420,6 +436,9 @@ assert(shareHtml.includes('withUtm(TODAY_URL, "x")'), "share.html today promo mu
 assert(shareHtml.includes('rel="canonical"'), "share.html must include canonical URL");
 assert(shareHtml.includes('rel="alternate"'), "share.html must expose feed alternates");
 assert(shareHtml.includes('rel="manifest"'), "share.html must expose site.webmanifest");
+assert(shareHtml.includes("overflow: hidden"), "share.html cards must clip accidental visual overflow");
+assert(shareHtml.includes("overflow-wrap: anywhere"), "share.html must wrap long URLs and post text inside cards");
+assert(shareHtml.includes(".share-card > *"), "share.html must force card children to respect card width");
 for (const [index, script] of [...shareHtml.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]).entries()) {
   try {
     new Function(script);
