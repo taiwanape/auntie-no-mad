@@ -2,12 +2,12 @@
 
 > 台灣生活雷達、踩坑提醒、股市 ETF 白話觀察與實用工具。語氣白話、有一點碎念，重點是幫一般人看懂生活大小事。
 
-- Website: https://taiwanape.github.io/auntie-no-mad/
-- RSS: https://taiwanape.github.io/auntie-no-mad/rss.xml
-- JSON Feed: https://taiwanape.github.io/auntie-no-mad/feed.json
-- Sitemap: https://taiwanape.github.io/auntie-no-mad/sitemap.xml
-- Today page: https://taiwanape.github.io/auntie-no-mad/today.html
-- Share kit: https://taiwanape.github.io/auntie-no-mad/share.html
+- Website: http://auntienomad.com/
+- RSS: http://auntienomad.com/rss.xml
+- JSON Feed: http://auntienomad.com/feed.json
+- Sitemap: http://auntienomad.com/sitemap.xml
+- Today page: http://auntienomad.com/today.html
+- Share kit: http://auntienomad.com/share.html
 - X: https://x.com/auntienomad
 - Instagram: https://www.instagram.com/auntienomad/
 - Facebook: https://www.facebook.com/profile.php?id=61553234457401
@@ -20,11 +20,11 @@
 
 ## Latest Public Articles
 
-- [氣象署發布豪雨特報 屏高台南有局部豪大雨發生機率](https://taiwanape.github.io/auntie-no-mad/radar/2026-05-30-life-1.html) — 生活新聞
-- [氣象署發布豪雨特報 屏東有局部大雨或豪雨發生機率](https://taiwanape.github.io/auntie-no-mad/radar/2026-05-30-life-2.html) — 民生資訊
-- [打詐綱領2.0施行成效 查獲5055詐團、追贓33億元](https://taiwanape.github.io/auntie-no-mad/stories/2026-05-30-pitfall-1.html) — 踩坑提醒
-- [基隆國門廣場發生男女脫序行為 警方掌握線索偵辦](https://taiwanape.github.io/auntie-no-mad/stories/2026-05-30-pitfall-2.html) — 生活踩坑
-- [股市ETF](https://taiwanape.github.io/auntie-no-mad/stocks/2026-05-30-market-watch.html) — 股市 ETF
-- [聯發科](https://taiwanape.github.io/auntie-no-mad/stocks/2026-05-30-2454.html) — 熱門股
-- [鴻海](https://taiwanape.github.io/auntie-no-mad/stocks/2026-05-30-2317.html) — 熱門股
-- [力積電](https://taiwanape.github.io/auntie-no-mad/stocks/2026-05-30-6770.html) — 新星觀察
+- [氣象署發布豪雨特報 屏高台南有局部豪大雨發生機率](http://auntienomad.com/radar/2026-05-30-life-1.html) — 生活新聞
+- [氣象署發布豪雨特報 屏東有局部大雨或豪雨發生機率](http://auntienomad.com/radar/2026-05-30-life-2.html) — 民生資訊
+- [打詐綱領2.0施行成效 查獲5055詐團、追贓33億元](http://auntienomad.com/stories/2026-05-30-pitfall-1.html) — 踩坑提醒
+- [基隆國門廣場發生男女脫序行為 警方掌握線索偵辦](http://auntienomad.com/stories/2026-05-30-pitfall-2.html) — 生活踩坑
+- [股市ETF](http://auntienomad.com/stocks/2026-05-30-market-watch.html) — 股市 ETF
+- [聯發科](http://auntienomad.com/stocks/2026-05-30-2454.html) — 熱門股
+- [鴻海](http://auntienomad.com/stocks/2026-05-30-2317.html) — 熱門股
+- [力積電](http://auntienomad.com/stocks/2026-05-30-6770.html) — 新星觀察

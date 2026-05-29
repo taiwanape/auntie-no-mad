@@ -349,7 +349,7 @@ if (homepagePreviewItem) {
   assert(indexHtml.includes('name="twitter:image"'), "index.html social preview must include twitter:image");
   if (imageNeedle !== "assets/auntie-hero.jpg") {
     assert(
-      !indexHtml.includes('property="og:image" content="https://taiwanape.github.io/auntie-no-mad/assets/auntie-hero.jpg"'),
+      !indexHtml.includes('property="og:image" content="http://auntienomad.com/assets/auntie-hero.jpg"'),
       "index.html social preview must not fall back to the generic hero when a current story image exists"
     );
   }
@@ -371,7 +371,7 @@ const sharePackPath = path.join(root, "data", "share-pack.json");
 assert(fileExists("data/share-pack.json"), "data/share-pack.json missing; run npm run generate:share-pack");
 if (fs.existsSync(sharePackPath)) {
   const sharePack = JSON.parse(fs.readFileSync(sharePackPath, "utf8"));
-  const shareSiteUrl = new URL(sharePack.site?.url || content.site?.url || "https://taiwanape.github.io/auntie-no-mad/");
+  const shareSiteUrl = new URL(sharePack.site?.url || content.site?.url || "http://auntienomad.com/");
   const isSiteShareUrl = (urlValue = "") => {
     try {
       const url = new URL(urlValue);

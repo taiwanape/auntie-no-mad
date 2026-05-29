@@ -1,8 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
+import { publicImageUrl, publicSiteUrl as siteUrl } from "./public-site-url.mjs";
 
 const root = process.cwd();
-const siteUrl = "https://taiwanape.github.io/auntie-no-mad/";
 const content = JSON.parse(fs.readFileSync(path.join(root, "data", "site-content.json"), "utf8"));
 const siteTitle = "阿姨別生氣";
 const siteDescription = "每天整理台灣生活雷達、踩坑提醒、股市 ETF 白話觀察與實用工具。阿姨不講官腔，只講今天出門會不會煩。";
@@ -102,13 +102,14 @@ function setMetaContent(html, selector, contentValue) {
 function updateHomepageMeta() {
   const indexPath = path.join(root, "index.html");
   let html = fs.readFileSync(indexPath, "utf8");
+  html = html.replaceAll("https://taiwanape.github.io/auntie-no-mad/", siteUrl);
   const preview = pickHomepagePreviewItem();
   const previewTitle = preview?.title ? compactText(preview.title, 34) : "";
   const title = previewTitle
     ? `${siteTitle}｜今日必看：${previewTitle}`
     : `${siteTitle}｜生活雷達、踩坑日記與股市 ETF 白話整理`;
   const description = compactText(buildPreviewDescription(preview), 118);
-  const imageUrl = absoluteUrl(pickPreviewImage(preview));
+  const imageUrl = publicImageUrl(pickPreviewImage(preview));
   const imageAlt = previewTitle ? `${siteTitle}今日必看：${previewTitle}` : siteTitle;
 
   html = html.replace(/<title>[\s\S]*?<\/title>/, () => `<title>${escapeXml(title)}</title>`);

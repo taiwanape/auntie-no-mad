@@ -16,7 +16,7 @@ The account is not an ecommerce channel and should not look like a product ad. E
 - Display name: `阿姨別生氣`
 - Location: `台灣・熱搜現場`
 - Bio: `熱搜翻譯、科技八卦、荷包避雷。真人版阿姨，用成熟一點的眼神，把新聞講到你會想轉發。尺度大一點，腦袋也要在線。`
-- Link: `https://taiwanape.github.io/auntie-no-mad/`
+- Link: `http://auntienomad.com/`
 - Profile audit: load X OAuth credentials, then run `npm run test:x-profile`.
 
 ## Character Lock

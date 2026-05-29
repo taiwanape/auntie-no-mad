@@ -1,4 +1,4 @@
-BEGIN:VCALENDAR
+﻿BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Auntie NoMad//Daily Return Reminder//ZH-TW
 CALSCALE:GREGORIAN
@@ -10,6 +10,6 @@ DESCRIPTION:阿姨每天早上幫你整理生活雷達、踩坑提醒和股市ET
 DTSTART:20260529T230500Z
 DTEND:20260529T231500Z
 RRULE:FREQ=DAILY
-URL:https://taiwanape.github.io/auntie-no-mad/today.html?utm_source=calendar&utm_medium=owned&utm_campaign=daily_return
+URL:http://auntienomad.com/today.html?utm_source=calendar&utm_medium=owned&utm_campaign=daily_return
 END:VEVENT
 END:VCALENDAR

@@ -1,5 +1,6 @@
 ﻿import fs from "node:fs";
 import path from "node:path";
+import { publicImageUrl, publicSiteUrl, publicUrl } from "./public-site-url.mjs";
 
 const root = process.cwd();
 const dataPath = path.join(root, "data", "site-content.json");
@@ -768,8 +769,8 @@ function articleTemplate(item, section) {
   const heroPath = hero.startsWith("assets/") ? `../${hero}` : hero;
   const backHref = section === "stock" ? "../index.html#investing" : section === "pitfall" ? "../index.html#stories" : "../index.html#radar";
   const backText = section === "stock" ? "回股市 ETF" : section === "pitfall" ? "回踩坑日記" : "回生活雷達";
-  const pageUrl = `https://taiwanape.github.io/auntie-no-mad/${item.slug}`;
-  const imageUrl = `https://taiwanape.github.io/auntie-no-mad/${hero}`;
+  const pageUrl = publicUrl(item.slug);
+  const imageUrl = publicImageUrl(hero);
   const articleType = section === "life" ? "NewsArticle" : "Article";
   const articleJsonLd = structuredData({
     "@context": "https://schema.org",
@@ -804,7 +805,7 @@ function articleTemplate(item, section) {
       ],
       logo: {
         "@type": "ImageObject",
-        url: "https://taiwanape.github.io/auntie-no-mad/assets/auntie-avatar-nav.jpg"
+        url: publicImageUrl("assets/auntie-avatar-nav.jpg")
       }
     }
   });
@@ -831,8 +832,8 @@ function articleTemplate(item, section) {
   <meta name="twitter:description" content="${htmlEscape(item.summary)}">
   <meta name="twitter:image" content="${htmlEscape(imageUrl)}">
   <meta name="twitter:image:alt" content="${htmlEscape(`阿姨別生氣圖文：${item.title}`)}">
-  <link rel="alternate" type="application/rss+xml" title="阿姨別生氣 RSS" href="https://taiwanape.github.io/auntie-no-mad/rss.xml">
-  <link rel="alternate" type="application/feed+json" title="阿姨別生氣 JSON Feed" href="https://taiwanape.github.io/auntie-no-mad/feed.json">
+  <link rel="alternate" type="application/rss+xml" title="阿姨別生氣 RSS" href="${publicUrl("rss.xml")}">
+  <link rel="alternate" type="application/feed+json" title="阿姨別生氣 JSON Feed" href="${publicUrl("feed.json")}">
   <link rel="manifest" href="${base}site.webmanifest">
   <link rel="me" href="https://x.com/auntienomad">
   <link rel="me" href="https://www.instagram.com/auntienomad/">
@@ -891,10 +892,10 @@ function stockDetails(item) {
 }
 
 function marketTemplate(stockOverview, stockItems) {
-  const pageUrl = `https://taiwanape.github.io/auntie-no-mad/${stockOverview.slug}`;
+  const pageUrl = publicUrl(stockOverview.slug);
   const hero = stockOverview.hero || assets.stocks.default;
   const heroPath = hero.startsWith("assets/") ? `../${hero}` : hero;
-  const imageUrl = `https://taiwanape.github.io/auntie-no-mad/${hero}`;
+  const imageUrl = publicImageUrl(hero);
   const marketJsonLd = structuredData({
     "@context": "https://schema.org",
     "@type": "Article",
@@ -928,7 +929,7 @@ function marketTemplate(stockOverview, stockItems) {
       ],
       logo: {
         "@type": "ImageObject",
-        url: "https://taiwanape.github.io/auntie-no-mad/assets/auntie-avatar-nav.jpg"
+        url: publicImageUrl("assets/auntie-avatar-nav.jpg")
       }
     }
   });
@@ -961,8 +962,8 @@ function marketTemplate(stockOverview, stockItems) {
   <meta name="twitter:description" content="${htmlEscape(stockOverview.summary)}">
   <meta name="twitter:image" content="${htmlEscape(imageUrl)}">
   <meta name="twitter:image:alt" content="${htmlEscape(`阿姨別生氣圖文：${stockOverview.title}`)}">
-  <link rel="alternate" type="application/rss+xml" title="阿姨別生氣 RSS" href="https://taiwanape.github.io/auntie-no-mad/rss.xml">
-  <link rel="alternate" type="application/feed+json" title="阿姨別生氣 JSON Feed" href="https://taiwanape.github.io/auntie-no-mad/feed.json">
+  <link rel="alternate" type="application/rss+xml" title="阿姨別生氣 RSS" href="${publicUrl("rss.xml")}">
+  <link rel="alternate" type="application/feed+json" title="阿姨別生氣 JSON Feed" href="${publicUrl("feed.json")}">
   <link rel="manifest" href="../site.webmanifest">
   <link rel="me" href="https://x.com/auntienomad">
   <link rel="me" href="https://www.instagram.com/auntienomad/">
@@ -1085,6 +1086,7 @@ async function main() {
     ...content,
     site: {
       ...content.site,
+      url: publicSiteUrl,
       updatedAt: stamp,
       dailyNote: `看完整 ${taipeiDate.replaceAll("-", "/")} 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。`,
       dailyNoteUrl: stockOverview.slug

@@ -61,7 +61,8 @@
 
 - Repository：`taiwanape/auntie-no-mad`
 - Branch：`main`
-- Pages URL：`https://taiwanape.github.io/auntie-no-mad/`
+- Primary URL：`http://auntienomad.com/`
+- GitHub Pages fallback：`https://taiwanape.github.io/auntie-no-mad/`
 - 目前由 GitHub Pages 直接部署靜態檔案，無 build step。
 
 ## 8. GitHub Actions 狀態

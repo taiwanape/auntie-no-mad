@@ -1,6 +1,7 @@
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { publicSiteUrl } from "./public-site-url.mjs";
 
 const root = process.cwd();
 const defaultText = [
@@ -213,7 +214,7 @@ function buildDailyTweetFromContent() {
     `重點：${summary}`,
     "",
     `來源：${sourceLabel}`,
-    item.sourceUrl || content.site?.url || "https://taiwanape.github.io/auntie-no-mad/",
+    item.sourceUrl || content.site?.url || publicSiteUrl,
     `#阿姨別生氣 ${categoryTag}`
   ].join("\n");
 

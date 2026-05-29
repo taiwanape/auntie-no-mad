@@ -9,6 +9,9 @@ on:
 permissions:
   contents: read
 
+env:
+  PUBLIC_SITE_URL: "http://auntienomad.com/"
+
 jobs:
   post:
     runs-on: ubuntu-latest

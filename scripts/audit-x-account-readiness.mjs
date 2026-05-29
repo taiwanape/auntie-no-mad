@@ -143,7 +143,7 @@ function auditProfile(profile) {
   });
   addCheck("X profile image is present", Boolean(profile.profile_image_url_https));
   addCheck("X profile banner is present", Boolean(profile.profile_banner_url));
-  addCheck("X profile link points to site", expandedUrl.includes("taiwanape.github.io/auntie-no-mad"), {
+  addCheck("X profile link points to site", /auntienomad\.com|taiwanape\.github\.io\/auntie-no-mad/.test(expandedUrl), {
     expandedUrl
   });
   addCheck("X has at least five posts", Number(profile.statuses_count || 0) >= 5, {

@@ -6,7 +6,7 @@ const expected = {
   username: "auntienomad",
   name: "阿姨別生氣",
   location: "台灣・熱搜現場",
-  urlHost: "taiwanape.github.io",
+  urlHosts: ["auntienomad.com", "taiwanape.github.io"],
   descriptionTerms: ["熱搜翻譯", "真人版阿姨", "尺度大一點", "腦袋也要在線"],
   bannedDescriptionTerms: ["好物推薦", "阿姨出清", "電商", "商品展示", "下單"]
 };
@@ -129,7 +129,7 @@ function buildAudit(profile) {
     },
     {
       label: "profile url",
-      ok: String(expandedUrl).includes(expected.urlHost),
+      ok: expected.urlHosts.some((host) => String(expandedUrl).includes(host)),
       actual: expandedUrl
     },
     ...expected.descriptionTerms.map((term) => ({

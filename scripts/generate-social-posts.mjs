@@ -1,10 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
+import { publicUrl } from "./public-site-url.mjs";
 
 const root = process.cwd();
 const sharePackPath = path.join(root, "data", "share-pack.json");
 const outputPath = path.join(root, "data", "social-posts.json");
-const todayUrl = "https://taiwanape.github.io/auntie-no-mad/today.html";
+const todayUrl = publicUrl("today.html");
 
 const sharePack = JSON.parse(fs.readFileSync(sharePackPath, "utf8"));
 

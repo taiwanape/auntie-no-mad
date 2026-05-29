@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { publicImageUrl, publicSiteUrl as siteUrl } from "./public-site-url.mjs";
 
 const root = process.cwd();
 const contentPath = path.join(root, "data", "site-content.json");
@@ -15,7 +16,6 @@ const socialPosts = fs.existsSync(socialPostsPath)
   ? JSON.parse(fs.readFileSync(socialPostsPath, "utf8"))
   : {};
 
-const siteUrl = ensureSlash(content.site?.url || "https://taiwanape.github.io/auntie-no-mad/");
 const siteName = content.site?.name || "阿姨別生氣";
 const handle = "@auntienomad";
 const defaultImage = "assets/auntie-hero.jpg";
@@ -99,7 +99,7 @@ const todayUrl = withUtm("today.html", "link_in_bio", "today_page");
 const shareUrl = withUtm("share.html", "link_in_bio", "share_pack");
 const latestUrl = withUtm(primary.articleUrl || "today.html", "link_in_bio", "featured_story");
 const description = `阿姨別生氣社群入口：每天早上更新生活雷達、踩坑提醒、股市 ETF 白話整理。`;
-const ogImage = absoluteUrl(primaryImage);
+const ogImage = publicImageUrl(primaryImage);
 
 const articleCards = items
   .filter((item) => item.articleUrl)

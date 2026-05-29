@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://taiwanape.github.io/auntie-no-mad/sitemap.xml
+Sitemap: http://auntienomad.com/sitemap.xml

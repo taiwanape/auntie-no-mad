@@ -1,12 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
+import { publicSiteUrl as siteUrl } from "./public-site-url.mjs";
 
 const root = process.cwd();
 const contentPath = path.join(root, "data", "site-content.json");
 const outputPath = path.join(root, "data", "share-pack.json");
 
 const content = JSON.parse(fs.readFileSync(contentPath, "utf8"));
-const siteUrl = content.site?.url || "https://taiwanape.github.io/auntie-no-mad/";
 const generatedAt =
   content.site?.liveNewsUpdatedAt || content.site?.updatedAt || new Date().toISOString();
 

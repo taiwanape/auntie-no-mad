@@ -1,11 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
+import { publicImageUrl, publicSiteUrl as siteUrl } from "./public-site-url.mjs";
 
 const root = process.cwd();
 const sharePackPath = path.join(root, "data", "share-pack.json");
 const socialPostsPath = path.join(root, "data", "social-posts.json");
 const outputPath = path.join(root, "today.html");
-const siteUrl = "https://taiwanape.github.io/auntie-no-mad/";
 
 const sharePack = JSON.parse(fs.readFileSync(sharePackPath, "utf8"));
 const socialPosts = fs.existsSync(socialPostsPath)
@@ -77,7 +77,7 @@ const title = `今日必看｜${cleanText(primary.title)}`;
 const description = cleanText(primary.summary || "阿姨幫你把今天最值得看的生活新聞、踩坑提醒與股市觀察整理成人話。");
 const articleUrl = primary.articleUrl || siteUrl;
 const todayUrl = `${siteUrl}today.html`;
-const imageUrl = absoluteUrl(primary.imagePath || "assets/auntie-hero.jpg");
+const imageUrl = publicImageUrl(primary.imagePath || "assets/auntie-hero.jpg");
 const imageAlt = cleanText(primary.imageAlt || primary.title || "阿姨別生氣今日必看圖文");
 const copyText = `${primary.title}\n${description}\n\n阿姨別生氣今日必看：${todayUrl}?utm_source=copy&utm_medium=social&utm_campaign=today_page`;
 const nativeShareUrl = withUtm(todayUrl, "native", "today_page");

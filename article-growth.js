@@ -1,5 +1,5 @@
 (() => {
-  const SITE_BASE = "https://taiwanape.github.io/auntie-no-mad/";
+  const SITE_BASE = "http://auntienomad.com/";
   const currentPath = window.location.pathname.replace(/^\/auntie-no-mad\//, "");
   const isNestedPage = /\/(?:radar|stories|stocks)\//.test(window.location.pathname);
   const dataUrl = isNestedPage ? "../data/site-content.json" : "data/site-content.json";

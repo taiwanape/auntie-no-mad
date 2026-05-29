@@ -3,14 +3,14 @@
   "short_name": "阿姨別生氣",
   "description": "每天整理台灣生活雷達、踩坑提醒、股市 ETF 白話觀察與實用工具。阿姨不講官腔，只講今天出門會不會煩。",
   "lang": "zh-TW",
-  "start_url": "https://taiwanape.github.io/auntie-no-mad/?utm_source=web_app_manifest&utm_medium=owned&utm_campaign=install",
-  "scope": "https://taiwanape.github.io/auntie-no-mad/",
+  "start_url": "http://auntienomad.com/?utm_source=web_app_manifest&utm_medium=owned&utm_campaign=install",
+  "scope": "http://auntienomad.com/",
   "display": "standalone",
   "background_color": "#ffd51f",
   "theme_color": "#ffd51f",
   "icons": [
     {
-      "src": "https://taiwanape.github.io/auntie-no-mad/assets/auntie-avatar-nav.jpg",
+      "src": "http://auntienomad.com/assets/auntie-avatar-nav.jpg",
       "sizes": "192x192",
       "type": "image/jpeg",
       "purpose": "any"
@@ -20,25 +20,25 @@
     {
       "name": "今日必看",
       "short_name": "今日",
-      "url": "https://taiwanape.github.io/auntie-no-mad/today.html?utm_source=web_app_manifest&utm_medium=owned&utm_campaign=today",
+      "url": "http://auntienomad.com/today.html?utm_source=web_app_manifest&utm_medium=owned&utm_campaign=today",
       "description": "每天自動換成阿姨最想叫你看的那一篇。"
     },
     {
       "name": "今日分享包",
       "short_name": "分享包",
-      "url": "https://taiwanape.github.io/auntie-no-mad/share.html?utm_source=web_app_manifest&utm_medium=owned&utm_campaign=share_pack",
+      "url": "http://auntienomad.com/share.html?utm_source=web_app_manifest&utm_medium=owned&utm_campaign=share_pack",
       "description": "拿今天可轉傳的文章、圖文與社群文案。"
     },
     {
       "name": "即時新聞",
       "short_name": "即時",
-      "url": "https://taiwanape.github.io/auntie-no-mad/#live",
+      "url": "http://auntienomad.com/#live",
       "description": "看阿姨整理的即時新聞入口。"
     },
     {
       "name": "工具箱",
       "short_name": "工具",
-      "url": "https://taiwanape.github.io/auntie-no-mad/tools/index.html",
+      "url": "http://auntienomad.com/tools/index.html",
       "description": "打開阿姨的小工具。"
     }
   ]

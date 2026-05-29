@@ -10,8 +10,8 @@ This is the compressed working context for the Auntie NoMad project. Use this fi
 - Website repo: `C:\Users\taiwa\Documents\AuntieNoMad\website`
 - GitHub repo: `taiwanape/auntie-no-mad`
 - Current public URLs:
-  - `http://auntienomad.com/`
-  - `https://taiwanape.github.io/auntie-no-mad/`
+  - Primary: `http://auntienomad.com/`
+  - GitHub Pages fallback: `https://taiwanape.github.io/auntie-no-mad/`
 - Custom-domain HTTPS is still pending if GitHub Pages has no certificate yet.
 - Never commit secrets, API keys, OAuth tokens, cookies, or local credential files.
 

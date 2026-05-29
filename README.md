@@ -4,8 +4,8 @@
 
 公開網址：
 
-- GitHub Pages: https://taiwanape.github.io/auntie-no-mad/
-- 自訂網域: http://auntienomad.com/
+- 主要網址: http://auntienomad.com/
+- GitHub Pages 備援: https://taiwanape.github.io/auntie-no-mad/
 
 > 自訂網域的 HTTPS 由 GitHub Pages 憑證簽發控制。若瀏覽器暫時顯示不安全，先跑 domain health check 確認狀態。
 

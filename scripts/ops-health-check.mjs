@@ -2,10 +2,11 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
+import { publicSiteUrl } from "./public-site-url.mjs";
 
 const root = process.cwd();
 const repo = process.env.GITHUB_REPOSITORY || "taiwanape/auntie-no-mad";
-const siteUrl = process.env.AUNTIE_SITE_URL || "https://taiwanape.github.io/auntie-no-mad/";
+const siteUrl = process.env.AUNTIE_SITE_URL || publicSiteUrl;
 const requiredWorkflows = [
   "Daily Auntie Update",
   "Live News Update",

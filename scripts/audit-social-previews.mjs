@@ -1,8 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
+import { publicSiteUrl as siteUrl } from "./public-site-url.mjs";
 
 const root = process.cwd();
-const siteUrl = "https://taiwanape.github.io/auntie-no-mad/";
 const repoRawPrefix = "https://raw.githubusercontent.com/taiwanape/auntie-no-mad/";
 const errors = [];
 const warnings = [];
@@ -133,12 +133,12 @@ function assertUsefulText(label, value, minLength = 12) {
   if (/\?{3,}|undefined|null|NaN/i.test(text)) fail(`${label} contains placeholder or mojibake text`);
 }
 
-function auditImage(label, imageUrl, { requireLarge = true } = {}) {
+function auditImage(label, imageUrl, { requireLarge = true, requireHttps = true } = {}) {
   if (!imageUrl) {
     fail(`${label}: missing image URL`);
     return;
   }
-  if (!/^https:\/\//.test(imageUrl)) fail(`${label}: image must use an absolute HTTPS URL`);
+  if (requireHttps && !/^https:\/\//.test(imageUrl)) fail(`${label}: image must use an absolute HTTPS URL`);
   if (/\.svg(?:[?#]|$)/i.test(imageUrl)) fail(`${label}: SVG images are not allowed for social previews`);
 
   const localPath = localPathFromPublicUrl(imageUrl);
@@ -220,7 +220,7 @@ function auditSharePack(sharePack) {
     if (item.imagePath) {
       imageReadyCount += 1;
       const publicImage = /^https?:\/\//.test(item.imagePath) ? item.imagePath : new URL(item.imagePath, siteUrl).href;
-      auditImage(`${label}: imagePath`, publicImage);
+      auditImage(`${label}: imagePath`, publicImage, { requireHttps: false });
     } else {
       warn(`${label}: no imagePath; this item should not be the primary social card`);
     }
@@ -255,7 +255,7 @@ function auditSocialPosts(socialPosts) {
     if (!post.imagePath) {
       fail(`social-posts ${platform}: imagePath is required`);
     } else {
-      auditImage(`social-posts ${platform}: image`, new URL(post.imagePath, siteUrl).href);
+      auditImage(`social-posts ${platform}: image`, new URL(post.imagePath, siteUrl).href, { requireHttps: false });
     }
   }
 }

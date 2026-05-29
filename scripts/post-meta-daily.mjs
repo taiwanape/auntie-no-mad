@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { publicImageUrl, publicSiteUrl } from "./public-site-url.mjs";
 
 const root = process.cwd();
 const args = new Set(process.argv.slice(2));
@@ -52,9 +53,7 @@ function assertReadyPost(platform, post) {
 }
 
 function getPublicBaseUrl() {
-  const content = readJson("data/site-content.json");
-  const configured = process.env.PUBLIC_SITE_URL || content.site?.url || "https://taiwanape.github.io/auntie-no-mad/";
-  return configured.endsWith("/") ? configured : `${configured}/`;
+  return publicSiteUrl;
 }
 
 function absoluteSiteUrl(relativePath) {
@@ -165,7 +164,7 @@ async function main() {
   for (const platform of platforms) {
     const post = socialPosts.posts?.[platform];
     const imagePath = assertReadyPost(platform, post);
-    const imageUrl = absoluteSiteUrl(imagePath);
+    const imageUrl = publicImageUrl(imagePath);
     const missing = missingCredentialsFor(platform);
 
     const platformResult = {
