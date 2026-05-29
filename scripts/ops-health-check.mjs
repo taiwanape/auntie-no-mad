@@ -224,13 +224,27 @@ function checkGitHubActions() {
       });
       if (view.status === 0) {
         if (/"mode":\s*"skip"/.test(view.stdout) || /skipped/i.test(view.stdout)) {
-          addWarning(`Latest X Daily Post workflow completed but skipped publishing: ${latest.url}`);
+          details.xDailyPostSkippedRun = latest;
         }
       } else {
         addWarning(`Unable to inspect X Daily Post log: ${(view.stderr || view.stdout || "").trim()}`);
       }
     }
   }
+}
+
+function finalizeXDailyPostWarning() {
+  const skippedRun = details.xDailyPostSkippedRun;
+  if (!skippedRun) return;
+
+  const latestTweetAt = details.x?.latest?.createdAt ? Date.parse(details.x.latest.createdAt) : 0;
+  const skippedRunAt = skippedRun.createdAt ? Date.parse(skippedRun.createdAt) : 0;
+  if (latestTweetAt && skippedRunAt && latestTweetAt > skippedRunAt) {
+    details.xDailyPostSkipResolvedByLatestTweet = true;
+    return;
+  }
+
+  addWarning(`Latest X Daily Post workflow completed but skipped publishing: ${skippedRun.url}`);
 }
 
 async function checkXApi() {
@@ -331,6 +345,7 @@ async function main() {
   checkGitHubActions();
   await checkLiveSite();
   await checkXApi();
+  finalizeXDailyPostWarning();
 
   const result = {
     ok: errors.length === 0,
