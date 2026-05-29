@@ -45,6 +45,12 @@ Meta / FB / IG 發文 dry-run：
 npm run test:meta-post
 ```
 
+Meta secrets 快速貼入：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\setup-meta-secrets.ps1
+```
+
 ## 主要內容資料
 
 - `data/site-content.json`：首頁主要內容。
