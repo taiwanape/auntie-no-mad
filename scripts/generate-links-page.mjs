@@ -100,6 +100,17 @@ const shareUrl = withUtm("share.html", "link_in_bio", "share_pack");
 const latestUrl = withUtm(primary.articleUrl || "today.html", "link_in_bio", "featured_story");
 const description = `阿姨別生氣社群入口：每天早上更新生活雷達、踩坑提醒、股市 ETF 白話整理。`;
 const ogImage = publicImageUrl(primaryImage);
+const freshnessDate = cleanText((content.site?.updatedAt || generatedAt || "").slice(0, 10).replaceAll("-", "/"));
+const liveCount = Array.isArray(content.liveNews) ? content.liveNews.length : 0;
+const lifeCount = Array.isArray(content.lifeRadar) ? content.lifeRadar.length : 0;
+const pitfallCount = Array.isArray(content.pitfalls) ? content.pitfalls.length : 0;
+const stockCount = Array.isArray(content.stockWatchlist) ? content.stockWatchlist.length : 0;
+const freshSummary = `${freshnessDate || "今天"} 已更新：即時 ${liveCount} 則、生活 ${lifeCount} 則、踩坑 ${pitfallCount} 則、股市觀察 ${stockCount} 檔。`;
+const reasons = [
+  ["先省時間", "不用自己滑半天，阿姨把今天最該看的先放前面。"],
+  ["有來源", "每篇都留來源連結，先看證據，不用靠感覺嚇自己。"],
+  ["好轉傳", "看到有用的就丟群組，長輩朋友少踩一個坑也算功德。"]
+];
 
 const articleCards = items
   .filter((item) => item.articleUrl)
@@ -212,6 +223,55 @@ const html = `<!DOCTYPE html>
       font-weight: 950;
     }
 
+    .fresh-strip,
+    .why-panel {
+      margin-bottom: 18px;
+      border: var(--line);
+      border-radius: 22px;
+      background: #15130f;
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .fresh-strip {
+      display: grid;
+      gap: 10px;
+      padding: 16px;
+    }
+
+    .fresh-strip strong {
+      font-size: clamp(22px, 6vw, 34px);
+      line-height: 1.08;
+      font-weight: 1000;
+    }
+
+    .fresh-strip p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 900;
+      color: rgba(255,255,255,.84);
+    }
+
+    .fresh-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .fresh-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 5px 10px;
+      border: 3px solid white;
+      border-radius: 999px;
+      background: var(--pink);
+      color: white;
+      font-size: 13px;
+      font-weight: 1000;
+    }
+
     .feature-card {
       margin-bottom: 18px;
     }
@@ -246,6 +306,26 @@ const html = `<!DOCTYPE html>
       font-weight: 900;
     }
 
+    .feature-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .feature-meta span {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      max-width: 100%;
+      min-height: 32px;
+      padding: 5px 9px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: var(--yellow);
+      font-size: 13px;
+      font-weight: 1000;
+    }
+
     .button-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -276,6 +356,49 @@ const html = `<!DOCTYPE html>
       color: white;
       min-height: 54px;
       font-size: 20px;
+    }
+
+    .why-panel {
+      padding: 16px;
+      background: var(--yellow);
+      color: var(--ink);
+    }
+
+    .why-panel h2 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      line-height: 1.15;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .why-item {
+      min-width: 0;
+      padding: 12px;
+      border: 3px solid var(--ink);
+      border-radius: 16px;
+      background: white;
+      box-shadow: 3px 3px 0 var(--ink);
+    }
+
+    .why-item strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 18px;
+      line-height: 1.18;
+      font-weight: 1000;
+    }
+
+    .why-item p {
+      margin: 0;
+      color: rgba(22, 19, 15, .74);
+      font-size: 13px;
+      line-height: 1.42;
+      font-weight: 900;
     }
 
     .link-panel {
@@ -426,6 +549,7 @@ const html = `<!DOCTYPE html>
       }
 
       .button-grid,
+      .why-grid,
       .social-row,
       .return-row,
       .entry-share-row {
@@ -474,16 +598,38 @@ const html = `<!DOCTYPE html>
       </div>
     </section>
 
+    <section class="fresh-strip" aria-label="今日更新狀態">
+      <strong>今天不用亂滑，先看阿姨挑好的。</strong>
+      <p>${escapeHtml(freshSummary)}</p>
+      <div class="fresh-pill-row">
+        <span class="fresh-pill">每日 07:00 前更新</span>
+        <span class="fresh-pill">有新聞來源</span>
+        <span class="fresh-pill">適合丟群組</span>
+      </div>
+    </section>
+
     <section class="feature-card" aria-labelledby="featuredTitle">
       <img src="${escapeHtml(primaryImage)}" alt="${escapeHtml(primaryTitle)}">
       <div class="feature-body">
         <span class="label">今天先看這篇</span>
         <h2 id="featuredTitle">${escapeHtml(primaryTitle)}</h2>
         <p>${escapeHtml(primarySummary)}</p>
+        <div class="feature-meta">
+          <span>${escapeHtml(displayCategory(primary.kind))}</span>
+          <span>${escapeHtml(freshnessDate || "今日更新")}</span>
+          <span>點進去看完整白話整理</span>
+        </div>
         <div class="button-grid">
           <a class="primary" href="${escapeHtml(latestUrl)}">打開今天主打</a>
           ${quickLinks}
         </div>
+      </div>
+    </section>
+
+    <section class="why-panel" aria-labelledby="whyTitle">
+      <h2 id="whyTitle">為什麼要點？阿姨講白一點。</h2>
+      <div class="why-grid">
+        ${reasons.map(([title, text]) => `<div class="why-item"><strong>${escapeHtml(title)}</strong><p>${escapeHtml(text)}</p></div>`).join("\n")}
       </div>
     </section>
 
