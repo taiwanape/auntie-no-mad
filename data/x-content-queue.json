@@ -57,17 +57,20 @@
     },
     {
       "id": "scam-suit-romance",
-      "status": "planned",
+      "status": "published",
       "pillar": "life-radar",
       "spiceLevel": 3,
       "topicHook": "詐騙也會穿西裝",
       "angle": "把感情詐騙、假投資、假客服講成成熟提醒，不罵受害者。",
-      "copyDraft": "詐騙也會穿西裝。\n\n阿姨翻譯：不是你笨，是套路越來越會裝熟。\n\n會急著叫你轉帳的，不是愛情，是劇本。\n#阿姨別生氣 #防詐",
+      "copyDraft": "詐騙也會穿西裝。\n\n台中女子網戀「假軍官」，對方要她付32萬包裹規費；她匯款前求證警方，保住積蓄。\n\n阿姨翻譯：會急著叫你轉帳的，不是愛情，是劇本。\n\n來源：中央社\nhttps://www.cna.com.tw/news/asoc/202605280219.aspx\n#阿姨別生氣 #防詐",
       "sourcePlan": {
         "required": true,
-        "query": "台灣 詐騙 假投資 假軍官 警方 2026",
-        "preferredSources": ["CNA", "police official release"]
+        "sourceName": "中央社",
+        "sourceDate": "2026-05-28",
+        "sourceUrl": "https://www.cna.com.tw/news/asoc/202605280219.aspx"
       },
+      "imagePath": "social/x-post-scam-suit-20260529/x-post-scam-suit-20260529.png",
+      "publishedUrl": "https://x.com/auntienomad/status/2060330029670916508",
       "imagePrompt": "Photorealistic editorial image, same Auntie character in leopard blouse and black fitted outfit with pink heart accent, leaning near a yellow wall of blurred warning-message graphics, confident protective gaze, mature sensual styling, no phone in hand, no product prop, no cheap crime-board collage."
     },
     {
