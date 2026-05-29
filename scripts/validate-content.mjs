@@ -345,7 +345,10 @@ for (const [index, script] of [...indexHtml.matchAll(/<script>([\s\S]*?)<\/scrip
 }
 
 try {
-  new Function(fs.readFileSync(path.join(root, "article-growth.js"), "utf8"));
+  const articleGrowthJs = fs.readFileSync(path.join(root, "article-growth.js"), "utf8");
+  new Function(articleGrowthJs);
+  assert(articleGrowthJs.includes("growth-actions"), "article-growth.js must render the article retention CTA");
+  assert(articleGrowthJs.includes("share.html"), "article-growth.js must link article readers to the share pack");
 } catch (error) {
   errors.push(`article-growth.js syntax error: ${error.message}`);
 }

@@ -150,7 +150,8 @@ a {
 }
 
 .growth-share,
-.growth-related {
+.growth-related,
+.growth-actions {
   padding: 18px;
   border: var(--line);
   border-radius: 18px;
@@ -252,6 +253,54 @@ a {
   line-height: 1.25;
 }
 
+.growth-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: var(--ink);
+  color: white;
+}
+
+.growth-actions div {
+  flex: 1 1 280px;
+}
+
+.growth-actions strong,
+.growth-actions span {
+  display: block;
+}
+
+.growth-actions span {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, .78);
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 900;
+}
+
+.growth-actions a {
+  min-height: 42px;
+  padding: 9px 13px;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: var(--yellow);
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 1000;
+  text-decoration: none;
+  box-shadow: 3px 3px 0 white;
+}
+
+.growth-actions a:nth-of-type(2) {
+  background: var(--pink);
+  color: white;
+}
+
+.growth-actions a:nth-of-type(3) {
+  background: var(--mint);
+}
+
 @media (max-width: 640px) {
   .top {
     align-items: flex-start;
@@ -280,7 +329,8 @@ a {
   }
 
   .growth-share a,
-  .growth-share button {
+  .growth-share button,
+  .growth-actions a {
     flex: 1 1 100%;
     text-align: center;
   }
