@@ -51,6 +51,21 @@ const sourceFeeds = [
     name: "中央社財經新聞",
     url: "https://feeds.feedburner.com/rsscna/finance",
     type: "finance"
+  },
+  {
+    name: "中央社科技新聞",
+    url: "https://feeds.feedburner.com/rsscna/technology",
+    type: "live"
+  },
+  {
+    name: "中央社地方新聞",
+    url: "https://feeds.feedburner.com/rsscna/local",
+    type: "live"
+  },
+  {
+    name: "中央社娛樂新聞",
+    url: "https://feeds.feedburner.com/rsscna/stars",
+    type: "live"
   }
 ];
 
@@ -520,6 +535,70 @@ function buildPitfallItems(news) {
   });
 }
 
+function formatTaipeiMinute(dateValue) {
+  const date = dateValue ? new Date(dateValue) : new Date();
+  if (Number.isNaN(date.getTime())) return "";
+  return new Intl.DateTimeFormat("zh-TW", {
+    timeZone: "Asia/Taipei",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  }).format(date);
+}
+
+function auntieLiveComment(item) {
+  const text = `${item.title} ${item.description}`;
+  if (/詐|騙|假|匯款|個資|罰|違規/.test(text)) return "先查證再動作，急著信就容易被牽著走。";
+  if (/雨|颱|高溫|天氣|交通|捷運|台鐵|高鐵/.test(text)) return "先看會不會影響今天出門，其他等下再煩。";
+  if (/股|台股|外資|科技|AI|半導體|ETF/.test(text)) return "先看脈絡，不要只看標題就跟著情緒跑。";
+  return "新聞很多，先抓重點，不要被標題牽著鼻子走。";
+}
+
+function liveCategoryFor(item) {
+  if (item.feedType === "life") return "即時生活";
+  if (item.feedType === "pitfall") return "即時社會";
+  if (item.feedType === "finance") return "即時財經";
+  if (/科技/.test(item.sourceName || "")) return "即時科技";
+  if (/地方/.test(item.sourceName || "")) return "即時地方";
+  if (/娛樂/.test(item.sourceName || "")) return "即時娛樂";
+  return "即時新聞";
+}
+
+function isoDateOrNow(value) {
+  const date = value ? new Date(value) : new Date();
+  return Number.isNaN(date.getTime()) ? new Date().toISOString() : date.toISOString();
+}
+
+function buildLiveNews(news) {
+  const seen = new Set();
+  const picked = news
+    .filter((item) => item.title && /^https?:\/\//.test(item.link || ""))
+    .filter((item) => {
+      if (seen.has(item.link)) return false;
+      seen.add(item.link);
+      return true;
+    })
+    .sort((a, b) => (new Date(b.pubDate).getTime() || 0) - (new Date(a.pubDate).getTime() || 0))
+    .slice(0, 6);
+
+  if (picked.length < 3) return content.liveNews || [];
+
+  return picked.map((item) => ({
+    title: item.title,
+    date: taipeiDate,
+    category: liveCategoryFor(item),
+    summary: `${cleanPromptText(item.description || item.title, 96)} 阿姨提醒：先看來源，再看這件事跟你有沒有關係。`,
+    auntieComment: auntieLiveComment(item),
+    sourceUrl: item.link,
+    slug: item.link,
+    sourceName: item.sourceName,
+    publishedAt: isoDateOrNow(item.pubDate),
+    displayTime: formatTaipeiMinute(item.pubDate)
+  }));
+}
+
 function parseNumber(value) {
   const number = Number(String(value || "").replace(/[,+]/g, ""));
   return Number.isFinite(number) ? number : 0;
@@ -652,6 +731,7 @@ function reviewProposed(nextContent) {
 
   checkArray("lifeRadar", nextContent.lifeRadar, 2);
   checkArray("pitfalls", nextContent.pitfalls, 1);
+  checkArray("liveNews", nextContent.liveNews, 3);
   checkArray("stockWatchlist", nextContent.stockWatchlist, 4);
 
   if (nextContent.stockWatchlist?.length !== 4) errors.push("stockWatchlist must have exactly 4 items");
@@ -963,6 +1043,7 @@ async function main() {
       dailyNote: `看完整 ${taipeiDate.replaceAll("-", "/")} 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。`,
       dailyNoteUrl: stockOverview.slug
     },
+    liveNews: buildLiveNews(news),
     lifeRadar: buildLifeItems(news),
     pitfalls: buildPitfallItems(news),
     stockOverview,
@@ -990,7 +1071,7 @@ async function main() {
   const imageResult = await enrichGeneratedImages(nextContent);
 
   const result = reviewProposed(nextContent);
-  const proposedSections = ["lifeRadar", "pitfalls", "stockOverview", "stockWatchlist", "fridgeNotes", "archive", "generatedImages"];
+  const proposedSections = ["liveNews", "lifeRadar", "pitfalls", "stockOverview", "stockWatchlist", "fridgeNotes", "archive", "generatedImages"];
   if (imageResult?.required && imageResult.generated < imageResult.total) {
     result.errors.unshift(`daily images required but only ${imageResult.generated}/${imageResult.total} were generated or reused`);
   }

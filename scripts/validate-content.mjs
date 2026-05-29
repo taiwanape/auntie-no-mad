@@ -247,6 +247,14 @@ assert(!/[銝嚗瘞踹]\S*[?]/.test(serializedData), "data/site-content.json app
   });
 });
 
+assert(Array.isArray(content.liveNews), "liveNews must be an array");
+assert(content.liveNews?.length >= 3, "liveNews must contain at least 3 items");
+(content.liveNews || []).forEach((item) => {
+  checkFields("liveNews", item, requiredArticleFields);
+  checkSourceUrl("liveNews", item);
+  checkLocalSlug("liveNews", item.slug);
+});
+
 assert(Array.isArray(content.stockWatchlist), "stockWatchlist must be an array");
 assert(content.stockWatchlist?.length === 4, "stockWatchlist must contain exactly 4 items");
 (content.stockWatchlist || []).forEach((item) => {

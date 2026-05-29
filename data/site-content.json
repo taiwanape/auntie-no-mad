@@ -4,7 +4,8 @@
     "url": "https://taiwanape.github.io/auntie-no-mad/",
     "updatedAt": "2026-05-29T07:00:00+08:00",
     "dailyNote": "看完整 2026/05/29 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
-    "dailyNoteUrl": "stocks/2026-05-29-market-watch.html"
+    "dailyNoteUrl": "stocks/2026-05-29-market-watch.html",
+    "liveNewsUpdatedAt": "2026-05-29T03:04:17.560Z"
   },
   "lifeRadar": [
     {
@@ -369,6 +370,80 @@
       "auntieComment": "這是資料整理，不是報明牌。",
       "sourceUrl": "https://tw.stock.yahoo.com/",
       "slug": "stocks/2026-05-27-market-watch.html"
+    }
+  ],
+  "liveNews": [
+    {
+      "title": "木村拓哉11/13生日訪台唱2天 喊迫不及待見粉絲",
+      "date": "2026-05-29",
+      "category": "即時娛樂",
+      "summary": "日本藝人木村拓哉今天宣布展開巡迴演唱會，走訪5個城市，並於11月13日、14日站上台北流行音樂中心，他透露目前持續製作新歌，能夠在海外開唱，已經迫不及待和粉絲見面。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/amov/202605290039.aspx",
+      "slug": "https://www.cna.com.tw/news/amov/202605290039.aspx",
+      "sourceName": "中央社娛樂",
+      "publishedAt": "2026-05-29T01:53:09.000Z",
+      "displayTime": "05/29 09:53"
+    },
+    {
+      "title": "台鐵七堵站內電車線跳電 列車延誤",
+      "date": "2026-05-29",
+      "category": "即時生活",
+      "summary": "台鐵七堵站今天清晨發生電車線跳電，導致列車延誤，目前已恢復送電。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605290031.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202605290031.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-05-29T01:18:51.000Z",
+      "displayTime": "05/29 09:18"
+    },
+    {
+      "title": "台積電上漲55元 台股揚升逾千點攀高至44670點",
+      "date": "2026-05-29",
+      "category": "即時財經",
+      "summary": "美股主要指數28日全面收高，標普500與那斯達克指數收盤再創新高，台指期夜盤上揚950點，台股今天同步走高，早盤指數攀高至44670點，上漲1033.6點。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202605290030.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202605290030.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-05-29T01:13:49.000Z",
+      "displayTime": "05/29 09:13"
+    },
+    {
+      "title": "吳德榮：鋒面南下轉雨降溫 30日天氣好轉",
+      "date": "2026-05-29",
+      "category": "即時生活",
+      "summary": "氣象專家吳德榮今天表示，鋒面南下影響，轉雨降溫，明天鋒面結構遭到破壞，各地好轉為多雲時晴。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605290029.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202605290029.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-05-29T01:11:47.000Z",
+      "displayTime": "05/29 09:11"
+    },
+    {
+      "title": "台股開盤漲179.04點",
+      "date": "2026-05-29",
+      "category": "即時財經",
+      "summary": "台北股市今天開盤漲179.04點，加權股價指數為43815.48點，成交金額新台幣162.50億元。1150529 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202605290028.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202605290028.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-05-29T01:05:45.000Z",
+      "displayTime": "05/29 09:05"
+    },
+    {
+      "title": "新台幣開盤升2.8分 為31.4元",
+      "date": "2026-05-29",
+      "category": "即時財經",
+      "summary": "台北外匯市場新台幣兌美元匯率今天以31.4元開盤，升2.8分。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202605290027.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202605290027.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-05-29T01:03:43.000Z",
+      "displayTime": "05/29 09:03"
     }
   ]
 }

@@ -39,6 +39,7 @@ npm test
 
 - 首頁主要資料：`data/site-content.json`
 - 每日審核報告：`data/review-report.json`，由每日更新流程產生
+- 即時新聞：`data/site-content.json` 的 `liveNews`
 - 生活雷達文章：`radar/`
 - 踩坑日記文章：`stories/`
 - 股市 ETF 文章：`stocks/`
@@ -72,6 +73,30 @@ GitHub Actions workflow：
 7. 產生 `sitemap.xml` 與 `robots.txt`
 8. 執行 `npm test`
 9. 有變更才自動 commit / push
+
+## 即時新聞更新
+
+即時新聞使用獨立 workflow：
+
+```text
+.github/workflows/live-news-update.yml
+```
+
+排程：
+
+- GitHub cron：`0,30 23,0-15 * * *`
+- 對應台灣時間：每天 07:00 到 23:30，每 30 分鐘更新一次
+
+流程：
+
+1. 執行 `npm run update:live-news`
+2. 抓取中央社公開 RSS
+3. 更新 `data/site-content.json` 的 `liveNews`
+4. 執行 `npm run generate:seo`
+5. 執行 `npm test`
+6. 若資料有變更才自動 commit 並部署 GitHub Pages
+
+這個區塊只做文字即時新聞，不使用 AI 生成圖，避免圖片 API 額度問題影響即時更新。
 
 ## 手動觸發 GitHub Actions
 

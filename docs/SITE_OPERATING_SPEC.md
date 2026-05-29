@@ -9,6 +9,7 @@
 網站主要區塊：
 
 - 生活雷達：台灣生活新聞、民生資訊、交通、天氣、消費事件。
+- 即時新聞：公開 RSS 最新消息，每 30 分鐘刷新，點擊後回到原始來源。
 - 踩坑日記：詐騙、消費糾紛、社群陷阱、旅遊與交通踩坑提醒。
 - 股市 ETF：每天 4 個觀察項目，只做教育與資訊整理，不做投資建議。
 - 工具箱：單位換算等小工具，之後可以繼續加。
@@ -25,6 +26,12 @@ GitHub Actions workflow：`.github/workflows/daily-update.yml`
 - 目標：每天 07:00 前首頁、文章頁、RSS、JSON Feed、sitemap 都已經更新。
 - 手動 `workflow_dispatch` 預設只做 dry-run；只有排程或手動指定 `publish=true` 才會寫入正式首頁。
 
+即時新聞 workflow：`.github/workflows/live-news-update.yml`
+
+- 07:00 到 23:30 Asia/Taipei：每 30 分鐘更新一次。
+- 只更新 `liveNews`，不用 AI 圖片，避免圖片額度問題影響即時內容。
+- 若資料沒有變更，不 commit，也不重新部署。
+
 ## 每日更新內容
 
 每日更新腳本：`scripts/daily-update.mjs`
@@ -36,6 +43,7 @@ GitHub Actions workflow：`.github/workflows/daily-update.yml`
 - 股市 ETF 4 則：熱門股 A、熱門股 B、新星觀察股、風險題材或高人氣 ETF。
 - 冰箱便條紙 1 句。
 - 舊資料保留到 `archive`。
+- 即時新聞 6 則由獨立 workflow 高頻更新；每日更新也會順手刷新。
 
 股市內容禁止：
 

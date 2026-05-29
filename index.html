@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>阿姨別生氣｜生活雷達、踩坑日記與股市 ETF 白話整理</title>
-  <meta name="description" content="阿姨別生氣每天整理台灣生活新聞、踩坑提醒、股市 ETF 教育內容與實用工具，用阿姨碎念把複雜事情講成看得懂的版本。">
+  <meta name="description" content="阿姨別生氣整理台灣即時新聞、生活雷達、踩坑提醒、股市 ETF 教育內容與實用工具，用阿姨碎念把複雜事情講成看得懂的版本。">
   <link rel="canonical" href="https://taiwanape.github.io/auntie-no-mad/">
   <link rel="alternate" type="application/rss+xml" title="阿姨別生氣 RSS" href="https://taiwanape.github.io/auntie-no-mad/rss.xml">
   <link rel="alternate" type="application/feed+json" title="阿姨別生氣 JSON Feed" href="https://taiwanape.github.io/auntie-no-mad/feed.json">
   <meta property="og:site_name" content="阿姨別生氣">
   <meta property="og:type" content="website">
   <meta property="og:title" content="阿姨別生氣｜生活雷達、踩坑日記與股市 ETF 白話整理">
-  <meta property="og:description" content="每天整理台灣生活新聞、踩坑提醒、股市 ETF 教育內容與實用工具。阿姨不講官腔，只講今天出門會不會煩。">
+  <meta property="og:description" content="整理台灣即時新聞、生活雷達、踩坑提醒、股市 ETF 教育內容與實用工具。阿姨不講官腔，只講今天出門會不會煩。">
   <meta property="og:url" content="https://taiwanape.github.io/auntie-no-mad/">
   <meta property="og:image" content="https://taiwanape.github.io/auntie-no-mad/assets/auntie-hero.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="阿姨別生氣｜生活雷達、踩坑日記與股市 ETF 白話整理">
-  <meta name="twitter:description" content="每天整理台灣生活新聞、踩坑提醒、股市 ETF 教育內容與實用工具。阿姨不講官腔，只講今天出門會不會煩。">
+  <meta name="twitter:description" content="整理台灣即時新聞、生活雷達、踩坑提醒、股市 ETF 教育內容與實用工具。阿姨不講官腔，只講今天出門會不會煩。">
   <meta name="twitter:image" content="https://taiwanape.github.io/auntie-no-mad/assets/auntie-hero.jpg">
   <script type="application/ld+json">
     {
@@ -26,7 +26,7 @@
       "@type": "WebSite",
       "name": "阿姨別生氣",
       "url": "https://taiwanape.github.io/auntie-no-mad/",
-      "description": "每天整理台灣生活新聞、踩坑提醒、股市 ETF 教育內容與實用工具。",
+      "description": "整理台灣即時新聞、生活雷達、踩坑提醒、股市 ETF 教育內容與實用工具。",
       "publisher": {
         "@type": "Organization",
         "name": "阿姨別生氣",
@@ -417,6 +417,142 @@
     @keyframes ticker {
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }
+    }
+
+    .live-board {
+      display: grid;
+      grid-template-columns: minmax(260px, .9fr) minmax(0, 1.35fr);
+      gap: 14px;
+      padding: 16px;
+      border: var(--line);
+      border-radius: 18px;
+      background: #fffdf1;
+      box-shadow: var(--shadow);
+    }
+
+    .live-lead,
+    .live-item {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .live-lead {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 230px;
+      padding: 18px;
+      border: 4px solid var(--ink);
+      border-radius: 14px;
+      background: linear-gradient(135deg, #15130f 0%, #2a2419 58%, #ff5f9c 100%);
+      color: white;
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .live-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .live-item {
+      min-height: 110px;
+      padding: 14px;
+      border: 3px solid var(--ink);
+      border-radius: 12px;
+      background: white;
+      box-shadow: 3px 3px 0 var(--ink);
+      transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+    }
+
+    .live-item:hover,
+    .live-item:focus-visible,
+    .live-lead:hover,
+    .live-lead:focus-visible {
+      transform: translate(-2px, -2px);
+      box-shadow: 7px 7px 0 var(--ink);
+      outline: none;
+    }
+
+    .live-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      font-size: 13px;
+      font-weight: 1000;
+    }
+
+    .live-dot {
+      display: inline-flex;
+      width: 10px;
+      height: 10px;
+      border: 2px solid currentColor;
+      border-radius: 999px;
+      background: #ff5f9c;
+      box-shadow: 0 0 0 3px rgba(255,95,156,.2);
+    }
+
+    .live-tag {
+      display: inline-flex;
+      padding: 4px 9px;
+      border: 2px solid currentColor;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: var(--ink);
+    }
+
+    .live-lead .live-tag {
+      background: white;
+    }
+
+    .live-time {
+      color: rgba(22,19,15,.64);
+    }
+
+    .live-lead .live-time {
+      color: rgba(255,255,255,.78);
+    }
+
+    .live-lead h3,
+    .live-item h3 {
+      margin: 0;
+      font-weight: 1000;
+      line-height: 1.14;
+      overflow-wrap: anywhere;
+    }
+
+    .live-lead h3 {
+      font-size: clamp(28px, 3.5vw, 44px);
+    }
+
+    .live-item h3 {
+      font-size: 18px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .live-lead p,
+    .live-item p {
+      margin: 10px 0 0;
+      font-weight: 850;
+      line-height: 1.42;
+    }
+
+    .live-lead p {
+      color: rgba(255,255,255,.86);
+    }
+
+    .live-item p {
+      color: rgba(22,19,15,.65);
+      font-size: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     .section {
@@ -1461,9 +1597,14 @@
       .grid,
       .lab-grid,
       .radar-zine-grid,
+      .live-list,
       .market-grid,
       .memo {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .live-board {
+        grid-template-columns: 1fr;
       }
 
       .radar-grid {
@@ -1577,6 +1718,7 @@
       .grid,
       .lab-grid,
       .radar-zine-grid,
+      .live-list,
       .market-grid,
       .memo {
         grid-template-columns: 1fr;
@@ -1635,6 +1777,7 @@
         <span>阿姨別生氣<small>生活梗圖部</small></span>
       </a>
       <nav class="nav" aria-label="網站導覽">
+        <a href="#live">即時新聞</a>
         <a href="#radar">生活雷達</a>
         <a href="#stories">踩坑日記</a>
         <a href="#investing">股市ETF</a>
@@ -1647,7 +1790,7 @@
 
     <section class="hero" aria-labelledby="heroTitle">
       <div class="hero-copy">
-        <span class="pill">生活梗圖 · 踩坑日記 · 好物推薦</span>
+        <span class="pill">即時新聞 · 生活梗圖 · 踩坑日記 · 好物推薦</span>
         <h1 id="heroTitle" class="visually-hidden">阿姨別生氣</h1>
         <svg class="comic-title hero-title-svg" viewBox="0 0 460 250" aria-hidden="true">
           <text class="shadow" x="4" y="92" font-size="86">阿姨</text>
@@ -1659,7 +1802,8 @@
         </svg>
         <p>台灣每天都很吵，阿姨幫你把天氣、荷包、交通、家庭群組整理成看得懂的版本。不講官腔，只講今天出門會不會煩。</p>
         <div class="hero-actions">
-          <a class="cta primary" href="#radar">看今天重點</a>
+          <a class="cta primary" href="#live">看即時新聞</a>
+          <a class="cta" href="#radar">看今天重點</a>
           <a class="cta" href="#stories">看阿姨踩坑</a>
           <a class="cta" href="#investing">看股市ETF</a>
         </div>
@@ -1699,6 +1843,37 @@
     </div>
 
     <main>
+      <section class="section" id="live" aria-labelledby="liveTitle">
+        <div class="section-head">
+          <h2 id="liveTitle" class="visually-hidden">即時新聞</h2>
+          <svg class="comic-title section-title-svg" viewBox="0 0 440 86" aria-hidden="true">
+            <text class="shadow" x="4" y="62" font-size="58">即時新聞</text>
+            <text class="accent" x="4" y="62" font-size="58">即時新聞</text>
+          </svg>
+          <p>這裡抓公開新聞來源，半小時更新一次。阿姨先幫你排好，想看細節再點回原始來源。</p>
+        </div>
+        <div class="live-board" aria-label="即時新聞列表">
+          <a class="live-lead" href="https://www.cna.com.tw/" target="_blank" rel="noreferrer">
+            <div>
+              <div class="live-meta">
+                <span class="live-dot" aria-hidden="true"></span>
+                <span class="live-tag">即時新聞</span>
+                <span class="live-time">更新中</span>
+              </div>
+              <h3>阿姨正在抓最新消息</h3>
+              <p>新聞資料載入後，這裡會顯示最新一則重點。先看來源，再決定要不要生氣。</p>
+            </div>
+          </a>
+          <div class="live-list">
+            <a class="live-item" href="https://www.cna.com.tw/" target="_blank" rel="noreferrer">
+              <div class="live-meta"><span class="live-tag">公開來源</span><span class="live-time">更新中</span></div>
+              <h3>即時新聞整理中</h3>
+              <p>如果你看到這段，代表資料檔還沒載入完成。</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="radar" aria-labelledby="radarTitle">
         <div class="section-head">
           <h2 id="radarTitle" class="visually-hidden">今天的生活雷達</h2>
@@ -2102,6 +2277,47 @@
       .replaceAll("'", "&#039;");
 
     const sourceText = (item) => item?.sourceUrl ? "" : "來源待補";
+    const linkAttrs = (href = "") => /^https?:\/\//.test(href) ? ' target="_blank" rel="noreferrer"' : "";
+
+    function renderLiveNews(items = [], updatedAt = "") {
+      const lead = document.querySelector("#live .live-lead");
+      const list = document.querySelector("#live .live-list");
+      if (!lead || !list || !Array.isArray(items) || items.length === 0) return;
+
+      const [first, ...rest] = items;
+      const href = first.slug || first.sourceUrl || "#";
+      lead.href = href;
+      if (/^https?:\/\//.test(href)) {
+        lead.target = "_blank";
+        lead.rel = "noreferrer";
+      }
+      lead.innerHTML = `
+        <div>
+          <div class="live-meta">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span class="live-tag">${escapeHtml(first.category || "即時新聞")}</span>
+            <span class="live-time">${escapeHtml(first.displayTime || first.date || "剛剛")}</span>
+          </div>
+          <h3>${escapeHtml(first.title || "阿姨正在抓最新消息")}</h3>
+          <p>${escapeHtml(first.auntieComment || first.summary || "先看來源，再決定要不要生氣。")}</p>
+        </div>
+        <div class="live-meta"><span>${escapeHtml(first.sourceName || "公開來源")}</span><span>${updatedAt ? `更新 ${escapeHtml(new Date(updatedAt).toLocaleTimeString("zh-TW", { hour: "2-digit", minute: "2-digit" }))}` : ""}</span></div>
+      `;
+
+      list.innerHTML = rest.slice(0, 5).map((item) => {
+        const itemHref = item.slug || item.sourceUrl || "#";
+        return `
+          <a class="live-item" href="${escapeHtml(itemHref)}"${linkAttrs(itemHref)}>
+            <div class="live-meta">
+              <span class="live-tag">${escapeHtml(item.category || "即時新聞")}</span>
+              <span class="live-time">${escapeHtml(item.displayTime || item.date || "")}</span>
+            </div>
+            <h3>${escapeHtml(item.title || "新聞整理中")}</h3>
+            <p>${escapeHtml(item.summary || item.auntieComment || "來源待補。")}</p>
+          </a>
+        `;
+      }).join("");
+    }
 
     function renderArticleCards(selector, items = []) {
       const container = document.querySelector(selector);
@@ -2218,6 +2434,7 @@
         if (!response.ok) throw new Error("content data unavailable");
         const content = await response.json();
 
+        renderLiveNews(content.liveNews, content.site?.liveNewsUpdatedAt);
         renderArticleCards("#radar .radar-zine-grid", content.lifeRadar);
         renderArticleCards("#stories .radar-zine-grid", content.pitfalls);
         renderMarketCards(content.stockOverview);
