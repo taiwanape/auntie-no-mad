@@ -23,6 +23,7 @@ GitHub Actions workflow：`.github/workflows/daily-update.yml`
 - 04:00 Asia/Taipei：主更新。
 - 06:00 Asia/Taipei：備援更新，避免 GitHub 排程延遲或漏跑。
 - 目標：每天 07:00 前首頁、文章頁、RSS、JSON Feed、sitemap 都已經更新。
+- 手動 `workflow_dispatch` 預設只做 dry-run；只有排程或手動指定 `publish=true` 才會寫入正式首頁。
 
 ## 每日更新內容
 

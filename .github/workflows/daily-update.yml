@@ -7,6 +7,12 @@ on:
     # 06:00 Asia/Taipei backup run in case GitHub's first scheduled run is delayed or skipped.
     - cron: "0 22 * * *"
   workflow_dispatch:
+    inputs:
+      publish:
+        description: "Publish this manual run to main and GitHub Pages"
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -51,6 +57,7 @@ jobs:
         run: npm run summarize:daily
 
       - name: Commit changes
+        if: github.event_name == 'schedule' || github.event.inputs.publish == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -63,13 +70,16 @@ jobs:
           fi
 
       - name: Configure Pages
+        if: github.event_name == 'schedule' || github.event.inputs.publish == 'true'
         uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
+        if: github.event_name == 'schedule' || github.event.inputs.publish == 'true'
         uses: actions/upload-pages-artifact@v4
         with:
           path: "."
 
       - name: Deploy Pages
+        if: github.event_name == 'schedule' || github.event.inputs.publish == 'true'
         id: deployment
         uses: actions/deploy-pages@v4

@@ -81,6 +81,8 @@ GitHub Actions workflow：
 Actions → Daily Auntie Update → Run workflow
 ```
 
+手動觸發預設是 dry-run，只會跑產生、審核與驗證，不會寫入正式首頁。若要手動正式發布，執行時把 `publish` 勾成 `true`。每日排程不受影響，會自動 commit 並部署。
+
 ## Secrets
 
 每日自動生成圖片需要 GitHub Secret：
