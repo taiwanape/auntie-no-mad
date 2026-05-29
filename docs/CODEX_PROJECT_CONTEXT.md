@@ -2,119 +2,99 @@
 
 Updated: 2026-05-29
 
-This is the compact working context for Codex. Read this first, then inspect current workspace files before changing anything.
+Compact working context for the Auntie NoMad project. Read this first, then inspect the current files before making changes.
 
 ## Ownership
 
-- Codex is responsible for technical maintenance, content operations, X operations, automation, deployment, and bug fixes.
-- Work only in `C:\Users\taiwa\Documents\AuntieNoMad` unless the user explicitly says otherwise.
-- Do not use browser automation for X. Use API, CLI, GitHub Actions, and local scripts.
-- Never commit `.env.local`, API keys, OAuth tokens, GitHub secrets, or credential values.
-- Do not use unrelated old sessions, external-agent notes, or old handoff procedures.
+- Codex is the direct owner for site development, content operations, automation, deployment, SEO, X posting, and maintenance.
+- Work in `C:\Users\taiwa\Documents\AuntieNoMad`; the public website repo is `C:\Users\taiwa\Documents\AuntieNoMad\website`.
+- Never commit secrets: `.env.local`, API keys, OAuth tokens, GitHub secrets, cookies, or credential values.
+- Use current repo files and this context file for decisions. Ignore unrelated old sessions.
 
-## Project Map
+## Public Targets
 
-- Website repo: `C:\Users\taiwa\Documents\AuntieNoMad\website`
 - GitHub repo: `taiwanape/auntie-no-mad`
-- GitHub Pages: `https://taiwanape.github.io/auntie-no-mad/`
-- Custom domain target: `auntienomad.com`
+- Stable public URL until HTTPS is ready: `https://taiwanape.github.io/auntie-no-mad/`
+- Custom domain: `auntienomad.com`
+- Current domain state: HTTP works; HTTPS is waiting for GitHub Pages certificate provisioning.
 - X account: `@auntienomad`
-- Local X tool folder: `C:\Users\taiwa\Documents\AuntieNoMad\x-bot`
 
-## Site
+## Product Direction
 
-- Static website using vanilla HTML, CSS, and JavaScript.
-- Main page: `index.html`
-- Source content: `data/site-content.json`
-- Validation: `scripts/validate-content.mjs`
-- SEO: `scripts/generate-seo.mjs`
-- Daily update: `scripts/daily-update.mjs`
-- Live news: `scripts/update-live-news.mjs`
-- Ops check: `scripts/ops-health-check.mjs`
+- Goal: make Auntie NoMad a daily-updated, shareable Taiwanese life-info site.
+- Main sections: life radar, pitfall diary, stocks/ETF, tools, recommendations, archive, reminders, live news.
+- Voice: plain Taiwanese, useful, a little funny, Auntie-style nagging, sharp but not cruel.
+- Every sourced content item needs a real topic, a source URL, a hook, and a reason to exist.
+- Finance content is educational observation only. Never write buy/sell/target-price/guaranteed-profit language.
 
-Core checks:
+## Visual Quality Gate
+
+- Public visuals must be high-quality raster/AI-style images, not SVG-like placeholders or childish collage art.
+- Keep the Auntie brand style: yellow halftone, bold black outlines, white sticker stroke, pink accent, expressive Auntie character.
+- Rejected: generic icons, random product props, empty poster layouts, fake UI text, low-quality vector doodles.
+- Article thumbnails may be icon-like, but must still look designed and consistent with the brand.
+- Large article images and social preview images should differ from thumbnails.
+
+## Site Files
+
+- Homepage: `index.html`
+- Main content data: `data/site-content.json`
+- Share pack: `data/share-pack.json`
+- Social post drafts: `data/social-posts.json`
+- X content queue: `data/x-content-queue.json`
+- Article growth module: `article-growth.js`
+- Core styles: `site-info.css`
+- Article pages: `radar/`, `stories/`, `stocks/`
+
+## Scripts
 
 ```powershell
 cd C:\Users\taiwa\Documents\AuntieNoMad\website
 npm test
 npm run ops:health
-npm run test:x-api
-```
-
-## Content Rules
-
-- Voice: Taiwanese, direct, funny, useful, and plain-language.
-- Posts need a real topic, source, hook, and reason to exist.
-- Avoid empty slogans, fake urgency, ecommerce layouts, product props, and generic model poses.
-- Finance content must stay informational and avoid investment-advice language.
-- Preserve existing public data if automation fails.
-- Keep `sourceUrl` for sourced items.
-
-## X Visual Direction
-
-- X uses a real-person Auntie character.
-- Character lock: short dark curly hair, gold hoops, leopard-pattern outer layer, black outfit/apron, pink heart accent, curvy body, confident and intelligent mood.
-- Graphic style: yellow halftone background, black pill label, heavy black headline, thick white stroke, black shadow, pink keyword emphasis.
-- X can be sexier than other platforms, but it must stay tasteful, editorial, and topic-driven.
-- Never collage the user reference images. Generate or design new assets while preserving the same character identity.
-- Do not use the rejected video experiment as a content direction.
-
-## X Operations
-
-- Use API only.
-- Verified account: `@auntienomad`.
-- Current profile bio: `熱搜翻譯、科技八卦、荷包避雷。真人版阿姨，用成熟一點的眼神，把新聞講到你會想轉發。尺度大一點，腦袋也要在線。`
-- Current profile assets:
-  - `social/x-profile-generated-20260529/x-profile-avatar-generated-20260529.jpg`
-  - `social/x-profile-generated-20260529/x-profile-cover-generated-20260529.jpg`
-- X content queue: `data/x-content-queue.json`
-- Recent verified posts:
-  - `https://x.com/auntienomad/status/2060318220754763933`
-  - `https://x.com/auntienomad/status/2060202163700396065`
-- X credentials are local in `x-bot/.env.local` and remote in GitHub Secrets. Do not print or commit values.
-
-Useful commands:
-
-```powershell
+npm run test:domain
 npm run test:x-api
 npm run test:x-profile
 npm run test:x-queue
-npm run post:x
-npm run delete:x-posts
 ```
+
+Key scripts:
+
+- `scripts/daily-update.mjs`: daily site content update.
+- `scripts/update-live-news.mjs`: live news refresh.
+- `scripts/validate-content.mjs`: content and page validation.
+- `scripts/generate-seo.mjs`: sitemap, robots, feed, metadata support.
+- `scripts/generate-share-pack.mjs`: share metadata and UTM links.
+- `scripts/generate-social-posts.mjs`: platform post drafts.
+- `scripts/check-domain-health.mjs`: custom-domain HTTP/HTTPS check.
+- `scripts/post-x-manual.mjs`: API-based X posting.
 
 ## Automation
 
-- `daily-update.yml`: site content update.
+- `daily-update.yml`: daily content generation and commit.
 - `live-news-update.yml`: live news refresh.
 - `pages.yml`: GitHub Pages deploy.
-- `x-daily-post.yml`: scheduled X post.
-- `x-api-smoke-test.yml`: X API check.
-- `x-manual-post.yml`: manual X post.
+- `domain-health-check.yml`: retries HTTPS enforcement for `auntienomad.com`.
+- `ops-health-check.yml`: operational health check.
+- `x-daily-post.yml`: daily X post.
+- `x-api-smoke-test.yml`: X credential check.
+- `x-manual-post.yml`: manual X post helper.
 - `x-delete-posts.yml`: API deletion helper.
-- `ops-health-check.yml`: daily health check.
 
-Codex heartbeat:
+## Current Known State
 
-- Daily patrol at 08:15 Asia/Taipei.
-- Checks Actions, tests, X API, review report, latest X state, and public site availability.
-
-## Known State
-
-- X API credentials were verified on 2026-05-29.
-- X avatar and banner were updated to a newly AI-generated real-person visual direction.
-- Bad old X posts were deleted.
-- `ops-health-check.mjs` exists and has passed.
-- `post-x-manual.mjs` can use approved raster fallback images when OpenAI image generation is unavailable.
-- OpenAI Images API may hit billing hard limit; use approved raster fallback until billing is restored.
-- Local video assets were rejected by the user and removed from the working tree.
+- Daily content and social-post files exist, but image quality must be watched closely.
+- Some OpenAI image calls may fail if billing/limit is not restored; do not replace good imagery with low-quality placeholders.
+- X credentials are configured locally and in GitHub Secrets; never print values.
+- X profile assets were updated to a real-person Auntie direction on 2026-05-29.
+- Custom-domain HTTPS is still pending certificate provisioning; no site-code fix is needed for that specific browser warning.
 
 ## Deployment Flow
 
-1. Inspect relevant files and `git status`.
-2. Make focused changes.
-3. Run `npm test`.
-4. Run X/API checks if X behavior changed.
+1. Check `git status --short --branch`.
+2. Inspect the actual files related to the request.
+3. Make focused changes.
+4. Run the relevant checks; at minimum run `npm test` for site changes.
 5. Review `git diff`.
-6. Commit and push to `main` when deployment is requested or operationally needed.
-7. Verify GitHub Actions or the public page.
+6. Commit and push when the change should publish.
+7. Verify GitHub Actions and the public page.

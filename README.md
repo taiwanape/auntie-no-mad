@@ -38,6 +38,14 @@ npm test
 - `data/social-posts.json` 是否存在，且 X / Facebook / Instagram 都有可用貼文與圖片
 - 每日文章頁是否載入 `article-growth.js`，提供分享與相關文章導流模組
 
+網域健康檢查：
+
+```powershell
+npm run test:domain
+```
+
+這會檢查 `auntienomad.com` 的 HTTP / HTTPS 狀態。GitHub Pages 憑證尚未簽發時，HTTPS 可能暫時失敗；GitHub Actions 會每 3 小時自動重試啟用 HTTPS。
+
 ## 內容資料位置
 
 - 首頁主要資料：`data/site-content.json`
@@ -82,6 +90,29 @@ GitHub Actions workflow：
 10. 產生 `data/social-posts.json`，提供 X / Facebook / Instagram 每日導流貼文草稿
 11. 執行 `npm test`
 12. 有變更才自動 commit / push
+
+## 自訂網域與 HTTPS
+
+目前網域：
+
+```text
+auntienomad.com
+```
+
+DNS 已指向 GitHub Pages，`CNAME` 檔案也已設定為 `auntienomad.com`。若瀏覽器仍顯示「不安全」，通常是 GitHub Pages 憑證還沒簽發完成。
+
+自動檢查 workflow：
+
+```text
+.github/workflows/domain-health-check.yml
+```
+
+這個 workflow 會定期檢查：
+
+- `http://auntienomad.com/` 是否能看到網站
+- `https://auntienomad.com/` 是否已可用
+- GitHub Pages 是否已 enforce HTTPS
+- 若憑證已存在，會嘗試自動啟用 HTTPS
 
 ## 即時新聞更新
 

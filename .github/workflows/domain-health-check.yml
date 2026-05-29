@@ -1,0 +1,32 @@
+name: Domain Health Check
+
+on:
+  schedule:
+    # Recheck custom-domain HTTPS every 3 hours while GitHub Pages is provisioning the cert.
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+
+jobs:
+  domain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+
+      - name: Check custom domain and try HTTPS enforcement
+        run: npm run test:domain
+        env:
+          GH_TOKEN: ${{ github.token }}
+          AUNTIE_CUSTOM_DOMAIN: auntienomad.com
+          ENABLE_PAGES_HTTPS: "true"
+          AUNTIE_DOMAIN_STRICT: "false"
