@@ -37,6 +37,7 @@ npm run test:x-api
 npm run test:x-profile
 npm run test:x-queue
 npm run test:x-readiness
+npm run test:x-daily-post
 ```
 
 Meta / FB / IG 發文 dry-run：

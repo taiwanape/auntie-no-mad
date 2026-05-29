@@ -543,6 +543,10 @@ assert(llmsTxt.includes("Today page:"), "llms.txt must mention today page");
   assert(workflow.includes("index.html"), `${workflowFile} must commit homepage preview updates`);
 });
 
+const xDailyWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "x-daily-post.yml"), "utf8");
+assert(xDailyWorkflow.includes("test:x-daily-post"), "x-daily-post.yml must dry-run daily X content before posting");
+assert(xDailyWorkflow.includes("FAIL_ON_SKIP"), "x-daily-post.yml must fail instead of silently skipping daily X posts");
+
 if (warnings.length) {
   console.warn("Content warnings:");
   warnings.forEach((message) => console.warn(`- ${message}`));

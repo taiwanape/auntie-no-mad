@@ -17,6 +17,7 @@
     "test:domain": "node scripts/check-domain-health.mjs",
     "test:x-profile": "node scripts/audit-x-profile.mjs",
     "test:x-readiness": "node scripts/audit-x-account-readiness.mjs",
+    "test:x-daily-post": "node scripts/test-x-daily-post-readiness.mjs",
     "test:meta-post": "node scripts/post-meta-daily.mjs --dry-run",
     "ops:health": "node scripts/ops-health-check.mjs",
     "post:x": "node scripts/post-x-manual.mjs",
