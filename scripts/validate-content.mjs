@@ -378,6 +378,10 @@ assert(todayHtml.includes("今日必看"), "today.html must identify itself as t
 assert(todayHtml.includes('rel="canonical"'), "today.html must include canonical URL");
 assert(todayHtml.includes('property="og:image"'), "today.html must include an OG image");
 assert(todayHtml.includes("data-copy"), "today.html must provide a copyable share text");
+assert(todayHtml.includes("today.html?utm_source=copy"), "today.html copy text must share the stable today landing URL");
+assert(todayHtml.includes("today.html%3Futm_source%3Dline"), "today.html LINE button must share the stable today landing URL");
+assert(todayHtml.includes("today.html%3Futm_source%3Dfacebook"), "today.html Facebook button must share the stable today landing URL");
+assert(todayHtml.includes("today.html%3Futm_source%3Dx"), "today.html X button must share the stable today landing URL");
 for (const [index, script] of [...todayHtml.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]).entries()) {
   try {
     new Function(script);

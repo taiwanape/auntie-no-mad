@@ -38,8 +38,24 @@ function pickPrimary(items = []) {
     .find(Boolean) || items[0];
 }
 
-function platformButtons(item = {}) {
-  const links = item.platformLinks || {};
+function withUtm(href, source, campaign = "today_page") {
+  const url = new URL(href);
+  url.searchParams.set("utm_source", source);
+  url.searchParams.set("utm_medium", "social");
+  url.searchParams.set("utm_campaign", campaign);
+  return url.href;
+}
+
+function platformButtons({ url, title, description } = {}) {
+  const lineUrl = withUtm(url, "line");
+  const facebookUrl = withUtm(url, "facebook");
+  const xUrl = withUtm(url, "x");
+  const xText = `${title}\n${description}\n\n${xUrl}`;
+  const links = {
+    line: `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(lineUrl)}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(facebookUrl)}`,
+    x: `https://twitter.com/intent/tweet?text=${encodeURIComponent(xText)}`
+  };
   return [
     ["LINE", links.line],
     ["FB", links.facebook],
@@ -64,6 +80,7 @@ const todayUrl = `${siteUrl}today.html`;
 const imageUrl = absoluteUrl(primary.imagePath || "assets/auntie-hero.jpg");
 const copyText = `${primary.title}\n${description}\n\n阿姨別生氣今日必看：${todayUrl}?utm_source=copy&utm_medium=social&utm_campaign=today_page`;
 const xText = socialPosts.posts?.x?.text || copyText;
+const todayPlatformButtons = platformButtons({ url: todayUrl, title: primary.title, description });
 
 const relatedCards = items
   .filter((item) => item !== primary)
@@ -257,7 +274,7 @@ const html = `<!DOCTYPE html>
           <div class="button-row">
             <a class="primary" href="${escapeHtml(articleUrl)}">看完整整理</a>
             <button type="button" data-copy="${escapeHtml(copyText)}">複製分享文</button>
-            ${platformButtons(primary)}
+            ${todayPlatformButtons}
           </div>
         </div>
       </section>
