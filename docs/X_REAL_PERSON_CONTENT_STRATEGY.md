@@ -10,6 +10,15 @@ This is the operating rulebook for the `@auntienomad` X account. It keeps the ac
 
 The account is not an ecommerce channel and should not look like a product ad. Every post needs a topic, a hook, a source, and an Auntie-style point of view.
 
+## Public Profile
+
+- Handle: `@auntienomad`
+- Display name: `阿姨別生氣`
+- Location: `台灣・熱搜現場`
+- Bio: `熱搜翻譯、科技八卦、荷包避雷。真人版阿姨，用成熟一點的眼神，把新聞講到你會想轉發。尺度大一點，腦袋也要在線。`
+- Link: `https://taiwanape.github.io/auntie-no-mad/`
+- Profile audit: load X OAuth credentials, then run `npm run test:x-profile`.
+
 ## Character Lock
 
 - Real-person, photorealistic adult woman.
@@ -41,6 +50,25 @@ The account is not an ecommerce channel and should not look like a product ad. E
 - Keep finance posts informational and avoid buy/sell/hold advice.
 - Cite source names in the post text or image when the claim is news-based.
 - Do not post hollow lines like "today cannot lose" unless tied to a real event and punchline.
+
+## Launch Cadence
+
+- Daily anchor: one sourced visual post with the real-person Auntie character.
+- Daily lightweight touch: one text-only quote, reply, or short thread tied to the same topic cluster.
+- Weekly pattern: two tech/AI posts, two money caution posts, two life radar posts, one meme or culture post.
+- Each visual post should use a fresh generated pose or scene while preserving the same character identity.
+- Do not post a sourced claim unless the source URL, source name, and date are available in the working notes or post asset.
+
+## Post Gate
+
+Before posting to X, confirm:
+
+- It has a real topic or current hook.
+- The visual is newly generated or a project-approved raster fallback, not a reference-image collage.
+- The character is consistent but not the same pose again.
+- The copy does not sound like ecommerce, sales, or product display.
+- The image uses the heavy headline system and remains readable on mobile.
+- Finance language is informational and does not tell people what to buy or sell.
 
 ## Current Published Example
 

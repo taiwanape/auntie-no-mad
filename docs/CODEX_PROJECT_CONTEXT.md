@@ -63,16 +63,20 @@ npm run test:x-api
 
 - Use API only.
 - Verified account: `@auntienomad`.
+- Current profile bio: `熱搜翻譯、科技八卦、荷包避雷。真人版阿姨，用成熟一點的眼神，把新聞講到你會想轉發。尺度大一點，腦袋也要在線。`
 - Current profile assets:
   - `social/x-profile-generated-20260529/x-profile-avatar-generated-20260529.jpg`
   - `social/x-profile-generated-20260529/x-profile-cover-generated-20260529.jpg`
-- Recent verified post: `https://x.com/auntienomad/status/2060202163700396065`
+- Recent verified posts:
+  - `https://x.com/auntienomad/status/2060318220754763933`
+  - `https://x.com/auntienomad/status/2060202163700396065`
 - X credentials are local in `x-bot/.env.local` and remote in GitHub Secrets. Do not print or commit values.
 
 Useful commands:
 
 ```powershell
 npm run test:x-api
+npm run test:x-profile
 npm run post:x
 npm run delete:x-posts
 ```

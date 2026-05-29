@@ -11,6 +11,7 @@
     "generate:share-pack": "node scripts/generate-share-pack.mjs",
     "generate:social-posts": "node scripts/generate-social-posts.mjs",
     "test:x-api": "node scripts/test-x-api.mjs",
+    "test:x-profile": "node scripts/audit-x-profile.mjs",
     "ops:health": "node scripts/ops-health-check.mjs",
     "post:x": "node scripts/post-x-manual.mjs",
     "delete:x-posts": "node scripts/delete-x-posts.mjs",
