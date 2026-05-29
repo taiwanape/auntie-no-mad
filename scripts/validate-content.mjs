@@ -256,7 +256,7 @@ if (content.stockOverview) {
 });
 
 const indexHtml = fs.readFileSync(path.join(root, "index.html"), "utf8");
-["sitemap.xml", "robots.txt", "rss.xml", "feed.json", "site.webmanifest", "llms.txt", "share.html"].forEach((file) => {
+["sitemap.xml", "robots.txt", "rss.xml", "feed.json", "site.webmanifest", "llms.txt", "share.html", "today.html"].forEach((file) => {
   assert(fileExists(file), `SEO/feed file missing: ${file}`);
 });
 assert(fileExists("article-growth.js"), "article-growth.js missing");
@@ -266,6 +266,7 @@ assert(indexHtml.includes('rel="manifest"'), "index.html must expose site.webman
 assert(indexHtml.includes('rel="me"'), "index.html must expose official social links");
 assert(indexHtml.includes("floating-share"), "index.html must keep a persistent sharing entry point");
 assert(indexHtml.includes("quickCopySite"), "index.html must support one-tap homepage copy sharing");
+assert(indexHtml.includes("today.html"), "index.html must link to the stable today landing page");
 
 const jsonFeedPath = path.join(root, "feed.json");
 if (fs.existsSync(jsonFeedPath)) {
@@ -372,19 +373,35 @@ for (const [index, script] of [...shareHtml.matchAll(/<script>([\s\S]*?)<\/scrip
   }
 }
 
+const todayHtml = fs.readFileSync(path.join(root, "today.html"), "utf8");
+assert(todayHtml.includes("今日必看"), "today.html must identify itself as the today landing page");
+assert(todayHtml.includes('rel="canonical"'), "today.html must include canonical URL");
+assert(todayHtml.includes('property="og:image"'), "today.html must include an OG image");
+assert(todayHtml.includes("data-copy"), "today.html must provide a copyable share text");
+for (const [index, script] of [...todayHtml.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]).entries()) {
+  try {
+    new Function(script);
+  } catch (error) {
+    errors.push(`today.html inline script ${index + 1} syntax error: ${error.message}`);
+  }
+}
+
 const webManifest = JSON.parse(fs.readFileSync(path.join(root, "site.webmanifest"), "utf8"));
 assert(webManifest.name === "阿姨別生氣", "site.webmanifest must use the site name");
 assert(Array.isArray(webManifest.shortcuts) && webManifest.shortcuts.length >= 3, "site.webmanifest must expose growth shortcuts");
 assert(JSON.stringify(webManifest).includes("share.html"), "site.webmanifest must include share pack shortcut");
+assert(JSON.stringify(webManifest).includes("today.html"), "site.webmanifest must include today landing page shortcut");
 const llmsTxt = fs.readFileSync(path.join(root, "llms.txt"), "utf8");
 assert(llmsTxt.includes("# 阿姨別生氣"), "llms.txt must identify the site");
 assert(llmsTxt.includes("RSS:"), "llms.txt must mention RSS");
 assert(llmsTxt.includes("Share kit:"), "llms.txt must mention share kit");
+assert(llmsTxt.includes("Today page:"), "llms.txt must mention today page");
 
 ["daily-update.yml", "live-news-update.yml"].forEach((workflowFile) => {
   const workflow = fs.readFileSync(path.join(root, ".github", "workflows", workflowFile), "utf8");
   assert(workflow.includes("site.webmanifest"), `${workflowFile} must commit site.webmanifest updates`);
   assert(workflow.includes("llms.txt"), `${workflowFile} must commit llms.txt updates`);
+  assert(workflow.includes("today.html"), `${workflowFile} must commit today.html updates`);
 });
 
 if (warnings.length) {

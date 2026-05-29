@@ -33,6 +33,12 @@ jobs:
       - name: Generate SEO feeds
         run: npm run generate:seo
 
+      - name: Generate today landing page
+        run: |
+          npm run generate:share-pack
+          npm run generate:social-posts
+          npm run generate:today
+
       - name: Validate site content
         run: npm test
 

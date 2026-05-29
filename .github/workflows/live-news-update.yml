@@ -40,6 +40,9 @@ jobs:
       - name: Generate social post drafts
         run: npm run generate:social-posts
 
+      - name: Generate today landing page
+        run: npm run generate:today
+
       - name: Validate content
         run: npm test
 
@@ -48,7 +51,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/site-content.json data/share-pack.json data/social-posts.json sitemap.xml robots.txt rss.xml feed.json site.webmanifest llms.txt
+          git add data/site-content.json data/share-pack.json data/social-posts.json sitemap.xml robots.txt rss.xml feed.json site.webmanifest llms.txt today.html
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No live news changes to commit."

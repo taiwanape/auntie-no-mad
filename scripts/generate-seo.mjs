@@ -27,6 +27,7 @@ const staticUrls = [
   "disclaimer.html",
   "copyright.html",
   "archive.html",
+  "today.html",
   "share.html",
   "tools/index.html",
   "tools/unit-converter.html"
@@ -153,6 +154,12 @@ const manifest = {
   ],
   shortcuts: [
     {
+      name: "今日必看",
+      short_name: "今日",
+      url: `${siteUrl}today.html?utm_source=web_app_manifest&utm_medium=owned&utm_campaign=today`,
+      description: "每天自動換成阿姨最想叫你看的那一篇。"
+    },
+    {
       name: "今日分享包",
       short_name: "分享包",
       url: `${siteUrl}share.html?utm_source=web_app_manifest&utm_medium=owned&utm_campaign=share_pack`,
@@ -183,6 +190,7 @@ const llms = [
   `- RSS: ${siteUrl}rss.xml`,
   `- JSON Feed: ${siteUrl}feed.json`,
   `- Sitemap: ${siteUrl}sitemap.xml`,
+  `- Today page: ${siteUrl}today.html`,
   `- Share kit: ${siteUrl}share.html`,
   `- X: ${socialLinks[0]}`,
   `- Instagram: ${socialLinks[1]}`,

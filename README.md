@@ -46,6 +46,7 @@ npm run test:x-readiness
 - `data/social-posts.json`：FB / IG / X 文案草稿。
 - `data/x-content-queue.json`：X 發文佇列。
 - `data/review-report.json`：每日內容審核報告。
+- `today.html`：每日主打導流頁，適合放在社群簡介或貼文裡。
 
 文章頁：
 
@@ -84,6 +85,7 @@ npm run test:x-readiness
 - `feed.json`
 - `site.webmanifest`
 - `llms.txt`
+- `today.html`
 
 首頁與文章頁要保留正常的 title、description、OG tags、JSON-LD 與來源連結。
 

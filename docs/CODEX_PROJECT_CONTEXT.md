@@ -69,6 +69,7 @@ Finance rules:
 - Social drafts: `data/social-posts.json`
 - X queue: `data/x-content-queue.json`
 - Review report: `data/review-report.json`
+- Today landing page: `today.html`
 - Article CTA module: `article-growth.js`
 - Core styles: `site-info.css`
 - Article folders: `radar/`, `stories/`, `stocks/`

@@ -18,6 +18,12 @@
   ],
   "shortcuts": [
     {
+      "name": "今日必看",
+      "short_name": "今日",
+      "url": "https://taiwanape.github.io/auntie-no-mad/today.html?utm_source=web_app_manifest&utm_medium=owned&utm_campaign=today",
+      "description": "每天自動換成阿姨最想叫你看的那一篇。"
+    },
+    {
       "name": "今日分享包",
       "short_name": "分享包",
       "url": "https://taiwanape.github.io/auntie-no-mad/share.html?utm_source=web_app_manifest&utm_medium=owned&utm_campaign=share_pack",

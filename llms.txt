@@ -6,6 +6,7 @@
 - RSS: https://taiwanape.github.io/auntie-no-mad/rss.xml
 - JSON Feed: https://taiwanape.github.io/auntie-no-mad/feed.json
 - Sitemap: https://taiwanape.github.io/auntie-no-mad/sitemap.xml
+- Today page: https://taiwanape.github.io/auntie-no-mad/today.html
 - Share kit: https://taiwanape.github.io/auntie-no-mad/share.html
 - X: https://x.com/auntienomad
 - Instagram: https://www.instagram.com/auntienomad/
