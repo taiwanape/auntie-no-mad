@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今日分享包｜阿姨別生氣</title>
+  <meta name="description" content="阿姨別生氣每日分享包：整理今天最適合轉傳的生活新聞、踩坑提醒、股市 ETF 觀察，以及可直接複製的 X、Facebook、Instagram 文案。">
+  <meta property="og:title" content="今日分享包｜阿姨別生氣">
+  <meta property="og:description" content="一頁拿到今天可以轉傳的阿姨圖文、社群文案與官網導流連結。">
+  <meta property="og:image" content="https://taiwanape.github.io/auntie-no-mad/assets/auntie-hero.jpg">
+  <meta property="og:url" content="https://taiwanape.github.io/auntie-no-mad/share.html">
+  <link rel="icon" href="assets/auntie-avatar-nav.jpg">
+  <link rel="stylesheet" href="site-info.css">
+  <style>
+    .share-hero {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .share-grid,
+    .post-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .share-card,
+    .post-card {
+      display: grid;
+      gap: 12px;
+      padding: 16px;
+      border: var(--line);
+      border-radius: 18px;
+      background: var(--paper);
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .share-card img,
+    .post-card img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border: 3px solid var(--ink);
+      border-radius: 14px;
+      background: var(--yellow);
+    }
+
+    .share-card h2,
+    .post-card h2 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .share-card p,
+    .post-card p,
+    .share-meta {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.55;
+      font-weight: 850;
+    }
+
+    .share-meta {
+      color: rgba(22, 19, 15, .66);
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .button-row a,
+    .button-row button {
+      appearance: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 8px 12px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: white;
+      color: var(--ink);
+      font: inherit;
+      font-size: 14px;
+      font-weight: 1000;
+      text-decoration: none;
+      box-shadow: 3px 3px 0 var(--ink);
+      cursor: pointer;
+    }
+
+    .button-row .primary {
+      background: var(--pink);
+      color: white;
+    }
+
+    .post-text {
+      min-height: 180px;
+      padding: 12px;
+      border: 3px solid var(--ink);
+      border-radius: 14px;
+      background: white;
+      white-space: pre-wrap;
+      font-size: 15px;
+      line-height: 1.55;
+      font-weight: 850;
+    }
+
+    .empty-image {
+      display: grid;
+      place-items: center;
+      aspect-ratio: 16 / 9;
+      border: 3px solid var(--ink);
+      border-radius: 14px;
+      background:
+        radial-gradient(circle at 1px 1px, rgba(22, 19, 15, .18) 1.6px, transparent 2px) 0 0 / 16px 16px,
+        var(--yellow);
+      font-weight: 1000;
+      text-align: center;
+      padding: 16px;
+    }
+
+    @media (max-width: 760px) {
+      .share-grid,
+      .post-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .button-row a,
+      .button-row button {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="top">
+      <a class="brand" href="index.html"><img src="assets/auntie-avatar-nav.jpg" alt=""><span>阿姨別生氣</span></a>
+      <a class="back" href="index.html">回首頁</a>
+    </header>
+
+    <main>
+      <section class="card share-hero">
+        <span class="label">今日分享包</span>
+        <h1>今天要丟出去的，都先放這裡。</h1>
+        <p>這頁給社群發文用：複製文案、拿圖片、點分享連結。每個導流連結都會回到阿姨別生氣，不會把流量白白送去別人家。</p>
+        <div class="notice" id="updatedAt">讀取今日分享素材中...</div>
+      </section>
+
+      <section class="card">
+        <span class="label">可轉傳入口</span>
+        <h2>今天最適合拿來引流的內容</h2>
+        <div class="share-grid" id="shareItems"></div>
+      </section>
+
+      <section class="card" style="margin-top: 22px;">
+        <span class="label">社群文案</span>
+        <h2>X / Facebook / Instagram 草稿</h2>
+        <div class="post-grid" id="socialPosts"></div>
+      </section>
+    </main>
+
+    <footer class="footer">阿姨別生氣 · 分享出去，流量才會回家</footer>
+  </div>
+
+  <script>
+    const SITE_BASE = "https://taiwanape.github.io/auntie-no-mad/";
+    const shareItems = document.querySelector("#shareItems");
+    const socialPosts = document.querySelector("#socialPosts");
+    const updatedAt = document.querySelector("#updatedAt");
+
+    const escapeHtml = (value = "") => String(value)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+
+    const absoluteUrl = (href = "") => {
+      if (!href) return "";
+      if (/^https?:\/\//.test(href)) return href;
+      return new URL(href, SITE_BASE).href;
+    };
+
+    async function copyText(text, button) {
+      const original = button.textContent;
+      try {
+        await navigator.clipboard.writeText(text);
+        button.textContent = "已複製";
+      } catch {
+        button.textContent = "複製失敗";
+      }
+      setTimeout(() => {
+        button.textContent = original;
+      }, 1400);
+    }
+
+    function imageBlock(path, alt) {
+      if (!path) return `<div class="empty-image">即時新聞入口<br>回首頁看最新整理</div>`;
+      return `<img src="${escapeHtml(path)}" alt="${escapeHtml(alt || "阿姨別生氣分享圖")}">`;
+    }
+
+    function renderSharePack(pack) {
+      const items = pack.items || [];
+      updatedAt.textContent = `更新時間：${new Date(pack.generatedAt || Date.now()).toLocaleString("zh-TW", { timeZone: "Asia/Taipei", hour12: false })}`;
+      shareItems.innerHTML = items.map((item) => `
+        <article class="share-card">
+          ${imageBlock(item.imagePath, item.imageAlt || item.title)}
+          <div class="share-meta">${escapeHtml(item.kind)} · ${escapeHtml(item.date || "")}</div>
+          <h2>${escapeHtml(item.title)}</h2>
+          <p>${escapeHtml(item.summary || "")}</p>
+          <div class="button-row">
+            <a class="primary" href="${escapeHtml(item.articleUrl)}">打開本站頁</a>
+            <button type="button" data-copy="${escapeHtml(item.shareText || item.copyUrl)}">複製分享文</button>
+            <a href="${escapeHtml(item.platformLinks?.line || "#")}" target="_blank" rel="noreferrer">LINE</a>
+            <a href="${escapeHtml(item.platformLinks?.facebook || "#")}" target="_blank" rel="noreferrer">FB</a>
+            <a href="${escapeHtml(item.platformLinks?.x || "#")}" target="_blank" rel="noreferrer">X</a>
+          </div>
+          <p class="share-meta">來源：<a href="${escapeHtml(item.sourceUrl || item.articleUrl)}" target="_blank" rel="noreferrer">${escapeHtml(item.sourceName || item.sourceUrl || "來源待補")}</a></p>
+        </article>
+      `).join("");
+    }
+
+    function renderSocialPosts(data) {
+      const posts = data.posts || {};
+      const labels = { x: "X", facebook: "Facebook", instagram: "Instagram" };
+      socialPosts.innerHTML = Object.entries(posts).map(([platform, post]) => `
+        <article class="post-card">
+          ${imageBlock(post.imagePath, post.sourceTitle)}
+          <div class="share-meta">${escapeHtml(labels[platform] || platform)} · ${escapeHtml(post.sourceKind || "")}</div>
+          <h2>${escapeHtml(post.sourceTitle || labels[platform] || platform)}</h2>
+          <div class="post-text">${escapeHtml(post.text || "")}</div>
+          <div class="button-row">
+            <button class="primary" type="button" data-copy="${escapeHtml(post.text || "")}">複製文案</button>
+            <a href="${escapeHtml(post.url || SITE_BASE)}" target="_blank" rel="noreferrer">打開導流連結</a>
+            ${post.imagePath ? `<a href="${escapeHtml(absoluteUrl(post.imagePath))}" target="_blank" rel="noreferrer">打開圖片</a>` : ""}
+          </div>
+        </article>
+      `).join("");
+    }
+
+    document.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-copy]");
+      if (!button) return;
+      copyText(button.dataset.copy || "", button);
+    });
+
+    Promise.all([
+      fetch("data/share-pack.json").then((response) => response.json()),
+      fetch("data/social-posts.json").then((response) => response.json())
+    ]).then(([pack, posts]) => {
+      renderSharePack(pack);
+      renderSocialPosts(posts);
+    }).catch(() => {
+      updatedAt.textContent = "分享素材讀取失敗，先回首頁看今天內容。";
+    });
+  </script>
+</body>
+</html>

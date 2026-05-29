@@ -256,7 +256,7 @@ if (content.stockOverview) {
 });
 
 const indexHtml = fs.readFileSync(path.join(root, "index.html"), "utf8");
-["sitemap.xml", "robots.txt", "rss.xml", "feed.json"].forEach((file) => {
+["sitemap.xml", "robots.txt", "rss.xml", "feed.json", "share.html"].forEach((file) => {
   assert(fileExists(file), `SEO/feed file missing: ${file}`);
 });
 assert(fileExists("article-growth.js"), "article-growth.js missing");
@@ -348,6 +348,18 @@ try {
   new Function(fs.readFileSync(path.join(root, "article-growth.js"), "utf8"));
 } catch (error) {
   errors.push(`article-growth.js syntax error: ${error.message}`);
+}
+
+const shareHtml = fs.readFileSync(path.join(root, "share.html"), "utf8");
+assert(shareHtml.includes("data/share-pack.json"), "share.html must load data/share-pack.json");
+assert(shareHtml.includes("data/social-posts.json"), "share.html must load data/social-posts.json");
+assert(shareHtml.includes("今日分享包"), "share.html must identify itself as the daily share pack");
+for (const [index, script] of [...shareHtml.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]).entries()) {
+  try {
+    new Function(script);
+  } catch (error) {
+    errors.push(`share.html inline script ${index + 1} syntax error: ${error.message}`);
+  }
 }
 
 if (warnings.length) {

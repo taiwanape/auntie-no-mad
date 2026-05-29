@@ -22,6 +22,7 @@ const staticUrls = [
   "disclaimer.html",
   "copyright.html",
   "archive.html",
+  "share.html",
   "tools/index.html",
   "tools/unit-converter.html"
 ];
