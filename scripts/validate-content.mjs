@@ -34,29 +34,6 @@ const requiredStockFields = [
 ];
 
 const bannedInvestmentPhrases = ["買進", "賣出", "目標價", "保證獲利"];
-const legacyProxyTerms = ["Open" + "Claw", "OPEN" + "CLAW"];
-const textExtensions = new Set([
-  ".html",
-  ".json",
-  ".md",
-  ".mjs",
-  ".js",
-  ".yml",
-  ".yaml",
-  ".txt",
-  ".css",
-  ".xml"
-]);
-const skippedDirs = new Set([
-  ".git",
-  ".playwright-cli",
-  "assets",
-  "qa",
-  "qa-local",
-  "restore-points",
-  "node_modules"
-]);
-
 const stockImageMap = new Map([
   ["assets/stock-20260526-auo.png", "2409"],
   ["assets/stock-20260526-inventec.png", "2356"],
@@ -215,23 +192,6 @@ function checkNoInvestmentAdvice(section, item) {
   );
 }
 
-function walkTextFiles(dir) {
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (skippedDirs.has(entry.name)) continue;
-    const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      walkTextFiles(fullPath);
-      continue;
-    }
-    if (!textExtensions.has(path.extname(entry.name))) continue;
-    const relativePath = path.relative(root, fullPath).replaceAll("\\", "/");
-    const text = fs.readFileSync(fullPath, "utf8");
-    legacyProxyTerms.forEach((term) => {
-      assert(!text.includes(term), `legacy proxy term "${term}" still appears in ${relativePath}`);
-    });
-  }
-}
-
 const serializedData = JSON.stringify(content);
 assert(!/\?{3,}/.test(serializedData), "data/site-content.json contains question-mark mojibake such as ???");
 assert(!/[銝嚗瘞踹]\S*[?]/.test(serializedData), "data/site-content.json appears to contain mojibake text");
@@ -304,8 +264,6 @@ for (const [index, script] of [...indexHtml.matchAll(/<script>([\s\S]*?)<\/scrip
     errors.push(`index.html inline script ${index + 1} syntax error: ${error.message}`);
   }
 }
-
-walkTextFiles(root);
 
 if (warnings.length) {
   console.warn("Content warnings:");

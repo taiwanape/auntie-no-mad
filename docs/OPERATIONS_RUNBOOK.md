@@ -1,136 +1,141 @@
-# 阿姨別生氣營運維護手冊
+# Auntie NoMad Operations Runbook
 
-更新時間：2026-05-29
+Updated: 2026-05-29
 
-這份文件是 Codex 維護「阿姨別生氣」網站與 X 帳號的日常維運準則。之後內容更新、排程調整、錯誤修正、部署發布與 X 發文，都以這份文件、`docs/CODEX_PROJECT_CONTEXT.md`、`docs/SITE_OPERATING_SPEC.md`、`docs/GROWTH_PLAYBOOK.md`、`docs/VOICE_GUIDE.md` 為準。
+Use this for routine site and X operations. Use API, CLI, local scripts, and GitHub Actions. Do not use browser automation for X.
 
-## 責任範圍
+## Daily Patrol
 
-Codex 負責：
-
-- X 帳號 `@auntienomad` 的內容規劃、圖文製作、API 發文、壞貼文刪除與 profile 視覺維護。
-- 網站 `auntie-no-mad` 的資料更新、前台顯示、後台腳本、驗證規則、SEO feed、部署流程與錯誤修正。
-- GitHub Actions 排程、GitHub Secrets、X API、OpenAI 圖片生成與公開資料來源的健康檢查。
-- 發現錯誤時先判斷是否會影響公開站或 X 帳號，再決定修復、回滾、刪文或保留舊資料。
-
-不做：
-
-- 不發布無來源的新聞、投資建議、醫療法律結論。
-- 不用瀏覽器自動操作 X，除非使用者明確要求。
-- 不把測試貼文、錯誤圖片、低品質拼貼或亂碼內容留在線上。
-- 不把 API key、access token 或 GitHub secrets 寫入 git。
-
-## 每日巡檢
-
-每日 08:15 Asia/Taipei 進行營運巡檢。巡檢項目：
-
-- `Daily Auntie Update` 最近一次是否成功。
-- `Live News Update` 最近一次是否成功。
-- `Deploy GitHub Pages` 最近一次是否成功。
-- `X Daily Post` 最近一次是否成功或是否因品質條件跳過。
-- 本機 `npm test` 是否通過。
-- 本機 `npm run test:x-api` 是否能驗證 `@auntienomad`。
-- `data/review-report.json` 是否為 `approved`，以及資料來源、圖片生成有沒有錯誤。
-- 最新 X 貼文是否有文字與圖片媒體附件。
-
-巡檢正常時，回報簡短健康狀態；巡檢異常時，列出錯誤、影響範圍、建議修復步驟與是否需要立即處理。
-
-可重複執行的巡檢命令：
+Run from `C:\Users\taiwa\Documents\AuntieNoMad\website`:
 
 ```powershell
 npm run ops:health
+npm test
+npm run test:x-api
 ```
 
-GitHub Actions workflow：`.github/workflows/ops-health-check.yml`
+Check:
 
-- 08:15 Asia/Taipei 每日執行。
-- 檢查本機內容驗證、公開首頁、主要 Actions、X API、profile 視覺與最新貼文。
-- 若 `X Daily Post` workflow 綠燈但實際輸出 `mode: skip`，列為 warning，避免「有跑但沒發」被忽略。
-- OpenAI 圖片額度失敗但合格 raster fallback 可用時，列為 warning；不把網站視為中斷。
+- GitHub Actions are not repeatedly failing.
+- Public site is reachable.
+- `data/review-report.json` is approved or has a clear fallback.
+- X API resolves `@auntienomad`.
+- Latest X post is not generic, broken, or off-brand.
 
-## 內容更新規則
+## Site Maintenance
 
-網站每日內容由 `scripts/daily-update.mjs` 產生，正式資料寫入 `data/site-content.json`。所有生活雷達、踩坑日記、股市 ETF 觀察都必須有公開來源。
+- Edit source content in `data/site-content.json` or through the relevant update script.
+- Keep `sourceUrl` for sourced content.
+- Preserve existing public content if fetch/update fails.
+- Do not break archive links.
+- After content changes, run:
 
-X 貼文規則：
+```powershell
+npm test
+npm run generate:seo
+```
 
-- 題材優先使用當日台灣生活新聞、社群熱門話題、詐騙警示、科技與投資踩坑、交通民生痛點。
-- X 文字要短、有梗、有一句可轉貼的金句。
-- 圖片要和貼文同一主題，不能拿舊圖硬套。
-- 真人版 X 視覺必須延續角色設定：短深色捲髮、金色大圓耳環、豹紋外搭、黑色主體、粉紅愛心、知性且有吸引力。
-- 不做電商廣告感，不做商品展示，不使用手拿商品或刻意賣貨姿勢。
+## X Posting Standards
 
-## 發文與刪文
+Every X post needs:
 
-優先使用 API 腳本：
+- A real topic: current news, online discussion, useful warning, finance/life angle, or sharp social observation.
+- A clear hook.
+- A visual that matches the topic.
+- Real-person Auntie character consistency.
 
-- 手動發文：`npm run post:x`
-- 刪除貼文：`npm run delete:x-posts`
-- X API 測試：`npm run test:x-api`
+Avoid:
 
-正式發文前必須先 dry-run，確認：
+- Ecommerce/product display style.
+- Hand-held props or fake product poses.
+- Empty captions without a topic.
+- Reusing the same image or pose repeatedly.
+- Collaging user reference images.
+- Sexy-only images with no idea behind them.
 
-- 中文沒有亂碼。
-- 圖片路徑存在。
-- 貼文長度未超過限制。
-- 來源 URL 正確。
-- 圖片不是被使用者拒絕過的風格。
+## X Visual Checklist
 
-若公開後發現內容錯誤、圖片不合格、文字亂碼或方向不符合品牌，立即用 API 刪除，不讓錯誤貼文留在線上。
+- Yellow halftone background.
+- Black pill label with white text.
+- Heavy black headline with thick white stroke and black shadow.
+- Pink keyword emphasis.
+- Real-person character: curly short dark hair, gold hoops, leopard layer, black outfit/apron, pink heart accent.
+- Pose should feel editorial, confident, and intelligent.
+- X can be sexier, but keep it tasteful and brand-led.
 
-## 部署與版本控制
+## X API Commands
 
-`website` 是正式 GitHub repo。所有會影響公開網站、排程、資料、驗證規則或正式社群素材的變更，都應納入 git。
+```powershell
+npm run test:x-api
+npm run post:x
+npm run delete:x-posts
+```
 
-目前需注意：
+Rules:
 
-- `x-bot` 是本機工具資料夾，不是獨立 git repo。
-- GitHub Actions 只從 `website` repo 執行。
-- GitHub Secrets 已包含 X OAuth1 四件組與 OpenAI API key，但不得在 log 或文件中列出值。
-- 本機 `.env.local` 只作本機 API 操作，不 commit。
+- Never print tokens.
+- Never commit `.env.local`.
+- Use dry-run or preview mode before publishing when available.
+- Delete posts only when clearly wrong, broken, or user-approved for deletion.
 
-部署流程：
+## GitHub Actions
 
-1. 修改資料、腳本或素材。
-2. 執行 `npm test`。
-3. 必要時執行 `npm run test:x-api`。
-4. 確認 git diff 只包含本次要發布的內容。
-5. commit / push 到 GitHub。
-6. 檢查 `Deploy GitHub Pages` 是否成功。
+Useful commands:
 
-## 常見故障處理
+```powershell
+gh run list --repo taiwanape/auntie-no-mad --limit 10
+gh run view <run-id> --repo taiwanape/auntie-no-mad --log-failed
+```
 
-OpenAI 圖片生成失敗：
+Important workflows:
 
-- 檢查 `data/review-report.json` 的 `OpenAI Images API` 狀態。
-- 若是 billing hard limit，保留文字更新，改用已審核 raster 圖庫，不用 SVG 或低品質備援。
+- `Daily Auntie Update`
+- `Live News Update`
+- `Deploy GitHub Pages`
+- `X Daily Post`
+- `X API Smoke Test`
+- `Ops Health Check`
 
-X 發文失敗：
+## Deployment
 
-- 先跑 `npm run test:x-api`。
-- 若 OAuth1 可讀帳號但發文失敗，檢查 app 權限、media upload、POST_TO_X 與圖片路徑。
-- 不改用瀏覽器流程，除非使用者明確要求。
+```powershell
+git status --short
+npm test
+git diff
+git add <files>
+git commit -m "<clear message>"
+git push origin HEAD:main
+```
 
-GitHub Actions 失敗：
+After push:
 
-- 先看失敗 workflow 的第一個紅色 step。
-- 若是 validation failed，修正資料或圖片規則。
-- 若是 push 衝突，先 pull/rebase 或檢查是否有排程同時更新。
-- 若是 Pages 部署失敗，確認 artifact path、Pages environment 與權限。
+- Confirm Pages deploy succeeds.
+- Check the public URL if the site changed.
+- If X behavior changed, run or inspect X API smoke test.
 
-網站內容錯誤：
+## Failure Handling
 
-- 若正式資料壞掉，優先恢復上一版 `data/site-content.json`。
-- 若只是單篇文章錯字或來源錯誤，修正該 HTML 與 JSON metadata。
-- 修正後必跑 `npm test` 和 `npm run generate:seo`。
+OpenAI image generation unavailable:
 
-## 品質底線
+- Use approved raster fallback assets.
+- Keep X posts static and high quality.
+- Do not force generic placeholder images.
 
-任何公開內容都必須同時符合：
+X API failure:
 
-- 有來源。
-- 無亂碼。
-- 圖文同題。
-- 不違反投資建議限制。
-- 不使用使用者明確拒絕過的視覺方向。
-- 先驗證再發布。
+- Run `npm run test:x-api`.
+- Check app credentials and account identity.
+- Do not switch to browser posting.
+- Do not expose credential values.
+
+Site validation failure:
+
+- Fix `data/site-content.json` first.
+- Regenerate SEO only after validation is clean.
+- Do not deploy broken content.
+
+GitHub Actions failure:
+
+- Inspect failed step logs.
+- Fix the root cause locally.
+- Re-run tests before pushing.
