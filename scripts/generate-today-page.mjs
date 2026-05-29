@@ -3,10 +3,14 @@ import path from "node:path";
 import { publicImageUrl, publicSiteUrl as siteUrl } from "./public-site-url.mjs";
 
 const root = process.cwd();
+const contentPath = path.join(root, "data", "site-content.json");
 const sharePackPath = path.join(root, "data", "share-pack.json");
 const socialPostsPath = path.join(root, "data", "social-posts.json");
 const outputPath = path.join(root, "today.html");
 
+const content = fs.existsSync(contentPath)
+  ? JSON.parse(fs.readFileSync(contentPath, "utf8"))
+  : {};
 const sharePack = JSON.parse(fs.readFileSync(sharePackPath, "utf8"));
 const socialPosts = fs.existsSync(socialPostsPath)
   ? JSON.parse(fs.readFileSync(socialPostsPath, "utf8"))
@@ -84,6 +88,30 @@ const nativeShareUrl = withUtm(todayUrl, "native", "today_page");
 const nativeShareText = `阿姨別生氣幫你整理成人話：${description}`;
 const xText = socialPosts.posts?.x?.text || copyText;
 const todayPlatformButtons = platformButtons({ url: todayUrl, title: primary.title, description });
+const socialPrimary = socialPosts.posts?.facebook || socialPosts.posts?.x || socialPosts.posts?.instagram || {};
+const socialHook = cleanText(socialPrimary.hook || `今天先看這篇：${primary.title}`);
+const auntieLine = cleanText(socialPrimary.auntieLine || description);
+const commentPrompt = cleanText(socialPrimary.commentPrompt || "你會想轉給誰？先丟給那個最容易點陌生連結的人。");
+const freshnessDate = cleanText((content.site?.updatedAt || sharePack.generatedAt || "").slice(0, 10).replaceAll("-", "/"));
+const freshCounts = [
+  `即時 ${Array.isArray(content.liveNews) ? content.liveNews.length : 0} 則`,
+  `生活 ${Array.isArray(content.lifeRadar) ? content.lifeRadar.length : 0} 則`,
+  `踩坑 ${Array.isArray(content.pitfalls) ? content.pitfalls.length : 0} 則`,
+  `股市 ${Array.isArray(content.stockWatchlist) ? content.stockWatchlist.length : 0} 檔`
+].join("、");
+const hookCopyText = `${socialHook}\n\n阿姨白話：${auntieLine}\n\n${commentPrompt}\n\n${todayUrl}?utm_source=copy_hook&utm_medium=social&utm_campaign=today_page`;
+
+function displayCategory(kind = "") {
+  return (
+    {
+      "live-news": "即時新聞",
+      "life-radar": "生活雷達",
+      pitfall: "踩坑日記",
+      "stock-watch": "股市 ETF",
+      today: "今日重點"
+    }[kind] || "阿姨整理"
+  );
+}
 
 const relatedCards = items
   .filter((item) => item !== primary)
@@ -95,6 +123,41 @@ const relatedCards = items
           <small>${escapeHtml(item.summary || "點進去看阿姨整理。")}</small>
         </a>`)
   .join("");
+
+const routeItems = [
+  {
+    label: "01 先看主打",
+    title: primary.title,
+    text: description,
+    url: articleUrl,
+    image: primary.imagePath || "assets/auntie-hero.jpg",
+    alt: primary.imageAlt || primary.title
+  },
+  ...items.filter((item) => item !== primary).slice(0, 2).map((item, index) => ({
+    label: String(index + 2).padStart(2, "0") + ` ${displayCategory(item.kind)}`,
+    title: item.title || displayCategory(item.kind),
+    text: item.summary || "阿姨幫你整理成白話，點進去看完整內容。",
+    url: item.articleUrl || "#",
+    image: item.imagePath || "assets/auntie-hero.jpg",
+    alt: item.imageAlt || item.title || displayCategory(item.kind)
+  })),
+  {
+    label: "最後一步",
+    title: "覺得有用就丟群組",
+    text: "分享包已經把圖片、文案和連結排好，少打一堆字。",
+    url: `${siteUrl}share.html?utm_source=today_route&utm_medium=internal&utm_campaign=share_pack`,
+    image: primary.imagePath || "assets/auntie-hero.jpg",
+    alt: "阿姨別生氣今日分享包"
+  }
+];
+
+const routeCards = routeItems.map((item) => `
+        <a class="route-card" href="${escapeHtml(item.url)}">
+          <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}">
+          <span>${escapeHtml(item.label)}</span>
+          <strong>${escapeHtml(item.title)}</strong>
+          <small>${escapeHtml(item.text)}</small>
+        </a>`).join("");
 
 const html = `<!DOCTYPE html>
 <html lang="zh-TW">
@@ -158,10 +221,12 @@ const html = `<!DOCTYPE html>
 
     .today-copy h1 {
       margin: 0;
-      font-size: clamp(32px, 4.2vw, 52px);
-      line-height: 1.1;
+      font-size: clamp(30px, 3.6vw, 44px);
+      line-height: 1.16;
       font-weight: 1000;
+      text-shadow: 2px 2px 0 white, 4px 4px 0 rgba(22, 19, 15, .88);
       overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
     .today-copy p {
@@ -196,6 +261,135 @@ const html = `<!DOCTYPE html>
     .button-row .primary {
       background: var(--pink);
       color: white;
+    }
+
+    .social-hook {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+      padding: 18px;
+      border: var(--line);
+      border-radius: 18px;
+      background: #15130f;
+      color: white;
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+
+    .social-hook h2 {
+      margin: 0;
+      font-size: clamp(26px, 4vw, 40px);
+      line-height: 1.08;
+      font-weight: 1000;
+    }
+
+    .social-hook-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .hook-bubble {
+      min-width: 0;
+      padding: 12px;
+      border: 3px solid white;
+      border-radius: 16px;
+      background: rgba(255,255,255,.08);
+    }
+
+    .hook-bubble span {
+      display: inline-flex;
+      margin-bottom: 6px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--pink);
+      color: white;
+      font-size: 12px;
+      font-weight: 1000;
+    }
+
+    .hook-bubble p {
+      margin: 0;
+      color: rgba(255,255,255,.9);
+      font-size: 15px;
+      line-height: 1.45;
+      font-weight: 900;
+      overflow-wrap: anywhere;
+    }
+
+    .route-panel {
+      margin-top: 26px;
+    }
+
+    .route-panel h2 {
+      margin-bottom: 0;
+      font-size: clamp(30px, 4.5vw, 46px);
+      line-height: 1.08;
+      font-weight: 1000;
+    }
+
+    .route-subtitle {
+      margin: 8px 0 18px;
+      font-size: 17px;
+      line-height: 1.5;
+      font-weight: 900;
+      color: rgba(22, 19, 15, .75);
+    }
+
+    .route-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .route-card {
+      display: grid;
+      gap: 8px;
+      min-width: 0;
+      padding: 10px;
+      border: 3px solid var(--ink);
+      border-radius: 16px;
+      background: white;
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: 4px 4px 0 var(--ink);
+      overflow: hidden;
+    }
+
+    .route-card img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border: 3px solid var(--ink);
+      border-radius: 12px;
+      background: var(--yellow);
+    }
+
+    .route-card span {
+      width: fit-content;
+      max-width: 100%;
+      padding: 4px 9px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: var(--yellow);
+      font-size: 12px;
+      font-weight: 1000;
+    }
+
+    .route-card strong {
+      font-size: 19px;
+      line-height: 1.18;
+      font-weight: 1000;
+      overflow-wrap: anywhere;
+    }
+
+    .route-card small {
+      color: rgba(22, 19, 15, .72);
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: 850;
+      overflow-wrap: anywhere;
     }
 
     .mini-grid {
@@ -242,6 +436,8 @@ const html = `<!DOCTYPE html>
 
     @media (max-width: 820px) {
       .today-hero,
+      .social-hook-grid,
+      .route-grid,
       .mini-grid {
         grid-template-columns: 1fr;
       }
@@ -252,8 +448,8 @@ const html = `<!DOCTYPE html>
       }
 
       .today-copy h1 {
-        font-size: clamp(32px, 11vw, 44px);
-        line-height: 1.12;
+        font-size: clamp(29px, 9vw, 38px);
+        line-height: 1.18;
       }
 
       .button-row a,
@@ -277,6 +473,7 @@ const html = `<!DOCTYPE html>
           <span class="label">今日必看</span>
           <h1 id="todayTitle">${escapeHtml(primary.title)}</h1>
           <p>${escapeHtml(description)}</p>
+          <p class="notice">${escapeHtml(freshnessDate || "今日")} 更新：${escapeHtml(freshCounts)}。先看主打，再順手看下一篇。</p>
           <p class="notice">這頁每天跟著最新內容更新。想轉給朋友，貼這一頁就好，阿姨會自己換今日重點。</p>
           <div class="button-row">
             <a class="primary" href="${escapeHtml(articleUrl)}">看完整整理</a>
@@ -285,6 +482,27 @@ const html = `<!DOCTYPE html>
             ${todayPlatformButtons}
           </div>
         </div>
+      </section>
+
+      <section class="social-hook" aria-labelledby="hookTitle">
+        <h2 id="hookTitle">這篇為什麼適合轉？阿姨先幫你開場。</h2>
+        <div class="social-hook-grid">
+          <div class="hook-bubble"><span>開場</span><p>${escapeHtml(socialHook)}</p></div>
+          <div class="hook-bubble"><span>阿姨白話</span><p>${escapeHtml(auntieLine)}</p></div>
+          <div class="hook-bubble"><span>留言題</span><p>${escapeHtml(commentPrompt)}</p></div>
+        </div>
+        <div class="button-row">
+          <button type="button" data-copy="${escapeHtml(hookCopyText)}">複製社群開場</button>
+          <a href="${escapeHtml(`${siteUrl}share.html?utm_source=today_hook&utm_medium=internal&utm_campaign=share_pack`)}">拿完整分享包</a>
+          <a href="${escapeHtml(`${siteUrl}links.html?utm_source=today_hook&utm_medium=internal&utm_campaign=link_in_bio`)}">社群入口頁</a>
+        </div>
+      </section>
+
+      <section class="card route-panel">
+        <span class="label">三分鐘路線</span>
+        <h2>不要看完就走，阿姨幫你排好下一站。</h2>
+        <p class="route-subtitle">這四張卡每天跟內容一起換，適合放在社群貼文、LINE 群組或個人檔案入口。</p>
+        <div class="route-grid">${routeCards}</div>
       </section>
 
       <section class="card" style="margin-top: 26px;">

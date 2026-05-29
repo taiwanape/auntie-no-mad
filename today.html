@@ -60,10 +60,12 @@
 
     .today-copy h1 {
       margin: 0;
-      font-size: clamp(32px, 4.2vw, 52px);
-      line-height: 1.1;
+      font-size: clamp(30px, 3.6vw, 44px);
+      line-height: 1.16;
       font-weight: 1000;
+      text-shadow: 2px 2px 0 white, 4px 4px 0 rgba(22, 19, 15, .88);
       overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
     .today-copy p {
@@ -98,6 +100,135 @@
     .button-row .primary {
       background: var(--pink);
       color: white;
+    }
+
+    .social-hook {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+      padding: 18px;
+      border: var(--line);
+      border-radius: 18px;
+      background: #15130f;
+      color: white;
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+
+    .social-hook h2 {
+      margin: 0;
+      font-size: clamp(26px, 4vw, 40px);
+      line-height: 1.08;
+      font-weight: 1000;
+    }
+
+    .social-hook-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .hook-bubble {
+      min-width: 0;
+      padding: 12px;
+      border: 3px solid white;
+      border-radius: 16px;
+      background: rgba(255,255,255,.08);
+    }
+
+    .hook-bubble span {
+      display: inline-flex;
+      margin-bottom: 6px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--pink);
+      color: white;
+      font-size: 12px;
+      font-weight: 1000;
+    }
+
+    .hook-bubble p {
+      margin: 0;
+      color: rgba(255,255,255,.9);
+      font-size: 15px;
+      line-height: 1.45;
+      font-weight: 900;
+      overflow-wrap: anywhere;
+    }
+
+    .route-panel {
+      margin-top: 26px;
+    }
+
+    .route-panel h2 {
+      margin-bottom: 0;
+      font-size: clamp(30px, 4.5vw, 46px);
+      line-height: 1.08;
+      font-weight: 1000;
+    }
+
+    .route-subtitle {
+      margin: 8px 0 18px;
+      font-size: 17px;
+      line-height: 1.5;
+      font-weight: 900;
+      color: rgba(22, 19, 15, .75);
+    }
+
+    .route-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .route-card {
+      display: grid;
+      gap: 8px;
+      min-width: 0;
+      padding: 10px;
+      border: 3px solid var(--ink);
+      border-radius: 16px;
+      background: white;
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: 4px 4px 0 var(--ink);
+      overflow: hidden;
+    }
+
+    .route-card img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border: 3px solid var(--ink);
+      border-radius: 12px;
+      background: var(--yellow);
+    }
+
+    .route-card span {
+      width: fit-content;
+      max-width: 100%;
+      padding: 4px 9px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: var(--yellow);
+      font-size: 12px;
+      font-weight: 1000;
+    }
+
+    .route-card strong {
+      font-size: 19px;
+      line-height: 1.18;
+      font-weight: 1000;
+      overflow-wrap: anywhere;
+    }
+
+    .route-card small {
+      color: rgba(22, 19, 15, .72);
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: 850;
+      overflow-wrap: anywhere;
     }
 
     .mini-grid {
@@ -144,6 +275,8 @@
 
     @media (max-width: 820px) {
       .today-hero,
+      .social-hook-grid,
+      .route-grid,
       .mini-grid {
         grid-template-columns: 1fr;
       }
@@ -154,8 +287,8 @@
       }
 
       .today-copy h1 {
-        font-size: clamp(32px, 11vw, 44px);
-        line-height: 1.12;
+        font-size: clamp(29px, 9vw, 38px);
+        line-height: 1.18;
       }
 
       .button-row a,
@@ -179,6 +312,7 @@
           <span class="label">今日必看</span>
           <h1 id="todayTitle">打詐綱領2.0施行成效 查獲5055詐團、追贓33億元</h1>
           <p>不是你笨，是套路越來越會穿西裝。</p>
+          <p class="notice">2026/05/30 更新：即時 6 則、生活 2 則、踩坑 2 則、股市 4 檔。先看主打，再順手看下一篇。</p>
           <p class="notice">這頁每天跟著最新內容更新。想轉給朋友，貼這一頁就好，阿姨會自己換今日重點。</p>
           <div class="button-row">
             <a class="primary" href="http://auntienomad.com/stories/2026-05-30-pitfall-1.html">看完整整理</a>
@@ -190,6 +324,57 @@
             <a href="https://social-plugins.line.me/lineit/share?url=http%3A%2F%2Fauntienomad.com%2Ftoday.html%3Futm_source%3Dline%26utm_medium%3Dsocial%26utm_campaign%3Dtoday_page" target="_blank" rel="noreferrer">LINE</a><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fauntienomad.com%2Ftoday.html%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dtoday_page" target="_blank" rel="noreferrer">FB</a><a href="https://twitter.com/intent/tweet?text=%E6%89%93%E8%A9%90%E7%B6%B1%E9%A0%982.0%E6%96%BD%E8%A1%8C%E6%88%90%E6%95%88%20%E6%9F%A5%E7%8D%B25055%E8%A9%90%E5%9C%98%E3%80%81%E8%BF%BD%E8%B4%9333%E5%84%84%E5%85%83%0A%E4%B8%8D%E6%98%AF%E4%BD%A0%E7%AC%A8%EF%BC%8C%E6%98%AF%E5%A5%97%E8%B7%AF%E8%B6%8A%E4%BE%86%E8%B6%8A%E6%9C%83%E7%A9%BF%E8%A5%BF%E8%A3%9D%E3%80%82%0A%0Ahttp%3A%2F%2Fauntienomad.com%2Ftoday.html%3Futm_source%3Dx%26utm_medium%3Dsocial%26utm_campaign%3Dtoday_page" target="_blank" rel="noreferrer">X</a>
           </div>
         </div>
+      </section>
+
+      <section class="social-hook" aria-labelledby="hookTitle">
+        <h2 id="hookTitle">這篇為什麼適合轉？阿姨先幫你開場。</h2>
+        <div class="social-hook-grid">
+          <div class="hook-bubble"><span>開場</span><p>今天這個坑，真的不是只有長輩會踩：打詐綱領2.0施行成效 查獲5055詐團、追贓33億元</p></div>
+          <div class="hook-bubble"><span>阿姨白話</span><p>不是你笨，是套路真的越來越會包裝。</p></div>
+          <div class="hook-bubble"><span>留言題</span><p>你有看過類似套路嗎？留言提醒一下隔壁那位還在相信陌生連結的人。</p></div>
+        </div>
+        <div class="button-row">
+          <button type="button" data-copy="今天這個坑，真的不是只有長輩會踩：打詐綱領2.0施行成效 查獲5055詐團、追贓33億元
+
+阿姨白話：不是你笨，是套路真的越來越會包裝。
+
+你有看過類似套路嗎？留言提醒一下隔壁那位還在相信陌生連結的人。
+
+http://auntienomad.com/today.html?utm_source=copy_hook&amp;utm_medium=social&amp;utm_campaign=today_page">複製社群開場</button>
+          <a href="http://auntienomad.com/share.html?utm_source=today_hook&amp;utm_medium=internal&amp;utm_campaign=share_pack">拿完整分享包</a>
+          <a href="http://auntienomad.com/links.html?utm_source=today_hook&amp;utm_medium=internal&amp;utm_campaign=link_in_bio">社群入口頁</a>
+        </div>
+      </section>
+
+      <section class="card route-panel">
+        <span class="label">三分鐘路線</span>
+        <h2>不要看完就走，阿姨幫你排好下一站。</h2>
+        <p class="route-subtitle">這四張卡每天跟內容一起換，適合放在社群貼文、LINE 群組或個人檔案入口。</p>
+        <div class="route-grid">
+        <a class="route-card" href="http://auntienomad.com/stories/2026-05-30-pitfall-1.html">
+          <img src="assets/generated/2026-05-30/pitfall-1-1ec6gwo-approved.jpg" alt="阿姨整理打詐綱領2.0施行成效 查獲5055詐團、追贓33億元的踩坑日記縮圖">
+          <span>01 先看主打</span>
+          <strong>打詐綱領2.0施行成效 查獲5055詐團、追贓33億元</strong>
+          <small>不是你笨，是套路越來越會穿西裝。</small>
+        </a>
+        <a class="route-card" href="http://auntienomad.com/radar/2026-05-30-life-1.html">
+          <img src="assets/generated/2026-05-30/life-1-1ijqvf3-approved.jpg" alt="阿姨整理氣象署發布豪雨特報 屏高台南有局部豪大雨發生機率的生活雷達縮圖">
+          <span>02 生活雷達</span>
+          <strong>氣象署發布豪雨特報 屏高台南有局部豪大雨發生機率</strong>
+          <small>新聞不是拿來焦慮的，是拿來少踩一個坑的。</small>
+        </a>
+        <a class="route-card" href="http://auntienomad.com/stocks/2026-05-30-market-watch.html">
+          <img src="assets/generated/2026-05-30/stock-overview-1jfljyp-approved.jpg" alt="阿姨今天看市場：聯發科、鴻海 等四檔">
+          <span>03 股市 ETF</span>
+          <strong>阿姨今天看市場：聯發科、鴻海 等四檔</strong>
+          <small>不是報明牌，是把市場消息整理成白話文。</small>
+        </a>
+        <a class="route-card" href="http://auntienomad.com/share.html?utm_source=today_route&amp;utm_medium=internal&amp;utm_campaign=share_pack">
+          <img src="assets/generated/2026-05-30/pitfall-1-1ec6gwo-approved.jpg" alt="阿姨別生氣今日分享包">
+          <span>最後一步</span>
+          <strong>覺得有用就丟群組</strong>
+          <small>分享包已經把圖片、文案和連結排好，少打一堆字。</small>
+        </a></div>
       </section>
 
       <section class="card" style="margin-top: 26px;">
