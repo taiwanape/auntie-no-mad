@@ -59,13 +59,48 @@ function pickPrimaryItem(items = []) {
     .find(Boolean) || items.find((item) => item.imagePath && item.articleUrl) || items[0];
 }
 
+function auntieLineForKind(item = {}) {
+  if (item.kind === "stock-watch") {
+    return "不是報明牌，是幫你把市場消息翻成人話。";
+  }
+  if (item.kind === "pitfall") {
+    return "不是你笨，是套路真的越來越會包裝。";
+  }
+  if (item.kind === "live-news") {
+    return "先看重點，不要等到被新聞追著跑。";
+  }
+  return "新聞不是拿來焦慮的，是拿來少踩一個坑的。";
+}
+
+function hookForKind(item = {}) {
+  const title = compact(item.title || "今天這件事", 28);
+  if (item.kind === "stock-watch") return `今天市場這一桌，阿姨先把菜名念清楚：${title}`;
+  if (item.kind === "pitfall") return `今天這個坑，真的不是只有長輩會踩：${title}`;
+  if (item.kind === "live-news") return `先別滑走，今天這條可能跟你出門有關：${title}`;
+  return `今天先看這條，等等出門比較不會煩：${title}`;
+}
+
+function commentPromptForKind(item = {}) {
+  if (item.kind === "stock-watch") return "你今天最想觀察哪一檔？留言講，阿姨明天幫你盯。";
+  if (item.kind === "pitfall") return "你有看過類似套路嗎？留言提醒一下隔壁那位還在相信陌生連結的人。";
+  if (item.kind === "live-news") return "這條你覺得要緊嗎？留言給阿姨知道，明天整理更準。";
+  return "你今天有被哪件生活小事煩到？留言讓阿姨一起碎念。";
+}
+
 function buildXPost(item) {
   const url = withSource(todayUrl, "x_daily", "today_page");
-  const text = buildBoundedXText(item, url);
+  const hook = hookForKind(item);
+  const auntieLine = auntieLineForKind(item);
+  const commentPrompt = commentPromptForKind(item);
+  const text = buildBoundedXText({ ...item, summary: auntieLine }, url);
 
   return {
     platform: "x",
     text,
+    hook,
+    auntieLine,
+    commentPrompt,
+    cta: "點進今日必看，先看阿姨整理好的重點。",
     url,
     imagePath: item.imagePath || "",
     sourceKind: item.kind,
@@ -76,12 +111,19 @@ function buildXPost(item) {
 
 function buildFacebookPost(item) {
   const url = withSource(todayUrl, "facebook_daily", "today_page");
+  const hook = hookForKind(item);
+  const auntieLine = auntieLineForKind(item);
+  const commentPrompt = commentPromptForKind(item);
   const text = [
-    `${item.title}`,
+    hook,
     "",
-    `阿姨看到這個，第一個反應是：${item.summary}`,
+    `阿姨看到這個，第一個反應是：${auntieLine}`,
+    "",
+    item.summary,
     "",
     "這種新聞不要只滑過去，點進去看完整整理，少踩一個坑就是賺到。",
+    "",
+    commentPrompt,
     "",
     url,
     "",
@@ -91,6 +133,10 @@ function buildFacebookPost(item) {
   return {
     platform: "facebook",
     text,
+    hook,
+    auntieLine,
+    commentPrompt,
+    cta: "看完整整理",
     url,
     imagePath: item.imagePath || "",
     sourceKind: item.kind,
@@ -101,12 +147,19 @@ function buildFacebookPost(item) {
 
 function buildInstagramPost(item) {
   const url = withSource(todayUrl, "instagram_daily", "today_page");
+  const hook = hookForKind(item);
+  const auntieLine = auntieLineForKind(item);
+  const commentPrompt = commentPromptForKind(item);
   const text = [
-    `${item.title}`,
+    hook,
     "",
-    `阿姨白話：${item.summary}`,
+    `阿姨白話：${auntieLine}`,
+    "",
+    item.summary,
     "",
     "完整整理放在官網，連結看個人檔案。",
+    "",
+    commentPrompt,
     "",
     "#阿姨別生氣 #台灣生活 #生活雷達 #踩坑提醒"
   ].join("\n");
@@ -114,6 +167,10 @@ function buildInstagramPost(item) {
   return {
     platform: "instagram",
     text,
+    hook,
+    auntieLine,
+    commentPrompt,
+    cta: "連結看個人檔案",
     url,
     imagePath: item.imagePath || "",
     sourceKind: item.kind,

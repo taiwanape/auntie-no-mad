@@ -285,7 +285,7 @@
       <section class="card" style="margin-top: 22px;">
         <span class="label">直接拿去貼</span>
         <h2>LINE 群、FB 社團、限動先用這三條</h2>
-        <p class="share-meta">文案會每天跟著今日主打更新，連結都帶追蹤碼。先用穩定 HTTPS 的 GitHub Pages 網址，等 auntienomad.com 憑證好了再切自訂網域。</p>
+        <p class="share-meta">文案會每天跟著今日主打更新，連結都帶追蹤碼。目前導流統一回 auntienomad.com，社群預覽圖暫用穩定 HTTPS 圖床，等憑證完成再全站切 HTTPS。</p>
         <div class="campaign-grid" id="campaignCopies"></div>
       </section>
 
@@ -472,6 +472,8 @@
           ${imageBlock(post.imagePath, post.sourceTitle)}
           <div class="share-meta">${escapeHtml(labels[platform] || platform)} · ${escapeHtml(post.sourceKind || "")}</div>
           <h2>${escapeHtml(post.sourceTitle || labels[platform] || platform)}</h2>
+          ${post.hook ? `<p class="share-meta"><strong>開場鉤子：</strong>${escapeHtml(post.hook)}</p>` : ""}
+          ${post.commentPrompt ? `<p class="share-meta"><strong>留言引導：</strong>${escapeHtml(post.commentPrompt)}</p>` : ""}
           <div class="post-text">${escapeHtml(post.text || "")}</div>
           <div class="button-row">
             <button class="primary" type="button" data-copy="${escapeHtml(post.text || "")}">複製文案</button>
