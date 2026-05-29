@@ -256,7 +256,7 @@ if (content.stockOverview) {
 });
 
 const indexHtml = fs.readFileSync(path.join(root, "index.html"), "utf8");
-["sitemap.xml", "robots.txt", "rss.xml", "feed.json", "site.webmanifest", "llms.txt", "share.html", "today.html"].forEach((file) => {
+["sitemap.xml", "robots.txt", "rss.xml", "feed.json", "site.webmanifest", "llms.txt", "share.html", "today.html", "daily-reminder.ics"].forEach((file) => {
   assert(fileExists(file), `SEO/feed file missing: ${file}`);
 });
 assert(fileExists("article-growth.js"), "article-growth.js missing");
@@ -267,6 +267,12 @@ assert(indexHtml.includes('rel="me"'), "index.html must expose official social l
 assert(indexHtml.includes("floating-share"), "index.html must keep a persistent sharing entry point");
 assert(indexHtml.includes("quickCopySite"), "index.html must support one-tap homepage copy sharing");
 assert(indexHtml.includes("today.html"), "index.html must link to the stable today landing page");
+assert(indexHtml.includes("daily-reminder.ics"), "index.html must offer a daily return reminder");
+
+const reminderIcs = fs.readFileSync(path.join(root, "daily-reminder.ics"), "utf8");
+assert(reminderIcs.includes("RRULE:FREQ=DAILY"), "daily-reminder.ics must be a daily recurring reminder");
+assert(reminderIcs.includes("utm_source=calendar"), "daily-reminder.ics must track calendar return visits");
+assert(reminderIcs.includes("today.html"), "daily-reminder.ics must point visitors to today.html");
 
 const jsonFeedPath = path.join(root, "feed.json");
 if (fs.existsSync(jsonFeedPath)) {
