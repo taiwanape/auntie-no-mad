@@ -160,6 +160,24 @@ Meta App 權限通常需要：
 
 IG 帳號必須是專業帳號，且已連到同一個 Facebook 粉絲頁。
 
+取得 Meta secrets 的標準流程：
+
+1. 到 `https://developers.facebook.com/tools/explorer/` 打開 Graph API Explorer。
+2. 選 AuntieNoMad 的 Meta App，產生 user token，勾上方列出的 Page / Instagram 權限。
+3. 在查詢欄執行：
+
+```text
+/me/accounts?fields=id,name,access_token,instagram_business_account
+```
+
+4. 回傳中的 `id` 是 `META_PAGE_ID`，`access_token` 是 `META_PAGE_ACCESS_TOKEN`。
+5. `instagram_business_account.id` 是 `IG_USER_ID`。初期測試時，`IG_ACCESS_TOKEN` 可以先使用同一組 Page access token。
+6. 不要把 token 貼進聊天或 commit。用這個腳本貼進 GitHub Secrets：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\setup-meta-secrets.ps1
+```
+
 ## 社群導流入口頁
 
 - `links.html` 是 IG 個人檔案、FB 粉專簡介、X 置頂貼文可放的入口頁。
