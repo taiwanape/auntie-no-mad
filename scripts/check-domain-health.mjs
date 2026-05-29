@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import { spawnSync } from "node:child_process";
 
 const repo = process.env.GITHUB_REPOSITORY || "taiwanape/auntie-no-mad";
 const domain = process.env.AUNTIE_CUSTOM_DOMAIN || "auntienomad.com";
@@ -45,15 +46,30 @@ async function probe(url) {
       hasSite: text.includes("阿姨別生氣")
     };
   } catch (error) {
+    const cause = error.cause?.code ? `${error.cause.code}: ${error.cause.message}` : error.message;
     return {
       ok: false,
-      error: error.message
+      error: cause
     };
   }
 }
 
 async function githubApi(path, options = {}) {
-  if (!token) return null;
+  if (!token) {
+    if (!options.method || options.method === "GET") {
+      const gh = spawnSync("gh", ["api", path], {
+        encoding: "utf8",
+        windowsHide: true
+      });
+      if (gh.status === 0) {
+        return {
+          response: { ok: true, status: 200 },
+          body: JSON.parse(gh.stdout)
+        };
+      }
+    }
+    return null;
+  }
   const response = await fetchWithTimeout(`${apiBase}${path}`, {
     ...options,
     headers: {
@@ -78,6 +94,32 @@ async function getPagesState() {
 }
 
 async function enableHttps() {
+  if (!token) {
+    const gh = spawnSync("gh", [
+      "api",
+      "-X",
+      "PUT",
+      `/repos/${repo}/pages`,
+      "-f",
+      "build_type=workflow",
+      "-f",
+      `cname=${domain}`,
+      "-F",
+      "https_enforced=true"
+    ], {
+      encoding: "utf8",
+      windowsHide: true
+    });
+    const body = gh.stdout
+      ? JSON.parse(gh.stdout)
+      : { message: (gh.stderr || "gh api failed").trim() };
+    return {
+      ok: gh.status === 0,
+      status: gh.status === 0 ? 200 : 1,
+      body
+    };
+  }
+
   const result = await githubApi(`/repos/${repo}/pages`, {
     method: "PUT",
     headers: {
@@ -119,6 +161,9 @@ if (shouldEnableHttps && pages?.ok && !pages.body.https_enforced) {
     log("Requested GitHub Pages HTTPS enforcement successfully.");
   } else if (enableResult) {
     log(`HTTPS enforcement not ready: ${enableResult.status} ${JSON.stringify(enableResult.body)}`);
+    if (/certificate does not exist yet/i.test(JSON.stringify(enableResult.body))) {
+      log("GitHub has not issued the custom-domain certificate yet. DNS is correct; wait and retry.");
+    }
     if (enableResult.status === 403) {
       log("The current token can check Pages state but cannot update Pages settings. Add GH_PAGES_TOKEN with Pages write/admin permission to enable automatic HTTPS enforcement from Actions.");
     }
