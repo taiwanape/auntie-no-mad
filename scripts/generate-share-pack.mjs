@@ -24,6 +24,17 @@ function withUtm(href, source, campaign = "daily_share_pack") {
   return url.href;
 }
 
+function isExternalUrl(href = "") {
+  if (!/^https?:\/\//.test(href)) return false;
+  return new URL(href).origin !== new URL(siteUrl).origin;
+}
+
+function resolveShareHref(item = {}, fallbackHref = "") {
+  const slug = item.slug || "";
+  if (slug && !isExternalUrl(slug)) return slug;
+  return fallbackHref || siteUrl;
+}
+
 function cleanText(value = "") {
   return String(value).replace(/\s+/g, " ").trim();
 }
@@ -47,7 +58,7 @@ function buildShareText(item, url) {
 function buildItem(kind, item, fallbackHref, campaign) {
   if (!item) return null;
 
-  const href = item.slug || item.sourceUrl || fallbackHref || "";
+  const href = resolveShareHref(item, fallbackHref);
   const title = cleanText(item.title || item.name || "阿姨別生氣今日提醒");
   const summary = pickText(item);
   const copyUrl = withUtm(href, "copy", campaign);

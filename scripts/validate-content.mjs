@@ -274,6 +274,15 @@ const sharePackPath = path.join(root, "data", "share-pack.json");
 assert(fileExists("data/share-pack.json"), "data/share-pack.json missing; run npm run generate:share-pack");
 if (fs.existsSync(sharePackPath)) {
   const sharePack = JSON.parse(fs.readFileSync(sharePackPath, "utf8"));
+  const shareSiteUrl = new URL(sharePack.site?.url || content.site?.url || "https://taiwanape.github.io/auntie-no-mad/");
+  const isSiteShareUrl = (urlValue = "") => {
+    try {
+      const url = new URL(urlValue);
+      return url.origin === shareSiteUrl.origin && url.pathname.startsWith(shareSiteUrl.pathname);
+    } catch {
+      return false;
+    }
+  };
   assert(sharePack.site?.homepageShareUrl, "share-pack: homepageShareUrl is required");
   assert(
     String(sharePack.site?.homepageShareUrl || "").includes("utm_source=copy"),
@@ -287,6 +296,8 @@ if (fs.existsSync(sharePackPath)) {
     assert(item.summary, `share-pack: ${item.kind || "item"} needs summary`);
     assert(/^https?:\/\//.test(item.articleUrl || ""), `share-pack: ${item.kind} articleUrl must be public URL`);
     assert(/^https?:\/\//.test(item.copyUrl || ""), `share-pack: ${item.kind} copyUrl must be public URL`);
+    assert(isSiteShareUrl(item.articleUrl), `share-pack: ${item.kind} articleUrl must point back to the site`);
+    assert(isSiteShareUrl(item.copyUrl), `share-pack: ${item.kind} copyUrl must point back to the site`);
     assert(String(item.copyUrl || "").includes("utm_source=copy"), `share-pack: ${item.kind} copyUrl missing copy UTM`);
     if (item.imagePath) checkAsset("share-pack", { ...item, imageCandidate: item.imagePath }, "imageCandidate");
     assert(String(item.shareText || "").includes(item.title), `share-pack: ${item.kind} shareText must include title`);
@@ -298,6 +309,10 @@ if (fs.existsSync(sharePackPath)) {
       assert(
         String(item.trackingUrls?.[platform] || "").includes(`utm_source=${platform}`),
         `share-pack: ${item.kind} ${platform} trackingUrl missing UTM`
+      );
+      assert(
+        isSiteShareUrl(item.trackingUrls?.[platform] || ""),
+        `share-pack: ${item.kind} ${platform} trackingUrl must point back to the site`
       );
     });
     assert(!/\.svg(?:[?#"]|$)/i.test(JSON.stringify(item)), `share-pack: ${item.kind} must not reference SVG assets`);
