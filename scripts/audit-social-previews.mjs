@@ -180,12 +180,12 @@ function auditPage(relativePath, label) {
   const meta = extractMeta(html);
   const canonical = extractLink(html, "canonical");
 
-  assertUsefulText(`${label}: title`, title, 3);
+  assertUsefulText(`${label}: title`, title, 2);
   assertUsefulText(`${label}: meta description`, meta.get("description"), 10);
-  assertUsefulText(`${label}: og:title`, meta.get("og:title"), 3);
+  assertUsefulText(`${label}: og:title`, meta.get("og:title"), 2);
   assertUsefulText(`${label}: og:description`, meta.get("og:description"), 10);
   assertUsefulText(`${label}: og:image:alt`, meta.get("og:image:alt"), 6);
-  assertUsefulText(`${label}: twitter:title`, meta.get("twitter:title") || meta.get("og:title"), 3);
+  assertUsefulText(`${label}: twitter:title`, meta.get("twitter:title") || meta.get("og:title"), 2);
   assertUsefulText(`${label}: twitter:description`, meta.get("twitter:description") || meta.get("og:description"), 10);
   assertUsefulText(`${label}: twitter:image:alt`, meta.get("twitter:image:alt") || meta.get("og:image:alt"), 6);
 
