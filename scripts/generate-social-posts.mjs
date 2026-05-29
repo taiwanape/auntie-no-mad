@@ -4,6 +4,7 @@ import path from "node:path";
 const root = process.cwd();
 const sharePackPath = path.join(root, "data", "share-pack.json");
 const outputPath = path.join(root, "data", "social-posts.json");
+const todayUrl = "https://taiwanape.github.io/auntie-no-mad/today.html";
 
 const sharePack = JSON.parse(fs.readFileSync(sharePackPath, "utf8"));
 
@@ -17,10 +18,11 @@ function compact(value = "", maxLength = 60) {
   return `${[...clean].slice(0, maxLength - 1).join("")}…`;
 }
 
-function withSource(urlValue, source) {
+function withSource(urlValue, source, campaign) {
   const url = new URL(urlValue);
   url.searchParams.set("utm_source", source);
   url.searchParams.set("utm_medium", "social");
+  if (campaign) url.searchParams.set("utm_campaign", campaign);
   return url.href;
 }
 
@@ -57,7 +59,7 @@ function pickPrimaryItem(items = []) {
 }
 
 function buildXPost(item) {
-  const url = withSource(item.trackingUrls?.x || item.copyUrl || item.articleUrl, "x_daily");
+  const url = withSource(todayUrl, "x_daily", "today_page");
   const text = buildBoundedXText(item, url);
 
   return {
@@ -72,7 +74,7 @@ function buildXPost(item) {
 }
 
 function buildFacebookPost(item) {
-  const url = withSource(item.trackingUrls?.facebook || item.copyUrl || item.articleUrl, "facebook_daily");
+  const url = withSource(todayUrl, "facebook_daily", "today_page");
   const text = [
     `${item.title}`,
     "",
@@ -97,7 +99,7 @@ function buildFacebookPost(item) {
 }
 
 function buildInstagramPost(item) {
-  const url = withSource(item.copyUrl || item.articleUrl, "instagram_daily");
+  const url = withSource(todayUrl, "instagram_daily", "today_page");
   const text = [
     `${item.title}`,
     "",
@@ -130,7 +132,8 @@ const socialPosts = {
     sharePackGeneratedAt: sharePack.generatedAt,
     primaryKind: primary.kind,
     primaryTitle: primary.title,
-    primaryArticleUrl: primary.articleUrl
+    primaryArticleUrl: primary.articleUrl,
+    primaryLandingUrl: todayUrl
   },
   posts: {
     x: buildXPost(primary),

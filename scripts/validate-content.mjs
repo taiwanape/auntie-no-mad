@@ -328,11 +328,14 @@ const socialPostsPath = path.join(root, "data", "social-posts.json");
 assert(fileExists("data/social-posts.json"), "data/social-posts.json missing; run npm run generate:social-posts");
 if (fs.existsSync(socialPostsPath)) {
   const socialPosts = JSON.parse(fs.readFileSync(socialPostsPath, "utf8"));
+  assert(String(socialPosts.source?.primaryLandingUrl || "").includes("today.html"), "social-posts: primaryLandingUrl must point to today.html");
   ["x", "facebook", "instagram"].forEach((platform) => {
     const post = socialPosts.posts?.[platform];
     assert(post, `social-posts: ${platform} post is required`);
     assert(post.text, `social-posts: ${platform} text is required`);
     assert(/^https?:\/\//.test(post.url || ""), `social-posts: ${platform} url must be public URL`);
+    assert(String(post.url || "").includes("today.html"), `social-posts: ${platform} url must point to today.html`);
+    assert(String(post.url || "").includes("utm_campaign=today_page"), `social-posts: ${platform} url must use today_page campaign`);
     assert(String(post.url || "").includes(`utm_source=${platform === "x" ? "x_daily" : `${platform}_daily`}`), `social-posts: ${platform} url missing daily UTM`);
     assert(post.imagePath, `social-posts: ${platform} imagePath is required`);
     checkAsset("social-posts", { title: `${platform} post`, imageCandidate: post.imagePath }, "imageCandidate");
