@@ -271,6 +271,9 @@ assert(indexHtml.includes("daily-reminder.ics"), "index.html must offer a daily 
 assert(indexHtml.includes("growth-funnel"), "index.html must include the first-visit growth funnel");
 assert(indexHtml.includes("homepage_funnel"), "index.html growth funnel links must use UTM tracking");
 assert(indexHtml.includes("拿今日分享包"), "index.html growth funnel must lead visitors to the share pack");
+assert(indexHtml.includes("data-install-app"), "index.html must offer an add-to-home-screen action");
+assert(indexHtml.includes("beforeinstallprompt"), "index.html must handle browser install prompts when available");
+assert(indexHtml.includes("install_fallback"), "index.html install fallback must use UTM tracking");
 
 const reminderIcs = fs.readFileSync(path.join(root, "daily-reminder.ics"), "utf8");
 assert(reminderIcs.includes("RRULE:FREQ=DAILY"), "daily-reminder.ics must be a daily recurring reminder");

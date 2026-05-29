@@ -314,6 +314,10 @@
       background: var(--mint);
     }
 
+    .share-strip .install {
+      background: white;
+    }
+
     .floating-share {
       position: fixed;
       right: max(18px, calc((100vw - 1180px) / 2 + 18px));
@@ -530,6 +534,9 @@
       text-decoration: none;
       box-shadow: 4px 4px 0 var(--ink);
       transition: transform .16s ease, box-shadow .16s ease;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
     }
 
     .growth-step:hover,
@@ -561,6 +568,10 @@
       line-height: 1.45;
       font-weight: 900;
       color: rgba(22, 19, 15, .72);
+    }
+
+    button.growth-step {
+      appearance: none;
     }
 
     .hook-section {
@@ -2166,6 +2177,7 @@
         <div class="share-strip" aria-label="分享與訂閱">
           <button type="button" id="shareSite" class="hot">分享給朋友</button>
           <a href="daily-reminder.ics" download="auntie-no-mad-daily-reminder.ics">每天 7 點提醒</a>
+          <button type="button" class="install" data-install-app>加入手機桌面</button>
           <a href="today.html?utm_source=homepage&utm_medium=internal&utm_campaign=today">今日必看</a>
           <a href="share.html">今日分享包</a>
           <a href="rss.xml">RSS 訂閱</a>
@@ -2218,8 +2230,13 @@
             <strong>設每天 7 點提醒</strong>
             <span>放進手機日曆，明天早上不用靠記憶力。</span>
           </a>
-          <a class="growth-step" href="share.html?utm_source=homepage_funnel&utm_medium=internal&utm_campaign=share_pack">
+          <button class="growth-step" type="button" data-install-app>
             <span class="step-number">03</span>
+            <strong>加入手機桌面</strong>
+            <span>常看就放桌面，不用每天重新找網址。</span>
+          </button>
+          <a class="growth-step" href="share.html?utm_source=homepage_funnel&utm_medium=internal&utm_campaign=share_pack">
+            <span class="step-number">04</span>
             <strong>拿今日分享包</strong>
             <span>文案、圖片、LINE/FB/X 連結先幫你排好。</span>
           </a>
@@ -2664,7 +2681,9 @@
     const convertFormula = document.querySelector("#convertFormula");
     const shareSite = document.querySelector("#shareSite");
     const quickCopySite = document.querySelector("#quickCopySite");
+    const installButtons = [...document.querySelectorAll("[data-install-app]")];
     const SITE_BASE = "https://taiwanape.github.io/auntie-no-mad/";
+    let deferredInstallPrompt = null;
 
     function updateClock() {
       const now = new Date();
@@ -2700,6 +2719,68 @@
       setTimeout(() => {
         shareSite.textContent = "分享給朋友";
       }, 1800);
+    });
+
+    function setInstallButtonsText(text) {
+      installButtons.forEach((button) => {
+        if (button.matches(".growth-step")) {
+          const strong = button.querySelector("strong");
+          if (strong) strong.textContent = text;
+        } else {
+          button.textContent = text;
+        }
+      });
+    }
+
+    window.addEventListener("beforeinstallprompt", (event) => {
+      event.preventDefault();
+      deferredInstallPrompt = event;
+      setInstallButtonsText("加入手機桌面");
+    });
+
+    window.addEventListener("appinstalled", () => {
+      deferredInstallPrompt = null;
+      setInstallButtonsText("已加入桌面");
+    });
+
+    installButtons.forEach((button) => {
+      button.addEventListener("click", async () => {
+        const original = button.matches(".growth-step")
+          ? button.querySelector("strong")?.textContent || "加入手機桌面"
+          : button.textContent;
+
+        if (deferredInstallPrompt) {
+          deferredInstallPrompt.prompt();
+          const choice = await deferredInstallPrompt.userChoice.catch(() => null);
+          deferredInstallPrompt = null;
+          const accepted = choice?.outcome === "accepted";
+          if (button.matches(".growth-step")) {
+            const strong = button.querySelector("strong");
+            if (strong) strong.textContent = accepted ? "已送出安裝" : "下次再裝";
+          } else {
+            button.textContent = accepted ? "已送出安裝" : "下次再裝";
+          }
+          setTimeout(() => setInstallButtonsText("加入手機桌面"), 1600);
+          return;
+        }
+
+        const ok = await copyText(`${SITE_BASE}?utm_source=install_fallback&utm_medium=owned&utm_campaign=home_screen`);
+        const fallbackText = ok ? "網址已複製" : "分享選單加入";
+        if (button.matches(".growth-step")) {
+          const strong = button.querySelector("strong");
+          if (strong) strong.textContent = fallbackText;
+        } else {
+          button.textContent = fallbackText;
+        }
+        setTimeout(() => {
+          if (button.matches(".growth-step")) {
+            const strong = button.querySelector("strong");
+            if (strong) strong.textContent = original;
+          } else {
+            button.textContent = original;
+          }
+        }, 1800);
+      });
     });
 
     quickCopySite?.addEventListener("click", async () => {
