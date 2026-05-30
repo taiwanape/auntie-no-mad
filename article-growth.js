@@ -261,6 +261,18 @@
           </a>
         </div>
       </div>
+      <div class="growth-return" aria-label="每日回訪提醒">
+        <div>
+          <span class="return-kicker">明天早上 7 點</span>
+          <strong>阿姨再幫你把今天的亂七八糟翻成人話。</strong>
+          <p>加個提醒，不用每天自己記。生活雷達、踩坑日記、股市 ETF，醒來先看一輪再出門。</p>
+        </div>
+        <div class="return-actions">
+          <a href="../daily-reminder.ics" download="auntie-no-mad-daily-reminder.ics">加入每日提醒</a>
+          <a href="../today.html?utm_source=article_return&utm_medium=internal&utm_campaign=today_page">明天固定看這頁</a>
+          <a href="../links.html?utm_source=article_return&utm_medium=internal&utm_campaign=link_in_bio">社群入口</a>
+        </div>
+      </div>
       <div class="growth-actions" aria-label="站內導流">
         <div>
           <strong>今天還有什麼可以看？</strong>

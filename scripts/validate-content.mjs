@@ -454,6 +454,9 @@ try {
   assert(articleGrowthJs.includes("growth-actions"), "article-growth.js must render the article retention CTA");
   assert(articleGrowthJs.includes("share.html"), "article-growth.js must link article readers to the share pack");
   assert(articleGrowthJs.includes("links.html?utm_source=article_cta"), "article-growth.js must link article readers to the social entry page");
+  assert(articleGrowthJs.includes("growth-return"), "article-growth.js must render a daily return reminder for article readers");
+  assert(articleGrowthJs.includes("article_return"), "article-growth.js return reminder must use tracked internal links");
+  assert(articleGrowthJs.includes("daily-reminder.ics"), "article-growth.js must let article readers add a daily reminder");
   assert(articleGrowthJs.includes("social-arrival-nudge"), "article-growth.js must keep a social arrival nudge for referred visitors");
   assert(articleGrowthJs.includes("article_arrival"), "article-growth.js social arrival nudge must use tracked internal links");
 } catch (error) {
