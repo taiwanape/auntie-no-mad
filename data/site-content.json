@@ -5,7 +5,7 @@
     "updatedAt": "2026-05-30T07:00:00+08:00",
     "dailyNote": "看完整 2026/05/30 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-05-30-market-watch.html",
-    "liveNewsUpdatedAt": "2026-05-29T17:53:14.297Z"
+    "liveNewsUpdatedAt": "2026-05-30T00:09:43.031Z"
   },
   "lifeRadar": [
     {
@@ -410,6 +410,30 @@
   ],
   "liveNews": [
     {
+      "title": "預期美伊將延長停火 油價跌至6週低點",
+      "date": "2026-05-30",
+      "category": "即時財經",
+      "summary": "投資人預期荷莫茲海峽（Strait of Hormuz）可能很快重新開放，原油價格今天走弱，下跌至6週以來低點。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202605300010.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202605300010.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-05-29T22:31:29.000Z",
+      "displayTime": "05/30 06:31"
+    },
+    {
+      "title": "樂觀預期美伊將達延長停火協議 美股收紅",
+      "date": "2026-05-30",
+      "category": "即時財經",
+      "summary": "儘管美國與伊朗對和平談判進展持不同看法，但投資人預期兩國將達成延長停火協議，美股今天收紅。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202605300009.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202605300009.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-05-29T22:17:26.000Z",
+      "displayTime": "05/30 06:17"
+    },
+    {
       "title": "氣象署發布豪雨特報 屏高台南有局部豪大雨發生機率",
       "date": "2026-05-30",
       "category": "即時生活",
@@ -417,7 +441,7 @@
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300006.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202605300006.aspx",
-      "sourceName": "中央社生活醫藥",
+      "sourceName": "中央社生活",
       "publishedAt": "2026-05-29T18:42:16.000Z",
       "displayTime": "05/30 02:42"
     },
@@ -429,7 +453,7 @@
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202605300004.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202605300004.aspx",
-      "sourceName": "中央社財經新聞",
+      "sourceName": "中央社產經證券",
       "publishedAt": "2026-05-29T17:29:10.000Z",
       "displayTime": "05/30 01:29"
     },
@@ -441,7 +465,7 @@
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300003.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202605300003.aspx",
-      "sourceName": "中央社生活醫藥",
+      "sourceName": "中央社生活",
       "publishedAt": "2026-05-29T17:24:08.000Z",
       "displayTime": "05/30 01:24"
     },
@@ -453,33 +477,9 @@
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202605290361.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202605290361.aspx",
-      "sourceName": "中央社生活醫藥",
+      "sourceName": "中央社生活",
       "publishedAt": "2026-05-29T15:01:53.000Z",
       "displayTime": "05/29 23:01"
-    },
-    {
-      "title": "美國西北大學放映造山者 深化台美科技合作",
-      "date": "2026-05-30",
-      "category": "即時生活",
-      "summary": "美國西北大學28日放映半導體發展史紀錄片「造山者」，駐芝加哥辦事處長類延峰希望透過影片深化台美合作互補關係，促成台灣與美國中西部科技重鎮交流。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605290359.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202605290359.aspx",
-      "sourceName": "中央社生活醫藥",
-      "publishedAt": "2026-05-29T14:44:46.000Z",
-      "displayTime": "05/29 22:44"
-    },
-    {
-      "title": "戴爾公司財報亮眼 股價一度飆漲超過30%",
-      "date": "2026-05-30",
-      "category": "即時財經",
-      "summary": "美國電腦巨擘戴爾公司（Dell）股價今天開盤後一度大漲逾30%，這主要受益於遠超乎預期的強勁財報，並加上人工智慧（AI）熱潮推動科技業成長。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202605290358.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202605290358.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-05-29T14:44:44.000Z",
-      "displayTime": "05/29 22:44"
     }
   ]
 }
