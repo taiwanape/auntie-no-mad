@@ -5,7 +5,7 @@
     "updatedAt": "2026-05-30T07:00:00+08:00",
     "dailyNote": "看完整 2026/05/30 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-05-30-market-watch.html",
-    "liveNewsUpdatedAt": "2026-05-30T10:01:09.591Z"
+    "liveNewsUpdatedAt": "2026-05-30T11:52:15.522Z"
   },
   "lifeRadar": [
     {
@@ -428,76 +428,76 @@
   ],
   "liveNews": [
     {
-      "title": "颱風薔蜜外圍6/1影響台灣 北部宜蘭迎風面零星降雨",
+      "title": "亞洲消防首長年會 消防署成功爭取2030年在台舉辦",
       "date": "2026-05-30",
-      "category": "即時生活",
-      "summary": "氣象署今天表示，颱風薔蜜最快今晚升級中度颱風，往日本方向前進，6月1日抵達琉球北方海面，北部宜蘭等迎風面受外圍環流影響，將有零星或局部降雨，6月2日則遠離台灣。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300158.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202605300158.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-05-30T09:44:01.000Z",
-      "displayTime": "05/30 17:44"
+      "category": "即時社會",
+      "summary": "消防署今天表示，署長蕭煥章率團赴日本參加亞洲消防首長協會第34屆年會，成功爭取2030年在台灣舉辦第36屆年會，進一步提升台灣在國際消防防災領域的能見度與影響力。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202605300179.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202605300179.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-05-30T11:01:47.000Z",
+      "displayTime": "05/30 19:01"
     },
     {
-      "title": "盧秀燕：產業要發展人民要幸福 用電不能匱乏",
+      "title": "私家車輛駛入玉山登山口打卡 當事人發聲明致歉",
+      "date": "2026-05-30",
+      "category": "即時社會",
+      "summary": "針對民眾於社群平台反映一般私家車輛駛入玉山登山口打卡觀光一事，當事人、目前在吳鳳科大兼課的葉國献今天發聲明，深感自責與愧疚，向社會大眾致上最深切歉意。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202605300174.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202605300174.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-05-30T10:29:36.000Z",
+      "displayTime": "05/30 18:29"
+    },
+    {
+      "title": "新北汐止民宅飄異味 獨居男子陳屍沙發亡",
+      "date": "2026-05-30",
+      "category": "即時社會",
+      "summary": "獨居新北市汐止的高姓男子住家今天中午飄出異味，消防局說，接獲110轉報後破門發現男子已明顯死亡，後續交員警處理。警方說，初查死者有慢性病史，詳細死因將報檢方釐清。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202605300170.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202605300170.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-05-30T10:18:27.000Z",
+      "displayTime": "05/30 18:18"
+    },
+    {
+      "title": "屏東山區防豪雨 嘉義以南及雲投山區留意大雨",
+      "date": "2026-05-30",
+      "category": "即時生活",
+      "summary": "中央氣象署表示，午後對流雲系發展旺盛，易有短延時強降雨，今天屏東縣山區有局部大雨或豪雨，嘉義以南地區及雲林、南投山區有局部大雨發生的機率。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300169.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202605300169.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-05-30T10:16:25.000Z",
+      "displayTime": "05/30 18:16"
+    },
+    {
+      "title": "卡米地喜劇俱樂部遭丟擲漆糞彈 陸委會：堅定反制跨境鎮壓",
+      "date": "2026-05-30",
+      "category": "即時社會",
+      "summary": "「卡米地」喜劇俱樂部昨晚遭潑穢物，由於演出演員黃逸豪曾公開諷刺中國大陸領導人習近平，外界關切遇襲恐涉跨境鎮壓。陸委會強調，政府絕不容忍任何暴力、滋擾，堅定反制對台進行跨境鎮壓，正在跨部會了解。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202605300168.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202605300168.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-05-30T10:13:23.000Z",
+      "displayTime": "05/30 18:13"
+    },
+    {
+      "title": "基隆安樂路施工造成周邊停水 搶修後恢復供水",
       "date": "2026-05-30",
       "category": "即時地方",
-      "summary": "輝達（NVIDIA）執行長黃仁勳提及台灣需要更多電力，經濟部稱2034年前供電無虞。台中市長盧秀燕今天呼籲，產業要發展，國家經濟要好，人民要幸福、宜居，用電不能匱乏。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "基隆市政府今天委託廠商在市區安樂路2段進行人行道改善工程時，不慎誤擊地下自來水管線，造成周邊住戶停水。市府表示，經搶修後，已於下午4時30分恢復正常供水。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202605300156.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202605300156.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202605300167.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202605300167.aspx",
       "sourceName": "中央社地方",
-      "publishedAt": "2026-05-30T09:35:57.000Z",
-      "displayTime": "05/30 17:35"
-    },
-    {
-      "title": "嘉義以南等縣市留意局部大雨 屏東三地門防山區暴雨",
-      "date": "2026-05-30",
-      "category": "即時生活",
-      "summary": "氣象署今天發布大雨特報，午後對流雲系發展旺盛，包含台中市、雲林縣山區及嘉義、台南、高雄、屏東等易有短延時強降雨，也針對屏東三地門鄉發布山區暴雨災防告警。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300154.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202605300154.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-05-30T09:26:50.000Z",
-      "displayTime": "05/30 17:26"
-    },
-    {
-      "title": "專家：伊波拉全球流行可能性低 致死率高須嚴管",
-      "date": "2026-05-30",
-      "category": "即時生活",
-      "summary": "伊波拉疫情升溫，台灣自6月2日零時起，暫禁民主剛果及烏干達2國居民入境。感染科專家李秉穎今天表示，伊波拉全球大流行的可能性低，但因致死率高，加強邊境管制絕對有必要。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300151.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202605300151.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-05-30T09:16:44.000Z",
-      "displayTime": "05/30 17:16"
-    },
-    {
-      "title": "滾石創辦人勉政大畢業生 成熟是跌倒後仍願往前走",
-      "date": "2026-05-30",
-      "category": "即時生活",
-      "summary": "滾石唱片創辦人段鍾沂今天受邀到政治大學畢業典禮致詞，他指出，滾石出版了近3000張專輯，但真正能賺錢的約只有300張，跌倒仍願意往前走，才是真正成熟。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300136.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202605300136.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-05-30T09:07:10.000Z",
-      "displayTime": "05/30 17:07"
-    },
-    {
-      "title": "彰化鹿港龍山寺迎龍王出殿 「雙龍會」慶端陽",
-      "date": "2026-05-30",
-      "category": "即時地方",
-      "summary": "鹿港慶端陽系列活動「龍王祭」6月7日登場，今天先舉行「迎龍王出殿」儀式，今年特別規劃「雙龍會」，邀雲林縣麥寮拱範宮龍王尊神到鹿港龍山寺作客，歡迎遊客見證珍貴畫面。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202605300135.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202605300135.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-05-30T09:01:08.000Z",
-      "displayTime": "05/30 17:01"
+      "publishedAt": "2026-05-30T10:08:21.000Z",
+      "displayTime": "05/30 18:08"
     }
   ]
 }
