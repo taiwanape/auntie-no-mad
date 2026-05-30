@@ -5,7 +5,7 @@
     "updatedAt": "2026-05-30T07:00:00+08:00",
     "dailyNote": "看完整 2026/05/30 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-05-30-market-watch.html",
-    "liveNewsUpdatedAt": "2026-05-30T13:38:55.499Z"
+    "liveNewsUpdatedAt": "2026-05-30T15:06:59.740Z"
   },
   "lifeRadar": [
     {
@@ -428,6 +428,42 @@
   ],
   "liveNews": [
     {
+      "title": "今彩539第115132期 頭獎槓龜",
+      "date": "2026-05-30",
+      "category": "即時生活",
+      "summary": "今彩539第115132期開獎，中獎號碼03、04、02、39、13；派彩結果，頭獎槓龜。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300210.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202605300210.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-05-30T14:03:57.000Z",
+      "displayTime": "05/30 22:03"
+    },
+    {
+      "title": "颱風薔蜜影響 華航星宇飛沖繩航班異動",
+      "date": "2026-05-30",
+      "category": "即時生活",
+      "summary": "受到颱風薔蜜影響，中華航空及星宇航空今天表示，明天往返沖繩航班有所異動，提醒近日搭機旅客留意。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300204.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202605300204.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-05-30T13:32:44.000Z",
+      "displayTime": "05/30 21:32"
+    },
+    {
+      "title": "6台灣人涉詐騙遭柬埔寨法院羈押 最重可判10年徒刑",
+      "date": "2026-05-30",
+      "category": "即時社會",
+      "summary": "柬埔寨警方近日破獲首都金邊一處住宅設立的電信網路詐騙據點、逮捕6名台灣人，金邊初級法院今天下令羈押並以「有組織實施電信詐騙罪」提起公訴，最重可判處10年有期徒刑。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202605300202.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202605300202.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-05-30T13:26:38.000Z",
+      "displayTime": "05/30 21:26"
+    },
+    {
       "title": "資安署培育高階資安人才 聚焦雲端安全與網頁防護",
       "date": "2026-05-30",
       "category": "即時財經",
@@ -462,42 +498,6 @@
       "sourceName": "中央社生活",
       "publishedAt": "2026-05-30T12:43:27.000Z",
       "displayTime": "05/30 20:43"
-    },
-    {
-      "title": "9旬高齡世新碩班畢業 李富城：持續學習可防失智",
-      "date": "2026-05-30",
-      "category": "即時生活",
-      "summary": "年逾90歲的氣象主播李富城，今天從世新大學傳播管理系碩士在職專班畢業，受訪時開心分享學習經驗，鼓吹退休人士多學習，因為持續用腦，可以防止失智。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300194.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202605300194.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-05-30T12:19:20.000Z",
-      "displayTime": "05/30 20:19"
-    },
-    {
-      "title": "何欣純提設青年局整合資源 江啟臣拋會展經濟專案",
-      "date": "2026-05-30",
-      "category": "即時地方",
-      "summary": "民進黨台中市長參選人何欣純今天分享青年政策，提出設青年局整合就學、成家立業等資源。國民黨台中市長參選人江啟臣發表「會展經濟168專案」，強調產業是城市發展火車頭。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202605300192.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202605300192.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-05-30T12:18:16.000Z",
-      "displayTime": "05/30 20:18"
-    },
-    {
-      "title": "屏東同鄉會拚場 蘇巧慧強調政績李四川聚焦AI",
-      "date": "2026-05-30",
-      "category": "即時地方",
-      "summary": "台北市屏東縣同鄉會今天舉行會員大會，藍綠新北市長參選人李四川、蘇巧慧都與會。蘇巧慧強調在立法院為屏東爭取建設的政績，台北市長蔣萬安推薦李四川是促成輝達落腳北市的推手。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202605300189.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202605300189.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-05-30T12:01:09.000Z",
-      "displayTime": "05/30 20:01"
     }
   ]
 }
