@@ -49,7 +49,7 @@ jobs:
           npm run post:meta
         env:
           POST_TO_META: ${{ github.event_name == 'schedule' || github.event.inputs.post == 'true' }}
-          META_ALLOW_SKIP: "true"
+          META_ALLOW_SKIP: "false"
           META_PLATFORMS: ${{ github.event.inputs.platforms || 'facebook,instagram' }}
           POST_META_RESULT_PATH: ".tmp/meta-post-result.json"
           PUBLIC_SITE_URL: "http://auntienomad.com/"

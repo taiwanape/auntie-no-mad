@@ -580,6 +580,13 @@ const xDailyWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "
 assert(xDailyWorkflow.includes("test:x-daily-post"), "x-daily-post.yml must dry-run daily X content before posting");
 assert(xDailyWorkflow.includes("FAIL_ON_SKIP"), "x-daily-post.yml must fail instead of silently skipping daily X posts");
 
+const metaDailyWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "meta-daily-post.yml"), "utf8");
+assert(metaDailyWorkflow.includes("npm run post:meta"), "meta-daily-post.yml must publish through the Meta posting script");
+assert(
+  metaDailyWorkflow.includes('META_ALLOW_SKIP: "false"'),
+  "meta-daily-post.yml must fail loudly instead of silently skipping FB/IG posts when credentials are missing"
+);
+
 const opsHealthWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "ops-health-check.yml"), "utf8");
 assert(opsHealthWorkflow.includes("npm test"), "ops-health-check.yml must run content validation");
 assert(opsHealthWorkflow.includes("test:social-previews"), "ops-health-check.yml must audit social previews");
@@ -587,6 +594,9 @@ assert(opsHealthWorkflow.includes("test:x-daily-post"), "ops-health-check.yml mu
 assert(opsHealthWorkflow.includes("test:meta-post"), "ops-health-check.yml must verify Meta daily post readiness");
 assert(opsHealthWorkflow.includes("test:domain"), "ops-health-check.yml must check the public custom domain");
 assert(opsHealthWorkflow.includes("ENABLE_PAGES_HTTPS"), "ops-health-check.yml must retry GitHub Pages HTTPS enforcement");
+
+const opsHealthScript = fs.readFileSync(path.join(root, "scripts", "ops-health-check.mjs"), "utf8");
+assert(opsHealthScript.includes("metaDailyPostSkippedRun"), "ops-health-check must warn when Meta Daily Post silently skipped publishing");
 
 if (warnings.length) {
   console.warn("Content warnings:");

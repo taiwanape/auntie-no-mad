@@ -92,7 +92,7 @@ powershell -ExecutionPolicy Bypass -File scripts\setup-meta-secrets.ps1
 
 如果資料或圖片產生失敗，應保留前一天可用內容，不要讓首頁壞掉。
 
-`ops-health-check.yml` 會在每日更新、社群發文與 Pages 部署後跑總巡檢：內容驗證、社群預覽稽核、X 發文素材 dry-run、Meta 發文素材 dry-run、自訂網域 HTTPS 狀態、GitHub Actions 最新執行狀態都會檢查一次。Meta token 尚未設定時，Meta dry-run 只會列出缺少的 secrets，不會亂發文。
+`ops-health-check.yml` 會在每日更新、社群發文與 Pages 部署後跑總巡檢：內容驗證、社群預覽稽核、X 發文素材 dry-run、Meta 發文素材 dry-run、自訂網域 HTTPS 狀態、GitHub Actions 最新執行狀態都會檢查一次。Meta token 尚未設定時，dry-run 只會列出缺少的 secrets，不會亂發文；正式 `Meta Daily Post` 排程會直接失敗，避免看起來成功但 FB / IG 其實沒有發出去。
 
 07:00（Asia/Taipei）之後，`ops:health` 會把 `data/site-content.json` 與 `data/review-report.json` 的日期、以及 Daily Auntie Update 當天是否跑過列為硬性檢查，避免出現「workflow 綠燈但首頁還是昨天內容」的假安全。
 
@@ -164,7 +164,7 @@ GitHub Secrets 可能會用到：
 - FB 粉絲頁：用 `META_PAGE_ID` + `META_PAGE_ACCESS_TOKEN` 發圖文。
 - IG：用 `IG_USER_ID` + `IG_ACCESS_TOKEN` 發單張圖文。
 - 圖片來源必須是公開網址；workflow 會用 GitHub Pages 的圖片網址。
-- 沒有 token 時 workflow 會安全略過並寫 summary，不會亂發或讓網站壞掉。
+- 沒有 token 時，`npm run test:meta-post` 會列出缺哪些 secrets；正式每日發文 workflow 會失敗，不會安靜跳過。
 - token 有填但權限錯誤時會失敗，方便檢查 Meta 權限。
 
 Meta App 權限通常需要：

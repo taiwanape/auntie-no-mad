@@ -296,6 +296,29 @@ function checkGitHubActions() {
         addWarning(`Unable to inspect X Daily Post log: ${(view.stderr || view.stdout || "").trim()}`);
       }
     }
+
+    if (workflow === "Meta Daily Post" && latest.conclusion === "success") {
+      const view = spawnSync("gh", [
+        "run",
+        "view",
+        String(latest.databaseId),
+        "--repo",
+        repo,
+        "--log"
+      ], {
+        cwd: root,
+        encoding: "utf8",
+        windowsHide: true,
+        env: ghBaseEnv
+      });
+      if (view.status === 0) {
+        if (/"mode":\s*"skip"/.test(view.stdout) || /skipped\s+-\s+Missing Meta credentials/i.test(view.stdout)) {
+          details.metaDailyPostSkippedRun = latest;
+        }
+      } else {
+        addWarning(`Unable to inspect Meta Daily Post log: ${(view.stderr || view.stdout || "").trim()}`);
+      }
+    }
   }
 }
 
@@ -311,6 +334,13 @@ function finalizeXDailyPostWarning() {
   }
 
   addWarning(`Latest X Daily Post workflow completed but skipped publishing: ${skippedRun.url}`);
+}
+
+function finalizeMetaDailyPostWarning() {
+  const skippedRun = details.metaDailyPostSkippedRun;
+  if (!skippedRun) return;
+
+  addWarning(`Latest Meta Daily Post workflow completed but skipped FB/IG publishing: ${skippedRun.url}`);
 }
 
 async function checkXApi() {
@@ -412,6 +442,7 @@ async function main() {
   await checkLiveSite();
   await checkXApi();
   finalizeXDailyPostWarning();
+  finalizeMetaDailyPostWarning();
 
   const result = {
     ok: errors.length === 0,
