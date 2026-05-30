@@ -5,7 +5,7 @@
     "updatedAt": "2026-05-30T07:00:00+08:00",
     "dailyNote": "看完整 2026/05/30 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-05-30-market-watch.html",
-    "liveNewsUpdatedAt": "2026-05-30T07:41:24.219Z"
+    "liveNewsUpdatedAt": "2026-05-30T10:01:09.591Z"
   },
   "lifeRadar": [
     {
@@ -428,76 +428,76 @@
   ],
   "liveNews": [
     {
-      "title": "高雄教師墜樓案 校長澄清請假為個人因素、未曾受校事會議調查",
+      "title": "颱風薔蜜外圍6/1影響台灣 北部宜蘭迎風面零星降雨",
+      "date": "2026-05-30",
+      "category": "即時生活",
+      "summary": "氣象署今天表示，颱風薔蜜最快今晚升級中度颱風，往日本方向前進，6月1日抵達琉球北方海面，北部宜蘭等迎風面受外圍環流影響，將有零星或局部降雨，6月2日則遠離台灣。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300158.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202605300158.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-05-30T09:44:01.000Z",
+      "displayTime": "05/30 17:44"
+    },
+    {
+      "title": "盧秀燕：產業要發展人民要幸福 用電不能匱乏",
       "date": "2026-05-30",
       "category": "即時地方",
-      "summary": "高雄市某國小教師墜樓事件引發各界關注。該校王姓校長今天說，網路有諸多不實傳言，這名教師相當優秀且受愛戴，因個人狀況主動請假，沒有被檢舉、提告，更未受校事會議調查。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202605300107.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202605300107.aspx",
+      "summary": "輝達（NVIDIA）執行長黃仁勳提及台灣需要更多電力，經濟部稱2034年前供電無虞。台中市長盧秀燕今天呼籲，產業要發展，國家經濟要好，人民要幸福、宜居，用電不能匱乏。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202605300156.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202605300156.aspx",
       "sourceName": "中央社地方",
-      "publishedAt": "2026-05-30T07:05:07.000Z",
-      "displayTime": "05/30 15:05"
+      "publishedAt": "2026-05-30T09:35:57.000Z",
+      "displayTime": "05/30 17:35"
     },
     {
-      "title": "中油：6月民生用戶天然氣價格不調漲 工業漲5%",
-      "date": "2026-05-30",
-      "category": "即時財經",
-      "summary": "台灣中油公司今天宣布，為了配合政府穩定國內物價政策，115年6月民生用戶天然氣價格不予調漲，由台灣中油吸收，以減輕家庭、商業及服務業等民生用戶負擔，維持物價穩定。工業用戶則適度反映成本，平均調 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202605300103.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202605300103.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-05-30T06:39:58.000Z",
-      "displayTime": "05/30 14:39"
-    },
-    {
-      "title": "簡訊平台EVERY8D疑遭駭 數發部與經濟部NCC實地檢查",
-      "date": "2026-05-30",
-      "category": "即時財經",
-      "summary": "國內資訊服務業者互動資通（Teamplus）日前疑似遭受網路攻擊，導致旗下EVERY8D簡訊代發平台服務中斷，並傳出用戶個資疑似外洩。數位發展部數位產業署今天表示，將於6月2日進行個資實地行政 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202605300102.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202605300102.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-05-30T06:35:56.000Z",
-      "displayTime": "05/30 14:35"
-    },
-    {
-      "title": "助學子家長認識技職 北科大等19校博覽會6/6登場",
+      "title": "嘉義以南等縣市留意局部大雨 屏東三地門防山區暴雨",
       "date": "2026-05-30",
       "category": "即時生活",
-      "summary": "近年台灣技職體系有很大的轉變，但學子、家長多半不了解。台北科技大學等19校，將於6月6日在台北舉辦跨域探索博覽會，以互動體驗等方式，帶領民眾認識技職的多元樣貌。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300101.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202605300101.aspx",
+      "summary": "氣象署今天發布大雨特報，午後對流雲系發展旺盛，包含台中市、雲林縣山區及嘉義、台南、高雄、屏東等易有短延時強降雨，也針對屏東三地門鄉發布山區暴雨災防告警。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300154.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202605300154.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-05-30T06:34:54.000Z",
-      "displayTime": "05/30 14:34"
+      "publishedAt": "2026-05-30T09:26:50.000Z",
+      "displayTime": "05/30 17:26"
     },
     {
-      "title": "中油：6月液化石油氣價格不調整",
-      "date": "2026-05-30",
-      "category": "即時財經",
-      "summary": "台灣中油公司今天表示，為了配合政府穩定物價政策，自6月2日凌晨零時起，6月家庭用液化石油氣（桶裝瓦斯）、工業用丙烷、丁烷、混合丙丁烷及車用液化石油氣價格皆不調整。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202605300099.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202605300099.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-05-30T06:19:49.000Z",
-      "displayTime": "05/30 14:19"
-    },
-    {
-      "title": "油價續凍漲 中油累計吸收金額約166.6億元",
+      "title": "專家：伊波拉全球流行可能性低 致死率高須嚴管",
       "date": "2026-05-30",
       "category": "即時生活",
-      "summary": "國際油價漲勢趨緩，但中東情勢反覆。台灣中油公司今天宣布，自6月1日凌晨零時起，至6月7日晚上12時止，汽、柴油價格維持不調整。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "伊波拉疫情升溫，台灣自6月2日零時起，暫禁民主剛果及烏干達2國居民入境。感染科專家李秉穎今天表示，伊波拉全球大流行的可能性低，但因致死率高，加強邊境管制絕對有必要。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300098.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202605300098.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300151.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202605300151.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-05-30T06:15:47.000Z",
-      "displayTime": "05/30 14:15"
+      "publishedAt": "2026-05-30T09:16:44.000Z",
+      "displayTime": "05/30 17:16"
+    },
+    {
+      "title": "滾石創辦人勉政大畢業生 成熟是跌倒後仍願往前走",
+      "date": "2026-05-30",
+      "category": "即時生活",
+      "summary": "滾石唱片創辦人段鍾沂今天受邀到政治大學畢業典禮致詞，他指出，滾石出版了近3000張專輯，但真正能賺錢的約只有300張，跌倒仍願意往前走，才是真正成熟。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300136.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202605300136.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-05-30T09:07:10.000Z",
+      "displayTime": "05/30 17:07"
+    },
+    {
+      "title": "彰化鹿港龍山寺迎龍王出殿 「雙龍會」慶端陽",
+      "date": "2026-05-30",
+      "category": "即時地方",
+      "summary": "鹿港慶端陽系列活動「龍王祭」6月7日登場，今天先舉行「迎龍王出殿」儀式，今年特別規劃「雙龍會」，邀雲林縣麥寮拱範宮龍王尊神到鹿港龍山寺作客，歡迎遊客見證珍貴畫面。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202605300135.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202605300135.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-05-30T09:01:08.000Z",
+      "displayTime": "05/30 17:01"
     }
   ]
 }
