@@ -346,6 +346,60 @@
       gap: 10px;
     }
 
+    .snippet-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .snippet-button {
+      display: grid;
+      gap: 5px;
+      width: 100%;
+      padding: 12px;
+      border: 3px solid var(--ink);
+      border-radius: 16px;
+      background: white;
+      color: var(--ink);
+      box-shadow: 3px 3px 0 var(--ink);
+      text-align: left;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .snippet-button span,
+    .snippet-button small {
+      width: fit-content;
+      max-width: 100%;
+      padding: 3px 8px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: var(--yellow);
+      font-size: 12px;
+      font-weight: 1000;
+    }
+
+    .snippet-button strong {
+      font-size: 18px;
+      line-height: 1.18;
+      font-weight: 1000;
+      overflow-wrap: anywhere;
+    }
+
+    .snippet-button em {
+      color: rgba(22, 19, 15, .72);
+      font-size: 14px;
+      line-height: 1.35;
+      font-style: normal;
+      font-weight: 850;
+      overflow-wrap: anywhere;
+    }
+
+    .snippet-button small {
+      justify-self: end;
+      background: var(--pink);
+      color: white;
+    }
+
     .return-row a,
     .entry-share-row a,
     .entry-share-row button {
@@ -505,6 +559,39 @@
     </a>
     </section>
 
+    <section class="link-panel" aria-labelledby="snippetTitle">
+      <h2 id="snippetTitle">今天三句，可直接丟群組</h2>
+      <div class="snippet-grid">
+        <button type="button" class="snippet-button" data-copy-snippet="生活雷達：氣象署發布豪雨特報 屏高台南有局部豪大雨發生機率
+新聞不是拿來焦慮的，是拿來少踩一個坑的。
+
+阿姨別生氣幫你整理成人話：http://auntienomad.com/radar/2026-05-30-life-1.html?utm_source=group_copy&amp;utm_medium=social&amp;utm_campaign=link_in_bio_life-radar">
+      <span>生活雷達</span>
+      <strong>氣象署發布豪雨特報 屏高台南有局部豪大雨發生機率</strong>
+      <em>新聞不是拿來焦慮的，是拿來少踩一個坑的。</em>
+      <small>複製這句</small>
+    </button>
+<button type="button" class="snippet-button" data-copy-snippet="踩坑日記：打詐綱領2.0施行成效 查獲5055詐團、追贓33億元
+不是你笨，是套路越來越會穿西裝。
+
+阿姨別生氣幫你整理成人話：http://auntienomad.com/stories/2026-05-30-pitfall-1.html?utm_source=group_copy&amp;utm_medium=social&amp;utm_campaign=link_in_bio_pitfall">
+      <span>踩坑日記</span>
+      <strong>打詐綱領2.0施行成效 查獲5055詐團、追贓33億元</strong>
+      <em>不是你笨，是套路越來越會穿西裝。</em>
+      <small>複製這句</small>
+    </button>
+<button type="button" class="snippet-button" data-copy-snippet="股市 ETF：阿姨今天看市場：聯發科、鴻海 等四檔
+不是報明牌，是把市場消息整理成白話文。
+
+阿姨別生氣幫你整理成人話：http://auntienomad.com/stocks/2026-05-30-market-watch.html?utm_source=group_copy&amp;utm_medium=social&amp;utm_campaign=link_in_bio_stock-watch">
+      <span>股市 ETF</span>
+      <strong>阿姨今天看市場：聯發科、鴻海 等四檔</strong>
+      <em>不是報明牌，是把市場消息整理成白話文。</em>
+      <small>複製這句</small>
+    </button>
+      </div>
+    </section>
+
     <section class="link-panel" aria-labelledby="returnTitle">
       <h2 id="returnTitle">明天也要回來看</h2>
       <div class="return-row">
@@ -573,12 +660,16 @@ http://auntienomad.com/links.html?utm_source=copy&amp;utm_medium=social&amp;utm_
       }
 
       const copyButton = event.target.closest("[data-copy-entry]");
-      if (!copyButton) return;
-      const original = copyButton.firstChild.textContent;
-      const ok = await navigator.clipboard?.writeText(copyButton.dataset.copyEntry || "").then(() => true, () => false);
-      copyButton.firstChild.textContent = ok ? "已複製" : "複製失敗";
+      const snippetButton = event.target.closest("[data-copy-snippet]");
+      const button = copyButton || snippetButton;
+      if (!button) return;
+      const label = button.querySelector("small") || button.firstChild;
+      const original = label.textContent;
+      const value = button.dataset.copyEntry || button.dataset.copySnippet || "";
+      const ok = await navigator.clipboard?.writeText(value).then(() => true, () => false);
+      label.textContent = ok ? "已複製" : "複製失敗";
       setTimeout(() => {
-        copyButton.firstChild.textContent = original;
+        label.textContent = original;
       }, 1400);
     });
   </script>

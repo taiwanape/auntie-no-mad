@@ -112,6 +112,14 @@ const reasons = [
   ["好轉傳", "看到有用的就丟群組，長輩朋友少踩一個坑也算功德。"]
 ];
 
+function buildGroupShareText(item, index) {
+  const category = displayCategory(item.kind);
+  const title = cleanText(item.title || category);
+  const summary = cleanText(item.summary || "阿姨幫你整理成白話，先看重點再決定要不要點。");
+  const url = withUtm(item.articleUrl || "today.html", "group_copy", `link_in_bio_${item.kind || `item_${index + 1}`}`);
+  return `${category}：${title}\n${summary}\n\n阿姨別生氣幫你整理成人話：${url}`;
+}
+
 const articleCards = items
   .filter((item) => item.articleUrl)
   .slice(0, 5)
@@ -129,6 +137,23 @@ const articleCards = items
         <em>${escapeHtml(summary)}</em>
       </span>
     </a>`;
+  })
+  .join("\n");
+
+const shareSnippets = items
+  .filter((item) => item.articleUrl)
+  .slice(0, 3)
+  .map((item, index) => {
+    const category = displayCategory(item.kind);
+    const text = buildGroupShareText(item, index);
+    const title = truncate(item.title || category, 34);
+    const preview = truncate(item.summary || "這篇適合丟群組，阿姨已經幫你整理好。", 48);
+    return `<button type="button" class="snippet-button" data-copy-snippet="${escapeHtml(text)}">
+      <span>${escapeHtml(category)}</span>
+      <strong>${escapeHtml(title)}</strong>
+      <em>${escapeHtml(preview)}</em>
+      <small>複製這句</small>
+    </button>`;
   })
   .join("\n");
 
@@ -490,6 +515,60 @@ const html = `<!DOCTYPE html>
       gap: 10px;
     }
 
+    .snippet-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .snippet-button {
+      display: grid;
+      gap: 5px;
+      width: 100%;
+      padding: 12px;
+      border: 3px solid var(--ink);
+      border-radius: 16px;
+      background: white;
+      color: var(--ink);
+      box-shadow: 3px 3px 0 var(--ink);
+      text-align: left;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .snippet-button span,
+    .snippet-button small {
+      width: fit-content;
+      max-width: 100%;
+      padding: 3px 8px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: var(--yellow);
+      font-size: 12px;
+      font-weight: 1000;
+    }
+
+    .snippet-button strong {
+      font-size: 18px;
+      line-height: 1.18;
+      font-weight: 1000;
+      overflow-wrap: anywhere;
+    }
+
+    .snippet-button em {
+      color: rgba(22, 19, 15, .72);
+      font-size: 14px;
+      line-height: 1.35;
+      font-style: normal;
+      font-weight: 850;
+      overflow-wrap: anywhere;
+    }
+
+    .snippet-button small {
+      justify-self: end;
+      background: var(--pink);
+      color: white;
+    }
+
     .return-row a,
     .entry-share-row a,
     .entry-share-row button {
@@ -638,6 +717,13 @@ const html = `<!DOCTYPE html>
       ${articleCards || `<a class="story-link" href="${escapeHtml(todayUrl)}"><img src="${defaultImage}" alt="${escapeHtml(siteName)}"><span><small>今日重點</small><strong>今天先看阿姨整理</strong><em>資料正在更新，先進首頁看最新內容。</em></span></a>`}
     </section>
 
+    <section class="link-panel" aria-labelledby="snippetTitle">
+      <h2 id="snippetTitle">今天三句，可直接丟群組</h2>
+      <div class="snippet-grid">
+        ${shareSnippets || `<button type="button" class="snippet-button" data-copy-snippet="${escapeHtml(`${siteName}：每天早上更新生活雷達、踩坑提醒、股市 ETF 白話整理。\n${withUtm("links.html", "group_copy", "link_in_bio")}`)}"><span>今日重點</span><strong>今天先看阿姨整理</strong><em>資料更新中，先把入口存起來。</em><small>複製這句</small></button>`}
+      </div>
+    </section>
+
     <section class="link-panel" aria-labelledby="returnTitle">
       <h2 id="returnTitle">明天也要回來看</h2>
       <div class="return-row">
@@ -705,12 +791,16 @@ const html = `<!DOCTYPE html>
       }
 
       const copyButton = event.target.closest("[data-copy-entry]");
-      if (!copyButton) return;
-      const original = copyButton.firstChild.textContent;
-      const ok = await navigator.clipboard?.writeText(copyButton.dataset.copyEntry || "").then(() => true, () => false);
-      copyButton.firstChild.textContent = ok ? "已複製" : "複製失敗";
+      const snippetButton = event.target.closest("[data-copy-snippet]");
+      const button = copyButton || snippetButton;
+      if (!button) return;
+      const label = button.querySelector("small") || button.firstChild;
+      const original = label.textContent;
+      const value = button.dataset.copyEntry || button.dataset.copySnippet || "";
+      const ok = await navigator.clipboard?.writeText(value).then(() => true, () => false);
+      label.textContent = ok ? "已複製" : "複製失敗";
       setTimeout(() => {
-        copyButton.firstChild.textContent = original;
+        label.textContent = original;
       }, 1400);
     });
   </script>

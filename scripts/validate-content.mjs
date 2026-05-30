@@ -538,6 +538,10 @@ assert(linksHtml.includes("有新聞來源"), "links.html must explain why visit
 assert(linksHtml.includes("適合丟群組"), "links.html must position the entry page as shareable");
 assert(linksHtml.includes("為什麼要點"), "links.html must keep the click-reason panel");
 assert(linksHtml.includes("why-panel"), "links.html must render the click-reason panel");
+assert(linksHtml.includes("今天三句，可直接丟群組"), "links.html must surface copyable group-share hooks");
+assert(linksHtml.includes("data-copy-snippet"), "links.html must provide one-tap copying for group-share hooks");
+assert(linksHtml.includes("group_copy"), "links.html group-share hooks must use tracked UTM parameters");
+assert(linksHtml.includes("snippet-grid"), "links.html must render the group-share snippet panel");
 assert(linksHtml.includes("instagram.com/auntienomad"), "links.html must link to Instagram");
 assert(linksHtml.includes("facebook.com/profile.php?id=61553234457401"), "links.html must link to Facebook");
 assert(linksHtml.includes("x.com/auntienomad"), "links.html must link to X");
