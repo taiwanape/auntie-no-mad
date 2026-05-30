@@ -119,6 +119,13 @@ function itemText(item) {
   return `${item.title || ""} ${item.name || ""} ${item.category || ""} ${item.summary || ""} ${item.auntieComment || ""} ${item.slug || ""}`;
 }
 
+function normalizedTitleSignature(item) {
+  return String(item?.title || "")
+    .replace(/\s+/g, "")
+    .replace(/[0-9０-９年月日縣市區鄉鎮]/g, "")
+    .slice(0, 10);
+}
+
 function checkFields(section, item, fields) {
   fields.forEach((field) => {
     assert(
@@ -274,6 +281,15 @@ if (socialPosts) {
     checkArticleGrowthScript(section, item);
   });
 });
+
+if ((content.lifeRadar || []).length >= 2) {
+  const categories = new Set(content.lifeRadar.map((item) => item.category));
+  const signatures = new Set(content.lifeRadar.map((item) => normalizedTitleSignature(item)));
+  assert(
+    categories.size >= 2 || signatures.size >= 2,
+    "lifeRadar must avoid repeating the same topic twice on the homepage"
+  );
+}
 
 assert(Array.isArray(content.liveNews), "liveNews must be an array");
 assert(content.liveNews?.length >= 3, "liveNews must contain at least 3 items");

@@ -277,6 +277,9 @@ function approvedImageFallbackFor(target) {
   const approved = {
     transit: "assets/generated/2026-05-29/life-1-ai.jpg",
     weather: "assets/generated/2026-05-29/life-2-ai.jpg",
+    laundry: "assets/radar-plum-rain-laundry.png",
+    ticket: "assets/radar-ticket-panic.png",
+    security: "assets/generated/2026-05-29/pitfall-1-ai.jpg",
     scam: "assets/generated/2026-05-29/pitfall-1-ai.jpg",
     fraud: "assets/generated/2026-05-29/pitfall-2-ai.jpg",
     market: "assets/generated/2026-05-29/stock-overview-ai.jpg",
@@ -294,23 +297,23 @@ function approvedImageFallbackFor(target) {
     if (/結婚|婚|婚姻|詐財|現金|搜索/.test(text)) return approved.fraud;
     return approved.scam;
   }
+  if (/演唱會|售票|票券|搶票|門票|五月天|金曲/.test(text)) return approved.ticket;
+  if (/梅雨|衣服|陽台|除濕|曬衣|濕/.test(text)) return approved.laundry;
+  if (/資安|個資|網路|平台|AI|手機|APP|App/.test(text)) return approved.security;
   if (/雨|颱|鋒面|天氣|高溫|梅雨|薔蜜|濕|雷/.test(text)) return approved.weather;
   if (/捷運|高鐵|台鐵|交通|通車|班距|車站|公車/.test(text)) return approved.transit;
   return approved.weather;
 }
 
-function copyApprovedFallbackImage(target, assetPath) {
-  const sourcePath = approvedImageFallbackFor(target);
+function copyApprovedFallbackImage(target, assetPath, sourcePath = approvedImageFallbackFor(target)) {
   const sourceFullPath = path.join(root, sourcePath);
   if (!fs.existsSync(sourceFullPath)) {
     throw new Error(`approved image fallback missing: ${sourcePath}`);
   }
   const outputPath = path.join(root, assetPath);
-  if (!fs.existsSync(outputPath)) {
-    fs.copyFileSync(sourceFullPath, outputPath);
-    return true;
-  }
-  return false;
+  const existed = fs.existsSync(outputPath);
+  fs.copyFileSync(sourceFullPath, outputPath);
+  return !existed;
 }
 
 async function enrichGeneratedImages(nextContent) {
@@ -348,7 +351,9 @@ async function enrichGeneratedImages(nextContent) {
   for (const target of targets.slice(0, max)) {
     const baseName = `${target.prefix}-${makeAssetId(target.item.title || target.item.name || target.prefix)}`;
     const openAiAssetPath = `${dir}/${baseName}.png`;
-    const approvedFallbackAssetPath = `${dir}/${baseName}-approved.jpg`;
+    const approvedFallbackSourcePath = approvedImageFallbackFor(target);
+    const approvedFallbackExt = path.extname(approvedFallbackSourcePath) || ".jpg";
+    const approvedFallbackAssetPath = `${dir}/${baseName}-approved${approvedFallbackExt}`;
     const openAiOutputPath = path.join(root, openAiAssetPath);
     try {
       if (process.env.OPENAI_API_KEY) {
@@ -368,7 +373,7 @@ async function enrichGeneratedImages(nextContent) {
     } catch (error) {
       openAiError = error.message;
       try {
-        const created = copyApprovedFallbackImage(target, approvedFallbackAssetPath);
+        const created = copyApprovedFallbackImage(target, approvedFallbackAssetPath, approvedFallbackSourcePath);
         if (created) createdAssetPaths.push(approvedFallbackAssetPath);
         fallbackGenerated += created ? 1 : 0;
         if (!created) reused += 1;
@@ -465,21 +470,139 @@ function pickNews(news, type, count, keywords) {
   return scored.slice(0, count);
 }
 
+const lifeTopicRules = [
+  {
+    key: "weather",
+    category: "天氣生活",
+    keywords: ["氣象", "豪雨", "大雨", "高溫", "颱風", "低氣壓", "梅雨", "降雨", "天氣", "雨"]
+  },
+  {
+    key: "transport",
+    category: "交通生活",
+    keywords: ["高鐵", "台鐵", "捷運", "公車", "交通", "道路", "塞車", "通車", "班距", "航班", "機場"]
+  },
+  {
+    key: "consumer",
+    category: "民生資訊",
+    keywords: ["補助", "消費", "物價", "電價", "瓦斯", "停電", "停水", "食品", "回收", "超商", "發票"]
+  },
+  {
+    key: "health",
+    category: "健康生活",
+    keywords: ["醫療", "健康", "流感", "疫苗", "醫院", "用藥", "食安", "疾病", "健保"]
+  },
+  {
+    key: "entertainment",
+    category: "娛樂生活",
+    keywords: ["藝人", "演唱會", "金曲", "電影", "戲劇", "歌手", "粉絲", "偶像", "展覽"]
+  },
+  {
+    key: "local",
+    category: "地方生活",
+    keywords: ["台北", "新北", "桃園", "台中", "台南", "高雄", "基隆", "新竹", "屏東", "宜蘭", "花蓮", "地方"]
+  },
+  {
+    key: "tech",
+    category: "科技生活",
+    keywords: ["手機", "APP", "App", "AI", "資安", "個資", "網路", "平台", "數位"]
+  }
+];
+
+function normalizedTitleSignature(item) {
+  return String(item?.title || "")
+    .replace(/\s+/g, "")
+    .replace(/[0-9０-９年月日縣市區鄉鎮]/g, "")
+    .slice(0, 10);
+}
+
+function lifeTopicFor(item = {}) {
+  const text = `${item.title || ""} ${item.description || ""} ${item.sourceName || ""}`;
+  if (/娛樂/.test(item.sourceName || "")) return lifeTopicRules.find((rule) => rule.key === "entertainment");
+  if (/科技/.test(item.sourceName || "")) return lifeTopicRules.find((rule) => rule.key === "tech");
+  const matched = lifeTopicRules.find((rule) => rule.keywords.some((keyword) => text.includes(keyword)));
+  if (matched) return matched;
+  if (/地方/.test(item.sourceName || "")) return lifeTopicRules.find((rule) => rule.key === "local");
+  return { key: "daily", category: "生活新聞", keywords: [] };
+}
+
+function lifeAuntieLine(topicKey) {
+  return {
+    weather: "天氣不是拿來焦慮的，是拿來決定要不要帶傘、改行程。",
+    transport: "交通消息先看一眼，少在月台或路上多煩十分鐘。",
+    consumer: "跟荷包和日常有關的事，先看懂再動作。",
+    health: "健康消息先看可靠來源，別被群組偏方牽著跑。",
+    entertainment: "八卦可以看，但先看來源，不要幫謠言加班。",
+    local: "地方消息常常最影響生活，別只看大標題。",
+    tech: "新科技先看用途，不要只看熱鬧。"
+  }[topicKey] || "新聞不是拿來焦慮的，是拿來少踩一個坑的。";
+}
+
+function hasSupportedLifeImageFallback(item = {}) {
+  const text = `${item.title || ""} ${item.description || ""}`;
+  return /雨|颱|鋒面|天氣|高溫|梅雨|薔蜜|濕|雷|捷運|高鐵|台鐵|交通|通車|班距|車站|公車|演唱會|售票|票券|搶票|門票|五月天|金曲|衣服|陽台|除濕|曬衣|資安|個資|網路|平台|AI|手機|APP|App/.test(text);
+}
+
 function buildLifeItems(news) {
-  const picked = pickNews(news, "life", 8, ["高鐵", "天氣", "高溫", "交通", "補助", "消費", "醫療", "停班", "颱風", "豪雨", "詐騙"])
-    .filter((item) => item.score > 0)
-    .slice(0, 2);
+  const keywords = [
+    "高鐵", "台鐵", "捷運", "交通", "天氣", "高溫", "豪雨", "颱風", "補助", "消費", "醫療", "健康", "停班",
+    "物價", "展覽", "演唱會", "電影", "藝人", "地方", "手機", "APP", "AI", "資安"
+  ];
+  const topicBonus = {
+    weather: 5,
+    transport: 6,
+    consumer: 5,
+    health: 4,
+    entertainment: 4,
+    local: 3,
+    tech: 3,
+    daily: 1
+  };
+  const pool = news
+    .filter((item) => ["life", "live"].includes(item.feedType))
+    .filter(hasSupportedLifeImageFallback)
+    .map((item) => {
+      const topic = lifeTopicFor(item);
+      const text = `${item.title} ${item.description}`;
+      const keywordScore = keywords.reduce((sum, keyword) => sum + (text.includes(keyword) ? 2 : 0), 0);
+      return {
+        ...item,
+        topic,
+        score: keywordScore + (topicBonus[topic.key] || 0),
+        signature: normalizedTitleSignature(item)
+      };
+    })
+    .filter((item) => item.score > 1 && /^https?:\/\//.test(item.link || ""))
+    .sort((a, b) => b.score - a.score);
+
+  const picked = [];
+  const seenTopics = new Set();
+  const seenSignatures = new Set();
+  for (const item of pool) {
+    if (seenSignatures.has(item.signature)) continue;
+    if (seenTopics.has(item.topic.key)) continue;
+    picked.push(item);
+    seenTopics.add(item.topic.key);
+    seenSignatures.add(item.signature);
+    if (picked.length >= 2) break;
+  }
+  for (const item of pool) {
+    if (picked.length >= 2) break;
+    if (seenSignatures.has(item.signature)) continue;
+    picked.push(item);
+    seenSignatures.add(item.signature);
+  }
   if (picked.length < 2) return content.lifeRadar;
 
   return picked.map((item, index) => {
     const slug = `radar/${taipeiDate}-life-${index + 1}.html`;
     const title = `${item.title}`;
+    const topic = item.topic || lifeTopicFor(item);
     return {
       title,
       date: taipeiDate,
-      category: index === 0 ? "生活新聞" : "民生資訊",
+      category: topic.category || (index === 0 ? "生活新聞" : "民生資訊"),
       summary: `${item.description || item.title} 阿姨提醒：先看來源、再看自己今天會不會被影響。`,
-      auntieComment: "新聞不是拿來焦慮的，是拿來少踩一個坑的。",
+      auntieComment: lifeAuntieLine(topic.key),
       sourceUrl: item.link,
       slug,
       thumbnail: assets.life[index % assets.life.length],
@@ -734,6 +857,15 @@ function reviewProposed(nextContent) {
   checkArray("pitfalls", nextContent.pitfalls, 1);
   checkArray("liveNews", nextContent.liveNews, 3);
   checkArray("stockWatchlist", nextContent.stockWatchlist, 4);
+
+  if ((nextContent.lifeRadar || []).length >= 2) {
+    const lifeCategories = new Set(nextContent.lifeRadar.map((item) => item.category));
+    const lifeSignatures = new Set(nextContent.lifeRadar.map((item) => normalizedTitleSignature(item)));
+    if (lifeCategories.size < 2 && lifeSignatures.size < 2) {
+      errors.push("lifeRadar: topics are too repetitive; pick two different daily-life angles");
+    }
+    checks.push(`lifeRadar diversity: ${lifeCategories.size} categories, ${lifeSignatures.size} title signatures`);
+  }
 
   if (nextContent.stockWatchlist?.length !== 4) errors.push("stockWatchlist must have exactly 4 items");
   (nextContent.stockWatchlist || []).forEach((item) => {
@@ -1079,7 +1211,15 @@ async function main() {
     stockItems = buildStockItems(marketRows);
     stockOverview = buildStockOverview(stockItems);
   } catch (error) {
-    review.errors.push(`market fallback used: ${error.message}`);
+    review.checks.push(`market fallback used: ${error.message}; kept previous stock content`);
+    review.sources.push({
+      name: "臺灣證券交易所 STOCK_DAY_ALL",
+      url: "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?response=json",
+      ok: false,
+      count: 0,
+      error: error.message,
+      reason: "Kept previous stock content so the site does not break."
+    });
   }
 
   const nextContent = {
