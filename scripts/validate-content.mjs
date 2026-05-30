@@ -334,6 +334,10 @@ assert(indexHtml.includes("growth-funnel"), "index.html must include the first-v
 assert(indexHtml.includes("homepage_funnel"), "index.html growth funnel links must use UTM tracking");
 assert(indexHtml.includes("link_in_bio"), "index.html must promote the social link-in-bio page");
 assert(indexHtml.includes("拿今日分享包"), "index.html growth funnel must lead visitors to the share pack");
+assert(indexHtml.includes('id="firstClick"'), "index.html must keep the daily first-click entry point");
+assert(indexHtml.includes("今天先點這裡"), "index.html first-click entry must tell visitors where to start today");
+assert(indexHtml.includes("data-first-click-copy"), "index.html first-click entry must include one-tap copy sharing");
+assert(indexHtml.includes("homepage_entry"), "index.html first-click links must use homepage_entry UTM tracking");
 assert(indexHtml.includes("data-install-app"), "index.html must offer an add-to-home-screen action");
 assert(indexHtml.includes("beforeinstallprompt"), "index.html must handle browser install prompts when available");
 assert(indexHtml.includes("install_fallback"), "index.html install fallback must use UTM tracking");
@@ -498,6 +502,13 @@ assert(todayHtml.includes("today.html?utm_source=copy"), "today.html copy text m
 assert(todayHtml.includes("today.html%3Futm_source%3Dline"), "today.html LINE button must share the stable today landing URL");
 assert(todayHtml.includes("today.html%3Futm_source%3Dfacebook"), "today.html Facebook button must share the stable today landing URL");
 assert(todayHtml.includes("today.html%3Futm_source%3Dx"), "today.html X button must share the stable today landing URL");
+assert(todayHtml.includes("複製社群開場"), "today.html must provide copyable social opening copy");
+assert(todayHtml.includes("copy_hook"), "today.html social opening copy must use copy_hook tracking");
+assert(todayHtml.includes("today_hook"), "today.html must link readers from hook section to share and social entry pages");
+assert(todayHtml.includes("三分鐘路線"), "today.html must keep the three-minute route section for deeper browsing");
+assert(todayHtml.includes("route-card"), "today.html must render route cards that send readers to the next page");
+assert(todayHtml.includes("today_route"), "today.html route cards must use today_route tracking");
+assert(todayHtml.includes("不要看完就走"), "today.html must explicitly encourage readers to continue browsing");
 for (const [index, script] of [...todayHtml.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]).entries()) {
   try {
     new Function(script);
@@ -518,6 +529,12 @@ assert(linksHtml.includes("feed.json?utm_source=link_in_bio"), "links.html must 
 assert(linksHtml.includes("data-share-entry"), "links.html must offer native sharing for the social entry page");
 assert(linksHtml.includes("data-copy-entry"), "links.html must offer one-tap copying for the social entry page");
 assert(linksHtml.includes("native_share"), "links.html native share must use tracked UTM parameters");
+assert(linksHtml.includes("今天不用亂滑"), "links.html must keep the social-entry freshness hook");
+assert(linksHtml.includes("每日 07:00 前更新"), "links.html must advertise the daily update promise");
+assert(linksHtml.includes("有新聞來源"), "links.html must explain why visitors can trust the entry page");
+assert(linksHtml.includes("適合丟群組"), "links.html must position the entry page as shareable");
+assert(linksHtml.includes("為什麼要點"), "links.html must keep the click-reason panel");
+assert(linksHtml.includes("why-panel"), "links.html must render the click-reason panel");
 assert(linksHtml.includes("instagram.com/auntienomad"), "links.html must link to Instagram");
 assert(linksHtml.includes("facebook.com/profile.php?id=61553234457401"), "links.html must link to Facebook");
 assert(linksHtml.includes("x.com/auntienomad"), "links.html must link to X");
