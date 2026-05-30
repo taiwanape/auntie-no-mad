@@ -209,12 +209,12 @@
       border-radius: 0 0 26px 26px;
       background: linear-gradient(to right, rgba(255,213,31,0.97) 0%, rgba(255,213,31,0.88) 40%, rgba(255,213,31,0.5) 60%, rgba(255,213,31,0.15) 76%, rgba(255,213,31,0) 100%), url('assets/auntie-hero.jpg') center / cover no-repeat;
       box-shadow: var(--shadow);
-      min-height: 440px;
+      min-height: 410px;
     }
 
     .hero-copy {
-      max-width: 56%;
-      padding: clamp(28px, 5vw, 64px);
+      max-width: 54%;
+      padding: clamp(28px, 4.5vw, 56px);
       z-index: 1;
     }
 
@@ -240,7 +240,7 @@
     }
 
     .hero-title-svg {
-      width: min(100%, 430px);
+      width: min(100%, 390px);
       margin: 22px 0 18px;
     }
 
@@ -278,8 +278,8 @@
 
     .hero-copy p {
       margin: 0;
-      max-width: 570px;
-      font-size: clamp(20px, 2.4vw, 30px);
+      max-width: 520px;
+      font-size: clamp(19px, 2.1vw, 26px);
       line-height: 1.42;
       font-weight: 1000;
     }
@@ -325,7 +325,7 @@
       right: max(18px, calc((100vw - 1180px) / 2 + 18px));
       bottom: 18px;
       z-index: 30;
-      display: none;
+      display: none !important;
       align-items: center;
       gap: 8px;
       padding: 8px;
@@ -456,6 +456,44 @@
       color: var(--pink);
     }
 
+    .quiet-status {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      max-width: 100%;
+      margin: 18px auto 28px;
+      padding: 9px 12px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: rgba(255, 253, 241, .86);
+      box-shadow: 3px 3px 0 var(--ink);
+      font-size: 14px;
+      font-weight: 1000;
+    }
+
+    .quiet-status span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    .quiet-status span::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border: 2px solid var(--ink);
+      border-radius: 50%;
+      background: var(--pink);
+    }
+
+    .quiet-status strong {
+      color: var(--pink);
+      font-weight: 1000;
+    }
+
     .ticker {
       overflow: hidden;
       margin: 0 0 38px;
@@ -488,9 +526,9 @@
 
     .first-click {
       display: grid;
-      grid-template-columns: minmax(0, 1.12fr) minmax(280px, .88fr);
-      gap: 14px;
-      margin: 0 0 28px;
+      grid-template-columns: 1fr;
+      max-width: 960px;
+      margin: 0 auto 34px;
     }
 
     .first-click-card,
@@ -504,9 +542,9 @@
 
     .first-click-card {
       display: grid;
-      grid-template-columns: minmax(0, .92fr) minmax(240px, .76fr);
-      gap: 16px;
-      padding: 20px;
+      grid-template-columns: minmax(0, .92fr) minmax(280px, .72fr);
+      gap: 18px;
+      padding: 18px;
       background: linear-gradient(135deg, #15130f 0%, #2a2419 56%, #ff5f9c 100%);
       color: white;
     }
@@ -532,8 +570,8 @@
 
     .first-click-card h2 {
       margin: 0;
-      font-size: clamp(31px, 4.2vw, 54px);
-      line-height: 1.03;
+      font-size: clamp(30px, 3.7vw, 48px);
+      line-height: 1.06;
       font-weight: 1000;
       overflow-wrap: anywhere;
     }
@@ -576,7 +614,7 @@
 
     .first-click-visual {
       min-width: 0;
-      min-height: 260px;
+      min-height: 220px;
       border: 4px solid white;
       border-radius: 14px;
       background: var(--yellow);
@@ -592,7 +630,7 @@
     }
 
     .first-click-side {
-      display: grid;
+      display: none;
       gap: 10px;
       padding: 12px;
       background: rgba(255, 253, 241, .9);
@@ -877,7 +915,7 @@
       display: grid;
       grid-template-columns: minmax(260px, .9fr) minmax(0, 1.35fr);
       gap: 14px;
-      padding: 16px;
+      padding: 14px;
       border: var(--line);
       border-radius: 18px;
       background: #fffdf1;
@@ -894,7 +932,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 230px;
+      min-height: 200px;
       padding: 18px;
       border: 4px solid var(--ink);
       border-radius: 14px;
@@ -978,7 +1016,7 @@
     }
 
     .live-lead h3 {
-      font-size: clamp(28px, 3.5vw, 44px);
+      font-size: clamp(26px, 3.1vw, 40px);
     }
 
     .live-item h3 {
@@ -2343,35 +2381,23 @@
 </head>
 <body>
   <div class="shell" id="top">
-    <div class="floating-share" aria-label="快速分享阿姨別生氣">
-      <a href="share.html?utm_source=site_float&utm_medium=internal&utm_campaign=share_pack">今日分享包</a>
-      <a href="daily-reminder.ics" download="auntie-no-mad-daily-reminder.ics">每日提醒</a>
-      <button type="button" id="quickCopySite">複製官網</button>
-    </div>
-
     <header class="topbar">
       <a class="brand-mini" href="#top" aria-label="回到首頁">
         <img src="assets/auntie-avatar-nav.jpg" alt="阿姨別生氣導覽小頭像，短捲棕髮與像素墨鏡近臉版">
-        <span>阿姨別生氣<small>生活梗圖部</small></span>
+        <span>阿姨別生氣<small>每天早上 7 點整理</small></span>
       </a>
       <nav class="nav" aria-label="網站導覽">
-        <a href="#live">即時新聞</a>
+        <a href="today.html">今日必看</a>
         <a href="#radar">生活雷達</a>
         <a href="#stories">踩坑日記</a>
         <a href="#investing">股市ETF</a>
-        <a href="#tools">工具箱</a>
-        <a href="#picks">好物推薦</a>
-        <a href="today.html">今日必看</a>
-        <a href="share.html">分享包</a>
-        <a href="links.html?utm_source=top_nav&utm_medium=internal&utm_campaign=link_in_bio">社群入口</a>
-        <a href="archive.html">舊文章</a>
-        <button type="button" id="shuffle">換一句碎念</button>
+        <a href="#live">即時新聞</a>
       </nav>
     </header>
 
     <section class="hero" aria-labelledby="heroTitle">
       <div class="hero-copy">
-        <span class="pill">即時新聞 · 生活梗圖 · 踩坑日記 · 好物推薦</span>
+        <span class="pill">把今天的吵，整理成人話。</span>
         <h1 id="heroTitle" class="visually-hidden">阿姨別生氣</h1>
         <svg class="comic-title hero-title-svg" viewBox="0 0 460 250" aria-hidden="true">
           <text class="shadow" x="4" y="92" font-size="86">阿姨</text>
@@ -2381,52 +2407,18 @@
           <text class="accent" x="178" y="92" font-size="86">別</text>
           <text class="ink" x="4" y="210" font-size="86">生氣</text>
         </svg>
-        <p>台灣每天都很吵，阿姨幫你把天氣、荷包、交通、家庭群組整理成看得懂的版本。不講官腔，只講今天出門會不會煩。</p>
+        <p>每天早上幫你挑出幾件真正會影響生活的事：天氣、詐騙、交通、荷包。不要滑一整天，先看阿姨整理。</p>
         <div class="hero-actions">
-          <a class="cta primary" href="#live">看即時新聞</a>
-          <a class="cta" href="today.html">今日必看</a>
-          <a class="cta" href="#radar">看今天重點</a>
-          <a class="cta" href="#stories">看阿姨踩坑</a>
-          <a class="cta" href="#investing">看股市ETF</a>
-        </div>
-        <div class="share-strip" aria-label="分享與訂閱">
-          <button type="button" id="shareSite" class="hot">分享給朋友</button>
-          <a href="daily-reminder.ics" download="auntie-no-mad-daily-reminder.ics">每天 7 點提醒</a>
-          <button type="button" class="install" data-install-app>加入手機桌面</button>
-          <a href="today.html?utm_source=homepage&utm_medium=internal&utm_campaign=today">今日必看</a>
-          <a href="share.html">今日分享包</a>
-          <a href="links.html?utm_source=homepage&utm_medium=internal&utm_campaign=link_in_bio">社群入口</a>
-          <a href="rss.xml">RSS 訂閱</a>
-          <a href="feed.json">JSON Feed</a>
+          <a class="cta primary" href="today.html?utm_source=homepage_hero&utm_medium=internal&utm_campaign=today">看今日必看</a>
+          <a class="cta" href="#radar">往下看重點</a>
         </div>
       </div>
     </section>
 
-    <div class="profile-row" aria-label="社群資料">
-      <img class="avatar" src="assets/auntie-avatar-profile.jpg" alt="阿姨別生氣社群圓章頭像，豹紋阿姨戴像素墨鏡比出自信手勢">
-      <div class="profile-title">
-        <h2>阿姨別生氣</h2>
-        <p>@auntienomad · 麻瓜也看得懂的台灣生活情報</p>
-      </div>
-      <div class="stats">
-        <div class="stat">4 合 1<br>內容路線</div>
-        <div class="stat">婆媽友善<br>大字版</div>
-        <div class="stat">每日更新<br><span id="clock">台北</span></div>
-        <div class="stat visitor-stat">累積來訪<br><span id="visitorCount" aria-live="polite">讀取中</span></div>
-      </div>
-    </div>
-
-    <div class="ticker" aria-label="今日跑馬燈">
-      <div class="ticker-track">
-        <span>台北午後容易悶，傘帶著不要鐵齒</span>
-        <span>看到限時優惠先停三秒，買便宜不等於省錢</span>
-        <span>家庭群組截圖不要急著轉，先查證才是真孝順</span>
-        <span>外送費先看清楚，別讓小錢天天漏</span>
-        <span>台北午後容易悶，傘帶著不要鐵齒</span>
-        <span>看到限時優惠先停三秒，買便宜不等於省錢</span>
-        <span>家庭群組截圖不要急著轉，先查證才是真孝順</span>
-        <span>外送費先看清楚，別讓小錢天天漏</span>
-      </div>
+    <div class="quiet-status" aria-label="網站狀態">
+      <span>每日 7 點前更新</span>
+      <span>公開來源整理</span>
+      <span>累積來訪 <strong id="visitorCount" aria-live="polite">讀取中</strong></span>
     </div>
 
     <main>
@@ -2438,113 +2430,12 @@
             <p>阿姨會每天換掉這裡：有新聞、有來源、有白話提醒，先看這篇再去忙。</p>
             <div class="first-click-actions">
               <a class="primary" href="today.html?utm_source=homepage_entry&utm_medium=internal&utm_campaign=first_click">打開今日必看</a>
-              <a href="share.html?utm_source=homepage_entry&utm_medium=internal&utm_campaign=share_pack">拿分享包</a>
             </div>
           </div>
           <div class="first-click-visual">
             <img src="assets/auntie-hero.jpg" alt="阿姨別生氣今日必看圖文">
           </div>
         </article>
-        <div class="first-click-side" aria-label="更多今日入口">
-          <a class="first-click-mini" href="#radar">
-            <img src="assets/auntie-avatar.jpg" alt="生活雷達縮圖">
-            <div>
-              <span>生活雷達</span>
-              <strong>先看今天生活大小事</strong>
-              <small>天氣、交通、民生消息先整理成人話。</small>
-            </div>
-          </a>
-          <a class="first-click-mini" href="#investing">
-            <img src="assets/auntie-hero.jpg" alt="股市 ETF 縮圖">
-            <div>
-              <span>股市 ETF</span>
-              <strong>四檔觀察，不是報明牌</strong>
-              <small>熱門股、新星股、風險題材都要看風險。</small>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      <section class="growth-funnel" aria-labelledby="growthFunnelTitle">
-        <div class="growth-funnel-head">
-          <h2 id="growthFunnelTitle">第一次來？先照阿姨這樣逛。</h2>
-          <p>不要在首頁迷路。先看今日必看，覺得有用就設提醒，再把分享包丟給朋友。</p>
-        </div>
-        <div class="growth-funnel-grid">
-          <a class="growth-step" href="today.html?utm_source=homepage_funnel&utm_medium=internal&utm_campaign=today">
-            <span class="step-number">01</span>
-            <strong>先看今日必看</strong>
-            <span>每天自動換一篇最值得點的內容，懶人先看這裡。</span>
-          </a>
-          <a class="growth-step" href="daily-reminder.ics" download="auntie-no-mad-daily-reminder.ics">
-            <span class="step-number">02</span>
-            <strong>設每天 7 點提醒</strong>
-            <span>放進手機日曆，明天早上不用靠記憶力。</span>
-          </a>
-          <button class="growth-step" type="button" data-install-app>
-            <span class="step-number">03</span>
-            <strong>加入手機桌面</strong>
-            <span>常看就放桌面，不用每天重新找網址。</span>
-          </button>
-          <a class="growth-step" href="share.html?utm_source=homepage_funnel&utm_medium=internal&utm_campaign=share_pack">
-            <span class="step-number">04</span>
-            <strong>拿今日分享包</strong>
-            <span>文案、圖片、LINE/FB/X 連結先幫你排好。</span>
-          </a>
-          <a class="growth-step" href="links.html?utm_source=homepage_funnel&utm_medium=internal&utm_campaign=link_in_bio">
-            <span class="step-number">05</span>
-            <strong>社群入口丟出去</strong>
-            <span>IG 個人檔案、FB 簡介、X 置頂都放這頁，朋友一點就進站。</span>
-          </a>
-        </div>
-      </section>
-
-      <section class="section hook-section" id="daily-hook" aria-labelledby="hookTitle">
-        <div class="section-head">
-          <div>
-            <h2 id="hookTitle" class="visually-hidden">今日必看三件事</h2>
-            <svg class="comic-title section-title-svg" viewBox="0 0 440 86" aria-hidden="true">
-              <text class="shadow" x="4" y="62" font-size="58">今日必看</text>
-              <text class="accent" x="4" y="62" font-size="58">今日必看</text>
-            </svg>
-          </div>
-          <p>先挑三件最適合轉給朋友的重點：有來源、有阿姨碎念，點進去看完整內容。</p>
-        </div>
-        <div class="hook-grid" aria-label="今日最值得點閱與分享的三件事">
-          <article class="hook-card">
-            <div class="hook-top">
-              <span class="hook-label">先看這個</span>
-              <span class="hook-rank">01</span>
-            </div>
-            <h3>今天資料載入中</h3>
-            <p>等資料檔進來，阿姨會自動挑出最值得點的一篇。</p>
-            <div class="hook-actions">
-              <a href="#live">看即時新聞</a>
-            </div>
-          </article>
-          <article class="hook-card">
-            <div class="hook-top">
-              <span class="hook-label">轉給群組</span>
-              <span class="hook-rank">02</span>
-            </div>
-            <h3>生活雷達整理中</h3>
-            <p>這裡會放今天最容易影響生活的小事。</p>
-            <div class="hook-actions">
-              <a href="#radar">看生活雷達</a>
-            </div>
-          </article>
-          <article class="hook-card">
-            <div class="hook-top">
-              <span class="hook-label">少踩一坑</span>
-              <span class="hook-rank">03</span>
-            </div>
-            <h3>阿姨正在挑重點</h3>
-            <p>踩坑、股市、工具箱，阿姨會挑一個今天最該注意的。</p>
-            <div class="hook-actions">
-              <a href="#stories">看踩坑日記</a>
-            </div>
-          </article>
-        </div>
       </section>
 
       <section class="section" id="live" aria-labelledby="liveTitle">
@@ -3117,15 +3008,9 @@
       if (!items.length) return;
 
       const primary = items[0];
-      const sideItems = items.slice(1, 3);
       const primaryHref = utmUrl(primary.slug || "#", "homepage_entry", "first_click");
       const primaryImage = primary.hero || primary.thumbnail || "assets/auntie-hero.jpg";
       const primarySummary = primary.auntieComment || primary.cta || primary.summary || "今天先看這篇，少一點焦慮，多一點準備。";
-      const shareText = buildShareText({
-        title: primary.title,
-        summary: primarySummary,
-        url: primaryHref
-      });
 
       root.innerHTML = `
         <article class="first-click-card">
@@ -3135,38 +3020,13 @@
             <p>${escapeHtml(primarySummary)}</p>
             <div class="first-click-actions">
               <a class="primary" href="${escapeHtml(primaryHref)}">打開這篇</a>
-              <button type="button" data-first-click-copy>複製分享文</button>
-              <a href="share.html?utm_source=homepage_entry&utm_medium=internal&utm_campaign=share_pack">拿分享包</a>
             </div>
           </div>
           <a class="first-click-visual" href="${escapeHtml(primaryHref)}" aria-label="打開${escapeHtml(primary.title || "今日必看")}">
             <img src="${escapeHtml(primaryImage)}" alt="${escapeHtml(primary.thumbnailAlt || primary.title || "阿姨別生氣今日必看圖文")}">
           </a>
         </article>
-        <div class="first-click-side" aria-label="更多今日入口">
-          ${sideItems.map((item) => {
-            const href = utmUrl(item.slug || "#", "homepage_entry", "first_click_side");
-            const image = item.hero || item.thumbnail || "assets/auntie-avatar.jpg";
-            return `
-              <a class="first-click-mini" href="${escapeHtml(href)}">
-                <img src="${escapeHtml(image)}" alt="${escapeHtml(item.thumbnailAlt || item.title || "今日入口縮圖")}">
-                <div>
-                  <span>${escapeHtml(item.category || "今日入口")}</span>
-                  <strong>${escapeHtml(item.title || "先看這篇")}</strong>
-                  <small>${escapeHtml(item.auntieComment || item.cta || item.summary || "有來源、有白話，點進去看完整內容。")}</small>
-                </div>
-              </a>
-            `;
-          }).join("")}
-        </div>
       `;
-
-      root.querySelector("[data-first-click-copy]")?.addEventListener("click", async (event) => {
-        const button = event.currentTarget;
-        const ok = await copyText(shareText);
-        button.textContent = ok ? "已複製" : "複製失敗";
-        setTimeout(() => { button.textContent = "複製分享文"; }, 1600);
-      });
     }
 
     function renderGrowthHooks(content = {}) {
@@ -3267,7 +3127,7 @@
         <div class="live-meta"><span>${escapeHtml(first.sourceName || "公開來源")}</span><span>${updatedAt ? `更新 ${escapeHtml(new Date(updatedAt).toLocaleTimeString("zh-TW", { hour: "2-digit", minute: "2-digit" }))}` : ""}</span></div>
       `;
 
-      list.innerHTML = rest.slice(0, 5).map((item) => {
+      list.innerHTML = rest.slice(0, 3).map((item) => {
         const itemHref = item.slug || item.sourceUrl || "#";
         return `
           <a class="live-item" href="${escapeHtml(itemHref)}"${linkAttrs(itemHref)}>

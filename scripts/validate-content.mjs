@@ -340,21 +340,13 @@ assert(indexHtml.includes('type="application/rss+xml"'), "index.html must advert
 assert(indexHtml.includes('type="application/feed+json"'), "index.html must advertise feed.json");
 assert(indexHtml.includes('rel="manifest"'), "index.html must expose site.webmanifest");
 assert(indexHtml.includes('rel="me"'), "index.html must expose official social links");
-assert(indexHtml.includes("floating-share"), "index.html must keep a persistent sharing entry point");
-assert(indexHtml.includes("quickCopySite"), "index.html must support one-tap homepage copy sharing");
 assert(indexHtml.includes("today.html"), "index.html must link to the stable today landing page");
-assert(indexHtml.includes("links.html?utm_source=top_nav"), "index.html top navigation must link to the social entry page");
-assert(indexHtml.includes("links.html?utm_source=homepage"), "index.html hero actions must link to the social entry page");
-assert(indexHtml.includes("daily-reminder.ics"), "index.html must offer a daily return reminder");
-assert(indexHtml.includes("growth-funnel"), "index.html must include the first-visit growth funnel");
-assert(indexHtml.includes("homepage_funnel"), "index.html growth funnel links must use UTM tracking");
-assert(indexHtml.includes("link_in_bio"), "index.html must promote the social link-in-bio page");
-assert(indexHtml.includes("拿今日分享包"), "index.html growth funnel must lead visitors to the share pack");
+assert(indexHtml.includes("quiet-status"), "index.html must keep a lightweight daily update status strip");
+assert(indexHtml.includes("把今天的吵，整理成人話"), "index.html hero must clearly explain the site promise");
+assert(!indexHtml.includes('class="growth-funnel"'), "index.html must not reintroduce the crowded first-visit growth funnel");
 assert(indexHtml.includes('id="firstClick"'), "index.html must keep the daily first-click entry point");
 assert(indexHtml.includes("今天先點這裡"), "index.html first-click entry must tell visitors where to start today");
-assert(indexHtml.includes("data-first-click-copy"), "index.html first-click entry must include one-tap copy sharing");
 assert(indexHtml.includes("homepage_entry"), "index.html first-click links must use homepage_entry UTM tracking");
-assert(indexHtml.includes("data-install-app"), "index.html must offer an add-to-home-screen action");
 assert(indexHtml.includes("beforeinstallprompt"), "index.html must handle browser install prompts when available");
 assert(indexHtml.includes("install_fallback"), "index.html install fallback must use UTM tracking");
 
