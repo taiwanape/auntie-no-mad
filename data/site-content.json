@@ -2,79 +2,79 @@
   "site": {
     "name": "阿姨別生氣",
     "url": "http://auntienomad.com/",
-    "updatedAt": "2026-05-31T07:00:00+08:00",
-    "dailyNote": "看完整 2026/05/31 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
-    "dailyNoteUrl": "stocks/2026-05-31-market-watch.html",
+    "updatedAt": "2026-06-01T07:00:00+08:00",
+    "dailyNote": "看完整 2026/06/01 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
+    "dailyNoteUrl": "stocks/2026-06-01-market-watch.html",
     "liveNewsUpdatedAt": "2026-05-31T15:48:49.803Z"
   },
   "lifeRadar": [
     {
-      "title": "傳中籍人士進第3航廈工區 鐵道局：履約技術指導、無涉機敏系統",
-      "date": "2026-05-31",
-      "category": "交通生活",
-      "summary": "（中央社記者余曉涵台北30日電）網傳桃園機場第3航廈工程有中國籍人士進入工區，經查為機場捷運相關工程。鐵道局說，8名中籍人士因商務履約，依規申請入境技術指導，無涉機敏系統或資安，目前作業已完成。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
-      "auntieComment": "交通消息先看一眼，少在月台或路上多煩十分鐘。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300134.aspx",
-      "slug": "radar/2026-05-31-life-1.html",
-      "thumbnail": "assets/generated/2026-05-31/life-1-n56wgp-approved.jpg",
-      "thumbnailAlt": "阿姨整理傳中籍人士進第3航廈工區 鐵道局：履約技術指導、無涉機敏系統的生活雷達縮圖",
-      "cta": "新聞重點、阿姨白話翻譯與你今天可以先做的事。",
-      "sourceName": "中央社生活醫藥",
-      "hero": "assets/generated/2026-05-31/life-1-n56wgp-approved.jpg"
-    },
-    {
       "title": "恆星之城印尼登場 在地粉絲時隔20多年重聚",
-      "date": "2026-05-31",
+      "date": "2026-06-01",
       "category": "娛樂生活",
       "summary": "（中央社記者羅薇佳雅加達29日專電）藝人言承旭、吳建豪、周渝民與五月天阿信合體演唱會「F✦FOREVER恆星之城」於印尼登場，吸引眾多受偶像劇「流星花園」影響的在地資深歌迷，在時隔20多年後再度集結現場觀賞演出。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
       "auntieComment": "八卦可以看，但先看來源，不要幫謠言加班。",
       "sourceUrl": "https://www.cna.com.tw/news/amov/202605290156.aspx",
-      "slug": "radar/2026-05-31-life-2.html",
-      "thumbnail": "assets/generated/2026-05-31/life-2-2y9yk4-approved.png",
+      "slug": "radar/2026-06-01-life-1.html",
+      "thumbnail": "assets/generated/2026-06-01/life-1-2y9yk4-approved.png",
       "thumbnailAlt": "阿姨整理恆星之城印尼登場 在地粉絲時隔20多年重聚的生活雷達縮圖",
       "cta": "新聞重點、阿姨白話翻譯與你今天可以先做的事。",
       "sourceName": "中央社娛樂新聞",
-      "hero": "assets/generated/2026-05-31/life-2-2y9yk4-approved.png"
+      "hero": "assets/generated/2026-06-01/life-1-2y9yk4-approved.png"
+    },
+    {
+      "title": "颱風薔蜜影響 基隆石垣島首航回程提早返台",
+      "date": "2026-06-01",
+      "category": "天氣生活",
+      "summary": "（中央社記者潘欣彤基隆市31日電）基隆-石垣島定期航線28日首航，回程航班原定今晚從石垣島至基隆，受颱風薔蜜影響，提早至今天上午日本時間11時開航，於台灣時間晚間近8時抵基隆港。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "auntieComment": "天氣不是拿來焦慮的，是拿來決定要不要帶傘、改行程。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605310188.aspx",
+      "slug": "radar/2026-06-01-life-2.html",
+      "thumbnail": "assets/generated/2026-06-01/life-2-1hkqyic-approved.jpg",
+      "thumbnailAlt": "阿姨整理颱風薔蜜影響 基隆石垣島首航回程提早返台的生活雷達縮圖",
+      "cta": "新聞重點、阿姨白話翻譯與你今天可以先做的事。",
+      "sourceName": "中央社生活醫藥",
+      "hero": "assets/generated/2026-06-01/life-2-1hkqyic-approved.jpg"
     }
   ],
   "pitfalls": [
     {
-      "title": "詐騙假冒綠界支付 刑事局籲慎防新詐騙手法",
-      "date": "2026-05-31",
+      "title": "國父紀念館旁男子涉持刀傷人 疑巷內錯身起糾紛",
+      "date": "2026-06-01",
       "category": "踩坑提醒",
-      "summary": "（中央社記者劉建邦台北30日電）刑事局今天表示，詐騙集團利用假冒綠界第三方支付的LINE帳號名義，且會提及「先買後付、無卡分期、錯誤下單」等話術，此為新型態的詐騙手法，呼籲民眾注意。 阿姨提醒：越急、越便宜、越像好康，越要先停三秒。",
+      "summary": "（中央社記者黃麗芸台北31日電）台北市國父紀念館附近今天發生持刀傷人案，單車騎士曾男和一對步行夫妻在巷內交錯時，疑因故互起口角，曾男涉持水果刀刺傷男行人手臂，警消獲報到場逮人，後續將依法偵辦。 阿姨提醒：越急、越便宜、越像好康，越要先停三秒。",
       "auntieComment": "不是你笨，是套路越來越會穿西裝。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202605300075.aspx",
-      "slug": "stories/2026-05-31-pitfall-1.html",
-      "thumbnail": "assets/generated/2026-05-31/pitfall-1-sz6rpt-approved.jpg",
-      "thumbnailAlt": "阿姨整理詐騙假冒綠界支付 刑事局籲慎防新詐騙手法的踩坑日記縮圖",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202605310131.aspx",
+      "slug": "stories/2026-06-01-pitfall-1.html",
+      "thumbnail": "assets/generated/2026-06-01/pitfall-1-7ejbqp-approved.jpg",
+      "thumbnailAlt": "阿姨整理國父紀念館旁男子涉持刀傷人 疑巷內錯身起糾紛的踩坑日記縮圖",
       "cta": "先看懂套路，別把錢包推出去。",
       "sourceName": "中央社社會新聞",
-      "hero": "assets/generated/2026-05-31/pitfall-1-sz6rpt-approved.jpg"
+      "hero": "assets/generated/2026-06-01/pitfall-1-7ejbqp-approved.jpg"
     },
     {
-      "title": "6台灣人涉詐騙遭柬埔寨法院羈押 最重可判10年徒刑",
-      "date": "2026-05-31",
+      "title": "新北警逮泰女涉性交易 查護照才發現是男人",
+      "date": "2026-06-01",
       "category": "生活踩坑",
-      "summary": "（中央社金邊30日綜合外電報導）柬埔寨警方近日破獲首都金邊一處住宅設立的電信網路詐騙據點、逮捕6名台灣人，金邊初級法院今天下令羈押並以「有組織實施電信詐騙罪」提起公訴，最重可判處10年有期徒刑。 阿姨提醒：越急、越便宜、越像好康，越要先停三秒。",
+      "summary": "（中央社記者王鴻國新北31日電）新北市汐止分局今天表示，日前網路巡邏發現疑似性交易的色情貼文，於是循線破獲此一違法案件並帶回一名涉性交易的泰籍女子，經查證護照才發現是男人，依法裁罰。 阿姨提醒：越急、越便宜、越像好康，越要先停三秒。",
       "auntieComment": "不是你笨，是套路越來越會穿西裝。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202605300202.aspx",
-      "slug": "stories/2026-05-31-pitfall-2.html",
-      "thumbnail": "assets/generated/2026-05-31/pitfall-2-cv0ruc-approved.jpg",
-      "thumbnailAlt": "阿姨整理6台灣人涉詐騙遭柬埔寨法院羈押 最重可判10年徒刑的踩坑日記縮圖",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202605310194.aspx",
+      "slug": "stories/2026-06-01-pitfall-2.html",
+      "thumbnail": "assets/generated/2026-06-01/pitfall-2-1ks1aq0-approved.jpg",
+      "thumbnailAlt": "阿姨整理新北警逮泰女涉性交易 查護照才發現是男人的踩坑日記縮圖",
       "cta": "先看懂套路，別把錢包推出去。",
       "sourceName": "中央社社會新聞",
-      "hero": "assets/generated/2026-05-31/pitfall-2-cv0ruc-approved.jpg"
+      "hero": "assets/generated/2026-06-01/pitfall-2-1ks1aq0-approved.jpg"
     }
   ],
   "stockOverview": {
     "title": "股市ETF",
-    "date": "2026-05-31",
+    "date": "2026-06-01",
     "category": "股市 ETF",
     "summary": "今天固定四檔：兩檔熱門股、一檔新星觀察、一檔高人氣但風險也要看的 ETF。每檔都附阿姨白話理由，但仍然不是買賣建議。",
     "auntieComment": "不是報明牌，是把市場消息整理成白話文。",
     "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?response=json",
-    "slug": "stocks/2026-05-31-market-watch.html",
+    "slug": "stocks/2026-06-01-market-watch.html",
     "badge": "早晨版",
     "marketCards": [
       {
@@ -106,17 +106,17 @@
         "tone": "down"
       }
     ],
-    "hero": "assets/generated/2026-05-31/stock-overview-1jfljyp-approved.jpg"
+    "hero": "assets/generated/2026-06-01/stock-overview-1jfljyp-approved.jpg"
   },
   "stockWatchlist": [
     {
       "title": "聯發科",
-      "date": "2026-05-31",
+      "date": "2026-06-01",
       "category": "熱門股",
       "summary": "4,310.00 收盤，漲跌 -100.00。聯發科 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
       "auntieComment": "熱鬧可以看，但不要把熱鬧當答案。",
       "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260529&stockNo=2454&response=json",
-      "slug": "stocks/2026-05-31-2454.html",
+      "slug": "stocks/2026-06-01-2454.html",
       "ticker": "2454",
       "name": "聯發科",
       "type": "熱門股 A",
@@ -126,20 +126,20 @@
       "suitableFor": "想練習看成交量、題材與基本面的觀察者。",
       "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
       "disclaimer": "僅供教育與資訊參考，不是投資建議。",
-      "updatedAt": "2026-05-31T07:00:00+08:00",
+      "updatedAt": "2026-06-01T07:00:00+08:00",
       "close": "4,310.00",
       "change": "-100.00",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-05-31/stock-1-2454-2lh59j-approved.jpg"
+      "image": "assets/generated/2026-06-01/stock-1-2454-2lh59j-approved.jpg"
     },
     {
       "title": "鴻海",
-      "date": "2026-05-31",
+      "date": "2026-06-01",
       "category": "熱門股",
       "summary": "289.00 收盤，漲跌 +26.00。鴻海 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
       "auntieComment": "熱鬧可以看，但不要把熱鬧當答案。",
       "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260529&stockNo=2317&response=json",
-      "slug": "stocks/2026-05-31-2317.html",
+      "slug": "stocks/2026-06-01-2317.html",
       "ticker": "2317",
       "name": "鴻海",
       "type": "熱門股 B",
@@ -149,20 +149,20 @@
       "suitableFor": "想練習看成交量、題材與基本面的觀察者。",
       "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
       "disclaimer": "僅供教育與資訊參考，不是投資建議。",
-      "updatedAt": "2026-05-31T07:00:00+08:00",
+      "updatedAt": "2026-06-01T07:00:00+08:00",
       "close": "289.00",
       "change": "+26.00",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-05-31/stock-2-2317-02s6cp-approved.jpg"
+      "image": "assets/generated/2026-06-01/stock-2-2317-02s6cp-approved.jpg"
     },
     {
       "title": "力積電",
-      "date": "2026-05-31",
+      "date": "2026-06-01",
       "category": "新星觀察",
       "summary": "88.70 收盤，漲跌 +8.00。力積電 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
       "auntieComment": "熱鬧可以看，但不要把熱鬧當答案。",
       "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260529&stockNo=6770&response=json",
-      "slug": "stocks/2026-05-31-6770.html",
+      "slug": "stocks/2026-06-01-6770.html",
       "ticker": "6770",
       "name": "力積電",
       "type": "新星觀察股",
@@ -172,20 +172,20 @@
       "suitableFor": "想練習看成交量、題材與基本面的觀察者。",
       "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
       "disclaimer": "僅供教育與資訊參考，不是投資建議。",
-      "updatedAt": "2026-05-31T07:00:00+08:00",
+      "updatedAt": "2026-06-01T07:00:00+08:00",
       "close": "88.70",
       "change": "+8.00",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-05-31/stock-3-6770-3f959k-approved.jpg"
+      "image": "assets/generated/2026-06-01/stock-3-6770-3f959k-approved.jpg"
     },
     {
       "title": "群益台灣精選高息",
-      "date": "2026-05-31",
+      "date": "2026-06-01",
       "category": "風險題材 ETF",
       "summary": "29.01 收盤，漲跌 +0.60。高人氣 ETF 容易被配息吸引，但更要看淨值、成分股與填息。",
       "auntieComment": "息很香，但不要只聞香味，還要看成本。",
       "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260529&stockNo=00919&response=json",
-      "slug": "stocks/2026-05-31-00919.html",
+      "slug": "stocks/2026-06-01-00919.html",
       "ticker": "00919",
       "name": "群益台灣精選高息",
       "type": "風險題材 / 高人氣 ETF",
@@ -195,11 +195,11 @@
       "suitableFor": "想練習看 ETF 配息、淨值與成分股的人。",
       "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
       "disclaimer": "僅供教育與資訊參考，不是投資建議。",
-      "updatedAt": "2026-05-31T07:00:00+08:00",
+      "updatedAt": "2026-06-01T07:00:00+08:00",
       "close": "29.01",
       "change": "+0.60",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-05-31/stock-4-00919-u1gsax-approved.jpg"
+      "image": "assets/generated/2026-06-01/stock-4-00919-u1gsax-approved.jpg"
     }
   ],
   "etfGuide": [
@@ -271,6 +271,15 @@
   ],
   "fridgeNotes": [
     {
+      "title": "收據先別丟",
+      "date": "2026-06-01",
+      "category": "冰箱便條紙",
+      "summary": "退貨、報帳、保固，很多麻煩都是一張紙救回來的。",
+      "auntieComment": "不是叫你囤垃圾，是叫你留證據。",
+      "sourceUrl": "https://cpc.ey.gov.tw/",
+      "slug": "note-2026-06-01-receipt"
+    },
+    {
       "title": "密碼不要共用",
       "date": "2026-05-31",
       "category": "冰箱便條紙",
@@ -289,15 +298,6 @@
       "slug": "note-2026-05-30-weather"
     },
     {
-      "title": "收據先別丟",
-      "date": "2026-05-29",
-      "category": "冰箱便條紙",
-      "summary": "退貨、報帳、保固，很多麻煩都是一張紙救回來的。",
-      "auntieComment": "不是叫你囤垃圾，是叫你留證據。",
-      "sourceUrl": "https://cpc.ey.gov.tw/",
-      "slug": "note-2026-05-29-receipt"
-    },
-    {
       "title": "今天先查來源",
       "date": "2026-05-28",
       "category": "冰箱便條紙",
@@ -308,6 +308,33 @@
     }
   ],
   "archive": [
+    {
+      "title": "今日市場筆記 2026/06/01",
+      "date": "2026-06-01",
+      "category": "股市 ETF",
+      "summary": "今天固定四檔：兩檔熱門股、一檔新星觀察、一檔高人氣但風險也要看的 ETF。每檔都附阿姨白話理由，但仍然不是買賣建議。",
+      "auntieComment": "不是報明牌，是把市場消息整理成白話文。",
+      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?response=json",
+      "slug": "stocks/2026-06-01-market-watch.html"
+    },
+    {
+      "title": "恆星之城印尼登場 在地粉絲時隔20多年重聚",
+      "date": "2026-06-01",
+      "category": "娛樂生活",
+      "summary": "（中央社記者羅薇佳雅加達29日專電）藝人言承旭、吳建豪、周渝民與五月天阿信合體演唱會「F✦FOREVER恆星之城」於印尼登場，吸引眾多受偶像劇「流星花園」影響的在地資深歌迷，在時隔20多年後再度集結現場觀賞演出。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "auntieComment": "八卦可以看，但先看來源，不要幫謠言加班。",
+      "sourceUrl": "https://www.cna.com.tw/news/amov/202605290156.aspx",
+      "slug": "radar/2026-06-01-life-1.html"
+    },
+    {
+      "title": "颱風薔蜜影響 基隆石垣島首航回程提早返台",
+      "date": "2026-06-01",
+      "category": "天氣生活",
+      "summary": "（中央社記者潘欣彤基隆市31日電）基隆-石垣島定期航線28日首航，回程航班原定今晚從石垣島至基隆，受颱風薔蜜影響，提早至今天上午日本時間11時開航，於台灣時間晚間近8時抵基隆港。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "auntieComment": "天氣不是拿來焦慮的，是拿來決定要不要帶傘、改行程。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605310188.aspx",
+      "slug": "radar/2026-06-01-life-2.html"
+    },
     {
       "title": "今日市場筆記 2026/05/31",
       "date": "2026-05-31",
@@ -325,15 +352,6 @@
       "auntieComment": "交通消息先看一眼，少在月台或路上多煩十分鐘。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202605300134.aspx",
       "slug": "radar/2026-05-31-life-1.html"
-    },
-    {
-      "title": "恆星之城印尼登場 在地粉絲時隔20多年重聚",
-      "date": "2026-05-31",
-      "category": "娛樂生活",
-      "summary": "（中央社記者羅薇佳雅加達29日專電）藝人言承旭、吳建豪、周渝民與五月天阿信合體演唱會「F✦FOREVER恆星之城」於印尼登場，吸引眾多受偶像劇「流星花園」影響的在地資深歌迷，在時隔20多年後再度集結現場觀賞演出。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
-      "auntieComment": "八卦可以看，但先看來源，不要幫謠言加班。",
-      "sourceUrl": "https://www.cna.com.tw/news/amov/202605290156.aspx",
-      "slug": "radar/2026-05-31-life-2.html"
     },
     {
       "title": "今日市場筆記 2026/05/30",
@@ -464,76 +482,76 @@
   ],
   "liveNews": [
     {
+      "title": "中國汽車產業摩洛哥設廠 歐盟憂成補貼商品輸歐跳板",
+      "date": "2026-06-01",
+      "category": "即時財經",
+      "summary": "中國汽車零組件製造商計劃大舉投資及進駐摩洛哥設廠，歐盟對此日益感到警戒，擔憂這個北非國家將成為北京輸入其高度補貼商品的跳板，恐對歐洲產業造成嚴重衝擊。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202605310204.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202605310204.aspx",
+      "sourceName": "中央社財經新聞",
+      "publishedAt": "2026-05-31T14:17:03.000Z",
+      "displayTime": "05/31 22:17"
+    },
+    {
+      "title": "法國持續吸引外資 官員：發展去碳能源是關鍵動力",
+      "date": "2026-06-01",
+      "category": "即時財經",
+      "summary": "法國總統馬克宏推出的「選擇法國」（Choose France）第9屆商業峰會明天將登場；法國經濟兼財政部長勒斯鳩今天說，能持續吸引外資，主因之一是發展去碳能源。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202605310203.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202605310203.aspx",
+      "sourceName": "中央社財經新聞",
+      "publishedAt": "2026-05-31T14:06:01.000Z",
+      "displayTime": "05/31 22:06"
+    },
+    {
       "title": "基隆男子弒母後雙亡 檢將解剖確認死因",
-      "date": "2026-05-31",
+      "date": "2026-06-01",
       "category": "即時社會",
       "summary": "基隆市王姓男子昨天疑持刀砍殺母親王姓婦人後，再到頂樓從高處墜落，母子急救後均不治。檢察官今天相驗，王女身中逾15刀，近日將對兩名死者解剖，確認死因。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/asoc/202605310196.aspx",
       "slug": "https://www.cna.com.tw/news/asoc/202605310196.aspx",
-      "sourceName": "中央社社會",
+      "sourceName": "中央社社會新聞",
       "publishedAt": "2026-05-31T13:10:41.000Z",
       "displayTime": "05/31 21:10"
     },
     {
       "title": "麥寮風機火勢受控 經濟部促業者加強設備巡檢",
-      "date": "2026-05-31",
+      "date": "2026-06-01",
       "category": "即時財經",
       "summary": "台電位於雲林麥寮的風力發電17號機組今天中午起火，經濟部能源署表示，台電啟動緊急應變處理，現場火勢已受到控制，晚間7時10分無火苗情形，消防隊也已撤離，將要求各電業公司針對同類型及達一定使用年 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202605310195.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202605310195.aspx",
-      "sourceName": "中央社產經證券",
+      "sourceName": "中央社財經新聞",
       "publishedAt": "2026-05-31T13:05:39.000Z",
       "displayTime": "05/31 21:05"
     },
     {
       "title": "新北警逮泰女涉性交易 查護照才發現是男人",
-      "date": "2026-05-31",
+      "date": "2026-06-01",
       "category": "即時社會",
       "summary": "新北市汐止分局今天表示，日前網路巡邏發現疑似性交易的色情貼文，於是循線破獲此一違法案件並帶回一名涉性交易的泰籍女子，經查證護照才發現是男人，依法裁罰。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先查證再動作，急著信就容易被牽著走。",
       "sourceUrl": "https://www.cna.com.tw/news/asoc/202605310194.aspx",
       "slug": "https://www.cna.com.tw/news/asoc/202605310194.aspx",
-      "sourceName": "中央社社會",
+      "sourceName": "中央社社會新聞",
       "publishedAt": "2026-05-31T12:51:36.000Z",
       "displayTime": "05/31 20:51"
     },
     {
       "title": "德國新創發展石墨烯半導體 預計量產需約3年",
-      "date": "2026-05-31",
+      "date": "2026-06-01",
       "category": "即時財經",
       "summary": "德國半導體新創Black Semiconductor為德國少數自行投入晶片製造的新創企業，公司希望利用石墨烯技術解決晶片間資料傳輸痛點，預計量產需約3年時間。設廠計劃獲德國官方超過2億歐元（約 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
       "sourceUrl": "https://www.cna.com.tw/news/aopl/202605310190.aspx",
       "slug": "https://www.cna.com.tw/news/aopl/202605310190.aspx",
-      "sourceName": "中央社產經證券",
+      "sourceName": "中央社財經新聞",
       "publishedAt": "2026-05-31T12:42:28.000Z",
       "displayTime": "05/31 20:42"
-    },
-    {
-      "title": "預防高溫熱危害 北市6/1起勞檢至少400家事業單位",
-      "date": "2026-05-31",
-      "category": "即時地方",
-      "summary": "因應高溫來襲，台北市勞動局今天表示，6月1日起將展開「高氣溫戶外作業宣導及勞動檢查專案」，預計至少查核400家事業單位；114年查640家，最後有1家營造業遭罰6萬元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202605310189.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202605310189.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-05-31T12:39:26.000Z",
-      "displayTime": "05/31 20:39"
-    },
-    {
-      "title": "颱風薔蜜影響 基隆石垣島首航回程提早返台",
-      "date": "2026-05-31",
-      "category": "即時生活",
-      "summary": "基隆-石垣島定期航線28日首航，回程航班原定今晚從石垣島至基隆，受颱風薔蜜影響，提早至今天上午日本時間11時開航，於台灣時間晚間近8時抵基隆港。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202605310188.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202605310188.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-05-31T12:35:23.000Z",
-      "displayTime": "05/31 20:35"
     }
   ]
 }
