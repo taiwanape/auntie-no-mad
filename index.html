@@ -1116,15 +1116,17 @@
     .radar-zine-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: minmax(148px, auto);
       gap: 14px;
-      align-items: start;
+      align-items: stretch;
     }
 
     .radar-zine {
       display: flex;
       align-items: flex-start;
       gap: 14px;
-      min-height: 118px;
+      height: 100%;
+      min-height: 148px;
       padding: 16px;
       border: var(--line);
       border-radius: 14px;
@@ -1151,6 +1153,7 @@
       flex: 0 0 88px;
       width: 88px;
       height: 72px;
+      margin-top: 2px;
       border: 3px solid var(--ink);
       border-radius: 10px;
       background: var(--ink);
@@ -1165,7 +1168,11 @@
     }
 
     .zine-body {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
       min-width: 0;
+      min-height: 100%;
       padding: 0;
     }
 
@@ -1251,7 +1258,8 @@
     }
 
     .radar-zine .read-more {
-      margin-top: 9px;
+      align-self: flex-start;
+      margin-top: auto;
       padding: 5px 9px;
       border-width: 2px;
       font-size: 12px;
