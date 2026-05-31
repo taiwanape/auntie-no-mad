@@ -904,11 +904,13 @@ function articleTemplate(item, section) {
   const pageUrl = publicUrl(item.slug);
   const imageUrl = publicImageUrl(hero);
   const articleType = section === "life" ? "NewsArticle" : "Article";
+  const displayTitle = section === "stock" ? stockStoryTitle(item) : item.title;
+  const pageDescription = section === "stock" ? stockDeck(item) : item.summary;
   const articleJsonLd = structuredData({
     "@context": "https://schema.org",
     "@type": articleType,
-    headline: item.title,
-    description: item.summary,
+    headline: displayTitle,
+    description: pageDescription,
     image: [imageUrl],
     datePublished: item.date,
     dateModified: item.updatedAt || item.date,
@@ -946,24 +948,24 @@ function articleTemplate(item, section) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${htmlEscape(item.title)}｜阿姨別生氣</title>
-  <meta name="description" content="${htmlEscape(item.summary)}">
+  <title>${htmlEscape(displayTitle)}｜阿姨別生氣</title>
+  <meta name="description" content="${htmlEscape(pageDescription)}">
   <link rel="canonical" href="${htmlEscape(pageUrl)}">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="阿姨別生氣">
-  <meta property="og:title" content="${htmlEscape(item.title)}">
-  <meta property="og:description" content="${htmlEscape(item.summary)}">
+  <meta property="og:title" content="${htmlEscape(displayTitle)}">
+  <meta property="og:description" content="${htmlEscape(pageDescription)}">
   <meta property="og:url" content="${htmlEscape(pageUrl)}">
   <meta property="og:image" content="${htmlEscape(imageUrl)}">
-  <meta property="og:image:alt" content="${htmlEscape(`阿姨別生氣圖文：${item.title}`)}">
+  <meta property="og:image:alt" content="${htmlEscape(`阿姨別生氣圖文：${displayTitle}`)}">
   <meta property="article:published_time" content="${htmlEscape(item.date)}">
   <meta property="article:modified_time" content="${htmlEscape(item.updatedAt || item.date)}">
   <meta property="article:section" content="${htmlEscape(item.category)}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="${htmlEscape(item.title)}">
-  <meta name="twitter:description" content="${htmlEscape(item.summary)}">
+  <meta name="twitter:title" content="${htmlEscape(displayTitle)}">
+  <meta name="twitter:description" content="${htmlEscape(pageDescription)}">
   <meta name="twitter:image" content="${htmlEscape(imageUrl)}">
-  <meta name="twitter:image:alt" content="${htmlEscape(`阿姨別生氣圖文：${item.title}`)}">
+  <meta name="twitter:image:alt" content="${htmlEscape(`阿姨別生氣圖文：${displayTitle}`)}">
   <link rel="alternate" type="application/rss+xml" title="阿姨別生氣 RSS" href="${publicUrl("rss.xml")}">
   <link rel="alternate" type="application/feed+json" title="阿姨別生氣 JSON Feed" href="${publicUrl("feed.json")}">
   <link rel="manifest" href="${base}site.webmanifest">
@@ -982,15 +984,19 @@ ${articleJsonLd}
       <a class="brand" href="../index.html"><img src="../assets/auntie-avatar-nav.jpg" alt=""><span>阿姨別生氣</span></a>
       <a class="back" href="${backHref}">${backText}</a>
     </header>
-    <article class="card">
-      <img src="${htmlEscape(heroPath)}" alt="${htmlEscape(item.title)}" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border:4px solid #16130f;border-radius:16px;margin-bottom:22px;">
+    <article${section === "stock" ? "" : " class=\"card\""}>
+      ${section === "stock"
+        ? `<img class="hero" src="${htmlEscape(heroPath)}" alt="${htmlEscape(displayTitle)}">`
+        : `<img src="${htmlEscape(heroPath)}" alt="${htmlEscape(displayTitle)}" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border:4px solid #16130f;border-radius:16px;margin-bottom:22px;">`}
+      ${section === "stock" ? `<div class="content">` : ""}
       <span class="label">${htmlEscape(item.category)} · ${htmlEscape(item.date)}</span>
-      <h1>${htmlEscape(item.title)}</h1>
-      <p>${htmlEscape(item.summary)}</p>
-      <div class="notice"><strong>阿姨一句話：</strong>${htmlEscape(item.auntieComment)}</div>
+      <h1>${htmlEscape(displayTitle)}</h1>
+      <p class="${section === "stock" ? "deck" : ""}">${htmlEscape(pageDescription)}</p>
+      <div class="${section === "stock" ? "auntie-note" : "notice"}"><strong>阿姨一句話：</strong>${htmlEscape(item.auntieComment)}</div>
       ${section === "stock" ? stockDetails(item) : lifeDetails(item)}
       <h2>資料來源</h2>
       <p><a href="${htmlEscape(item.sourceUrl)}" target="_blank" rel="noreferrer">${htmlEscape(sourceLabel)}</a></p>
+      ${section === "stock" ? `</div>` : ""}
     </article>
     <footer class="footer">阿姨別生氣 © 2026</footer>
   </div>
@@ -1005,16 +1011,120 @@ function lifeDetails(item) {
       <p>這篇整理自公開來源。阿姨不幫你製造焦慮，只幫你抓重點：先確認來源，再決定今天要不要調整行程、錢包或心情。</p>`;
 }
 
+function stockCodeName(item) {
+  return [item.ticker, item.name].filter(Boolean).join(" ");
+}
+
+function isEtfItem(item) {
+  return item.ticker?.startsWith("00") || /ETF/.test(item.category || item.type || "");
+}
+
+function stockStoryTitle(item) {
+  if (item.storyTitle) return item.storyTitle;
+  if (isEtfItem(item)) return `${item.name}：配息很香，阿姨先看淨值有沒有跟上`;
+  if (/新星/.test(item.category || item.type || "")) return `${item.name}：成交熱起來，先看題材有沒有底`;
+  return `${item.name}：市場很吵，阿姨先把熱度翻成人話`;
+}
+
+function stockChangeClass(item) {
+  const value = Number.parseFloat(String(item.change || "0").replace(/[,+]/g, ""));
+  return value >= 0 ? "up" : "down";
+}
+
+function stockChangeText(item) {
+  const raw = String(item.change || "0");
+  const value = Number.parseFloat(raw.replace(/[,+]/g, ""));
+  const prefix = value >= 0 ? "▲" : "▼";
+  return `${prefix} ${raw}`;
+}
+
+function stockDeck(item) {
+  const codeName = stockCodeName(item);
+  if (isEtfItem(item)) {
+    return `${codeName} 今天收在 ${item.close || "未揭露"}，漲跌 ${item.change || "0"}。高人氣 ETF 容易讓人只盯配息，阿姨這篇先把熱度、淨值波動和成分股風險拆開看。`;
+  }
+  return `${codeName} 今天收在 ${item.close || "未揭露"}，漲跌 ${item.change || "0"}。它被選進今日觀察，不是叫你追熱鬧，而是因為成交與討論度都被市場推到前排，值得把題材和風險一起看。`;
+}
+
+function stockOpening(item) {
+  if (isEtfItem(item)) {
+    return `${item.name} 這類高人氣 ETF，常常會因為配息話題被拿出來討論。問題是，配息不是護身符，價格、淨值、成分股和填息狀況都會影響最後結果。阿姨會先看它為什麼有人關心，再看這份關心是不是已經反映在價格裡。`;
+  }
+  if (/新星/.test(item.category || item.type || "")) {
+    return `${item.name} 不是每天都站在聚光燈正中央，但當成交熱度突然變高，通常代表市場開始重新討論它的題材。這種時候不要只看紅綠燈，還要問：是基本面變了、題材被重新定價，還是短線資金只是來逛一下？`;
+  }
+  return `${item.name} 今天被放進熱門觀察，主因是成交金額與市場注意力排在前面。熱門股最容易讓人有「大家都在看，我是不是也要看」的心情，但阿姨會先把它拆成兩件事：資金為什麼圍過來，以及這個熱度能不能找到合理背景。`;
+}
+
+function stockContext(item) {
+  if (isEtfItem(item)) {
+    return `ETF 的故事通常不是單一公司，而是一籃成分股和指數規則。高股息題材好懂、也容易傳播，但越好懂的東西越要慢慢核對：配息來源、成分股集中度、產業循環和交易成本，哪一個都不能只用一句「息很香」帶過。`;
+  }
+  if (/2454/.test(item.ticker || "")) {
+    return `聯發科常被市場放在晶片設計、手機與邊緣運算題材裡討論。這類公司好看的地方在產品週期與技術故事，麻煩的地方也在週期：客戶拉貨、毛利率和競爭壓力，都會讓股價情緒忽冷忽熱。`;
+  }
+  if (/2317/.test(item.ticker || "")) {
+    return `鴻海的題材通常牽到大型電子供應鏈、AI 伺服器與新事業想像。它的故事很大，但也因為太大，讀者要分清楚：現在市場是在看實際出貨、獲利改善，還是在替未來想像先鼓掌。`;
+  }
+  if (/6770/.test(item.ticker || "")) {
+    return `力積電的關鍵在半導體景氣、成熟製程與市場資金對低基期題材的想像。這類股票一熱起來會很有戲，但波動也常跟著放大，所以更適合拿來練習看成交量和題材節奏。`;
+  }
+  return `${item.name} 的題材要回到產業位置、成交量和近期市場情緒一起看。阿姨不把單日漲跌當答案，只把它當成提醒：今天市場有話想說，但你要慢慢聽，不要被音量牽著走。`;
+}
+
+function stockOpportunity(item) {
+  if (isEtfItem(item)) {
+    return `可以觀察的機會在於：如果成分股表現穩、配息節奏清楚、淨值沒有被過度消耗，ETF 會比較像長期配置工具；但如果只靠配息口號撐人氣，價格一波動，很多人才會發現自己其實沒看懂。`;
+  }
+  return `可以觀察的機會在於：如果成交熱度背後有營收、訂單、產業循環或市場預期支撐，後續才有比較完整的故事；如果只是短線資金擠在門口，熱鬧散場時也會很快。`;
+}
+
+function stockWatchPoints(item) {
+  if (isEtfItem(item)) {
+    return [
+      ["配息品質", "看配息來源和填息狀況，不要只看殖利率數字。"],
+      ["成分股", "確認主要持股與產業集中度，別以為 ETF 一定很分散。"],
+      ["價格波動", item.riskNote || "淨值與市價仍會上下震盪。"]
+    ];
+  }
+  return [
+    ["成交熱度", "成交金額在前段班代表市場有注意，但熱度不是答案。"],
+    ["題材背景", stockContext(item)],
+    ["風險節奏", item.riskNote || "波動變大時，先確認自己看懂什麼。"]
+  ];
+}
+
 function stockDetails(item) {
-  return `<h2>今天為什麼被選到</h2>
-      <p>${htmlEscape(item.reason)}</p>
-      <h2>阿姨看風險</h2>
-      <ul>
-        <li><strong>風險等級：</strong>${htmlEscape(item.riskLevel)}</li>
-        <li><strong>主要風險：</strong>${htmlEscape(item.riskNote)}</li>
-        <li><strong>適合觀察：</strong>${htmlEscape(item.suitableFor)}</li>
-        <li><strong>不適合：</strong>${htmlEscape(item.notSuitableFor)}</li>
-      </ul>
+  const watchPoints = stockWatchPoints(item)
+    .map(([label, text]) => `<li><strong>${htmlEscape(label)}：</strong>${htmlEscape(text)}</li>`)
+    .join("");
+  return `<div class="fact-grid" aria-label="今日觀察數字">
+        <div class="fact"><strong>收盤價</strong><span>${htmlEscape(item.close || "未揭露")}</span></div>
+        <div class="fact"><strong>漲跌</strong><span class="${stockChangeClass(item)}">${htmlEscape(stockChangeText(item))}</span></div>
+        <div class="fact"><strong>觀察分類</strong><span>${htmlEscape(item.category || item.type || "觀察")}</span></div>
+      </div>
+      <section class="stock-section">
+        <h2>今天這齣在演什麼</h2>
+        <p>${htmlEscape(stockOpening(item))}</p>
+        <p>${htmlEscape(stockContext(item))}</p>
+      </section>
+      <section class="stock-section">
+        <h2>為什麼值得注意</h2>
+        <p>${htmlEscape(item.reason)}</p>
+        <p>${htmlEscape(stockOpportunity(item))}</p>
+      </section>
+      <section class="stock-section">
+        <h2>阿姨看點</h2>
+        <ul class="watch-list">${watchPoints}</ul>
+      </section>
+      <section class="stock-section">
+        <h2>阿姨看風險</h2>
+        <ul>
+          <li><strong>風險等級：</strong>${htmlEscape(item.riskLevel)}</li>
+          <li><strong>適合觀察：</strong>${htmlEscape(item.suitableFor)}</li>
+          <li><strong>不適合：</strong>${htmlEscape(item.notSuitableFor)}</li>
+        </ul>
+      </section>
       <div class="risk-box" role="note" aria-label="阿姨的風險提醒">
         <h2>⚠️ 阿姨的風險提醒（你一定要看）</h2>
         <p><span class="pin">📌</span> 本站所有股票 ETF 內容僅供教育與資訊參考，<strong>不是投資建議</strong>，不保證任何收益。</p>

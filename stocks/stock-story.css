@@ -11,25 +11,67 @@
 }
 body {
   margin: 0;
+  overflow-x: hidden;
   color: var(--ink);
   font-family: "Arial", "Noto Sans TC", sans-serif;
   background:
     radial-gradient(circle at 1px 1px, rgba(22,19,15,.18) 1.6px, transparent 2px) 0 0 / 18px 18px,
     var(--yellow);
 }
-.shell { width: min(100% - 28px, 980px); margin: 0 auto; padding: 28px 0 42px; }
+.shell {
+  width: min(calc(100% - 28px), 980px);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 28px 0 42px;
+}
 .top { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
 .brand, .back { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 1000; }
 .brand img { width: 44px; height: 44px; border: 3px solid var(--ink); border-radius: 50%; background: white; }
 .back { padding: 9px 13px; border: 3px solid var(--ink); border-radius: 999px; background: white; box-shadow: 3px 3px 0 var(--ink); }
-article { border: var(--line); border-radius: 22px; background: var(--paper); box-shadow: var(--shadow); overflow: hidden; }
+article {
+  border: var(--line);
+  border-radius: 22px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+article.card {
+  --article-pad: clamp(24px, 5vw, 48px);
+  padding: var(--article-pad);
+}
+
+article.card > img:first-child {
+  width: calc(100% + (var(--article-pad) * 2)) !important;
+  max-width: none;
+  margin: calc(var(--article-pad) * -1) calc(var(--article-pad) * -1) 30px !important;
+  border-width: 0 0 4px !important;
+  border-radius: 18px 18px 0 0 !important;
+}
+
 .hero { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-bottom: var(--line); background: var(--yellow); }
 .content { padding: clamp(24px, 5vw, 48px); }
 .label { display: inline-flex; padding: 6px 12px; border: 3px solid var(--ink); border-radius: 999px; background: var(--pink); color: white; font-size: 14px; font-weight: 1000; box-shadow: 3px 3px 0 var(--ink); }
 h1 { margin: 18px 0 12px; font-size: clamp(38px, 7vw, 64px); line-height: 1.04; font-weight: 1000; text-shadow: 4px 4px 0 white, 7px 7px 0 var(--ink); letter-spacing: 0; }
 .deck { margin: 0 0 22px; font-size: 21px; line-height: 1.55; font-weight: 900; }
-.auntie-note { margin: 22px 0; padding: 16px 18px; border: 3px solid var(--ink); border-radius: 14px; background: var(--mint); font-weight: 1000; font-size: 18px; line-height: 1.75; }
-p, li { font-size: 18px; line-height: 1.8; font-weight: 820; }
+.auntie-note,
+.notice {
+  margin: 24px 0;
+  padding: 18px 20px;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background: var(--mint);
+  box-shadow: 4px 4px 0 var(--ink);
+  font-weight: 1000;
+  font-size: 18px;
+  line-height: 1.75;
+}
+p, li {
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 820;
+  overflow-wrap: anywhere;
+}
 h2 { margin: 30px 0 8px; font-size: 30px; line-height: 1.15; font-weight: 1000; }
 .fact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 22px 0; }
 .fact { padding: 15px; border: var(--line); border-radius: 14px; background: white; box-shadow: 4px 4px 0 var(--ink); }
@@ -37,8 +79,31 @@ h2 { margin: 30px 0 8px; font-size: 30px; line-height: 1.15; font-weight: 1000; 
 .fact span { font-size: 24px; font-weight: 1000; }
 .up { color: #e62a32; }
 .down { color: #0e8c3a; }
+.stock-section {
+  margin-top: 30px;
+}
+.stock-section p {
+  margin: 10px 0 0;
+}
+.watch-list {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.watch-list li {
+  padding: 14px 16px;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background: white;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.watch-list strong {
+  color: var(--pink);
+}
 .risk-box {
-  margin: 34px 0 12px;
+  margin: 38px 0 18px;
   padding: 22px 26px 24px;
   border: 0;
   border-radius: 18px;
@@ -112,6 +177,8 @@ h2 { margin: 30px 0 8px; font-size: 30px; line-height: 1.15; font-weight: 1000; 
   .top { align-items: flex-start; flex-direction: column; }
   .back { width: 100%; justify-content: center; }
   article { border-radius: 18px; }
+  article.card { --article-pad: 20px; }
+  .shell { width: min(calc(100% - 22px), 980px); }
   .content { padding: 22px 20px 30px; }
   h1 { font-size: clamp(30px, 9.2vw, 38px); line-height: 1.18; text-shadow: 2px 2px 0 white, 4px 4px 0 var(--ink); }
   .deck { font-size: 18px; }
