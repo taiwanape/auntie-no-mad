@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-01T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/01 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-01-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-01T13:18:10.461Z"
+    "liveNewsUpdatedAt": "2026-06-01T19:13:36.972Z"
   },
   "lifeRadar": [
     {
@@ -482,76 +482,76 @@
   ],
   "liveNews": [
     {
-      "title": "王雯如願取得中華民國護照 駐雪梨辦事處致賀",
-      "date": "2026-06-01",
+      "title": "國票證券遭搜索帶回前顧問等3人 訊後均限制住居",
+      "date": "2026-06-02",
       "category": "即時社會",
-      "summary": "駐雪梨辦事處發布新聞稿指出，46年前被母親出養給澳洲家庭的台灣女子王雯（Vanessa Miles）今天於駐雪梨辦事處領取中華民國護照；駐雪梨辦事處處長吳正偉親自向王雯致賀。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "新北地檢署今天指揮搜索國票金控子公司國票證券，檢方依涉證交法特別背信罪嫌，帶回前顧問陳帝生、前董事長王祥文、前總經理張育綺3人，晚間複訊後諭知3人限制住居。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606010313.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202606010313.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606010347.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606010347.aspx",
       "sourceName": "中央社社會",
-      "publishedAt": "2026-06-01T12:20:40.000Z",
-      "displayTime": "06/01 20:20"
+      "publishedAt": "2026-06-01T15:54:02.000Z",
+      "displayTime": "06/01 23:54"
     },
     {
-      "title": "福島啟動第20批核處理水排放 預計19天排7800噸",
-      "date": "2026-06-01",
+      "title": "AI需求衝擊晶片供應 今年全球智慧手機出貨量恐創空前跌幅",
+      "date": "2026-06-02",
       "category": "即時財經",
-      "summary": "核安會表示，日本福島第一核電廠於今天開始啟動第20批次含氚廢水排放作業，預計19天排放7800噸，預估氚總活度約1.3兆貝克。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606010311.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606010311.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-01T12:15:36.000Z",
-      "displayTime": "06/01 20:15"
-    },
-    {
-      "title": "台電：逾97%用電不到1000度 不會適用8.86元費率",
-      "date": "2026-06-01",
-      "category": "即時財經",
-      "summary": "住宅用戶夏月電價今天起實施。台電針對有媒體指稱本次實施的夏月電價費率是史上最貴的部分說明，1001度以上的費率為8.86元，僅用電超過1000度的部分適用，有超過97%用戶平均用電度數低於10 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606010310.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606010310.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-01T12:14:34.000Z",
-      "displayTime": "06/01 20:14"
-    },
-    {
-      "title": "暑期消防暨捷運防災體驗營 北市消：即起報名",
-      "date": "2026-06-01",
-      "category": "即時地方",
-      "summary": "暑假將至，台北市消防局今天表示，7月將攜手台北捷運公司共辦消防暨捷運防災體驗營，首推最酷體驗「捷運逃生體驗課程」，即日起開放網路免費報名，設籍或就讀北市國小學童可參與。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606010309.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606010309.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-01T12:10:32.000Z",
-      "displayTime": "06/01 20:10"
-    },
-    {
-      "title": "北市送子鳥診所攝影設備疑遭拆除 北檢約談2人",
-      "date": "2026-06-01",
-      "category": "即時社會",
-      "summary": "檢警獲報，台北市送子鳥生殖中心診所疑有攝影設備拆除後留下的痕跡。北檢今天指揮警方搜索診所，並通知謝姓診所負責人及林姓現場經理到案說明，2人於晚間陸續至北檢應訊。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606010307.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606010307.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-01T11:59:27.000Z",
-      "displayTime": "06/01 19:59"
-    },
-    {
-      "title": "外資買超368億 加碼主動統一升級50達11萬張",
-      "date": "2026-06-01",
-      "category": "即時財經",
-      "summary": "在AI概念股領軍下，台股今天續創新高，外資買超新台幣368.02億元，買超主動統一升級50（00403A）11萬1082張居冠，群創8萬703張第2；賣超第1名則是力積電15萬8205張、友達 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "市場研究公司Counterpoint今天下調今年全球智慧手機出貨量預估，由2月提出的年減12.4%調整為萎縮13.9%至10億8000萬支，創有紀錄以來最大降幅，因記憶體晶片短缺惡化。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606010305.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606010305.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606010346.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202606010346.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-01T11:58:23.000Z",
-      "displayTime": "06/01 19:58"
+      "publishedAt": "2026-06-01T15:11:59.000Z",
+      "displayTime": "06/01 23:11"
+    },
+    {
+      "title": "男毒駕遭攔查竟掏改造手槍 台中警奪槍壓制送辦",
+      "date": "2026-06-02",
+      "category": "即時社會",
+      "summary": "台中警方今天下午攔查1輛行車不穩並跨越雙黃線的自小客車，盤查時蕭姓駕駛突掏出改造手槍並當場拉動滑套，員警反應迅捷奪槍、壓制，之後發現蕭姓男子涉毒駕，依法送辦。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606010345.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606010345.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-01T14:58:55.000Z",
+      "displayTime": "06/01 22:58"
+    },
+    {
+      "title": "伊朗暫停與美國交涉 國際油價應聲飆漲",
+      "date": "2026-06-02",
+      "category": "即時財經",
+      "summary": "在連日終戰會談無果，且美伊再度交火後，伊朗宣布暫停與美國交涉，國際油價今天大幅上揚。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606010343.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202606010343.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-01T14:52:51.000Z",
+      "displayTime": "06/01 22:52"
+    },
+    {
+      "title": "日月光投控員工平均年薪628萬元上市之冠 台積電第7",
+      "date": "2026-06-02",
+      "category": "即時財經",
+      "summary": "台灣證券交易所今天公布2025年台灣上市公司全體員工薪酬資訊，日月光投控平均員工薪資新台幣628.2萬元，勇奪冠軍，較2024年大幅成長4成。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606010342.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606010342.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-01T14:39:48.000Z",
+      "displayTime": "06/01 22:39"
+    },
+    {
+      "title": "北市府勞檢馬英九基金會 要求查霸凌案",
+      "date": "2026-06-02",
+      "category": "即時地方",
+      "summary": "媒體報導馬英九基金會前員工王光慈已向台北市政府提霸凌申訴，北市府今天說，勞檢處已接獲申訴並派員前往檢查，要求基金會如果接獲霸凌申訴案，應立即啟動調查程序。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606010340.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606010340.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-01T14:20:44.000Z",
+      "displayTime": "06/01 22:20"
     }
   ]
 }
