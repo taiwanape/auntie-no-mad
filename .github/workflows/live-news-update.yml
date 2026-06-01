@@ -2,8 +2,8 @@ name: Live News Update
 
 on:
   schedule:
-    # Every 30 minutes from 07:00 to 23:30 Asia/Taipei.
-    - cron: "0,30 23,0-15 * * *"
+    # About every 30 minutes from 07:17 to 23:47 Asia/Taipei, shifted off busy :00/:30 minutes.
+    - cron: "17,47 23,0-15 * * *"
   workflow_dispatch:
 
 permissions:
@@ -61,7 +61,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/site-content.json data/share-pack.json data/social-posts.json sitemap.xml robots.txt rss.xml feed.json site.webmanifest llms.txt index.html today.html links.html
+          git add data/site-content.json data/live-news-report.json data/share-pack.json data/social-posts.json sitemap.xml robots.txt rss.xml feed.json site.webmanifest llms.txt index.html today.html links.html
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No live news changes to commit."

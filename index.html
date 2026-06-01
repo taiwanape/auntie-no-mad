@@ -2454,7 +2454,7 @@
             <text class="shadow" x="4" y="62" font-size="58">即時新聞</text>
             <text class="accent" x="4" y="62" font-size="58">即時新聞</text>
           </svg>
-          <p>這裡抓公開新聞來源，半小時更新一次。阿姨先幫你排好，想看細節再點回原始來源。</p>
+          <p>這裡抓公開新聞來源，約每半小時自動整理；排程偶爾會延遲。阿姨先幫你排好，想看細節再點回原始來源。</p>
         </div>
         <div class="live-board" aria-label="即時新聞列表">
           <a class="live-lead" href="https://www.cna.com.tw/" target="_blank" rel="noreferrer">
@@ -3263,7 +3263,7 @@
 
     async function loadSiteContent() {
       try {
-        const response = await fetch("data/site-content.json", { cache: "no-store" });
+        const response = await fetch(`data/site-content.json?ts=${Date.now()}`, { cache: "no-store" });
         if (!response.ok) throw new Error("content data unavailable");
         const content = await response.json();
 

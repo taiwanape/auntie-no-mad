@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-06-01T07:10:32.510Z",
+  "status": "approved",
+  "count": 6,
+  "sources": [
+    {
+      "name": "中央社生活",
+      "url": "https://feeds.feedburner.com/rsscna/lifehealth",
+      "ok": true,
+      "count": 20
+    },
+    {
+      "name": "中央社社會",
+      "url": "https://feeds.feedburner.com/rsscna/social",
+      "ok": true,
+      "count": 20
+    },
+    {
+      "name": "中央社產經證券",
+      "url": "https://feeds.feedburner.com/rsscna/finance",
+      "ok": true,
+      "count": 20
+    },
+    {
+      "name": "中央社科技",
+      "url": "https://feeds.feedburner.com/rsscna/technology",
+      "ok": true,
+      "count": 20
+    },
+    {
+      "name": "中央社地方",
+      "url": "https://feeds.feedburner.com/rsscna/local",
+      "ok": true,
+      "count": 20
+    },
+    {
+      "name": "中央社娛樂",
+      "url": "https://feeds.feedburner.com/rsscna/stars",
+      "ok": true,
+      "count": 20
+    }
+  ],
+  "titles": [
+    "AI利多難抵美伊和談延宕憂慮 日股收盤走勢分歧",
+    "國中男生公費打HPV疫苗週年 接種率突破8成",
+    "PC族群發威 台股收漲604.97點站上45000點續創新高",
+    "台新新光金深耕台灣體育 吳東亮到場力挺職棒賽事",
+    "聯發科攜輝達 推出RTX Spark進入Windows市場",
+    "遭通緝又毒駕被查出毒品 基檢聲請預防羈押獲准"
+  ]
+}

@@ -357,6 +357,8 @@ assert(
   navTodayIndex >= 0 && navStockIndex > navTodayIndex && navArchiveIndex > navStockIndex && navLiveIndex > navArchiveIndex,
   "index.html nav must place old articles second from the end, between stocks and live news"
 );
+assert(indexHtml.includes("約每半小時自動整理"), "index.html must describe live news cadence as approximate");
+assert(indexHtml.includes("site-content.json?ts="), "index.html must bust cache when loading site content");
 if (content.site?.dailyNoteUrl) {
   assert(indexHtml.includes(content.site.dailyNoteUrl), `index.html static stock section must link today's market note: ${content.site.dailyNoteUrl}`);
 }
@@ -612,6 +614,10 @@ assert(llmsTxt.includes("Today page:"), "llms.txt must mention today page");
   assert(workflow.includes("test:social-previews"), `${workflowFile} must audit social previews`);
   assert(workflow.includes("index.html"), `${workflowFile} must commit homepage preview updates`);
 });
+const liveNewsWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "live-news-update.yml"), "utf8");
+assert(liveNewsWorkflow.includes("data/live-news-report.json"), "live-news-update.yml must publish the live news report");
+const gitignore = fs.readFileSync(path.join(root, ".gitignore"), "utf8");
+assert(!gitignore.includes("data/live-news-report.json"), "data/live-news-report.json must not be ignored");
 
 const pagesWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "pages.yml"), "utf8");
 assert(pagesWorkflow.includes("test:social-previews"), "pages.yml must audit social previews before deploying");
