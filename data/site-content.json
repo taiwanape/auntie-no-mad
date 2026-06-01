@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-01T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/01 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-01-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-01T07:10:32.509Z"
+    "liveNewsUpdatedAt": "2026-06-01T13:18:10.461Z"
   },
   "lifeRadar": [
     {
@@ -482,76 +482,76 @@
   ],
   "liveNews": [
     {
-      "title": "AI利多難抵美伊和談延宕憂慮 日股收盤走勢分歧",
-      "date": "2026-06-01",
-      "category": "即時財經",
-      "summary": "日本東證指數走勢缺乏明確方向，人工智慧（AI）相關類股因企業資本支出增加的跡象而上漲，但汽車與出口類股下跌，因美伊和平協議延宕加劇地緣政治憂慮。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606010161.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606010161.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-01T06:46:12.000Z",
-      "displayTime": "06/01 14:46"
-    },
-    {
-      "title": "國中男生公費打HPV疫苗週年 接種率突破8成",
-      "date": "2026-06-01",
-      "category": "即時生活",
-      "summary": "推動國中男生公費施打人類乳突病毒（HPV）疫苗將屆滿1週年，第1劑接種率衝破8成，國中女生接種率也穩定達9成，國民健康署提醒青少年階段是接種黃金期，籲提早建立防癌屏障。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606010160.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606010160.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-01T06:44:10.000Z",
-      "displayTime": "06/01 14:44"
-    },
-    {
-      "title": "PC族群發威 台股收漲604.97點站上45000點續創新高",
-      "date": "2026-06-01",
-      "category": "即時財經",
-      "summary": "AI族群升溫，PC類股表現強勢，台股今天開高走高，盤中漲近1200點，達45931點，創歷史新高，台積電終場收平盤，台股尾盤漲勢收斂，收在45337.91點，續創收盤指數新高。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606010155.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606010155.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-01T06:38:00.000Z",
-      "displayTime": "06/01 14:38"
-    },
-    {
-      "title": "台新新光金深耕台灣體育 吳東亮到場力挺職棒賽事",
-      "date": "2026-06-01",
-      "category": "即時財經",
-      "summary": "台新新光金控深耕台灣體育發展，今年擴大對職棒賽事的支持，偕旗下銀行、人壽、證券共同贊助味全龍棒球隊。台新新光金控董事長吳東亮日前親自到場力挺，並邀請英國在台辦事處代表包瓊郁（Ruth Brad 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606010154.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606010154.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-01T06:33:57.000Z",
-      "displayTime": "06/01 14:33"
-    },
-    {
-      "title": "聯發科攜輝達 推出RTX Spark進入Windows市場",
-      "date": "2026-06-01",
-      "category": "即時財經",
-      "summary": "IC設計廠聯發科今天宣布，與輝達（NVIDIA）合作推出新世代處理器RTX Spark，第一波搭載RTX Spark的筆記型電腦預計今年秋季上市。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606010150.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606010150.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-01T06:29:49.000Z",
-      "displayTime": "06/01 14:29"
-    },
-    {
-      "title": "遭通緝又毒駕被查出毒品 基檢聲請預防羈押獲准",
+      "title": "王雯如願取得中華民國護照 駐雪梨辦事處致賀",
       "date": "2026-06-01",
       "category": "即時社會",
-      "summary": "游姓毒品通緝犯昨天凌晨開車遭基隆市警方攔查，查獲毒品依托咪酯煙彈，唾液快篩呈陽性反應，經移送複訊，台灣基隆地方檢察署檢察官向台灣基隆地方法院聲請羈押獲准。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "駐雪梨辦事處發布新聞稿指出，46年前被母親出養給澳洲家庭的台灣女子王雯（Vanessa Miles）今天於駐雪梨辦事處領取中華民國護照；駐雪梨辦事處處長吳正偉親自向王雯致賀。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606010149.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606010149.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606010313.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202606010313.aspx",
       "sourceName": "中央社社會",
-      "publishedAt": "2026-06-01T06:29:47.000Z",
-      "displayTime": "06/01 14:29"
+      "publishedAt": "2026-06-01T12:20:40.000Z",
+      "displayTime": "06/01 20:20"
+    },
+    {
+      "title": "福島啟動第20批核處理水排放 預計19天排7800噸",
+      "date": "2026-06-01",
+      "category": "即時財經",
+      "summary": "核安會表示，日本福島第一核電廠於今天開始啟動第20批次含氚廢水排放作業，預計19天排放7800噸，預估氚總活度約1.3兆貝克。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606010311.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606010311.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-01T12:15:36.000Z",
+      "displayTime": "06/01 20:15"
+    },
+    {
+      "title": "台電：逾97%用電不到1000度 不會適用8.86元費率",
+      "date": "2026-06-01",
+      "category": "即時財經",
+      "summary": "住宅用戶夏月電價今天起實施。台電針對有媒體指稱本次實施的夏月電價費率是史上最貴的部分說明，1001度以上的費率為8.86元，僅用電超過1000度的部分適用，有超過97%用戶平均用電度數低於10 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606010310.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606010310.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-01T12:14:34.000Z",
+      "displayTime": "06/01 20:14"
+    },
+    {
+      "title": "暑期消防暨捷運防災體驗營 北市消：即起報名",
+      "date": "2026-06-01",
+      "category": "即時地方",
+      "summary": "暑假將至，台北市消防局今天表示，7月將攜手台北捷運公司共辦消防暨捷運防災體驗營，首推最酷體驗「捷運逃生體驗課程」，即日起開放網路免費報名，設籍或就讀北市國小學童可參與。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606010309.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606010309.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-01T12:10:32.000Z",
+      "displayTime": "06/01 20:10"
+    },
+    {
+      "title": "北市送子鳥診所攝影設備疑遭拆除 北檢約談2人",
+      "date": "2026-06-01",
+      "category": "即時社會",
+      "summary": "檢警獲報，台北市送子鳥生殖中心診所疑有攝影設備拆除後留下的痕跡。北檢今天指揮警方搜索診所，並通知謝姓診所負責人及林姓現場經理到案說明，2人於晚間陸續至北檢應訊。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606010307.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606010307.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-01T11:59:27.000Z",
+      "displayTime": "06/01 19:59"
+    },
+    {
+      "title": "外資買超368億 加碼主動統一升級50達11萬張",
+      "date": "2026-06-01",
+      "category": "即時財經",
+      "summary": "在AI概念股領軍下，台股今天續創新高，外資買超新台幣368.02億元，買超主動統一升級50（00403A）11萬1082張居冠，群創8萬703張第2；賣超第1名則是力積電15萬8205張、友達 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606010305.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606010305.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-01T11:58:23.000Z",
+      "displayTime": "06/01 19:58"
     }
   ]
 }
