@@ -1,9 +1,9 @@
 {
-  "date": "2026-06-01",
-  "generatedAt": "2026-05-31T22:49:51.528Z",
-  "status": "approved",
+  "date": "2026-06-02",
+  "generatedAt": "2026-06-01T22:34:36.680Z",
+  "status": "rejected",
   "checks": [
-    "daily images: 9/9 ready (9 AI-generated topic images refreshed via Codex imagegen)",
+    "daily images: 0/9 ready (0 OpenAI generated, 0 OpenAI reused, 0 approved fallback, 0 fallback reused)",
     "lifeRadar: 2 items checked",
     "pitfalls: 2 items checked",
     "liveNews: 6 items checked",
@@ -62,13 +62,6 @@
       "quality": "medium",
       "size": "1536x1024",
       "error": "Billing hard limit has been reached."
-    },
-    {
-      "name": "Codex built-in imagegen",
-      "url": "local://C:/Users/taiwa/.codex/generated_images/019e7d23-4f72-7a73-8684-4571c2b45c8b",
-      "ok": true,
-      "count": 9,
-      "reason": "Manually regenerated 2026-06-01 article and stock images to match daily topics."
     }
   ],
   "proposedSections": [
@@ -81,15 +74,17 @@
     "archive",
     "generatedImages"
   ],
-  "updatedSections": [
-    "liveNews",
-    "lifeRadar",
-    "pitfalls",
-    "stockOverview",
-    "stockWatchlist",
-    "fridgeNotes",
-    "archive",
-    "generatedImages"
-  ],
-  "errors": []
+  "updatedSections": [],
+  "errors": [
+    "daily AI image generation failed for life-1: Billing hard limit has been reached.",
+    "daily AI image generation failed for life-2: Billing hard limit has been reached.",
+    "daily AI image generation failed for pitfall-1: Billing hard limit has been reached.",
+    "daily AI image generation failed for pitfall-2: Billing hard limit has been reached.",
+    "daily AI image generation failed for stock-overview: Billing hard limit has been reached.",
+    "daily AI image generation failed for stock-1-2454: Billing hard limit has been reached.",
+    "daily AI image generation failed for stock-2-6770: Billing hard limit has been reached.",
+    "daily AI image generation failed for stock-3-2408: Billing hard limit has been reached.",
+    "daily AI image generation failed for stock-4-00919: Billing hard limit has been reached.",
+    "daily images required but only 0/9 were generated or reused"
+  ]
 }
