@@ -33,6 +33,14 @@ body {
   margin-bottom: 18px;
 }
 
+.top-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .brand,
 .back {
   display: inline-flex;
@@ -377,6 +385,17 @@ a {
   .back {
     width: 100%;
     justify-content: center;
+  }
+
+  .top-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .top-actions .back {
+    width: 100%;
   }
 
   .card {

@@ -3,7 +3,7 @@
   "generatedAt": "2026-05-31T22:49:51.528Z",
   "status": "approved",
   "checks": [
-    "daily images: 9/9 ready (0 OpenAI, 0 approved fallback, 9 reused)",
+    "daily images: 9/9 ready (9 AI-generated topic images refreshed via Codex imagegen)",
     "lifeRadar: 2 items checked",
     "pitfalls: 2 items checked",
     "liveNews: 6 items checked",
@@ -64,11 +64,11 @@
       "error": "Billing hard limit has been reached."
     },
     {
-      "name": "Approved Auntie raster image library",
-      "url": "docs/VOICE_GUIDE.md",
+      "name": "Codex built-in imagegen",
+      "url": "local://C:/Users/taiwa/.codex/generated_images/019e7d23-4f72-7a73-8684-4571c2b45c8b",
       "ok": true,
       "count": 9,
-      "reason": "Used only when OpenAI image generation is unavailable; low-quality SVG fallback is disabled."
+      "reason": "Manually regenerated 2026-06-01 article and stock images to match daily topics."
     }
   ],
   "proposedSections": [

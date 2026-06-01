@@ -86,7 +86,8 @@ const imageGeneration = {
   model: process.env.OPENAI_IMAGE_MODEL || "gpt-image-1",
   quality: process.env.OPENAI_IMAGE_QUALITY || "medium",
   size: process.env.OPENAI_IMAGE_SIZE || "1536x1024",
-  limit: Number.parseInt(process.env.OPENAI_IMAGE_LIMIT || "9", 10)
+  limit: Number.parseInt(process.env.OPENAI_IMAGE_LIMIT || "9", 10),
+  allowApprovedFallback: process.env.ALLOW_APPROVED_IMAGE_FALLBACK === "true"
 };
 
 const fridgeNotePool = [
@@ -343,6 +344,7 @@ async function enrichGeneratedImages(nextContent) {
   ensureDir(dir);
   let ready = 0;
   let openAiGenerated = 0;
+  let openAiReused = 0;
   let fallbackGenerated = 0;
   let reused = 0;
   let openAiError = "";
@@ -362,7 +364,7 @@ async function enrichGeneratedImages(nextContent) {
           createdAssetPaths.push(openAiAssetPath);
           openAiGenerated += 1;
         } else {
-          reused += 1;
+          openAiReused += 1;
         }
         assignTargetImage(target, openAiAssetPath);
         ready += 1;
@@ -372,6 +374,10 @@ async function enrichGeneratedImages(nextContent) {
       throw new Error(openAiError);
     } catch (error) {
       openAiError = error.message;
+      if (!imageGeneration.allowApprovedFallback) {
+        review.errors.push(`daily AI image generation failed for ${target.prefix}: ${error.message}`);
+        continue;
+      }
       try {
         const created = copyApprovedFallbackImage(target, approvedFallbackAssetPath, approvedFallbackSourcePath);
         if (created) createdAssetPaths.push(approvedFallbackAssetPath);
@@ -388,25 +394,25 @@ async function enrichGeneratedImages(nextContent) {
   review.sources.push({
     name: "OpenAI Images API",
     url: "https://platform.openai.com/docs/guides/images/image-generation",
-    ok: openAiGenerated > 0,
-    count: openAiGenerated,
+    ok: openAiGenerated + openAiReused > 0,
+    count: openAiGenerated + openAiReused,
     model: imageGeneration.model,
     quality: imageGeneration.quality,
     size: imageGeneration.size,
-    error: openAiGenerated > 0 ? undefined : openAiError || undefined
+    error: openAiGenerated + openAiReused > 0 ? undefined : openAiError || undefined
   });
 
-  if (fallbackGenerated > 0 || reused > 0) {
+  if (imageGeneration.allowApprovedFallback && (fallbackGenerated > 0 || reused > 0)) {
     review.sources.push({
       name: "Approved Auntie raster image library",
       url: "docs/VOICE_GUIDE.md",
       ok: true,
       count: fallbackGenerated + reused,
-      reason: "Used only when OpenAI image generation is unavailable; low-quality SVG fallback is disabled."
+      reason: "Emergency preview fallback only; public daily updates should use AI-generated topic images."
     });
   }
 
-  review.checks.push(`daily images: ${ready}/${requiredTotal} ready (${openAiGenerated} OpenAI, ${fallbackGenerated} approved fallback, ${reused} reused)`);
+  review.checks.push(`daily images: ${ready}/${requiredTotal} ready (${openAiGenerated} OpenAI generated, ${openAiReused} OpenAI reused, ${fallbackGenerated} approved fallback, ${reused} fallback reused)`);
   return { required: true, generated: ready, total: requiredTotal, createdAssetPaths };
 }
 
@@ -982,7 +988,10 @@ ${articleJsonLd}
   <div class="shell">
     <header class="top">
       <a class="brand" href="../index.html"><img src="../assets/auntie-avatar-nav.jpg" alt=""><span>阿姨別生氣</span></a>
-      <a class="back" href="${backHref}">${backText}</a>
+      <div class="top-actions">
+        <a class="back" href="${backHref}">${backText}</a>
+        <a class="back" href="../archive.html">舊文章庫</a>
+      </div>
     </header>
     <article${section === "stock" ? "" : " class=\"card\""}>
       ${section === "stock"
@@ -1229,7 +1238,10 @@ ${marketJsonLd}
   <div class="shell">
     <header class="top">
       <a class="brand" href="../index.html"><img src="../assets/auntie-avatar-nav.jpg" alt=""><span>阿姨別生氣</span></a>
-      <a class="back" href="../index.html#investing">回股市 ETF</a>
+      <div class="top-actions">
+        <a class="back" href="../index.html#investing">回股市 ETF</a>
+        <a class="back" href="../archive.html">舊文章庫</a>
+      </div>
     </header>
     <article>
       <img class="hero" src="${htmlEscape(heroPath)}" alt="阿姨整理股市觀察清單的漫畫插圖">
