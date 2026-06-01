@@ -64,6 +64,9 @@ jobs:
       - name: Generate today landing page
         run: npm run generate:today
 
+      - name: Generate categorized archive page
+        run: npm run generate:archive
+
       - name: Generate social link page
         run: npm run generate:links
 
@@ -82,7 +85,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/ radar/ stories/ stocks/ assets/generated/ sitemap.xml robots.txt rss.xml feed.json site.webmanifest llms.txt index.html today.html links.html
+          git add data/ radar/ stories/ stocks/ assets/generated/ sitemap.xml robots.txt rss.xml feed.json site.webmanifest llms.txt index.html today.html archive.html links.html
           if git diff --cached --quiet; then
             echo "No content changes to commit."
           else

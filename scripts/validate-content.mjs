@@ -384,6 +384,17 @@ if (homepagePreviewItem) {
 const reminderIcs = fs.readFileSync(path.join(root, "daily-reminder.ics"), "utf8");
 assert(reminderIcs.includes("RRULE:FREQ=DAILY"), "daily-reminder.ics must be a daily recurring reminder");
 assert(reminderIcs.includes("utm_source=calendar"), "daily-reminder.ics must track calendar return visits");
+
+const archiveHtml = fs.readFileSync(path.join(root, "archive.html"), "utf8");
+["id=\"life\"", "id=\"pitfalls\"", "id=\"stocks\"", "舊文章分類"].forEach((needle) => {
+  assert(archiveHtml.includes(needle), `archive.html must keep categorized archive structure: ${needle}`);
+});
+["生活雷達", "踩坑日記", "股市 ETF"].forEach((label) => {
+  assert(archiveHtml.includes(label), `archive.html must include category label: ${label}`);
+});
+(content.archive || []).slice(0, 8).forEach((item) => {
+  if (item.slug) assert(archiveHtml.includes(item.slug), `archive.html must include recent archive item: ${item.slug}`);
+});
 assert(reminderIcs.includes("today.html"), "daily-reminder.ics must point visitors to today.html");
 
 const jsonFeedPath = path.join(root, "feed.json");
