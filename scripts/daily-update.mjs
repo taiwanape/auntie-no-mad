@@ -1286,6 +1286,93 @@ function writePages(nextContent) {
   fs.writeFileSync(path.join(root, nextContent.stockOverview.slug), marketTemplate(nextContent.stockOverview, nextContent.stockWatchlist));
 }
 
+function replaceBetweenMarkers(text, startMarker, endMarker, replacement) {
+  const start = text.indexOf(startMarker);
+  const end = text.indexOf(endMarker, start + startMarker.length);
+  if (start === -1 || end === -1) {
+    throw new Error(`homepage static sync failed: missing marker ${start === -1 ? startMarker : endMarker}`);
+  }
+  return `${text.slice(0, start)}${replacement}${text.slice(end)}`;
+}
+
+function renderHomepageNav() {
+  return `      <nav class="nav" aria-label="網站導覽">
+        <a href="today.html">今日必看</a>
+        <a href="#radar">生活雷達</a>
+        <a href="#stories">踩坑日記</a>
+        <a href="#investing">股市ETF</a>
+        <a href="archive.html">舊文章</a>
+        <a href="#live">即時新聞</a>
+      </nav>`;
+}
+
+function renderHomepageMarketCards(stockOverview = {}) {
+  return (stockOverview.marketCards || []).map((item) => `            <article class="radar-card">
+              <div class="index-name">${htmlEscape(item.label)}</div>
+              <div class="index-value">${htmlEscape(item.value)} <span class="index-unit">${htmlEscape(item.note)}</span></div>
+              <div class="index-change ${item.tone === "up" ? "change-up" : item.tone === "down" ? "change-down" : "change-neutral"}">${htmlEscape(item.trend)}</div>
+            </article>`).join("\n");
+}
+
+function renderHomepageWatchlist(stockItems = []) {
+  return stockItems.map((item) => {
+    const note = [
+      `${item.category || item.type || "觀察股"}。${item.close ? `${item.close} 收盤` : ""}${item.change ? `，漲跌 ${item.change}` : ""}。`,
+      item.reason || item.summary || "",
+      item.auntieComment ? `阿姨的理由：${item.auntieComment}` : ""
+    ].filter(Boolean).join("");
+    return `            <a class="watchlist-card" href="${htmlEscape(item.slug || "#")}" aria-label="閱讀${htmlEscape(item.name || item.title)}今日股票故事">
+              <span class="wl-symbol">${htmlEscape(item.ticker || "ETF")}</span>
+              <div class="wl-info">
+                <div class="wl-name">${htmlEscape(item.name || item.title)}</div>
+                <div class="wl-note">${htmlEscape(note)}</div>
+                <span class="wl-story-link">讀個股故事</span>
+              </div>
+            </a>`;
+  }).join("\n");
+}
+
+function updateHomepageStaticContent(nextContent) {
+  const indexPath = path.join(root, "index.html");
+  if (!fs.existsSync(indexPath)) return;
+
+  let html = fs.readFileSync(indexPath, "utf8");
+  html = html.replace(/      <nav class="nav" aria-label="網站導覽">[\s\S]*?      <\/nav>/, renderHomepageNav());
+
+  const radarBlock = `        <!-- 全球雷達 -->
+        <div class="investing-block" aria-labelledby="radarSubTitle">
+          <div class="investing-block-head">
+            <h3 id="radarSubTitle" class="investing-subtitle">🌍 全球雷達</h3>
+            <span class="example-badge">${htmlEscape(nextContent.stockOverview.badge || "早晨版")}</span>
+          </div>
+          <p class="investing-desc">${htmlEscape(nextContent.stockOverview.summary)}</p>
+          <div class="radar-grid">
+${renderHomepageMarketCards(nextContent.stockOverview)}
+          </div>
+        </div>
+
+`;
+
+  const watchBlock = `        <!-- 今日觀察清單 -->
+        <div class="investing-block" aria-labelledby="watchSubTitle">
+          <div class="investing-block-head">
+            <h3 id="watchSubTitle" class="investing-subtitle">📋 今日觀察清單</h3>
+            <span class="example-badge">剛出爐</span>
+          </div>
+          <p class="investing-desc">今天固定四檔，分類也講清楚：兩檔熱門股、一檔新星觀察、一檔高人氣但風險也高的 ETF。每檔都附阿姨白話理由，但仍然不是買賣建議。</p>
+          <div class="watchlist-grid">
+${renderHomepageWatchlist(nextContent.stockWatchlist)}
+          </div>
+          <p class="investing-desc" data-daily-market-link="true"><a href="${htmlEscape(nextContent.site.dailyNoteUrl)}">${htmlEscape(nextContent.site.dailyNote)}</a></p>
+        </div>
+
+`;
+
+  html = replaceBetweenMarkers(html, "        <!-- 全球雷達 -->", "        <!-- 今日觀察清單 -->", radarBlock);
+  html = replaceBetweenMarkers(html, "        <!-- 今日觀察清單 -->", "        <!-- ETF懶人包 -->", watchBlock);
+  fs.writeFileSync(indexPath, html, "utf8");
+}
+
 function mergeArchive(existingArchive = [], additions = []) {
   const map = new Map();
   [...additions, ...existingArchive].forEach((item) => {
@@ -1402,6 +1489,7 @@ async function main() {
   review.status = "approved";
   review.updatedSections.push(...proposedSections);
   writePages(nextContent);
+  updateHomepageStaticContent(nextContent);
   fs.writeFileSync(dataPath, JSON.stringify(nextContent, null, 2) + "\n");
   fs.writeFileSync(reportPath, JSON.stringify(review, null, 2) + "\n");
   console.log("Daily update approved and written.");

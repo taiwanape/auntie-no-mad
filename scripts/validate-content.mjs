@@ -349,6 +349,20 @@ assert(indexHtml.includes("今天先點這裡"), "index.html first-click entry m
 assert(indexHtml.includes("homepage_entry"), "index.html first-click links must use homepage_entry UTM tracking");
 assert(indexHtml.includes("beforeinstallprompt"), "index.html must handle browser install prompts when available");
 assert(indexHtml.includes("install_fallback"), "index.html install fallback must use UTM tracking");
+const navTodayIndex = indexHtml.indexOf('href="today.html"');
+const navStockIndex = indexHtml.indexOf('href="#investing"');
+const navArchiveIndex = indexHtml.indexOf('href="archive.html"');
+const navLiveIndex = indexHtml.indexOf('href="#live"');
+assert(
+  navTodayIndex >= 0 && navStockIndex > navTodayIndex && navArchiveIndex > navStockIndex && navLiveIndex > navArchiveIndex,
+  "index.html nav must place old articles second from the end, between stocks and live news"
+);
+if (content.site?.dailyNoteUrl) {
+  assert(indexHtml.includes(content.site.dailyNoteUrl), `index.html static stock section must link today's market note: ${content.site.dailyNoteUrl}`);
+}
+(content.stockWatchlist || []).forEach((item) => {
+  assert(indexHtml.includes(item.slug), `index.html static stock section must include current stock page: ${item.slug}`);
+});
 
 const homepagePreviewItem = pickHomepagePreviewItem();
 if (homepagePreviewItem) {
