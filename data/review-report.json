@@ -1,9 +1,9 @@
 {
   "date": "2026-06-02",
-  "generatedAt": "2026-06-01T23:21:20.785Z",
-  "status": "rejected",
+  "generatedAt": "2026-06-02T01:08:11.322Z",
+  "status": "approved",
   "checks": [
-    "daily images: 0/9 ready (0 OpenAI generated, 0 OpenAI reused, 0 approved fallback, 0 fallback reused)",
+    "daily images: 9/9 ready (0 OpenAI generated, 9 OpenAI reused, 0 approved fallback, 0 fallback reused)",
     "lifeRadar: 2 items checked",
     "pitfalls: 2 items checked",
     "liveNews: 6 items checked",
@@ -56,12 +56,11 @@
     {
       "name": "OpenAI Images API",
       "url": "https://platform.openai.com/docs/guides/images/image-generation",
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 9,
       "model": "gpt-image-1",
       "quality": "medium",
-      "size": "1536x1024",
-      "error": "Billing hard limit has been reached."
+      "size": "1536x1024"
     }
   ],
   "proposedSections": [
@@ -74,17 +73,15 @@
     "archive",
     "generatedImages"
   ],
-  "updatedSections": [],
-  "errors": [
-    "daily AI image generation failed for life-1: Billing hard limit has been reached.",
-    "daily AI image generation failed for life-2: Billing hard limit has been reached.",
-    "daily AI image generation failed for pitfall-1: Billing hard limit has been reached.",
-    "daily AI image generation failed for pitfall-2: Billing hard limit has been reached.",
-    "daily AI image generation failed for stock-overview: Billing hard limit has been reached.",
-    "daily AI image generation failed for stock-1-2454: Billing hard limit has been reached.",
-    "daily AI image generation failed for stock-2-6770: Billing hard limit has been reached.",
-    "daily AI image generation failed for stock-3-2408: Billing hard limit has been reached.",
-    "daily AI image generation failed for stock-4-00919: Billing hard limit has been reached.",
-    "daily images required but only 0/9 were generated or reused"
-  ]
+  "updatedSections": [
+    "liveNews",
+    "lifeRadar",
+    "pitfalls",
+    "stockOverview",
+    "stockWatchlist",
+    "fridgeNotes",
+    "archive",
+    "generatedImages"
+  ],
+  "errors": []
 }

@@ -1483,7 +1483,7 @@ async function main() {
     fs.writeFileSync(reportPath, JSON.stringify(review, null, 2) + "\n");
     console.error("Daily update rejected:");
     review.errors.forEach((error) => console.error(`- ${error}`));
-    return;
+    process.exit(1);
   }
 
   review.status = "approved";

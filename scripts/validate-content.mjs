@@ -618,6 +618,10 @@ const liveNewsWorkflow = fs.readFileSync(path.join(root, ".github", "workflows",
 assert(liveNewsWorkflow.includes("data/live-news-report.json"), "live-news-update.yml must publish the live news report");
 const gitignore = fs.readFileSync(path.join(root, ".gitignore"), "utf8");
 assert(!gitignore.includes("data/live-news-report.json"), "data/live-news-report.json must not be ignored");
+const dailyUpdateScript = fs.readFileSync(path.join(root, "scripts", "daily-update.mjs"), "utf8");
+assert(dailyUpdateScript.includes("process.exit(1);"), "daily-update.mjs must fail the workflow when public daily content is rejected");
+const dailyUpdateWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "daily-update.yml"), "utf8");
+assert(dailyUpdateWorkflow.includes('ALLOW_APPROVED_IMAGE_FALLBACK: "true"'), "daily-update.yml must allow approved image fallback when the Images API is unavailable");
 
 const pagesWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "pages.yml"), "utf8");
 assert(pagesWorkflow.includes("test:social-previews"), "pages.yml must audit social previews before deploying");
