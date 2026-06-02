@@ -7,13 +7,17 @@ import { publicSiteUrl } from "./public-site-url.mjs";
 const root = process.cwd();
 const repo = process.env.GITHUB_REPOSITORY || "taiwanape/auntie-no-mad";
 const siteUrl = process.env.AUNTIE_SITE_URL || publicSiteUrl;
-const requiredWorkflows = [
+const coreWorkflows = [
   "Daily Auntie Update",
   "Live News Update",
-  "Deploy GitHub Pages",
+  "Deploy GitHub Pages"
+];
+const socialWorkflows = [
   "X Daily Post",
   "Meta Daily Post"
 ];
+const includeSocialHealth = process.env.OPS_HEALTH_INCLUDE_SOCIAL === "true";
+const requiredWorkflows = includeSocialHealth ? [...coreWorkflows, ...socialWorkflows] : coreWorkflows;
 
 const checks = [];
 const warnings = [];
@@ -244,6 +248,11 @@ function checkGitHubActions() {
   }
 
   details.actions = {};
+  if (!includeSocialHealth) {
+    details.optionalSocialWorkflows = socialWorkflows;
+    addWarning("Social posting workflows are not part of core website health; set OPS_HEALTH_INCLUDE_SOCIAL=true to audit X and Meta as blocking checks.");
+  }
+
   for (const workflow of requiredWorkflows) {
     const { run: latest, error } = latestWorkflowRun(workflow);
     if (error) {
@@ -352,6 +361,10 @@ async function checkXApi() {
     accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET
   };
   const requireX = process.env.OPS_HEALTH_REQUIRE_X === "true";
+  if (!includeSocialHealth && !requireX) {
+    addWarning("X API audit skipped because social health is optional in this run.");
+    return;
+  }
   if (!Object.values(credentials).every(Boolean)) {
     const message = loadedLocalEnv ? "X credentials incomplete after loading local env" : "X credentials unavailable";
     if (requireX) addCheck("X API", false, message);
