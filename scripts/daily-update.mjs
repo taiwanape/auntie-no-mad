@@ -317,6 +317,10 @@ function copyApprovedFallbackImage(target, assetPath, sourcePath = approvedImage
   return !existed;
 }
 
+function isBlockingImageApiError(message = "") {
+  return /billing hard limit|quota|credit|budget|incorrect api key|invalid api key|organization|project/i.test(message);
+}
+
 async function enrichGeneratedImages(nextContent) {
   const dir = `assets/generated/${taipeiDate}`;
   const targets = [
@@ -348,6 +352,8 @@ async function enrichGeneratedImages(nextContent) {
   let fallbackGenerated = 0;
   let reused = 0;
   let openAiError = "";
+  let skipOpenAiAttempts = false;
+  let openAiSkipped = 0;
   const createdAssetPaths = [];
 
   for (const target of targets.slice(0, max)) {
@@ -358,7 +364,7 @@ async function enrichGeneratedImages(nextContent) {
     const approvedFallbackAssetPath = `${dir}/${baseName}-approved${approvedFallbackExt}`;
     const openAiOutputPath = path.join(root, openAiAssetPath);
     try {
-      if (process.env.OPENAI_API_KEY) {
+      if (process.env.OPENAI_API_KEY && !skipOpenAiAttempts) {
         if (!fs.existsSync(openAiOutputPath)) {
           await generateOpenAIImage(imagePromptFor(target), openAiOutputPath);
           createdAssetPaths.push(openAiAssetPath);
@@ -370,10 +376,15 @@ async function enrichGeneratedImages(nextContent) {
         ready += 1;
         continue;
       }
+      if (skipOpenAiAttempts) {
+        openAiSkipped += 1;
+        throw new Error(`OpenAI Images API skipped after earlier blocking error: ${openAiError}`);
+      }
       openAiError = "OPENAI_API_KEY is missing";
       throw new Error(openAiError);
     } catch (error) {
-      openAiError = error.message;
+      if (!skipOpenAiAttempts || !openAiError) openAiError = error.message;
+      if (isBlockingImageApiError(error.message)) skipOpenAiAttempts = true;
       if (!imageGeneration.allowApprovedFallback) {
         review.errors.push(`daily AI image generation failed for ${target.prefix}: ${error.message}`);
         continue;
@@ -412,7 +423,7 @@ async function enrichGeneratedImages(nextContent) {
     });
   }
 
-  review.checks.push(`daily images: ${ready}/${requiredTotal} ready (${openAiGenerated} OpenAI generated, ${openAiReused} OpenAI reused, ${fallbackGenerated} approved fallback, ${reused} fallback reused)`);
+  review.checks.push(`daily images: ${ready}/${requiredTotal} ready (${openAiGenerated} OpenAI generated, ${openAiReused} OpenAI reused, ${fallbackGenerated} approved fallback, ${reused} fallback reused${openAiSkipped ? `, ${openAiSkipped} OpenAI attempts skipped` : ""})`);
   return { required: true, generated: ready, total: requiredTotal, createdAssetPaths };
 }
 
