@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-03T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/03 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-03-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-02T18:55:28.784Z"
+    "liveNewsUpdatedAt": "2026-06-03T01:48:01.278Z"
   },
   "lifeRadar": [
     {
@@ -536,76 +536,76 @@
   ],
   "liveNews": [
     {
-      "title": "AI科技股助攻 美股收高",
+      "title": "貝克漢好萊塢星光大道摘星 湯姆克魯斯將出席",
       "date": "2026-06-03",
-      "category": "即時財經",
-      "summary": "美國與伊朗之間的和平談判進展陷入停滯，導致國際油價今天走高；與此同時，在市場對人工智慧（AI）相關科技股持樂觀態度的帶動下，美國股市主要指數也收高。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606030012.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606030012.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-06-02T21:25:14.000Z",
-      "displayTime": "06/03 05:25"
-    },
-    {
-      "title": "交易員衡量美伊協議前景 國際油價走高",
-      "date": "2026-06-03",
-      "category": "即時財經",
-      "summary": "隨著交易員解讀有關美國與伊朗和平協議前景的矛盾訊息，國際油價今天小幅上漲。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時娛樂",
+      "summary": "主辦單位今天宣布，英國退役足球巨星貝克漢（David Beckham）將名留好萊塢星光大道（Walk of Fame），獲得專屬星星。影星湯姆克魯斯（Tom Cruise）將出席授星儀式。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606030011.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606030011.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-06-02T21:05:12.000Z",
-      "displayTime": "06/03 05:05"
+      "sourceUrl": "https://www.cna.com.tw/news/amov/202606030041.aspx",
+      "slug": "https://www.cna.com.tw/news/amov/202606030041.aspx",
+      "sourceName": "中央社娛樂",
+      "publishedAt": "2026-06-03T01:27:24.000Z",
+      "displayTime": "06/03 09:27"
     },
     {
-      "title": "盧比歐：美政府擬任命官員 協調伊波拉防疫工作",
+      "title": "台股開盤漲103.15點",
+      "date": "2026-06-03",
+      "category": "即時財經",
+      "summary": "台北股市今天開盤漲103.15點，加權股價指數為45660.46點，成交金額新台幣200.52億元。1150603 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606030034.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606030034.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-03T01:07:09.000Z",
+      "displayTime": "06/03 09:07"
+    },
+    {
+      "title": "新台幣開盤升1.5分 為31.43元",
+      "date": "2026-06-03",
+      "category": "即時財經",
+      "summary": "台北外匯市場新台幣兌美元匯率今天以31.43元開盤，升1.5分。1150603 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606030032.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606030032.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-03T01:06:05.000Z",
+      "displayTime": "06/03 09:06"
+    },
+    {
+      "title": "12縣市防高溫 吳德榮：5至12日留意致災降雨",
       "date": "2026-06-03",
       "category": "即時生活",
-      "summary": "美國國務卿盧比歐（Marco Rubio）今天在聯邦眾議院一個委員會上表示，川普政府正考慮任命一名官員，統籌美國對非洲伊波拉（Ebola）疫情的應對工作。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606030009.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202606030009.aspx",
-      "sourceName": "中央社生活醫藥",
-      "publishedAt": "2026-06-02T20:45:07.000Z",
-      "displayTime": "06/03 04:45"
+      "summary": "氣象署今天針對北北桃、彰化以南及花東地區發布高溫資訊，其中台南注意攝氏38度極端高溫。氣象專家吳德榮表示，今明兩天台灣晴熱，5至12日將進入梅雨旺盛期，預防致災性降雨。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606030026.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606030026.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-03T00:42:51.000Z",
+      "displayTime": "06/03 08:42"
     },
     {
-      "title": "傳SpaceX將IPO估值定在1.75兆美元 含綠鞋期權",
+      "title": "美股收高台積電ADR漲逾2% 法人：台股有望再拚新高",
       "date": "2026-06-03",
       "category": "即時財經",
-      "summary": "兩名知情人士今天告訴路透社，馬斯克的火箭與衛星公司太空探索科技公司（SpaceX）計劃在大規模的首次公開募股（IPO）中將目標估值定在1.75兆美元，其中包含又稱超額配售權的綠鞋期權。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "台北國際電腦展6月2日登場，台股從5月底至6月2日連續3個交易日收盤創新高，並站上45500點。法人表示，美股收高，台積電ADR漲2.54%，台指期夜盤上漲583點，加上台北國際電腦展持續加溫 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606030008.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606030008.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-06-02T19:44:04.000Z",
-      "displayTime": "06/03 03:44"
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606030025.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606030025.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-03T00:37:49.000Z",
+      "displayTime": "06/03 08:37"
     },
     {
-      "title": "市場聚焦中東戰爭前景 歐洲股市收高",
+      "title": "中捷號誌異常電力跳脫 全線一度延誤已恢復營運",
       "date": "2026-06-03",
-      "category": "即時財經",
-      "summary": "由於投資人正在評估美國與伊朗達成和平協議的可能性，以及人工智慧（AI）熱潮再度推升科技股，國際油價今天下跌，歐洲股市主要指數收盤走揚。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606030002.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606030002.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-06-02T16:15:48.000Z",
-      "displayTime": "06/03 00:15"
-    },
-    {
-      "title": "黃仁勳開金口加持 Marvell早盤股價暴漲逾25%",
-      "date": "2026-06-03",
-      "category": "即時財經",
-      "summary": "美國晶片公司美滿電子科技（Marvell Technology，前譯邁威爾科技公司）今天早盤股價暴漲逾25%。輝達執行長黃仁勳稍早時曾表示，他預測Marvell將會是下一個兆美元公司。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606020398.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606020398.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-06-02T14:51:38.000Z",
-      "displayTime": "06/02 22:51"
+      "category": "即時生活",
+      "summary": "台中捷運公司今天表示，上午因號誌系統異常，造成電力跳脫，使全線列車延誤約21分鐘，目前已恢復正常營運，將逐步調整班距，發生原因尚在查證釐清。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606030023.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606030023.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-03T00:26:45.000Z",
+      "displayTime": "06/03 08:26"
     }
   ]
 }
