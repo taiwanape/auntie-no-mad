@@ -51,6 +51,7 @@ jobs:
           OPENAI_IMAGE_QUALITY: "medium"
           OPENAI_IMAGE_SIZE: "1536x1024"
           OPENAI_IMAGE_LIMIT: "9"
+          OPENAI_IMAGE_PROMPT_REVISION: "notext-v2"
           # Keep the site from silently staying stale if the Images API billing limit is hit.
           ALLOW_APPROVED_IMAGE_FALLBACK: "true"
 

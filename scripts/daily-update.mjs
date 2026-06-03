@@ -87,6 +87,7 @@ const imageGeneration = {
   quality: process.env.OPENAI_IMAGE_QUALITY || "medium",
   size: process.env.OPENAI_IMAGE_SIZE || "1536x1024",
   limit: Number.parseInt(process.env.OPENAI_IMAGE_LIMIT || "9", 10),
+  promptRevision: process.env.OPENAI_IMAGE_PROMPT_REVISION || "notext-v2",
   allowApprovedFallback: process.env.ALLOW_APPROVED_IMAGE_FALLBACK === "true"
 };
 
@@ -191,11 +192,13 @@ function imagePromptFor(target) {
   const title = cleanPromptText(target.item.title, 70);
   const summary = cleanPromptText(target.item.summary || target.item.reason, 140);
   const commonStyle = [
-    "Create a polished 16:9 landscape editorial comic illustration for the Taiwanese lifestyle brand '阿姨別生氣' / Auntie No Mad.",
+    "Create a polished 16:9 landscape editorial comic illustration for a Taiwanese lifestyle content brand. Represent the brand only through character design, colors, and mood.",
     "Quality bar: finished AI-generated editorial art, not SVG, not flat vector, not childish clip-art, not a low-effort collage.",
     "Visual style: bright yellow halftone background, thick black outlines, white sticker borders, comic cover energy, cream and hot-pink accents, playful Taiwan social-media illustration.",
     "Main character: cute middle-aged Taiwanese auntie, curly dark-brown short hair, rounded face, fuller body, black pixel sunglasses, gold hoop earrings, leopard-print top, black apron with a small pink heart.",
-    "No unreadable text, no fake Chinese, no fake letters, no watermark, no logo, no stock photo look, no 3D render, no distorted hands or face."
+    "Absolutely no visible writing anywhere: no Chinese characters, no English letters, no numbers, no brand title, no logo, no watermark, no signage, no captions, no labels, no speech-bubble words, no readable or fake text on papers, screens, phones, signs, badges, charts, or stickers.",
+    "Use icons, shapes, arrows, blank panels, abstract charts, and pictograms instead of words or numbers.",
+    "Do not crop the auntie's head, face, hands, or key objects; keep the full composition clean inside the 16:9 frame."
   ].join(" ");
 
   if (target.section === "stock") {
@@ -203,7 +206,7 @@ function imagePromptFor(target) {
       commonStyle,
       `Topic: Taiwanese stock/ETF observation for ${target.item.ticker} ${target.item.name}.`,
       `Story angle: ${summary}`,
-      "Scene: auntie at a desk with a tablet showing simple chart icons, sticky notes, calculator, coffee, piggy bank, and warning triangle stickers; make it educational and funny, not financial-advisor serious."
+      "Scene: auntie at a desk with a tablet showing simple unlabeled chart icons, blank sticky notes, calculator, coffee, piggy bank, and warning triangle stickers; make it educational and funny, not financial-advisor serious. Do not render the ticker, company name, prices, dates, or any market text."
     ].join(" ");
   }
 
@@ -211,7 +214,7 @@ function imagePromptFor(target) {
     return [
       commonStyle,
       "Topic: daily Taiwanese stock and ETF watchlist overview.",
-      "Scene: auntie reviewing four colorful cards on a large tablet, with chart stickers, a piggy bank, calculator, coffee, and a big caution sign; playful but trustworthy."
+      "Scene: auntie reviewing four colorful blank cards on a large tablet, with unlabeled chart stickers, a piggy bank, calculator, coffee, and a big caution icon; playful but trustworthy. No visible words, letters, or numbers."
     ].join(" ");
   }
 
@@ -220,7 +223,7 @@ function imagePromptFor(target) {
       commonStyle,
       `Topic: ${title}.`,
       `Story angle: ${summary}`,
-      "Scene: auntie warning the viewer about a daily-life trap, with phone, message bubbles, receipt, street or home-life props depending on the topic; humorous, practical, and slightly dramatic. Short Traditional Chinese warning labels are allowed only if crisp and legible, such as '別匯款', '先查證', or '打165'."
+      "Scene: auntie warning the viewer about a daily-life trap, with a phone, blank message bubbles, blank receipts, and street or home-life props depending on the topic; humorous, practical, and slightly dramatic. No text in the message bubbles, phone screen, receipt, signs, or stickers."
     ].join(" ");
   }
 
@@ -228,7 +231,7 @@ function imagePromptFor(target) {
     commonStyle,
     `Topic: ${title}.`,
     `Story angle: ${summary}`,
-    "Scene: auntie reacting to a real Taiwan life/news situation with household or commute props; make it feel like a clickable lifestyle article cover."
+    "Scene: auntie reacting to a real Taiwan life/news situation with household or commute props; make it feel like a clickable lifestyle article cover, using only icons and objects, with no visible text or numbers."
   ].join(" ");
 }
 
@@ -357,7 +360,7 @@ async function enrichGeneratedImages(nextContent) {
   const createdAssetPaths = [];
 
   for (const target of targets.slice(0, max)) {
-    const baseName = `${target.prefix}-${makeAssetId(target.item.title || target.item.name || target.prefix)}`;
+    const baseName = `${target.prefix}-${imageGeneration.promptRevision}-${makeAssetId(target.item.title || target.item.name || target.prefix)}`;
     const openAiAssetPath = `${dir}/${baseName}.png`;
     const approvedFallbackSourcePath = approvedImageFallbackFor(target);
     const approvedFallbackExt = path.extname(approvedFallbackSourcePath) || ".jpg";
@@ -410,6 +413,7 @@ async function enrichGeneratedImages(nextContent) {
     model: imageGeneration.model,
     quality: imageGeneration.quality,
     size: imageGeneration.size,
+    promptRevision: imageGeneration.promptRevision,
     error: openAiGenerated + openAiReused > 0 ? undefined : openAiError || undefined
   });
 

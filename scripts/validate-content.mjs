@@ -647,6 +647,27 @@ assert(opsHealthWorkflow.includes("ENABLE_PAGES_HTTPS"), "ops-health-check.yml m
 
 const opsHealthScript = fs.readFileSync(path.join(root, "scripts", "ops-health-check.mjs"), "utf8");
 assert(opsHealthScript.includes("metaDailyPostSkippedRun"), "ops-health-check must warn when Meta Daily Post silently skipped publishing");
+const dailyImagePromptBlock = dailyUpdateScript.slice(
+  dailyUpdateScript.indexOf("function imagePromptFor"),
+  dailyUpdateScript.indexOf("async function generateOpenAIImage")
+);
+
+assert(
+  dailyUpdateScript.includes("OPENAI_IMAGE_PROMPT_REVISION"),
+  "daily-update image filenames must include a prompt revision so bad image batches can be replaced without reusing stale files"
+);
+assert(
+  dailyUpdateScript.includes("Absolutely no visible writing anywhere"),
+  "daily-update image prompt must explicitly ban visible writing"
+);
+assert(
+  !/labels are allowed|allowed only if crisp|別匯款|先查證|打165/.test(dailyImagePromptBlock),
+  "daily-update image prompt must not allow generated text labels; AI text caused broken public images"
+);
+assert(
+  dailyUpdateWorkflow.includes("OPENAI_IMAGE_PROMPT_REVISION"),
+  "daily-update.yml must set OPENAI_IMAGE_PROMPT_REVISION when generating daily images"
+);
 
 if (warnings.length) {
   console.warn("Content warnings:");
