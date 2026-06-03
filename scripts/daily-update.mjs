@@ -1,4 +1,4 @@
-﻿import fs from "node:fs";
+import fs from "node:fs";
 import path from "node:path";
 import { publicImageUrl, publicSiteUrl, publicUrl } from "./public-site-url.mjs";
 
@@ -87,7 +87,7 @@ const imageGeneration = {
   quality: process.env.OPENAI_IMAGE_QUALITY || "medium",
   size: process.env.OPENAI_IMAGE_SIZE || "1536x1024",
   limit: Number.parseInt(process.env.OPENAI_IMAGE_LIMIT || "9", 10),
-  promptRevision: process.env.OPENAI_IMAGE_PROMPT_REVISION || "notext-v2",
+  promptRevision: process.env.OPENAI_IMAGE_PROMPT_REVISION || "auntie-ref-v4",
   allowApprovedFallback: process.env.ALLOW_APPROVED_IMAGE_FALLBACK === "true"
 };
 
@@ -192,12 +192,14 @@ function imagePromptFor(target) {
   const title = cleanPromptText(target.item.title, 70);
   const summary = cleanPromptText(target.item.summary || target.item.reason, 140);
   const commonStyle = [
-    "Create a polished 16:9 landscape editorial comic illustration for a Taiwanese lifestyle content brand. Represent the brand only through character design, colors, and mood.",
-    "Quality bar: finished AI-generated editorial art, not SVG, not flat vector, not childish clip-art, not a low-effort collage.",
-    "Visual style: bright yellow halftone background, thick black outlines, white sticker borders, comic cover energy, cream and hot-pink accents, playful Taiwan social-media illustration.",
-    "Main character: cute middle-aged Taiwanese auntie, curly dark-brown short hair, rounded face, fuller body, black pixel sunglasses, gold hoop earrings, leopard-print top, black apron with a small pink heart.",
-    "Absolutely no visible writing anywhere: no Chinese characters, no English letters, no numbers, no brand title, no logo, no watermark, no signage, no captions, no labels, no speech-bubble words, no readable or fake text on papers, screens, phones, signs, badges, charts, or stickers.",
-    "Use icons, shapes, arrows, blank panels, abstract charts, and pictograms instead of words or numbers.",
+    "Create a polished 16:9 landscape editorial comic illustration for a Taiwanese lifestyle content brand. Represent the brand only through character design, colors, props, and mood.",
+    "Match the approved Auntie No Mad website style: bright yellow halftone background, thick black ink outlines, white sticker-cut borders, hot-pink accent icons, cream paper tones, playful Taiwan sticker/comic style, clean bold shapes, and expressive polished cartoon rendering.",
+    "Do not make a flat vector poster, icon collage, simple mascot graphic, logo banner, typography poster, corporate ad, infographic, or childish clip-art.",
+    "Preserve the character identity exactly: middle-aged Taiwanese auntie, round fuller face, full curly dark-brown short hair with big swooping curls, black pixel sunglasses, gold hoop earrings, leopard-print long sleeves/top, black apron with a small pink heart, fuller body, confident auntie attitude.",
+    "Do not make the auntie younger, thinner, cuter in a different way, or change her hairstyle, face shape, glasses, clothes, or body type.",
+    "The auntie must be the large first-read character in a rich Taiwan lifestyle/editorial scene, not a tiny icon and not a cropped logo mascot.",
+    "Absolutely no visible writing anywhere: no Chinese characters, no English letters, no numbers, no stock tickers, no company names, no brand title, no logo, no watermark, no signage, no captions, no labels, no speech-bubble words, no readable or fake text on papers, screens, phones, signs, badges, charts, cards, stickers, or map pins.",
+    "Use blank icons, shapes, arrows, colored dots, pictograms, empty check circles, abstract charts, and blank panels instead of words or numbers. Blank screens, blank cards, and blank papers are allowed; fake writing is not.",
     "Do not crop the auntie's head, face, hands, or key objects; keep the full composition clean inside the 16:9 frame."
   ].join(" ");
 
@@ -206,7 +208,7 @@ function imagePromptFor(target) {
       commonStyle,
       `Topic: Taiwanese stock/ETF observation for ${target.item.ticker} ${target.item.name}.`,
       `Story angle: ${summary}`,
-      "Scene: auntie at a desk with a tablet showing simple unlabeled chart icons, blank sticky notes, calculator, coffee, piggy bank, and warning triangle stickers; make it educational and funny, not financial-advisor serious. Do not render the ticker, company name, prices, dates, or any market text."
+      "Scene: auntie at a kitchen-table market desk with abstract chart panels, blank sticky notes, a magnifying glass, coffee, semiconductor or ETF-related props, and warning icons; make it educational and funny, not financial-advisor serious. No coins, cash, currency signs, piggy banks, extra mascots, ticker symbols, company names, prices, dates, or any market text."
     ].join(" ");
   }
 
@@ -214,7 +216,7 @@ function imagePromptFor(target) {
     return [
       commonStyle,
       "Topic: daily Taiwanese stock and ETF watchlist overview.",
-      "Scene: auntie reviewing four colorful blank cards on a large tablet, with unlabeled chart stickers, a piggy bank, calculator, coffee, and a big caution icon; playful but trustworthy. No visible words, letters, or numbers."
+      "Scene: auntie reviewing four colorful blank cards at a kitchen-table command center, with abstract chart stickers, a shiny semiconductor wafer, a simple basket of blank colored blocks, coffee, notebook with blank pages, and a caution icon; playful but trustworthy. No coins, cash, currency signs, piggy banks, extra mascots, visible words, letters, or numbers."
     ].join(" ");
   }
 
