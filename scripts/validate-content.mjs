@@ -800,6 +800,15 @@ const benchmarkDoc = fs.readFileSync(path.join(root, "docs", "TAIWAN_TOP_SITES_B
 const liveNewsWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "live-news-update.yml"), "utf8");
 assert(liveNewsWorkflow.includes("data/live-news-report.json"), "live-news-update.yml must publish the live news report");
 assert(liveNewsWorkflow.includes("data/site-image-debt.json"), "live-news-update.yml must publish the site image debt report");
+const imageDebtWorkflowPath = path.join(root, ".github", "workflows", "regenerate-image-debt.yml");
+assert(fileExists(".github/workflows/regenerate-image-debt.yml"), "regenerate-image-debt.yml workflow missing");
+const imageDebtWorkflow = fs.readFileSync(imageDebtWorkflowPath, "utf8");
+assert(imageDebtWorkflow.includes("workflow_dispatch"), "regenerate-image-debt.yml must be manually dispatchable");
+assert(imageDebtWorkflow.includes("OPENAI_API_KEY"), "regenerate-image-debt.yml must use the OpenAI API key secret");
+assert(imageDebtWorkflow.includes("regenerate:image-debt"), "regenerate-image-debt.yml must run the image debt regeneration script");
+assert(imageDebtWorkflow.includes("audit:image-debt"), "regenerate-image-debt.yml must regenerate the image debt report");
+assert(imageDebtWorkflow.includes("test:image-debt"), "regenerate-image-debt.yml must verify the image debt report");
+assert(imageDebtWorkflow.includes("deploy-pages"), "regenerate-image-debt.yml must deploy Pages after committing generated images");
 const gitignore = fs.readFileSync(path.join(root, ".gitignore"), "utf8");
 assert(!gitignore.includes("data/live-news-report.json"), "data/live-news-report.json must not be ignored");
 const dailyUpdateScript = fs.readFileSync(path.join(root, "scripts", "daily-update.mjs"), "utf8");
@@ -841,6 +850,7 @@ assert(opsHealthWorkflow.includes("ENABLE_PAGES_HTTPS"), "ops-health-check.yml m
 const opsHealthScript = fs.readFileSync(path.join(root, "scripts", "ops-health-check.mjs"), "utf8");
 assert(fileExists("scripts/audit-site-images.mjs"), "site image audit script missing");
 assert(fileExists("scripts/write-image-debt-report.mjs"), "site image debt report script missing");
+assert(fileExists("scripts/regenerate-image-debt.mjs"), "site image debt regeneration script missing");
 assert(opsHealthScript.includes("audit-site-images.mjs"), "ops-health-check must run the site image audit");
 assert(opsHealthScript.includes("write-image-debt-report.mjs"), "ops-health-check must verify the site image debt report");
 assert(opsHealthScript.includes("metaDailyPostSkippedRun"), "ops-health-check must warn when Meta Daily Post silently skipped publishing");

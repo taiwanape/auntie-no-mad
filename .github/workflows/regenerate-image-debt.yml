@@ -1,0 +1,113 @@
+name: Regenerate Image Debt
+
+on:
+  workflow_dispatch:
+    inputs:
+      priority:
+        description: "Image debt priority to regenerate"
+        required: true
+        default: "P1"
+        type: choice
+        options:
+          - P1
+          - P2
+      limit:
+        description: "Maximum images to regenerate"
+        required: true
+        default: "8"
+      force:
+        description: "Regenerate even when the target image file already exists"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: regenerate-image-debt
+  cancel-in-progress: false
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    env:
+      GENERATE_DAILY_IMAGES: "true"
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_IMAGE_MODEL: gpt-image-1
+      OPENAI_IMAGE_QUALITY: medium
+      OPENAI_IMAGE_SIZE: 1536x1024
+      OPENAI_IMAGE_OUTPUT_FORMAT: jpeg
+      OPENAI_IMAGE_OUTPUT_COMPRESSION: "88"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check OpenAI key
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "OPENAI_API_KEY secret is missing; cannot regenerate image debt."
+            exit 1
+          fi
+
+      - name: Regenerate image debt
+        run: |
+          FORCE_FLAG=""
+          if [ "${{ inputs.force }}" = "true" ]; then
+            FORCE_FLAG="--force"
+          fi
+          npm run regenerate:image-debt -- --priority "${{ inputs.priority }}" --limit "${{ inputs.limit }}" $FORCE_FLAG
+
+      - name: Regenerate site surfaces
+        run: |
+          npm run generate:archive
+          npm run generate:seo
+          npm run generate:share-pack
+          npm run generate:social-posts
+          npm run generate:today
+          npm run generate:links
+          npm run audit:image-debt
+
+      - name: Validate
+        run: |
+          npm test
+          npm run audit:images
+          npm run test:image-debt
+          npm run test:social-previews
+
+      - name: Commit regenerated debt images
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/generated data/site-content.json data/site-image-debt.json data/share-pack.json data/social-posts.json sitemap.xml robots.txt rss.xml feed.json site.webmanifest llms.txt index.html today.html archive.html links.html radar stories stocks
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No image debt changes to commit."
+            exit 0
+          fi
+          git commit -m "Regenerate ${{ inputs.priority }} image debt"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Setup Pages
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy Pages
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/deploy-pages@v4

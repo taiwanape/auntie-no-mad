@@ -16,6 +16,8 @@
     "audit:images": "node scripts/audit-site-images.mjs",
     "audit:image-debt": "node scripts/write-image-debt-report.mjs",
     "test:image-debt": "node scripts/write-image-debt-report.mjs --check",
+    "regenerate:image-debt": "node scripts/regenerate-image-debt.mjs",
+    "regenerate:image-debt:dry-run": "node scripts/regenerate-image-debt.mjs --dry-run --priority P1 --limit 8",
     "test:social-previews": "node scripts/audit-social-previews.mjs",
     "test:x-queue": "node scripts/validate-x-content-queue.mjs",
     "test:x-api": "node scripts/test-x-api.mjs",

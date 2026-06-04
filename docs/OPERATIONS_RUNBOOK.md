@@ -38,11 +38,15 @@ Check:
 - Preserve existing public content if fetch/update fails.
 - Do not break archive links.
 - Hide historical pages that still use approved fallback primary images from archive, sitemap, RSS, and JSON feed until their art is replaced.
+- Regenerate historical fallback art through the manual GitHub Action `Regenerate Image Debt`, starting with `priority=P1` and `limit=8`.
+- That workflow must create fresh OpenAI images, update each HTML page, regenerate archive/SEO/share surfaces, refresh `data/site-image-debt.json`, and deploy only after validation passes.
 - After content changes, run:
 
 ```powershell
 npm test
 npm run audit:images
+npm run test:image-debt
+npm run regenerate:image-debt:dry-run
 npm run generate:seo
 ```
 
