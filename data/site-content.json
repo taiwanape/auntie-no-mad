@@ -2,91 +2,91 @@
   "site": {
     "name": "阿姨別生氣",
     "url": "http://auntienomad.com/",
-    "updatedAt": "2026-06-04T07:00:00+08:00",
-    "dailyNote": "看完整 2026/06/04 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
-    "dailyNoteUrl": "stocks/2026-06-04-market-watch.html",
+    "updatedAt": "2026-06-05T07:00:00+08:00",
+    "dailyNote": "看完整 2026/06/05 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
+    "dailyNoteUrl": "stocks/2026-06-05-market-watch.html",
     "liveNewsUpdatedAt": "2026-06-04T17:23:14.815Z"
   },
   "lifeRadar": [
     {
-      "title": "柯志恩提「雄好騎」5大政策 打造健康低碳新港都",
-      "date": "2026-06-04",
+      "title": "新北交通局納AI新技術 將增設智慧運輸中心",
+      "date": "2026-06-05",
       "category": "交通生活",
-      "summary": "（中央社記者蔡孟妤高雄3日電）國民黨高雄市長參選人柯志恩今天提出「雄好騎」5大政策，包括YouBike費率優惠、長者友善措施、自行車路網升級、AI智慧調度及大眾運輸串接，全面完善高雄綠色運輸交通網。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "summary": "（中央社記者王鴻國新北4日電）新北市政府交通局因應人工智慧（AI）等新技術應用，將增設智慧運輸中心，預定年底前進駐位於三重區的新北市府第二行政中心，整合智慧交控、智慧停車及智慧公運等應用系統。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
       "auntieComment": "交通消息先看一眼，少在月台或路上多煩十分鐘。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606030248.aspx",
-      "slug": "radar/2026-06-04-life-1.html",
-      "thumbnail": "assets/generated/2026-06-04/life-1-kaohsiung-bike-policy-ai-v2.jpg",
-      "thumbnailAlt": "阿姨整理柯志恩提「雄好騎」5大政策 打造健康低碳新港都的生活雷達縮圖",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606040325.aspx",
+      "slug": "radar/2026-06-05-life-1.html",
+      "thumbnail": "assets/generated/2026-06-05/life-1-auntie-ref-v4-qho31q.jpg",
+      "thumbnailAlt": "阿姨整理新北交通局納AI新技術 將增設智慧運輸中心的生活雷達縮圖",
       "cta": "新聞重點、阿姨白話翻譯與你今天可以先做的事。",
       "sourceName": "中央社地方新聞",
-      "hero": "assets/generated/2026-06-04/life-1-kaohsiung-bike-policy-ai-v2.jpg"
+      "hero": "assets/generated/2026-06-05/life-1-auntie-ref-v4-qho31q.jpg"
     },
     {
-      "title": "大台北4日高溫悶熱上看36度 5日午後留意豪雨",
-      "date": "2026-06-04",
+      "title": "氣象署發布5縣市豪雨特報 雲林等地留意大雨",
+      "date": "2026-06-05",
       "category": "天氣生活",
-      "summary": "（中央社記者張雄風台北3日電）氣象署表示，明天大台北、花東縱谷仍要留意高溫，5日降雨顯著，大台北午後防豪雨；6、7日雨勢略緩，但8日起為期一週受滯留鋒及西南氣流影響，西半部、東北部防大雨或豪雨。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "summary": "（中央社台北4日電）交通部中央氣象署發布5縣市豪雨特報，西南風影響及對流雲系發展旺盛，易有短延時強降雨，新北、桃園、南投縣及新竹縣山區、高雄山區今天有局部大雨或豪雨，雲林縣等地留意大雨。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
       "auntieComment": "天氣不是拿來焦慮的，是拿來決定要不要帶傘、改行程。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606030292.aspx",
-      "slug": "radar/2026-06-04-life-2.html",
-      "thumbnail": "assets/generated/2026-06-04/life-2-taipei-heat-rain-ai-v2.jpg",
-      "thumbnailAlt": "阿姨整理大台北4日高溫悶熱上看36度 5日午後留意豪雨的生活雷達縮圖",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606040329.aspx",
+      "slug": "radar/2026-06-05-life-2.html",
+      "thumbnail": "assets/generated/2026-06-05/life-2-auntie-ref-v4-1v3kpch.jpg",
+      "thumbnailAlt": "阿姨整理氣象署發布5縣市豪雨特報 雲林等地留意大雨的生活雷達縮圖",
       "cta": "新聞重點、阿姨白話翻譯與你今天可以先做的事。",
       "sourceName": "中央社生活醫藥",
-      "hero": "assets/generated/2026-06-04/life-2-taipei-heat-rain-ai-v2.jpg"
+      "hero": "assets/generated/2026-06-05/life-2-auntie-ref-v4-1v3kpch.jpg"
     }
   ],
   "pitfalls": [
     {
-      "title": "假出金集團金主起訴移審 北院裁定1600萬交保",
-      "date": "2026-06-04",
+      "title": "酒駕罰單引口角縱火 新北男涉公共危險遭移送",
+      "date": "2026-06-05",
       "category": "踩坑提醒",
-      "summary": "（中央社記者謝君臨台北3日電）假出金集團「美樂公司」聯手詐欺機房，以假投資手法詐騙逾158億元，北檢昨天起訴金主王景琪移審北院。北院訊後裁定在押王男以1600萬元交保並境管、科控，王男今天辦保離去。 阿姨提醒：越急、越便宜、越像好康，越要先停三秒。",
+      "summary": "（中央社記者黃旭昇新北4日電）新北市新店區51歲陳姓男子疑因酒駕罰單問題與妻子發生爭執後，今天下午在住家臥室縱火。警消到場滅火時1名警員嗆傷，與夫妻共3人都送醫無礙，全案依公共危險罪嫌移送偵辦。 阿姨提醒：越急、越便宜、越像好康，越要先停三秒。",
       "auntieComment": "不是你笨，是套路越來越會穿西裝。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606030239.aspx",
-      "slug": "stories/2026-06-04-pitfall-1.html",
-      "thumbnail": "assets/generated/2026-06-04/pitfall-1-fake-withdrawal-bail-ai-v2.jpg",
-      "thumbnailAlt": "阿姨整理假出金集團金主起訴移審 北院裁定1600萬交保的踩坑日記縮圖",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606040263.aspx",
+      "slug": "stories/2026-06-05-pitfall-1.html",
+      "thumbnail": "assets/generated/2026-06-05/pitfall-1-auntie-ref-v4-n9m77u.jpg",
+      "thumbnailAlt": "阿姨整理酒駕罰單引口角縱火 新北男涉公共危險遭移送的踩坑日記縮圖",
       "cta": "先看懂套路，別把錢包推出去。",
       "sourceName": "中央社社會新聞",
-      "hero": "assets/generated/2026-06-04/pitfall-1-fake-withdrawal-bail-ai-v2.jpg"
+      "hero": "assets/generated/2026-06-05/pitfall-1-auntie-ref-v4-n9m77u.jpg"
     },
     {
-      "title": "建商遭假投資詐騙 銀樓公會公布金條序號助追查",
-      "date": "2026-06-04",
+      "title": "新北強降雨多處積淹水 災變中心強化三級開設",
+      "date": "2026-06-05",
       "category": "生活踩坑",
-      "summary": "（中央社記者郭宣彣新竹縣3日電）新竹邱姓建商誤信假投資詐騙，損失逾6500萬元，其中包含大量（UBS）瑞士銀行投資級金條，全國銀樓同業公會今天公告金條序號，籲業者如發現應停止交易、通報警方追查流向。 阿姨提醒：越急、越便宜、越像好康，越要先停三秒。",
+      "summary": "（中央社記者王鴻國、黃旭昇新北4日電）新北市今天下午出現雷雨，大雨狂灌下，強降雨造成多處積淹水，市府災害應變中心強化三級開設，但隨雨勢漸歇，大多積淹水退去。 阿姨提醒：越急、越便宜、越像好康，越要先停三秒。",
       "auntieComment": "不是你笨，是套路越來越會穿西裝。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606030238.aspx",
-      "slug": "stories/2026-06-04-pitfall-2.html",
-      "thumbnail": "assets/generated/2026-06-04/pitfall-2-fake-investment-gold-bars-ai-v2.jpg",
-      "thumbnailAlt": "阿姨整理建商遭假投資詐騙 銀樓公會公布金條序號助追查的踩坑日記縮圖",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606040377.aspx",
+      "slug": "stories/2026-06-05-pitfall-2.html",
+      "thumbnail": "assets/generated/2026-06-05/pitfall-2-auntie-ref-v4-13gjmia.jpg",
+      "thumbnailAlt": "阿姨整理新北強降雨多處積淹水 災變中心強化三級開設的踩坑日記縮圖",
       "cta": "先看懂套路，別把錢包推出去。",
       "sourceName": "中央社社會新聞",
-      "hero": "assets/generated/2026-06-04/pitfall-2-fake-investment-gold-bars-ai-v2.jpg"
+      "hero": "assets/generated/2026-06-05/pitfall-2-auntie-ref-v4-13gjmia.jpg"
     }
   ],
   "stockOverview": {
     "title": "股市ETF",
-    "date": "2026-06-04",
+    "date": "2026-06-05",
     "category": "股市 ETF",
     "summary": "今天固定四檔：兩檔熱門股、一檔新星觀察、一檔高人氣但風險也要看的 ETF。每檔都附阿姨白話理由，但仍然不是買賣建議。",
     "auntieComment": "不是報明牌，是把市場消息整理成白話文。",
     "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?response=json",
-    "slug": "stocks/2026-06-04-market-watch.html",
+    "slug": "stocks/2026-06-05-market-watch.html",
     "badge": "早晨版",
     "marketCards": [
       {
-        "label": "熱門股 2408",
-        "value": "南亞科",
+        "label": "熱門股 2454",
+        "value": "聯發科",
         "note": "熱門股 A",
         "trend": "熱門股",
         "tone": "up"
       },
       {
-        "label": "熱門股 2344",
-        "value": "華邦電",
+        "label": "熱門股 2303",
+        "value": "聯電",
         "note": "熱門股 B",
         "trend": "熱門股",
         "tone": "up"
@@ -106,63 +106,63 @@
         "tone": "down"
       }
     ],
-    "hero": "assets/generated/2026-06-04/stock-overview-etf-market-ai-v2.jpg"
+    "hero": "assets/generated/2026-06-05/stock-overview-auntie-ref-v4-1jfljyp.jpg"
   },
   "stockWatchlist": [
     {
-      "title": "南亞科",
-      "date": "2026-06-04",
+      "title": "聯發科",
+      "date": "2026-06-05",
       "category": "熱門股",
-      "summary": "401.50 收盤，漲跌 -18.00。南亞科 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
+      "summary": "4,430.00 收盤，漲跌 -115.00。聯發科 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
       "auntieComment": "熱鬧可以看，但不要把熱鬧當答案。",
-      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260603&stockNo=2408&response=json",
-      "slug": "stocks/2026-06-04-2408.html",
-      "ticker": "2408",
-      "name": "南亞科",
+      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260604&stockNo=2454&response=json",
+      "slug": "stocks/2026-06-05-2454.html",
+      "ticker": "2454",
+      "name": "聯發科",
       "type": "熱門股 A",
-      "reason": "南亞科 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
+      "reason": "聯發科 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
       "riskLevel": "中高",
       "riskNote": "成交熱度高時波動也常變大，追題材前要先看風險。",
       "suitableFor": "想練習看成交量、題材與基本面的觀察者。",
       "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
       "disclaimer": "僅供教育與資訊參考，不是投資建議。",
-      "updatedAt": "2026-06-04T07:00:00+08:00",
-      "close": "401.50",
-      "change": "-18.00",
+      "updatedAt": "2026-06-05T07:00:00+08:00",
+      "close": "4,430.00",
+      "change": "-115.00",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-06-04/stock-1-2408-dram-ai-v2.jpg"
+      "image": "assets/generated/2026-06-05/stock-1-2454-auntie-ref-v4-2lh59j.jpg"
     },
     {
-      "title": "華邦電",
-      "date": "2026-06-04",
+      "title": "聯電",
+      "date": "2026-06-05",
       "category": "熱門股",
-      "summary": "177.50 收盤，漲跌 -7.00。華邦電 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
+      "summary": "125.00 收盤，漲跌 -5.50。聯電 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
       "auntieComment": "熱鬧可以看，但不要把熱鬧當答案。",
-      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260603&stockNo=2344&response=json",
-      "slug": "stocks/2026-06-04-2344.html",
-      "ticker": "2344",
-      "name": "華邦電",
+      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260604&stockNo=2303&response=json",
+      "slug": "stocks/2026-06-05-2303.html",
+      "ticker": "2303",
+      "name": "聯電",
       "type": "熱門股 B",
-      "reason": "華邦電 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
+      "reason": "聯電 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
       "riskLevel": "中高",
       "riskNote": "成交熱度高時波動也常變大，追題材前要先看風險。",
       "suitableFor": "想練習看成交量、題材與基本面的觀察者。",
       "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
       "disclaimer": "僅供教育與資訊參考，不是投資建議。",
-      "updatedAt": "2026-06-04T07:00:00+08:00",
-      "close": "177.50",
-      "change": "-7.00",
+      "updatedAt": "2026-06-05T07:00:00+08:00",
+      "close": "125.00",
+      "change": "-5.50",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-06-04/stock-2-2344-memory-ai-v2.jpg"
+      "image": "assets/generated/2026-06-05/stock-2-2303-auntie-ref-v4-02tsz5.jpg"
     },
     {
       "title": "力積電",
-      "date": "2026-06-04",
+      "date": "2026-06-05",
       "category": "新星觀察",
-      "summary": "84.60 收盤，漲跌 -1.30。力積電 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
+      "summary": "81.00 收盤，漲跌 -3.60。力積電 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
       "auntieComment": "熱鬧可以看，但不要把熱鬧當答案。",
-      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260603&stockNo=6770&response=json",
-      "slug": "stocks/2026-06-04-6770.html",
+      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260604&stockNo=6770&response=json",
+      "slug": "stocks/2026-06-05-6770.html",
       "ticker": "6770",
       "name": "力積電",
       "type": "新星觀察股",
@@ -172,20 +172,20 @@
       "suitableFor": "想練習看成交量、題材與基本面的觀察者。",
       "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
       "disclaimer": "僅供教育與資訊參考，不是投資建議。",
-      "updatedAt": "2026-06-04T07:00:00+08:00",
-      "close": "84.60",
-      "change": "-1.30",
+      "updatedAt": "2026-06-05T07:00:00+08:00",
+      "close": "81.00",
+      "change": "-3.60",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-06-04/stock-3-6770-foundry-ai-v2.jpg"
+      "image": "assets/generated/2026-06-05/stock-3-6770-auntie-ref-v4-3f959k.jpg"
     },
     {
       "title": "群益台灣精選高息",
-      "date": "2026-06-04",
+      "date": "2026-06-05",
       "category": "風險題材 ETF",
-      "summary": "30.78 收盤，漲跌 +0.48。高人氣 ETF 容易被配息吸引，但更要看淨值、成分股與填息。",
+      "summary": "30.52 收盤，漲跌 -0.26。高人氣 ETF 容易被配息吸引，但更要看淨值、成分股與填息。",
       "auntieComment": "息很香，但不要只聞香味，還要看成本。",
-      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260603&stockNo=00919&response=json",
-      "slug": "stocks/2026-06-04-00919.html",
+      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260604&stockNo=00919&response=json",
+      "slug": "stocks/2026-06-05-00919.html",
       "ticker": "00919",
       "name": "群益台灣精選高息",
       "type": "風險題材 / 高人氣 ETF",
@@ -195,11 +195,11 @@
       "suitableFor": "想練習看 ETF 配息、淨值與成分股的人。",
       "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
       "disclaimer": "僅供教育與資訊參考，不是投資建議。",
-      "updatedAt": "2026-06-04T07:00:00+08:00",
-      "close": "30.78",
-      "change": "+0.48",
+      "updatedAt": "2026-06-05T07:00:00+08:00",
+      "close": "30.52",
+      "change": "-0.26",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-06-04/stock-4-00919-dividend-etf-ai-v2.jpg"
+      "image": "assets/generated/2026-06-05/stock-4-00919-auntie-ref-v4-u1gsax.jpg"
     }
   ],
   "etfGuide": [
@@ -271,6 +271,15 @@
   ],
   "fridgeNotes": [
     {
+      "title": "收據先別丟",
+      "date": "2026-06-05",
+      "category": "冰箱便條紙",
+      "summary": "退貨、報帳、保固，很多麻煩都是一張紙救回來的。",
+      "auntieComment": "不是叫你囤垃圾，是叫你留證據。",
+      "sourceUrl": "https://cpc.ey.gov.tw/",
+      "slug": "note-2026-06-05-receipt"
+    },
+    {
       "title": "今天先查來源",
       "date": "2026-06-04",
       "category": "冰箱便條紙",
@@ -296,18 +305,36 @@
       "auntieComment": "傘不是迷信，是給自己留台階。",
       "sourceUrl": "https://www.cwa.gov.tw/V8/C/",
       "slug": "note-2026-06-02-weather"
-    },
-    {
-      "title": "收據先別丟",
-      "date": "2026-06-01",
-      "category": "冰箱便條紙",
-      "summary": "退貨、報帳、保固，很多麻煩都是一張紙救回來的。",
-      "auntieComment": "不是叫你囤垃圾，是叫你留證據。",
-      "sourceUrl": "https://cpc.ey.gov.tw/",
-      "slug": "note-2026-06-01-receipt"
     }
   ],
   "archive": [
+    {
+      "title": "今日市場筆記 2026/06/05",
+      "date": "2026-06-05",
+      "category": "股市 ETF",
+      "summary": "今天固定四檔：兩檔熱門股、一檔新星觀察、一檔高人氣但風險也要看的 ETF。每檔都附阿姨白話理由，但仍然不是買賣建議。",
+      "auntieComment": "不是報明牌，是把市場消息整理成白話文。",
+      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?response=json",
+      "slug": "stocks/2026-06-05-market-watch.html"
+    },
+    {
+      "title": "新北交通局納AI新技術 將增設智慧運輸中心",
+      "date": "2026-06-05",
+      "category": "交通生活",
+      "summary": "（中央社記者王鴻國新北4日電）新北市政府交通局因應人工智慧（AI）等新技術應用，將增設智慧運輸中心，預定年底前進駐位於三重區的新北市府第二行政中心，整合智慧交控、智慧停車及智慧公運等應用系統。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "auntieComment": "交通消息先看一眼，少在月台或路上多煩十分鐘。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606040325.aspx",
+      "slug": "radar/2026-06-05-life-1.html"
+    },
+    {
+      "title": "氣象署發布5縣市豪雨特報 雲林等地留意大雨",
+      "date": "2026-06-05",
+      "category": "天氣生活",
+      "summary": "（中央社台北4日電）交通部中央氣象署發布5縣市豪雨特報，西南風影響及對流雲系發展旺盛，易有短延時強降雨，新北、桃園、南投縣及新竹縣山區、高雄山區今天有局部大雨或豪雨，雲林縣等地留意大雨。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "auntieComment": "天氣不是拿來焦慮的，是拿來決定要不要帶傘、改行程。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606040329.aspx",
+      "slug": "radar/2026-06-05-life-2.html"
+    },
     {
       "title": "今日市場筆記 2026/06/04",
       "date": "2026-06-04",
@@ -563,6 +590,30 @@
   ],
   "liveNews": [
     {
+      "title": "投資人對美伊達成協議抱希望 國價油價挫約3%",
+      "date": "2026-06-05",
+      "category": "即時財經",
+      "summary": "以色列與黎巴嫩達成停火協議後，投資人對美國與伊朗結束戰爭、荷莫茲海峽（Strait of Hormuz）重新開放抱持希望，國際油價今天終場下跌約3%。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606050006.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606050006.aspx",
+      "sourceName": "中央社財經新聞",
+      "publishedAt": "2026-06-04T19:51:33.000Z",
+      "displayTime": "06/05 03:51"
+    },
+    {
+      "title": "中東局勢變數未除 歐洲股市仍收紅",
+      "date": "2026-06-05",
+      "category": "即時財經",
+      "summary": "以色列與黎巴嫩在前一天晚間達成停火協議，但美國與伊朗之間的緊張情勢仍在，儘管如此，歐洲股市今天走高，倫敦、巴黎、法蘭克福等主要股市全面收紅。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606050002.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606050002.aspx",
+      "sourceName": "中央社財經新聞",
+      "publishedAt": "2026-06-04T17:06:21.000Z",
+      "displayTime": "06/05 01:06"
+    },
+    {
       "title": "蘋果App Store生態系去年產值創高 AI功能吸金效應強",
       "date": "2026-06-05",
       "category": "即時科技",
@@ -570,7 +621,7 @@
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
       "sourceUrl": "https://www.cna.com.tw/news/ait/202606040390.aspx",
       "slug": "https://www.cna.com.tw/news/ait/202606040390.aspx",
-      "sourceName": "中央社科技",
+      "sourceName": "中央社科技新聞",
       "publishedAt": "2026-06-04T14:26:04.000Z",
       "displayTime": "06/04 22:26"
     },
@@ -582,7 +633,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202606040387.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202606040387.aspx",
-      "sourceName": "中央社產經證券",
+      "sourceName": "中央社財經新聞",
       "publishedAt": "2026-06-04T14:14:57.000Z",
       "displayTime": "06/04 22:14"
     },
@@ -594,7 +645,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202606040385.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202606040385.aspx",
-      "sourceName": "中央社生活",
+      "sourceName": "中央社生活醫藥",
       "publishedAt": "2026-06-04T14:04:53.000Z",
       "displayTime": "06/04 22:04"
     },
@@ -606,33 +657,9 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202606040383.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202606040383.aspx",
-      "sourceName": "中央社生活",
+      "sourceName": "中央社生活醫藥",
       "publishedAt": "2026-06-04T14:03:49.000Z",
       "displayTime": "06/04 22:03"
-    },
-    {
-      "title": "博通營收展望不如預期 美國股市開盤多下跌",
-      "date": "2026-06-05",
-      "category": "即時財經",
-      "summary": "美國無廠半導體公司博通（Broadcom）的營收展望不如各界預期，使晶片類股今天承壓，華爾街股市主要指數開盤大多挫跌。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606040381.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606040381.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-04T14:00:44.000Z",
-      "displayTime": "06/04 22:00"
-    },
-    {
-      "title": "中國低價競爭衝擊 晶片商安森美捷克廠將裁300員工",
-      "date": "2026-06-05",
-      "category": "即時科技",
-      "summary": "美國晶片製造商安森美近期宣布，將裁減其位在捷克羅茲諾夫廠區約200至300名員工，主要為碳化矽晶圓製造部門人員。捷媒分析，此次裁員主因為中國碳化矽晶圓供應商因政府補貼、低電價優勢，以遠低於西方 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606040379.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202606040379.aspx",
-      "sourceName": "中央社科技",
-      "publishedAt": "2026-06-04T13:56:40.000Z",
-      "displayTime": "06/04 21:56"
     }
   ]
 }
