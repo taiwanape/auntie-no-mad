@@ -10,6 +10,10 @@ function normalizePath(value = "") {
   return String(value).replaceAll("\\", "/");
 }
 
+function normalizeNewlines(value = "") {
+  return String(value).replace(/\r\n/g, "\n");
+}
+
 function slugId(page) {
   return normalizePath(page)
     .replace(/\.html$/i, "")
@@ -116,7 +120,7 @@ const nextJson = `${JSON.stringify(buildReport(), null, 2)}\n`;
 
 if (checkOnly) {
   const currentJson = fs.existsSync(outPath) ? fs.readFileSync(outPath, "utf8") : "";
-  if (currentJson !== nextJson) {
+  if (normalizeNewlines(currentJson) !== normalizeNewlines(nextJson)) {
     console.error("data/site-image-debt.json is out of sync; run npm run audit:image-debt");
     process.exit(1);
   }
