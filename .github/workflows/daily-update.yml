@@ -54,6 +54,8 @@ jobs:
           OPENAI_IMAGE_PROMPT_REVISION: "auntie-ref-v4"
           # Keep the site from silently staying stale if the Images API billing limit is hit.
           ALLOW_APPROVED_IMAGE_FALLBACK: "true"
+          # Stop publishing unreviewed AI images until automated visual QA is reliable.
+          FORCE_APPROVED_IMAGE_FALLBACK: "true"
 
       - name: Generate SEO files
         run: npm run generate:seo

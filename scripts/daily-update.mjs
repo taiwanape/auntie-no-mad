@@ -88,7 +88,8 @@ const imageGeneration = {
   size: process.env.OPENAI_IMAGE_SIZE || "1536x1024",
   limit: Number.parseInt(process.env.OPENAI_IMAGE_LIMIT || "9", 10),
   promptRevision: process.env.OPENAI_IMAGE_PROMPT_REVISION || "auntie-ref-v4",
-  allowApprovedFallback: process.env.ALLOW_APPROVED_IMAGE_FALLBACK === "true"
+  allowApprovedFallback: process.env.ALLOW_APPROVED_IMAGE_FALLBACK === "true",
+  forceApprovedFallback: process.env.FORCE_APPROVED_IMAGE_FALLBACK === "true"
 };
 
 const fridgeNotePool = [
@@ -290,6 +291,7 @@ function approvedImageFallbackFor(target) {
     fraud: "assets/generated/2026-05-29/pitfall-2-ai.jpg",
     market: "assets/generated/2026-05-29/stock-overview-ai.jpg",
     stock2408: "assets/generated/2026-05-29/stock-2408-ai.jpg",
+    stock2344: "assets/generated/2026-05-29/stock-2408-ai.jpg",
     stock2454: "assets/generated/2026-05-29/stock-2454-ai.jpg",
     stock6770: "assets/generated/2026-05-29/stock-6770-ai.jpg",
     stock00919: "assets/generated/2026-05-29/stock-00919-ai.jpg"
@@ -300,7 +302,7 @@ function approvedImageFallbackFor(target) {
     return approved[`stock${target.item.ticker}`] || approved.market;
   }
   if (target.section === "pitfall") {
-    if (/結婚|婚|婚姻|詐財|現金|搜索/.test(text)) return approved.fraud;
+    if (/詐騙|詐欺|假投資|假出金|出金|金條|金主|結婚|婚|婚姻|詐財|現金|搜索/.test(text)) return approved.fraud;
     return approved.scam;
   }
   if (/演唱會|售票|票券|搶票|門票|五月天|金曲/.test(text)) return approved.ticket;
@@ -369,6 +371,9 @@ async function enrichGeneratedImages(nextContent) {
     const approvedFallbackAssetPath = `${dir}/${baseName}-approved${approvedFallbackExt}`;
     const openAiOutputPath = path.join(root, openAiAssetPath);
     try {
+      if (imageGeneration.forceApprovedFallback) {
+        throw new Error("approved image fallback forced before public publish");
+      }
       if (process.env.OPENAI_API_KEY && !skipOpenAiAttempts) {
         if (!fs.existsSync(openAiOutputPath)) {
           await generateOpenAIImage(imagePromptFor(target), openAiOutputPath);
@@ -416,7 +421,8 @@ async function enrichGeneratedImages(nextContent) {
     quality: imageGeneration.quality,
     size: imageGeneration.size,
     promptRevision: imageGeneration.promptRevision,
-    error: openAiGenerated + openAiReused > 0 ? undefined : openAiError || undefined
+    error: openAiGenerated + openAiReused > 0 ? undefined : openAiError || undefined,
+    forcedFallback: imageGeneration.forceApprovedFallback || undefined
   });
 
   if (imageGeneration.allowApprovedFallback && (fallbackGenerated > 0 || reused > 0)) {
