@@ -4,6 +4,10 @@ import crypto from "node:crypto";
 
 const root = process.cwd();
 const content = JSON.parse(fs.readFileSync(path.join(root, "data", "site-content.json"), "utf8"));
+const sitemapPath = path.join(root, "sitemap.xml");
+const archiveHtmlPath = path.join(root, "archive.html");
+const sitemapXml = fs.existsSync(sitemapPath) ? fs.readFileSync(sitemapPath, "utf8") : "";
+const archiveHtml = fs.existsSync(archiveHtmlPath) ? fs.readFileSync(archiveHtmlPath, "utf8") : "";
 const taipeiDate = new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Taipei",
   year: "numeric",
@@ -70,6 +74,29 @@ function primaryImageForPage(page) {
   return htmlImages(page).find((image) => !isNavImage(image)) || "";
 }
 
+const contentIndex = new Map();
+[
+  ...(content.archive || []),
+  ...(content.lifeRadar || []),
+  ...(content.pitfalls || []),
+  content.stockOverview,
+  ...(content.stockWatchlist || [])
+].filter(Boolean).forEach((item) => {
+  if (!item.slug) return;
+  contentIndex.set(normalizePath(item.slug), item);
+});
+
+function pageMeta(page) {
+  const item = contentIndex.get(page);
+  return {
+    title: item?.title || item?.name || "",
+    category: item?.category || "",
+    inArchiveData: Boolean((content.archive || []).some((archiveItem) => normalizePath(archiveItem.slug) === page)),
+    inArchiveHtml: archiveHtml.includes(page),
+    inSitemap: sitemapXml.includes(page)
+  };
+}
+
 const pages = walkHtml(root);
 const imageRefs = pages.flatMap((page) => htmlImages(page).map((image) => ({ page, image })));
 const missing = imageRefs.filter(({ image }) => !fs.existsSync(path.join(root, image)));
@@ -102,9 +129,15 @@ todayPrimaries.forEach((item) => {
   }
 });
 
-const legacyApproved = primaryImages.filter((item) => item.date !== taipeiDate && isApprovedFallback(item.image));
+const legacyApproved = primaryImages
+  .filter((item) => item.date !== taipeiDate && isApprovedFallback(item.image))
+  .map((item) => ({ ...item, ...pageMeta(item.page) }));
 if (legacyApproved.length) {
   warnings.push(`${legacyApproved.length} legacy content pages still use approved fallback images; they are historical and not part of today's publish gate.`);
+}
+const exposedLegacyApproved = legacyApproved.filter((item) => item.inArchiveHtml || item.inSitemap);
+if (exposedLegacyApproved.length) {
+  errors.push(`${exposedLegacyApproved.length} legacy approved fallback pages are still promoted by archive.html or sitemap.xml; regenerate archive/SEO after filtering image-debt pages.`);
 }
 
 const duplicateGroups = new Map();
@@ -116,7 +149,7 @@ primaryImages.forEach((item) => {
 });
 const nonTodayDuplicateGroups = [...duplicateGroups.values()]
   .filter((items) => items.length > 1 && !items.some((item) => item.date === taipeiDate))
-  .map((items) => items.map((item) => ({ page: item.page, image: item.image })));
+  .map((items) => items.map((item) => ({ page: item.page, image: item.image, date: item.date, ...pageMeta(item.page) })));
 if (nonTodayDuplicateGroups.length) {
   warnings.push(`${nonTodayDuplicateGroups.length} historical duplicate primary-image groups remain in old pages; current-day duplicate images are blocked.`);
 }
@@ -152,7 +185,13 @@ const report = {
     contentPages: contentPages.length,
     todayContentPages: todayPrimaries.length,
     legacyApprovedPrimaryImages: legacyApproved.length,
+    exposedLegacyApprovedPrimaryImages: exposedLegacyApproved.length,
     historicalDuplicatePrimaryImageGroups: nonTodayDuplicateGroups.length
+  },
+  details: {
+    legacyApprovedPrimaryImages: legacyApproved,
+    exposedLegacyApprovedPrimaryImages: exposedLegacyApproved,
+    historicalDuplicatePrimaryImageGroups: nonTodayDuplicateGroups
   },
   warnings,
   errors

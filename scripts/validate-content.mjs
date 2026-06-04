@@ -745,6 +745,8 @@ assert(llmsTxt.includes("Today page:"), "llms.txt must mention today page");
   assert(workflow.includes("today.html"), `${workflowFile} must commit today.html updates`);
   assert(workflow.includes("links.html"), `${workflowFile} must commit social link page updates`);
   assert(workflow.includes("generate:links"), `${workflowFile} must regenerate social link page`);
+  assert(workflow.includes("generate:archive"), `${workflowFile} must regenerate categorized archive page`);
+  assert(workflow.includes("audit:images"), `${workflowFile} must run the full site image audit`);
   assert(workflow.includes("test:social-previews"), `${workflowFile} must audit social previews`);
   assert(workflow.includes("index.html"), `${workflowFile} must commit homepage preview updates`);
 });
@@ -761,6 +763,8 @@ assert(dailyUpdateWorkflow.includes('OPENAI_IMAGE_OUTPUT_FORMAT: "jpeg"'), "dail
 assert(dailyUpdateWorkflow.includes("OPENAI_IMAGE_OUTPUT_COMPRESSION"), "daily-update.yml must set image compression for generated article images");
 
 const pagesWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "pages.yml"), "utf8");
+assert(pagesWorkflow.includes("generate:archive"), "pages.yml must regenerate categorized archive before deploying");
+assert(pagesWorkflow.includes("audit:images"), "pages.yml must run the full site image audit before deploying");
 assert(pagesWorkflow.includes("test:social-previews"), "pages.yml must audit social previews before deploying");
 
 const xDailyWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "x-daily-post.yml"), "utf8");
@@ -776,6 +780,7 @@ assert(
 
 const opsHealthWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "ops-health-check.yml"), "utf8");
 assert(opsHealthWorkflow.includes("npm test"), "ops-health-check.yml must run content validation");
+assert(opsHealthWorkflow.includes("audit:images"), "ops-health-check.yml must run the full site image audit");
 assert(opsHealthWorkflow.includes("test:social-previews"), "ops-health-check.yml must audit social previews");
 assert(opsHealthWorkflow.includes("test:x-daily-post"), "ops-health-check.yml must verify X daily post readiness");
 assert(opsHealthWorkflow.includes("test:meta-post"), "ops-health-check.yml must verify Meta daily post readiness");

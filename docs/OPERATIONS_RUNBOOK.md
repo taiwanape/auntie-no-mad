@@ -35,10 +35,12 @@ Check:
 - Keep `sourceUrl` for sourced content.
 - Preserve existing public content if fetch/update fails.
 - Do not break archive links.
+- Hide historical pages that still use approved fallback primary images from archive, sitemap, RSS, and JSON feed until their art is replaced.
 - After content changes, run:
 
 ```powershell
 npm test
+npm run audit:images
 npm run generate:seo
 ```
 

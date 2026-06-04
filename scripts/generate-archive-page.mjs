@@ -112,6 +112,32 @@ function localPageExists(slug = "") {
   return Boolean(slug) && !/^https?:\/\//.test(slug) && fs.existsSync(path.join(root, slug));
 }
 
+function normalizePath(value = "") {
+  return String(value).replaceAll("\\", "/");
+}
+
+function pagePrimaryImage(slug = "") {
+  if (!localPageExists(slug)) return "";
+  const html = fs.readFileSync(path.join(root, slug), "utf8");
+  const images = [...html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)]
+    .map((match) => match[1])
+    .filter((src) => src && !src.includes("${") && !/^data:/i.test(src) && !/^https?:\/\//i.test(src))
+    .map((src) => {
+      const cleanSrc = src.split("#")[0].split("?")[0];
+      return normalizePath(path.normalize(path.join(path.dirname(slug), cleanSrc))).replace(/^\.\//, "");
+    });
+  return images.find((image) => !image.endsWith("assets/auntie-avatar-nav.jpg")) || "";
+}
+
+function isApprovedFallbackImage(image = "") {
+  return /(^|-)approved(-|\.|$)/i.test(path.basename(image));
+}
+
+function isPublicArchiveReady(item = {}) {
+  const image = pagePrimaryImage(item.slug);
+  return !image || !isApprovedFallbackImage(image);
+}
+
 function classify(item = {}) {
   const haystack = `${item.slug || ""} ${item.category || ""} ${item.title || ""}`;
   if (/stories\//.test(haystack) || /踩坑|詐騙|糾紛|安全/.test(haystack)) return "pitfalls";
@@ -138,7 +164,7 @@ function collectItems() {
     ...(content.stockWatchlist || []),
     ...(content.fridgeNotes || []),
     ...legacyItems
-  ].filter(Boolean).filter((item) => localPageExists(item.slug));
+  ].filter(Boolean).filter((item) => localPageExists(item.slug)).filter(isPublicArchiveReady);
 
   const bySlug = new Map();
   rawItems.forEach((item) => {

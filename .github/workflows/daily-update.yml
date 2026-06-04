@@ -79,6 +79,9 @@ jobs:
       - name: Validate content
         run: npm test
 
+      - name: Audit site images
+        run: npm run audit:images
+
       - name: Audit social previews
         run: npm run test:social-previews
 

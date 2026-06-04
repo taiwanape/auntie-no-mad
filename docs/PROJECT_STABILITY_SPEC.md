@@ -36,7 +36,7 @@ C:\Users\taiwa\Documents\阿姨別生氣\website
 - 04:00、05:00、06:00 Asia/Taipei 分別嘗試更新。
 - 每次產生生活雷達 2 則、踩坑日記 2 則、股市/ETF 4 則、股市總覽、冰箱便條紙。
 - 每日主內容必須有文章頁、來源連結、SEO/OG/Twitter 預覽與首頁資料。
-- 產生後必須通過 `npm test` 與 `npm run test:social-previews` 才能 commit / deploy。
+- 產生後必須通過 `npm test`、`npm run audit:images` 與 `npm run test:social-previews` 才能 commit / deploy。
 
 即時新聞 workflow：`.github/workflows/live-news-update.yml`
 
@@ -71,6 +71,7 @@ C:\Users\taiwa\Documents\阿姨別生氣\website
 - `npm run audit:images` 會掃描所有公開 HTML 圖片引用。
 - 今天的文章主圖若缺檔、使用 `*-approved.*`、不在當日資料夾，或與其他今日文章 byte hash 重複，必須失敗。
 - 歷史舊文若仍使用早期 approved fallback，先列為追蹤警示，不可混同為今日更新合格。
+- 歷史 approved fallback 頁在補新圖前，不可出現在 `archive.html`、`sitemap.xml`、RSS 或 JSON feed 這些主要入口。
 - `npm run ops:health` 必須執行全站圖片稽核，讓每日健康檢查看得見圖片債務與今日發布門檻。
 
 如果 OpenAI 圖片 API 失敗：
@@ -145,6 +146,7 @@ C:\Users\taiwa\Documents\阿姨別生氣\website
 
 ```powershell
 npm test
+npm run audit:images
 npm run test:social-previews
 ```
 

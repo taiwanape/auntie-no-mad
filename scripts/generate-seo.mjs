@@ -13,11 +13,41 @@ const socialLinks = [
   "https://www.facebook.com/profile.php?id=61553234457401"
 ];
 
+function normalizePath(value = "") {
+  return String(value).replaceAll("\\", "/");
+}
+
+function pagePrimaryImage(slug = "") {
+  if (!slug || /^https?:\/\//.test(slug) || slug.startsWith("#")) return "";
+  const pagePath = path.join(root, slug);
+  if (!fs.existsSync(pagePath)) return "";
+  const html = fs.readFileSync(pagePath, "utf8");
+  const images = [...html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)]
+    .map((match) => match[1])
+    .filter((src) => src && !src.includes("${") && !/^data:/i.test(src) && !/^https?:\/\//i.test(src))
+    .map((src) => {
+      const cleanSrc = src.split("#")[0].split("?")[0];
+      return normalizePath(path.normalize(path.join(path.dirname(slug), cleanSrc))).replace(/^\.\//, "");
+    });
+  return images.find((image) => !image.endsWith("assets/auntie-avatar-nav.jpg")) || "";
+}
+
+function isApprovedFallbackImage(image = "") {
+  return /(^|-)approved(-|\.|$)/i.test(path.basename(image));
+}
+
+function isArchiveItemPublicReady(item = {}) {
+  const image = pagePrimaryImage(item.slug);
+  return !image || !isApprovedFallbackImage(image);
+}
+
+const publicArchiveItems = (content.archive || []).filter(isArchiveItemPublicReady);
+
 const dataSlugs = [
   ...(content.lifeRadar || []),
   ...(content.pitfalls || []),
   ...(content.stockWatchlist || []),
-  ...(content.archive || [])
+  ...publicArchiveItems
 ].map((item) => item.slug).filter(Boolean);
 
 const staticUrls = [
@@ -158,7 +188,7 @@ function collectFeedItems() {
     ...(content.pitfalls || []),
     content.stockOverview,
     ...(content.stockWatchlist || []),
-    ...(content.archive || [])
+    ...publicArchiveItems
   ].filter(Boolean);
   const seen = new Set();
   return sections

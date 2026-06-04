@@ -27,6 +27,9 @@ jobs:
       - name: Validate site content and growth pages
         run: npm test
 
+      - name: Audit site images
+        run: npm run audit:images
+
       - name: Audit social previews
         run: npm run test:social-previews
 
