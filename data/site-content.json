@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-04T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/04 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-04-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-04T10:45:24.423Z"
+    "liveNewsUpdatedAt": "2026-06-04T13:50:32.947Z"
   },
   "lifeRadar": [
     {
@@ -563,76 +563,76 @@
   ],
   "liveNews": [
     {
-      "title": "訴請經濟部修改用電大戶條款案 環團敗訴確定",
+      "title": "新北等5縣市防豪雨 台北等地留意大雨",
+      "date": "2026-06-04",
+      "category": "即時生活",
+      "summary": "中央氣象署發布豪雨特報，西南風、鋒面影響及對流雲系發展旺盛，易有短延時強降雨，今天新北市、桃園市、南投縣及新竹縣山區、高雄市山區有局部大雨或豪雨。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606040360.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606040360.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-04T12:43:54.000Z",
+      "displayTime": "06/04 20:43"
+    },
+    {
+      "title": "今彩539第115136期開獎",
+      "date": "2026-06-04",
+      "category": "即時生活",
+      "summary": "今彩539第115136期開獎，中獎號碼35、29、02、24、08。3星彩中獎號碼697，4星彩中獎號碼5866。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606040359.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606040359.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-04T12:43:52.000Z",
+      "displayTime": "06/04 20:43"
+    },
+    {
+      "title": "國研院偕成大推AI平台 加速脂肪肝炎判讀助藥物開發",
+      "date": "2026-06-04",
+      "category": "即時財經",
+      "summary": "代謝性脂肪肝炎（MASH）已成台灣肝癌頭號病因，國研院生物模式中心與成功大學合作，今天發表「AI+MASH病理量化平台」，透過AI影像分析技術，縮短小鼠肝臟病理檢測報告產出時間，讓研究團隊快速 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606040358.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606040358.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-04T12:40:50.000Z",
+      "displayTime": "06/04 20:40"
+    },
+    {
+      "title": "新北強降雨 2男受困新店溪沙洲獲救無恙",
       "date": "2026-06-04",
       "category": "即時社會",
-      "summary": "綠色和平基金會等認為「用電大戶條款」未有效規範企業且無助減碳，興訟請法院令經濟部修訂條款，北高行更一審判決駁回。經上訴，最高行政法院今天駁回，全案確定。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606040310.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606040310.aspx",
+      "summary": "受強降雨影響，新北市有兩名釣魚的男子今晚接近6時許，受困於新店溪河堤旁的沙洲。警方表示，經與消防隊員合力搜救後，兩人已經平安脫困，皆未受傷，無須送醫。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606040357.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606040357.aspx",
       "sourceName": "中央社社會",
-      "publishedAt": "2026-06-04T10:18:06.000Z",
-      "displayTime": "06/04 18:18"
+      "publishedAt": "2026-06-04T12:35:48.000Z",
+      "displayTime": "06/04 20:35"
     },
     {
-      "title": "不滿家族糾紛持刀尋仇 竹縣男殺人未遂判刑10年",
+      "title": "航港局技佐賣船艇駕照案 北檢緩起訴50名買照人",
       "date": "2026-06-04",
       "category": "即時社會",
-      "summary": "竹縣鄭姓男子因家族糾紛酒後持刀尋仇，見伯母及堂弟走出家門即持刀追砍，造成2人受傷，所幸均無生命危險，新竹地院日前依殺人未遂罪判刑10年。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606040307.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606040307.aspx",
+      "summary": "航港局中部航務中心監理科技佐宋立恒偽造遊艇或動力小船駕照給「買照人」，並收受中間人賄賂，已遭判刑。北檢今天依行賄罪嫌起訴3名買照人，另緩起訴50名買照人，各須繳國庫10萬元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606040356.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606040356.aspx",
       "sourceName": "中央社社會",
-      "publishedAt": "2026-06-04T10:10:59.000Z",
-      "displayTime": "06/04 18:10"
+      "publishedAt": "2026-06-04T12:32:45.000Z",
+      "displayTime": "06/04 20:32"
     },
     {
-      "title": "議員籲皮蛇疫苗首劑免費 竹市府允滾動調整政策",
+      "title": "澎湖打擊非法漁撈平台建功 查獲首宗違法採捕海膽",
       "date": "2026-06-04",
       "category": "即時地方",
-      "summary": "民進黨新竹市議員陳建名表示，帶狀皰疹疫苗費用高昂導致接種率低下，建議市府全額補助市民接種第1劑。新竹市衛生局說，將綜合評估財政與公衛效益，進行滾動式政策調整。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "澎湖地檢署組成的「打擊非法漁撈平台」，昨天晚間在澎湖海淡廠海域查獲今年首宗禁捕期間違法採捕馬糞海膽案件，歐姓民眾當場人贓俱獲，檢方今天偵結起訴，具體從重求刑。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606040305.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606040305.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606040354.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606040354.aspx",
       "sourceName": "中央社地方",
-      "publishedAt": "2026-06-04T10:09:55.000Z",
-      "displayTime": "06/04 18:09"
-    },
-    {
-      "title": "北市以白手長臂猿交換 上海小貓熊預計6日抵台",
-      "date": "2026-06-04",
-      "category": "即時地方",
-      "summary": "台北市長蔣萬安今天說，2隻上海小貓熊預計6日抵台，是2座城市交流的具體成果。台北市副市長林奕華說明，配合上海動物園需求，交換物種將由黑腳企鵝改為白手長臂猿。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606040296.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606040296.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-04T09:52:36.000Z",
-      "displayTime": "06/04 17:52"
-    },
-    {
-      "title": "基隆澳底產業道路排水溝發現男屍 警方調查死因",
-      "date": "2026-06-04",
-      "category": "即時社會",
-      "summary": "基隆市安樂區澳底產業道路旁排水溝內，今天有民眾發現一具男性遺體，明顯已死亡多時，警方封鎖現場，調查死者身分與死因。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606040292.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606040292.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-04T09:42:28.000Z",
-      "displayTime": "06/04 17:42"
-    },
-    {
-      "title": "議員批麻將館鄰學校無罰則 竹市：再修正自治條例",
-      "date": "2026-06-04",
-      "category": "即時地方",
-      "summary": "民進黨新竹市議員楊玲宜今天指出，轄內麻將館林立且鄰近學校，卻無自治條例可管，甚至有高中生穿制服進入館內打麻將，批市府行政怠惰。市府說，將再修正自治條例重新送審。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606040291.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606040291.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-04T09:42:25.000Z",
-      "displayTime": "06/04 17:42"
+      "publishedAt": "2026-06-04T12:32:41.000Z",
+      "displayTime": "06/04 20:32"
     }
   ]
 }
