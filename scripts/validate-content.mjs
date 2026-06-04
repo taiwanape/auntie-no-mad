@@ -477,6 +477,10 @@ assert(!indexHtml.includes('class="growth-funnel"'), "index.html must not reintr
 assert(indexHtml.includes('id="firstClick"'), "index.html must keep the daily first-click entry point");
 assert(indexHtml.includes("今天先點這裡"), "index.html first-click entry must tell visitors where to start today");
 assert(indexHtml.includes("homepage_entry"), "index.html first-click links must use homepage_entry UTM tracking");
+assert(indexHtml.includes('id="dailyMenu"'), "index.html must keep the daily 7am menu entry strip");
+assert(indexHtml.includes("每日 7 點菜單"), "index.html daily menu must explain the daily update rhythm");
+assert(indexHtml.includes("renderDailyMenu(content)"), "index.html must render the daily menu from site-content.json");
+assert(indexHtml.includes("homepage_menu"), "index.html daily menu links must use homepage_menu UTM tracking");
 assert(indexHtml.includes("beforeinstallprompt"), "index.html must handle browser install prompts when available");
 assert(indexHtml.includes("install_fallback"), "index.html install fallback must use UTM tracking");
 const navTodayIndex = indexHtml.indexOf('href="today.html"');

@@ -214,7 +214,7 @@
 
     .hero-copy {
       max-width: 54%;
-      padding: clamp(28px, 4.5vw, 56px);
+      padding: clamp(24px, 4vw, 44px);
       z-index: 1;
     }
 
@@ -240,8 +240,8 @@
     }
 
     .hero-title-svg {
-      width: min(100%, 390px);
-      margin: 22px 0 18px;
+      width: min(100%, 350px);
+      margin: 18px 0 14px;
     }
 
     .section-title-svg {
@@ -279,7 +279,7 @@
     .hero-copy p {
       margin: 0;
       max-width: 520px;
-      font-size: clamp(19px, 2.1vw, 26px);
+      font-size: clamp(19px, 2vw, 24px);
       line-height: 1.42;
       font-weight: 1000;
     }
@@ -522,6 +522,119 @@
     @keyframes ticker {
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }
+    }
+
+    .daily-menu {
+      max-width: 1080px;
+      margin: 0 auto 26px;
+    }
+
+    .daily-menu-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .daily-menu-head h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.02;
+      font-weight: 1000;
+      text-shadow: 3px 3px 0 white, 6px 6px 0 var(--ink);
+    }
+
+    .daily-menu-head p {
+      max-width: 28em;
+      margin: 0;
+      font-weight: 1000;
+      line-height: 1.45;
+      color: rgba(22,19,15,.78);
+    }
+
+    .daily-menu-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .daily-menu-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      min-height: 170px;
+      padding: 16px;
+      border: var(--line);
+      border-radius: 16px;
+      background: #fffdf1;
+      box-shadow: 5px 5px 0 var(--ink);
+      color: var(--ink);
+      text-decoration: none;
+      transition: transform .16s ease, box-shadow .16s ease;
+    }
+
+    .daily-menu-card:nth-child(1) {
+      background: var(--pink);
+      color: white;
+    }
+
+    .daily-menu-card:nth-child(2) {
+      background: var(--sky);
+    }
+
+    .daily-menu-card:nth-child(3) {
+      background: var(--mint);
+    }
+
+    .daily-menu-card:nth-child(4) {
+      background: var(--yellow);
+    }
+
+    .daily-menu-card:hover,
+    .daily-menu-card:focus-visible {
+      transform: translate(-2px, -2px);
+      box-shadow: 8px 8px 0 var(--ink);
+      outline: none;
+    }
+
+    .daily-menu-label {
+      width: fit-content;
+      max-width: 100%;
+      margin-bottom: 10px;
+      padding: 5px 9px;
+      border: 3px solid currentColor;
+      border-radius: 999px;
+      background: white;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 1000;
+    }
+
+    .daily-menu-card h3 {
+      margin: 0;
+      font-size: 21px;
+      line-height: 1.18;
+      font-weight: 1000;
+      overflow-wrap: anywhere;
+    }
+
+    .daily-menu-card p {
+      margin: 9px 0 0;
+      color: currentColor;
+      font-size: 15px;
+      line-height: 1.42;
+      font-weight: 900;
+      opacity: .82;
+    }
+
+    .daily-menu-cta {
+      margin-top: auto;
+      padding-top: 14px;
+      font-weight: 1000;
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 4px;
     }
 
     .first-click {
@@ -2098,6 +2211,10 @@
         grid-template-columns: 1fr;
       }
 
+      .daily-menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
       .first-click-card {
         grid-template-columns: minmax(0, 1fr) minmax(220px, .72fr);
       }
@@ -2235,6 +2352,32 @@
 
       .section {
         scroll-margin-top: 168px;
+      }
+
+      .daily-menu-head {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .daily-menu-head h2 {
+        font-size: clamp(29px, 9vw, 40px);
+        text-shadow: 2px 2px 0 white, 5px 5px 0 var(--ink);
+      }
+
+      .daily-menu-head p {
+        max-width: 18.5em;
+        overflow-wrap: anywhere;
+        word-break: break-all;
+      }
+
+      .daily-menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .daily-menu-card {
+        min-height: auto;
+        padding: 14px;
       }
 
       .section-title-svg {
@@ -2431,6 +2574,42 @@
     </div>
 
     <main>
+      <section class="daily-menu" id="dailyMenu" aria-labelledby="dailyMenuTitle">
+        <div class="daily-menu-head">
+          <div>
+            <span class="pill">每日 7 點菜單</span>
+            <h2 id="dailyMenuTitle">今天先看哪一格</h2>
+          </div>
+          <p>阿姨把今天的總覽、生活影響、踩坑提醒和股市白話先排好；不用在首頁猜入口。</p>
+        </div>
+        <div class="daily-menu-grid" data-daily-menu-grid>
+          <a class="daily-menu-card" href="today.html?utm_source=homepage_menu&utm_medium=internal&utm_campaign=daily_menu">
+            <span class="daily-menu-label">今日總覽</span>
+            <h3>今天先看總整理</h3>
+            <p>一頁看完今天更新了什麼，再決定要往哪裡點。</p>
+            <span class="daily-menu-cta">打開今日必看</span>
+          </a>
+          <a class="daily-menu-card" href="#radar">
+            <span class="daily-menu-label">生活雷達</span>
+            <h3>會影響出門和日常的事</h3>
+            <p>天氣、交通、生活政策，先看今天跟你有沒有關。</p>
+            <span class="daily-menu-cta">看生活入口</span>
+          </a>
+          <a class="daily-menu-card" href="#stories">
+            <span class="daily-menu-label">踩坑日記</span>
+            <h3>先把套路看懂</h3>
+            <p>詐騙、風險、容易誤會的消息，阿姨先翻成白話。</p>
+            <span class="daily-menu-cta">看踩坑入口</span>
+          </a>
+          <a class="daily-menu-card" href="#investing">
+            <span class="daily-menu-label">股市ETF</span>
+            <h3>不是報明牌</h3>
+            <p>把熱門股、ETF 和風險整理成可以讀的市場筆記。</p>
+            <span class="daily-menu-cta">看股市白話</span>
+          </a>
+        </div>
+      </section>
+
       <section class="first-click" id="firstClick" aria-labelledby="firstClickTitle">
         <article class="first-click-card">
           <div class="first-click-copy">
@@ -2993,6 +3172,70 @@
       return `${hook.title}\n${hook.summary}\n\n阿姨別生氣幫你整理成人話：${hook.url}`;
     }
 
+    const trackedHref = (href = "", source = "homepage_menu", campaign = "daily_menu") => {
+      if (!href || href === "#") return "#";
+      if (href.startsWith("#")) return href;
+      const url = new URL(href, window.location.href);
+      url.searchParams.set("utm_source", source);
+      url.searchParams.set("utm_medium", "internal");
+      url.searchParams.set("utm_campaign", campaign);
+      if (/^https?:\/\//.test(href)) return url.href;
+      return `${url.pathname.replace(/^\//, "")}${url.search}${url.hash}`;
+    };
+
+    const conciseText = (value = "", fallback = "") => {
+      const text = String(value || fallback).replace(/\s+/g, " ").trim();
+      return text.length > 72 ? `${text.slice(0, 70)}…` : text;
+    };
+
+    function renderDailyMenu(content = {}) {
+      const grid = document.querySelector("[data-daily-menu-grid]");
+      if (!grid) return;
+
+      const life = content.lifeRadar?.[0];
+      const pitfall = content.pitfalls?.[0];
+      const stock = content.stockOverview;
+      const menuItems = [
+        {
+          label: "今日總覽",
+          title: "今天先看總整理",
+          summary: content.site?.dailyNote || "一頁看完今天更新了什麼，再決定要往哪裡點。",
+          href: "today.html",
+          cta: "打開今日必看"
+        },
+        {
+          label: life?.category || "生活雷達",
+          title: life?.title || "會影響出門和日常的事",
+          summary: life?.auntieComment || life?.cta || life?.summary || "天氣、交通、生活政策，先看今天跟你有沒有關。",
+          href: life?.slug || "#radar",
+          cta: "看生活影響"
+        },
+        {
+          label: pitfall?.category || "踩坑日記",
+          title: pitfall?.title || "先把套路看懂",
+          summary: pitfall?.auntieComment || pitfall?.cta || pitfall?.summary || "詐騙、風險、容易誤會的消息，阿姨先翻成白話。",
+          href: pitfall?.slug || "#stories",
+          cta: "看踩坑故事"
+        },
+        {
+          label: "股市ETF",
+          title: stock?.title === "股市ETF" ? "今天的股市白話" : stock?.title || "不是報明牌",
+          summary: stock?.auntieComment || stock?.summary || "把熱門股、ETF 和風險整理成可以讀的市場筆記。",
+          href: content.site?.dailyNoteUrl || stock?.slug || "#investing",
+          cta: "看市場筆記"
+        }
+      ];
+
+      grid.innerHTML = menuItems.map((item) => `
+        <a class="daily-menu-card" href="${escapeHtml(trackedHref(item.href, "homepage_menu", "daily_menu"))}">
+          <span class="daily-menu-label">${escapeHtml(item.label)}</span>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(conciseText(item.summary))}</p>
+          <span class="daily-menu-cta">${escapeHtml(item.cta)}</span>
+        </a>
+      `).join("");
+    }
+
     function renderFirstClick(content = {}) {
       const root = document.querySelector("#firstClick");
       if (!root) return;
@@ -3267,6 +3510,7 @@
         if (!response.ok) throw new Error("content data unavailable");
         const content = await response.json();
 
+        renderDailyMenu(content);
         renderFirstClick(content);
         renderGrowthHooks(content);
         renderLiveNews(content.liveNews, content.site?.liveNewsUpdatedAt);
