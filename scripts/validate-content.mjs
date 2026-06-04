@@ -868,6 +868,14 @@ assert(
   dailyUpdateWorkflow.includes("steps.daily_guard.outputs.skip != 'true'"),
   "daily-update.yml must skip AI image generation after same-day content is already approved"
 );
+assert(
+  dailyUpdateWorkflow.includes("github.event_name == 'schedule' || github.event.inputs.publish == 'true'"),
+  "daily-update.yml must only generate daily content on schedule or explicit publish=true"
+);
+assert(
+  dailyUpdateWorkflow.includes("Manual dry-run requested; skipping content and image generation"),
+  "daily-update.yml must keep manual publish=false as a no-image dry-run"
+);
 assert(dailyUpdateWorkflow.includes('ALLOW_APPROVED_IMAGE_FALLBACK: "false"'), "daily-update.yml must not publish approved fallback images for public daily content");
 assert(dailyUpdateWorkflow.includes('FORCE_APPROVED_IMAGE_FALLBACK: "false"'), "daily-update.yml must not force approved fallback images");
 assert(dailyUpdateWorkflow.includes('OPENAI_IMAGE_OUTPUT_FORMAT: "jpeg"'), "daily-update.yml must generate compressed JPEG article images");

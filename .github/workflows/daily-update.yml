@@ -68,6 +68,8 @@ jobs:
           echo "skip=$SHOULD_SKIP" >> "$GITHUB_OUTPUT"
           if [ "$SHOULD_SKIP" = "true" ]; then
             echo "Daily content for today is already approved; skipping image generation to avoid wasting API budget."
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.publish }}" != "true" ]; then
+            echo "Manual dry-run requested; skipping content and image generation. Current site files will still be validated."
           else
             echo "Daily content generation will run."
           fi
@@ -75,7 +77,7 @@ jobs:
           MANUAL_PUBLISH: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.publish == 'true' }}
 
       - name: Generate daily content and images
-        if: steps.daily_guard.outputs.skip != 'true'
+        if: (github.event_name == 'schedule' || github.event.inputs.publish == 'true') && steps.daily_guard.outputs.skip != 'true'
         run: npm run update:daily
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

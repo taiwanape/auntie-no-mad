@@ -35,6 +35,7 @@ C:\Users\taiwa\Documents\阿姨別生氣\website
 
 - 04:00、05:00、06:00 Asia/Taipei 分別嘗試更新。
 - 05:00、06:00 是備援，不是每天多生兩批圖；workflow 必須先檢查同日內容是否已 `approved`，已成功發布時跳過 AI 圖片生成。
+- 手動 `workflow_dispatch` 未指定 `publish=true` 時，只做現有站台健康檢查，不可產生新內容或 AI 圖片。
 - 每次產生生活雷達 2 則、踩坑日記 2 則、股市/ETF 4 則、股市總覽、冰箱便條紙。
 - 每日主內容必須有文章頁、來源連結、SEO/OG/Twitter 預覽與首頁資料。
 - 產生後必須通過 `npm test`、`npm run audit:images` 與 `npm run test:social-previews` 才能 commit / deploy。
