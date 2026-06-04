@@ -13,6 +13,7 @@ npm run ops:health
 npm test
 npm run audit:images
 npm run test:image-debt
+npm run test:duplicate-image-debt
 npm run test:x-queue
 npm run test:x-api
 npm run test:x-profile
@@ -26,6 +27,7 @@ Check:
 - `data/review-report.json` is approved; public daily images must not be stale fallbacks.
 - `npm run audit:images` reports zero current-day image errors. Legacy approved fallback warnings are tracked technical debt, not permission to reuse stale art for today's content.
 - `data/site-image-debt.json` is up to date. P0 must stay at 0; P1/P2 are the batch list for future regeneration.
+- `data/site-duplicate-image-debt.json` is up to date. Duplicate primary images are the batch list for historical dedupe regeneration.
 - X API resolves `@auntienomad`.
 - X profile still matches the real-person, non-ecommerce positioning.
 - `data/x-content-queue.json` has enough planned, sourced, real-person concepts.
@@ -40,13 +42,16 @@ Check:
 - Hide historical pages that still use approved fallback primary images from archive, sitemap, RSS, and JSON feed until their art is replaced.
 - Regenerate historical fallback art through the manual GitHub Action `Regenerate Image Debt`, starting with `priority=P1` and `limit=8`.
 - That workflow must create fresh OpenAI images, update each HTML page, regenerate archive/SEO/share surfaces, refresh `data/site-image-debt.json`, and deploy only after validation passes.
+- Regenerate historical duplicate art through the manual GitHub Action `Regenerate Duplicate Image Debt`, starting with `priority=ALL` and `limit=10`.
 - After content changes, run:
 
 ```powershell
 npm test
 npm run audit:images
 npm run test:image-debt
+npm run test:duplicate-image-debt
 npm run regenerate:image-debt:dry-run
+npm run regenerate:duplicate-image-debt:dry-run
 npm run generate:seo
 ```
 

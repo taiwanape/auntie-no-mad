@@ -202,6 +202,7 @@ function imagePromptFor(target) {
     "Do not make the auntie younger, thinner, cuter in a different way, or change her hairstyle, face shape, glasses, clothes, or body type.",
     "The auntie must be the large first-read character in a rich Taiwan lifestyle/editorial scene, not a tiny icon and not a cropped logo mascot.",
     "Absolutely no visible writing anywhere: no Chinese characters, no English letters, no numbers, no stock tickers, no company names, no brand title, no logo, no watermark, no signage, no captions, no labels, no speech-bubble words, no readable or fake text on papers, screens, phones, signs, badges, charts, cards, stickers, or map pins.",
+    "Also avoid currency symbols, dollar signs, percent signs, punctuation-as-text, QR-code-like blocks, and readable warning labels.",
     "Use blank icons, shapes, arrows, colored dots, pictograms, empty check circles, abstract charts, and blank panels instead of words or numbers. Blank screens, blank cards, and blank papers are allowed; fake writing is not.",
     "Do not crop the auntie's head, face, hands, or key objects; keep the full composition clean inside the 16:9 frame."
   ].join(" ");

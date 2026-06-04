@@ -33,6 +33,9 @@ jobs:
       - name: Check image debt report
         run: npm run test:image-debt
 
+      - name: Check duplicate image debt report
+        run: npm run test:duplicate-image-debt
+
       - name: Audit social previews
         run: npm run test:social-previews
 

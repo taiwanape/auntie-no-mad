@@ -44,6 +44,7 @@ jobs:
           npm run generate:today
           npm run generate:archive
           npm run audit:image-debt
+          npm run audit:duplicate-image-debt
 
       - name: Validate site content
         run: npm test
@@ -53,6 +54,9 @@ jobs:
 
       - name: Check image debt report
         run: npm run test:image-debt
+
+      - name: Check duplicate image debt report
+        run: npm run test:duplicate-image-debt
 
       - name: Audit social previews
         run: npm run test:social-previews

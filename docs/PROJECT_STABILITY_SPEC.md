@@ -74,6 +74,8 @@ C:\Users\taiwa\Documents\阿姨別生氣\website
 - 歷史 approved fallback 頁在補新圖前，不可出現在 `archive.html`、`sitemap.xml`、RSS 或 JSON feed 這些主要入口。
 - `data/site-image-debt.json` 是歷史舊圖債務清單，需列出每篇仍使用 fallback 主圖的頁面、優先級、目前圖檔與重生提示。
 - 歷史舊圖需透過 `Regenerate Image Debt` 手動 workflow 分批重生；重生後必須同步更新 HTML、SEO/social meta、archive/feed 與 `data/site-image-debt.json`。
+- `data/site-duplicate-image-debt.json` 是歷史重複主圖債務清單，需列出每組 byte hash 重複圖、保留頁、待重生頁與提示。
+- 歷史重複主圖需透過 `Regenerate Duplicate Image Debt` 手動 workflow 分批重生，避免不同文章長期共用同一張圖。
 - 重生圖一樣必須是 OpenAI 新圖、主題相符、人物不變形、沒有可讀文字，且檔名不得包含 `approved`。
 - `npm run ops:health` 必須執行全站圖片稽核，讓每日健康檢查看得見圖片債務與今日發布門檻。
 
@@ -158,6 +160,7 @@ C:\Users\taiwa\Documents\阿姨別生氣\website
 npm test
 npm run audit:images
 npm run test:image-debt
+npm run test:duplicate-image-debt
 npm run test:social-previews
 ```
 

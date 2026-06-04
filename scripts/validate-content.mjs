@@ -381,6 +381,7 @@ assert(!/[銝嚗瘞踹]\S*[?]/.test(serializedData), "data/site-content.json app
 const sharePack = checkJsonArtifact("data/share-pack.json", "data/share-pack.json");
 const socialPosts = checkJsonArtifact("data/social-posts.json", "data/social-posts.json");
 const imageDebt = checkJsonArtifact("data/site-image-debt.json", "data/site-image-debt.json");
+const duplicateImageDebt = checkJsonArtifact("data/site-duplicate-image-debt.json", "data/site-duplicate-image-debt.json");
 if (sharePack) {
   assert(Array.isArray(sharePack.items), "data/share-pack.json must include items array");
   (sharePack.items || []).forEach((item) => {
@@ -637,6 +638,34 @@ if (imageDebt) {
   });
 }
 
+if (duplicateImageDebt) {
+  assert(duplicateImageDebt.schemaVersion === 1, "site-duplicate-image-debt: schemaVersion must be 1");
+  assert(
+    String(duplicateImageDebt.policy || "").includes("Historical duplicate primary images must be replaced"),
+    "site-duplicate-image-debt: policy must explain duplicate regeneration rule"
+  );
+  assert(duplicateImageDebt.summary, "site-duplicate-image-debt: summary is required");
+  assert(Array.isArray(duplicateImageDebt.groups), "site-duplicate-image-debt: groups must be an array");
+  assert(Array.isArray(duplicateImageDebt.items), "site-duplicate-image-debt: items must be an array");
+  assert(
+    duplicateImageDebt.groups.length === duplicateImageDebt.summary.historicalDuplicatePrimaryImageGroups,
+    "site-duplicate-image-debt: group count must match historicalDuplicatePrimaryImageGroups"
+  );
+  assert(
+    duplicateImageDebt.items.length === duplicateImageDebt.summary.pagesToRegenerate,
+    "site-duplicate-image-debt: item count must match pagesToRegenerate"
+  );
+  (duplicateImageDebt.items || []).forEach((item) => {
+    assert(item.status === "needs_regeneration", `site-duplicate-image-debt: ${item.page} must stay marked needs_regeneration until art is replaced`);
+    assert(["P1", "P2"].includes(item.priority), `site-duplicate-image-debt: ${item.page} priority must be P1/P2`);
+    assert(item.page && fileExists(item.page), `site-duplicate-image-debt: page must exist: ${item.page}`);
+    assert(item.currentImage && fileExists(item.currentImage), `site-duplicate-image-debt: current image must exist: ${item.currentImage}`);
+    assert(item.keptPage && fileExists(item.keptPage), `site-duplicate-image-debt: kept page must exist: ${item.keptPage}`);
+    assert(String(item.promptBrief || "").includes("no visible writing"), `site-duplicate-image-debt: ${item.page} prompt brief must ban visible writing`);
+    assert(String(item.promptBrief || "").includes("no currency signs"), `site-duplicate-image-debt: ${item.page} prompt brief must ban currency signs`);
+  });
+}
+
 for (const [index, script] of [...indexHtml.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]).entries()) {
   try {
     new Function(script);
@@ -794,12 +823,15 @@ const benchmarkDoc = fs.readFileSync(path.join(root, "docs", "TAIWAN_TOP_SITES_B
   assert(workflow.includes("audit:images"), `${workflowFile} must run the full site image audit`);
   assert(workflow.includes("audit:image-debt"), `${workflowFile} must regenerate the image debt report`);
   assert(workflow.includes("test:image-debt"), `${workflowFile} must verify the image debt report`);
+  assert(workflow.includes("audit:duplicate-image-debt"), `${workflowFile} must regenerate the duplicate image debt report`);
+  assert(workflow.includes("test:duplicate-image-debt"), `${workflowFile} must verify the duplicate image debt report`);
   assert(workflow.includes("test:social-previews"), `${workflowFile} must audit social previews`);
   assert(workflow.includes("index.html"), `${workflowFile} must commit homepage preview updates`);
 });
 const liveNewsWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "live-news-update.yml"), "utf8");
 assert(liveNewsWorkflow.includes("data/live-news-report.json"), "live-news-update.yml must publish the live news report");
 assert(liveNewsWorkflow.includes("data/site-image-debt.json"), "live-news-update.yml must publish the site image debt report");
+assert(liveNewsWorkflow.includes("data/site-duplicate-image-debt.json"), "live-news-update.yml must publish the duplicate image debt report");
 const imageDebtWorkflowPath = path.join(root, ".github", "workflows", "regenerate-image-debt.yml");
 assert(fileExists(".github/workflows/regenerate-image-debt.yml"), "regenerate-image-debt.yml workflow missing");
 const imageDebtWorkflow = fs.readFileSync(imageDebtWorkflowPath, "utf8");
@@ -809,6 +841,13 @@ assert(imageDebtWorkflow.includes("regenerate:image-debt"), "regenerate-image-de
 assert(imageDebtWorkflow.includes("audit:image-debt"), "regenerate-image-debt.yml must regenerate the image debt report");
 assert(imageDebtWorkflow.includes("test:image-debt"), "regenerate-image-debt.yml must verify the image debt report");
 assert(imageDebtWorkflow.includes("deploy-pages"), "regenerate-image-debt.yml must deploy Pages after committing generated images");
+assert(fileExists(".github/workflows/regenerate-duplicate-image-debt.yml"), "regenerate-duplicate-image-debt.yml workflow missing");
+const duplicateImageDebtWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "regenerate-duplicate-image-debt.yml"), "utf8");
+assert(duplicateImageDebtWorkflow.includes("workflow_dispatch"), "regenerate-duplicate-image-debt.yml must be manually dispatchable");
+assert(duplicateImageDebtWorkflow.includes("OPENAI_API_KEY"), "regenerate-duplicate-image-debt.yml must use the OpenAI API key secret");
+assert(duplicateImageDebtWorkflow.includes("regenerate:duplicate-image-debt"), "regenerate-duplicate-image-debt.yml must run the duplicate image regeneration script");
+assert(duplicateImageDebtWorkflow.includes("test:duplicate-image-debt"), "regenerate-duplicate-image-debt.yml must verify the duplicate image debt report");
+assert(duplicateImageDebtWorkflow.includes("deploy-pages"), "regenerate-duplicate-image-debt.yml must deploy Pages after committing generated images");
 const gitignore = fs.readFileSync(path.join(root, ".gitignore"), "utf8");
 assert(!gitignore.includes("data/live-news-report.json"), "data/live-news-report.json must not be ignored");
 const dailyUpdateScript = fs.readFileSync(path.join(root, "scripts", "daily-update.mjs"), "utf8");
@@ -824,6 +863,8 @@ assert(pagesWorkflow.includes("generate:archive"), "pages.yml must regenerate ca
 assert(pagesWorkflow.includes("audit:images"), "pages.yml must run the full site image audit before deploying");
 assert(pagesWorkflow.includes("audit:image-debt"), "pages.yml must generate the image debt report before deploying");
 assert(pagesWorkflow.includes("test:image-debt"), "pages.yml must verify the image debt report before deploying");
+assert(pagesWorkflow.includes("audit:duplicate-image-debt"), "pages.yml must generate the duplicate image debt report before deploying");
+assert(pagesWorkflow.includes("test:duplicate-image-debt"), "pages.yml must verify the duplicate image debt report before deploying");
 assert(pagesWorkflow.includes("test:social-previews"), "pages.yml must audit social previews before deploying");
 
 const xDailyWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "x-daily-post.yml"), "utf8");
@@ -841,6 +882,7 @@ const opsHealthWorkflow = fs.readFileSync(path.join(root, ".github", "workflows"
 assert(opsHealthWorkflow.includes("npm test"), "ops-health-check.yml must run content validation");
 assert(opsHealthWorkflow.includes("audit:images"), "ops-health-check.yml must run the full site image audit");
 assert(opsHealthWorkflow.includes("test:image-debt"), "ops-health-check.yml must verify the image debt report");
+assert(opsHealthWorkflow.includes("test:duplicate-image-debt"), "ops-health-check.yml must verify the duplicate image debt report");
 assert(opsHealthWorkflow.includes("test:social-previews"), "ops-health-check.yml must audit social previews");
 assert(opsHealthWorkflow.includes("test:x-daily-post"), "ops-health-check.yml must verify X daily post readiness");
 assert(opsHealthWorkflow.includes("test:meta-post"), "ops-health-check.yml must verify Meta daily post readiness");
@@ -851,8 +893,11 @@ const opsHealthScript = fs.readFileSync(path.join(root, "scripts", "ops-health-c
 assert(fileExists("scripts/audit-site-images.mjs"), "site image audit script missing");
 assert(fileExists("scripts/write-image-debt-report.mjs"), "site image debt report script missing");
 assert(fileExists("scripts/regenerate-image-debt.mjs"), "site image debt regeneration script missing");
+assert(fileExists("scripts/write-duplicate-image-debt-report.mjs"), "site duplicate image debt report script missing");
+assert(fileExists("scripts/regenerate-duplicate-image-debt.mjs"), "site duplicate image debt regeneration script missing");
 assert(opsHealthScript.includes("audit-site-images.mjs"), "ops-health-check must run the site image audit");
 assert(opsHealthScript.includes("write-image-debt-report.mjs"), "ops-health-check must verify the site image debt report");
+assert(opsHealthScript.includes("write-duplicate-image-debt-report.mjs"), "ops-health-check must verify the duplicate image debt report");
 assert(opsHealthScript.includes("metaDailyPostSkippedRun"), "ops-health-check must warn when Meta Daily Post silently skipped publishing");
 const dailyImagePromptBlock = dailyUpdateScript.slice(
   dailyUpdateScript.indexOf("function imagePromptFor"),

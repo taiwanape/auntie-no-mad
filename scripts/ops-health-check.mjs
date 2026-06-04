@@ -220,6 +220,28 @@ function checkLocalContent() {
       : (imageDebtResult.stderr || imageDebtResult.stdout || "image debt report is out of sync").trim()
   );
 
+  const duplicateImageDebtResult = spawnSync(process.execPath, ["scripts/write-duplicate-image-debt-report.mjs", "--check"], {
+    cwd: root,
+    encoding: "utf8",
+    windowsHide: true
+  });
+  const duplicateImageDebt = fs.existsSync(path.join(root, "data", "site-duplicate-image-debt.json"))
+    ? readJson("data/site-duplicate-image-debt.json")
+    : null;
+  details.duplicateImageDebt = duplicateImageDebt ? {
+    historicalDuplicatePrimaryImageGroups: duplicateImageDebt.summary?.historicalDuplicatePrimaryImageGroups,
+    pagesToRegenerate: duplicateImageDebt.summary?.pagesToRegenerate,
+    p1PromotedOrArchivePages: duplicateImageDebt.summary?.p1PromotedOrArchivePages,
+    p2DirectOnlyPages: duplicateImageDebt.summary?.p2DirectOnlyPages
+  } : { missing: true };
+  addCheck(
+    "duplicate image debt report",
+    duplicateImageDebtResult.status === 0,
+    duplicateImageDebtResult.status === 0
+      ? `${duplicateImageDebt?.summary?.historicalDuplicatePrimaryImageGroups || 0} duplicate image groups tracked; ${duplicateImageDebt?.summary?.pagesToRegenerate || 0} pages to regenerate`
+      : (duplicateImageDebtResult.stderr || duplicateImageDebtResult.stdout || "duplicate image debt report is out of sync").trim()
+  );
+
   const content = readJson("data/site-content.json");
   const report = readJson("data/review-report.json");
   details.content = {

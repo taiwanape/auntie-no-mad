@@ -79,6 +79,9 @@ jobs:
       - name: Generate image debt report
         run: npm run audit:image-debt
 
+      - name: Generate duplicate image debt report
+        run: npm run audit:duplicate-image-debt
+
       - name: Validate content
         run: npm test
 
@@ -87,6 +90,9 @@ jobs:
 
       - name: Check image debt report
         run: npm run test:image-debt
+
+      - name: Check duplicate image debt report
+        run: npm run test:duplicate-image-debt
 
       - name: Audit social previews
         run: npm run test:social-previews

@@ -16,14 +16,14 @@ function argValue(name, fallback = "") {
   return fallback;
 }
 
-const priority = argValue("--priority", "P1").toUpperCase();
-const limit = Number.parseInt(argValue("--limit", "8"), 10);
+const priority = argValue("--priority", "ALL").toUpperCase();
+const limit = Number.parseInt(argValue("--limit", "10"), 10);
 const model = process.env.OPENAI_IMAGE_MODEL || "gpt-image-1";
 const quality = process.env.OPENAI_IMAGE_QUALITY || "medium";
 const size = process.env.OPENAI_IMAGE_SIZE || "1536x1024";
 const outputFormat = process.env.OPENAI_IMAGE_OUTPUT_FORMAT || "jpeg";
 const outputCompression = Number.parseInt(process.env.OPENAI_IMAGE_OUTPUT_COMPRESSION || "88", 10);
-const promptRevision = process.env.IMAGE_DEBT_PROMPT_REVISION || "legacy-v1";
+const promptRevision = process.env.DUPLICATE_IMAGE_PROMPT_REVISION || "dedupe-v1";
 
 function normalizePath(value = "") {
   return String(value).replaceAll("\\", "/");
@@ -68,20 +68,22 @@ function summarize(value = "", maxLength = 180) {
 }
 
 function topicScene(item) {
-  const haystack = `${item.page} ${item.title} ${item.category}`;
-  if (/捷運|三鶯|通車|交通|班距|車站/.test(haystack)) {
-    return "Scene: auntie at a Taiwan transit planning table with a small blank train model, blank route map shapes, platform railings, commuter bag, clock icon without numbers, and motion stickers. Make the metro topic instantly readable through objects, not text.";
+  const page = normalizePath(item.page).toLowerCase();
+  const kind = String(item.suggestedImageKind || "").toLowerCase();
+  const haystack = `${page} ${kind} ${item.id || ""}`;
+  if (page.startsWith("radar/") && /hsr|train|traffic|commute|transit|transport/.test(haystack)) {
+    return "Scene: auntie at a Taiwan transit planning table with blank route shapes, a train model, platform railings, commuter bag, clock icon without numbers, and motion stickers. Use a distinct composition from older transit covers.";
   }
-  if (/雨|豪雨|鋒面|颱|天氣|高溫|薔蜜/.test(haystack)) {
-    return "Scene: auntie preparing for Taiwan stormy weather with umbrella, laundry rack, rain cloud, puddles, blank phone weather panel, and household checklist icons. Make the weather risk clear without any text or numbers.";
+  if (page.startsWith("radar/") && /heat|front|weather|rain|life-2/.test(haystack)) {
+    return "Scene: auntie preparing for Taiwan weather with umbrella, laundry rack, blank weather phone panel, rain cloud, puddles, water bottle, and checklist icons. Use a distinct composition from older weather covers.";
   }
-  if (/航廈|工區|鐵道局|機敏|工程|機場/.test(haystack)) {
-    return "Scene: auntie checking an airport construction model from a safe distance with blank blueprint sheets, safety cone, helmet, toolbox, train or terminal silhouette, and privacy shield icon. No official logos or readable documents.";
+  if (page.startsWith("stories/") || /traffic-crowd|social-scam|pitfall|trap|scam/.test(haystack)) {
+    return "Scene: auntie warning the viewer about a daily-life trap with a phone showing blank bubbles, blank receipt, warning icon, blocked profile silhouette, and household or street props. Avoid cash, coins, currency symbols, and sensational crime-poster layout.";
   }
-  if (/股市|ETF|市場|股票|market-watch|stocks/.test(haystack)) {
-    return "Scene: auntie at a kitchen-table market desk with four blank cards, abstract chart panels, semiconductor wafer, coffee, calculator with blank keys, caution icon, and magnifying glass. Educational and funny, not a finance ad.";
+  if (page.startsWith("stocks/") || /etf|market-watch|stock|00919|2330|2344|2454|6770|auo|inventec|psmc|umc/.test(haystack)) {
+    return "Scene: auntie at a kitchen-table market desk with four blank cards, abstract chart panels, semiconductor wafer, coffee, calculator with blank keys, caution icon, and magnifying glass. No tickers, company names, prices, coins, cash, or currency signs.";
   }
-  return "Scene: auntie reacting to a real Taiwan daily-life news situation with rich household, street, commute, or market props that explain the topic visually. Make it clickable and story-like.";
+  return "Scene: auntie reacting to a real Taiwan daily-life topic with rich household, street, commute, or desk props. Make the page visually distinct from the old duplicate image.";
 }
 
 function buildPrompt(item) {
@@ -90,13 +92,12 @@ function buildPrompt(item) {
   const title = summarize(item.title || metaContent(html, "og:title") || item.id, 90);
   const summary = summarize(description, 180);
   return [
-    "Create a fresh 16:9 landscape editorial comic illustration for the Auntie No Mad website.",
+    "Create a fresh 16:9 landscape editorial comic illustration for the Auntie No Mad website. This replaces a duplicate historical primary image, so the composition must be clearly different from the old shared art.",
     "Match the approved style exactly: bright yellow halftone background, thick black ink outlines, white sticker-cut borders, hot-pink accent icons, cream paper tones, playful Taiwan sticker/comic style, clean bold shapes, polished rendering.",
     "Preserve the character identity exactly: middle-aged Taiwanese auntie, round fuller face, full curly dark-brown short hair with big swooping curls, black pixel sunglasses, gold hoop earrings, leopard-print long sleeves/top, black apron with a small pink heart, fuller body, confident auntie attitude.",
     "Do not make the auntie younger, thinner, a different hairstyle, a different outfit, a logo mascot, a flat vector icon, a typography poster, a collage, or a banner.",
     "Absolutely no visible writing anywhere: no Chinese characters, no English letters, no numbers, no stock tickers, no company names, no brand title, no logo, no watermark, no signage, no captions, no labels, no speech-bubble words, no readable or fake text on papers, screens, phones, signs, badges, charts, cards, stickers, or map pins.",
-    "Also avoid currency symbols, dollar signs, percent signs, punctuation-as-text, QR-code-like blocks, and readable warning labels.",
-    "Use blank icons, shapes, arrows, colored dots, pictograms, empty check circles, abstract charts, and blank panels instead of words or numbers.",
+    "Also avoid currency symbols, dollar signs, percent signs, punctuation symbols as text, QR-code-like blocks, and readable warning labels. Use blank icons, shapes, arrows, colored dots, pictograms, empty check circles, abstract charts, and blank panels instead.",
     "Keep the auntie large and fully inside the frame; do not crop the head, face, hands, or key objects.",
     `Topic: ${title}.`,
     summary ? `Story angle: ${summary}` : "",
@@ -122,7 +123,7 @@ async function generateOpenAIImage(prompt, outputPath) {
     headers: {
       authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       "content-type": "application/json",
-      "user-agent": "auntie-no-mad-image-debt-regenerator/1.0"
+      "user-agent": "auntie-no-mad-duplicate-image-regenerator/1.0"
     },
     body: JSON.stringify(requestBody)
   });
@@ -167,6 +168,19 @@ function replaceInJsonStrings(value, oldValue, newValue) {
   return value;
 }
 
+function replaceInJsonForPage(value, item) {
+  if (Array.isArray(value)) return value.map((entry) => replaceInJsonForPage(entry, item));
+  if (!value || typeof value !== "object") return value;
+
+  const slug = normalizePath(value.slug || value.page || "");
+  const isTargetRecord = slug === item.page || slug.endsWith(`/${item.page}`);
+  if (isTargetRecord) return replaceInJsonStrings(value, item.currentImage, item.nextImage);
+
+  return Object.fromEntries(
+    Object.entries(value).map(([key, entry]) => [key, replaceInJsonForPage(entry, item)])
+  );
+}
+
 function runScript(script) {
   const result = spawnSync(process.execPath, [script], {
     cwd: root,
@@ -179,23 +193,24 @@ function runScript(script) {
 }
 
 async function main() {
-  if (!["P0", "P1", "P2"].includes(priority)) {
-    throw new Error("--priority must be P0, P1, or P2");
+  if (!["ALL", "P1", "P2"].includes(priority)) {
+    throw new Error("--priority must be ALL, P1, or P2");
   }
   if (!Number.isFinite(limit) || limit < 1) {
     throw new Error("--limit must be a positive number");
   }
   if (!dryRun && !process.env.OPENAI_API_KEY) {
-    throw new Error("OPENAI_API_KEY is required to regenerate image debt");
+    throw new Error("OPENAI_API_KEY is required to regenerate duplicate image debt");
   }
 
-  const debt = readJson("data/site-image-debt.json");
+  const debt = readJson("data/site-duplicate-image-debt.json");
   const selected = (debt.items || [])
-    .filter((item) => item.status === "needs_regeneration" && item.priority === priority)
+    .filter((item) => item.status === "needs_regeneration")
+    .filter((item) => priority === "ALL" || item.priority === priority)
     .slice(0, limit);
 
   if (!selected.length) {
-    console.log(`No ${priority} image debt items to regenerate.`);
+    console.log(`No duplicate image debt items to regenerate for ${priority}.`);
     return;
   }
 
@@ -214,7 +229,10 @@ async function main() {
     }
 
     replaceAllText(item.page, item.currentImage, nextImage);
-    const content = replaceInJsonStrings(readJson("data/site-content.json"), item.currentImage, nextImage);
+    const content = replaceInJsonForPage(readJson("data/site-content.json"), {
+      ...item,
+      nextImage
+    });
     writeJson("data/site-content.json", content);
   }
 
@@ -229,7 +247,7 @@ async function main() {
     return;
   }
 
-  runScript("scripts/write-image-debt-report.mjs");
+  runScript("scripts/write-duplicate-image-debt-report.mjs");
   console.log(JSON.stringify({
     ok: true,
     dryRun: false,
