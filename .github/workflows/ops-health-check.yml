@@ -30,6 +30,9 @@ jobs:
       - name: Audit site images
         run: npm run audit:images
 
+      - name: Check image debt report
+        run: npm run test:image-debt
+
       - name: Audit social previews
         run: npm run test:social-previews
 

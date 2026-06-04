@@ -76,11 +76,17 @@ jobs:
       - name: Generate social link page
         run: npm run generate:links
 
+      - name: Generate image debt report
+        run: npm run audit:image-debt
+
       - name: Validate content
         run: npm test
 
       - name: Audit site images
         run: npm run audit:images
+
+      - name: Check image debt report
+        run: npm run test:image-debt
 
       - name: Audit social previews
         run: npm run test:social-previews

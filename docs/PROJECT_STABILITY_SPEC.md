@@ -72,6 +72,7 @@ C:\Users\taiwa\Documents\阿姨別生氣\website
 - 今天的文章主圖若缺檔、使用 `*-approved.*`、不在當日資料夾，或與其他今日文章 byte hash 重複，必須失敗。
 - 歷史舊文若仍使用早期 approved fallback，先列為追蹤警示，不可混同為今日更新合格。
 - 歷史 approved fallback 頁在補新圖前，不可出現在 `archive.html`、`sitemap.xml`、RSS 或 JSON feed 這些主要入口。
+- `data/site-image-debt.json` 是歷史舊圖債務清單，需列出每篇仍使用 fallback 主圖的頁面、優先級、目前圖檔與重生提示。
 - `npm run ops:health` 必須執行全站圖片稽核，讓每日健康檢查看得見圖片債務與今日發布門檻。
 
 如果 OpenAI 圖片 API 失敗：
@@ -154,6 +155,7 @@ C:\Users\taiwa\Documents\阿姨別生氣\website
 ```powershell
 npm test
 npm run audit:images
+npm run test:image-debt
 npm run test:social-previews
 ```
 

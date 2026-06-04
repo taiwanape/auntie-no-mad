@@ -380,6 +380,7 @@ assert(!/[銝嚗瘞踹]\S*[?]/.test(serializedData), "data/site-content.json app
 
 const sharePack = checkJsonArtifact("data/share-pack.json", "data/share-pack.json");
 const socialPosts = checkJsonArtifact("data/social-posts.json", "data/social-posts.json");
+const imageDebt = checkJsonArtifact("data/site-image-debt.json", "data/site-image-debt.json");
 if (sharePack) {
   assert(Array.isArray(sharePack.items), "data/share-pack.json must include items array");
   (sharePack.items || []).forEach((item) => {
@@ -609,6 +610,33 @@ if (fs.existsSync(socialPostsPath)) {
   assert([...String(socialPosts.posts?.x?.text || "")].length <= 270, "social-posts: X text must stay under 270 chars");
 }
 
+if (imageDebt) {
+  assert(imageDebt.schemaVersion === 1, "site-image-debt: schemaVersion must be 1");
+  assert(
+    String(imageDebt.policy || "").includes("approved fallback primary images must be regenerated"),
+    "site-image-debt: policy must explain approved fallback regeneration rule"
+  );
+  assert(imageDebt.summary, "site-image-debt: summary is required");
+  assert(
+    imageDebt.summary.exposedLegacyApprovedPrimaryImages === 0,
+    "site-image-debt: exposed legacy approved images must stay at 0"
+  );
+  assert(Array.isArray(imageDebt.items), "site-image-debt: items must be an array");
+  assert(
+    imageDebt.items.length === imageDebt.summary.legacyApprovedPrimaryImages,
+    "site-image-debt: item count must match legacyApprovedPrimaryImages"
+  );
+  (imageDebt.items || []).forEach((item) => {
+    assert(item.status === "needs_regeneration", `site-image-debt: ${item.page} must stay marked needs_regeneration until art is replaced`);
+    assert(["P0", "P1", "P2"].includes(item.priority), `site-image-debt: ${item.page} priority must be P0/P1/P2`);
+    assert(item.page && fileExists(item.page), `site-image-debt: page must exist: ${item.page}`);
+    assert(item.currentImage && fileExists(item.currentImage), `site-image-debt: current image must exist: ${item.currentImage}`);
+    assert(!item.promoted, `site-image-debt: ${item.page} must not be promoted while it still uses fallback art`);
+    assert(String(item.currentImage || "").includes("-approved"), `site-image-debt: ${item.page} must track an approved fallback image`);
+    assert(String(item.promptBrief || "").includes("no visible writing"), `site-image-debt: ${item.page} prompt brief must ban visible writing`);
+  });
+}
+
 for (const [index, script] of [...indexHtml.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]).entries()) {
   try {
     new Function(script);
@@ -764,11 +792,14 @@ const benchmarkDoc = fs.readFileSync(path.join(root, "docs", "TAIWAN_TOP_SITES_B
   assert(workflow.includes("generate:links"), `${workflowFile} must regenerate social link page`);
   assert(workflow.includes("generate:archive"), `${workflowFile} must regenerate categorized archive page`);
   assert(workflow.includes("audit:images"), `${workflowFile} must run the full site image audit`);
+  assert(workflow.includes("audit:image-debt"), `${workflowFile} must regenerate the image debt report`);
+  assert(workflow.includes("test:image-debt"), `${workflowFile} must verify the image debt report`);
   assert(workflow.includes("test:social-previews"), `${workflowFile} must audit social previews`);
   assert(workflow.includes("index.html"), `${workflowFile} must commit homepage preview updates`);
 });
 const liveNewsWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "live-news-update.yml"), "utf8");
 assert(liveNewsWorkflow.includes("data/live-news-report.json"), "live-news-update.yml must publish the live news report");
+assert(liveNewsWorkflow.includes("data/site-image-debt.json"), "live-news-update.yml must publish the site image debt report");
 const gitignore = fs.readFileSync(path.join(root, ".gitignore"), "utf8");
 assert(!gitignore.includes("data/live-news-report.json"), "data/live-news-report.json must not be ignored");
 const dailyUpdateScript = fs.readFileSync(path.join(root, "scripts", "daily-update.mjs"), "utf8");
@@ -782,6 +813,8 @@ assert(dailyUpdateWorkflow.includes("OPENAI_IMAGE_OUTPUT_COMPRESSION"), "daily-u
 const pagesWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "pages.yml"), "utf8");
 assert(pagesWorkflow.includes("generate:archive"), "pages.yml must regenerate categorized archive before deploying");
 assert(pagesWorkflow.includes("audit:images"), "pages.yml must run the full site image audit before deploying");
+assert(pagesWorkflow.includes("audit:image-debt"), "pages.yml must generate the image debt report before deploying");
+assert(pagesWorkflow.includes("test:image-debt"), "pages.yml must verify the image debt report before deploying");
 assert(pagesWorkflow.includes("test:social-previews"), "pages.yml must audit social previews before deploying");
 
 const xDailyWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "x-daily-post.yml"), "utf8");
@@ -798,6 +831,7 @@ assert(
 const opsHealthWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "ops-health-check.yml"), "utf8");
 assert(opsHealthWorkflow.includes("npm test"), "ops-health-check.yml must run content validation");
 assert(opsHealthWorkflow.includes("audit:images"), "ops-health-check.yml must run the full site image audit");
+assert(opsHealthWorkflow.includes("test:image-debt"), "ops-health-check.yml must verify the image debt report");
 assert(opsHealthWorkflow.includes("test:social-previews"), "ops-health-check.yml must audit social previews");
 assert(opsHealthWorkflow.includes("test:x-daily-post"), "ops-health-check.yml must verify X daily post readiness");
 assert(opsHealthWorkflow.includes("test:meta-post"), "ops-health-check.yml must verify Meta daily post readiness");
@@ -806,7 +840,9 @@ assert(opsHealthWorkflow.includes("ENABLE_PAGES_HTTPS"), "ops-health-check.yml m
 
 const opsHealthScript = fs.readFileSync(path.join(root, "scripts", "ops-health-check.mjs"), "utf8");
 assert(fileExists("scripts/audit-site-images.mjs"), "site image audit script missing");
+assert(fileExists("scripts/write-image-debt-report.mjs"), "site image debt report script missing");
 assert(opsHealthScript.includes("audit-site-images.mjs"), "ops-health-check must run the site image audit");
+assert(opsHealthScript.includes("write-image-debt-report.mjs"), "ops-health-check must verify the site image debt report");
 assert(opsHealthScript.includes("metaDailyPostSkippedRun"), "ops-health-check must warn when Meta Daily Post silently skipped publishing");
 const dailyImagePromptBlock = dailyUpdateScript.slice(
   dailyUpdateScript.indexOf("function imagePromptFor"),

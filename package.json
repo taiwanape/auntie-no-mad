@@ -14,6 +14,8 @@
     "generate:archive": "node scripts/generate-archive-page.mjs",
     "generate:links": "node scripts/generate-links-page.mjs",
     "audit:images": "node scripts/audit-site-images.mjs",
+    "audit:image-debt": "node scripts/write-image-debt-report.mjs",
+    "test:image-debt": "node scripts/write-image-debt-report.mjs --check",
     "test:social-previews": "node scripts/audit-social-previews.mjs",
     "test:x-queue": "node scripts/validate-x-content-queue.mjs",
     "test:x-api": "node scripts/test-x-api.mjs",

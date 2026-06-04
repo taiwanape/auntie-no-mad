@@ -197,6 +197,29 @@ function checkLocalContent() {
   );
   (imageAudit?.warnings || []).forEach((message) => addWarning(message));
 
+  const imageDebtResult = spawnSync(process.execPath, ["scripts/write-image-debt-report.mjs", "--check"], {
+    cwd: root,
+    encoding: "utf8",
+    windowsHide: true
+  });
+  const imageDebt = fs.existsSync(path.join(root, "data", "site-image-debt.json"))
+    ? readJson("data/site-image-debt.json")
+    : null;
+  details.imageDebt = imageDebt ? {
+    legacyApprovedPrimaryImages: imageDebt.summary?.legacyApprovedPrimaryImages,
+    exposedLegacyApprovedPrimaryImages: imageDebt.summary?.exposedLegacyApprovedPrimaryImages,
+    p0PromotedNeedsImmediateFix: imageDebt.summary?.p0PromotedNeedsImmediateFix,
+    p1ArchiveDataHiddenUntilRegenerated: imageDebt.summary?.p1ArchiveDataHiddenUntilRegenerated,
+    p2DirectOnlyBacklog: imageDebt.summary?.p2DirectOnlyBacklog
+  } : { missing: true };
+  addCheck(
+    "image debt report",
+    imageDebtResult.status === 0,
+    imageDebtResult.status === 0
+      ? `${imageDebt?.summary?.legacyApprovedPrimaryImages || 0} legacy image-debt items tracked; P0 ${imageDebt?.summary?.p0PromotedNeedsImmediateFix || 0}`
+      : (imageDebtResult.stderr || imageDebtResult.stdout || "image debt report is out of sync").trim()
+  );
+
   const content = readJson("data/site-content.json");
   const report = readJson("data/review-report.json");
   details.content = {
