@@ -223,6 +223,102 @@
       "external_url": "https://www.cna.com.tw/news/ahel/202605310188.aspx"
     },
     {
+      "id": "http://auntienomad.com/stocks/2026-05-31-market-watch.html",
+      "url": "http://auntienomad.com/stocks/2026-05-31-market-watch.html",
+      "title": "今日市場筆記 2026/05/31",
+      "summary": "今天固定四檔：兩檔熱門股、一檔新星觀察、一檔高人氣但風險也要看的 ETF。每檔都附阿姨白話理由，但仍然不是買賣建議。",
+      "content_text": "今天固定四檔：兩檔熱門股、一檔新星觀察、一檔高人氣但風險也要看的 ETF。每檔都附阿姨白話理由，但仍然不是買賣建議。\n\n不是報明牌，是把市場消息整理成白話文。",
+      "date_published": "2026-05-30T16:00:00.000Z",
+      "tags": [
+        "股市 ETF"
+      ],
+      "external_url": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?response=json"
+    },
+    {
+      "id": "http://auntienomad.com/radar/2026-05-31-life-1.html",
+      "url": "http://auntienomad.com/radar/2026-05-31-life-1.html",
+      "title": "傳中籍人士進第3航廈工區 鐵道局：履約技術指導、無涉機敏系統",
+      "summary": "（中央社記者余曉涵台北30日電）網傳桃園機場第3航廈工程有中國籍人士進入工區，經查為機場捷運相關工程。鐵道局說，8名中籍人士因商務履約，依規申請入境技術指導，無涉機敏系統或資安，目前作業已完成。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "content_text": "（中央社記者余曉涵台北30日電）網傳桃園機場第3航廈工程有中國籍人士進入工區，經查為機場捷運相關工程。鐵道局說，8名中籍人士因商務履約，依規申請入境技術指導，無涉機敏系統或資安，目前作業已完成。 阿姨提醒：先看來源、再看自己今天會不會被影響。\n\n交通消息先看一眼，少在月台或路上多煩十分鐘。",
+      "date_published": "2026-05-30T16:00:00.000Z",
+      "tags": [
+        "交通生活"
+      ],
+      "external_url": "https://www.cna.com.tw/news/ahel/202605300134.aspx"
+    },
+    {
+      "id": "http://auntienomad.com/stocks/2026-05-30-market-watch.html",
+      "url": "http://auntienomad.com/stocks/2026-05-30-market-watch.html",
+      "title": "今日市場筆記 2026/05/30",
+      "summary": "今天固定四檔：兩檔熱門股、一檔新星觀察、一檔高人氣但風險也要看的 ETF。每檔都附阿姨白話理由，但仍然不是買賣建議。",
+      "content_text": "今天固定四檔：兩檔熱門股、一檔新星觀察、一檔高人氣但風險也要看的 ETF。每檔都附阿姨白話理由，但仍然不是買賣建議。\n\n不是報明牌，是把市場消息整理成白話文。",
+      "date_published": "2026-05-29T16:00:00.000Z",
+      "tags": [
+        "股市 ETF"
+      ],
+      "external_url": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?response=json"
+    },
+    {
+      "id": "http://auntienomad.com/radar/2026-05-30-life-1.html",
+      "url": "http://auntienomad.com/radar/2026-05-30-life-1.html",
+      "title": "各地多雲時晴 吳德榮：颱風薔蜜外圍6/1影響台灣",
+      "summary": "（中央社記者余曉涵台北30日電）氣象專家吳德榮今天表示，鋒面南移至巴士海峽，各地天氣好轉為多雲時晴，颱風薔蜜的外圍雲系預計6月1日影響台灣，屆時迎風面將有局部雨。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "content_text": "（中央社記者余曉涵台北30日電）氣象專家吳德榮今天表示，鋒面南移至巴士海峽，各地天氣好轉為多雲時晴，颱風薔蜜的外圍雲系預計6月1日影響台灣，屆時迎風面將有局部雨。 阿姨提醒：先看來源、再看自己今天會不會被影響。\n\n天氣不是拿來焦慮的，是拿來決定要不要帶傘、改行程。",
+      "date_published": "2026-05-29T16:00:00.000Z",
+      "tags": [
+        "天氣生活"
+      ],
+      "external_url": "https://www.cna.com.tw/news/ahel/202605300022.aspx"
+    },
+    {
+      "id": "http://auntienomad.com/radar/2026-05-30-life-2.html",
+      "url": "http://auntienomad.com/radar/2026-05-30-life-2.html",
+      "title": "資安署擴大攻防演練 首納B級關鍵基礎設施提供者",
+      "summary": "（中央社記者趙敏雅台北24日電）關鍵基礎設施資安威脅升高，為確保能源、交通及醫療等重要服務運作安全，數發部資安署表示，持續擴大關鍵基礎設施防護團隊，今年網路攻防演練除A級關鍵基礎設施提供者外，也首度納入B級關鍵基礎設施提供者，聚焦檢驗機關對外設備資產安全，強化資產管理及漏洞修補作業。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "content_text": "（中央社記者趙敏雅台北24日電）關鍵基礎設施資安威脅升高，為確保能源、交通及醫療等重要服務運作安全，數發部資安署表示，持續擴大關鍵基礎設施防護團隊，今年網路攻防演練除A級關鍵基礎設施提供者外，也首度納入B級關鍵基礎設施提供者，聚焦檢驗機關對外設備資產安全，強化資產管理及漏洞修補作業。 阿姨提醒：先看來源、再看自己今天會不會被影響。\n\n新科技先看用途，不要只看熱鬧。",
+      "date_published": "2026-05-29T16:00:00.000Z",
+      "tags": [
+        "科技生活"
+      ],
+      "external_url": "https://www.cna.com.tw/news/ait/202605240017.aspx"
+    },
+    {
+      "id": "http://auntienomad.com/stocks/2026-05-29-market-watch.html",
+      "url": "http://auntienomad.com/stocks/2026-05-29-market-watch.html",
+      "title": "今日市場筆記 2026/05/29",
+      "summary": "今天固定四檔：兩檔熱門股、一檔新星觀察、一檔高人氣但風險也要看的 ETF。每檔都附阿姨白話理由，但仍然不是買賣建議。",
+      "content_text": "今天固定四檔：兩檔熱門股、一檔新星觀察、一檔高人氣但風險也要看的 ETF。每檔都附阿姨白話理由，但仍然不是買賣建議。\n\n不是報明牌，是把市場消息整理成白話文。",
+      "date_published": "2026-05-28T16:00:00.000Z",
+      "tags": [
+        "股市 ETF"
+      ],
+      "external_url": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?response=json"
+    },
+    {
+      "id": "http://auntienomad.com/radar/2026-05-29-life-1.html",
+      "url": "http://auntienomad.com/radar/2026-05-29-life-1.html",
+      "title": "捷運三鶯線拚年中通車 尖峰最短班距擬2.2分鐘",
+      "summary": "（中央社記者曹亞沿新北28日電）新北議員關切捷運三鶯線進度，市長侯友宜說，交通部今開會決定履勘日期，朝年中通車目標邁進。未來尖峰最短擬2.2分鐘一班，但初期尖峰時間班距約5至6分鐘，後續再逐步調整。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "content_text": "（中央社記者曹亞沿新北28日電）新北議員關切捷運三鶯線進度，市長侯友宜說，交通部今開會決定履勘日期，朝年中通車目標邁進。未來尖峰最短擬2.2分鐘一班，但初期尖峰時間班距約5至6分鐘，後續再逐步調整。 阿姨提醒：先看來源、再看自己今天會不會被影響。\n\n新聞不是拿來焦慮的，是拿來少踩一個坑的。",
+      "date_published": "2026-05-28T16:00:00.000Z",
+      "tags": [
+        "生活新聞"
+      ],
+      "external_url": "https://www.cna.com.tw/news/ahel/202605280337.aspx"
+    },
+    {
+      "id": "http://auntienomad.com/radar/2026-05-29-life-2.html",
+      "url": "http://auntienomad.com/radar/2026-05-29-life-2.html",
+      "title": "鋒面影響入夜中部以北防雷雨 薔蜜最快29日晚間轉中颱",
+      "summary": "（中央社記者黃巧雯台北28日電）氣象署表示，今晚至明天，中部以北和宜蘭地區有陣雨或雷雨，其他地區午後有局部短暫雷陣雨；預估颱風薔蜜明晚至30日增強為中度颱風，5月31日、6月1日將最接近台灣。 阿姨提醒：先看來源、再看自己今天會不會被影響。",
+      "content_text": "（中央社記者黃巧雯台北28日電）氣象署表示，今晚至明天，中部以北和宜蘭地區有陣雨或雷雨，其他地區午後有局部短暫雷陣雨；預估颱風薔蜜明晚至30日增強為中度颱風，5月31日、6月1日將最接近台灣。 阿姨提醒：先看來源、再看自己今天會不會被影響。\n\n新聞不是拿來焦慮的，是拿來少踩一個坑的。",
+      "date_published": "2026-05-28T16:00:00.000Z",
+      "tags": [
+        "民生資訊"
+      ],
+      "external_url": "https://www.cna.com.tw/news/ahel/202605280263.aspx"
+    },
+    {
       "id": "http://auntienomad.com/radar/2026-05-27-hsr-refund.html",
       "url": "http://auntienomad.com/radar/2026-05-27-hsr-refund.html",
       "title": "高鐵延誤退費別拖：一年內可以辦，但別拖到忘記。",
@@ -269,30 +365,6 @@
         "踩坑日記"
       ],
       "external_url": "https://news.tvbs.com.tw/life/3206578"
-    },
-    {
-      "id": "http://auntienomad.com/stocks/2026-05-27-market-watch.html",
-      "url": "http://auntienomad.com/stocks/2026-05-27-market-watch.html",
-      "title": "今日市場筆記 2026/05/27",
-      "summary": "友達、英業達、力積電與 00919 的早晨觀察。",
-      "content_text": "友達、英業達、力積電與 00919 的早晨觀察。\n\n這是資料整理，不是報明牌。",
-      "date_published": "2026-05-26T16:00:00.000Z",
-      "tags": [
-        "股市 ETF"
-      ],
-      "external_url": "https://tw.stock.yahoo.com/"
-    },
-    {
-      "id": "http://auntienomad.com/stocks/2026-05-26-market-watch.html",
-      "url": "http://auntienomad.com/stocks/2026-05-26-market-watch.html",
-      "title": "今日市場筆記 2026/05/26",
-      "summary": "圖文相符版先保留四檔觀察：友達、英業達、聯電與 00919。阿姨提醒：這是公開資訊整理，不是買賣建議。",
-      "content_text": "圖文相符版先保留四檔觀察：友達、英業達、聯電與 00919。阿姨提醒：這是公開資訊整理，不是買賣建議。\n\n先看分類和風險，不要看到紅綠燈就衝。",
-      "date_published": "2026-05-25T16:00:00.000Z",
-      "tags": [
-        "股市 ETF"
-      ],
-      "external_url": "https://tw.stock.yahoo.com/"
     }
   ]
 }
