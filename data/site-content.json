@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-04T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/04 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-04-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-03T17:18:42.524Z"
+    "liveNewsUpdatedAt": "2026-06-04T01:48:40.610Z"
   },
   "lifeRadar": [
     {
@@ -563,76 +563,76 @@
   ],
   "liveNews": [
     {
-      "title": "中東緊張升溫 美股收盤自歷史高點回跌",
-      "date": "2026-06-04",
-      "category": "即時財經",
-      "summary": "中東緊張情勢再度升溫，油價應聲反彈，引發通貨膨脹疑慮，美國股市今天在投資人獲利了結賣壓下，收盤自歷史高點回落。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606040010.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606040010.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-06-03T21:07:15.000Z",
-      "displayTime": "06/04 05:07"
-    },
-    {
-      "title": "美伊衝突再起 國際油價連3天走高",
-      "date": "2026-06-04",
-      "category": "即時財經",
-      "summary": "美國與伊朗之間再次互相攻擊，令市場對重啟荷莫茲海峽（Strait of Hormuz）的和平協議前景產生懷疑，國際油價今天連續第3天上漲。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606040008.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606040008.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-06-03T20:54:11.000Z",
-      "displayTime": "06/04 04:54"
-    },
-    {
-      "title": "中東局勢再添變數 歐股收跌油價走高",
-      "date": "2026-06-04",
-      "category": "即時財經",
-      "summary": "美國與伊朗再次互相攻擊，澆熄市場對雙方近期達成和平協議的期待，歐洲主要股市今天收跌，國際油價走高，逼近每桶100美元關卡。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606040003.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606040003.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-06-03T16:32:56.000Z",
-      "displayTime": "06/04 00:32"
-    },
-    {
-      "title": "台中火鍋店負責人疑捲款潛逃 檢警介入偵辦",
-      "date": "2026-06-04",
-      "category": "即時社會",
-      "summary": "台中大雅區經營連鎖火鍋店的黃姓負責人疑因投資失利，傳出黃姓夫妻已捲款上億元潛逃出國，地方人士初估受害者約339人，大雅警分局證實接獲民眾報案，該案涉及詐欺，報請台中地檢署偵辦。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606040002.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606040002.aspx",
-      "sourceName": "中央社社會新聞",
-      "publishedAt": "2026-06-03T16:00:49.000Z",
-      "displayTime": "06/04 00:00"
-    },
-    {
-      "title": "前新北議員黃俊哲涉收賄詐補助款 遭羈押禁見",
-      "date": "2026-06-04",
-      "category": "即時社會",
-      "summary": "前民進黨新北市議員黃俊哲涉詐領補助款、侵占公益款及收賄等，不法獲益700多萬元。新北檢昨天發動搜索帶回7人，檢方訊後將黃俊哲及其服務處主任、助理等3人聲押禁見獲准。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606030373.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606030373.aspx",
-      "sourceName": "中央社社會新聞",
-      "publishedAt": "2026-06-03T14:19:28.000Z",
-      "displayTime": "06/03 22:19"
-    },
-    {
-      "title": "南港機廠社宅電梯屢壞 北市住都中心：加強巡檢",
+      "title": "公園拜票 沈伯洋：聆聽基層聲音、盼大家認識我",
       "date": "2026-06-04",
       "category": "即時地方",
-      "summary": "南港機廠社宅電梯近期因損壞連連引發住戶不滿，多名民代今晚召開說明會。住戶說，電梯報修93次，上個月就44次。北市住都中心回應，將要求統包商及電梯廠商每天加強巡檢。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "民進黨台北市長參選人沈伯洋今天到榮星花園公園拜票時表示，目前以接觸市民、聆聽基層聲音為主，也希望藉此讓大家認識他；後續將規劃辦理如客廳會、座談會等，與市民互動。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606030372.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606030372.aspx",
-      "sourceName": "中央社地方新聞",
-      "publishedAt": "2026-06-03T14:16:26.000Z",
-      "displayTime": "06/03 22:16"
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606040035.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606040035.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-04T01:20:14.000Z",
+      "displayTime": "06/04 09:20"
+    },
+    {
+      "title": "中東緊張升溫 台股高點回落早盤跌逾500點",
+      "date": "2026-06-04",
+      "category": "即時財經",
+      "summary": "中東緊張情勢再度升溫，油價反彈，美股自高點回落，台股經連續4個交易日創收盤新高後，今天也開低，早盤最多下跌逾500點，回測46000點。至9時5分，台股加權指數下跌467.21點，至45991 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606040033.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606040033.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-04T01:16:10.000Z",
+      "displayTime": "06/04 09:16"
+    },
+    {
+      "title": "台東活水湖遊客遭蜂螫傷 縣府獲報摘除蜂巢",
+      "date": "2026-06-04",
+      "category": "即時地方",
+      "summary": "台東市熱門運動遊憩景點「活水湖」環湖道路周邊，近日陸續有遊客及除草工人遭蜂螫傷，縣府獲報後已派專人到現場查看並摘除蜂巢，並提醒民眾近日前往該區域應採取防範措施。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606040032.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606040032.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-04T01:15:08.000Z",
+      "displayTime": "06/04 09:15"
+    },
+    {
+      "title": "台股開盤跌95.09點",
+      "date": "2026-06-04",
+      "category": "即時財經",
+      "summary": "台北股市今天開盤跌95.09點，加權股價指數為46364.07點，成交金額新台幣131.97億元。1150604 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606040031.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606040031.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-04T01:06:06.000Z",
+      "displayTime": "06/04 09:06"
+    },
+    {
+      "title": "新台幣開盤貶2分 為31.46元",
+      "date": "2026-06-04",
+      "category": "即時財經",
+      "summary": "台北外匯市場新台幣兌美元匯率今天以31.46元開盤，貶2分。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606040030.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606040030.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-04T01:05:04.000Z",
+      "displayTime": "06/04 09:05"
+    },
+    {
+      "title": "SpaceX衝刺史上最大IPO 馬斯克身價有望突破1兆美元",
+      "date": "2026-06-04",
+      "category": "即時財經",
+      "summary": "美國億萬富豪馬斯克旗下SpaceX計劃透過首次公開募股（IPO）籌資創紀錄的750億美元。根據公司今天提交的監管文件，此次上市將使SpaceX估值衝上1.765兆美元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606040028.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202606040028.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-04T00:46:59.000Z",
+      "displayTime": "06/04 08:46"
     }
   ]
 }
