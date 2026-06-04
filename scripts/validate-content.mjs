@@ -921,6 +921,8 @@ assert(fileExists("scripts/regenerate-duplicate-image-debt.mjs"), "site duplicat
 assert(opsHealthScript.includes("audit-site-images.mjs"), "ops-health-check must run the site image audit");
 assert(opsHealthScript.includes("write-image-debt-report.mjs"), "ops-health-check must verify the site image debt report");
 assert(opsHealthScript.includes("write-duplicate-image-debt-report.mjs"), "ops-health-check must verify the duplicate image debt report");
+assert(opsHealthScript.includes('event: "schedule"'), "ops-health-check must verify scheduled Daily Auntie Update freshness, not only manual runs");
+assert(opsHealthScript.includes("dailyScheduledWorkflow"), "ops-health-check must expose the latest scheduled daily workflow run");
 assert(opsHealthScript.includes("metaDailyPostSkippedRun"), "ops-health-check must warn when Meta Daily Post silently skipped publishing");
 const dailyImagePromptBlock = dailyUpdateScript.slice(
   dailyUpdateScript.indexOf("function imagePromptFor"),

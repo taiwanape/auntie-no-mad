@@ -298,8 +298,8 @@ function checkGitHubActions() {
     GH_TOKEN: process.env.GH_TOKEN || process.env.GITHUB_TOKEN || process.env.GH_TOKEN
   };
 
-  function latestWorkflowRun(workflow) {
-    const gh = spawnSync("gh", [
+  function latestWorkflowRun(workflow, options = {}) {
+    const args = [
       "run",
       "list",
       "--repo",
@@ -310,7 +310,9 @@ function checkGitHubActions() {
       "1",
       "--json",
       "databaseId,workflowName,status,conclusion,createdAt,event,url,headBranch"
-    ], {
+    ];
+    if (options.event) args.splice(args.indexOf("--json"), 0, "--event", options.event);
+    const gh = spawnSync("gh", args, {
       cwd: root,
       encoding: "utf8",
       windowsHide: true,
@@ -347,16 +349,22 @@ function checkGitHubActions() {
     addCheck(`workflow ${workflow}`, ok, `${latest.status}/${latest.conclusion || "pending"} at ${latest.createdAt}`, { url: latest.url });
 
     if (workflow === "Daily Auntie Update") {
-      const latestRunMs = latest.createdAt ? Date.parse(latest.createdAt) : 0;
+      const { run: latestScheduled, error: scheduleError } = latestWorkflowRun(workflow, { event: "schedule" });
+      if (scheduleError) {
+        addWarning(`Unable to inspect scheduled Daily Auntie Update runs with gh: ${scheduleError}`);
+      }
+      details.dailyScheduledWorkflow = latestScheduled || null;
+      const latestRunMs = latestScheduled?.createdAt ? Date.parse(latestScheduled.createdAt) : 0;
       details.dailyWorkflowFreshness = {
         expectedDate: taipeiDate,
-        latestCreatedAt: latest.createdAt,
+        latestCreatedAt: latestScheduled?.createdAt || null,
+        latestEvent: latestScheduled?.event || null,
         latestRunIsToday: latestRunMs >= taipeiDayStartMs
       };
       addFreshnessCheck(
         "daily workflow freshness",
         latestRunMs >= taipeiDayStartMs,
-        `latest Daily Auntie Update is ${latest.createdAt || "missing"}, expected a run on ${taipeiDate} Asia/Taipei`
+        `latest scheduled Daily Auntie Update is ${latestScheduled?.createdAt || "missing"}, expected a scheduled run on ${taipeiDate} Asia/Taipei`
       );
     }
 
