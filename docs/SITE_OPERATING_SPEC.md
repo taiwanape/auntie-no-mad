@@ -1,6 +1,6 @@
 # 阿姨別生氣網站營運規格
 
-本文件整理目前已確認的網站方向、每日更新邏輯與品質底線。之後調整自動化或內容時，先以這份規格與 `docs/VOICE_GUIDE.md` 為準。
+本文件整理目前已確認的網站方向、每日更新邏輯與品質底線。之後調整自動化或內容時，先以這份規格與 `docs/VOICE_GUIDE.md` 為準。台灣高流量網站借鏡與轉化規則另見 `docs/TAIWAN_TOP_SITES_BENCHMARK_2026.md`。
 
 ## 產品定位
 
@@ -120,5 +120,6 @@ GitHub Actions workflow：`.github/workflows/daily-update.yml`
 - 股市 ETF 是否有 4 個項目。
 - 圖片是否為 `.jpg` 或 `.png`，不應出現 `.svg`。
 - 圖片是否為當日新圖，不應出現 `approved` fallback 檔名。
+- `archive.html`、RSS、JSON feed、sitemap 不應推廣仍使用舊 fallback 主圖的歷史文章。
 - `Daily Auntie Update` workflow 是否成功。
 - GitHub Pages deploy 是否成功。

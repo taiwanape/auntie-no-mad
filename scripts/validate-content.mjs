@@ -738,6 +738,23 @@ assert(llmsTxt.includes("RSS:"), "llms.txt must mention RSS");
 assert(llmsTxt.includes("Share kit:"), "llms.txt must mention share kit");
 assert(llmsTxt.includes("Today page:"), "llms.txt must mention today page");
 
+const benchmarkDoc = fs.readFileSync(path.join(root, "docs", "TAIWAN_TOP_SITES_BENCHMARK_2026.md"), "utf8");
+[
+  "Similarweb Top Websites Taiwan",
+  "Semrush Most Visited Websites in Taiwan",
+  "google.com",
+  "youtube.com",
+  "facebook.com",
+  "Google 借鏡",
+  "YouTube 借鏡",
+  "Facebook 借鏡",
+  "首頁首屏",
+  "手機優先",
+  "不直接照抄"
+].forEach((needle) => {
+  assert(benchmarkDoc.includes(needle), `TAIWAN_TOP_SITES_BENCHMARK_2026.md must keep benchmark rule: ${needle}`);
+});
+
 ["daily-update.yml", "live-news-update.yml"].forEach((workflowFile) => {
   const workflow = fs.readFileSync(path.join(root, ".github", "workflows", workflowFile), "utf8");
   assert(workflow.includes("site.webmanifest"), `${workflowFile} must commit site.webmanifest updates`);
