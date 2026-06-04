@@ -129,12 +129,19 @@ function buildReport() {
   };
 }
 
-const nextJson = `${JSON.stringify(buildReport(), null, 2)}\n`;
+const report = buildReport();
+const nextJson = `${JSON.stringify(report, null, 2)}\n`;
 
 if (checkOnly) {
   const currentJson = fs.existsSync(outPath) ? fs.readFileSync(outPath, "utf8") : "";
   if (normalizeNewlines(currentJson) !== normalizeNewlines(nextJson)) {
     console.error("data/site-duplicate-image-debt.json is out of sync; run npm run audit:duplicate-image-debt");
+    process.exit(1);
+  }
+  if ((report.summary?.pagesToRegenerate || 0) > 0 && process.env.ALLOW_DUPLICATE_IMAGE_DEBT !== "true") {
+    console.error(
+      `Duplicate image debt is not allowed: ${report.summary.pagesToRegenerate} pages still need regenerated primary images.`
+    );
     process.exit(1);
   }
   console.log("Duplicate image debt report is up to date.");

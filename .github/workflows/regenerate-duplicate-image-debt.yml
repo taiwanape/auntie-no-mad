@@ -15,7 +15,7 @@ on:
       limit:
         description: "Maximum images to regenerate"
         required: true
-        default: "10"
+        default: "50"
       force:
         description: "Regenerate even when the target image file already exists"
         required: true

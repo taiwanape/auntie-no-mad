@@ -655,6 +655,14 @@ if (duplicateImageDebt) {
     duplicateImageDebt.items.length === duplicateImageDebt.summary.pagesToRegenerate,
     "site-duplicate-image-debt: item count must match pagesToRegenerate"
   );
+  assert(
+    duplicateImageDebt.summary.historicalDuplicatePrimaryImageGroups === 0,
+    "site-duplicate-image-debt: historical duplicate image groups must stay at 0"
+  );
+  assert(
+    duplicateImageDebt.summary.pagesToRegenerate === 0,
+    "site-duplicate-image-debt: pagesToRegenerate must stay at 0"
+  );
   (duplicateImageDebt.items || []).forEach((item) => {
     assert(item.status === "needs_regeneration", `site-duplicate-image-debt: ${item.page} must stay marked needs_regeneration until art is replaced`);
     assert(["P1", "P2"].includes(item.priority), `site-duplicate-image-debt: ${item.page} priority must be P1/P2`);
