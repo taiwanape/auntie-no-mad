@@ -85,10 +85,11 @@ GitHub Actions workflow：`.github/workflows/daily-update.yml`
 
 如果 OpenAI 圖片 API 失敗：
 
-- 不停止文字資料更新。
-- 改用已審核的高品質 AI 圖庫。
-- 絕對不回退到 SVG 或低品質 icon 圖。
-- 原因寫入 `data/review-report.json`。
+- 不公開發布舊圖或低品質備援圖。
+- 不把舊圖複製到當日資料夾冒充新圖。
+- workflow 應失敗並保留上一版線上內容。
+- 修復 API / billing / 金鑰後重新跑每日更新。
+- 原因寫入 `data/review-report.json` 或 GitHub Actions log。
 
 ## 舊資料保留
 
@@ -118,5 +119,6 @@ GitHub Actions workflow：`.github/workflows/daily-update.yml`
 - 首頁是否出現當日生活雷達與踩坑日記。
 - 股市 ETF 是否有 4 個項目。
 - 圖片是否為 `.jpg` 或 `.png`，不應出現 `.svg`。
+- 圖片是否為當日新圖，不應出現 `approved` fallback 檔名。
 - `Daily Auntie Update` workflow 是否成功。
 - GitHub Pages deploy 是否成功。

@@ -1,12 +1,12 @@
 # Auntie NoMad Operations Runbook
 
-Updated: 2026-05-29
+Updated: 2026-06-04
 
 Use this for routine site and X operations. Use API, CLI, local scripts, and GitHub Actions. Do not use browser automation for X.
 
 ## Daily Patrol
 
-Run from `C:\Users\taiwa\Documents\AuntieNoMad\website`:
+Run from `C:\Users\taiwa\Documents\阿姨別生氣\website`:
 
 ```powershell
 npm run ops:health
@@ -21,7 +21,7 @@ Check:
 
 - GitHub Actions are not repeatedly failing.
 - Public site is reachable.
-- `data/review-report.json` is approved or has a clear fallback.
+- `data/review-report.json` is approved; public daily images must not be stale fallbacks.
 - X API resolves `@auntienomad`.
 - X profile still matches the real-person, non-ecommerce positioning.
 - `data/x-content-queue.json` has enough planned, sourced, real-person concepts.
@@ -125,7 +125,9 @@ After push:
 
 OpenAI image generation unavailable:
 
-- Use approved raster fallback assets.
+- Do not publish stale fallback images as that day's public article art.
+- Keep the previous public site online until fresh topic-specific images can be generated.
+- Fix billing / API key / quota first, then rerun Daily Auntie Update.
 - Keep X posts static and high quality.
 - Do not force generic placeholder images.
 

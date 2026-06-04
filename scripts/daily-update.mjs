@@ -86,6 +86,8 @@ const imageGeneration = {
   model: process.env.OPENAI_IMAGE_MODEL || "gpt-image-1",
   quality: process.env.OPENAI_IMAGE_QUALITY || "medium",
   size: process.env.OPENAI_IMAGE_SIZE || "1536x1024",
+  outputFormat: process.env.OPENAI_IMAGE_OUTPUT_FORMAT || "jpeg",
+  outputCompression: Number.parseInt(process.env.OPENAI_IMAGE_OUTPUT_COMPRESSION || "88", 10),
   limit: Number.parseInt(process.env.OPENAI_IMAGE_LIMIT || "9", 10),
   promptRevision: process.env.OPENAI_IMAGE_PROMPT_REVISION || "auntie-ref-v4",
   allowApprovedFallback: process.env.ALLOW_APPROVED_IMAGE_FALLBACK === "true",
@@ -239,6 +241,18 @@ function imagePromptFor(target) {
 }
 
 async function generateOpenAIImage(prompt, outputPath) {
+  const requestBody = {
+    model: imageGeneration.model,
+    prompt,
+    size: imageGeneration.size,
+    quality: imageGeneration.quality,
+    n: 1
+  };
+  if (imageGeneration.outputFormat) requestBody.output_format = imageGeneration.outputFormat;
+  if (["jpeg", "webp"].includes(imageGeneration.outputFormat) && Number.isFinite(imageGeneration.outputCompression)) {
+    requestBody.output_compression = imageGeneration.outputCompression;
+  }
+
   const response = await fetch("https://api.openai.com/v1/images/generations", {
     method: "POST",
     headers: {
@@ -246,13 +260,7 @@ async function generateOpenAIImage(prompt, outputPath) {
       "content-type": "application/json",
       "user-agent": "auntie-no-mad-daily-image-generator/1.0"
     },
-    body: JSON.stringify({
-      model: imageGeneration.model,
-      prompt,
-      size: imageGeneration.size,
-      quality: imageGeneration.quality,
-      n: 1
-    })
+    body: JSON.stringify(requestBody)
   });
 
   const body = await response.json().catch(async () => ({ error: { message: await response.text() } }));
@@ -367,7 +375,8 @@ async function enrichGeneratedImages(nextContent) {
 
   for (const target of targets.slice(0, max)) {
     const baseName = `${target.prefix}-${imageGeneration.promptRevision}-${makeAssetId(target.item.title || target.item.name || target.prefix)}`;
-    const openAiAssetPath = `${dir}/${baseName}.png`;
+    const openAiExt = imageGeneration.outputFormat === "jpeg" ? ".jpg" : `.${imageGeneration.outputFormat || "png"}`;
+    const openAiAssetPath = `${dir}/${baseName}${openAiExt}`;
     const approvedFallbackSourcePath = approvedImageFallbackFor(target);
     const approvedFallbackExt = path.extname(approvedFallbackSourcePath) || ".jpg";
     const approvedFallbackAssetPath = `${dir}/${baseName}-approved${approvedFallbackExt}`;
@@ -422,6 +431,8 @@ async function enrichGeneratedImages(nextContent) {
     model: imageGeneration.model,
     quality: imageGeneration.quality,
     size: imageGeneration.size,
+    outputFormat: imageGeneration.outputFormat,
+    outputCompression: imageGeneration.outputCompression,
     promptRevision: imageGeneration.promptRevision,
     error: openAiGenerated + openAiReused > 0 ? undefined : openAiError || undefined,
     forcedFallback: imageGeneration.forceApprovedFallback || undefined

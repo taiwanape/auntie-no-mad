@@ -1,6 +1,6 @@
 # 阿姨別生氣技術盤點報告
 
-更新時間：2026-05-29
+更新時間：2026-06-04
 
 ## 1. 目前專案架構
 
@@ -55,7 +55,7 @@
 - `qa/`、本機截圖與社群草稿應保持為本機 QA 產物，避免混入正式發布。
 - X 真人版視覺已開始接入，但舊 cartoon 視覺仍是網站主體；之後要區分「網站卡通角色」與「X 真人角色」的使用邊界。
 - 股市內容需要固定審核，避免變成投資建議。
-- OpenAI 圖片 API 可能遇到 billing hard limit；流程已允許使用已審核 raster 圖庫，但仍需巡檢 `data/review-report.json`。
+- OpenAI 圖片 API 可能遇到 billing hard limit；公開每日更新已改為「新圖生成失敗就擋下 workflow」，不可用舊圖 fallback 冒充當日主圖。
 
 ## 7. GitHub Pages 部署方式
 
@@ -67,7 +67,7 @@
 
 ## 8. GitHub Actions 狀態
 
-- `daily-update.yml`：每天 04:00 與 06:00 Asia/Taipei 更新主要內容。
+- `daily-update.yml`：每天 04:00、05:00、06:00 Asia/Taipei 更新主要內容。
 - `live-news-update.yml`：每天 07:00 到 23:30 Asia/Taipei 每 30 分鐘刷新即時新聞。
 - `pages.yml`：push 到 `main` 後部署 GitHub Pages。
 - `x-daily-post.yml`：每天 06:45 Asia/Taipei 以 API 發布每日 X 貼文。
@@ -86,7 +86,7 @@
 
 ## 10. 維運狀態
 
-- 本機 `npm test`：2026-05-29 通過。
+- 本機 `npm test`：2026-06-04 通過。
 - 本機 `npm run test:x-api`：2026-05-29 通過，確認帳號 `@auntienomad`。
 - GitHub workflows：2026-05-29 查詢時主要 workflow 皆為 active，近期 run 皆為 success。
 - 另見 `docs/CODEX_PROJECT_CONTEXT.md` 與 `docs/OPERATIONS_RUNBOOK.md` 作為日常維護依據。

@@ -6,8 +6,8 @@ This is the compressed working context for the Auntie NoMad project. Use this fi
 
 ## Source Of Truth
 
-- Root workspace: `C:\Users\taiwa\Documents\AuntieNoMad`
-- Website repo: `C:\Users\taiwa\Documents\AuntieNoMad\website`
+- Root workspace: `C:\Users\taiwa\Documents\阿姨別生氣`
+- Website repo: `C:\Users\taiwa\Documents\阿姨別生氣\website`
 - GitHub repo: `taiwanape/auntie-no-mad`
 - Current public URLs:
   - Primary: `http://auntienomad.com/`
@@ -58,7 +58,7 @@ Do not publish:
 - Image/content mismatch.
 - Reused identical large image and thumbnail for the same story.
 
-If new image generation fails, keep previous good art or approved raster fallbacks. Do not replace good images with low-quality placeholders.
+If new image generation fails for public daily content, fail the workflow and keep the previous public site online. Do not publish stale approved fallbacks as that day's article art.
 
 ## Important Files
 
@@ -98,7 +98,7 @@ Daily update must:
 
 Known risks:
 
-- `OPENAI_API_KEY` can hit billing limits; if image generation fails, text may update but images must stay approved quality.
+- `OPENAI_API_KEY` can hit billing limits; if image generation fails, public daily content must not publish stale fallback images.
 - Custom-domain HTTPS may remain unavailable until GitHub Pages provisions the certificate.
 - Social platform APIs depend on repo secrets and platform permissions.
 

@@ -112,6 +112,30 @@ function fileExists(relativePath) {
   return fs.existsSync(path.join(root, relativePath));
 }
 
+function readImageDimensions(relativePath) {
+  const file = fs.readFileSync(path.join(root, relativePath));
+  if (file.length >= 24 && file.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]))) {
+    return { width: file.readUInt32BE(16), height: file.readUInt32BE(20), type: "png", bytes: file.length };
+  }
+  if (file.length >= 4 && file[0] === 0xff && file[1] === 0xd8) {
+    let offset = 2;
+    while (offset < file.length) {
+      while (file[offset] === 0xff) offset += 1;
+      const marker = file[offset];
+      offset += 1;
+      if (marker === 0xd9 || marker === 0xda) break;
+      if (offset + 2 > file.length) break;
+      const length = file.readUInt16BE(offset);
+      if (length < 2 || offset + length > file.length) break;
+      if ([0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7, 0xc9, 0xca, 0xcb, 0xcd, 0xce, 0xcf].includes(marker)) {
+        return { width: file.readUInt16BE(offset + 5), height: file.readUInt16BE(offset + 3), type: "jpeg", bytes: file.length };
+      }
+      offset += length;
+    }
+  }
+  return null;
+}
+
 function isGeneratedForDate(assetPath, date) {
   return normalizePath(assetPath).startsWith(`assets/generated/${date}/`);
 }
@@ -159,10 +183,10 @@ function checkAsset(section, item, field) {
 
 function collectPrimaryContentImages() {
   const images = [];
-  (content.lifeRadar || []).forEach((item) => images.push({ section: "lifeRadar", title: item.title, image: normalizePath(item.hero || item.thumbnail || "") }));
-  (content.pitfalls || []).forEach((item) => images.push({ section: "pitfalls", title: item.title, image: normalizePath(item.hero || item.thumbnail || "") }));
-  if (content.stockOverview?.hero) images.push({ section: "stockOverview", title: content.stockOverview.title, image: normalizePath(content.stockOverview.hero) });
-  (content.stockWatchlist || []).forEach((item) => images.push({ section: "stockWatchlist", title: `${item.ticker} ${item.title}`, image: normalizePath(item.image || "") }));
+  (content.lifeRadar || []).forEach((item) => images.push({ section: "lifeRadar", title: item.title, date: item.date, image: normalizePath(item.hero || item.thumbnail || "") }));
+  (content.pitfalls || []).forEach((item) => images.push({ section: "pitfalls", title: item.title, date: item.date, image: normalizePath(item.hero || item.thumbnail || "") }));
+  if (content.stockOverview?.hero) images.push({ section: "stockOverview", title: content.stockOverview.title, date: content.stockOverview.date, image: normalizePath(content.stockOverview.hero) });
+  (content.stockWatchlist || []).forEach((item) => images.push({ section: "stockWatchlist", title: `${item.ticker} ${item.title}`, date: item.date || item.updatedAt, image: normalizePath(item.image || "") }));
   return images.filter((item) => item.image && fileExists(item.image));
 }
 
@@ -217,6 +241,43 @@ function checkPrimaryImagesAreNotCopiedFromOlderAssets() {
     assert(
       !copiedFromOlderAsset,
       `primary content image must be newly generated for its article, not copied from older asset: "${item.title}" uses ${item.image}, same bytes as ${copiedFromOlderAsset}`
+    );
+  });
+}
+
+function checkPrimaryImageTechnicalQuality() {
+  collectPrimaryContentImages().forEach((item) => {
+    assert(
+      !/(^|-)approved(-|\.|$)/i.test(path.basename(item.image)),
+      `primary content image must not use approved fallback filename: "${item.title}" uses ${item.image}`
+    );
+    assert(
+      /\.(jpe?g|png)$/i.test(item.image),
+      `primary content image must be a raster JPG or PNG: "${item.title}" uses ${item.image}`
+    );
+    if (item.date) {
+      assert(
+        isGeneratedForDate(item.image, item.date),
+        `primary content image must be generated under the article date folder: "${item.title}" uses ${item.image}`
+      );
+    }
+
+    const dimensions = readImageDimensions(item.image);
+    assert(dimensions, `primary content image dimensions could not be read: "${item.title}" uses ${item.image}`);
+    if (!dimensions) return;
+
+    const ratio = dimensions.width / dimensions.height;
+    assert(
+      dimensions.width >= 1200 && dimensions.height >= 675,
+      `primary content image is too small: "${item.title}" uses ${item.image} (${dimensions.width}x${dimensions.height})`
+    );
+    assert(
+      ratio >= 1.4 && ratio <= 1.9,
+      `primary content image aspect ratio is not suitable for article heroes: "${item.title}" uses ${item.image} (${dimensions.width}x${dimensions.height})`
+    );
+    assert(
+      dimensions.bytes >= 80_000 && dimensions.bytes <= 1_800_000,
+      `primary content image file size is suspicious: "${item.title}" uses ${item.image} (${dimensions.bytes} bytes)`
     );
   });
 }
@@ -389,6 +450,7 @@ if (content.stockOverview) {
 
 checkUniquePrimaryImageContent();
 checkPrimaryImagesAreNotCopiedFromOlderAssets();
+checkPrimaryImageTechnicalQuality();
 
 ["etfGuide", "goodPicks", "fridgeNotes", "archive"].forEach((section) => {
   assert(Array.isArray(content[section]), `${section} must be an array`);
@@ -689,7 +751,10 @@ assert(!gitignore.includes("data/live-news-report.json"), "data/live-news-report
 const dailyUpdateScript = fs.readFileSync(path.join(root, "scripts", "daily-update.mjs"), "utf8");
 assert(dailyUpdateScript.includes("process.exit(1);"), "daily-update.mjs must fail the workflow when public daily content is rejected");
 const dailyUpdateWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "daily-update.yml"), "utf8");
-assert(dailyUpdateWorkflow.includes('ALLOW_APPROVED_IMAGE_FALLBACK: "true"'), "daily-update.yml must allow approved image fallback when the Images API is unavailable");
+assert(dailyUpdateWorkflow.includes('ALLOW_APPROVED_IMAGE_FALLBACK: "false"'), "daily-update.yml must not publish approved fallback images for public daily content");
+assert(dailyUpdateWorkflow.includes('FORCE_APPROVED_IMAGE_FALLBACK: "false"'), "daily-update.yml must not force approved fallback images");
+assert(dailyUpdateWorkflow.includes('OPENAI_IMAGE_OUTPUT_FORMAT: "jpeg"'), "daily-update.yml must generate compressed JPEG article images");
+assert(dailyUpdateWorkflow.includes("OPENAI_IMAGE_OUTPUT_COMPRESSION"), "daily-update.yml must set image compression for generated article images");
 
 const pagesWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "pages.yml"), "utf8");
 assert(pagesWorkflow.includes("test:social-previews"), "pages.yml must audit social previews before deploying");
