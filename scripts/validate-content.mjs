@@ -380,6 +380,7 @@ assert(!/[銝嚗瘞踹]\S*[?]/.test(serializedData), "data/site-content.json app
 
 const sharePack = checkJsonArtifact("data/share-pack.json", "data/share-pack.json");
 const socialPosts = checkJsonArtifact("data/social-posts.json", "data/social-posts.json");
+const reviewReport = checkJsonArtifact("data/review-report.json", "data/review-report.json");
 const imageDebt = checkJsonArtifact("data/site-image-debt.json", "data/site-image-debt.json");
 const duplicateImageDebt = checkJsonArtifact("data/site-duplicate-image-debt.json", "data/site-duplicate-image-debt.json");
 if (sharePack) {
@@ -395,6 +396,50 @@ if (socialPosts) {
     assert(post?.imagePath, `data/social-posts.json missing ${platform} imagePath`);
     if (post?.imagePath) checkAsset("socialPosts", { ...post, socialImage: post.imagePath }, "socialImage");
   });
+}
+
+if (reviewReport) {
+  const siteDate = String(content.site?.updatedAt || "").slice(0, 10);
+  assert(reviewReport.status === "approved", "data/review-report.json must be approved before publishing");
+  assert(reviewReport.date === siteDate, "data/review-report.json date must match site.updatedAt date");
+  assert(!Number.isNaN(Date.parse(reviewReport.generatedAt || "")), "data/review-report.json must include a valid generatedAt timestamp");
+  assert(Array.isArray(reviewReport.checks) && reviewReport.checks.length >= 5, "data/review-report.json must include daily update checks");
+  assert(Array.isArray(reviewReport.sources) && reviewReport.sources.length >= 4, "data/review-report.json must include data sources");
+  assert(Array.isArray(reviewReport.updatedSections), "data/review-report.json must include updatedSections");
+  ["liveNews", "lifeRadar", "pitfalls", "stockOverview", "stockWatchlist", "generatedImages"].forEach((section) => {
+    assert(reviewReport.updatedSections.includes(section), `data/review-report.json updatedSections must include ${section}`);
+  });
+
+  const sourcesByUrl = new Map((reviewReport.sources || []).map((source) => [source.url, source]));
+  [
+    "https://feeds.feedburner.com/rsscna/lifehealth",
+    "https://feeds.feedburner.com/rsscna/social",
+    "https://feeds.feedburner.com/rsscna/finance",
+    "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?response=json"
+  ].forEach((url) => {
+    assert(sourcesByUrl.has(url), `data/review-report.json must track source ${url}`);
+  });
+  (reviewReport.sources || []).forEach((source) => {
+    assert(source.name && String(source.name).trim().length >= 2, `data/review-report.json source missing readable name: ${source.url}`);
+    assert(/^https?:\/\//.test(source.url || ""), `data/review-report.json source URL must be public: ${source.name}`);
+    assert(typeof source.ok === "boolean", `data/review-report.json source must include ok boolean: ${source.name}`);
+    if (source.ok) {
+      assert(Number.isFinite(source.count) && source.count > 0, `data/review-report.json healthy source must include positive count: ${source.name}`);
+    }
+  });
+
+  const imageSource = (reviewReport.sources || []).find((source) => source.name === "OpenAI Images API");
+  assert(imageSource, "data/review-report.json must include OpenAI Images API source");
+  if (imageSource) {
+    assert(imageSource.ok === true, "data/review-report.json must show OpenAI Images API healthy for the approved daily publish");
+    assert(imageSource.model === "gpt-image-1", "data/review-report.json must record the approved image model");
+    assert(imageSource.promptRevision === "auntie-ref-v4", "data/review-report.json must record the approved image prompt revision");
+    assert(Number(imageSource.count) >= collectPrimaryContentImages().length, "data/review-report.json OpenAI image count must cover current primary content images");
+  }
+  assert(
+    (reviewReport.checks || []).some((check) => /0 approved fallback/.test(String(check))),
+    "data/review-report.json must prove no approved fallback image was used in the daily image set"
+  );
 }
 
 ["lifeRadar", "pitfalls"].forEach((section) => {

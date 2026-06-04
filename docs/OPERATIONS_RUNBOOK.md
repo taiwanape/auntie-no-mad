@@ -25,6 +25,7 @@ Check:
 - GitHub Actions are not repeatedly failing.
 - Public site is reachable.
 - `data/review-report.json` is approved; public daily images must not be stale fallbacks.
+- `data/review-report.json` must match `site.updatedAt`, list the daily source URLs, show positive source counts, record `OpenAI Images API` as healthy, and prove `0 approved fallback` in the image set.
 - `npm run audit:images` reports zero current-day image errors. Legacy approved fallback warnings are tracked technical debt, not permission to reuse stale art for today's content.
 - `data/site-image-debt.json` is up to date. P0 must stay at 0; P1/P2 are the batch list for future regeneration.
 - `data/site-duplicate-image-debt.json` is up to date and has 0 pages to regenerate. Duplicate primary images are a blocking issue after the 2026-06-04 cleanup.
