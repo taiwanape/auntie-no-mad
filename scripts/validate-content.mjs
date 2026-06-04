@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import crypto from "node:crypto";
 
 const root = process.cwd();
 const dataPath = path.join(root, "data", "site-content.json");
@@ -154,6 +155,29 @@ function checkAsset(section, item, field) {
   if (assetPath.endsWith(".svg") && fileExists(assetPath)) {
     assert(false, `${section}: SVG image assets are not allowed for public content: ${assetPath}`);
   }
+}
+
+function collectPrimaryContentImages() {
+  const images = [];
+  (content.lifeRadar || []).forEach((item) => images.push({ section: "lifeRadar", title: item.title, image: normalizePath(item.hero || item.thumbnail || "") }));
+  (content.pitfalls || []).forEach((item) => images.push({ section: "pitfalls", title: item.title, image: normalizePath(item.hero || item.thumbnail || "") }));
+  if (content.stockOverview?.hero) images.push({ section: "stockOverview", title: content.stockOverview.title, image: normalizePath(content.stockOverview.hero) });
+  (content.stockWatchlist || []).forEach((item) => images.push({ section: "stockWatchlist", title: `${item.ticker} ${item.title}`, image: normalizePath(item.image || "") }));
+  return images.filter((item) => item.image && fileExists(item.image));
+}
+
+function checkUniquePrimaryImageContent() {
+  const byHash = new Map();
+  collectPrimaryContentImages().forEach((item) => {
+    const file = fs.readFileSync(path.join(root, item.image));
+    const hash = crypto.createHash("sha256").update(file).digest("hex");
+    const prior = byHash.get(hash);
+    assert(
+      !prior,
+      `primary content images must not reuse the same file content: "${prior?.title}" and "${item.title}" both use duplicate image bytes (${prior?.image} / ${item.image})`
+    );
+    byHash.set(hash, item);
+  });
 }
 
 function checkArticlePageImage(section, item) {
@@ -321,6 +345,8 @@ if (content.stockOverview) {
   checkArticleSocialPreview("stockOverview", content.stockOverview);
   checkArticleGrowthScript("stockOverview", content.stockOverview);
 }
+
+checkUniquePrimaryImageContent();
 
 ["etfGuide", "goodPicks", "fridgeNotes", "archive"].forEach((section) => {
   assert(Array.isArray(content[section]), `${section} must be an array`);

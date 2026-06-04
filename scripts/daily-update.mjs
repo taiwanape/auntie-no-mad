@@ -289,9 +289,10 @@ function approvedImageFallbackFor(target) {
     security: "assets/generated/2026-05-29/pitfall-1-ai.jpg",
     scam: "assets/generated/2026-05-29/pitfall-1-ai.jpg",
     fraud: "assets/generated/2026-05-29/pitfall-2-ai.jpg",
+    fraudAlt: "assets/generated/2026-05-29/pitfall-1-ai.jpg",
     market: "assets/generated/2026-05-29/stock-overview-ai.jpg",
     stock2408: "assets/generated/2026-05-29/stock-2408-ai.jpg",
-    stock2344: "assets/generated/2026-05-29/stock-2408-ai.jpg",
+    stock2344: "assets/stock-20260526-umc.png",
     stock2454: "assets/generated/2026-05-29/stock-2454-ai.jpg",
     stock6770: "assets/generated/2026-05-29/stock-6770-ai.jpg",
     stock00919: "assets/generated/2026-05-29/stock-00919-ai.jpg"
@@ -302,6 +303,7 @@ function approvedImageFallbackFor(target) {
     return approved[`stock${target.item.ticker}`] || approved.market;
   }
   if (target.section === "pitfall") {
+    if (target.prefix === "pitfall-2") return approved.fraudAlt;
     if (/詐騙|詐欺|假投資|假出金|出金|金條|金主|結婚|婚|婚姻|詐財|現金|搜索/.test(text)) return approved.fraud;
     return approved.scam;
   }
