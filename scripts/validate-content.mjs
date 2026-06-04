@@ -180,6 +180,47 @@ function checkUniquePrimaryImageContent() {
   });
 }
 
+function walkImageAssets(dir = path.join(root, "assets"), out = []) {
+  if (!fs.existsSync(dir)) return out;
+  fs.readdirSync(dir, { withFileTypes: true }).forEach((entry) => {
+    const filePath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      walkImageAssets(filePath, out);
+      return;
+    }
+    if (/\.(png|jpe?g|webp)$/i.test(entry.name)) {
+      out.push(normalizePath(path.relative(root, filePath)));
+    }
+  });
+  return out;
+}
+
+function checkPrimaryImagesAreNotCopiedFromOlderAssets() {
+  const hashes = new Map();
+  walkImageAssets().forEach((assetPath) => {
+    const file = fs.readFileSync(path.join(root, assetPath));
+    const hash = crypto.createHash("sha256").update(file).digest("hex");
+    if (!hashes.has(hash)) hashes.set(hash, []);
+    hashes.get(hash).push(assetPath);
+  });
+
+  collectPrimaryContentImages().forEach((item) => {
+    const file = fs.readFileSync(path.join(root, item.image));
+    const hash = crypto.createHash("sha256").update(file).digest("hex");
+    const copies = (hashes.get(hash) || []).filter((assetPath) => assetPath !== item.image);
+    const copiedFromOlderAsset = copies.find((assetPath) => {
+      const currentDateMatch = item.image.match(/^assets\/generated\/(\d{4}-\d{2}-\d{2})\//);
+      const otherDateMatch = assetPath.match(/^assets\/generated\/(\d{4}-\d{2}-\d{2})\//);
+      if (currentDateMatch && otherDateMatch) return otherDateMatch[1] < currentDateMatch[1];
+      return !assetPath.startsWith("assets/generated/");
+    });
+    assert(
+      !copiedFromOlderAsset,
+      `primary content image must be newly generated for its article, not copied from older asset: "${item.title}" uses ${item.image}, same bytes as ${copiedFromOlderAsset}`
+    );
+  });
+}
+
 function checkArticlePageImage(section, item) {
   const expectedImage = normalizePath(item.hero || item.image || "");
   if (!item.slug || !expectedImage || !fileExists(item.slug)) return;
@@ -347,6 +388,7 @@ if (content.stockOverview) {
 }
 
 checkUniquePrimaryImageContent();
+checkPrimaryImagesAreNotCopiedFromOlderAssets();
 
 ["etfGuide", "goodPicks", "fridgeNotes", "archive"].forEach((section) => {
   assert(Array.isArray(content[section]), `${section} must be an array`);
