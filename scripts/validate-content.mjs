@@ -807,6 +807,7 @@ const benchmarkDoc = fs.readFileSync(path.join(root, "docs", "TAIWAN_TOP_SITES_B
 [
   "Similarweb Top Websites Taiwan",
   "Semrush Most Visited Websites in Taiwan",
+  "2026-06-04 重新核對",
   "google.com",
   "youtube.com",
   "facebook.com",
@@ -861,6 +862,12 @@ assert(!gitignore.includes("data/live-news-report.json"), "data/live-news-report
 const dailyUpdateScript = fs.readFileSync(path.join(root, "scripts", "daily-update.mjs"), "utf8");
 assert(dailyUpdateScript.includes("process.exit(1);"), "daily-update.mjs must fail the workflow when public daily content is rejected");
 const dailyUpdateWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "daily-update.yml"), "utf8");
+assert(dailyUpdateWorkflow.includes("Check same-day daily publish"), "daily-update.yml must check whether today's approved content already exists");
+assert(dailyUpdateWorkflow.includes("daily_guard"), "daily-update.yml must expose the same-day guard output");
+assert(
+  dailyUpdateWorkflow.includes("steps.daily_guard.outputs.skip != 'true'"),
+  "daily-update.yml must skip AI image generation after same-day content is already approved"
+);
 assert(dailyUpdateWorkflow.includes('ALLOW_APPROVED_IMAGE_FALLBACK: "false"'), "daily-update.yml must not publish approved fallback images for public daily content");
 assert(dailyUpdateWorkflow.includes('FORCE_APPROVED_IMAGE_FALLBACK: "false"'), "daily-update.yml must not force approved fallback images");
 assert(dailyUpdateWorkflow.includes('OPENAI_IMAGE_OUTPUT_FORMAT: "jpeg"'), "daily-update.yml must generate compressed JPEG article images");

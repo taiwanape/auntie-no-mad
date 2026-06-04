@@ -11,7 +11,7 @@
 
 查證基準：
 
-- Similarweb 2026 年 3 月台灣網站排名：`google.com` 第 1、`youtube.com` 第 2、`facebook.com` 第 3。
+- 2026-06-04 重新核對：Similarweb 台灣熱門網站頁面仍列出 `google.com` 第 1、`youtube.com` 第 2、`facebook.com` 第 3；頁面資料以 2026 年 3 月排名/2026 年 4 月更新資訊呈現。
 - Semrush 2026 年 4 月台灣網站排名：`google.com` 約 919.39M visits、`youtube.com` 約 698.24M visits、`facebook.com` 約 179.04M visits，前三名一致。
 - Semrush 同頁顯示前三名流量皆以 direct 為主要來源，且 Google、YouTube 在台灣皆偏 mobile-first。這代表高頻回訪入口、手機首屏與低摩擦使用，比單次華麗版面更重要。
 

@@ -42,7 +42,40 @@ jobs:
         with:
           node-version: "24"
 
+      - name: Check same-day daily publish
+        id: daily_guard
+        run: |
+          SHOULD_SKIP=$(node - <<'NODE'
+          const fs = require("node:fs");
+          const today = new Intl.DateTimeFormat("en-CA", {
+            timeZone: "Asia/Taipei",
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit"
+          }).format(new Date());
+          const manualPublish = process.env.MANUAL_PUBLISH === "true";
+          const content = JSON.parse(fs.readFileSync("data/site-content.json", "utf8"));
+          const report = fs.existsSync("data/review-report.json")
+            ? JSON.parse(fs.readFileSync("data/review-report.json", "utf8"))
+            : {};
+          const alreadyPublished =
+            String(content.site?.updatedAt || "").startsWith(`${today}T`) &&
+            report.date === today &&
+            report.status === "approved";
+          console.log(!manualPublish && alreadyPublished ? "true" : "false");
+          NODE
+          )
+          echo "skip=$SHOULD_SKIP" >> "$GITHUB_OUTPUT"
+          if [ "$SHOULD_SKIP" = "true" ]; then
+            echo "Daily content for today is already approved; skipping image generation to avoid wasting API budget."
+          else
+            echo "Daily content generation will run."
+          fi
+        env:
+          MANUAL_PUBLISH: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.publish == 'true' }}
+
       - name: Generate daily content and images
+        if: steps.daily_guard.outputs.skip != 'true'
         run: npm run update:daily
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
