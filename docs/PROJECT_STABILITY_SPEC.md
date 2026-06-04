@@ -66,6 +66,13 @@ C:\Users\taiwa\Documents\阿姨別生氣\website
 - 主內容圖片比例適合文章 hero。
 - 主內容圖片檔案大小需在合理範圍。
 
+全站圖片稽核：
+
+- `npm run audit:images` 會掃描所有公開 HTML 圖片引用。
+- 今天的文章主圖若缺檔、使用 `*-approved.*`、不在當日資料夾，或與其他今日文章 byte hash 重複，必須失敗。
+- 歷史舊文若仍使用早期 approved fallback，先列為追蹤警示，不可混同為今日更新合格。
+- `npm run ops:health` 必須執行全站圖片稽核，讓每日健康檢查看得見圖片債務與今日發布門檻。
+
 如果 OpenAI 圖片 API 失敗：
 
 - 不發布不合格圖。

@@ -176,6 +176,27 @@ function checkLocalContent() {
     result.status === 0 ? "npm test validation passed" : (result.stderr || result.stdout || "validation failed").trim()
   );
 
+  const imageAuditResult = runNodeScript("scripts/audit-site-images.mjs");
+  let imageAudit = null;
+  try {
+    imageAudit = JSON.parse(imageAuditResult.stdout || "{}");
+  } catch {
+    imageAudit = null;
+  }
+  details.imageAudit = imageAudit || {
+    parseError: true,
+    stdout: imageAuditResult.stdout,
+    stderr: imageAuditResult.stderr
+  };
+  addCheck(
+    "site image audit",
+    imageAuditResult.status === 0,
+    imageAudit?.ok
+      ? `${imageAudit.totals?.todayContentPages || 0} today pages checked; ${imageAudit.totals?.legacyApprovedPrimaryImages || 0} legacy approved images tracked`
+      : (imageAuditResult.stderr || imageAuditResult.stdout || "site image audit failed").trim()
+  );
+  (imageAudit?.warnings || []).forEach((message) => addWarning(message));
+
   const content = readJson("data/site-content.json");
   const report = readJson("data/review-report.json");
   details.content = {
@@ -206,9 +227,20 @@ function checkLocalContent() {
 
   const imageSource = (report.sources || []).find((source) => source.name === "OpenAI Images API");
   const fallbackSource = (report.sources || []).find((source) => source.name === "Approved Auntie raster image library");
+  const dailyUpdateWorkflow = fs.readFileSync(path.join(root, ".github", "workflows", "daily-update.yml"), "utf8");
+  const publicFallbackDisabled =
+    dailyUpdateWorkflow.includes('ALLOW_APPROVED_IMAGE_FALLBACK: "false"') &&
+    dailyUpdateWorkflow.includes('FORCE_APPROVED_IMAGE_FALLBACK: "false"');
+  details.imagePolicy = {
+    openAiImagesOk: imageSource?.ok ?? null,
+    approvedFallbackLibraryOk: fallbackSource?.ok ?? null,
+    publicFallbackDisabled
+  };
   if (imageSource && !imageSource.ok) {
-    if (fallbackSource?.ok) {
-      addWarning(`OpenAI Images API is not healthy (${imageSource.error || "unknown error"}); approved raster fallback is active.`);
+    if (publicFallbackDisabled) {
+      addWarning(`OpenAI Images API is not healthy (${imageSource.error || "unknown error"}); public daily workflow blocks approved fallback instead of publishing stale art.`);
+    } else if (fallbackSource?.ok) {
+      addWarning(`OpenAI Images API is not healthy (${imageSource.error || "unknown error"}); approved raster fallback library exists and must not be used for public daily content.`);
     } else {
       addCheck("image fallback", false, `OpenAI Images API failed and no approved raster fallback is healthy`);
     }

@@ -11,6 +11,7 @@ Run from `C:\Users\taiwa\Documents\阿姨別生氣\website`:
 ```powershell
 npm run ops:health
 npm test
+npm run audit:images
 npm run test:x-queue
 npm run test:x-api
 npm run test:x-profile
@@ -22,6 +23,7 @@ Check:
 - GitHub Actions are not repeatedly failing.
 - Public site is reachable.
 - `data/review-report.json` is approved; public daily images must not be stale fallbacks.
+- `npm run audit:images` reports zero current-day image errors. Legacy approved fallback warnings are tracked technical debt, not permission to reuse stale art for today's content.
 - X API resolves `@auntienomad`.
 - X profile still matches the real-person, non-ecommerce positioning.
 - `data/x-content-queue.json` has enough planned, sourced, real-person concepts.

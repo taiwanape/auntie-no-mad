@@ -783,6 +783,8 @@ assert(opsHealthWorkflow.includes("test:domain"), "ops-health-check.yml must che
 assert(opsHealthWorkflow.includes("ENABLE_PAGES_HTTPS"), "ops-health-check.yml must retry GitHub Pages HTTPS enforcement");
 
 const opsHealthScript = fs.readFileSync(path.join(root, "scripts", "ops-health-check.mjs"), "utf8");
+assert(fileExists("scripts/audit-site-images.mjs"), "site image audit script missing");
+assert(opsHealthScript.includes("audit-site-images.mjs"), "ops-health-check must run the site image audit");
 assert(opsHealthScript.includes("metaDailyPostSkippedRun"), "ops-health-check must warn when Meta Daily Post silently skipped publishing");
 const dailyImagePromptBlock = dailyUpdateScript.slice(
   dailyUpdateScript.indexOf("function imagePromptFor"),
