@@ -19,15 +19,30 @@ function outputExtension(outputFormat = "jpeg") {
   return outputFormat === "jpeg" ? ".jpg" : `.${outputFormat || "png"}`;
 }
 
+function splitReferencePaths(referencePath = "") {
+  return String(referencePath)
+    .split(/[;,]/)
+    .map((value) => value.trim())
+    .filter(Boolean);
+}
+
 export function resolveImageReferencePath(referencePath = process.env.OPENAI_IMAGE_REFERENCE_PATH || AUNTIE_REFERENCE_IMAGE) {
-  if (!referencePath) return "";
-  const fullPath = path.isAbsolute(referencePath) ? referencePath : path.join(root, referencePath);
-  return fs.existsSync(fullPath) ? fullPath : "";
+  return resolveImageReferencePaths(referencePath)[0] || "";
+}
+
+export function resolveImageReferencePaths(referencePath = process.env.OPENAI_IMAGE_REFERENCE_PATH || AUNTIE_REFERENCE_IMAGE) {
+  return splitReferencePaths(referencePath)
+    .map((candidate) => (path.isAbsolute(candidate) ? candidate : path.join(root, candidate)))
+    .filter((fullPath) => fs.existsSync(fullPath));
 }
 
 export function relativeImageReferencePath(referencePath) {
   if (!referencePath) return "";
   return normalizePath(path.relative(root, referencePath));
+}
+
+export function relativeImageReferencePaths(referencePaths = []) {
+  return referencePaths.map((referencePath) => relativeImageReferencePath(referencePath)).filter(Boolean);
 }
 
 async function readJsonResponse(response) {
@@ -67,7 +82,7 @@ function generationRequestBody(options) {
 }
 
 export async function generateOpenAIImageFile(options) {
-  const referencePath = resolveImageReferencePath(options.referencePath);
+  const referencePaths = resolveImageReferencePaths(options.referencePath);
   const userAgent = options.userAgent || "auntie-no-mad-image-generator/1.0";
   const headers = {
     authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
@@ -76,12 +91,14 @@ export async function generateOpenAIImageFile(options) {
   let endpoint = "https://api.openai.com/v1/images/generations";
   let response;
 
-  if (referencePath) {
+  if (referencePaths.length) {
     endpoint = "https://api.openai.com/v1/images/edits";
     const form = new FormData();
     appendSharedImageOptions(form, options);
-    const imageBytes = fs.readFileSync(referencePath);
-    form.append("image[]", new Blob([imageBytes], { type: mimeTypeFor(referencePath) }), path.basename(referencePath));
+    for (const referencePath of referencePaths) {
+      const imageBytes = fs.readFileSync(referencePath);
+      form.append("image[]", new Blob([imageBytes], { type: mimeTypeFor(referencePath) }), path.basename(referencePath));
+    }
     response = await fetch(endpoint, { method: "POST", headers, body: form });
   } else {
     response = await fetch(endpoint, {
@@ -106,6 +123,6 @@ export async function generateOpenAIImageFile(options) {
   return {
     endpoint: endpoint.endsWith("/edits") ? "images/edits" : "images/generations",
     outputExtension: outputExtension(options.outputFormat),
-    referenceImage: referencePath ? relativeImageReferencePath(referencePath) : ""
+    referenceImage: referencePaths.length ? relativeImageReferencePaths(referencePaths).join(";") : ""
   };
 }

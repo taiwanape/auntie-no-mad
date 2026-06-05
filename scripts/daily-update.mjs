@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { AUNTIE_REFERENCE_IMAGE, IMAGE_STYLE_RULE_VERSION, auntieStylePrompt } from "./image-style-rules.mjs";
+import { AUNTIE_REFERENCE_IMAGES, IMAGE_STYLE_RULE_VERSION, auntieStylePrompt } from "./image-style-rules.mjs";
 import { generateOpenAIImageFile, resolveImageReferencePath, relativeImageReferencePath } from "./openai-image-client.mjs";
 import { publicImageUrl, publicSiteUrl, publicUrl } from "./public-site-url.mjs";
 
@@ -92,7 +92,7 @@ const imageGeneration = {
   outputCompression: Number.parseInt(process.env.OPENAI_IMAGE_OUTPUT_COMPRESSION || "88", 10),
   limit: Number.parseInt(process.env.OPENAI_IMAGE_LIMIT || "9", 10),
   promptRevision: process.env.OPENAI_IMAGE_PROMPT_REVISION || IMAGE_STYLE_RULE_VERSION,
-  referencePath: process.env.OPENAI_IMAGE_REFERENCE_PATH || AUNTIE_REFERENCE_IMAGE,
+  referencePath: process.env.OPENAI_IMAGE_REFERENCE_PATH || AUNTIE_REFERENCE_IMAGES.join(";"),
   allowApprovedFallback: process.env.ALLOW_APPROVED_IMAGE_FALLBACK === "true",
   forceApprovedFallback: process.env.FORCE_APPROVED_IMAGE_FALLBACK === "true"
 };

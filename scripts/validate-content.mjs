@@ -1,7 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
-import { AUNTIE_REFERENCE_IMAGE, AUNTIE_STYLE_RULES, IMAGE_STYLE_RULE_VERSION } from "./image-style-rules.mjs";
+import {
+  AUNTIE_REFERENCE_IMAGE,
+  AUNTIE_REFERENCE_IMAGES,
+  AUNTIE_STYLE_RULES,
+  IMAGE_STYLE_RULE_VERSION
+} from "./image-style-rules.mjs";
 
 const root = process.cwd();
 const dataPath = path.join(root, "data", "site-content.json");
@@ -975,6 +980,9 @@ assert(fileExists("scripts/write-image-debt-report.mjs"), "site image debt repor
 assert(fileExists("scripts/image-style-rules.mjs"), "central image style rules script missing");
 assert(fileExists("scripts/openai-image-client.mjs"), "shared OpenAI image client missing");
 assert(fileExists(AUNTIE_REFERENCE_IMAGE), "Auntie reference image missing");
+for (const referenceImage of AUNTIE_REFERENCE_IMAGES) {
+  assert(fileExists(referenceImage), `Auntie reference image missing: ${referenceImage}`);
+}
 assert(fileExists("docs/IMAGE_GENERATION_RULES.md"), "human-readable image generation rules doc missing");
 assert(fileExists("scripts/regenerate-image-debt.mjs"), "site image debt regeneration script missing");
 assert(fileExists("scripts/write-duplicate-image-debt-report.mjs"), "site duplicate image debt report script missing");
@@ -1000,9 +1008,14 @@ assert(
   "central image style rules must explicitly ban visible writing"
 );
 assert(
-  AUNTIE_STYLE_RULES.some((rule) => rule.includes("REFERENCE LOCK")) &&
+  AUNTIE_STYLE_RULES.some((rule) => rule.includes("MULTI-REFERENCE LOCK")) &&
     imageStyleRulesScript.includes(AUNTIE_REFERENCE_IMAGE),
-  "central image style rules must lock the Auntie reference image"
+  "central image style rules must lock the Auntie reference images"
+);
+assert(
+  AUNTIE_REFERENCE_IMAGES.length >= 3 &&
+    AUNTIE_REFERENCE_IMAGES.every((referenceImage) => imageStyleRulesScript.includes(referenceImage)),
+  "central image style rules must expose all Auntie reference images"
 );
 assert(
   AUNTIE_STYLE_RULES.some((rule) => rule.includes("NO FLAT TEMPLATE LOOK")) &&
@@ -1022,8 +1035,8 @@ assert(
 assert(
   openAiImageClientScript.includes("/v1/images/edits") &&
     openAiImageClientScript.includes("image[]") &&
-    openAiImageClientScript.includes("AUNTIE_REFERENCE_IMAGE"),
-  "shared OpenAI image client must use the Auntie reference image through the image edit endpoint"
+    openAiImageClientScript.includes("resolveImageReferencePaths"),
+  "shared OpenAI image client must use all Auntie reference images through the image edit endpoint"
 );
 [
   ["daily-update.mjs", dailyUpdateScript],
@@ -1052,8 +1065,10 @@ assert(
   "IMAGE_GENERATION_RULES.md must mention the current image style version"
 );
 assert(
-  fs.readFileSync(path.join(root, "docs", "IMAGE_GENERATION_RULES.md"), "utf8").includes(AUNTIE_REFERENCE_IMAGE),
-  "IMAGE_GENERATION_RULES.md must mention the Auntie reference image"
+  AUNTIE_REFERENCE_IMAGES.every((referenceImage) =>
+    fs.readFileSync(path.join(root, "docs", "IMAGE_GENERATION_RULES.md"), "utf8").includes(referenceImage)
+  ),
+  "IMAGE_GENERATION_RULES.md must mention all Auntie reference images"
 );
 assert(
   !/labels are allowed|allowed only if crisp|別匯款|先查證|打165/.test(dailyImagePromptBlock),
@@ -1073,8 +1088,8 @@ assert(
 );
 assert(
   dailyUpdateWorkflow.includes("OPENAI_IMAGE_REFERENCE_PATH") &&
-    dailyUpdateWorkflow.includes(AUNTIE_REFERENCE_IMAGE),
-  "daily-update.yml must pass the Auntie reference image into public image generation"
+    AUNTIE_REFERENCE_IMAGES.every((referenceImage) => dailyUpdateWorkflow.includes(referenceImage)),
+  "daily-update.yml must pass all Auntie reference images into public image generation"
 );
 assert(
   dailyUpdateScript.includes("article-growth.js?v="),

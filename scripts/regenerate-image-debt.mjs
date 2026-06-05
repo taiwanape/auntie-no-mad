@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
-import { AUNTIE_REFERENCE_IMAGE, IMAGE_STYLE_RULE_VERSION, auntieStylePrompt } from "./image-style-rules.mjs";
+import { AUNTIE_REFERENCE_IMAGES, IMAGE_STYLE_RULE_VERSION, auntieStylePrompt } from "./image-style-rules.mjs";
 import { generateOpenAIImageFile } from "./openai-image-client.mjs";
 
 const root = process.cwd();
@@ -26,7 +26,7 @@ const size = process.env.OPENAI_IMAGE_SIZE || "1536x1024";
 const outputFormat = process.env.OPENAI_IMAGE_OUTPUT_FORMAT || "jpeg";
 const outputCompression = Number.parseInt(process.env.OPENAI_IMAGE_OUTPUT_COMPRESSION || "88", 10);
 const promptRevision = process.env.IMAGE_DEBT_PROMPT_REVISION || `legacy-${IMAGE_STYLE_RULE_VERSION}`;
-const referencePath = process.env.OPENAI_IMAGE_REFERENCE_PATH || AUNTIE_REFERENCE_IMAGE;
+const referencePath = process.env.OPENAI_IMAGE_REFERENCE_PATH || AUNTIE_REFERENCE_IMAGES.join(";");
 
 function normalizePath(value = "") {
   return String(value).replaceAll("\\", "/");
