@@ -199,9 +199,36 @@ function cleanPromptText(value = "", maxLength = 120) {
   return [...cleaned].slice(0, maxLength).join("");
 }
 
+function layoutVariantFor(target) {
+  const seed = makeAssetId(`${target.prefix}-${target.item.title || target.item.name || ""}`);
+  const index = Number.parseInt(seed.slice(-2), 36) || 0;
+  const stockLayouts = [
+    "Layout variant: auntie sits at the kitchen table in a three-quarter view, sleeves visible, one hand moving blank colored stock cards, with coffee, notebook, wafer, calculator, and household shelves around her. The abstract chart is a small background prop, not the main subject.",
+    "Layout variant: auntie leans over a messy notebook spread, comparing a wafer tray, ETF-like colored blocks, blank sticky notes, and a magnifying glass. Use a low desk-level foreground with hands and props large in frame; avoid a standing presenter pose.",
+    "Layout variant: auntie points from behind a cluttered table toward physical props on the table, not toward a giant UI panel. Put the blank chart paper off to the side and make the table objects carry the story."
+  ];
+  const pitfallLayouts = [
+    "Layout variant: create a full everyday scene with auntie inside the incident, using a table, shop counter, street corner, home doorway, or police-station waiting area as a continuous environment. The suspicious object is in the foreground; auntie reacts to it, not to floating signs.",
+    "Layout variant: use a cinematic kitchen-table or counter scene where auntie is checking a blank document, package, phone, key, bag, or receipt-like paper while the risky situation unfolds in the background. Keep warning symbols out unless absolutely needed.",
+    "Layout variant: make the story visible through props and setting: nearby vehicle, storefront, mailbox, wallet, blank paperwork, package, or household objects. Auntie should be mid-action, not centered as a mascot."
+  ];
+  const lifeLayouts = [
+    "Layout variant: use the approved full cover rhythm: large foreground object, busy midground action, warm household or Taiwan street background, and auntie reacting inside the scene. Avoid a plain icon backdrop.",
+    "Layout variant: place auntie at a real table, commute stop, kitchen, living room, shop, or event setting with several concrete props. The main topic should be shown through objects and action, not labels or icons.",
+    "Layout variant: create a layered editorial scene with a big topic object in front, auntie's hands interacting with it, and a detailed background that explains the news without readable text."
+  ];
+  const pool = target.section === "stock" || target.section === "market"
+    ? stockLayouts
+    : target.section === "pitfall"
+      ? pitfallLayouts
+      : lifeLayouts;
+  return pool[index % pool.length];
+}
+
 function imagePromptFor(target) {
   const title = cleanPromptText(target.item.title, 70);
   const summary = cleanPromptText(target.item.summary || target.item.reason, 140);
+  const layoutVariant = layoutVariantFor(target);
   const commonStyle = auntieStylePrompt([
     `Style rule version: ${IMAGE_STYLE_RULE_VERSION}.`
   ]);
@@ -211,7 +238,8 @@ function imagePromptFor(target) {
       commonStyle,
       `Topic: Taiwanese stock/ETF observation for ${target.item.ticker} ${target.item.name}.`,
       `Story angle: ${summary}`,
-      "Scene direction: build a rich kitchen-table stock detective scene. No phone-in-hand pose and no chart-icon wallpaper. Auntie should lean into the desk, point, compare, circle, or inspect objects with a practical expression. Include foreground desk clutter, midground abstract blank chart panels, and background household details. Use topic-relevant props such as semiconductor wafer shapes, ETF basket-like colored blocks, blank sticky notes, magnifying glass, coffee, notebook with blank pages, and at most one non-text caution icon. Make it educational and funny, not financial-advisor serious. No coins, cash, currency signs, piggy banks, extra mascots, ticker symbols, company names, prices, dates, percent signs, plus/minus signs, chart labels, axis labels, or any market text."
+      layoutVariant,
+      "Scene direction: build a rich kitchen-table stock detective scene with physical objects carrying the story. No phone-in-hand pose, no chart-icon wallpaper, no giant dashboard, no presenter standing beside a screen. Auntie should lean, sit, reach, sort, compare, circle, or inspect objects with a practical expression. Include foreground desk clutter, midground object action, and background household details. Use topic-relevant props such as semiconductor wafer shapes, ETF basket-like colored blocks, blank sticky notes, magnifying glass, coffee, notebook with blank pages, calculator, and zero warning triangles unless the scene truly needs one tiny non-text caution sticker. Make it educational and funny, not financial-advisor serious. No coins, cash, currency signs, piggy banks, extra mascots, ticker symbols, company names, prices, dates, percent signs, plus/minus signs, chart labels, axis labels, or any market text."
     ].join(" ");
   }
 
@@ -219,7 +247,8 @@ function imagePromptFor(target) {
     return [
       commonStyle,
       "Topic: daily Taiwanese stock and ETF watchlist overview.",
-      "Scene direction: create a lively kitchen-table market command center with a clear foreground, midground, and background. No phone-in-hand pose and no chart-icon wallpaper. Auntie should actively sort, compare, or push around four colorful blank cards while reacting with a knowing auntie expression. Include abstract blank chart panels, a shiny semiconductor wafer, a simple basket of blank colored blocks, coffee, notebook with blank pages, and at most one non-text caution icon. Keep the reference-image richness and avoid the generic standing pose. No coins, cash, currency signs, percent signs, plus/minus signs, piggy banks, extra mascots, visible words, letters, or numbers."
+      layoutVariant,
+      "Scene direction: create a lively kitchen-table market command center with a clear foreground, midground, and background. No phone-in-hand pose, no chart-icon wallpaper, no giant dashboard, and no generic standing pose. Auntie should actively sort, compare, or push around colorful blank cards and physical market props while reacting with a knowing auntie expression. Include a shiny semiconductor wafer, a basket of blank colored blocks, coffee, notebook with blank pages, calculator, household shelves, and no warning triangles unless one tiny caution sticker is essential. Keep the reference-image richness. No coins, cash, currency signs, percent signs, plus/minus signs, piggy banks, extra mascots, visible words, letters, or numbers."
     ].join(" ");
   }
 
@@ -228,7 +257,8 @@ function imagePromptFor(target) {
       commonStyle,
       `Topic: ${title}.`,
       `Story angle: ${summary}`,
-      "Scene direction: create a specific daily-life trap mini-scene with auntie catching the problem in action, not posing beside icons. Do not create an icon wall. Do not copy the reference phone pose. Use a phone only when the topic clearly requires it; otherwise use topic-relevant street, home, shop, police, transport, or paperwork props as blank visual objects. Include foreground clutter, midground action, and background context. Use at most two floating symbols total. The mood is humorous, practical, and slightly dramatic. No text in message bubbles, phone screens, receipts, signs, papers, badges, stickers, license plates, or UI panels."
+      layoutVariant,
+      "Scene direction: create a specific daily-life trap mini-scene with auntie catching the problem in action, not posing beside icons. Do not create an icon wall, warning poster, or single-character mascot image. Do not copy the reference phone pose. Use a phone only when the topic clearly requires it; otherwise use topic-relevant street, home, shop, police, transport, or paperwork props as blank visual objects. Include foreground clutter, midground action, and background context. Use zero or one floating warning symbol total, small and secondary. The mood is humorous, practical, and slightly dramatic. No text in message bubbles, phone screens, receipts, signs, papers, badges, stickers, license plates, or UI panels."
     ].join(" ");
   }
 
@@ -236,7 +266,8 @@ function imagePromptFor(target) {
     commonStyle,
     `Topic: ${title}.`,
     `Story angle: ${summary}`,
-    "Scene direction: create a distinct Taiwan everyday-life article cover with auntie inside the situation, not a generic icon wall. Do not copy the reference phone pose unless the topic is specifically about phone use. Use household, commute, entertainment, weather, food, shopping, or neighborhood props that match the topic. Build a rich foreground, midground, and background; vary auntie's pose and expression while preserving the exact reference identity. Use at most two floating symbols total. Make it feel like a clickable lifestyle article cover, using only icons and objects, with no visible text, numbers, percent signs, or UI labels."
+    layoutVariant,
+    "Scene direction: create a distinct Taiwan everyday-life article cover with auntie inside the situation, not a generic icon wall or centered mascot. Do not copy the reference phone pose unless the topic is specifically about phone use. Use household, commute, entertainment, weather, food, shopping, or neighborhood props that match the topic. Build a rich foreground, midground, and background; vary auntie's pose and expression while preserving the exact reference identity. Use zero or one floating symbol total, small and secondary. Make it feel like a clickable lifestyle article cover, using objects and action instead of labels, with no visible text, numbers, percent signs, or UI labels."
   ].join(" ");
 }
 
