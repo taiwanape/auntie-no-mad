@@ -1,6 +1,6 @@
 {
   "date": "2026-06-05",
-  "generatedAt": "2026-06-04T21:48:03.711Z",
+  "generatedAt": "2026-06-05T01:31:22.997Z",
   "status": "approved",
   "checks": [
     "daily images: 9/9 ready (9 OpenAI generated, 0 OpenAI reused, 0 approved fallback, 0 fallback reused)",
@@ -63,7 +63,8 @@
       "size": "1536x1024",
       "outputFormat": "jpeg",
       "outputCompression": 88,
-      "promptRevision": "auntie-ref-v4"
+      "promptRevision": "auntie-style-v5",
+      "imageStyleRuleVersion": "auntie-style-v5"
     }
   ],
   "proposedSections": [
