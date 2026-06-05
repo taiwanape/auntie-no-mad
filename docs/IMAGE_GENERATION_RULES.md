@@ -22,14 +22,16 @@
 
 `auntie-reference-v9` 仍顯示「所有分類都吃同一組參考」會互相污染：踩坑圖可能吸到股票圖表語言，股票圖也可能變成符號牆。`auntie-reference-v10` 因此改成依分類選參考圖：生活/踩坑只吃角色 + 生活場景參考，股票/市場只吃角色 + 股票場景參考；並加重「不能 icon wall」規則。
 
+`auntie-reference-v10` 又暴露出參考圖順序問題：如果角色圖放第一張，模型會先抓到單人角色、黃底、警告符號，再忽略完整場景封面。`auntie-reference-v11` 改成「場景封面參考放第一張、角色圖放第二張」，讓構圖和豐富度先被鎖住，再用角色圖補人物一致性。
+
 ## 現在的硬規則
 
-所有公開主圖都必須先套用 `IMAGE_STYLE_RULE_VERSION` 目前版本的共用規則。現在版本是 `auntie-reference-v10`：
+所有公開主圖都必須先套用 `IMAGE_STYLE_RULE_VERSION` 目前版本的共用規則。現在版本是 `auntie-reference-v11`：
 
 - 每次生成依分類選參考圖，不再所有圖共用同一組參考。
-- 生活/踩坑：使用 `assets/brand/auntie-style-reference.jpg` + `assets/brand/auntie-scene-reference.png`。
-- 股票/市場：使用 `assets/brand/auntie-style-reference.jpg` + `assets/brand/auntie-market-scene-reference.png`。
-- 第一張鎖人物身份；第二張鎖該分類的網站封面場景、前中後景、桌面/室內道具密度與完成度。
+- 生活/踩坑：先使用 `assets/brand/auntie-scene-reference.png`，再使用 `assets/brand/auntie-style-reference.jpg`。
+- 股票/市場：先使用 `assets/brand/auntie-market-scene-reference.png`，再使用 `assets/brand/auntie-style-reference.jpg`。
+- 第一張鎖該分類的網站封面場景、前中後景、桌面/室內道具密度與完成度；第二張鎖人物身份。
 - 不能只是拿參考圖的表面元素；必須保留參考圖的筆觸密度、頭髮高光、臉部陰影、粗細變化線條、白色貼紙邊、奶油紙感與場景層次。
 - 參考圖裡的手機和天氣道具不是固定構圖；除非文章題材真的需要，不能複製「阿姨拿手機」姿勢或洗衣天氣場景。
 - 16:9 橫式網站文章封面，不做 logo、海報、資訊圖表、圖標拼貼或吉祥物徽章。
@@ -55,7 +57,7 @@
 
 ## 仍然不能保證的事
 
-這套規則可以大幅降低跑掉機率，也能防止腳本繞過規則。`auntie-reference-v10` 已比純文字 prompt、v6、v7、v8、v9 更硬，因為生成時會依分類帶參考圖、要求不可簡化參考圖、禁止複製參考圖手機姿勢、禁止 icon wall、要求完整故事場景，並使用較高品質輸出；但模型仍不是逐像素模板，仍不能 100% 保證每張都完全貼近參考圖。
+這套規則可以大幅降低跑掉機率，也能防止腳本繞過規則。`auntie-reference-v11` 已比純文字 prompt、v6、v7、v8、v9、v10 更硬，因為生成時會依分類帶參考圖、把場景封面參考放在第一張、要求不可簡化參考圖、禁止複製參考圖手機姿勢、禁止 icon wall、要求完整故事場景，並使用較高品質輸出；但模型仍不是逐像素模板，仍不能 100% 保證每張都完全貼近參考圖。
 
 若之後還要更硬，可以再加第二層：
 
