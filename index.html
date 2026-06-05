@@ -2996,6 +2996,8 @@
   </div>
 
   <script>
+    let latestContentVersion = "";
+
     let tips = [
       ["全台熱到週四：薔蜜在旁邊排隊取號。", "高溫還沒下班，熱帶性低氣壓又在海上醞釀。阿姨翻譯：今天先補水防曬，週末再看天空要不要加戲。"],
       ["高鐵今天恢復正常。", "官方說班表回來了，但通勤族的心臟還在候補。阿姨提醒：出門前先看 App，保護行程也保護血壓。"],
@@ -3263,6 +3265,7 @@
       const primary = items[0];
       const primaryHref = utmUrl(primary.slug || "#", "homepage_entry", "first_click");
       const primaryImage = primary.hero || primary.thumbnail || "assets/auntie-hero.jpg";
+      const primaryImageSrc = versionedAsset(primaryImage);
       const primarySummary = primary.auntieComment || primary.cta || primary.summary || "今天先看這篇，少一點焦慮，多一點準備。";
 
       root.innerHTML = `
@@ -3276,7 +3279,7 @@
             </div>
           </div>
           <a class="first-click-visual" href="${escapeHtml(primaryHref)}" aria-label="打開${escapeHtml(primary.title || "今日必看")}">
-            <img src="${escapeHtml(primaryImage)}" alt="${escapeHtml(primary.thumbnailAlt || primary.title || "阿姨別生氣今日必看圖文")}">
+            <img src="${escapeHtml(primaryImageSrc)}" alt="${escapeHtml(primary.thumbnailAlt || primary.title || "阿姨別生氣今日必看圖文")}">
           </a>
         </article>
       `;
@@ -3402,7 +3405,7 @@
       container.innerHTML = items.map((item) => `
         <a class="radar-zine" href="${escapeHtml(item.slug || "#")}">
           <div class="zine-art">
-            <img src="${escapeHtml(item.thumbnail || "assets/auntie-hero.jpg")}" alt="${escapeHtml(item.thumbnailAlt || item.title)}">
+            <img src="${escapeHtml(versionedAsset(item.thumbnail || item.hero || "assets/auntie-hero.jpg"))}" alt="${escapeHtml(item.thumbnailAlt || item.title)}">
           </div>
           <div class="zine-body">
             <div class="zine-meta">
@@ -3416,6 +3419,12 @@
           </div>
         </a>
       `).join("");
+    }
+
+    function versionedAsset(assetPath = "") {
+      if (!assetPath || /^https?:\/\//.test(assetPath)) return assetPath;
+      const version = encodeURIComponent(latestContentVersion || Date.now());
+      return `${String(assetPath).split("?")[0]}?v=${version}`;
     }
 
     function renderMarketCards(content) {
@@ -3509,6 +3518,7 @@
         const response = await fetch(`data/site-content.json?ts=${Date.now()}`, { cache: "no-store" });
         if (!response.ok) throw new Error("content data unavailable");
         const content = await response.json();
+        latestContentVersion = content.site?.updatedAt || content.generatedAt || String(Date.now());
 
         renderDailyMenu(content);
         renderFirstClick(content);

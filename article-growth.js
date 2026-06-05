@@ -39,6 +39,17 @@
     }
   }
 
+  function versionKey(content = {}) {
+    return encodeURIComponent(content.site?.updatedAt || content.generatedAt || Date.now());
+  }
+
+  function relativeAsset(assetPath = "", content = {}) {
+    if (!assetPath || /^https?:\/\//.test(assetPath)) return assetPath;
+    const cleanPath = normalizeSlug(assetPath).split("?")[0];
+    const prefix = isNestedPage ? "../" : "";
+    return `${prefix}${cleanPath}?v=${versionKey(content)}`;
+  }
+
   function flattenContent(content = {}) {
     return [
       ...(content.lifeRadar || []).map((item) => ({ ...item, sectionLabel: "生活雷達" })),
@@ -46,6 +57,23 @@
       ...(content.stockWatchlist || []).map((item) => ({ ...item, sectionLabel: "股市 ETF" })),
       ...(content.stockOverview ? [{ ...content.stockOverview, sectionLabel: "今日市場筆記" }] : [])
     ].filter((item) => item.slug);
+  }
+
+  function itemImagePath(item = {}) {
+    return item.image || item.hero || item.thumbnail || "";
+  }
+
+  function refreshArticleHero(currentItem, content = {}) {
+    const latestImage = itemImagePath(currentItem);
+    if (!latestImage) return;
+    const hero = $("article img.hero") || $("article > img:first-of-type");
+    if (!hero) return;
+    const nextSrc = relativeAsset(latestImage, content);
+    const currentSrc = normalizeSlug(hero.getAttribute("src") || "").split("?")[0];
+    const wantedSrc = normalizeSlug(nextSrc).split("?")[0];
+    if (currentSrc !== wantedSrc || !hero.src.includes(`v=${versionKey(content)}`)) {
+      hero.src = nextSrc;
+    }
   }
 
   function buildShareText(title, summary, url) {
@@ -326,12 +354,13 @@
     }, 1400);
   });
 
-  fetch(dataUrl)
+  fetch(`${dataUrl}?ts=${Date.now()}`, { cache: "no-store" })
     .then((response) => (response.ok ? response.json() : null))
     .then((content) => {
       const slug = currentSlug();
       const items = flattenContent(content || {});
       const current = items.find((item) => normalizeSlug(item.slug) === slug);
+      refreshArticleHero(current, content || {});
       render(current, relatedItems(content || {}, slug));
     })
     .catch(() => render(null, []));

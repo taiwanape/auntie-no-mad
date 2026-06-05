@@ -307,7 +307,7 @@
 
     <main>
       <section class="today-hero" aria-labelledby="todayTitle">
-        <img class="today-image" src="assets/generated/2026-06-05/pitfall-1-auntie-reference-v6-n9m77u.jpg" alt="阿姨整理酒駕罰單引口角縱火 新北男涉公共危險遭移送的踩坑日記縮圖">
+        <img class="today-image" src="assets/generated/2026-06-05/pitfall-1-auntie-reference-v6-n9m77u.jpg" alt="阿姨整理酒駕罰單引口角縱火 新北男涉公共危險遭移送的踩坑日記縮圖" data-fresh-image-page="stories/2026-06-05-pitfall-1.html">
         <div class="today-copy">
           <span class="label">今日必看</span>
           <h1 id="todayTitle">酒駕罰單引口角縱火 新北男涉公共危險遭移送</h1>
@@ -352,25 +352,25 @@ http://auntienomad.com/today.html?utm_source=copy_hook&amp;utm_medium=social&amp
         <p class="route-subtitle">這四張卡每天跟內容一起換，適合放在社群貼文、LINE 群組或個人檔案入口。</p>
         <div class="route-grid">
         <a class="route-card" href="http://auntienomad.com/stories/2026-06-05-pitfall-1.html">
-          <img src="assets/generated/2026-06-05/pitfall-1-auntie-reference-v6-n9m77u.jpg" alt="阿姨整理酒駕罰單引口角縱火 新北男涉公共危險遭移送的踩坑日記縮圖">
+          <img src="assets/generated/2026-06-05/pitfall-1-auntie-reference-v6-n9m77u.jpg" alt="阿姨整理酒駕罰單引口角縱火 新北男涉公共危險遭移送的踩坑日記縮圖" data-fresh-image-page="stories/2026-06-05-pitfall-1.html">
           <span>01 先看主打</span>
           <strong>酒駕罰單引口角縱火 新北男涉公共危險遭移送</strong>
           <small>不是你笨，是套路越來越會穿西裝。</small>
         </a>
         <a class="route-card" href="http://auntienomad.com/radar/2026-06-05-life-1.html">
-          <img src="assets/generated/2026-06-05/life-1-auntie-reference-v6-qho31q.jpg" alt="阿姨整理新北交通局納AI新技術 將增設智慧運輸中心的生活雷達縮圖">
+          <img src="assets/generated/2026-06-05/life-1-auntie-reference-v6-qho31q.jpg" alt="阿姨整理新北交通局納AI新技術 將增設智慧運輸中心的生活雷達縮圖" data-fresh-image-page="radar/2026-06-05-life-1.html">
           <span>02 生活雷達</span>
           <strong>新北交通局納AI新技術 將增設智慧運輸中心</strong>
           <small>交通消息先看一眼，少在月台或路上多煩十分鐘。</small>
         </a>
         <a class="route-card" href="http://auntienomad.com/stocks/2026-06-05-market-watch.html">
-          <img src="assets/generated/2026-06-05/stock-overview-auntie-reference-v6-1jfljyp.jpg" alt="阿姨今天看市場：聯發科、聯電 等四檔">
+          <img src="assets/generated/2026-06-05/stock-overview-auntie-reference-v6-1jfljyp.jpg" alt="阿姨今天看市場：聯發科、聯電 等四檔" data-fresh-image-page="stocks/2026-06-05-market-watch.html">
           <span>03 股市 ETF</span>
           <strong>阿姨今天看市場：聯發科、聯電 等四檔</strong>
           <small>不是報明牌，是把市場消息整理成白話文。</small>
         </a>
         <a class="route-card" href="http://auntienomad.com/share.html?utm_source=today_route&amp;utm_medium=internal&amp;utm_campaign=share_pack">
-          <img src="assets/generated/2026-06-05/pitfall-1-auntie-reference-v6-n9m77u.jpg" alt="阿姨別生氣今日分享包">
+          <img src="assets/generated/2026-06-05/pitfall-1-auntie-reference-v6-n9m77u.jpg" alt="阿姨別生氣今日分享包" data-fresh-image-page="share.html">
           <span>最後一步</span>
           <strong>覺得有用就丟群組</strong>
           <small>分享包已經把圖片、文案和連結排好，少打一堆字。</small>
@@ -398,6 +398,42 @@ http://auntienomad.com/today.html?utm_source=copy_hook&amp;utm_medium=social&amp
   </div>
 
   <script>
+    function normalizeFreshSlug(value) {
+      return String(value || "").replace(/^https?:\/\/[^/]+\//, "").replace(/^\/+/, "").replace(/^auntie-no-mad\//, "").split("?")[0];
+    }
+
+    function freshItems(content) {
+      return [
+        ...((content && content.lifeRadar) || []),
+        ...((content && content.pitfalls) || []),
+        ...((content && content.stockWatchlist) || []),
+        content && content.stockOverview
+      ].filter(Boolean);
+    }
+
+    function freshImageFor(item) {
+      return item && (item.image || item.hero || item.thumbnail || "");
+    }
+
+    async function refreshFreshImages() {
+      try {
+        const response = await fetch("data/site-content.json?ts=" + Date.now(), { cache: "no-store" });
+        if (!response.ok) return;
+        const content = await response.json();
+        const version = encodeURIComponent((content.site && content.site.updatedAt) || Date.now());
+        const items = freshItems(content);
+        document.querySelectorAll("[data-fresh-image-page]").forEach((image) => {
+          const slug = normalizeFreshSlug(image.dataset.freshImagePage);
+          const item = items.find((entry) => normalizeFreshSlug(entry.slug) === slug);
+          const nextImage = freshImageFor(item);
+          if (!nextImage) return;
+          image.src = nextImage.split("?")[0] + "?v=" + version;
+        });
+      } catch {}
+    }
+
+    refreshFreshImages();
+
     document.addEventListener("click", async (event) => {
       const nativeButton = event.target.closest("[data-native-share]");
       if (nativeButton) {

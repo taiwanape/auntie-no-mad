@@ -544,6 +544,7 @@ assert(
 );
 assert(indexHtml.includes("約每半小時自動整理"), "index.html must describe live news cadence as approximate");
 assert(indexHtml.includes("site-content.json?ts="), "index.html must bust cache when loading site content");
+assert(indexHtml.includes("versionedAsset("), "index.html must version dynamic daily images after loading fresh content");
 if (content.site?.dailyNoteUrl) {
   assert(indexHtml.includes(content.site.dailyNoteUrl), `index.html static stock section must link today's market note: ${content.site.dailyNoteUrl}`);
 }
@@ -779,6 +780,8 @@ for (const [index, script] of [...shareHtml.matchAll(/<script>([\s\S]*?)<\/scrip
 
 const todayHtml = fs.readFileSync(path.join(root, "today.html"), "utf8");
 assert(todayHtml.includes("今日必看"), "today.html must identify itself as the today landing page");
+assert(todayHtml.includes("refreshFreshImages"), "today.html must refresh stale cached daily images from site-content.json");
+assert(todayHtml.includes("data-fresh-image-page"), "today.html must tag images for stale-cache replacement");
 assert(todayHtml.includes('rel="canonical"'), "today.html must include canonical URL");
 assert(todayHtml.includes('property="og:image"'), "today.html must include an OG image");
 assert(todayHtml.includes('property="og:image:alt"'), "today.html must include an OG image alt");
@@ -964,6 +967,7 @@ assert(opsHealthWorkflow.includes("ENABLE_PAGES_HTTPS"), "ops-health-check.yml m
 const opsHealthScript = fs.readFileSync(path.join(root, "scripts", "ops-health-check.mjs"), "utf8");
 const imageStyleRulesScript = fs.readFileSync(path.join(root, "scripts", "image-style-rules.mjs"), "utf8");
 const openAiImageClientScript = fs.readFileSync(path.join(root, "scripts", "openai-image-client.mjs"), "utf8");
+const articleGrowthScript = fs.readFileSync(path.join(root, "article-growth.js"), "utf8");
 const regenerateImageDebtScript = fs.readFileSync(path.join(root, "scripts", "regenerate-image-debt.mjs"), "utf8");
 const regenerateDuplicateImageDebtScript = fs.readFileSync(path.join(root, "scripts", "regenerate-duplicate-image-debt.mjs"), "utf8");
 assert(fileExists("scripts/audit-site-images.mjs"), "site image audit script missing");
@@ -1056,6 +1060,16 @@ assert(
   dailyUpdateWorkflow.includes("OPENAI_IMAGE_REFERENCE_PATH") &&
     dailyUpdateWorkflow.includes(AUNTIE_REFERENCE_IMAGE),
   "daily-update.yml must pass the Auntie reference image into public image generation"
+);
+assert(
+  dailyUpdateScript.includes("article-growth.js?v="),
+  "daily-update article pages must version article-growth.js so stale pages can pick up image refresh fixes"
+);
+assert(
+  articleGrowthScript.includes("cache: \"no-store\"") &&
+    articleGrowthScript.includes("refreshArticleHero") &&
+    articleGrowthScript.includes("?ts="),
+  "article-growth.js must refresh stale article hero images from fresh site-content.json"
 );
 
 if (warnings.length) {

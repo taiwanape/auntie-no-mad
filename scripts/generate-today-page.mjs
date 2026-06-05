@@ -31,6 +31,14 @@ function absoluteUrl(href = "") {
   return new URL(href.replace(/^\//, ""), siteUrl).href;
 }
 
+function relativeArticleSlug(href = "") {
+  try {
+    return new URL(href, siteUrl).pathname.replace(/^\/+/, "");
+  } catch {
+    return String(href).replace(/^https?:\/\/[^/]+\//, "").replace(/^\/+/, "").split("?")[0];
+  }
+}
+
 function cleanText(value = "") {
   return String(value).replace(/\s+/g, " ").trim();
 }
@@ -80,6 +88,7 @@ if (!primary) {
 const title = `今日必看｜${cleanText(primary.title)}`;
 const description = cleanText(primary.summary || "阿姨幫你把今天最值得看的生活新聞、踩坑提醒與股市觀察整理成人話。");
 const articleUrl = primary.articleUrl || siteUrl;
+const primarySlug = relativeArticleSlug(articleUrl);
 const todayUrl = `${siteUrl}today.html`;
 const imageUrl = publicImageUrl(primary.imagePath || "assets/auntie-hero.jpg");
 const imageAlt = cleanText(primary.imageAlt || primary.title || "阿姨別生氣今日必看圖文");
@@ -153,7 +162,7 @@ const routeItems = [
 
 const routeCards = routeItems.map((item) => `
         <a class="route-card" href="${escapeHtml(item.url)}">
-          <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}">
+          <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" data-fresh-image-page="${escapeHtml(relativeArticleSlug(item.url))}">
           <span>${escapeHtml(item.label)}</span>
           <strong>${escapeHtml(item.title)}</strong>
           <small>${escapeHtml(item.text)}</small>
@@ -468,7 +477,7 @@ const html = `<!DOCTYPE html>
 
     <main>
       <section class="today-hero" aria-labelledby="todayTitle">
-        <img class="today-image" src="${escapeHtml(primary.imagePath || "assets/auntie-hero.jpg")}" alt="${escapeHtml(primary.imageAlt || primary.title)}">
+        <img class="today-image" src="${escapeHtml(primary.imagePath || "assets/auntie-hero.jpg")}" alt="${escapeHtml(primary.imageAlt || primary.title)}" data-fresh-image-page="${escapeHtml(primarySlug)}">
         <div class="today-copy">
           <span class="label">今日必看</span>
           <h1 id="todayTitle">${escapeHtml(primary.title)}</h1>
@@ -516,6 +525,42 @@ const html = `<!DOCTYPE html>
   </div>
 
   <script>
+    function normalizeFreshSlug(value) {
+      return String(value || "").replace(/^https?:\\/\\/[^/]+\\//, "").replace(/^\\/+/, "").replace(/^auntie-no-mad\\//, "").split("?")[0];
+    }
+
+    function freshItems(content) {
+      return [
+        ...((content && content.lifeRadar) || []),
+        ...((content && content.pitfalls) || []),
+        ...((content && content.stockWatchlist) || []),
+        content && content.stockOverview
+      ].filter(Boolean);
+    }
+
+    function freshImageFor(item) {
+      return item && (item.image || item.hero || item.thumbnail || "");
+    }
+
+    async function refreshFreshImages() {
+      try {
+        const response = await fetch("data/site-content.json?ts=" + Date.now(), { cache: "no-store" });
+        if (!response.ok) return;
+        const content = await response.json();
+        const version = encodeURIComponent((content.site && content.site.updatedAt) || Date.now());
+        const items = freshItems(content);
+        document.querySelectorAll("[data-fresh-image-page]").forEach((image) => {
+          const slug = normalizeFreshSlug(image.dataset.freshImagePage);
+          const item = items.find((entry) => normalizeFreshSlug(entry.slug) === slug);
+          const nextImage = freshImageFor(item);
+          if (!nextImage) return;
+          image.src = nextImage.split("?")[0] + "?v=" + version;
+        });
+      } catch {}
+    }
+
+    refreshFreshImages();
+
     document.addEventListener("click", async (event) => {
       const nativeButton = event.target.closest("[data-native-share]");
       if (nativeButton) {

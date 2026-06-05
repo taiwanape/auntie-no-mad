@@ -1032,7 +1032,7 @@ ${articleJsonLd}
     </article>
     <footer class="footer">阿姨別生氣 © 2026</footer>
   </div>
-  <script src="../article-growth.js" defer></script>
+  <script src="../article-growth.js?v=${encodeURIComponent(item.updatedAt || item.date || taipeiDate)}" defer></script>
 </body>
 </html>
 `;
@@ -1286,7 +1286,7 @@ ${marketJsonLd}
       </div>
     </article>
   </div>
-  <script src="../article-growth.js" defer></script>
+  <script src="../article-growth.js?v=${encodeURIComponent(stockOverview.updatedAt || stockOverview.date || taipeiDate)}" defer></script>
 </body>
 </html>
 `;
