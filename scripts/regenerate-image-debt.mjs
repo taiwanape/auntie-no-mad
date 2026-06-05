@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
+import { IMAGE_STYLE_RULE_VERSION, auntieStylePrompt } from "./image-style-rules.mjs";
 
 const root = process.cwd();
 const args = process.argv.slice(2);
@@ -23,7 +24,7 @@ const quality = process.env.OPENAI_IMAGE_QUALITY || "medium";
 const size = process.env.OPENAI_IMAGE_SIZE || "1536x1024";
 const outputFormat = process.env.OPENAI_IMAGE_OUTPUT_FORMAT || "jpeg";
 const outputCompression = Number.parseInt(process.env.OPENAI_IMAGE_OUTPUT_COMPRESSION || "88", 10);
-const promptRevision = process.env.IMAGE_DEBT_PROMPT_REVISION || "legacy-v1";
+const promptRevision = process.env.IMAGE_DEBT_PROMPT_REVISION || `legacy-${IMAGE_STYLE_RULE_VERSION}`;
 
 function normalizePath(value = "") {
   return String(value).replaceAll("\\", "/");
@@ -90,14 +91,10 @@ function buildPrompt(item) {
   const title = summarize(item.title || metaContent(html, "og:title") || item.id, 90);
   const summary = summarize(description, 180);
   return [
-    "Create a fresh 16:9 landscape editorial comic illustration for the Auntie No Mad website.",
-    "Match the approved style exactly: bright yellow halftone background, thick black ink outlines, white sticker-cut borders, hot-pink accent icons, cream paper tones, playful Taiwan sticker/comic style, clean bold shapes, polished rendering.",
-    "Preserve the character identity exactly: middle-aged Taiwanese auntie, round fuller face, full curly dark-brown short hair with big swooping curls, black pixel sunglasses, gold hoop earrings, leopard-print long sleeves/top, black apron with a small pink heart, fuller body, confident auntie attitude.",
-    "Do not make the auntie younger, thinner, a different hairstyle, a different outfit, a logo mascot, a flat vector icon, a typography poster, a collage, or a banner.",
-    "Absolutely no visible writing anywhere: no Chinese characters, no English letters, no numbers, no stock tickers, no company names, no brand title, no logo, no watermark, no signage, no captions, no labels, no speech-bubble words, no readable or fake text on papers, screens, phones, signs, badges, charts, cards, stickers, or map pins.",
-    "Also avoid currency symbols, dollar signs, percent signs, punctuation-as-text, QR-code-like blocks, and readable warning labels.",
-    "Use blank icons, shapes, arrows, colored dots, pictograms, empty check circles, abstract charts, and blank panels instead of words or numbers.",
-    "Keep the auntie large and fully inside the frame; do not crop the head, face, hands, or key objects.",
+    auntieStylePrompt([
+      `Style rule version: ${IMAGE_STYLE_RULE_VERSION}.`,
+      "This replaces historical fallback art, so make a fresh topic-specific article cover rather than copying any older composition."
+    ]),
     `Topic: ${title}.`,
     summary ? `Story angle: ${summary}` : "",
     topicScene(item)

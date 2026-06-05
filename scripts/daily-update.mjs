@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { IMAGE_STYLE_RULE_VERSION, auntieStylePrompt } from "./image-style-rules.mjs";
 import { publicImageUrl, publicSiteUrl, publicUrl } from "./public-site-url.mjs";
 
 const root = process.cwd();
@@ -89,7 +90,7 @@ const imageGeneration = {
   outputFormat: process.env.OPENAI_IMAGE_OUTPUT_FORMAT || "jpeg",
   outputCompression: Number.parseInt(process.env.OPENAI_IMAGE_OUTPUT_COMPRESSION || "88", 10),
   limit: Number.parseInt(process.env.OPENAI_IMAGE_LIMIT || "9", 10),
-  promptRevision: process.env.OPENAI_IMAGE_PROMPT_REVISION || "auntie-ref-v4",
+  promptRevision: process.env.OPENAI_IMAGE_PROMPT_REVISION || IMAGE_STYLE_RULE_VERSION,
   allowApprovedFallback: process.env.ALLOW_APPROVED_IMAGE_FALLBACK === "true",
   forceApprovedFallback: process.env.FORCE_APPROVED_IMAGE_FALLBACK === "true"
 };
@@ -194,18 +195,9 @@ function cleanPromptText(value = "", maxLength = 120) {
 function imagePromptFor(target) {
   const title = cleanPromptText(target.item.title, 70);
   const summary = cleanPromptText(target.item.summary || target.item.reason, 140);
-  const commonStyle = [
-    "Create a polished 16:9 landscape editorial comic illustration for a Taiwanese lifestyle content brand. Represent the brand only through character design, colors, props, and mood.",
-    "Match the approved Auntie No Mad website style: bright yellow halftone background, thick black ink outlines, white sticker-cut borders, hot-pink accent icons, cream paper tones, playful Taiwan sticker/comic style, clean bold shapes, and expressive polished cartoon rendering.",
-    "Do not make a flat vector poster, icon collage, simple mascot graphic, logo banner, typography poster, corporate ad, infographic, or childish clip-art.",
-    "Preserve the character identity exactly: middle-aged Taiwanese auntie, round fuller face, full curly dark-brown short hair with big swooping curls, black pixel sunglasses, gold hoop earrings, leopard-print long sleeves/top, black apron with a small pink heart, fuller body, confident auntie attitude.",
-    "Do not make the auntie younger, thinner, cuter in a different way, or change her hairstyle, face shape, glasses, clothes, or body type.",
-    "The auntie must be the large first-read character in a rich Taiwan lifestyle/editorial scene, not a tiny icon and not a cropped logo mascot.",
-    "Absolutely no visible writing anywhere: no Chinese characters, no English letters, no numbers, no stock tickers, no company names, no brand title, no logo, no watermark, no signage, no captions, no labels, no speech-bubble words, no readable or fake text on papers, screens, phones, signs, badges, charts, cards, stickers, or map pins.",
-    "Also avoid currency symbols, dollar signs, percent signs, punctuation-as-text, QR-code-like blocks, and readable warning labels.",
-    "Use blank icons, shapes, arrows, colored dots, pictograms, empty check circles, abstract charts, and blank panels instead of words or numbers. Blank screens, blank cards, and blank papers are allowed; fake writing is not.",
-    "Do not crop the auntie's head, face, hands, or key objects; keep the full composition clean inside the 16:9 frame."
-  ].join(" ");
+  const commonStyle = auntieStylePrompt([
+    `Style rule version: ${IMAGE_STYLE_RULE_VERSION}.`
+  ]);
 
   if (target.section === "stock") {
     return [
@@ -435,6 +427,7 @@ async function enrichGeneratedImages(nextContent) {
     outputFormat: imageGeneration.outputFormat,
     outputCompression: imageGeneration.outputCompression,
     promptRevision: imageGeneration.promptRevision,
+    imageStyleRuleVersion: IMAGE_STYLE_RULE_VERSION,
     error: openAiGenerated + openAiReused > 0 ? undefined : openAiError || undefined,
     forcedFallback: imageGeneration.forceApprovedFallback || undefined
   });

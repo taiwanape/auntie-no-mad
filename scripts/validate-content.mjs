@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
+import { AUNTIE_STYLE_RULES, IMAGE_STYLE_RULE_VERSION } from "./image-style-rules.mjs";
 
 const root = process.cwd();
 const dataPath = path.join(root, "data", "site-content.json");
@@ -433,7 +434,10 @@ if (reviewReport) {
   if (imageSource) {
     assert(imageSource.ok === true, "data/review-report.json must show OpenAI Images API healthy for the approved daily publish");
     assert(imageSource.model === "gpt-image-1", "data/review-report.json must record the approved image model");
-    assert(imageSource.promptRevision === "auntie-ref-v4", "data/review-report.json must record the approved image prompt revision");
+    assert(
+      ["auntie-ref-v4", IMAGE_STYLE_RULE_VERSION].includes(imageSource.promptRevision),
+      "data/review-report.json must record an approved image prompt revision"
+    );
     assert(Number(imageSource.count) >= collectPrimaryContentImages().length, "data/review-report.json OpenAI image count must cover current primary content images");
   }
   assert(
@@ -958,8 +962,13 @@ assert(opsHealthWorkflow.includes("test:domain"), "ops-health-check.yml must che
 assert(opsHealthWorkflow.includes("ENABLE_PAGES_HTTPS"), "ops-health-check.yml must retry GitHub Pages HTTPS enforcement");
 
 const opsHealthScript = fs.readFileSync(path.join(root, "scripts", "ops-health-check.mjs"), "utf8");
+const imageStyleRulesScript = fs.readFileSync(path.join(root, "scripts", "image-style-rules.mjs"), "utf8");
+const regenerateImageDebtScript = fs.readFileSync(path.join(root, "scripts", "regenerate-image-debt.mjs"), "utf8");
+const regenerateDuplicateImageDebtScript = fs.readFileSync(path.join(root, "scripts", "regenerate-duplicate-image-debt.mjs"), "utf8");
 assert(fileExists("scripts/audit-site-images.mjs"), "site image audit script missing");
 assert(fileExists("scripts/write-image-debt-report.mjs"), "site image debt report script missing");
+assert(fileExists("scripts/image-style-rules.mjs"), "central image style rules script missing");
+assert(fileExists("docs/IMAGE_GENERATION_RULES.md"), "human-readable image generation rules doc missing");
 assert(fileExists("scripts/regenerate-image-debt.mjs"), "site image debt regeneration script missing");
 assert(fileExists("scripts/write-duplicate-image-debt-report.mjs"), "site duplicate image debt report script missing");
 assert(fileExists("scripts/regenerate-duplicate-image-debt.mjs"), "site duplicate image debt regeneration script missing");
@@ -979,8 +988,35 @@ assert(
   "daily-update image filenames must include a prompt revision so bad image batches can be replaced without reusing stale files"
 );
 assert(
-  dailyUpdateScript.includes("Absolutely no visible writing anywhere"),
-  "daily-update image prompt must explicitly ban visible writing"
+  AUNTIE_STYLE_RULES.some((rule) => rule.includes("ABSOLUTE TEXT BAN")) &&
+    imageStyleRulesScript.includes("ABSOLUTE TEXT BAN"),
+  "central image style rules must explicitly ban visible writing"
+);
+assert(
+  imageStyleRulesScript.includes(IMAGE_STYLE_RULE_VERSION),
+  "central image style rules must expose the current image style version"
+);
+[
+  ["daily-update.mjs", dailyUpdateScript],
+  ["regenerate-image-debt.mjs", regenerateImageDebtScript],
+  ["regenerate-duplicate-image-debt.mjs", regenerateDuplicateImageDebtScript]
+].forEach(([scriptName, source]) => {
+  assert(
+    source.includes('from "./image-style-rules.mjs"') && source.includes("auntieStylePrompt"),
+    `${scriptName} must use the central Auntie image style rules`
+  );
+  assert(
+    source.includes("IMAGE_STYLE_RULE_VERSION"),
+    `${scriptName} must include the central image style version in generated prompts or reports`
+  );
+});
+assert(
+  fs.readFileSync(path.join(root, "docs", "IMAGE_GENERATION_RULES.md"), "utf8").includes("scripts/image-style-rules.mjs"),
+  "IMAGE_GENERATION_RULES.md must point to the central executable style rules"
+);
+assert(
+  fs.readFileSync(path.join(root, "docs", "IMAGE_GENERATION_RULES.md"), "utf8").includes(IMAGE_STYLE_RULE_VERSION),
+  "IMAGE_GENERATION_RULES.md must mention the current image style version"
 );
 assert(
   !/labels are allowed|allowed only if crisp|別匯款|先查證|打165/.test(dailyImagePromptBlock),
@@ -989,6 +1025,10 @@ assert(
 assert(
   dailyUpdateWorkflow.includes("OPENAI_IMAGE_PROMPT_REVISION"),
   "daily-update.yml must set OPENAI_IMAGE_PROMPT_REVISION when generating daily images"
+);
+assert(
+  dailyUpdateWorkflow.includes(IMAGE_STYLE_RULE_VERSION),
+  "daily-update.yml must use the current central image style version for prompt revision"
 );
 
 if (warnings.length) {
