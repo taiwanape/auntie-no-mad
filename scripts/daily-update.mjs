@@ -295,6 +295,32 @@ async function generateOpenAIImage(prompt, outputPath, target) {
   });
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function isTransientImageApiError(message = "") {
+  return /timeout|timed out|reset|disconnect|before headers|fetch failed|network|temporarily|rate limit|429|500|502|503|504/i.test(message);
+}
+
+async function generateOpenAIImageWithRetries(prompt, outputPath, target) {
+  const maxAttempts = Math.max(1, Number.parseInt(process.env.OPENAI_IMAGE_MAX_ATTEMPTS || "3", 10) || 3);
+  let lastError;
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    try {
+      return await generateOpenAIImage(prompt, outputPath, target);
+    } catch (error) {
+      lastError = error;
+      if (fs.existsSync(outputPath)) fs.rmSync(outputPath, { force: true });
+      if (attempt >= maxAttempts || isBlockingImageApiError(error.message) || !isTransientImageApiError(error.message)) {
+        break;
+      }
+      await sleep(4000 * attempt);
+    }
+  }
+  throw lastError;
+}
+
 function assignTargetImage(target, assetPath, thumbPath = assetPath) {
   if (target.section === "stock") {
     target.item.image = assetPath;
@@ -415,7 +441,7 @@ async function enrichGeneratedImages(nextContent) {
       }
       if (process.env.OPENAI_API_KEY && !skipOpenAiAttempts) {
         if (!fs.existsSync(openAiOutputPath)) {
-          const generatedImage = await generateOpenAIImage(imagePromptFor(target), openAiOutputPath, target);
+          const generatedImage = await generateOpenAIImageWithRetries(imagePromptFor(target), openAiOutputPath, target);
           openAiEndpoint = generatedImage.endpoint;
           openAiReferenceImage = generatedImage.referenceImage || openAiReferenceImage;
           createdAssetPaths.push(openAiAssetPath);
