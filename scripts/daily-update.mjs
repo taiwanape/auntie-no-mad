@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
-import { IMAGE_STYLE_RULE_VERSION, auntieStylePrompt } from "./image-style-rules.mjs";
+import { AUNTIE_REFERENCE_IMAGE, IMAGE_STYLE_RULE_VERSION, auntieStylePrompt } from "./image-style-rules.mjs";
+import { generateOpenAIImageFile, resolveImageReferencePath, relativeImageReferencePath } from "./openai-image-client.mjs";
 import { publicImageUrl, publicSiteUrl, publicUrl } from "./public-site-url.mjs";
 
 const root = process.cwd();
@@ -91,6 +92,7 @@ const imageGeneration = {
   outputCompression: Number.parseInt(process.env.OPENAI_IMAGE_OUTPUT_COMPRESSION || "88", 10),
   limit: Number.parseInt(process.env.OPENAI_IMAGE_LIMIT || "9", 10),
   promptRevision: process.env.OPENAI_IMAGE_PROMPT_REVISION || IMAGE_STYLE_RULE_VERSION,
+  referencePath: process.env.OPENAI_IMAGE_REFERENCE_PATH || AUNTIE_REFERENCE_IMAGE,
   allowApprovedFallback: process.env.ALLOW_APPROVED_IMAGE_FALLBACK === "true",
   forceApprovedFallback: process.env.FORCE_APPROVED_IMAGE_FALLBACK === "true"
 };
@@ -234,36 +236,17 @@ function imagePromptFor(target) {
 }
 
 async function generateOpenAIImage(prompt, outputPath) {
-  const requestBody = {
-    model: imageGeneration.model,
+  return generateOpenAIImageFile({
     prompt,
+    outputPath,
+    model: imageGeneration.model,
     size: imageGeneration.size,
     quality: imageGeneration.quality,
-    n: 1
-  };
-  if (imageGeneration.outputFormat) requestBody.output_format = imageGeneration.outputFormat;
-  if (["jpeg", "webp"].includes(imageGeneration.outputFormat) && Number.isFinite(imageGeneration.outputCompression)) {
-    requestBody.output_compression = imageGeneration.outputCompression;
-  }
-
-  const response = await fetch("https://api.openai.com/v1/images/generations", {
-    method: "POST",
-    headers: {
-      authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-      "content-type": "application/json",
-      "user-agent": "auntie-no-mad-daily-image-generator/1.0"
-    },
-    body: JSON.stringify(requestBody)
+    outputFormat: imageGeneration.outputFormat,
+    outputCompression: imageGeneration.outputCompression,
+    referencePath: imageGeneration.referencePath,
+    userAgent: "auntie-no-mad-daily-image-generator/1.0"
   });
-
-  const body = await response.json().catch(async () => ({ error: { message: await response.text() } }));
-  if (!response.ok) {
-    throw new Error(body.error?.message || `OpenAI image generation failed: ${response.status}`);
-  }
-
-  const b64 = body.data?.[0]?.b64_json;
-  if (!b64) throw new Error("OpenAI image generation returned no b64_json");
-  fs.writeFileSync(outputPath, Buffer.from(b64, "base64"));
 }
 
 function assignTargetImage(target, assetPath, thumbPath = assetPath) {
@@ -364,7 +347,13 @@ async function enrichGeneratedImages(nextContent) {
   let openAiError = "";
   let skipOpenAiAttempts = false;
   let openAiSkipped = 0;
+  let openAiEndpoint = "";
+  let openAiReferenceImage = "";
   const createdAssetPaths = [];
+  const resolvedReferencePath = resolveImageReferencePath(imageGeneration.referencePath);
+  if (resolvedReferencePath) {
+    openAiReferenceImage = relativeImageReferencePath(resolvedReferencePath);
+  }
 
   for (const target of targets.slice(0, max)) {
     const baseName = `${target.prefix}-${imageGeneration.promptRevision}-${makeAssetId(target.item.title || target.item.name || target.prefix)}`;
@@ -380,7 +369,9 @@ async function enrichGeneratedImages(nextContent) {
       }
       if (process.env.OPENAI_API_KEY && !skipOpenAiAttempts) {
         if (!fs.existsSync(openAiOutputPath)) {
-          await generateOpenAIImage(imagePromptFor(target), openAiOutputPath);
+          const generatedImage = await generateOpenAIImage(imagePromptFor(target), openAiOutputPath);
+          openAiEndpoint = generatedImage.endpoint;
+          openAiReferenceImage = generatedImage.referenceImage || openAiReferenceImage;
           createdAssetPaths.push(openAiAssetPath);
           openAiGenerated += 1;
         } else {
@@ -428,6 +419,8 @@ async function enrichGeneratedImages(nextContent) {
     outputCompression: imageGeneration.outputCompression,
     promptRevision: imageGeneration.promptRevision,
     imageStyleRuleVersion: IMAGE_STYLE_RULE_VERSION,
+    endpoint: openAiEndpoint || (openAiReferenceImage ? "images/edits" : "images/generations"),
+    referenceImage: openAiReferenceImage || undefined,
     error: openAiGenerated + openAiReused > 0 ? undefined : openAiError || undefined,
     forcedFallback: imageGeneration.forceApprovedFallback || undefined
   });

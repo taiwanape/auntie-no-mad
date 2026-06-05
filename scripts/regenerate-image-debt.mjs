@@ -1,7 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
-import { IMAGE_STYLE_RULE_VERSION, auntieStylePrompt } from "./image-style-rules.mjs";
+import { AUNTIE_REFERENCE_IMAGE, IMAGE_STYLE_RULE_VERSION, auntieStylePrompt } from "./image-style-rules.mjs";
+import { generateOpenAIImageFile } from "./openai-image-client.mjs";
 
 const root = process.cwd();
 const args = process.argv.slice(2);
@@ -25,6 +26,7 @@ const size = process.env.OPENAI_IMAGE_SIZE || "1536x1024";
 const outputFormat = process.env.OPENAI_IMAGE_OUTPUT_FORMAT || "jpeg";
 const outputCompression = Number.parseInt(process.env.OPENAI_IMAGE_OUTPUT_COMPRESSION || "88", 10);
 const promptRevision = process.env.IMAGE_DEBT_PROMPT_REVISION || `legacy-${IMAGE_STYLE_RULE_VERSION}`;
+const referencePath = process.env.OPENAI_IMAGE_REFERENCE_PATH || AUNTIE_REFERENCE_IMAGE;
 
 function normalizePath(value = "") {
   return String(value).replaceAll("\\", "/");
@@ -102,36 +104,17 @@ function buildPrompt(item) {
 }
 
 async function generateOpenAIImage(prompt, outputPath) {
-  const requestBody = {
-    model,
+  return generateOpenAIImageFile({
     prompt,
+    outputPath,
+    model,
     size,
     quality,
-    n: 1
-  };
-  if (outputFormat) requestBody.output_format = outputFormat;
-  if (["jpeg", "webp"].includes(outputFormat) && Number.isFinite(outputCompression)) {
-    requestBody.output_compression = outputCompression;
-  }
-
-  const response = await fetch("https://api.openai.com/v1/images/generations", {
-    method: "POST",
-    headers: {
-      authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-      "content-type": "application/json",
-      "user-agent": "auntie-no-mad-image-debt-regenerator/1.0"
-    },
-    body: JSON.stringify(requestBody)
+    outputFormat,
+    outputCompression,
+    referencePath,
+    userAgent: "auntie-no-mad-image-debt-regenerator/1.0"
   });
-
-  const body = await response.json().catch(async () => ({ error: { message: await response.text() } }));
-  if (!response.ok) {
-    throw new Error(body.error?.message || `OpenAI image generation failed: ${response.status}`);
-  }
-
-  const b64 = body.data?.[0]?.b64_json;
-  if (!b64) throw new Error("OpenAI image generation returned no b64_json");
-  fs.writeFileSync(outputPath, Buffer.from(b64, "base64"));
 }
 
 function outputAssetPath(item) {
