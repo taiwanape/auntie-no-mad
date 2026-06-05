@@ -1,9 +1,9 @@
 {
   "date": "2026-06-05",
-  "generatedAt": "2026-06-05T02:42:36.672Z",
+  "generatedAt": "2026-06-05T03:22:09.041Z",
   "status": "approved",
   "checks": [
-    "daily images: 9/9 ready (0 OpenAI generated, 9 OpenAI reused, 0 approved fallback, 0 fallback reused)",
+    "daily images: 9/9 ready (9 OpenAI generated, 0 OpenAI reused, 0 approved fallback, 0 fallback reused)",
     "lifeRadar: 2 items checked",
     "pitfalls: 2 items checked",
     "liveNews: 6 items checked",
@@ -59,12 +59,12 @@
       "ok": true,
       "count": 9,
       "model": "gpt-image-1",
-      "quality": "medium",
+      "quality": "high",
       "size": "1536x1024",
       "outputFormat": "jpeg",
       "outputCompression": 88,
-      "promptRevision": "auntie-reference-v6",
-      "imageStyleRuleVersion": "auntie-reference-v6",
+      "promptRevision": "auntie-reference-v7",
+      "imageStyleRuleVersion": "auntie-reference-v7",
       "endpoint": "images/edits",
       "referenceImage": "assets/brand/auntie-style-reference.jpg"
     }
