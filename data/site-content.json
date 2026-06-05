@@ -16,11 +16,11 @@
       "auntieComment": "天氣不是拿來焦慮的，是拿來決定要不要帶傘、改行程。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202606040329.aspx",
       "slug": "radar/2026-06-05-life-1.html",
-      "thumbnail": "assets/generated/2026-06-05/life-1-auntie-reference-v12-1v3kpch.jpg",
+      "thumbnail": "assets/generated/2026-06-05/life-1-auntie-reference-v13-1v3kpch.jpg",
       "thumbnailAlt": "阿姨整理氣象署發布5縣市豪雨特報 雲林等地留意大雨的生活雷達縮圖",
       "cta": "新聞重點、阿姨白話翻譯與你今天可以先做的事。",
       "sourceName": "中央社生活醫藥",
-      "hero": "assets/generated/2026-06-05/life-1-auntie-reference-v12-1v3kpch.jpg"
+      "hero": "assets/generated/2026-06-05/life-1-auntie-reference-v13-1v3kpch.jpg"
     },
     {
       "title": "原民歲時祭儀將陸續登場 台鐵返鄉列車開放訂票",
@@ -30,11 +30,11 @@
       "auntieComment": "交通消息先看一眼，少在月台或路上多煩十分鐘。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202606050027.aspx",
       "slug": "radar/2026-06-05-life-2.html",
-      "thumbnail": "assets/generated/2026-06-05/life-2-auntie-reference-v12-1mexcj4.jpg",
+      "thumbnail": "assets/generated/2026-06-05/life-2-auntie-reference-v13-1mexcj4.jpg",
       "thumbnailAlt": "阿姨整理原民歲時祭儀將陸續登場 台鐵返鄉列車開放訂票的生活雷達縮圖",
       "cta": "新聞重點、阿姨白話翻譯與你今天可以先做的事。",
       "sourceName": "中央社生活醫藥",
-      "hero": "assets/generated/2026-06-05/life-2-auntie-reference-v12-1mexcj4.jpg"
+      "hero": "assets/generated/2026-06-05/life-2-auntie-reference-v13-1mexcj4.jpg"
     }
   ],
   "pitfalls": [
@@ -46,11 +46,11 @@
       "auntieComment": "不是你笨，是套路越來越會穿西裝。",
       "sourceUrl": "https://www.cna.com.tw/news/asoc/202606040263.aspx",
       "slug": "stories/2026-06-05-pitfall-1.html",
-      "thumbnail": "assets/generated/2026-06-05/pitfall-1-auntie-reference-v12-n9m77u.jpg",
+      "thumbnail": "assets/generated/2026-06-05/pitfall-1-auntie-reference-v13-n9m77u.jpg",
       "thumbnailAlt": "阿姨整理酒駕罰單引口角縱火 新北男涉公共危險遭移送的踩坑日記縮圖",
       "cta": "先看懂套路，別把錢包推出去。",
       "sourceName": "中央社社會新聞",
-      "hero": "assets/generated/2026-06-05/pitfall-1-auntie-reference-v12-n9m77u.jpg"
+      "hero": "assets/generated/2026-06-05/pitfall-1-auntie-reference-v13-n9m77u.jpg"
     },
     {
       "title": "張綱維涉詐貸逾30億元 北檢依違反銀行法起訴",
@@ -60,11 +60,11 @@
       "auntieComment": "不是你笨，是套路越來越會穿西裝。",
       "sourceUrl": "https://www.cna.com.tw/news/asoc/202606050040.aspx",
       "slug": "stories/2026-06-05-pitfall-2.html",
-      "thumbnail": "assets/generated/2026-06-05/pitfall-2-auntie-reference-v12-1lcaa1p.jpg",
+      "thumbnail": "assets/generated/2026-06-05/pitfall-2-auntie-reference-v13-1lcaa1p.jpg",
       "thumbnailAlt": "阿姨整理張綱維涉詐貸逾30億元 北檢依違反銀行法起訴的踩坑日記縮圖",
       "cta": "先看懂套路，別把錢包推出去。",
       "sourceName": "中央社社會新聞",
-      "hero": "assets/generated/2026-06-05/pitfall-2-auntie-reference-v12-1lcaa1p.jpg"
+      "hero": "assets/generated/2026-06-05/pitfall-2-auntie-reference-v13-1lcaa1p.jpg"
     }
   ],
   "stockOverview": {
@@ -78,15 +78,15 @@
     "badge": "早晨版",
     "marketCards": [
       {
-        "label": "熱門股 2454",
-        "value": "聯發科",
+        "label": "熱門股 2303",
+        "value": "聯電",
         "note": "熱門股 A",
         "trend": "熱門股",
         "tone": "up"
       },
       {
-        "label": "熱門股 2303",
-        "value": "聯電",
+        "label": "熱門股 2454",
+        "value": "聯發科",
         "note": "熱門股 B",
         "trend": "熱門股",
         "tone": "up"
@@ -106,43 +106,20 @@
         "tone": "down"
       }
     ],
-    "hero": "assets/generated/2026-06-05/stock-overview-auntie-reference-v12-1jfljyp.jpg"
+    "hero": "assets/generated/2026-06-05/stock-overview-auntie-reference-v13-1jfljyp.jpg"
   },
   "stockWatchlist": [
-    {
-      "title": "聯發科",
-      "date": "2026-06-05",
-      "category": "熱門股",
-      "summary": "4,430.00 收盤，漲跌 -115.00。聯發科 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
-      "auntieComment": "熱鬧可以看，但不要把熱鬧當答案。",
-      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260604&stockNo=2454&response=json",
-      "slug": "stocks/2026-06-05-2454.html",
-      "ticker": "2454",
-      "name": "聯發科",
-      "type": "熱門股 A",
-      "reason": "聯發科 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
-      "riskLevel": "中高",
-      "riskNote": "成交熱度高時波動也常變大，追題材前要先看風險。",
-      "suitableFor": "想練習看成交量、題材與基本面的觀察者。",
-      "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
-      "disclaimer": "僅供教育與資訊參考，不是投資建議。",
-      "updatedAt": "2026-06-05T07:00:00+08:00",
-      "close": "4,430.00",
-      "change": "-115.00",
-      "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-06-05/stock-1-2454-auntie-reference-v12-2lh59j.jpg"
-    },
     {
       "title": "聯電",
       "date": "2026-06-05",
       "category": "熱門股",
-      "summary": "125.00 收盤，漲跌 -5.50。聯電 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
+      "summary": "131.50 收盤，漲跌 +6.50。聯電 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
       "auntieComment": "熱鬧可以看，但不要把熱鬧當答案。",
-      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260604&stockNo=2303&response=json",
+      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260605&stockNo=2303&response=json",
       "slug": "stocks/2026-06-05-2303.html",
       "ticker": "2303",
       "name": "聯電",
-      "type": "熱門股 B",
+      "type": "熱門股 A",
       "reason": "聯電 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
       "riskLevel": "中高",
       "riskNote": "成交熱度高時波動也常變大，追題材前要先看風險。",
@@ -150,18 +127,41 @@
       "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
       "disclaimer": "僅供教育與資訊參考，不是投資建議。",
       "updatedAt": "2026-06-05T07:00:00+08:00",
-      "close": "125.00",
-      "change": "-5.50",
+      "close": "131.50",
+      "change": "+6.50",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-06-05/stock-2-2303-auntie-reference-v12-02tsz5.jpg"
+      "image": "assets/generated/2026-06-05/stock-1-2303-auntie-reference-v13-02tsz5.jpg"
+    },
+    {
+      "title": "聯發科",
+      "date": "2026-06-05",
+      "category": "熱門股",
+      "summary": "4,300.00 收盤，漲跌 -130.00。聯發科 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
+      "auntieComment": "熱鬧可以看，但不要把熱鬧當答案。",
+      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260605&stockNo=2454&response=json",
+      "slug": "stocks/2026-06-05-2454.html",
+      "ticker": "2454",
+      "name": "聯發科",
+      "type": "熱門股 B",
+      "reason": "聯發科 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
+      "riskLevel": "中高",
+      "riskNote": "成交熱度高時波動也常變大，追題材前要先看風險。",
+      "suitableFor": "想練習看成交量、題材與基本面的觀察者。",
+      "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
+      "disclaimer": "僅供教育與資訊參考，不是投資建議。",
+      "updatedAt": "2026-06-05T07:00:00+08:00",
+      "close": "4,300.00",
+      "change": "-130.00",
+      "sourceName": "臺灣證券交易所",
+      "image": "assets/generated/2026-06-05/stock-2-2454-auntie-reference-v13-2lh59j.jpg"
     },
     {
       "title": "力積電",
       "date": "2026-06-05",
       "category": "新星觀察",
-      "summary": "81.00 收盤，漲跌 -3.60。力積電 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
+      "summary": "74.60 收盤，漲跌 -6.40。力積電 今天成交金額在市場前段班，代表討論度和資金注意力都不低。",
       "auntieComment": "熱鬧可以看，但不要把熱鬧當答案。",
-      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260604&stockNo=6770&response=json",
+      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260605&stockNo=6770&response=json",
       "slug": "stocks/2026-06-05-6770.html",
       "ticker": "6770",
       "name": "力積電",
@@ -173,18 +173,18 @@
       "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
       "disclaimer": "僅供教育與資訊參考，不是投資建議。",
       "updatedAt": "2026-06-05T07:00:00+08:00",
-      "close": "81.00",
-      "change": "-3.60",
+      "close": "74.60",
+      "change": "-6.40",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-06-05/stock-3-6770-auntie-reference-v12-3f959k.jpg"
+      "image": "assets/generated/2026-06-05/stock-3-6770-auntie-reference-v13-3f959k.jpg"
     },
     {
       "title": "群益台灣精選高息",
       "date": "2026-06-05",
       "category": "風險題材 ETF",
-      "summary": "30.52 收盤，漲跌 -0.26。高人氣 ETF 容易被配息吸引，但更要看淨值、成分股與填息。",
+      "summary": "30.67 收盤，漲跌 +0.15。高人氣 ETF 容易被配息吸引，但更要看淨值、成分股與填息。",
       "auntieComment": "息很香，但不要只聞香味，還要看成本。",
-      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260604&stockNo=00919&response=json",
+      "sourceUrl": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260605&stockNo=00919&response=json",
       "slug": "stocks/2026-06-05-00919.html",
       "ticker": "00919",
       "name": "群益台灣精選高息",
@@ -196,10 +196,10 @@
       "notSuitableFor": "想找保證答案、不能接受波動，或沒有時間做功課的人。",
       "disclaimer": "僅供教育與資訊參考，不是投資建議。",
       "updatedAt": "2026-06-05T07:00:00+08:00",
-      "close": "30.52",
-      "change": "-0.26",
+      "close": "30.67",
+      "change": "+0.15",
       "sourceName": "臺灣證券交易所",
-      "image": "assets/generated/2026-06-05/stock-4-00919-auntie-reference-v12-u1gsax.jpg"
+      "image": "assets/generated/2026-06-05/stock-4-00919-auntie-reference-v13-u1gsax.jpg"
     }
   ],
   "etfGuide": [
@@ -606,7 +606,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202606050130.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202606050130.aspx",
-      "sourceName": "中央社產經證券",
+      "sourceName": "中央社財經新聞",
       "publishedAt": "2026-06-05T05:19:08.000Z",
       "displayTime": "06/05 13:19"
     },
@@ -618,7 +618,7 @@
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202606050122.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202606050122.aspx",
-      "sourceName": "中央社產經證券",
+      "sourceName": "中央社財經新聞",
       "publishedAt": "2026-06-05T05:01:51.000Z",
       "displayTime": "06/05 13:01"
     },
@@ -630,7 +630,7 @@
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
       "sourceUrl": "https://www.cna.com.tw/news/aloc/202606050114.aspx",
       "slug": "https://www.cna.com.tw/news/aloc/202606050114.aspx",
-      "sourceName": "中央社地方",
+      "sourceName": "中央社地方新聞",
       "publishedAt": "2026-06-05T04:51:32.000Z",
       "displayTime": "06/05 12:51"
     },
@@ -642,7 +642,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/aloc/202606050106.aspx",
       "slug": "https://www.cna.com.tw/news/aloc/202606050106.aspx",
-      "sourceName": "中央社地方",
+      "sourceName": "中央社地方新聞",
       "publishedAt": "2026-06-05T04:41:15.000Z",
       "displayTime": "06/05 12:41"
     },
@@ -654,7 +654,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/aloc/202606050099.aspx",
       "slug": "https://www.cna.com.tw/news/aloc/202606050099.aspx",
-      "sourceName": "中央社地方",
+      "sourceName": "中央社地方新聞",
       "publishedAt": "2026-06-05T04:08:59.000Z",
       "displayTime": "06/05 12:08"
     },
@@ -666,7 +666,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202606050097.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202606050097.aspx",
-      "sourceName": "中央社產經證券",
+      "sourceName": "中央社財經新聞",
       "publishedAt": "2026-06-05T04:06:55.000Z",
       "displayTime": "06/05 12:06"
     }
