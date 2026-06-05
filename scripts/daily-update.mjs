@@ -206,7 +206,7 @@ function imagePromptFor(target) {
       commonStyle,
       `Topic: Taiwanese stock/ETF observation for ${target.item.ticker} ${target.item.name}.`,
       `Story angle: ${summary}`,
-      "Scene direction: build a rich kitchen-table stock detective scene, not a repeated phone pose. Auntie should lean into the desk, point, compare, circle, or inspect objects with a practical expression. Include foreground desk clutter, midground abstract chart panels, and background household details. Use topic-relevant props such as semiconductor wafer shapes, ETF basket-like colored blocks, blank sticky notes, magnifying glass, coffee, notebook with blank pages, and caution icons. Make it educational and funny, not financial-advisor serious. No coins, cash, currency signs, piggy banks, extra mascots, ticker symbols, company names, prices, dates, or any market text."
+      "Scene direction: build a rich kitchen-table stock detective scene. No phone-in-hand pose. Auntie should lean into the desk, point, compare, circle, or inspect objects with a practical expression. Include foreground desk clutter, midground abstract chart panels, and background household details. Use topic-relevant props such as semiconductor wafer shapes, ETF basket-like colored blocks, blank sticky notes, magnifying glass, coffee, notebook with blank pages, and a few non-text caution icons. Make it educational and funny, not financial-advisor serious. No coins, cash, currency signs, piggy banks, extra mascots, ticker symbols, company names, prices, dates, percent signs, plus/minus signs, chart labels, axis labels, or any market text."
     ].join(" ");
   }
 
@@ -214,7 +214,7 @@ function imagePromptFor(target) {
     return [
       commonStyle,
       "Topic: daily Taiwanese stock and ETF watchlist overview.",
-      "Scene direction: create a lively kitchen-table market command center with a clear foreground, midground, and background. Auntie should actively sort, compare, or push around four colorful blank cards while reacting with a knowing auntie expression. Include abstract chart stickers, a shiny semiconductor wafer, a simple basket of blank colored blocks, coffee, notebook with blank pages, and caution icons. Keep the reference-image richness and avoid the generic standing phone pose. No coins, cash, currency signs, piggy banks, extra mascots, visible words, letters, or numbers."
+      "Scene direction: create a lively kitchen-table market command center with a clear foreground, midground, and background. No phone-in-hand pose. Auntie should actively sort, compare, or push around four colorful blank cards while reacting with a knowing auntie expression. Include abstract chart stickers, a shiny semiconductor wafer, a simple basket of blank colored blocks, coffee, notebook with blank pages, and a few non-text caution icons. Keep the reference-image richness and avoid the generic standing pose. No coins, cash, currency signs, percent signs, plus/minus signs, piggy banks, extra mascots, visible words, letters, or numbers."
     ].join(" ");
   }
 
@@ -223,7 +223,7 @@ function imagePromptFor(target) {
       commonStyle,
       `Topic: ${title}.`,
       `Story angle: ${summary}`,
-      "Scene direction: create a specific daily-life trap mini-scene with auntie catching the problem in action, not posing beside icons. Use a phone only if needed, and make it part of the story. Add topic-relevant street, home, shop, police, transport, or paperwork props as blank visual objects; include foreground clutter, midground action, and background context. The mood is humorous, practical, and slightly dramatic. No text in the message bubbles, phone screen, receipt, signs, papers, badges, or stickers."
+      "Scene direction: create a specific daily-life trap mini-scene with auntie catching the problem in action, not posing beside icons. Do not copy the reference phone pose. Use a phone only when the topic clearly requires it; otherwise use topic-relevant street, home, shop, police, transport, or paperwork props as blank visual objects. Include foreground clutter, midground action, and background context. The mood is humorous, practical, and slightly dramatic. No text in message bubbles, phone screens, receipts, signs, papers, badges, stickers, license plates, or UI panels."
     ].join(" ");
   }
 
@@ -231,7 +231,7 @@ function imagePromptFor(target) {
     commonStyle,
     `Topic: ${title}.`,
     `Story angle: ${summary}`,
-    "Scene direction: create a distinct Taiwan everyday-life article cover with auntie inside the situation, not a generic icon wall. Use household, commute, entertainment, weather, food, shopping, or neighborhood props that match the topic. Build a rich foreground, midground, and background; vary auntie's pose and expression while preserving the exact reference identity. Make it feel like a clickable lifestyle article cover, using only icons and objects, with no visible text or numbers."
+    "Scene direction: create a distinct Taiwan everyday-life article cover with auntie inside the situation, not a generic icon wall. Do not copy the reference phone pose unless the topic is specifically about phone use. Use household, commute, entertainment, weather, food, shopping, or neighborhood props that match the topic. Build a rich foreground, midground, and background; vary auntie's pose and expression while preserving the exact reference identity. Make it feel like a clickable lifestyle article cover, using only icons and objects, with no visible text, numbers, percent signs, or UI labels."
   ].join(" ");
 }
 

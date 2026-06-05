@@ -1011,6 +1011,11 @@ assert(
   "central image style rules must reject flat templates and require reference-level story detail"
 );
 assert(
+  AUNTIE_STYLE_RULES.some((rule) => rule.includes("REFERENCE POSE WARNING")) &&
+    AUNTIE_STYLE_RULES.some((rule) => rule.includes("SYMBOL TEXT BAN")),
+  "central image style rules must prevent reference-pose copying and symbol-like text"
+);
+assert(
   imageStyleRulesScript.includes(IMAGE_STYLE_RULE_VERSION),
   "central image style rules must expose the current image style version"
 );
