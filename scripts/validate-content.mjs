@@ -1005,6 +1005,12 @@ assert(
   "central image style rules must lock the Auntie reference image"
 );
 assert(
+  AUNTIE_STYLE_RULES.some((rule) => rule.includes("NO FLAT TEMPLATE LOOK")) &&
+    AUNTIE_STYLE_RULES.some((rule) => rule.includes("STORY SCENE LOCK")) &&
+    AUNTIE_STYLE_RULES.some((rule) => rule.includes("REFERENCE DETAIL FLOOR")),
+  "central image style rules must reject flat templates and require reference-level story detail"
+);
+assert(
   imageStyleRulesScript.includes(IMAGE_STYLE_RULE_VERSION),
   "central image style rules must expose the current image style version"
 );
@@ -1051,6 +1057,10 @@ assert(
 assert(
   dailyUpdateWorkflow.includes("OPENAI_IMAGE_PROMPT_REVISION"),
   "daily-update.yml must set OPENAI_IMAGE_PROMPT_REVISION when generating daily images"
+);
+assert(
+  dailyUpdateWorkflow.includes('OPENAI_IMAGE_QUALITY: "high"'),
+  "daily-update.yml must use high quality images to avoid low-detail template-like output"
 );
 assert(
   dailyUpdateWorkflow.includes(IMAGE_STYLE_RULE_VERSION),
