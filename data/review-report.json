@@ -1,6 +1,6 @@
 {
   "date": "2026-06-05",
-  "generatedAt": "2026-06-05T03:35:50.141Z",
+  "generatedAt": "2026-06-05T03:51:54.749Z",
   "status": "approved",
   "checks": [
     "daily images: 9/9 ready (9 OpenAI generated, 0 OpenAI reused, 0 approved fallback, 0 fallback reused)",
@@ -63,10 +63,10 @@
       "size": "1536x1024",
       "outputFormat": "jpeg",
       "outputCompression": 88,
-      "promptRevision": "auntie-reference-v8",
-      "imageStyleRuleVersion": "auntie-reference-v8",
+      "promptRevision": "auntie-reference-v9",
+      "imageStyleRuleVersion": "auntie-reference-v9",
       "endpoint": "images/edits",
-      "referenceImage": "assets/brand/auntie-style-reference.jpg"
+      "referenceImage": "assets/brand/auntie-style-reference.jpg;assets/brand/auntie-scene-reference.png;assets/brand/auntie-market-scene-reference.png"
     }
   ],
   "proposedSections": [
