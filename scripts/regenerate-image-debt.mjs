@@ -20,7 +20,7 @@ function argValue(name, fallback = "") {
 
 const priority = argValue("--priority", "P1").toUpperCase();
 const limit = Number.parseInt(argValue("--limit", "8"), 10);
-const model = process.env.OPENAI_IMAGE_MODEL || "gpt-image-1.5";
+const model = process.env.OPENAI_IMAGE_MODEL || "gpt-image-2";
 const quality = process.env.OPENAI_IMAGE_QUALITY || "medium";
 const size = process.env.OPENAI_IMAGE_SIZE || "1536x1024";
 const outputFormat = process.env.OPENAI_IMAGE_OUTPUT_FORMAT || "jpeg";

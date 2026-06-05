@@ -445,7 +445,7 @@ if (reviewReport) {
   assert(imageSource, "data/review-report.json must include OpenAI Images API source");
   if (imageSource) {
     assert(imageSource.ok === true, "data/review-report.json must show OpenAI Images API healthy for the approved daily publish");
-    assert(imageSource.model === "gpt-image-1.5", "data/review-report.json must record the approved image model");
+    assert(imageSource.model === "gpt-image-2", "data/review-report.json must record the approved image model");
     assert(
       ["auntie-ref-v4", "auntie-style-v5", IMAGE_STYLE_RULE_VERSION].includes(imageSource.promptRevision),
       "data/review-report.json must record an approved image prompt revision"

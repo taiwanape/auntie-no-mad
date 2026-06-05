@@ -90,7 +90,7 @@ const review = {
 
 const imageGeneration = {
   enabled: process.env.GENERATE_DAILY_IMAGES === "true",
-  model: process.env.OPENAI_IMAGE_MODEL || "gpt-image-1.5",
+  model: process.env.OPENAI_IMAGE_MODEL || "gpt-image-2",
   quality: process.env.OPENAI_IMAGE_QUALITY || "medium",
   size: process.env.OPENAI_IMAGE_SIZE || "1536x1024",
   outputFormat: process.env.OPENAI_IMAGE_OUTPUT_FORMAT || "jpeg",
