@@ -1,6 +1,6 @@
 # 阿姨別生氣圖片生成規則
 
-這份文件是給人看的規格；真正被程式引用的單一來源是 `scripts/image-style-rules.mjs`。每日圖片、歷史舊圖補圖、重複主圖重生，都必須使用同一份 style lock，並優先使用 `assets/brand/auntie-style-reference.jpg` 當角色與畫風參考圖。
+這份文件是給人看的規格；真正被程式引用的單一來源是 `scripts/image-style-rules.mjs`。每日圖片、歷史舊圖補圖、重複主圖重生，都必須使用同一份 style lock，並優先使用 `assets/brand/auntie-character-turnaround.png` 鎖人物造型，再用各分類完整場景圖鎖網站封面構圖與畫風。
 
 ## 為什麼以前會跑掉
 
@@ -28,15 +28,20 @@
 
 `auntie-reference-v12` 仍然偏離原始網站封面感，且人工救線圖不符合「每天都要 AI 新生成」規則。`auntie-reference-v13` 因此禁止 `style-rescue` 主圖，並把每日生成參考改成只使用完整場景封面參考，不再混入方形角色參考，避免模型跑回單人 mascot / icon 牆。
 
+`auntie-reference-v13` 解決了不能用舊圖救線的問題，但也暴露出人物容易漂移：阿姨可能變年輕、變瘦、五官髮型和服裝細節不穩。`auntie-reference-v14-character-lock` 因此加入正式角色設定圖 `assets/brand/auntie-character-turnaround.png`。完整場景參考仍負責網站封面構圖、場景密度與畫風；角色設定圖只負責人物身份、比例、臉、髮型、墨鏡、耳環、豹紋長袖、黑圍裙與粉紅愛心，不能複製白底設定稿或多角度站姿排列。
+
 ## 現在的硬規則
 
-所有公開主圖都必須先套用 `IMAGE_STYLE_RULE_VERSION` 目前版本的共用規則。現在版本是 `auntie-reference-v13`：
+所有公開主圖都必須先套用 `IMAGE_STYLE_RULE_VERSION` 目前版本的共用規則。現在版本是 `auntie-reference-v14-character-lock`：
 
 - 每次生成依分類選參考圖，不再所有圖共用同一組參考。
-- 生活/踩坑：使用 `assets/brand/auntie-scene-reference.png` 作為完整場景封面參考。
-- 股票/市場：使用 `assets/brand/auntie-market-scene-reference.png` 作為完整場景封面參考。
+- `assets/brand/auntie-style-reference.jpg` 保留為基礎阿姨畫風參考；新流程以角色設定圖與分類場景圖為主要鎖定來源。
+- 所有分類都必須使用 `assets/brand/auntie-character-turnaround.png` 作為人物設定參考，鎖住阿姨本人的體型、臉、髮型、墨鏡、耳環、豹紋長袖、黑圍裙、粉紅愛心與比例。
+- 生活/踩坑：使用 `assets/brand/auntie-scene-reference.png` 作為完整場景封面參考，並搭配角色設定圖。
+- 股票/市場：使用 `assets/brand/auntie-market-scene-reference.png` 作為完整場景封面參考，並搭配角色設定圖。
 - 每日生成不能再使用 `style-rescue`、舊圖複製、approved fallback、或任何非當天 AI 生成主圖。
 - 不能只是拿參考圖的表面元素；必須保留參考圖的筆觸密度、頭髮高光、臉部陰影、粗細變化線條、白色貼紙邊、奶油紙感與場景層次。
+- 角色設定圖不能被當成構圖模板；不能複製白底、多角度站姿排列、設定稿版面或空 studio 感。
 - 參考圖裡的手機和天氣道具不是固定構圖；除非文章題材真的需要，不能複製「阿姨拿手機」姿勢或洗衣天氣場景。
 - 16:9 橫式網站文章封面，不做 logo、海報、資訊圖表、圖標拼貼或吉祥物徽章。
 - 亮黃色 halftone 背景、粗黑線、白色 sticker cut 邊、桃紅點綴、奶油紙感、台灣生活漫畫感。
@@ -63,7 +68,7 @@
 
 ## 仍然不能保證的事
 
-這套規則可以大幅降低跑掉機率，也能防止腳本繞過規則。`auntie-reference-v13` 已比純文字 prompt、v6、v7、v8、v9、v10、v11、v12 更硬，因為生成時會依分類帶完整場景參考圖、禁止 style rescue、要求完整事件場景、禁止單人站姿模板、禁止 dashboard 模板、限制警告符號、加入分類構圖變體，並使用較高品質輸出；但模型仍不是逐像素模板，仍不能 100% 保證每張都完全貼近參考圖。
+這套規則可以大幅降低跑掉機率，也能防止腳本繞過規則。`auntie-reference-v14-character-lock` 已比純文字 prompt、v6、v7、v8、v9、v10、v11、v12、v13 更硬，因為生成時會依分類帶完整場景參考圖、同時帶正式角色設定圖、禁止 style rescue、要求完整事件場景、禁止單人站姿模板、禁止 dashboard 模板、限制警告符號、加入分類構圖變體，並使用較高品質輸出；但模型仍不是逐像素模板，仍不能 100% 保證每張都完全貼近參考圖。
 
 若之後還要更硬，可以再加第二層：
 

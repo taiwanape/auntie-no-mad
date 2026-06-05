@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import {
+  AUNTIE_CHARACTER_TURNAROUND_IMAGE,
   AUNTIE_LIFE_REFERENCE_IMAGES,
   AUNTIE_MARKET_REFERENCE_IMAGES,
   AUNTIE_REFERENCE_IMAGE,
@@ -1019,7 +1020,16 @@ assert(
   "central image style rules must lock the Auntie reference images"
 );
 assert(
-    AUNTIE_REFERENCE_IMAGES.length >= 3 &&
+  fileExists(AUNTIE_CHARACTER_TURNAROUND_IMAGE) &&
+    AUNTIE_REFERENCE_IMAGES.includes(AUNTIE_CHARACTER_TURNAROUND_IMAGE) &&
+    AUNTIE_LIFE_REFERENCE_IMAGES.includes(AUNTIE_CHARACTER_TURNAROUND_IMAGE) &&
+    AUNTIE_MARKET_REFERENCE_IMAGES.includes(AUNTIE_CHARACTER_TURNAROUND_IMAGE) &&
+    imageStyleRulesScript.includes(AUNTIE_CHARACTER_TURNAROUND_IMAGE) &&
+    AUNTIE_STYLE_RULES.some((rule) => rule.includes("TURNAROUND USE RULE")),
+  "central image style rules must lock the Auntie character turnaround model sheet"
+);
+assert(
+  AUNTIE_REFERENCE_IMAGES.length >= 3 &&
     AUNTIE_LIFE_REFERENCE_IMAGES.length >= 1 &&
     AUNTIE_MARKET_REFERENCE_IMAGES.length >= 1 &&
     AUNTIE_REFERENCE_IMAGES.every((referenceImage) => imageStyleRulesScript.includes(referenceImage)),

@@ -63,8 +63,8 @@
       "size": "1536x1024",
       "outputFormat": "jpeg",
       "outputCompression": 88,
-      "promptRevision": "auntie-reference-v13",
-      "imageStyleRuleVersion": "auntie-reference-v13",
+      "promptRevision": "auntie-reference-v14-character-lock",
+      "imageStyleRuleVersion": "auntie-reference-v14-character-lock",
       "endpoint": "images/edits",
       "referenceImage": "assets/brand/auntie-market-scene-reference.png"
     }

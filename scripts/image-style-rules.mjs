@@ -1,27 +1,32 @@
-export const IMAGE_STYLE_RULE_VERSION = "auntie-reference-v13";
+export const IMAGE_STYLE_RULE_VERSION = "auntie-reference-v14-character-lock";
 export const AUNTIE_REFERENCE_IMAGE = "assets/brand/auntie-style-reference.jpg";
+export const AUNTIE_CHARACTER_TURNAROUND_IMAGE = "assets/brand/auntie-character-turnaround.png";
 export const AUNTIE_SCENE_REFERENCE_IMAGE = "assets/brand/auntie-scene-reference.png";
 export const AUNTIE_MARKET_SCENE_REFERENCE_IMAGE = "assets/brand/auntie-market-scene-reference.png";
 export const AUNTIE_LIFE_REFERENCE_IMAGES = [
-  AUNTIE_SCENE_REFERENCE_IMAGE
+  AUNTIE_SCENE_REFERENCE_IMAGE,
+  AUNTIE_CHARACTER_TURNAROUND_IMAGE
 ];
 export const AUNTIE_MARKET_REFERENCE_IMAGES = [
-  AUNTIE_MARKET_SCENE_REFERENCE_IMAGE
+  AUNTIE_MARKET_SCENE_REFERENCE_IMAGE,
+  AUNTIE_CHARACTER_TURNAROUND_IMAGE
 ];
 export const AUNTIE_REFERENCE_IMAGES = [
+  AUNTIE_CHARACTER_TURNAROUND_IMAGE,
   AUNTIE_REFERENCE_IMAGE,
   AUNTIE_SCENE_REFERENCE_IMAGE,
   AUNTIE_MARKET_SCENE_REFERENCE_IMAGE
 ];
 
 export const AUNTIE_STYLE_RULES = [
-  "SECTION REFERENCE LOCK: use only the full-scene reference chosen for the content section. The full-scene reference is the primary visual target and locks the finished website cover style, dense prop staging, layered foreground-midground-background composition, polished editorial comic rendering, and Auntie's identity. Do not use the separate square character reference for daily generation because it pushes the model toward flat mascot/icon layouts.",
+  "SECTION REFERENCE LOCK: use only the references chosen for the content section. The full-scene reference is the primary composition target and locks the finished website cover style, dense prop staging, layered foreground-midground-background composition, and polished editorial comic rendering. The character turnaround reference locks Auntie's body, face, outfit, hair, sunglasses, earrings, and proportions only; never copy its white background, lineup layout, front/side/back model-sheet composition, or empty character-sheet pose.",
   "FULL SCENE TEMPLATE LOCK: the image must feel as complete as the approved full article cover reference, with a real environment, foreground table or street objects, midground action, background context, and multiple topic-specific props. Do not output a single centered auntie standing beside a screen, chart panel, warning sign, or floating icon cluster.",
-  "CHARACTER LOCK: the auntie must remain the same person as the reference image: middle-aged Taiwanese auntie, round fuller face, full curly dark-brown short hair with big swooping curls, black pixel sunglasses, gold hoop earrings, leopard-print long sleeves/top, black apron with one small pink heart, fuller body, confident practical attitude.",
-  "NO CHARACTER DRIFT: no younger face, no thinner body, no different hairstyle, no straight hair, no tiny mascot version, no generic influencer, no different sunglasses, no different outfit, no missing leopard sleeves, no missing black apron, no simplified emoji-like face, and no chibi remake.",
+  "CHARACTER LOCK: Auntie must match the character turnaround exactly: middle-aged Taiwanese auntie, short and fuller-bodied with round cheeks, soft double-chin, confident smirk or annoyed practical expression, thick arched eyebrows, blush on cheeks, full curly dark-brown short hair made of large rounded curls with caramel highlights, black pixelated deal-with-it sunglasses with white checker highlights, gold hoop earrings, leopard-print long-sleeve blouse with black spots, black apron dress tied in back, one small pink heart on the upper chest, black flats when feet are visible.",
+  "NO CHARACTER DRIFT: no younger face, no slim body, no tall model body, no long legs, no different hairstyle, no straight hair, no ponytail, no small mascot body, no generic influencer, no different sunglasses, no missing gold hoop earrings, no different outfit, no missing leopard sleeves, no missing black apron, no extra apron logo, no different heart color, no simplified emoji face, no childlike chibi remake.",
+  "TURNAROUND USE RULE: the character turnaround is a model sheet for identity only. Use it to preserve face, hair mass, side profile, back apron bow, outfit, and body proportions across angles. Do not reproduce the multiple-pose sheet, white background, neutral lineup, or blank studio setting in article images.",
   "REFERENCE POSE WARNING: the full-scene references contain phones, laptops, weather props, market props, and cooking props, but those are not mandatory. Do not copy any reference pose or prop cluster unless the article topic directly needs it. Use references for identity, rendering style, and cover-scene richness, not as reusable layouts.",
-  "STYLE LOCK: polished 16:9 landscape editorial comic cover for the Auntie No Mad website, not a logo, poster, ad, infographic, mascot badge, icon sheet, simple sticker pack, flat vector collage, UI mockup, or children's clip art.",
-  "REFERENCE DETAIL FLOOR: match the visual richness of the section scene reference: large foreground objects, dense table or room props, textured brown hair highlights, dimensional cheek shading, varied thick-to-thin black ink lines, cream paper warmth, layered props, halftone texture, hand-drawn imperfections, and clean white sticker-cut borders around major objects.",
+  "STYLE LOCK: polished 16:9 landscape editorial comic cover for the Auntie No Mad website: thick expressive black ink outlines, warm cream skin shading, glossy dark-brown hair highlights, clean white sticker-cut borders around major objects, bright yellow halftone background energy, hot-pink hearts as accents, and playful Taiwan everyday-life editorial storytelling. Not a logo, poster, ad, infographic, mascot badge, icon sheet, simple sticker pack, flat vector collage, UI mockup, or children's clip art.",
+  "REFERENCE DETAIL FLOOR: match the visual richness of the section scene reference and character turnaround: large foreground objects, dense table or room props, textured curl highlights, dimensional cheek/nose/chin shading, varied thick-to-thin black ink lines, cream paper warmth, layered props, halftone texture, hand-drawn imperfections, and clean white sticker-cut borders around major objects.",
   "NO FLAT TEMPLATE LOOK: avoid plain yellow walls with a few icons, repeated standing pose, auntie standing next to a laptop dashboard, copy-paste phone-in-hand pose, sparse warning-symbol layouts, big standalone exclamation signs, generic chart walls, sticker/icon wallpaper, overly flat vector shapes, generic stock illustration, and empty background space.",
   "Use the approved website look: bright yellow halftone background, thick expressive black ink outlines, clean white sticker-cut borders, hot-pink accent icons, cream paper tones, playful Taiwan editorial comic energy, rich scene detail, layered props, and polished hand-drawn cartoon rendering.",
   "COMPOSITION LOCK: the auntie is the first-read anchor but must interact with the story, not just stand beside icons. Use a medium shot or three-quarter scene with hands, face, apron heart, and story-critical props fully inside frame. Keep generous margins; do not crop the head, face, sunglasses, hands, apron heart, or key objects.",
