@@ -260,6 +260,10 @@ function checkPrimaryImageTechnicalQuality() {
       `primary content image must not use approved fallback filename: "${item.title}" uses ${item.image}`
     );
     assert(
+      !/style-rescue/i.test(item.image),
+      `primary content image must be freshly AI-generated, not style rescue: "${item.title}" uses ${item.image}`
+    );
+    assert(
       /\.(jpe?g|png)$/i.test(item.image),
       `primary content image must be a raster JPG or PNG: "${item.title}" uses ${item.image}`
     );
@@ -1015,9 +1019,9 @@ assert(
   "central image style rules must lock the Auntie reference images"
 );
 assert(
-  AUNTIE_REFERENCE_IMAGES.length >= 3 &&
-    AUNTIE_LIFE_REFERENCE_IMAGES.length >= 2 &&
-    AUNTIE_MARKET_REFERENCE_IMAGES.length >= 2 &&
+    AUNTIE_REFERENCE_IMAGES.length >= 3 &&
+    AUNTIE_LIFE_REFERENCE_IMAGES.length >= 1 &&
+    AUNTIE_MARKET_REFERENCE_IMAGES.length >= 1 &&
     AUNTIE_REFERENCE_IMAGES.every((referenceImage) => imageStyleRulesScript.includes(referenceImage)),
   "central image style rules must expose section-specific Auntie reference images"
 );

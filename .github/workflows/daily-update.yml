@@ -89,7 +89,7 @@ jobs:
           OPENAI_IMAGE_OUTPUT_COMPRESSION: "88"
           OPENAI_IMAGE_LIMIT: "9"
           OPENAI_IMAGE_MAX_ATTEMPTS: "3"
-          OPENAI_IMAGE_PROMPT_REVISION: "auntie-reference-v12"
+          OPENAI_IMAGE_PROMPT_REVISION: "auntie-reference-v13"
           OPENAI_IMAGE_REFERENCE_PATH: "auto"
           # Public daily updates must use fresh topic-specific AI images. If the API fails, keep yesterday's site instead of publishing stale fallback art.
           ALLOW_APPROVED_IMAGE_FALLBACK: "false"

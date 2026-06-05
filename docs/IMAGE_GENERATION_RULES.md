@@ -26,14 +26,16 @@
 
 `auntie-reference-v11` 仍會產生「阿姨站在螢幕旁、旁邊放警告符號」的模板化結果，尤其股票圖容易互相長得太像。`auntie-reference-v12` 因此把規則改成完整事件場景硬鎖：每張必須有真實環境、前景物件、中景行動、背景脈絡，並依內容加入不同構圖變體；警告符號只能小量輔助，不能當主體。
 
+`auntie-reference-v12` 仍然偏離原始網站封面感，且人工救線圖不符合「每天都要 AI 新生成」規則。`auntie-reference-v13` 因此禁止 `style-rescue` 主圖，並把每日生成參考改成只使用完整場景封面參考，不再混入方形角色參考，避免模型跑回單人 mascot / icon 牆。
+
 ## 現在的硬規則
 
-所有公開主圖都必須先套用 `IMAGE_STYLE_RULE_VERSION` 目前版本的共用規則。現在版本是 `auntie-reference-v12`：
+所有公開主圖都必須先套用 `IMAGE_STYLE_RULE_VERSION` 目前版本的共用規則。現在版本是 `auntie-reference-v13`：
 
 - 每次生成依分類選參考圖，不再所有圖共用同一組參考。
-- 生活/踩坑：先使用 `assets/brand/auntie-scene-reference.png`，再使用 `assets/brand/auntie-style-reference.jpg`。
-- 股票/市場：先使用 `assets/brand/auntie-market-scene-reference.png`，再使用 `assets/brand/auntie-style-reference.jpg`。
-- 第一張鎖該分類的網站封面場景、前中後景、桌面/室內道具密度與完成度；第二張鎖人物身份。
+- 生活/踩坑：使用 `assets/brand/auntie-scene-reference.png` 作為完整場景封面參考。
+- 股票/市場：使用 `assets/brand/auntie-market-scene-reference.png` 作為完整場景封面參考。
+- 每日生成不能再使用 `style-rescue`、舊圖複製、approved fallback、或任何非當天 AI 生成主圖。
 - 不能只是拿參考圖的表面元素；必須保留參考圖的筆觸密度、頭髮高光、臉部陰影、粗細變化線條、白色貼紙邊、奶油紙感與場景層次。
 - 參考圖裡的手機和天氣道具不是固定構圖；除非文章題材真的需要，不能複製「阿姨拿手機」姿勢或洗衣天氣場景。
 - 16:9 橫式網站文章封面，不做 logo、海報、資訊圖表、圖標拼貼或吉祥物徽章。
@@ -61,7 +63,7 @@
 
 ## 仍然不能保證的事
 
-這套規則可以大幅降低跑掉機率，也能防止腳本繞過規則。`auntie-reference-v12` 已比純文字 prompt、v6、v7、v8、v9、v10、v11 更硬，因為生成時會依分類帶參考圖、把場景封面參考放在第一張、要求完整事件場景、禁止單人站姿模板、禁止 dashboard 模板、限制警告符號、加入分類構圖變體，並使用較高品質輸出；但模型仍不是逐像素模板，仍不能 100% 保證每張都完全貼近參考圖。
+這套規則可以大幅降低跑掉機率，也能防止腳本繞過規則。`auntie-reference-v13` 已比純文字 prompt、v6、v7、v8、v9、v10、v11、v12 更硬，因為生成時會依分類帶完整場景參考圖、禁止 style rescue、要求完整事件場景、禁止單人站姿模板、禁止 dashboard 模板、限制警告符號、加入分類構圖變體，並使用較高品質輸出；但模型仍不是逐像素模板，仍不能 100% 保證每張都完全貼近參考圖。
 
 若之後還要更硬，可以再加第二層：
 
