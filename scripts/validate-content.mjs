@@ -2,6 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import {
+  AUNTIE_LIFE_REFERENCE_IMAGES,
+  AUNTIE_MARKET_REFERENCE_IMAGES,
   AUNTIE_REFERENCE_IMAGE,
   AUNTIE_REFERENCE_IMAGES,
   AUNTIE_STYLE_RULES,
@@ -1008,14 +1010,16 @@ assert(
   "central image style rules must explicitly ban visible writing"
 );
 assert(
-  AUNTIE_STYLE_RULES.some((rule) => rule.includes("MULTI-REFERENCE LOCK")) &&
+  AUNTIE_STYLE_RULES.some((rule) => rule.includes("SECTION REFERENCE LOCK")) &&
     imageStyleRulesScript.includes(AUNTIE_REFERENCE_IMAGE),
   "central image style rules must lock the Auntie reference images"
 );
 assert(
   AUNTIE_REFERENCE_IMAGES.length >= 3 &&
+    AUNTIE_LIFE_REFERENCE_IMAGES.length >= 2 &&
+    AUNTIE_MARKET_REFERENCE_IMAGES.length >= 2 &&
     AUNTIE_REFERENCE_IMAGES.every((referenceImage) => imageStyleRulesScript.includes(referenceImage)),
-  "central image style rules must expose all Auntie reference images"
+  "central image style rules must expose section-specific Auntie reference images"
 );
 assert(
   AUNTIE_STYLE_RULES.some((rule) => rule.includes("NO FLAT TEMPLATE LOOK")) &&
@@ -1087,9 +1091,11 @@ assert(
   "daily-update.yml must use the current central image style version for prompt revision"
 );
 assert(
-  dailyUpdateWorkflow.includes("OPENAI_IMAGE_REFERENCE_PATH") &&
-    AUNTIE_REFERENCE_IMAGES.every((referenceImage) => dailyUpdateWorkflow.includes(referenceImage)),
-  "daily-update.yml must pass all Auntie reference images into public image generation"
+  dailyUpdateWorkflow.includes('OPENAI_IMAGE_REFERENCE_PATH: "auto"') &&
+    dailyUpdateScript.includes("imageReferencePathFor") &&
+    dailyUpdateScript.includes("AUNTIE_LIFE_REFERENCE_IMAGES") &&
+    dailyUpdateScript.includes("AUNTIE_MARKET_REFERENCE_IMAGES"),
+  "daily-update must select Auntie reference images by content section"
 );
 assert(
   dailyUpdateScript.includes("article-growth.js?v="),

@@ -1,6 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
-import { AUNTIE_REFERENCE_IMAGES, IMAGE_STYLE_RULE_VERSION, auntieStylePrompt } from "./image-style-rules.mjs";
+import {
+  AUNTIE_LIFE_REFERENCE_IMAGES,
+  AUNTIE_MARKET_REFERENCE_IMAGES,
+  IMAGE_STYLE_RULE_VERSION,
+  auntieStylePrompt
+} from "./image-style-rules.mjs";
 import { generateOpenAIImageFile, resolveImageReferencePath, relativeImageReferencePath } from "./openai-image-client.mjs";
 import { publicImageUrl, publicSiteUrl, publicUrl } from "./public-site-url.mjs";
 
@@ -92,7 +97,7 @@ const imageGeneration = {
   outputCompression: Number.parseInt(process.env.OPENAI_IMAGE_OUTPUT_COMPRESSION || "88", 10),
   limit: Number.parseInt(process.env.OPENAI_IMAGE_LIMIT || "9", 10),
   promptRevision: process.env.OPENAI_IMAGE_PROMPT_REVISION || IMAGE_STYLE_RULE_VERSION,
-  referencePath: process.env.OPENAI_IMAGE_REFERENCE_PATH || AUNTIE_REFERENCE_IMAGES.join(";"),
+  referencePath: process.env.OPENAI_IMAGE_REFERENCE_PATH || "auto",
   allowApprovedFallback: process.env.ALLOW_APPROVED_IMAGE_FALLBACK === "true",
   forceApprovedFallback: process.env.FORCE_APPROVED_IMAGE_FALLBACK === "true"
 };
@@ -206,7 +211,7 @@ function imagePromptFor(target) {
       commonStyle,
       `Topic: Taiwanese stock/ETF observation for ${target.item.ticker} ${target.item.name}.`,
       `Story angle: ${summary}`,
-      "Scene direction: build a rich kitchen-table stock detective scene. No phone-in-hand pose. Auntie should lean into the desk, point, compare, circle, or inspect objects with a practical expression. Include foreground desk clutter, midground abstract chart panels, and background household details. Use topic-relevant props such as semiconductor wafer shapes, ETF basket-like colored blocks, blank sticky notes, magnifying glass, coffee, notebook with blank pages, and a few non-text caution icons. Make it educational and funny, not financial-advisor serious. No coins, cash, currency signs, piggy banks, extra mascots, ticker symbols, company names, prices, dates, percent signs, plus/minus signs, chart labels, axis labels, or any market text."
+      "Scene direction: build a rich kitchen-table stock detective scene. No phone-in-hand pose and no chart-icon wallpaper. Auntie should lean into the desk, point, compare, circle, or inspect objects with a practical expression. Include foreground desk clutter, midground abstract blank chart panels, and background household details. Use topic-relevant props such as semiconductor wafer shapes, ETF basket-like colored blocks, blank sticky notes, magnifying glass, coffee, notebook with blank pages, and at most one non-text caution icon. Make it educational and funny, not financial-advisor serious. No coins, cash, currency signs, piggy banks, extra mascots, ticker symbols, company names, prices, dates, percent signs, plus/minus signs, chart labels, axis labels, or any market text."
     ].join(" ");
   }
 
@@ -214,7 +219,7 @@ function imagePromptFor(target) {
     return [
       commonStyle,
       "Topic: daily Taiwanese stock and ETF watchlist overview.",
-      "Scene direction: create a lively kitchen-table market command center with a clear foreground, midground, and background. No phone-in-hand pose. Auntie should actively sort, compare, or push around four colorful blank cards while reacting with a knowing auntie expression. Include abstract chart stickers, a shiny semiconductor wafer, a simple basket of blank colored blocks, coffee, notebook with blank pages, and a few non-text caution icons. Keep the reference-image richness and avoid the generic standing pose. No coins, cash, currency signs, percent signs, plus/minus signs, piggy banks, extra mascots, visible words, letters, or numbers."
+      "Scene direction: create a lively kitchen-table market command center with a clear foreground, midground, and background. No phone-in-hand pose and no chart-icon wallpaper. Auntie should actively sort, compare, or push around four colorful blank cards while reacting with a knowing auntie expression. Include abstract blank chart panels, a shiny semiconductor wafer, a simple basket of blank colored blocks, coffee, notebook with blank pages, and at most one non-text caution icon. Keep the reference-image richness and avoid the generic standing pose. No coins, cash, currency signs, percent signs, plus/minus signs, piggy banks, extra mascots, visible words, letters, or numbers."
     ].join(" ");
   }
 
@@ -223,7 +228,7 @@ function imagePromptFor(target) {
       commonStyle,
       `Topic: ${title}.`,
       `Story angle: ${summary}`,
-      "Scene direction: create a specific daily-life trap mini-scene with auntie catching the problem in action, not posing beside icons. Do not copy the reference phone pose. Use a phone only when the topic clearly requires it; otherwise use topic-relevant street, home, shop, police, transport, or paperwork props as blank visual objects. Include foreground clutter, midground action, and background context. The mood is humorous, practical, and slightly dramatic. No text in message bubbles, phone screens, receipts, signs, papers, badges, stickers, license plates, or UI panels."
+      "Scene direction: create a specific daily-life trap mini-scene with auntie catching the problem in action, not posing beside icons. Do not create an icon wall. Do not copy the reference phone pose. Use a phone only when the topic clearly requires it; otherwise use topic-relevant street, home, shop, police, transport, or paperwork props as blank visual objects. Include foreground clutter, midground action, and background context. Use at most two floating symbols total. The mood is humorous, practical, and slightly dramatic. No text in message bubbles, phone screens, receipts, signs, papers, badges, stickers, license plates, or UI panels."
     ].join(" ");
   }
 
@@ -231,11 +236,21 @@ function imagePromptFor(target) {
     commonStyle,
     `Topic: ${title}.`,
     `Story angle: ${summary}`,
-    "Scene direction: create a distinct Taiwan everyday-life article cover with auntie inside the situation, not a generic icon wall. Do not copy the reference phone pose unless the topic is specifically about phone use. Use household, commute, entertainment, weather, food, shopping, or neighborhood props that match the topic. Build a rich foreground, midground, and background; vary auntie's pose and expression while preserving the exact reference identity. Make it feel like a clickable lifestyle article cover, using only icons and objects, with no visible text, numbers, percent signs, or UI labels."
+    "Scene direction: create a distinct Taiwan everyday-life article cover with auntie inside the situation, not a generic icon wall. Do not copy the reference phone pose unless the topic is specifically about phone use. Use household, commute, entertainment, weather, food, shopping, or neighborhood props that match the topic. Build a rich foreground, midground, and background; vary auntie's pose and expression while preserving the exact reference identity. Use at most two floating symbols total. Make it feel like a clickable lifestyle article cover, using only icons and objects, with no visible text, numbers, percent signs, or UI labels."
   ].join(" ");
 }
 
-async function generateOpenAIImage(prompt, outputPath) {
+function imageReferencePathFor(target) {
+  if (imageGeneration.referencePath && imageGeneration.referencePath !== "auto") {
+    return imageGeneration.referencePath;
+  }
+  if (target.section === "stock" || target.section === "market") {
+    return AUNTIE_MARKET_REFERENCE_IMAGES.join(";");
+  }
+  return AUNTIE_LIFE_REFERENCE_IMAGES.join(";");
+}
+
+async function generateOpenAIImage(prompt, outputPath, target) {
   return generateOpenAIImageFile({
     prompt,
     outputPath,
@@ -244,7 +259,7 @@ async function generateOpenAIImage(prompt, outputPath) {
     quality: imageGeneration.quality,
     outputFormat: imageGeneration.outputFormat,
     outputCompression: imageGeneration.outputCompression,
-    referencePath: imageGeneration.referencePath,
+    referencePath: imageReferencePathFor(target),
     userAgent: "auntie-no-mad-daily-image-generator/1.0"
   });
 }
@@ -369,7 +384,7 @@ async function enrichGeneratedImages(nextContent) {
       }
       if (process.env.OPENAI_API_KEY && !skipOpenAiAttempts) {
         if (!fs.existsSync(openAiOutputPath)) {
-          const generatedImage = await generateOpenAIImage(imagePromptFor(target), openAiOutputPath);
+          const generatedImage = await generateOpenAIImage(imagePromptFor(target), openAiOutputPath, target);
           openAiEndpoint = generatedImage.endpoint;
           openAiReferenceImage = generatedImage.referenceImage || openAiReferenceImage;
           createdAssetPaths.push(openAiAssetPath);
