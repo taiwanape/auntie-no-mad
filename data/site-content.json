@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-06T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/06 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-06-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-06T11:45:06.462Z"
+    "liveNewsUpdatedAt": "2026-06-06T12:56:14.043Z"
   },
   "lifeRadar": [
     {
@@ -644,6 +644,66 @@
   ],
   "liveNews": [
     {
+      "title": "今彩539第115138期開獎",
+      "date": "2026-06-06",
+      "category": "即時財經",
+      "summary": "今彩539第115138期開獎，中獎號碼30、37、38、13、27。3星彩中獎號碼160，4星彩中獎號碼4817。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606060202.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606060202.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-06T12:42:32.000Z",
+      "displayTime": "06/06 20:42"
+    },
+    {
+      "title": "WHO：中非伊波拉疫情擴大 確診逼近500例奪84命",
+      "date": "2026-06-06",
+      "category": "即時生活",
+      "summary": "世界衛生組織（WHO）今天公布的數據顯示，非洲中部肆虐的致命伊波拉（Ebola）疫情累計確診病例逼近500。隨著疫情蔓延，各界憂慮也日益加劇。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606060194.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202606060194.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-06T12:03:14.000Z",
+      "displayTime": "06/06 20:03"
+    },
+    {
+      "title": "觀光署攜手澎管處 促成近200名日客訪澎",
+      "date": "2026-06-06",
+      "category": "即時生活",
+      "summary": "交通部觀光署攜手澎管處，促成日本旅遊業者首度在6月初帶近200名日本旅客赴澎湖深度旅遊，體驗海島魅力。觀光署今天表示，盼未來帶動更多日客造訪，拓展澎湖國際觀光能見度。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606060193.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606060193.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-06T11:54:12.000Z",
+      "displayTime": "06/06 19:54"
+    },
+    {
+      "title": "器捐中心董事長：供需平衡須各界協力才能做到",
+      "date": "2026-06-06",
+      "category": "即時生活",
+      "summary": "陳堯俐仲介赴中國器官移植案，掀器官供需討論。器捐病主中心董事長李明哲強調，所謂「平衡」並非一進一出的立即滿足，而是如美國等國家在一定等待時間內完成，須各界協力才能做到。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606060189.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606060189.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-06T11:33:03.000Z",
+      "displayTime": "06/06 19:33"
+    },
+    {
+      "title": "澎湖海上花火節望安場登場 無人機結合海島風情",
+      "date": "2026-06-06",
+      "category": "即時地方",
+      "summary": "澎湖國際海上花火節首場離島花火場，今晚在望安登場，300架無人機燈光秀與煙火展演，都是依在地特色編排演出，讓登島的遊客看到望安不一樣的海島風情。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606060186.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606060186.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-06T11:16:56.000Z",
+      "displayTime": "06/06 19:16"
+    },
+    {
       "title": "理想混蛋首攻高雄巨蛋60秒票售罄 拚雙蛋黃再開1場",
       "date": "2026-06-06",
       "category": "即時娛樂",
@@ -654,66 +714,6 @@
       "sourceName": "中央社娛樂",
       "publishedAt": "2026-06-06T11:08:52.000Z",
       "displayTime": "06/06 19:08"
-    },
-    {
-      "title": "男毒駕撞警致雙腳骨折 法院裁無保請回彰檢將抗告",
-      "date": "2026-06-06",
-      "category": "即時社會",
-      "summary": "彰化施姓男子毒駕拒受盤查，竟倒車撞陳姓所長致雙腳骨折，同行警員破窗將男子壓制逮捕，全案依妨害公務、公共危險等罪嫌送辦。彰檢表示，聲押遭法院裁定無保請回，將抗告。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606060182.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606060182.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-06T11:03:47.000Z",
-      "displayTime": "06/06 19:03"
-    },
-    {
-      "title": "台鋼天鷹職排元年封王 陳其邁盼連霸續為高雄爭光",
-      "date": "2026-06-06",
-      "category": "即時地方",
-      "summary": "台鋼天鷹今年拿下首屆台灣職業排球聯盟（TPVL）總冠軍，在聯盟史與隊史都締造紀錄。球隊今天至高雄市政府獻獎，將榮耀獻給高雄市民，市長陳其邁期許球隊連霸再創佳績。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606060177.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606060177.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-06T10:23:36.000Z",
-      "displayTime": "06/06 18:23"
-    },
-    {
-      "title": "遊客拍照口角狹路相逢爆推擠 澎湖警及時化解衝突",
-      "date": "2026-06-06",
-      "category": "即時社會",
-      "summary": "旅遊火氣大，來自本島遊客今天在澎湖跨海大橋拍照時發生口角，雙方在返回馬公途中狹路相逢，再爆爭執推擠，造成1名男子頸部輕微擦挫傷，警方及時協調勸導，雙方互相道歉和解。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606060174.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606060174.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-06T10:09:30.000Z",
-      "displayTime": "06/06 18:09"
-    },
-    {
-      "title": "同台藍綠市長參選人包粽 陳其邁：我來打個分數",
-      "date": "2026-06-06",
-      "category": "即時地方",
-      "summary": "高雄市長陳其邁今天參加三鳳中街端午節活動，他與藍綠兩黨高雄市長參選人一起包粽子；他笑說「現在沒有選舉壓力，2位參選人包粽子，我這個現任市長來打個分數。」 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606060171.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606060171.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-06T09:57:23.000Z",
-      "displayTime": "06/06 17:57"
-    },
-    {
-      "title": "連俞涵任器官捐贈大使 盼以生命故事傳遞大愛",
-      "date": "2026-06-06",
-      "category": "即時生活",
-      "summary": "器官捐贈者家屬與受贈者今天分享生命故事，讓外界看見，當生命畫下句點，愛與希望仍能以另一種形式延續。演員連俞涵擔任年度公益大使，器官捐贈是她人生待辦清單之一。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606060170.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606060170.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-06T09:48:21.000Z",
-      "displayTime": "06/06 17:48"
     }
   ]
 }
