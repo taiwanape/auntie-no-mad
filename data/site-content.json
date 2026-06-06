@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-06T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/06 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-06-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-05T16:18:51.836Z"
+    "liveNewsUpdatedAt": "2026-06-06T00:19:53.146Z"
   },
   "lifeRadar": [
     {
@@ -644,6 +644,30 @@
   ],
   "liveNews": [
     {
+      "title": "Google向SpaceX採購AI算力 每月支付290億元",
+      "date": "2026-06-06",
+      "category": "即時科技",
+      "summary": "根據首次公開募股（IPO）申報文件，馬斯克（Elon Musk）創立的太空探索科技公司（SpaceX）今天與谷歌（Google）簽署一項大型雲端運算協議。協議指出，Google每月將支付9.2 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/ait/202606060009.aspx",
+      "slug": "https://www.cna.com.tw/news/ait/202606060009.aspx",
+      "sourceName": "中央社科技",
+      "publishedAt": "2026-06-05T22:32:24.000Z",
+      "displayTime": "06/06 06:32"
+    },
+    {
+      "title": "市場評估美伊和談進展與需求減弱 油價跌",
+      "date": "2026-06-06",
+      "category": "即時財經",
+      "summary": "投資人對市場需求出現減弱跡象，以及美伊和平談判的進展進行評估，油價今天下跌。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606060008.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606060008.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-05T21:57:21.000Z",
+      "displayTime": "06/06 05:57"
+    },
+    {
       "title": "科技股漲多後賣壓湧現 美股重挫",
       "date": "2026-06-06",
       "category": "即時財經",
@@ -651,7 +675,7 @@
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202606060007.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202606060007.aspx",
-      "sourceName": "中央社財經新聞",
+      "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-05T20:48:18.000Z",
       "displayTime": "06/06 04:48"
     },
@@ -663,7 +687,7 @@
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202606060004.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202606060004.aspx",
-      "sourceName": "中央社財經新聞",
+      "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-05T18:12:09.000Z",
       "displayTime": "06/06 02:12"
     },
@@ -675,7 +699,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202606050368.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202606050368.aspx",
-      "sourceName": "中央社財經新聞",
+      "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-05T15:15:51.000Z",
       "displayTime": "06/05 23:15"
     },
@@ -687,33 +711,9 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/aopl/202606050360.aspx",
       "slug": "https://www.cna.com.tw/news/aopl/202606050360.aspx",
-      "sourceName": "中央社財經新聞",
+      "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-05T14:21:31.000Z",
       "displayTime": "06/05 22:21"
-    },
-    {
-      "title": "劉喬安涉毒品重罪 新北檢複訊後聲押禁見",
-      "date": "2026-06-06",
-      "category": "即時社會",
-      "summary": "涉毒品案等的劉喬安今天下午被移送台灣新北地方檢察署複訊，檢察官訊後認劉喬安涉犯運輸第一級毒品罪嫌重大，且有逃亡勾串之虞，向台灣新北地方法院聲請羈押禁見。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606050357.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606050357.aspx",
-      "sourceName": "中央社社會新聞",
-      "publishedAt": "2026-06-05T14:12:24.000Z",
-      "displayTime": "06/05 22:12"
-    },
-    {
-      "title": "今彩539第115137期 頭獎1注中獎",
-      "date": "2026-06-06",
-      "category": "即時生活",
-      "summary": "今彩539第115137期開獎，中獎號碼07、26、31、27、21；派彩結果，頭獎1注中獎，獎金新台幣800萬元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606050355.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606050355.aspx",
-      "sourceName": "中央社生活醫藥",
-      "publishedAt": "2026-06-05T14:07:20.000Z",
-      "displayTime": "06/05 22:07"
     }
   ]
 }
