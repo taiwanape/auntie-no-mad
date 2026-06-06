@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-06T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/06 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-06-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-06T12:56:14.043Z"
+    "liveNewsUpdatedAt": "2026-06-06T14:53:39.374Z"
   },
   "lifeRadar": [
     {
@@ -644,16 +644,64 @@
   ],
   "liveNews": [
     {
+      "title": "盧秀燕訪歐3國啟程 著眼擴大歐洲商機等3大任務",
+      "date": "2026-06-06",
+      "category": "即時地方",
+      "summary": "台中市長盧秀燕今天晚間啟程出訪歐洲3國10天，她臨行前在桃園國際機場表示，此行3大任務是拜訪政要加強民主同盟關係、拜訪友好城市，以及拓展非美市場、擴大歐洲商機。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606060210.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606060210.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-06T13:46:52.000Z",
+      "displayTime": "06/06 21:46"
+    },
+    {
+      "title": "客運司機疑疲勞駕駛事故釀6傷 苗縣府啟動關懷",
+      "date": "2026-06-06",
+      "category": "即時地方",
+      "summary": "1輛客運今天下午行經苗栗縣頭份市與1輛等紅燈的小客車碰撞，再衝撞中央分隔島，警方初判客運駕駛疑疲勞駕駛，縣府針對客運上6名受傷乘客展開醫療、理賠聯繫管道等關懷機制。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606060207.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606060207.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-06T13:25:43.000Z",
+      "displayTime": "06/06 21:25"
+    },
+    {
+      "title": "馬祖青年事務交流座談前進東引 聚焦在地商機",
+      "date": "2026-06-06",
+      "category": "即時地方",
+      "summary": "連江縣政府教育處與青年事務委員會合辦的青年事務交流座談，今天晚間於東引鄉舉行。青年反映問題多元，包括觀光發展、青年創業、在地商機等議題，討論氣氛熱絡。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606060206.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606060206.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-06T13:19:41.000Z",
+      "displayTime": "06/06 21:19"
+    },
+    {
       "title": "今彩539第115138期開獎",
       "date": "2026-06-06",
-      "category": "即時財經",
+      "category": "即時生活",
       "summary": "今彩539第115138期開獎，中獎號碼30、37、38、13、27。3星彩中獎號碼160，4星彩中獎號碼4817。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202606060202.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202606060202.aspx",
-      "sourceName": "中央社產經證券",
+      "sourceName": "中央社生活",
       "publishedAt": "2026-06-06T12:42:32.000Z",
       "displayTime": "06/06 20:42"
+    },
+    {
+      "title": "孫淑媚開唱找丁寧鍾欣凌組團 跳韓團神曲玩諧音",
+      "date": "2026-06-06",
+      "category": "即時娛樂",
+      "summary": "歌手孫淑媚今晚北流開唱，找來好友丁寧、鍾欣凌再組SML女團挑戰韓團CORTIS超人氣歌曲「GO!」，3人大跳成功炒熱氣氛，而孫淑媚美貌引討論，她搞笑說「醫生就是父母，要掛號找他們」。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/amov/202606060197.aspx",
+      "slug": "https://www.cna.com.tw/news/amov/202606060197.aspx",
+      "sourceName": "中央社娛樂",
+      "publishedAt": "2026-06-06T12:22:21.000Z",
+      "displayTime": "06/06 20:22"
     },
     {
       "title": "WHO：中非伊波拉疫情擴大 確診逼近500例奪84命",
@@ -666,54 +714,6 @@
       "sourceName": "中央社生活",
       "publishedAt": "2026-06-06T12:03:14.000Z",
       "displayTime": "06/06 20:03"
-    },
-    {
-      "title": "觀光署攜手澎管處 促成近200名日客訪澎",
-      "date": "2026-06-06",
-      "category": "即時生活",
-      "summary": "交通部觀光署攜手澎管處，促成日本旅遊業者首度在6月初帶近200名日本旅客赴澎湖深度旅遊，體驗海島魅力。觀光署今天表示，盼未來帶動更多日客造訪，拓展澎湖國際觀光能見度。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606060193.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606060193.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-06T11:54:12.000Z",
-      "displayTime": "06/06 19:54"
-    },
-    {
-      "title": "器捐中心董事長：供需平衡須各界協力才能做到",
-      "date": "2026-06-06",
-      "category": "即時生活",
-      "summary": "陳堯俐仲介赴中國器官移植案，掀器官供需討論。器捐病主中心董事長李明哲強調，所謂「平衡」並非一進一出的立即滿足，而是如美國等國家在一定等待時間內完成，須各界協力才能做到。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606060189.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606060189.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-06T11:33:03.000Z",
-      "displayTime": "06/06 19:33"
-    },
-    {
-      "title": "澎湖海上花火節望安場登場 無人機結合海島風情",
-      "date": "2026-06-06",
-      "category": "即時地方",
-      "summary": "澎湖國際海上花火節首場離島花火場，今晚在望安登場，300架無人機燈光秀與煙火展演，都是依在地特色編排演出，讓登島的遊客看到望安不一樣的海島風情。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606060186.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606060186.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-06T11:16:56.000Z",
-      "displayTime": "06/06 19:16"
-    },
-    {
-      "title": "理想混蛋首攻高雄巨蛋60秒票售罄 拚雙蛋黃再開1場",
-      "date": "2026-06-06",
-      "category": "即時娛樂",
-      "summary": "樂團理想混蛋10月17日首攻高雄巨蛋開唱，稍早公告門票快速秒殺，主辦單位也宣布10月18日加開一場，將於13日開賣；團員阿哲開心表示，正努力錄製新專輯，想趕快把新歌帶給大家。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/amov/202606060184.aspx",
-      "slug": "https://www.cna.com.tw/news/amov/202606060184.aspx",
-      "sourceName": "中央社娛樂",
-      "publishedAt": "2026-06-06T11:08:52.000Z",
-      "displayTime": "06/06 19:08"
     }
   ]
 }
