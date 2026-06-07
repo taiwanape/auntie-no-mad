@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-07T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/07 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-07-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-06T16:19:48.224Z"
+    "liveNewsUpdatedAt": "2026-06-07T00:17:15.681Z"
   },
   "lifeRadar": [
     {
@@ -678,7 +678,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/aloc/202606060219.aspx",
       "slug": "https://www.cna.com.tw/news/aloc/202606060219.aspx",
-      "sourceName": "中央社地方新聞",
+      "sourceName": "中央社地方",
       "publishedAt": "2026-06-06T14:41:14.000Z",
       "displayTime": "06/06 22:41"
     },
@@ -690,7 +690,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/amov/202606060218.aspx",
       "slug": "https://www.cna.com.tw/news/amov/202606060218.aspx",
-      "sourceName": "中央社娛樂新聞",
+      "sourceName": "中央社娛樂",
       "publishedAt": "2026-06-06T14:38:12.000Z",
       "displayTime": "06/06 22:38"
     },
@@ -702,7 +702,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202606060213.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202606060213.aspx",
-      "sourceName": "中央社生活醫藥",
+      "sourceName": "中央社生活",
       "publishedAt": "2026-06-06T14:04:00.000Z",
       "displayTime": "06/06 22:04"
     },
@@ -714,7 +714,7 @@
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202606060211.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202606060211.aspx",
-      "sourceName": "中央社財經新聞",
+      "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-06T13:52:56.000Z",
       "displayTime": "06/06 21:52"
     },
@@ -726,7 +726,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/aloc/202606060210.aspx",
       "slug": "https://www.cna.com.tw/news/aloc/202606060210.aspx",
-      "sourceName": "中央社地方新聞",
+      "sourceName": "中央社地方",
       "publishedAt": "2026-06-06T13:46:52.000Z",
       "displayTime": "06/06 21:46"
     },
@@ -738,7 +738,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/aloc/202606060207.aspx",
       "slug": "https://www.cna.com.tw/news/aloc/202606060207.aspx",
-      "sourceName": "中央社地方新聞",
+      "sourceName": "中央社地方",
       "publishedAt": "2026-06-06T13:25:43.000Z",
       "displayTime": "06/06 21:25"
     }
