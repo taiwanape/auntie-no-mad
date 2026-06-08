@@ -1010,6 +1010,15 @@ assert(
   "daily-update image filenames must include a prompt revision so bad image batches can be replaced without reusing stale files"
 );
 assert(
+  !/今天固定四檔|熱門股 A|熱門股 B|兩檔熱門股|一檔新星|高人氣 ETF 容易被配息|成交金額在市場前段班/.test(dailyUpdateScript) &&
+    dailyUpdateScript.includes("marketMood(rows)") &&
+    dailyUpdateScript.includes("stockAffordabilityScore") &&
+    dailyUpdateScript.includes("ETF 分散配置") &&
+    dailyUpdateScript.includes("跌深反彈觀察") &&
+    dailyUpdateScript.includes("產業輪動觀察"),
+  "daily-update stock selection must use dynamic small-investor watchlist logic, not fixed hot-stock picks"
+);
+assert(
   AUNTIE_STYLE_RULES.some((rule) => rule.includes("ABSOLUTE TEXT BAN")) &&
     imageStyleRulesScript.includes("ABSOLUTE TEXT BAN"),
   "central image style rules must explicitly ban visible writing"

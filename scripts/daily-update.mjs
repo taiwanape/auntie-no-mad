@@ -829,6 +829,106 @@ function parseNumber(value) {
   return Number.isFinite(number) ? number : 0;
 }
 
+function signedNumber(value) {
+  const text = String(value || "0").replace(/[,+]/g, "").trim();
+  const number = Number(text);
+  return Number.isFinite(number) ? number : 0;
+}
+
+function changePercent(row) {
+  const close = parseNumber(row.close);
+  const change = signedNumber(row.change);
+  const previous = close - change;
+  if (!close || !previous) return 0;
+  return (change / previous) * 100;
+}
+
+const overExposedStockTickers = new Set([
+  "2330",
+  "2317",
+  "2454",
+  "2308",
+  "2382",
+  "2412",
+  "3008",
+  "3661",
+  "6669",
+  "3711"
+]);
+
+const repeatedEtfPenaltyTickers = new Set(["00919", "00878", "0056"]);
+const leveragedEtfPattern = /正2|反1|反向|槓桿|期貨|VIX|N|L$/i;
+
+function isEtfRow(row) {
+  return /^00\d/.test(row.ticker || "");
+}
+
+function recentStockTickers() {
+  return new Set((content.stockWatchlist || []).map((item) => item.ticker).filter(Boolean));
+}
+
+function rotationScore(row) {
+  const name = `${row.name || ""}`;
+  if (/電|光|網|通|半導|晶|封|測|矽|AI|資訊/.test(name)) return 14;
+  if (/航|運|車|鋼|水泥|塑|化|玻|紙/.test(name)) return 11;
+  if (/建|營造|資產|觀光|餐|百貨|零售|生技|醫|藥/.test(name)) return 9;
+  if (/金|銀|保|證/.test(name)) return 6;
+  return 3;
+}
+
+function marketMood(rows) {
+  const common = rows
+    .filter((row) => /^\d{4}$/.test(row.ticker || "") && !isEtfRow(row))
+    .filter((row) => parseNumber(row.close) > 0)
+    .map((row) => changePercent(row))
+    .filter((value) => Number.isFinite(value));
+  const sample = common.length || 1;
+  const average = common.reduce((sum, value) => sum + value, 0) / sample;
+  const downRatio = common.filter((value) => value < 0).length / sample;
+  const hardDown = average <= -1.2 || downRatio >= 0.66;
+  const softDown = average <= -0.35 || downRatio >= 0.55;
+  return {
+    average,
+    downRatio,
+    state: hardDown ? "大跌防守" : softDown ? "偏弱觀察" : "輪動觀察",
+    isWeak: hardDown || softDown,
+    label: hardDown
+      ? "盤面偏弱，阿姨先整理分批觀察名單"
+      : softDown
+        ? "市場有點晃，先看小資能負擔的題材"
+        : "市場輪動中，阿姨挑可做功課的口袋名單"
+  };
+}
+
+function liquidityScore(row) {
+  if (row.amount <= 0) return 0;
+  return Math.min(28, Math.log10(row.amount) * 4);
+}
+
+function stockAffordabilityScore(close) {
+  if (close <= 30) return 30;
+  if (close <= 60) return 25;
+  if (close <= 100) return 18;
+  if (close <= 150) return 10;
+  return -20;
+}
+
+function etfAffordabilityScore(close) {
+  if (close <= 25) return 30;
+  if (close <= 45) return 24;
+  if (close <= 70) return 16;
+  if (close <= 100) return 8;
+  return -25;
+}
+
+function bestByScore(candidates, selected, scoreFn) {
+  return candidates
+    .filter((row) => row && !selected.has(row.ticker))
+    .map((row) => ({ row, score: scoreFn(row) }))
+    .sort((a, b) => b.score - a.score)
+    .find((item) => Number.isFinite(item.score))?.row;
+}
+
 async function collectMarket() {
   const url = "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?response=json";
   const text = await fetchText(url);
@@ -851,50 +951,152 @@ async function collectMarket() {
 }
 
 function pickStocks(rows) {
+  const mood = marketMood(rows);
+  const recent = recentStockTickers();
   const commonStocks = rows
-    .filter((row) => /^\d{4}$/.test(row.ticker) && !row.ticker.startsWith("0") && row.ticker !== "2330")
+    .filter((row) => /^\d{4}$/.test(row.ticker) && !isEtfRow(row))
     .filter((row) => parseNumber(row.close) > 0)
+    .filter((row) => parseNumber(row.close) <= 180 || row.amount > 1_500_000_000)
+    .sort((a, b) => b.amount - a.amount);
+  const affordableStocks = commonStocks.filter((row) => parseNumber(row.close) <= 150 && !overExposedStockTickers.has(row.ticker));
+  const etfs = rows
+    .filter(isEtfRow)
+    .filter((row) => parseNumber(row.close) > 0 && parseNumber(row.close) <= 100)
+    .filter((row) => !leveragedEtfPattern.test(row.name || ""))
     .sort((a, b) => b.amount - a.amount);
 
-  const hot = commonStocks.slice(0, 2);
-  const selected = new Set(hot.map((item) => item.ticker));
+  const selected = new Set();
+  const picks = [];
+  const addPick = (row, category, type, risk, theme) => {
+    if (!row || selected.has(row.ticker) || picks.length >= 4) return false;
+    selected.add(row.ticker);
+    picks.push({ row, category, type, risk, theme, mood });
+    return true;
+  };
 
-  const emergingCandidates = ["6770", "2408", "3481", "2303", "3711", "2376", "2382", "3231"];
-  const emerging = emergingCandidates
-    .map((ticker) => rows.find((row) => row.ticker === ticker && !selected.has(row.ticker)))
-    .find(Boolean) || commonStocks.find((row) => !selected.has(row.ticker));
-  if (emerging) selected.add(emerging.ticker);
+  const etfScore = (row) => {
+    const close = parseNumber(row.close);
+    const pct = changePercent(row);
+    return etfAffordabilityScore(close)
+      + liquidityScore(row)
+      + (/台灣|臺灣|高股息|ESG|永續|中小|公司治理|電子|金融/.test(row.name || "") ? 15 : 4)
+      + (mood.isWeak ? 14 : 6)
+      + (pct < -1 ? 8 : 0)
+      - (recent.has(row.ticker) ? 28 : 0)
+      - (repeatedEtfPenaltyTickers.has(row.ticker) ? 10 : 0);
+  };
 
-  const etfCandidates = ["00919", "00878", "0056", "0050", "006208"];
-  const riskEtf = etfCandidates
-    .map((ticker) => rows.find((row) => row.ticker === ticker))
-    .find(Boolean) || rows.find((row) => /^00/.test(row.ticker));
+  const dipScore = (row) => {
+    const close = parseNumber(row.close);
+    const pct = changePercent(row);
+    return stockAffordabilityScore(close)
+      + liquidityScore(row)
+      + rotationScore(row)
+      + (pct <= -4 ? 34 : pct <= -2 ? 22 : pct < 0 ? 10 : -12)
+      + (mood.isWeak && pct < 0 ? 15 : 0)
+      - (recent.has(row.ticker) ? 35 : 0)
+      - (overExposedStockTickers.has(row.ticker) ? 45 : 0);
+  };
 
-  const picks = [
-    { row: hot[0], type: "熱門股 A", category: "熱門股", risk: "中高" },
-    { row: hot[1], type: "熱門股 B", category: "熱門股", risk: "中高" },
-    { row: emerging, type: "新星觀察股", category: "新星觀察", risk: "中高" },
-    { row: riskEtf, type: "風險題材 / 高人氣 ETF", category: "風險題材 ETF", risk: "中" }
-  ].filter((item) => item.row);
+  const rotationCandidateScore = (row) => {
+    const close = parseNumber(row.close);
+    const pct = changePercent(row);
+    return stockAffordabilityScore(close)
+      + liquidityScore(row)
+      + rotationScore(row) * 2
+      + (pct >= 0 ? 10 : 0)
+      + (pct > -2 && pct < 3 ? 8 : 0)
+      - (recent.has(row.ticker) ? 35 : 0)
+      - (overExposedStockTickers.has(row.ticker) ? 45 : 0);
+  };
 
-  if (picks.length !== 4) throw new Error("市場資料不足，無法產生四檔觀察清單");
+  const smallInvestorScore = (row) => {
+    const close = parseNumber(row.close);
+    const pct = changePercent(row);
+    return stockAffordabilityScore(close)
+      + liquidityScore(row)
+      + (close <= 80 ? 14 : 0)
+      + (Math.abs(pct) <= 3 ? 8 : 0)
+      + rotationScore(row)
+      - (recent.has(row.ticker) ? 35 : 0)
+      - (overExposedStockTickers.has(row.ticker) ? 55 : 0);
+  };
+
+  addPick(
+    bestByScore(etfs, selected, etfScore),
+    "ETF 分散配置",
+    mood.isWeak ? "大盤拉回 ETF 分批觀察" : "小資分散 ETF",
+    "中",
+    "ETF 分散配置"
+  );
+  if (mood.isWeak) {
+    addPick(
+      bestByScore(etfs, selected, etfScore),
+      "防守型 ETF",
+      "震盪盤 ETF 第二層觀察",
+      "中",
+      "ETF 分散配置"
+    );
+  }
+  addPick(
+    bestByScore(affordableStocks, selected, dipScore),
+    mood.isWeak ? "跌深反彈觀察" : "逢低觀察",
+    "價格可負擔的跌深題材",
+    "中高",
+    "跌深反彈觀察"
+  );
+  addPick(
+    bestByScore(affordableStocks, selected, rotationCandidateScore),
+    "產業輪動觀察",
+    "低中價題材輪動股",
+    "中高",
+    "產業輪動"
+  );
+  addPick(
+    bestByScore(affordableStocks, selected, smallInvestorScore),
+    "小資可負擔",
+    "低中價位量能觀察",
+    "中",
+    "小資可負擔"
+  );
+
+  for (const row of [...etfs, ...affordableStocks, ...commonStocks]) {
+    if (picks.length >= 4) break;
+    const isEtf = isEtfRow(row);
+    addPick(
+      row,
+      isEtf ? "ETF 分散配置" : "小資可負擔",
+      isEtf ? "ETF 備選觀察" : "低中價位備選觀察",
+      isEtf ? "中" : "中高",
+      isEtf ? "ETF 分散配置" : "小資可負擔"
+    );
+  }
+
+  if (picks.length !== 4) throw new Error("市場資料不足，無法產生四檔小資觀察清單");
   return picks;
 }
 
 function buildStockItems(rows) {
   const picks = pickStocks(rows);
-  return picks.map(({ row, type, category, risk }) => {
+  return picks.map(({ row, type, category, risk, theme, mood }) => {
     const slug = `stocks/${taipeiDate}-${row.ticker}.html`;
     const isEtf = row.ticker.startsWith("00");
+    const close = parseNumber(row.close);
+    const pct = changePercent(row);
+    const pctText = `${pct >= 0 ? "+" : ""}${pct.toFixed(2)}%`;
     const reason = isEtf
-      ? "高人氣 ETF 容易被配息吸引，但更要看淨值、成分股與填息。"
-      : `${row.name} 今天成交金額在市場前段班，代表討論度和資金注意力都不低。`;
+      ? `${row.name} 股價門檻相對親民，適合拿來練習看一籃子配置；今天漲跌幅約 ${pctText}，重點不是追高，而是看分散、淨值和成分股。`
+      : `${row.name} 收盤價 ${close.toFixed(2)}，比高價權值股更容易被小資族納入口袋名單；今天漲跌幅約 ${pctText}，可用來觀察 ${theme} 的節奏。`;
     return {
       title: row.name,
       date: taipeiDate,
       category,
       summary: `${row.close} 收盤，漲跌 ${row.change || "0"}。${reason}`,
-      auntieComment: isEtf ? "息很香，但不要只聞香味，還要看成本。" : "熱鬧可以看，但不要把熱鬧當答案。",
+      auntieComment: isEtf
+        ? "ETF 是一籃菜，不是保證不會跌的護身符。"
+        : mood.isWeak
+          ? "跌下來先看清楚，不是看到便宜就手癢。"
+          : "名單可以放口袋，功課不能放冰箱。",
       sourceUrl: row.sourceUrl,
       slug,
       ticker: row.ticker,
@@ -902,13 +1104,20 @@ function buildStockItems(rows) {
       type,
       reason,
       riskLevel: risk,
-      riskNote: isEtf ? "配息不等於獲利，淨值與成分股仍會波動。" : "成交熱度高時波動也常變大，追題材前要先看風險。",
-      suitableFor: isEtf ? "想練習看 ETF 配息、淨值與成分股的人。" : "想練習看成交量、題材與基本面的觀察者。",
+      riskNote: isEtf
+        ? "ETF 仍會跟著成分股和大盤波動，配息或分散都不是保證答案。"
+        : theme === "跌深反彈觀察"
+          ? "跌深不等於落底，反彈前常會先震盪，務必看量能和基本面。"
+          : "低中價位也可能波動很大，題材輪動退潮時要特別小心。",
+      suitableFor: isEtf ? "想用小額練習分散配置、比較 ETF 規則與成分股的人。" : "想找價格較可負擔、願意做題材與風險功課的觀察者。",
       notSuitableFor: "想找保證答案、不能接受波動，或沒有時間做功課的人。",
       disclaimer: "僅供教育與資訊參考，不是投資建議。",
       updatedAt: stamp,
       close: row.close,
       change: row.change,
+      changePercent: pctText,
+      selectionTheme: theme,
+      marketMood: mood.state,
       sourceName: "臺灣證券交易所",
       image: assets.stocks[row.ticker] || assets.stocks.default
     };
@@ -916,21 +1125,24 @@ function buildStockItems(rows) {
 }
 
 function buildStockOverview(stockItems) {
+  const mood = stockItems[0]?.marketMood || "輪動觀察";
+  const etfCount = stockItems.filter((item) => isEtfItem(item)).length;
+  const affordableCount = stockItems.filter((item) => parseNumber(item.close) <= 100).length;
   return {
     title: "股市ETF",
     date: taipeiDate,
     category: "股市 ETF",
-    summary: "今天固定四檔：兩檔熱門股、一檔新星觀察、一檔高人氣但風險也要看的 ETF。每檔都附阿姨白話理由，但仍然不是買賣建議。",
-    auntieComment: "不是報明牌，是把市場消息整理成白話文。",
+    summary: `${mood}：今天不追固定熱門股，改從小資可負擔、ETF 分散、低基期題材和跌深反彈觀察裡挑四檔。這是口袋名單整理，不是買賣建議。`,
+    auntieComment: `阿姨今天先看 ${etfCount} 檔 ETF、${affordableCount} 檔百元內標的；不是叫你衝，是幫你把功課順序排好。`,
     sourceUrl: "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL?response=json",
     slug: `stocks/${taipeiDate}-market-watch.html`,
-    badge: "早晨版",
+    badge: "小資版",
     marketCards: stockItems.map((item) => ({
       label: `${item.category} ${item.ticker}`,
       value: item.name,
       note: item.type,
-      trend: item.category,
-      tone: item.category.includes("ETF") ? "down" : "up"
+      trend: item.selectionTheme || item.category,
+      tone: /跌深|防守|ETF/.test(item.category) ? "down" : "up"
     }))
   };
 }
@@ -1125,9 +1337,10 @@ function isEtfItem(item) {
 
 function stockStoryTitle(item) {
   if (item.storyTitle) return item.storyTitle;
-  if (isEtfItem(item)) return `${item.name}：配息很香，阿姨先看淨值有沒有跟上`;
-  if (/新星/.test(item.category || item.type || "")) return `${item.name}：成交熱起來，先看題材有沒有底`;
-  return `${item.name}：市場很吵，阿姨先把熱度翻成人話`;
+  if (isEtfItem(item)) return `${item.name}：小資分散配置，阿姨先看一籃菜有沒有新鮮`;
+  if (/跌深|逢低/.test(item.category || item.type || "")) return `${item.name}：跌下來先別急，阿姨看是不是有反彈條件`;
+  if (/輪動/.test(item.category || item.type || "")) return `${item.name}：題材輪到這桌，先看有沒有基本面撐腰`;
+  return `${item.name}：價格比較親民，阿姨把觀察理由講白`;
 }
 
 function stockChangeClass(item) {
@@ -1145,42 +1358,36 @@ function stockChangeText(item) {
 function stockDeck(item) {
   const codeName = stockCodeName(item);
   if (isEtfItem(item)) {
-    return `${codeName} 今天收在 ${item.close || "未揭露"}，漲跌 ${item.change || "0"}。高人氣 ETF 容易讓人只盯配息，阿姨這篇先把熱度、淨值波動和成分股風險拆開看。`;
+    return `${codeName} 今天收在 ${item.close || "未揭露"}，漲跌 ${item.change || "0"}。它被放進清單，不是因為熱門口號，而是適合用小額練習看分散配置、淨值和成分股風險。`;
   }
-  return `${codeName} 今天收在 ${item.close || "未揭露"}，漲跌 ${item.change || "0"}。它被選進今日觀察，不是叫你追熱鬧，而是因為成交與討論度都被市場推到前排，值得把題材和風險一起看。`;
+  return `${codeName} 今天收在 ${item.close || "未揭露"}，漲跌 ${item.change || "0"}。它被選進今日觀察，不是叫你追熱鬧，而是因為價格相對可負擔，又有 ${item.selectionTheme || item.category} 可以做功課。`;
 }
 
 function stockOpening(item) {
   if (isEtfItem(item)) {
-    return `${item.name} 這類高人氣 ETF，常常會因為配息話題被拿出來討論。問題是，配息不是護身符，價格、淨值、成分股和填息狀況都會影響最後結果。阿姨會先看它為什麼有人關心，再看這份關心是不是已經反映在價格裡。`;
+    return `${item.name} 這類 ETF 的重點不是一句「很穩」或「配很多」就結束。小資族看 ETF，阿姨會先問三件事：一籃子裝什麼、價格有沒有太熱、遇到大盤震盪時能不能幫你分散一點壓力。`;
   }
-  if (/新星/.test(item.category || item.type || "")) {
-    return `${item.name} 不是每天都站在聚光燈正中央，但當成交熱度突然變高，通常代表市場開始重新討論它的題材。這種時候不要只看紅綠燈，還要問：是基本面變了、題材被重新定價，還是短線資金只是來逛一下？`;
+  if (/跌深|逢低/.test(item.category || item.type || "")) {
+    return `${item.name} 今天被放進觀察，不是因為阿姨看到下跌就想撿便宜，而是因為價格門檻、成交量和題材位置值得重新看一次。跌下來只是入場券，能不能站穩才是正片。`;
   }
-  return `${item.name} 今天被放進熱門觀察，主因是成交金額與市場注意力排在前面。熱門股最容易讓人有「大家都在看，我是不是也要看」的心情，但阿姨會先把它拆成兩件事：資金為什麼圍過來，以及這個熱度能不能找到合理背景。`;
+  return `${item.name} 不是那種大家每天喊到耳朵長繭的高價權值股。阿姨把它放進口袋名單，是因為它比較接近一般人能做功課的價格帶，也能拿來觀察產業輪動和資金是不是換桌吃飯。`;
 }
 
 function stockContext(item) {
   if (isEtfItem(item)) {
-    return `ETF 的故事通常不是單一公司，而是一籃成分股和指數規則。高股息題材好懂、也容易傳播，但越好懂的東西越要慢慢核對：配息來源、成分股集中度、產業循環和交易成本，哪一個都不能只用一句「息很香」帶過。`;
+    return `ETF 的故事通常不是單一公司，而是一籃成分股和指數規則。阿姨看 ETF 不只看配息，也會看分散度、成分股集中度、費用、折溢價和市場循環；越適合小資族，越不能只靠一句口號決定。`;
   }
-  if (/2454/.test(item.ticker || "")) {
-    return `聯發科常被市場放在晶片設計、手機與邊緣運算題材裡討論。這類公司好看的地方在產品週期與技術故事，麻煩的地方也在週期：客戶拉貨、毛利率和競爭壓力，都會讓股價情緒忽冷忽熱。`;
-  }
-  if (/2317/.test(item.ticker || "")) {
-    return `鴻海的題材通常牽到大型電子供應鏈、AI 伺服器與新事業想像。它的故事很大，但也因為太大，讀者要分清楚：現在市場是在看實際出貨、獲利改善，還是在替未來想像先鼓掌。`;
-  }
-  if (/6770/.test(item.ticker || "")) {
-    return `力積電的關鍵在半導體景氣、成熟製程與市場資金對低基期題材的想像。這類股票一熱起來會很有戲，但波動也常跟著放大，所以更適合拿來練習看成交量和題材節奏。`;
-  }
-  return `${item.name} 的題材要回到產業位置、成交量和近期市場情緒一起看。阿姨不把單日漲跌當答案，只把它當成提醒：今天市場有話想說，但你要慢慢聽，不要被音量牽著走。`;
+  return `${item.name} 的題材要回到產業位置、價格帶、成交量和近期市場情緒一起看。阿姨不把單日漲跌當答案，只把它當成提醒：今天市場有話想說，但你要慢慢聽，不要被音量牽著走。`;
 }
 
 function stockOpportunity(item) {
   if (isEtfItem(item)) {
-    return `可以觀察的機會在於：如果成分股表現穩、配息節奏清楚、淨值沒有被過度消耗，ETF 會比較像長期配置工具；但如果只靠配息口號撐人氣，價格一波動，很多人才會發現自己其實沒看懂。`;
+    return `可以觀察的機會在於：如果成分股分散、費用合理、淨值和市價沒有過度脫節，ETF 會比較適合拿來做長期配置練習；但如果只靠配息或人氣撐場，價格一晃就會知道自己功課少寫一頁。`;
   }
-  return `可以觀察的機會在於：如果成交熱度背後有營收、訂單、產業循環或市場預期支撐，後續才有比較完整的故事；如果只是短線資金擠在門口，熱鬧散場時也會很快。`;
+  if (/跌深|逢低/.test(item.category || item.type || "")) {
+    return `可以觀察的機會在於：如果下跌只是市場情緒拖累，後續又能看到產業題材、營收或量能回溫，就有重新被討論的空間；但如果基本面也同步變差，便宜可能只是另一個陷阱。`;
+  }
+  return `可以觀察的機會在於：如果低中價位背後有營收、訂單、產業輪動或政策題材支撐，後續才有比較完整的故事；如果只是短線資金換桌，熱鬧散場時也會很快。`;
 }
 
 function stockWatchPoints(item) {
@@ -1192,7 +1399,7 @@ function stockWatchPoints(item) {
     ];
   }
   return [
-    ["成交熱度", "成交金額在前段班代表市場有注意，但熱度不是答案。"],
+    ["價格帶", "先確認這是不是一般人能負擔、也能分批做功課的價格區間。"],
     ["題材背景", stockContext(item)],
     ["風險節奏", item.riskNote || "波動變大時，先確認自己看懂什麼。"]
   ];
@@ -1454,7 +1661,7 @@ ${renderHomepageMarketCards(nextContent.stockOverview)}
             <h3 id="watchSubTitle" class="investing-subtitle">📋 今日觀察清單</h3>
             <span class="example-badge">剛出爐</span>
           </div>
-          <p class="investing-desc">今天固定四檔，分類也講清楚：兩檔熱門股、一檔新星觀察、一檔高人氣但風險也高的 ETF。每檔都附阿姨白話理由，但仍然不是買賣建議。</p>
+          <p class="investing-desc">今天依市場狀況重排觀察名單，優先看小資可負擔、ETF 分散、低基期題材、跌深反彈與產業輪動，不再每天固定那幾支熱門股。</p>
           <div class="watchlist-grid">
 ${renderHomepageWatchlist(nextContent.stockWatchlist)}
           </div>
@@ -1590,7 +1797,32 @@ async function main() {
   console.log("Daily update approved and written.");
 }
 
-main().catch((error) => {
+async function previewStockSelection() {
+  const rows = await collectMarket();
+  const stockItems = buildStockItems(rows);
+  const stockOverview = buildStockOverview(stockItems);
+  console.log(JSON.stringify({
+    date: taipeiDate,
+    summary: stockOverview.summary,
+    auntieComment: stockOverview.auntieComment,
+    items: stockItems.map((item) => ({
+      ticker: item.ticker,
+      name: item.name,
+      close: item.close,
+      change: item.change,
+      changePercent: item.changePercent,
+      category: item.category,
+      type: item.type,
+      selectionTheme: item.selectionTheme,
+      marketMood: item.marketMood,
+      reason: item.reason
+    }))
+  }, null, 2));
+}
+
+const runStockSelectionPreview = process.argv.includes("--stock-selection-preview");
+
+(runStockSelectionPreview ? previewStockSelection() : main()).catch((error) => {
   review.status = "failed";
   review.errors.push(error.message);
   fs.writeFileSync(reportPath, JSON.stringify(review, null, 2) + "\n");
