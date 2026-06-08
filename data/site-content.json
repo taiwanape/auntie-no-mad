@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-08T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/08 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-08-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-07T16:44:52.537Z"
+    "liveNewsUpdatedAt": "2026-06-08T01:34:45.211Z"
   },
   "lifeRadar": [
     {
@@ -698,6 +698,42 @@
   ],
   "liveNews": [
     {
+      "title": "伊朗停火後首度襲以色列 國際油價開盤飆漲逾3%",
+      "date": "2026-06-08",
+      "category": "即時財經",
+      "summary": "在週末休市後，國際油價今天開盤大漲逾3%，反映市場對伊朗自4月8日停火以來首度攻擊以色列的憂慮再度升高。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606080018.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202606080018.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-08T00:21:57.000Z",
+      "displayTime": "06/08 08:21"
+    },
+    {
+      "title": "美股暴跌台股恐重挫 投顧：雖過熱但非泡沫",
+      "date": "2026-06-08",
+      "category": "即時財經",
+      "summary": "美股上週五暴跌，費半指數重挫10.26%，台指期盤後大跌3006點，為史上最大跌點，台股今天開盤恐承壓；投顧分析，市場憂AI盛宴因利率提早散場，美股雖過熱，但不是泡沫，台股短期修正整理。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606080015.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606080015.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-08T00:18:51.000Z",
+      "displayTime": "06/08 08:18"
+    },
+    {
+      "title": "宮廟主持誆卡到陰性侵39次 宜蘭地院重判25年",
+      "date": "2026-06-08",
+      "category": "即時社會",
+      "summary": "黃姓男子在宜蘭開設宮廟，被控利用女信徒篤信鬼神且身心脆弱，誆稱卡到陰及靈魂破洞，須以發生性關係「過氣、補氣」治療，性侵女子39次。宜蘭地院審理後，判處黃男25年徒刑。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606080011.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606080011.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-07T23:40:42.000Z",
+      "displayTime": "06/08 07:40"
+    },
+    {
       "title": "菲律賓遊客搭巴士遊合歡山翻覆 蘋果裝置偵測通報",
       "date": "2026-06-08",
       "category": "即時社會",
@@ -705,7 +741,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/asoc/202606070229.aspx",
       "slug": "https://www.cna.com.tw/news/asoc/202606070229.aspx",
-      "sourceName": "中央社社會新聞",
+      "sourceName": "中央社社會",
       "publishedAt": "2026-06-07T15:10:03.000Z",
       "displayTime": "06/07 23:10"
     },
@@ -717,7 +753,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/aloc/202606070226.aspx",
       "slug": "https://www.cna.com.tw/news/aloc/202606070226.aspx",
-      "sourceName": "中央社地方新聞",
+      "sourceName": "中央社地方",
       "publishedAt": "2026-06-07T14:15:54.000Z",
       "displayTime": "06/07 22:15"
     },
@@ -729,45 +765,9 @@
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
       "sourceUrl": "https://www.cna.com.tw/news/aopl/202606070225.aspx",
       "slug": "https://www.cna.com.tw/news/aopl/202606070225.aspx",
-      "sourceName": "中央社財經新聞",
+      "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-07T14:03:51.000Z",
       "displayTime": "06/07 22:03"
-    },
-    {
-      "title": "新北汐止騎士形跡可疑涉毒駕 士檢聲押獲准",
-      "date": "2026-06-08",
-      "category": "即時社會",
-      "summary": "陳姓男子6日在新北市汐止區騎乘機車因形跡可疑遭警方攔查，以毒品唾液試劑快篩驗出安非他命陽性反應。士林地檢署今天向法院聲請羈押獲准。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606070224.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606070224.aspx",
-      "sourceName": "中央社社會新聞",
-      "publishedAt": "2026-06-07T13:56:49.000Z",
-      "displayTime": "06/07 21:56"
-    },
-    {
-      "title": "中港國小棒球隊華南盃奪冠 新北議會頒獎金表揚",
-      "date": "2026-06-08",
-      "category": "即時地方",
-      "summary": "新北市中港國小棒球隊日前參加華南金控盃全國少棒錦標賽勇奪冠軍，新北市議會議長蔣根煌今天頒贈新台幣5萬元獎勵金，表揚及肯定球隊表現。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606070220.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606070220.aspx",
-      "sourceName": "中央社地方新聞",
-      "publishedAt": "2026-06-07T13:36:40.000Z",
-      "displayTime": "06/07 21:36"
-    },
-    {
-      "title": "菲律賓旅遊團中巴翻落仁愛鄉邊坡 16人送醫其中6傷",
-      "date": "2026-06-08",
-      "category": "即時社會",
-      "summary": "南投縣仁愛鄉台14線79公里處，今天傍晚發生1輛中型巴士翻落邊坡，駕駛連同車上15名菲律賓籍遊客均送醫；其中1人腦溢血、2人骨折嚴重，確切肇因仍待調查釐清。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606070217.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606070217.aspx",
-      "sourceName": "中央社社會新聞",
-      "publishedAt": "2026-06-07T13:24:30.000Z",
-      "displayTime": "06/07 21:24"
     }
   ]
 }
