@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-09T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/09 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-09-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-08T18:08:35.922Z"
+    "liveNewsUpdatedAt": "2026-06-09T00:15:54.351Z"
   },
   "lifeRadar": [
     {
@@ -737,6 +737,42 @@
   ],
   "liveNews": [
     {
+      "title": "美晶片股收復部分失地 市場關注SpaceX上市吸金力",
+      "date": "2026-06-09",
+      "category": "即時財經",
+      "summary": "美國股市晶片股上週收盤暴跌，今天交易收復部分失地，美光、美滿與英特爾等科技業者股價大幅反彈。華爾街眾所矚目的SpaceX將在12日掛牌上市，市場關注20多家承銷銀行與券商的吸金力，是否扭轉資金 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606090016.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606090016.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-08T23:37:46.000Z",
+      "displayTime": "06/09 07:37"
+    },
+    {
+      "title": "投資人逢低買進晶片股反彈回升 美國股市多收漲",
+      "date": "2026-06-09",
+      "category": "即時財經",
+      "summary": "投資人正評估中東地區緊張局勢緩和的影響並逢低買進，使晶片股今天反彈回升帶動華爾街漲勢，美國股市主要指數今天大多收高，收復了上週部分跌幅。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606090012.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606090012.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-08T22:10:33.000Z",
+      "displayTime": "06/09 06:10"
+    },
+    {
+      "title": "以色列與伊朗表態避免情勢升溫 國際油價小漲",
+      "date": "2026-06-09",
+      "category": "即時財經",
+      "summary": "以色列和伊朗經歷短暫交火之後，雙方稍早都表態會避免進一步情勢升級，使國際油價今天的漲勢有所收斂。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606090011.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606090011.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-08T21:24:31.000Z",
+      "displayTime": "06/09 05:24"
+    },
+    {
       "title": "鋒面挾西南氣流 10縣市防豪雨、高屏山區防大豪雨",
       "date": "2026-06-09",
       "category": "即時生活",
@@ -744,7 +780,7 @@
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202606090010.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202606090010.aspx",
-      "sourceName": "中央社生活醫藥",
+      "sourceName": "中央社生活",
       "publishedAt": "2026-06-08T20:42:28.000Z",
       "displayTime": "06/09 04:42"
     },
@@ -756,7 +792,7 @@
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202606090005.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202606090005.aspx",
-      "sourceName": "中央社生活醫藥",
+      "sourceName": "中央社生活",
       "publishedAt": "2026-06-08T18:13:15.000Z",
       "displayTime": "06/09 02:13"
     },
@@ -768,45 +804,9 @@
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202606090004.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202606090004.aspx",
-      "sourceName": "中央社財經新聞",
+      "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-08T17:21:12.000Z",
       "displayTime": "06/09 01:21"
-    },
-    {
-      "title": "雨區涵蓋全台20縣市 高雄及屏東山區慎防大豪雨",
-      "date": "2026-06-09",
-      "category": "即時生活",
-      "summary": "中央氣象署發布豪雨特報，滯留鋒面及西南氣流影響，易有短延時強降雨，今天高雄市山區及屏東縣山區有局部豪雨或大豪雨。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606090002.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606090002.aspx",
-      "sourceName": "中央社生活醫藥",
-      "publishedAt": "2026-06-08T16:46:07.000Z",
-      "displayTime": "06/09 00:46"
-    },
-    {
-      "title": "倫敦科技週 蘇姿丰宣布AMD投資英國逾840億元",
-      "date": "2026-06-09",
-      "category": "即時科技",
-      "summary": "超微半導體（AMD）董事長暨執行長蘇姿丰今天在倫敦科技週宣布，未來5年將投資英國20億英鎊（逾新台幣840億元），用於建設高效能運算基礎設施、研究開發，以及直接投資英國新創企業。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/ait/202606080346.aspx",
-      "slug": "https://www.cna.com.tw/news/ait/202606080346.aspx",
-      "sourceName": "中央社科技新聞",
-      "publishedAt": "2026-06-08T15:54:59.000Z",
-      "displayTime": "06/08 23:54"
-    },
-    {
-      "title": "南投仁愛鄉9日停止上班、停止上課",
-      "date": "2026-06-09",
-      "category": "即時地方",
-      "summary": "南投縣政府今天表示，明天除仁愛鄉停止上班、停止上課外，其餘鄉鎮市照常上班、照常上課。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606080344.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606080344.aspx",
-      "sourceName": "中央社地方新聞",
-      "publishedAt": "2026-06-08T14:54:52.000Z",
-      "displayTime": "06/08 22:54"
     }
   ]
 }
