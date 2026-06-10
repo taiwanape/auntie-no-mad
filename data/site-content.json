@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-10T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/10 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-10-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-09T16:48:35.325Z"
+    "liveNewsUpdatedAt": "2026-06-10T01:31:10.661Z"
   },
   "lifeRadar": [
     {
@@ -764,76 +764,76 @@
   ],
   "liveNews": [
     {
-      "title": "市場權衡美伊局勢最新進展 美股收盤走勢不一",
-      "date": "2026-06-10",
-      "category": "即時財經",
-      "summary": "市場正在權衡美國與伊朗緊張局勢的最新進展，美國科技股再度湧現拋售潮、回吐昨天部分漲幅，華爾街股市今天收盤互有漲跌。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606100010.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606100010.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-06-09T21:02:37.000Z",
-      "displayTime": "06/10 05:02"
-    },
-    {
-      "title": "川普稱必須回應伊朗擊落阿帕契一事 國際油價跌幅縮小",
-      "date": "2026-06-10",
-      "category": "即時財經",
-      "summary": "美國總統川普今天表示伊朗昨夜擊落美國陸軍一架阿帕契直升機，強調美國「必須」做出回應，受此消息影響，原本盤中跌深的國際油價終場跌幅收斂。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606100009.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606100009.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-06-09T20:34:35.000Z",
-      "displayTime": "06/10 04:34"
-    },
-    {
-      "title": "NASA公布阿提米絲3號任務名單 歐洲太空人首度入列",
+      "title": "最強AI模型開放大眾使用 Anthropic加強安全防護",
       "date": "2026-06-10",
       "category": "即時科技",
-      "summary": "美國國家航空暨太空總署（NASA）今天宣布「阿提米絲3號」（Artemis 3）任務名單，義大利太空人帕米塔諾成為首位入選的歐洲人，將與3名美籍太空人共同執行這項任務。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ait/202606100005.aspx",
-      "slug": "https://www.cna.com.tw/news/ait/202606100005.aspx",
-      "sourceName": "中央社科技新聞",
-      "publishedAt": "2026-06-09T18:12:24.000Z",
-      "displayTime": "06/10 02:12"
+      "summary": "人工智慧（AI）模型Claude開發商Anthropic今天向大眾開放旗下最強大版本的技術，同時限制在敏感領域的使用。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/ait/202606100032.aspx",
+      "slug": "https://www.cna.com.tw/news/ait/202606100032.aspx",
+      "sourceName": "中央社科技",
+      "publishedAt": "2026-06-10T00:55:30.000Z",
+      "displayTime": "06/10 08:55"
     },
     {
-      "title": "滯留鋒面及西南風影響 6縣市豪雨特報",
-      "date": "2026-06-10",
-      "category": "即時生活",
-      "summary": "中央氣象署發布豪雨特報，滯留鋒面及西南風影響，易有短延時強降雨，臺中市、彰化縣、雲林縣、嘉義縣、高雄市及屏東縣已有豪雨發生，今日高雄市山區有局部大雨或豪雨。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606100004.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606100004.aspx",
-      "sourceName": "中央社生活醫藥",
-      "publishedAt": "2026-06-09T18:11:22.000Z",
-      "displayTime": "06/10 02:11"
-    },
-    {
-      "title": "美科技股熄火拖累 歐股大多收跌",
+      "title": "力積電發行GDS籌資8.86億美元 買設備和導入新技術",
       "date": "2026-06-10",
       "category": "即時財經",
-      "summary": "受到美國科技股下跌拖累，歐洲股市今天走勢震盪，主要指數終場紛紛回吐早盤所有漲幅，大多收跌。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606100002.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606100002.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-06-09T16:38:16.000Z",
-      "displayTime": "06/10 00:38"
+      "summary": "晶圓代工廠力積電完成海外存託憑證（GDS）訂價，每單位31.65美元，籌得8.86億美元，將用以購置機器設備、導入新技術，以強化國際競爭力。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606100029.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606100029.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-10T00:42:23.000Z",
+      "displayTime": "06/10 08:42"
     },
     {
-      "title": "北市：知名企業加入育兒減工時 計376家響應",
+      "title": "股市震盪無礙吸金熱度 SpaceX IPO獲近4倍超額認購",
       "date": "2026-06-10",
-      "category": "即時地方",
-      "summary": "台北市勞動局今天表示，3月率先全國推出育兒減少工時計畫，迄今有376家業者響應，包括遠東SOGO、聯合利華及統一超商等知名企業；對於中央政府5月宣布響應，盼儘速落實。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時財經",
+      "summary": "知情人士今天表示，美國太空探索科技公司（SpaceX）已吸引2500多億美元的投資人認購需求，遠高於計劃募資的750億美元，若順利完成，將成為史上規模最大首次公開募股（IPO）之一。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/ait/202606100028.aspx",
+      "slug": "https://www.cna.com.tw/news/ait/202606100028.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-10T00:41:21.000Z",
+      "displayTime": "06/10 08:41"
+    },
+    {
+      "title": "台指期夜盤跌799點 法人：台股短線震盪加劇",
+      "date": "2026-06-10",
+      "category": "即時財經",
+      "summary": "美國晶片股反彈熄火，週二費城半導體指數盤中一度重挫逾8%，台指期夜盤盤中下殺最多逾1600點，終場下跌799點或1.79%，收在43878點。法人看台股短線震盪加劇，觀察重點為即將公布的美國5 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606100025.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606100025.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-10T00:35:15.000Z",
+      "displayTime": "06/10 08:35"
+    },
+    {
+      "title": "台東南橫利稻段坍方 預計上午9時搶通",
+      "date": "2026-06-10",
+      "category": "即時生活",
+      "summary": "公路局關山工務段今天表示，台東縣海端鄉台20線177K+700（南橫利稻路段）上午5時許邊坡坍方，雙向道路無法通行，已派遣廠商機具進行搶災，預計上午9時恢復正常通行。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606090383.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606090383.aspx",
-      "sourceName": "中央社地方新聞",
-      "publishedAt": "2026-06-09T15:17:08.000Z",
-      "displayTime": "06/09 23:17"
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606100022.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606100022.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-10T00:20:08.000Z",
+      "displayTime": "06/10 08:20"
+    },
+    {
+      "title": "滯留鋒面影響 台東恆春半島高雄與屏東山區防豪雨",
+      "date": "2026-06-10",
+      "category": "即時生活",
+      "summary": "中央氣象署發布豪雨特報，滯留鋒面及西南風影響，易有短延時強降雨，台東縣、恆春半島及高雄市山區、屏東縣山區有局部大雨或豪雨。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606100018.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606100018.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-09T23:48:59.000Z",
+      "displayTime": "06/10 07:48"
     }
   ]
 }
