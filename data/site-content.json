@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-10T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/10 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-10-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-10T10:33:12.319Z"
+    "liveNewsUpdatedAt": "2026-06-10T14:02:33.948Z"
   },
   "lifeRadar": [
     {
@@ -764,76 +764,76 @@
   ],
   "liveNews": [
     {
-      "title": "科博館推許蒼澤鹿城拾影展 捕捉小鎮時代記憶",
+      "title": "國銀5大信賴產業放款月增908億 首期達成率75%",
       "date": "2026-06-10",
-      "category": "即時地方",
-      "summary": "國立自然科學博物館推出「一天、一年與一輩子：許蒼澤的鹿城拾影」特展，以影像、文物、手稿等，從常民生活、歲時祭儀到人生禮俗，凝望鹿港小鎮的集體記憶與時代變遷。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時財經",
+      "summary": "金管會表示，截至4月底，本國銀行對5大信賴產業放款餘額為新台幣4兆3251億元，較3月底基期增加908億元，首期成長目標1200億元，換算首期達成率為75.67%。觀察單月增額，以安控產業增加 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606100320.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606100320.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-10T10:19:48.000Z",
-      "displayTime": "06/10 18:19"
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606100389.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606100389.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-10T13:31:17.000Z",
+      "displayTime": "06/10 21:31"
     },
     {
-      "title": "新北小宅車位標準鬆綁 建案一戶一車位可彈性設置",
-      "date": "2026-06-10",
-      "category": "即時地方",
-      "summary": "因應近年小坪數住宅產品增加，新北市府推「辦理基地開發交通影響評估審查原則」，各類開發案原一戶一汽車位標準增納彈性設置機制，避免停車空間成本過度反映在房價上。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606100318.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606100318.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-10T10:15:44.000Z",
-      "displayTime": "06/10 18:15"
-    },
-    {
-      "title": "國產花生價跌農業部徹查不實謠言 張麗善支持",
-      "date": "2026-06-10",
-      "category": "即時地方",
-      "summary": "國產花生跌價，農民疑與台美對等貿易協定預期心理有關。農業部長陳駿季今天說，不宜以錯誤訊息、還沒實施的政策去影響產地價格，若有不實、刻意的謠傳，將啟動稽查；雲林縣長張麗善力挺徹查。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606100315.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606100315.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-10T10:06:37.000Z",
-      "displayTime": "06/10 18:06"
-    },
-    {
-      "title": "新北推年輕型失智症職務再設計 協助穩定就業",
-      "date": "2026-06-10",
-      "category": "即時地方",
-      "summary": "新北市65歲以上人口有82萬人，市府今天表示，衛生局長照處預算將近新台幣100億元，今年創新推出「年輕型失智症職務再設計」，協助失智者參與社會與適應職場穩定就業。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606100305.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606100305.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-10T09:46:16.000Z",
-      "displayTime": "06/10 17:46"
-    },
-    {
-      "title": "鋒面11、12日回馬槍 西半部防局部大雨",
+      "title": "中榮2醫師代刀遭健保署裁罰 院方：未討論是否求償",
       "date": "2026-06-10",
       "category": "即時生活",
-      "summary": "氣象署表示，今天鋒面南移，各地天氣稍回穩，但明天、12日鋒面再往北，西半部地區、東半部山區留意局部大雨；下波鋒面14、15日接近影響台灣，中南部仍要留意局部大雨或豪雨發生。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606100304.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606100304.aspx",
+      "summary": "台中榮總神經外科2名主任因容留廠商代刀遭台中地檢署起訴，健保署因而裁罰神外住院業務停約3個月，傳出中榮將向2人求償，院方今晚聲明，目前未討論是否向醫師求償。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606100387.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606100387.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-06-10T09:44:14.000Z",
-      "displayTime": "06/10 17:44"
+      "publishedAt": "2026-06-10T13:19:12.000Z",
+      "displayTime": "06/10 21:19"
     },
     {
-      "title": "讓消費者看見生產者故事 全聯首度啟動小農造星計畫",
+      "title": "門診手術日增衝擊醫療險理賠 金管會邀保險業研商",
+      "date": "2026-06-10",
+      "category": "即時財經",
+      "summary": "金管會今天邀保險業開會探討醫療險理賠3大議題，包括住院手術改為門診手術後，是否放寬給予住院理賠；三班護病比入法引起「一日手術」理賠界定，以及在宅急症照護保險。其中，針對一日手術是否可擴及醫療險 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606100380.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606100380.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-10T12:57:57.000Z",
+      "displayTime": "06/10 20:57"
+    },
+    {
+      "title": "今彩539第115141期開獎",
       "date": "2026-06-10",
       "category": "即時生活",
-      "summary": "超市龍頭全聯表示，今年首度啟動「小農造星計畫」，邀請14名小農走上時尚伸展台，希望透過話題人物與產地故事，提高消費者對小農品牌的認識。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "今彩539第115141期開獎，中獎號碼39、32、35、01、04。3星彩中獎號碼351，4星彩中獎號碼8463。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606100299.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606100299.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606100378.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606100378.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-06-10T09:37:03.000Z",
-      "displayTime": "06/10 17:37"
+      "publishedAt": "2026-06-10T12:43:53.000Z",
+      "displayTime": "06/10 20:43"
+    },
+    {
+      "title": "台東貓狗遭十字弓射殺 警逮謝姓嫌犯函送",
+      "date": "2026-06-10",
+      "category": "即時社會",
+      "summary": "台東縣金峰鄉嘉蘭村發生貓狗遭十字弓箭射殺，貫穿肚子死亡。警方今天下午逮捕謝姓嫌犯，謝男表示，貓狗經常闖入他家覓食，造成生活困擾，他以為是流浪貓才射殺。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606100373.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606100373.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-10T12:22:42.000Z",
+      "displayTime": "06/10 20:22"
+    },
+    {
+      "title": "日銀總裁植田和男因病住院 將缺席下週政策會議",
+      "date": "2026-06-10",
+      "category": "即時財經",
+      "summary": "日本銀行（BOJ，日本央行）今晚宣布，日銀總裁植田和男因肝囊腫感染住院，預計將缺席15日至16日的金融政策決定會議。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606100371.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606100371.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-10T12:12:37.000Z",
+      "displayTime": "06/10 20:12"
     }
   ]
 }
