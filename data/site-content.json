@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-11T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/11 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-11-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-11T11:15:19.614Z"
+    "liveNewsUpdatedAt": "2026-06-11T14:57:06.721Z"
   },
   "lifeRadar": [
     {
@@ -791,76 +791,76 @@
   ],
   "liveNews": [
     {
-      "title": "屏東豪雨農損292萬元 西瓜最嚴重提報現金救助",
+      "title": "美伊戰爭推升能源價格 美5月PPI年升6.5%創逾3年新高",
       "date": "2026-06-11",
-      "category": "即時地方",
-      "summary": "6月接連豪雨導致農損，屏東縣政府農業處表示，截至今天全縣農損金額新台幣292萬餘元，其中以西瓜最嚴重，已將各鄉鎮達氣象參數作物品項提報農業部辦理現金救助。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606110313.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606110313.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-11T10:25:28.000Z",
-      "displayTime": "06/11 18:25"
+      "category": "即時財經",
+      "summary": "最新公布的資料顯示，美國5月生產者物價指數（PPI）年比攀升6.5%，寫下3年多來單月最高年增幅，顯示美國和以色列對伊朗開戰引發能源價格飆漲，正對美國經濟產生影響。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606110380.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202606110380.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-11T14:07:59.000Z",
+      "displayTime": "06/11 22:07"
     },
     {
-      "title": "日月潭空維區7/1加嚴 出廠2年柴油車須檢驗合格",
+      "title": "今彩539第115142期 頭獎2注中獎",
       "date": "2026-06-11",
-      "category": "即時地方",
-      "summary": "日月潭空氣品質維護區7月1日起，全面管制出廠滿2年柴油車，未取得1年內排煙檢測合格紀錄，進入日月潭將透過AI辨識開罰，不區分柴油車輛大小與用途，包含自用柴油小客車。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606110312.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606110312.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-11T10:24:26.000Z",
-      "displayTime": "06/11 18:24"
+      "category": "即時財經",
+      "summary": "今彩539第115142期開獎，中獎號碼29、20、08、15、31；派彩結果，頭獎2注中獎，各得獎金新台幣800萬元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606110379.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606110379.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-11T14:05:57.000Z",
+      "displayTime": "06/11 22:05"
     },
     {
-      "title": "出席警察節慶祝大會 賴總統：全力打擊毒品犯罪",
+      "title": "威力彩第115047期 頭獎槓龜",
+      "date": "2026-06-11",
+      "category": "即時財經",
+      "summary": "威力彩第115047期今晚開獎，第一區中獎號碼為24、22、26、07、23、33，第二區中獎號碼為08號。派彩結果，頭獎、貳獎都槓龜。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606110378.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606110378.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-11T14:02:54.000Z",
+      "displayTime": "06/11 22:02"
+    },
+    {
+      "title": "桃園警匪追逐 2路人遭涉毒犯嫌駕車衝撞命危",
       "date": "2026-06-11",
       "category": "即時社會",
-      "summary": "總統賴清德今天出席警察節慶祝大會，頒發全國模範警察獎給產後離世的北市女警陳芊雯，由女警家人代領。針對毒駕，總統表示，一定要以零容忍態度嚴格執法，全力打擊毒品犯罪。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "1輛自小客車今天晚間逃避警方追緝時，在桃園市桃園區敏盛綜合醫院旁失控打滑，撞上2名路人、2人都命危送醫，肇事駕駛意識不清也被送醫；警方在自小客車查獲毒品，案情待釐清。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606110310.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606110310.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606110377.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606110377.aspx",
       "sourceName": "中央社社會",
-      "publishedAt": "2026-06-11T10:18:21.000Z",
-      "displayTime": "06/11 18:18"
+      "publishedAt": "2026-06-11T13:58:50.000Z",
+      "displayTime": "06/11 21:58"
     },
     {
-      "title": "薪資難追物價漲幅 80%馬來西亞人成「月光族」",
+      "title": "投資人逢低買進科技類股 美國股市開高",
       "date": "2026-06-11",
       "category": "即時財經",
-      "summary": "白天上班、下班駕駛Grab，或週末兼差接案，成為許多馬來西亞家庭的生活寫照。當地學者指出，隨著生活成本攀升，約80%大馬人屬於「月光族」，收入幾乎全數用於日常開支，單靠一份薪資已難追上物價漲幅 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606110309.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202606110309.aspx",
+      "summary": "美國股市主要指數今天開盤揚升，投資人正尋求逢低買進先前下挫的科技類股，同時也密切關注中東地區戰事發展。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606110375.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606110375.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-11T10:17:19.000Z",
-      "displayTime": "06/11 18:17"
+      "publishedAt": "2026-06-11T13:54:46.000Z",
+      "displayTime": "06/11 21:54"
     },
     {
-      "title": "馬太鞍溪暴漲驚險救援工地主任 搜救人員獲表揚",
+      "title": "台中梧棲車禍 小客車自撞路樹釀2死1傷",
       "date": "2026-06-11",
-      "category": "即時地方",
-      "summary": "花蓮縣馬太鞍溪水8日暴漲，鄧姓工地主任遭洪流連人帶車沖走，歷經16小時成功獲救，花蓮縣政府今天表揚參與搶救的28名搜救人員。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時社會",
+      "summary": "台中警方今晚獲報，梧棲區有小客車衝撞路旁車輛及路樹，造成1人拋飛車外、2人受困車內，消防人員到場將3名傷者送醫，其中2人傷重不治、1人住院觀察，警方已封鎖現場調查事故原因。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606110296.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606110296.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-11T10:13:52.000Z",
-      "displayTime": "06/11 18:13"
-    },
-    {
-      "title": "財部：大額稅款案件減少 前5月土增稅年減8.9%",
-      "date": "2026-06-11",
-      "category": "即時財經",
-      "summary": "財政部今天公布全國賦稅收入統計，前5月房市相關稅目仍呈現增減互見，契稅年增6.9%，個人房地合一稅年減7.6%，另受到房地交易量及大額稅款案件減少影響，土地增值稅年減8.9%。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606110287.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606110287.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-11T09:50:32.000Z",
-      "displayTime": "06/11 17:50"
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606110374.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606110374.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-11T13:42:44.000Z",
+      "displayTime": "06/11 21:42"
     }
   ]
 }
