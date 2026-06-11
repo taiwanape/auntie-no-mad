@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-11T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/11 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-11-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-10T17:35:14.713Z"
+    "liveNewsUpdatedAt": "2026-06-11T01:40:21.210Z"
   },
   "lifeRadar": [
     {
@@ -791,6 +791,42 @@
   ],
   "liveNews": [
     {
+      "title": "英國科技新創企業找資金與合作夥伴 台灣成熱門目標",
+      "date": "2026-06-11",
+      "category": "即時科技",
+      "summary": "英國有發達的科技新創生態系，有統計顯示今年以來，整個歐洲科技業吸引的新資金，近一半是流向英國境內的新創企業。不過，如何達成規模效益、將創意有效商品化，不少英國新創企業和創業投資基金期待從台灣找 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/ait/202606110037.aspx",
+      "slug": "https://www.cna.com.tw/news/ait/202606110037.aspx",
+      "sourceName": "中央社科技",
+      "publishedAt": "2026-06-11T01:13:36.000Z",
+      "displayTime": "06/11 09:13"
+    },
+    {
+      "title": "吳德榮：未來一週鋒面南北徘徊 降雨有望逐日減緩",
+      "date": "2026-06-11",
+      "category": "即時生活",
+      "summary": "氣象專家吳德榮今天表示，未來一週滯留鋒南北徘徊，局部地區易有強對流發展，要留意雷擊、強風、瞬間強降雨等劇烈天氣；但隨著西南季風逐漸減弱，降雨有逐日減緩的趨勢。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606110022.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606110022.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-11T00:07:03.000Z",
+      "displayTime": "06/11 08:07"
+    },
+    {
+      "title": "美伊緊張情勢再起 美股3大指數跌逾1%",
+      "date": "2026-06-11",
+      "category": "即時財經",
+      "summary": "美國與伊朗緊張情勢再起，進一步增添投資人的不確定性，美股3大指數今天均下跌逾1%，晶片股賣壓未歇。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606110013.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606110013.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-10T21:34:39.000Z",
+      "displayTime": "06/11 05:34"
+    },
+    {
       "title": "川普揚言再次打擊伊朗 國際油價上揚",
       "date": "2026-06-11",
       "category": "即時財經",
@@ -798,7 +834,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202606110010.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202606110010.aspx",
-      "sourceName": "中央社財經新聞",
+      "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-10T19:59:31.000Z",
       "displayTime": "06/11 03:59"
     },
@@ -810,7 +846,7 @@
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
       "sourceUrl": "https://www.cna.com.tw/news/aopl/202606110006.aspx",
       "slug": "https://www.cna.com.tw/news/aopl/202606110006.aspx",
-      "sourceName": "中央社財經新聞",
+      "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-10T17:05:20.000Z",
       "displayTime": "06/11 01:05"
     },
@@ -822,45 +858,9 @@
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202606110004.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202606110004.aspx",
-      "sourceName": "中央社財經新聞",
+      "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-10T16:25:15.000Z",
       "displayTime": "06/11 00:25"
-    },
-    {
-      "title": "樺漢公開收購德國子公司Kontron AG 整合全球業務",
-      "date": "2026-06-11",
-      "category": "即時財經",
-      "summary": "工業電腦廠樺漢今天召開董事會，決議以每股23.5歐元（約新台幣859元）的現金價格公開收購德國子公司Kontron AG普通股。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606110003.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606110003.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-06-10T16:02:08.000Z",
-      "displayTime": "06/11 00:02"
-    },
-    {
-      "title": "台壽獲台中超巨蛋BOT最優申請人 砸近600億拚2031完成",
-      "date": "2026-06-11",
-      "category": "即時財經",
-      "summary": "中信金今天代子公司台灣人壽公告獲選為「台中市運動產業園區新建營運移轉（BOT）案」最優申請人。台壽指出，此案是國內規模最大、投資金額最高的運動產業BOT案，總投資金額近新台幣600億元，最晚在 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606100401.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606100401.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-06-10T14:40:48.000Z",
-      "displayTime": "06/10 22:40"
-    },
-    {
-      "title": "今彩539第115141期 頭獎4注中獎",
-      "date": "2026-06-11",
-      "category": "即時生活",
-      "summary": "今彩539第115141期開獎，中獎號碼39、32、35、01、04；派彩結果，頭獎4注中獎，各得獎金新台幣600萬元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606100398.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606100398.aspx",
-      "sourceName": "中央社生活醫藥",
-      "publishedAt": "2026-06-10T14:04:41.000Z",
-      "displayTime": "06/10 22:04"
     }
   ]
 }
