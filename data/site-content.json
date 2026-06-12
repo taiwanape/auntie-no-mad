@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-12T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/12 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-12-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-11T18:28:26.832Z"
+    "liveNewsUpdatedAt": "2026-06-12T01:39:41.487Z"
   },
   "lifeRadar": [
     {
@@ -818,6 +818,66 @@
   ],
   "liveNews": [
     {
+      "title": "輝達延攬安德魯斯 掌華府政府事務鞏固影響力",
+      "date": "2026-06-12",
+      "category": "即時科技",
+      "summary": "資深說客安德魯斯今天在商務社群平台「領英」發文證實，輝達（Nvidia）已聘請他主管華府相關政府事務。安德魯斯曾任英特爾政府事務長及歐巴馬政府商務部官員。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ait/202606120035.aspx",
+      "slug": "https://www.cna.com.tw/news/ait/202606120035.aspx",
+      "sourceName": "中央社科技",
+      "publishedAt": "2026-06-12T01:11:49.000Z",
+      "displayTime": "06/12 09:11"
+    },
+    {
+      "title": "台灣發展AI拚轉型「軟硬體俱佳」強權 專家提建議",
+      "date": "2026-06-12",
+      "category": "即時科技",
+      "summary": "台灣在倫敦科技週拓展國際交流合作，台灣AI卓越中心（AICoE）總召集人許永真今天在一場活動提到台灣轉型為「軟硬體俱佳」強權的野心；為達成目標，台灣從制度、人才到投資面，仍有課題待解。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/ait/202606120028.aspx",
+      "slug": "https://www.cna.com.tw/news/ait/202606120028.aspx",
+      "sourceName": "中央社科技",
+      "publishedAt": "2026-06-12T00:46:34.000Z",
+      "displayTime": "06/12 08:46"
+    },
+    {
+      "title": "SpaceX上市定價每股135美元 創美國史上最大宗IPO",
+      "date": "2026-06-12",
+      "category": "即時科技",
+      "summary": "馬斯克（Elon Musk）旗下太空探索科技公司（SpaceX）今天將首次公開募股（IPO）價格定為每股135美元，創美國史上最大規模IPO紀錄，也使這家火箭與太空船製造商躋身全球最有價值企業 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/ait/202606120026.aspx",
+      "slug": "https://www.cna.com.tw/news/ait/202606120026.aspx",
+      "sourceName": "中央社科技",
+      "publishedAt": "2026-06-12T00:29:30.000Z",
+      "displayTime": "06/12 08:29"
+    },
+    {
+      "title": "嘉市警局第一分局分隊長涉貪瀆 嘉院裁准羈押",
+      "date": "2026-06-12",
+      "category": "即時社會",
+      "summary": "嘉義地檢署偵辦嘉義市警察局第一分局何姓分隊長涉貪瀆案，檢方昨天聲押何男及連鎖電子遊戲場陳姓業者，嘉院開庭後，今天裁定何男羈押禁見、陳男以30萬元交保並限制住居。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606120022.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606120022.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-12T00:02:21.000Z",
+      "displayTime": "06/12 08:02"
+    },
+    {
+      "title": "川普撤空襲伊朗計畫 美股大漲",
+      "date": "2026-06-12",
+      "category": "即時財經",
+      "summary": "美國股市今天勁揚收紅，創兩個月來最佳單日表現，國際油價則下跌。稍早總統川普宣布取消今晚空襲伊朗的計畫，外界期待美伊即將達成協議，讓全球石油運輸恢復順暢。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606120014.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606120014.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-11T21:04:59.000Z",
+      "displayTime": "06/12 05:04"
+    },
+    {
       "title": "川普取消攻擊伊朗計畫 國際油價下挫",
       "date": "2026-06-12",
       "category": "即時財經",
@@ -825,69 +885,9 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202606120012.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202606120012.aspx",
-      "sourceName": "中央社財經新聞",
+      "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-11T20:05:53.000Z",
       "displayTime": "06/12 04:05"
-    },
-    {
-      "title": "桃園男毒駕逃警撞死2路人 查獲安非他命和吸食器",
-      "date": "2026-06-12",
-      "category": "即時社會",
-      "summary": "桃園市30歲張姓男子昨天晚間毒駕逃避警方追緝時，在桃園區敏盛綜合醫院旁撞死2名路人。警方表示，張男有安非他命毒品陽性反應，現場查獲安非他命以及吸食器，全案依法送辦。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606120008.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606120008.aspx",
-      "sourceName": "中央社社會新聞",
-      "publishedAt": "2026-06-11T18:09:43.000Z",
-      "displayTime": "06/12 02:09"
-    },
-    {
-      "title": "花蓮營養午餐弊案 副縣長顏新章100萬交保",
-      "date": "2026-06-12",
-      "category": "即時社會",
-      "summary": "檢調偵辦花蓮縣府國中小營養午餐招標案，副縣長顏新章涉嫌圖利廠商，昨天遭搜索、帶回約談，經檢調複訊，今天凌晨1時許，諭知新台幣100萬元交保。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606120007.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606120007.aspx",
-      "sourceName": "中央社社會新聞",
-      "publishedAt": "2026-06-11T17:43:41.000Z",
-      "displayTime": "06/12 01:43"
-    },
-    {
-      "title": "歐股收紅 投資人評估中東戰局及利率前景",
-      "date": "2026-06-12",
-      "category": "即時財經",
-      "summary": "中東戰事再度升溫後，歐美股市今天仍走揚，國際油價則波動不定。而隨著通膨持續走升，投資人同時也在關注美國與歐洲利率動向。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606120005.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606120005.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-06-11T17:28:36.000Z",
-      "displayTime": "06/12 01:28"
-    },
-    {
-      "title": "桃園涉毒嫌犯駕車逃警撞死2人 張善政：究責到底",
-      "date": "2026-06-12",
-      "category": "即時社會",
-      "summary": "桃園市1名涉毒嫌犯昨天晚間駕車逃避警方追緝時，在桃園區敏盛綜合醫院旁撞死2名路人。桃園市長張善政表示，嫌犯涉毒駕，一定會究責到底，已責成各單位全力協助家屬、徹查毒品來源。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606120003.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606120003.aspx",
-      "sourceName": "中央社社會新聞",
-      "publishedAt": "2026-06-11T16:48:31.000Z",
-      "displayTime": "06/12 00:48"
-    },
-    {
-      "title": "花蓮營養午餐弊案 副縣長移送複訊、代理秘書長請回",
-      "date": "2026-06-12",
-      "category": "即時社會",
-      "summary": "花蓮地檢署偵辦花蓮縣府營養午餐招標弊案，花蓮副縣長顏新章涉嫌圖利廠商遭檢方搜索，深夜11時移送地檢署複訊，代理秘書長饒忠則以證人身份約談，深夜11時許複訊後請回。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606120002.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606120002.aspx",
-      "sourceName": "中央社社會新聞",
-      "publishedAt": "2026-06-11T16:17:29.000Z",
-      "displayTime": "06/12 00:17"
     }
   ]
 }
