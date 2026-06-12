@@ -1,6 +1,6 @@
 {
-  "date": "2026-06-12",
-  "generatedAt": "2026-06-11T22:06:24.777Z",
+  "date": "2026-06-13",
+  "generatedAt": "2026-06-12T21:56:49.434Z",
   "status": "approved",
   "checks": [
     "daily images: 9/9 ready (9 OpenAI generated, 0 OpenAI reused, 0 approved fallback, 0 fallback reused)",
