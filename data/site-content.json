@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-12T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/12 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-12-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-12T01:39:41.487Z"
+    "liveNewsUpdatedAt": "2026-06-12T06:20:07.733Z"
   },
   "lifeRadar": [
     {
@@ -818,76 +818,76 @@
   ],
   "liveNews": [
     {
-      "title": "輝達延攬安德魯斯 掌華府政府事務鞏固影響力",
+      "title": "曾文水庫蓄水率升破2成 經部：9月底前供水無虞",
       "date": "2026-06-12",
-      "category": "即時科技",
-      "summary": "資深說客安德魯斯今天在商務社群平台「領英」發文證實，輝達（Nvidia）已聘請他主管華府相關政府事務。安德魯斯曾任英特爾政府事務長及歐巴馬政府商務部官員。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時生活",
+      "summary": "鋒面帶來豐沛雨量，曾文水庫蓄水率於昨天晚間突破2成。經濟部長龔明鑫今天表示，此次有鋒面助力使南部水情好轉，預估9月底前供水無虞，但因為農業灌溉部分仍有需求，將持續觀察水情。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606120167.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606120167.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-12T05:20:32.000Z",
+      "displayTime": "06/12 13:20"
+    },
+    {
+      "title": "新循環標誌亮相 彭啓明：源頭減量、永續變標配",
+      "date": "2026-06-12",
+      "category": "即時生活",
+      "summary": "環境部與國際扶輪35 22地區舉辦「Green Gather綠集」循環商品展，今天在松山文創園區開幕，環境部長彭啓明介紹全新的循環標誌，他說，減少垃圾應從源頭減量，讓永續變成標配。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ait/202606120035.aspx",
-      "slug": "https://www.cna.com.tw/news/ait/202606120035.aspx",
-      "sourceName": "中央社科技",
-      "publishedAt": "2026-06-12T01:11:49.000Z",
-      "displayTime": "06/12 09:11"
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606120165.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606120165.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-12T05:16:28.000Z",
+      "displayTime": "06/12 13:16"
     },
     {
-      "title": "台灣發展AI拚轉型「軟硬體俱佳」強權 專家提建議",
+      "title": "虎航飛新千歲班機電子艙煙霧警告 旅客安全離機",
       "date": "2026-06-12",
-      "category": "即時科技",
-      "summary": "台灣在倫敦科技週拓展國際交流合作，台灣AI卓越中心（AICoE）總召集人許永真今天在一場活動提到台灣轉型為「軟硬體俱佳」強權的野心；為達成目標，台灣從制度、人才到投資面，仍有課題待解。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/ait/202606120028.aspx",
-      "slug": "https://www.cna.com.tw/news/ait/202606120028.aspx",
-      "sourceName": "中央社科技",
-      "publishedAt": "2026-06-12T00:46:34.000Z",
-      "displayTime": "06/12 08:46"
+      "category": "即時生活",
+      "summary": "台灣虎航今天上午1架桃園飛往日本新千歲班機，落地階段發生「電子艙」煙霧警告。虎航表示，該班機沒有迫降，依航管指示，班機順利落地，旅客均安全離機，並主動通報交通部民航局。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606120158.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606120158.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-12T04:57:13.000Z",
+      "displayTime": "06/12 12:57"
     },
     {
-      "title": "SpaceX上市定價每股135美元 創美國史上最大宗IPO",
+      "title": "華新科：被動元件供不應求 AI應用占比上看2成",
       "date": "2026-06-12",
-      "category": "即時科技",
-      "summary": "馬斯克（Elon Musk）旗下太空探索科技公司（SpaceX）今天將首次公開募股（IPO）價格定為每股135美元，創美國史上最大規模IPO紀錄，也使這家火箭與太空船製造商躋身全球最有價值企業 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時財經",
+      "summary": "華科事業群旗下被動元件廠華新科總經理曾明燦今天表示，被動元件市況供不應求，供需缺口可能延續到2028年，今年華新科本身接單出貨比（B/B ratio）提升，代表接單持續大於出貨，華新科持續擴充 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/ait/202606120026.aspx",
-      "slug": "https://www.cna.com.tw/news/ait/202606120026.aspx",
-      "sourceName": "中央社科技",
-      "publishedAt": "2026-06-12T00:29:30.000Z",
-      "displayTime": "06/12 08:29"
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606120157.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606120157.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-12T04:55:11.000Z",
+      "displayTime": "06/12 12:55"
     },
     {
-      "title": "嘉市警局第一分局分隊長涉貪瀆 嘉院裁准羈押",
+      "title": "台德合作發現台灣特有種「滅絕孔雀」體型大於帝雉",
+      "date": "2026-06-12",
+      "category": "即時生活",
+      "summary": "台灣大學師生團隊和德國學者合作，發現一種台灣特有且已滅絕的鳥類，體型比現存的帝雉還要大，正式命名為「滅絕孔雀（Pavo miejue）」，近日登上國際期刊。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606120156.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606120156.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-12T04:54:09.000Z",
+      "displayTime": "06/12 12:54"
+    },
+    {
+      "title": "高雄查獲私製果酸化妝品 涉流向醫療院所遭送法辦",
       "date": "2026-06-12",
       "category": "即時社會",
-      "summary": "嘉義地檢署偵辦嘉義市警察局第一分局何姓分隊長涉貪瀆案，檢方昨天聲押何男及連鎖電子遊戲場陳姓業者，嘉院開庭後，今天裁定何男羈押禁見、陳男以30萬元交保並限制住居。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "高雄市衛生局查獲有化妝品業者涉嫌未具代理商資格，私自製造大批來源不明果酸類化妝品，並疑似販售至多處醫療院所，衛生局今天表示，已將業者移送法辦。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606120022.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606120022.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606120155.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606120155.aspx",
       "sourceName": "中央社社會",
-      "publishedAt": "2026-06-12T00:02:21.000Z",
-      "displayTime": "06/12 08:02"
-    },
-    {
-      "title": "川普撤空襲伊朗計畫 美股大漲",
-      "date": "2026-06-12",
-      "category": "即時財經",
-      "summary": "美國股市今天勁揚收紅，創兩個月來最佳單日表現，國際油價則下跌。稍早總統川普宣布取消今晚空襲伊朗的計畫，外界期待美伊即將達成協議，讓全球石油運輸恢復順暢。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606120014.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606120014.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-11T21:04:59.000Z",
-      "displayTime": "06/12 05:04"
-    },
-    {
-      "title": "川普取消攻擊伊朗計畫 國際油價下挫",
-      "date": "2026-06-12",
-      "category": "即時財經",
-      "summary": "美國總統川普（Donald Trump）在數小時內宣布又取消對伊朗的空襲計畫，讓外界更加期待持續3個多月的美伊戰爭即將達成終戰協議，國際油價今天收低。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606120012.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606120012.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-11T20:05:53.000Z",
-      "displayTime": "06/12 04:05"
+      "publishedAt": "2026-06-12T04:52:06.000Z",
+      "displayTime": "06/12 12:52"
     }
   ]
 }
