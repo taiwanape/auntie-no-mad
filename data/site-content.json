@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-13T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/13 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-13-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-13T13:13:03.339Z"
+    "liveNewsUpdatedAt": "2026-06-13T15:11:09.213Z"
   },
   "lifeRadar": [
     {
@@ -845,14 +845,62 @@
   ],
   "liveNews": [
     {
-      "title": "今彩539第115144期開獎",
+      "title": "今彩539第115144期 頭獎1注中獎",
+      "date": "2026-06-13",
+      "category": "即時生活",
+      "summary": "今彩539第115144期開獎，中獎號碼34、06、05、36、04；派彩結果，頭獎1注中獎，獎金新台幣800萬元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606130206.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606130206.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-13T14:04:01.000Z",
+      "displayTime": "06/13 22:04"
+    },
+    {
+      "title": "水利署：財劃法修正致地方財源增 治水依財力分級補助",
       "date": "2026-06-13",
       "category": "即時財經",
+      "summary": "針對中央協助縣市管河川及區域排水治理事宜，水利署今天說明，凱米颱風後，經濟部以最快速度於民國113年8月底核定新台幣12.3億元補助南投推動外轆排水治理，但縣府未能發包、無法辦理保留；財劃法修 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606130205.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606130205.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-13T14:01:59.000Z",
+      "displayTime": "06/13 22:01"
+    },
+    {
+      "title": "高雄民生醫院爆登革熱群聚 篩檢逾千人結果都陰性",
+      "date": "2026-06-13",
+      "category": "即時地方",
+      "summary": "高雄民生醫院發生登革熱群聚感染，共有5名住院病患確診本土登革熱。高雄市衛生局表示，完成1009人採檢，結果均為陰性。此外，院方捕獲的3隻雌蚊，經登革熱檢驗結果為陰性。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606130203.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606130203.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-13T13:34:52.000Z",
+      "displayTime": "06/13 21:34"
+    },
+    {
+      "title": "楊双子演講談臺灣漫遊錄 知識分子要承擔社會責任",
+      "date": "2026-06-13",
+      "category": "即時生活",
+      "summary": "上個月以「臺灣漫遊錄」獲國際布克獎的作家楊双子，今天出席「吳三連獎第44屆得主文藝講座」，楊双子表示，「願意承擔社會責任才叫知識分子」，期許年輕人看重這片土地。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/acul/202606130198.aspx",
+      "slug": "https://www.cna.com.tw/news/acul/202606130198.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-13T12:54:39.000Z",
+      "displayTime": "06/13 20:54"
+    },
+    {
+      "title": "今彩539第115144期開獎",
+      "date": "2026-06-13",
+      "category": "即時生活",
       "summary": "今彩539第115144期開獎，中獎號碼34、06、05、36、04。3星彩中獎號碼037，4星彩中獎號碼6908。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202606130197.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202606130197.aspx",
-      "sourceName": "中央社產經證券",
+      "sourceName": "中央社生活",
       "publishedAt": "2026-06-13T12:42:36.000Z",
       "displayTime": "06/13 20:42"
     },
@@ -867,54 +915,6 @@
       "sourceName": "中央社地方",
       "publishedAt": "2026-06-13T12:37:32.000Z",
       "displayTime": "06/13 20:37"
-    },
-    {
-      "title": "自小客車宜蘭市區自撞護欄1死4傷 肇因待查",
-      "date": "2026-06-13",
-      "category": "即時社會",
-      "summary": "1名老翁今天開車行經宜蘭市區路段時，不明原因衝出路外自撞護欄，再衝入田間，造成1名婦人乘客傷重不治，老翁與其他3名乘客也分別受輕重傷，詳細肇事原因待警方調查。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606130194.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606130194.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-13T12:30:30.000Z",
-      "displayTime": "06/13 20:30"
-    },
-    {
-      "title": "台泥綠能案場疑涉弊 南檢聲押禁見3幹部獲准",
-      "date": "2026-06-13",
-      "category": "即時社會",
-      "summary": "台南地檢偵辦台泥綠能公司幹部涉嫌背信等案件，昨天前往12處執行搜索扣押證物，傳、拘被告共7人，訊問後向法院聲押王姓資深專案經理、莊姓總經理特助、謝姓副理獲准。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606130191.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606130191.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-13T12:21:24.000Z",
-      "displayTime": "06/13 20:21"
-    },
-    {
-      "title": "澎湖五德石滬小魚群擱淺 民眾潮間帶圍觀",
-      "date": "2026-06-13",
-      "category": "即時地方",
-      "summary": "澎湖五德一處石滬，今天海水退潮時，罕見出現有大量的臭肚等小魚群受困擱淺在滬內的淺灘中，等待海水漲潮再洄游，頓時吸引民眾的圍觀。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606130187.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606130187.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-13T11:59:15.000Z",
-      "displayTime": "06/13 19:59"
-    },
-    {
-      "title": "中國海警船綠島海域廣播挑釁 海巡回嗆互不隸屬驅離",
-      "date": "2026-06-13",
-      "category": "即時社會",
-      "summary": "海巡署表示，2艘中國海警船今天出現在綠島東南東方60浬海域，經派艦艇在現場監控，雙方相距僅2浬，中國海警船用廣播發出挑釁言詞，海巡艦艇回嗆雙方不隸屬並強勢驅離。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606130185.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606130185.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-13T11:55:10.000Z",
-      "displayTime": "06/13 19:55"
     }
   ]
 }
