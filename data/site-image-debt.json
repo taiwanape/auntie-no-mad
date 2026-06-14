@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "policy": "Historical pages may remain direct-linkable, but approved fallback primary images must be regenerated before those pages are promoted in archive, sitemap, RSS, JSON feed, homepage, or social surfaces.",
-  "taipeiDate": "2026-06-14",
+  "taipeiDate": "2026-06-15",
   "summary": {
     "legacyApprovedPrimaryImages": 0,
     "exposedLegacyApprovedPrimaryImages": 0,
