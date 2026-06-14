@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-13T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/13 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-13-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-14T10:15:45.913Z"
+    "liveNewsUpdatedAt": "2026-06-14T12:17:35.400Z"
   },
   "lifeRadar": [
     {
@@ -845,76 +845,76 @@
   ],
   "liveNews": [
     {
-      "title": "民生醫院登革熱群聚增至6例 疾管署：尚無疫情外擴",
+      "title": "晶采：蘇漢傑辭世 將緊急召開董事會選新任董事長",
+      "date": "2026-06-14",
+      "category": "即時財經",
+      "summary": "顯示器模組廠晶采董事長蘇漢傑於6月13日辭世，晶采表示，將緊急召開董事會推選新任董事長。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606140176.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606140176.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-14T11:40:55.000Z",
+      "displayTime": "06/14 19:40"
+    },
+    {
+      "title": "高中以下教師資格考到考率94.12% 6/15公布答案",
       "date": "2026-06-14",
       "category": "即時生活",
-      "summary": "高雄市立民生醫院登革熱群聚事件，疾管署成立機動防疫隊，截至今天指標案住院期間相鄰病室再檢出1例登革熱陽性確診者，至今累計6例，目前尚無疫情外擴情形，預計監測至7月12日。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "115年高中以下學校及幼兒園教師資格考試今天舉行，應到人數1萬426人，9813人到考，到考率94.12%，6月15日公布試題及選擇題參考答案，7月29日公布考試結果。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606140137.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606140137.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606140175.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606140175.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-06-14T08:51:28.000Z",
-      "displayTime": "06/14 16:51"
+      "publishedAt": "2026-06-14T11:36:53.000Z",
+      "displayTime": "06/14 19:36"
     },
     {
-      "title": "出席奧地利僑宴 盧秀燕：讓更多人看見台灣",
+      "title": "吳宗憲推「救護綠燈」政見 盼縮短送醫時間",
       "date": "2026-06-14",
       "category": "即時地方",
-      "summary": "台中市長盧秀燕率團訪問歐洲，於奧地利時間13日參訪奧地利國會大廈後，當晚出席僑宴與僑胞交流，她表示，大家肩負向世界傳遞台灣真實聲音的重責，才能讓更多人看見台灣。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606140136.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606140136.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-14T08:50:26.000Z",
-      "displayTime": "06/14 16:50"
-    },
-    {
-      "title": "民眾黨頻傳有人退黨 柯文哲：如皮膚代謝有進有出",
-      "date": "2026-06-14",
-      "category": "即時地方",
-      "summary": "民眾黨雲林黨部今天開黨員志工座談會，創黨主席柯文哲與黨主席黃國昌到場傾聽地方意見，被問及近日頻傳有人退黨，柯文哲以皮膚代謝為例，「有進有出」，黨員持續增加、民眾黨成長中。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aipl/202606140135.aspx",
-      "slug": "https://www.cna.com.tw/news/aipl/202606140135.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-14T08:30:24.000Z",
-      "displayTime": "06/14 16:30"
-    },
-    {
-      "title": "彰化雲林台南豪雨特報 苗栗及中南部留意大雨",
-      "date": "2026-06-14",
-      "category": "即時生活",
-      "summary": "中央氣象署發布豪雨特報，西南風影響，易有短延時強降雨，今天彰化縣、雲林縣及台南市有局部大雨或豪雨發生，苗栗及中南部地區有局部大雨發生的機率。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "國民黨宜蘭縣長參選人吳宗憲今天推出醫療交通政見「救護綠燈」計畫，盼藉由建置智慧交通系統，在救護車執勤時串聯沿線號誌優先放行，縮短送醫時間以搶救生命。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606140134.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606140134.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-14T08:30:22.000Z",
-      "displayTime": "06/14 16:30"
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606140173.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606140173.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-14T11:28:49.000Z",
+      "displayTime": "06/14 19:28"
     },
     {
-      "title": "像素藝術展桃園登場 台灣藝術家打造沉浸遊戲間",
+      "title": "菲律賓128年國慶 新北辦嘉年華移工嗨爆板橋體育館",
       "date": "2026-06-14",
       "category": "即時地方",
-      "summary": "受復古風盛行影響，越來越多民眾關注像素藝術創作，台灣像素藝術家KAI也以復古遊戲機「經典四色」視窗風格，打造9大主題展區與互動體驗，邀民眾化身遊戲主角探索像素世界。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606140132.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606140132.aspx",
+      "summary": "慶祝菲律賓獨立128週年國慶，新北市勞工局與菲律賓馬尼拉經濟文化辦事處合辦慶祝活動，吸引眾多移工到場共襄盛舉，共同沉浸在充滿菲式熱情的夏日嘉年華。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606140172.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606140172.aspx",
       "sourceName": "中央社地方",
-      "publishedAt": "2026-06-14T08:22:17.000Z",
-      "displayTime": "06/14 16:22"
+      "publishedAt": "2026-06-14T11:27:47.000Z",
+      "displayTime": "06/14 19:27"
     },
     {
-      "title": "HIV校車司機遭疑曾匡列未採檢 疾管署：鼓勵為主",
+      "title": "SpaceX上市熱 官媒指中國不需要不複製引嘲諷",
       "date": "2026-06-14",
-      "category": "即時生活",
-      "summary": "中部某校車司機感染HIV涉性侵，外界質疑司機多年前曾匡列為其他個案接觸者卻未強制採檢，疾管署今天說明，擔憂寒蟬效應，確診者不願意主動提供接觸者，因此篩檢以鼓勵為主。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時科技",
+      "summary": "美國太空科技企業SpaceX在12日掛牌上市，受到中國網友熱烈關注。中共官媒13日發表一篇對中國航太專家的專訪，指「中國不需要、也不可能複製SpaceX」，還稱中國有機會彎道超車，引起熱議。有 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/acn/202606140171.aspx",
+      "slug": "https://www.cna.com.tw/news/acn/202606140171.aspx",
+      "sourceName": "中央社科技",
+      "publishedAt": "2026-06-14T11:26:44.000Z",
+      "displayTime": "06/14 19:26"
+    },
+    {
+      "title": "國際泳渡澎湖灣 澳洲湯馬斯、台灣許雅喬雙料冠軍",
+      "date": "2026-06-14",
+      "category": "即時地方",
+      "summary": "「2026 PENGHU OCEANMAN國際泳渡澎湖灣」今天圓滿落幕，澳洲湯馬斯與台灣許雅喬在國際組10公里和泳渡組5公里項目，分別拿下男、女子組冠軍。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606140131.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606140131.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-14T08:22:15.000Z",
-      "displayTime": "06/14 16:22"
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606140170.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606140170.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-14T11:23:42.000Z",
+      "displayTime": "06/14 19:23"
     }
   ]
 }
