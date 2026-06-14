@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-13T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/13 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-13-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-14T01:37:21.889Z"
+    "liveNewsUpdatedAt": "2026-06-14T06:21:27.229Z"
   },
   "lifeRadar": [
     {
@@ -845,76 +845,76 @@
   ],
   "liveNews": [
     {
-      "title": "工研院歐辦30週年 台德合作從取經走向共同創新",
+      "title": "宜蘭安農溪泛舟翻覆溺斃 負責人夫妻各判刑8月",
       "date": "2026-06-14",
-      "category": "即時科技",
-      "summary": "工研院慶祝德國辦公室成立30週年，並與德國最大應用研究機構佛羅恩霍夫協會續簽合作備忘錄。從30年前赴德取經機械與自動化技術，到如今攜手投入AI與新世代電池研發，台德科研合作已從技術交流走向共同 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/ait/202606140013.aspx",
-      "slug": "https://www.cna.com.tw/news/ait/202606140013.aspx",
-      "sourceName": "中央社科技",
-      "publishedAt": "2026-06-14T00:24:54.000Z",
-      "displayTime": "06/14 08:24"
+      "category": "即時社會",
+      "summary": "宜蘭縣安農溪去年發生泛舟艇翻覆造成遊客陳女溺斃，業者游女與負責警戒、救護的丈夫李男，未依規定配置救生圈及隨行救生艇，法院審理後各判處8月徒刑。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606140088.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606140088.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-14T05:22:39.000Z",
+      "displayTime": "06/14 13:22"
     },
     {
-      "title": "紙風車屏東團「說故事劇場」 打開孩子想像力",
+      "title": "新北好茶反賄防詐 北檢籲勇於檢舉妨害選舉行為",
+      "date": "2026-06-14",
+      "category": "即時社會",
+      "summary": "北檢結合「2026新北好茶」春茶市集活動，今天在新北市坪林茶業博物館辦理反賄選、防詐騙宣導。北檢表示，11月地方公職人員選舉在即，呼籲民眾勇於檢舉妨害選舉不法行為。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606140086.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606140086.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-14T05:19:35.000Z",
+      "displayTime": "06/14 13:19"
+    },
+    {
+      "title": "家事移工冒雨上街抗議 籲納長照僱用改善過勞",
       "date": "2026-06-14",
       "category": "即時生活",
-      "summary": "紙風車屏東團「說故事劇場」13日在屏東縣立圖書館總館演出，其中「粉圓王國歷險記」從生活物件出發，讓小朋友一看到扮演國王的藍白拖鞋出場就哈哈大笑，打開了孩子的想像力。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/acul/202606140012.aspx",
-      "slug": "https://www.cna.com.tw/news/acul/202606140012.aspx",
+      "summary": "近百名家事移工今天不畏風雨，舉行抗議行動指稱，因長者、障礙者等24小時照顧需求，淪為無法休假的代罪羔羊，呼籲將移工納入長照人力。衛福部說，涉及層面廣泛，須審慎評估。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606140083.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606140083.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-06-14T00:14:52.000Z",
-      "displayTime": "06/14 08:14"
+      "publishedAt": "2026-06-14T05:10:27.000Z",
+      "displayTime": "06/14 13:10"
     },
     {
-      "title": "科技領袖向川普政府示警 憂Anthropic先進模型風險",
+      "title": "美國考慮鬆綁進口限制 菲律賓鳳梨輸出可增30倍",
       "date": "2026-06-14",
-      "category": "即時科技",
-      "summary": "知情人士透露，亞馬遜（Amazon）執行長賈西（Andy Jassy）本週與多位科技業領袖會見美國川普政府高層時，對人工智慧（AI）公司Anthropic最先進模型可能帶來的安全風險表達憂慮。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606140007.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202606140007.aspx",
-      "sourceName": "中央社科技",
-      "publishedAt": "2026-06-13T20:29:35.000Z",
-      "displayTime": "06/14 04:29"
-    },
-    {
-      "title": "南投加走寮溪邊坡崩形成堰塞湖 估蓄水10萬公噸",
-      "date": "2026-06-14",
-      "category": "即時地方",
-      "summary": "近期降雨影響，竹山鎮加走寮溪邊坡崩塌阻塞河道形成堰塞湖，農村水保署勘查蓄水量約10萬公噸，若潰決下游水位估升70公分，目前下游河道沿線無保全住戶，整體直接影響有限。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606140005.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606140005.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-13T17:51:28.000Z",
-      "displayTime": "06/14 01:51"
-    },
-    {
-      "title": "韓星東海壓軸登KKBOX 唱中文歌「約定」有雙重含意",
-      "date": "2026-06-14",
-      "category": "即時娛樂",
-      "summary": "韓星東海今晚壓軸登上KKBOX風雲榜，演唱RACE及HAErise，並跟韋禮安合唱「最好的朋友」。東海透露，選唱中文歌「約定」是希望能再跟粉絲見面，未來也想在台北小巨蛋開唱。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時財經",
+      "summary": "美國政府正考慮放寬菲律賓鳳梨鮮果實進口限制，一旦符合病蟲害防疫條件，菲律賓對美出口量可望由目前每年不到600公噸，擴增至1萬9200公噸，增幅超過30倍。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/amov/202606130210.aspx",
-      "slug": "https://www.cna.com.tw/news/amov/202606130210.aspx",
-      "sourceName": "中央社娛樂",
-      "publishedAt": "2026-06-13T15:10:13.000Z",
-      "displayTime": "06/13 23:10"
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606140081.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202606140081.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-14T04:59:22.000Z",
+      "displayTime": "06/14 12:59"
     },
     {
-      "title": "盧秀燕率團訪歐 與奧地利巴登市長辛策麗交流",
+      "title": "陽管處引導農友減藥 保育類赤腹游蛇重返竹子湖",
       "date": "2026-06-14",
-      "category": "即時地方",
-      "summary": "台中市長盧秀燕率團訪歐，12日與奧地利巴登市長辛策麗交流，並見證世界不動產聯合會新任會長張麗莉接任。盧秀燕表示，看到優秀女性能在各領域發光發熱，她感到無比驕傲。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時生活",
+      "summary": "目前正值陽明山海芋季與繡球花季，國家公園署今天說，陽明山國家公園管理處長年推動友善農業輔導計畫，實踐花卉減藥，已有51位農友加入，更有8人以「全程不用農藥及化學肥料」種植海芋，讓對環境極度敏感 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606130208.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606130208.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-13T14:19:05.000Z",
-      "displayTime": "06/13 22:19"
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606140080.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606140080.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-14T04:55:20.000Z",
+      "displayTime": "06/14 12:55"
+    },
+    {
+      "title": "林俊傑朝聖心情助陣鳥巢開唱 讚蔡依林華人驕傲",
+      "date": "2026-06-14",
+      "category": "即時生活",
+      "summary": "歌后蔡依林從12日起在北京鳥巢連續舉辦3場PLEASURE演唱會，昨晚邀請歌王林俊傑當嘉賓，合唱「第三人稱」跟「修煉愛情」，林俊傑讚美蔡依林是「華人驕傲」，並說是抱著朝聖心情來看。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/amov/202606140079.aspx",
+      "slug": "https://www.cna.com.tw/news/amov/202606140079.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-14T04:47:18.000Z",
+      "displayTime": "06/14 12:47"
     }
   ]
 }
