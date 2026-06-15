@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-13T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/13 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-13-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-15T13:27:55.480Z"
+    "liveNewsUpdatedAt": "2026-06-15T18:17:12.184Z"
   },
   "lifeRadar": [
     {
@@ -845,76 +845,76 @@
   ],
   "liveNews": [
     {
-      "title": "國民黨竹北市長初選民調結果出爐 吳旭智勝出",
-      "date": "2026-06-15",
+      "title": "美國與伊朗宣布達成和平協議 歐洲股市多收漲",
+      "date": "2026-06-16",
+      "category": "即時財經",
+      "summary": "美國與伊朗交戰數個月後，雙方稍早宣布達成終戰協議，受到這項消息提振，歐洲股市主要指數今天大多收高。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606160002.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606160002.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-15T16:49:48.000Z",
+      "displayTime": "06/16 00:49"
+    },
+    {
+      "title": "Threads停權災情 數發部：維護數位權益、啟動調查",
+      "date": "2026-06-16",
+      "category": "即時財經",
+      "summary": "Meta旗下社群平台Threads今天傳出無預警停權災情，數位發展部晚間表示，已請Meta積極協助復權並啟動調查，以維護民眾數位權益。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ait/202606150305.aspx",
+      "slug": "https://www.cna.com.tw/news/ait/202606150305.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-15T15:05:29.000Z",
+      "displayTime": "06/15 23:05"
+    },
+    {
+      "title": "SpaceX掛牌首日股價飆近20% 散戶搶破頭功不可沒",
+      "date": "2026-06-16",
+      "category": "即時財經",
+      "summary": "美國太空探索科技公司（SpaceX）股票上市首日價格飆漲近20%，專家將部分歸功於散戶追捧。不過參與這場超大規模首次公開募股（IPO）的競爭激烈，有人則是乾脆直接進場購買。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606150304.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202606150304.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-15T14:26:24.000Z",
+      "displayTime": "06/15 22:26"
+    },
+    {
+      "title": "江怡臻投入李辦輔選 李四川：並肩打贏這場選戰",
+      "date": "2026-06-16",
       "category": "即時地方",
-      "summary": "國民黨新竹縣黨部今天公布竹北市長內參民調結果，投入初選的竹縣議員邱靖雅、林禹佑、吳旭智及竹北市民代表會主席林啟賢4人中，最終由吳旭智勝出，將代表藍營角逐下屆竹北市長。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "國民黨新北市議員江怡臻日前宣布棄選連任，今天出任國民黨新北市長參選人李四川競選辦公室主任，李四川對她的參與表示感謝；蘇巧慧競辦對此表示，各有節奏、尊重祝福。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aipl/202606150276.aspx",
-      "slug": "https://www.cna.com.tw/news/aipl/202606150276.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606150303.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606150303.aspx",
       "sourceName": "中央社地方",
-      "publishedAt": "2026-06-15T12:09:19.000Z",
-      "displayTime": "06/15 20:09"
+      "publishedAt": "2026-06-15T14:13:22.000Z",
+      "displayTime": "06/15 22:13"
     },
     {
-      "title": "大雨挹注 曾文水庫蓄水率破3成、石門水庫逾9成",
-      "date": "2026-06-15",
+      "title": "今彩539第115145期 頭獎槓龜",
+      "date": "2026-06-16",
       "category": "即時生活",
-      "summary": "水利署統計，自4日至15日下午3時，全台主要水庫預計進帳6.2億，其中約有4.8億噸水已入庫。截至今天晚間6時，曾文水庫蓄水率已突破3成。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606150275.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606150275.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-15T12:05:17.000Z",
-      "displayTime": "06/15 20:05"
-    },
-    {
-      "title": "台灣遠距醫療印尼開通 線上對接海外照護",
-      "date": "2026-06-15",
-      "category": "即時生活",
-      "summary": "在衛生福利部與台灣遠距醫療服務聯盟推動下，公益遠距醫療「看醫生」平台，於13日在雅加達舉行印尼地區服務啟動儀式，將台灣醫療資源線上對接，為在印尼的台商與僑胞建立遠距健康照護管道。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "今彩539第115145期開獎，中獎號碼28、36、12、24、16；派彩結果，頭獎槓龜。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606150269.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606150269.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606150302.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606150302.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-06-15T11:41:04.000Z",
-      "displayTime": "06/15 19:41"
+      "publishedAt": "2026-06-15T14:06:20.000Z",
+      "displayTime": "06/15 22:06"
     },
     {
-      "title": "豪雨農損增至3276萬元 一期水稻損失逾700萬元最嚴重",
-      "date": "2026-06-15",
+      "title": "威力彩第115048期 頭獎槓龜",
+      "date": "2026-06-16",
       "category": "即時生活",
-      "summary": "農業部最新統計，8日的豪雨造成部分農損，到今天下午5時，農業產物及民間設施估計損失新台幣3276萬元，以一期水稻災情最嚴重。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606150267.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606150267.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-15T11:35:59.000Z",
-      "displayTime": "06/15 19:35"
-    },
-    {
-      "title": "高雄市長選舉民調 陳其邁：機構效應很正常",
-      "date": "2026-06-15",
-      "category": "即時地方",
-      "summary": "高雄市長陳其邁今天表示，如果1週公布3份民意調查，有些本來就有機構效應也很正常；最終是否投票，包括民眾支持度和投票動機，如果大家都不投票，民調高也沒用。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "威力彩第115048期今晚開獎，第一區中獎號碼為28、17、29、25、04、19，第二區中獎號碼為06號。派彩結果，頭獎槓龜。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606150264.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606150264.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-15T11:11:53.000Z",
-      "displayTime": "06/15 19:11"
-    },
-    {
-      "title": "師大美術館推特展 一窺陳澄波、黃土水的老師們",
-      "date": "2026-06-15",
-      "category": "即時生活",
-      "summary": "陳澄波、黃土水、陳進等台灣前輩藝術家近年漸為大眾所知，師大美術館即日起推出「共生之華」展，帶領觀眾一窺這些前輩藝術家的老師們如何進一步影響台灣近現代美術。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/acul/202606150263.aspx",
-      "slug": "https://www.cna.com.tw/news/acul/202606150263.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606150301.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606150301.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-06-15T11:10:50.000Z",
-      "displayTime": "06/15 19:10"
+      "publishedAt": "2026-06-15T14:04:17.000Z",
+      "displayTime": "06/15 22:04"
     }
   ]
 }
