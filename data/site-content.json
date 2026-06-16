@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-13T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/13 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-13-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-15T18:17:12.184Z"
+    "liveNewsUpdatedAt": "2026-06-16T01:47:02.611Z"
   },
   "lifeRadar": [
     {
@@ -845,6 +845,66 @@
   ],
   "liveNews": [
     {
+      "title": "吳德榮：端午節起晴熱一週 熱帶系統估週末發展",
+      "date": "2026-06-16",
+      "category": "即時生活",
+      "summary": "氣象專家吳德榮說，今明兩天未降雨時偏熱，端午節（19日）起至25日各地晴熱如盛夏；20、21日前後菲律賓東方有熱帶擾動發展，預估無侵台機會，但仍有不確定性，需持續觀察。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606160018.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606160018.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-16T00:30:31.000Z",
+      "displayTime": "06/16 08:30"
+    },
+    {
+      "title": "SpaceX「穿綠鞋」超額集資857億美元 股價2天漲幅逾4成",
+      "date": "2026-06-16",
+      "category": "即時財經",
+      "summary": "美國太空探索科技公司SpaceX今天公布新股承銷業者行使「綠鞋期權」，12日上市集資約857億美元，高於原計劃規模。投資人今天繼續追捧SpaceX，股價大漲近2成，2天交易漲幅已超過4成。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606160014.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606160014.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-16T00:00:22.000Z",
+      "displayTime": "06/16 08:00"
+    },
+    {
+      "title": "中東局勢趨緩、晶片股強勁 科技股領軍美股創高",
+      "date": "2026-06-16",
+      "category": "即時財經",
+      "summary": "中東戰局現曙光，油價走低，美股今天在科技類股帶領下，道瓊指數再創歷史新高51671.03點。太空探測公司SpaceX第2日交易持續受投資人追捧，晶片股也大幅反彈。市場期待美伊本週簽署協議，荷莫 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606160013.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606160013.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-15T23:52:20.000Z",
+      "displayTime": "06/16 07:52"
+    },
+    {
+      "title": "美伊達成協議 美股道瓊費半收盤創新高",
+      "date": "2026-06-16",
+      "category": "即時財經",
+      "summary": "美國與伊朗宣布達成和平協議，促使原油價格大幅下跌，帶動美國其他主要股指上揚，道瓊工業指數和費城半導體指數今天收盤也創下歷史新高。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606160010.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606160010.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-15T22:14:10.000Z",
+      "displayTime": "06/16 06:14"
+    },
+    {
+      "title": "美國與伊朗達成終戰協議 國際油價大跌",
+      "date": "2026-06-16",
+      "category": "即時財經",
+      "summary": "美國與伊朗宣布達成結束中東地區戰事的協議，且要重新開放荷莫茲海峽（Strait of Hormuz），受到這項消息影響，國際油價今天大幅下挫。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606160007.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606160007.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-15T21:00:03.000Z",
+      "displayTime": "06/16 05:00"
+    },
+    {
       "title": "美國與伊朗宣布達成和平協議 歐洲股市多收漲",
       "date": "2026-06-16",
       "category": "即時財經",
@@ -855,66 +915,6 @@
       "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-15T16:49:48.000Z",
       "displayTime": "06/16 00:49"
-    },
-    {
-      "title": "Threads停權災情 數發部：維護數位權益、啟動調查",
-      "date": "2026-06-16",
-      "category": "即時財經",
-      "summary": "Meta旗下社群平台Threads今天傳出無預警停權災情，數位發展部晚間表示，已請Meta積極協助復權並啟動調查，以維護民眾數位權益。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ait/202606150305.aspx",
-      "slug": "https://www.cna.com.tw/news/ait/202606150305.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-15T15:05:29.000Z",
-      "displayTime": "06/15 23:05"
-    },
-    {
-      "title": "SpaceX掛牌首日股價飆近20% 散戶搶破頭功不可沒",
-      "date": "2026-06-16",
-      "category": "即時財經",
-      "summary": "美國太空探索科技公司（SpaceX）股票上市首日價格飆漲近20%，專家將部分歸功於散戶追捧。不過參與這場超大規模首次公開募股（IPO）的競爭激烈，有人則是乾脆直接進場購買。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606150304.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202606150304.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-15T14:26:24.000Z",
-      "displayTime": "06/15 22:26"
-    },
-    {
-      "title": "江怡臻投入李辦輔選 李四川：並肩打贏這場選戰",
-      "date": "2026-06-16",
-      "category": "即時地方",
-      "summary": "國民黨新北市議員江怡臻日前宣布棄選連任，今天出任國民黨新北市長參選人李四川競選辦公室主任，李四川對她的參與表示感謝；蘇巧慧競辦對此表示，各有節奏、尊重祝福。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606150303.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606150303.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-15T14:13:22.000Z",
-      "displayTime": "06/15 22:13"
-    },
-    {
-      "title": "今彩539第115145期 頭獎槓龜",
-      "date": "2026-06-16",
-      "category": "即時生活",
-      "summary": "今彩539第115145期開獎，中獎號碼28、36、12、24、16；派彩結果，頭獎槓龜。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606150302.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606150302.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-15T14:06:20.000Z",
-      "displayTime": "06/15 22:06"
-    },
-    {
-      "title": "威力彩第115048期 頭獎槓龜",
-      "date": "2026-06-16",
-      "category": "即時生活",
-      "summary": "威力彩第115048期今晚開獎，第一區中獎號碼為28、17、29、25、04、19，第二區中獎號碼為06號。派彩結果，頭獎槓龜。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606150301.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606150301.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-15T14:04:17.000Z",
-      "displayTime": "06/15 22:04"
     }
   ]
 }
