@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-13T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/13 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-13-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-17T16:05:26.670Z"
+    "liveNewsUpdatedAt": "2026-06-18T01:43:18.302Z"
   },
   "lifeRadar": [
     {
@@ -845,76 +845,76 @@
   ],
   "liveNews": [
     {
-      "title": "台青年加入捷克新創團隊 投身垂直起降飛機研發",
-      "date": "2026-06-18",
-      "category": "即時科技",
-      "summary": "在全球先進空中交通產業快速發展之際，台灣青年林澤以飛機設計師身分加入捷克航空新創公司Zuri，研發航程700公里的混合動力垂直起降飛機（VTOL），期望提供乘客「點對點」的載運服務，改變未來的 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606170372.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202606170372.aspx",
-      "sourceName": "中央社科技",
-      "publishedAt": "2026-06-17T14:51:47.000Z",
-      "displayTime": "06/17 22:51"
-    },
-    {
-      "title": "德國「薩克森矽谷日」盛大舉行 台灣首獲邀擔任夥伴國",
+      "title": "美聯準會放鷹 投顧：台股提防端午連假前賣壓",
       "date": "2026-06-18",
       "category": "即時財經",
-      "summary": "德國最大半導體產業聚落「薩克森矽谷」本週在德勒斯登舉辦年度盛會，台灣首度獲邀擔任官方夥伴主題國。薩克森邦總理克里契麥會上公開肯定台灣高科技產業成就，並承諾全力支持台積電德國廠建廠計畫順利推進。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606170368.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606170368.aspx",
+      "summary": "美國聯邦準備理事會（Fed）維持利率不變，並大幅上修通膨預測，美股3大指數收黑，台積電美國存託憑證（ADR）逆勢收漲1.48%。投顧指出，地緣政治風險降溫有助穩定全球投資情緒，台股基本面基石穩 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606180022.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606180022.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-17T14:16:37.000Z",
-      "displayTime": "06/17 22:16"
+      "publishedAt": "2026-06-18T00:27:52.000Z",
+      "displayTime": "06/18 08:27"
     },
     {
-      "title": "艾克爾台積電簽10年合作協議 強化美半導體先進封裝",
-      "date": "2026-06-18",
-      "category": "即時財經",
-      "summary": "封測廠艾克爾（Amkor）於美國時間16日透過新聞稿宣布，與台積電簽署一項為期10年的合作協議，建立密切合作關係，提升美國亞利桑那州先進半導體封裝能力，強化並加速美國半導體供應鏈生態系的投資發 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606170367.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606170367.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-17T14:11:35.000Z",
-      "displayTime": "06/17 22:11"
-    },
-    {
-      "title": "能源成本居高不下 美5月零售銷售超出預期",
-      "date": "2026-06-18",
-      "category": "即時財經",
-      "summary": "美國政府今天公布的數據顯示，美國5月零售銷售表現超出市場預期，主要受惠於汽油價格因中東戰爭衝擊而維持高檔，帶動加油站銷售額增加。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606170364.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202606170364.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-17T14:04:29.000Z",
-      "displayTime": "06/17 22:04"
-    },
-    {
-      "title": "今彩539第115147期 頭獎1注中獎",
+      "title": "彰花東防高溫 吳德榮：端午連假最熱逾38度",
       "date": "2026-06-18",
       "category": "即時生活",
-      "summary": "今彩539第115147期開獎，中獎號碼37、08、16、15、10；派彩結果，頭獎1注中獎，獎金新台幣800萬元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606170363.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606170363.aspx",
+      "summary": "氣象署今天針對彰化、花東地區發布高溫資訊，防攝氏36度以上高溫。氣象專家吳德榮表示，明天（端午節）至24日太平洋高壓增強，各地晴熱如盛夏，最高溫達38度以上。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606180021.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606180021.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-06-17T14:03:27.000Z",
-      "displayTime": "06/17 22:03"
+      "publishedAt": "2026-06-18T00:24:49.000Z",
+      "displayTime": "06/18 08:24"
     },
     {
-      "title": "珍珠串計畫度過枯水期 經部應變小組完成任務撤除",
+      "title": "搖滾音樂劇先鋒 韋伯「萬世巨星」首度攻台",
+      "date": "2026-06-18",
+      "category": "即時生活",
+      "summary": "風靡逾半世紀，被譽為搖滾音樂劇先鋒的韋伯全本音樂劇「萬世巨星」，18日起將首度訪台演出，這次巡演版本保留原作經典音樂靈魂，結合現代劇場技術，讓觀眾以全新方式感受這部傳奇之作。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/acul/202606180019.aspx",
+      "slug": "https://www.cna.com.tw/news/acul/202606180019.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-18T00:15:45.000Z",
+      "displayTime": "06/18 08:15"
+    },
+    {
+      "title": "英國QS世界大學排名 台灣4大學入前200名刷新紀錄",
+      "date": "2026-06-18",
+      "category": "即時生活",
+      "summary": "英國高等教育調查機構QS發布2027年世界大學排名，此次總計有4所台灣的大學院校進入世界前200名，為歷來數量最多的一次，台灣大學更拿下歷年最佳成績，在全球排名第54、在亞洲排名第17。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606180015.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606180015.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-17T23:09:35.000Z",
+      "displayTime": "06/18 07:09"
+    },
+    {
+      "title": "施工怪手翻覆 台鐵苗栗至竹南暫時單線行車",
+      "date": "2026-06-18",
+      "category": "即時生活",
+      "summary": "台鐵苗栗至竹南間今晨受工程機具影響，暫單線雙向行車，部分列車延誤。台鐵表示，因工務單位在養護時間施工時，怪手不慎翻覆，已派人搶修；根據官網顯示，估上午9時恢復。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606180012.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606180012.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-17T22:23:26.000Z",
+      "displayTime": "06/18 06:23"
+    },
+    {
+      "title": "市場靜待美伊簽署終戰協議 國際油價小幅回升",
       "date": "2026-06-18",
       "category": "即時財經",
-      "summary": "經濟部表示，今年枯水期遭遇75年來最少冬雨，已透過「珍珠串計畫」跨區調度5.2億噸水源，穩定民生產業用水。經評估各地水情已改善，旱災經濟部災害緊急應變小組及水利署災害緊急應變小組自今日撤除。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606170360.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606170360.aspx",
+      "summary": "市場靜待美國與伊朗即將簽署旨在結束中東戰爭的協議，原油供應將恢復的預期升高，國際油價在歷經前兩個交易日大跌後，今天小幅回升。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606180011.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606180011.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-17T13:56:20.000Z",
-      "displayTime": "06/17 21:56"
+      "publishedAt": "2026-06-17T21:46:23.000Z",
+      "displayTime": "06/18 05:46"
     }
   ]
 }
