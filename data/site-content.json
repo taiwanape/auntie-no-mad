@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-19T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/19 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-19-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-19T02:06:26.497Z"
+    "liveNewsUpdatedAt": "2026-06-19T07:28:47.585Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "美國演員黛薇雀絲35歲病逝 曾為「星際寶貝」莉蘿配音",
+      "title": "端午連假 高雄警擴大臨檢一晚查獲13件毒駕",
       "date": "2026-06-19",
-      "category": "即時娛樂",
-      "summary": "據美國媒體報導，曾在迪士尼動畫電影「星際寶貝」（Lilo & Stitch）中為主角莉蘿（Lilo）配音的女演員黛薇雀絲（Daveigh Chase）16日在洛杉磯逝世，享年35歲。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/amov/202606190023.aspx",
-      "slug": "https://www.cna.com.tw/news/amov/202606190023.aspx",
-      "sourceName": "中央社娛樂",
-      "publishedAt": "2026-06-19T01:36:40.000Z",
-      "displayTime": "06/19 09:36"
-    },
-    {
-      "title": "世足熱席捲全台 台電足球夏令營順勢迎風潮",
-      "date": "2026-06-19",
-      "category": "即時生活",
-      "summary": "世足賽掀起全台關注，台電也將在今年辦理的夏令營結合世足熱潮，加入賽事基礎認知課程，並由台電足球隊好手陳昭安、黃秋霖傳授踢球技巧，激發孩童對足球的熱情與運動潛能。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606190021.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606190021.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-19T01:03:35.000Z",
-      "displayTime": "06/19 09:03"
-    },
-    {
-      "title": "端午節連假首日國道9路段易塞 高公局籲12時後出發",
-      "date": "2026-06-19",
-      "category": "即時生活",
-      "summary": "今天是端午連假首日，高公局說，預計上午彰化系統-埔鹽系統、國5南向南港系統-頭城等9路段易塞，建議西部國道南向用路人儘量中午12時後出發，國5南向下午5時後出發。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時社會",
+      "summary": "端午連假開始，高雄警方昨晚動員610人次警力，針對毒駕高風險路段、易聚集吸毒等51處加強稽查，一晚共查獲13件毒駕案13人，舉發酒後駕車18件18人，另查獲通緝犯7件7人。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606190020.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606190020.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-19T00:50:33.000Z",
-      "displayTime": "06/19 08:50"
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606190095.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606190095.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-19T05:54:18.000Z",
+      "displayTime": "06/19 13:54"
     },
     {
-      "title": "端午連假高溫飆38度 吳德榮：熱帶擾動可能成颱",
+      "title": "台東端午取午時水立蛋 冠軍立34顆獲2萬元獎金",
       "date": "2026-06-19",
-      "category": "即時生活",
-      "summary": "今天是端午連假首日，氣象專家吳德榮表示，今天至24日一天比一天熱，全台最高溫將達攝氏38度以上，約20、21日菲律賓東方有熱帶擾動發展，可能發展成颱。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606190018.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606190018.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-19T00:41:29.000Z",
-      "displayTime": "06/19 08:41"
-    },
-    {
-      "title": "「造山者」劍橋放映 凸顯台英科技連結",
-      "date": "2026-06-19",
-      "category": "即時科技",
-      "summary": "台灣半導體產業發展史紀錄片「造山者」英國巡迴放映來到劍橋，隨片前往的導演蕭菊貞在深耕英國多年的台僑帶領下，參訪當地科研機構和企業。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/ait/202606190017.aspx",
-      "slug": "https://www.cna.com.tw/news/ait/202606190017.aspx",
-      "sourceName": "中央社科技",
-      "publishedAt": "2026-06-19T00:30:26.000Z",
-      "displayTime": "06/19 08:30"
-    },
-    {
-      "title": "范斯警告以色列勿襲真主黨 國際油價走勢分歧",
-      "date": "2026-06-19",
-      "category": "即時財經",
-      "summary": "美國副總統范斯今天警告以色列勿對伊朗支持的黎巴嫩真主黨（Hezbollah）進一步發動攻擊，使外界對美伊協議的持久性產生疑慮，布倫特原油價格上漲，但西德州中級原油收低。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時地方",
+      "summary": "台東縣鹿野鄉永安村聖安宮端午節舉辦取午時水和立蛋比賽，吸引數百人參加，來自台東市的郭懿瑩以34顆立蛋奪冠，獲新台幣2萬元獎金。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606190010.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606190010.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-18T21:25:06.000Z",
-      "displayTime": "06/19 05:25"
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606190094.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606190094.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-19T05:46:15.000Z",
+      "displayTime": "06/19 13:46"
+    },
+    {
+      "title": "鳳梨釋迦引討論 農民：最大問題是中國課29%稅",
+      "date": "2026-06-19",
+      "category": "即時地方",
+      "summary": "台東縣長饒慶鈴以預錄影片方式參加海峽論壇爭取釋迦市場遭查處，釋迦問題引發地方討論。不過有農民表示，這些討論沒意義，最主要問題是中國課台灣農產品29%稅。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606190090.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606190090.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-19T05:14:06.000Z",
+      "displayTime": "06/19 13:14"
+    },
+    {
+      "title": "疑連日大雨 基隆山坡土石崩落砸中民宅及車輛",
+      "date": "2026-06-19",
+      "category": "即時地方",
+      "summary": "疑連日大雨，基隆市中山區通明街山坡地今天發生土石崩落，砸中當地一處民宅與車輛，所幸無人傷亡。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606190088.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606190088.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-19T05:14:00.000Z",
+      "displayTime": "06/19 13:14"
+    },
+    {
+      "title": "壽山動物園端午獻粽 黑猩猩、黑熊等吃專屬動物粽",
+      "date": "2026-06-19",
+      "category": "即時地方",
+      "summary": "高雄壽山動物園端午連假為園區動物設計多款應景「動物粽」，有月桃葉包裹的健康粽、消暑蔬果冰粽，以及牧草巨粽等，讓動物透過探索、拆解與取食過程獲得感官刺激和覓食樂趣。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606190087.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606190087.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-19T05:13:58.000Z",
+      "displayTime": "06/19 13:13"
+    },
+    {
+      "title": "被指繞開蘇巧慧 李四川公布影片強調下次會先握手",
+      "date": "2026-06-19",
+      "category": "即時地方",
+      "summary": "國民黨新北市長參選人李四川昨天與對手民進黨參選人蘇巧慧同場，被指刻意繞路。李四川競辦今天出示影片還原兩人當時被人潮阻隔，李四川說，下次會先跟蘇巧慧握手。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606190085.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606190085.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-19T05:01:54.000Z",
+      "displayTime": "06/19 13:01"
     }
   ]
 }
