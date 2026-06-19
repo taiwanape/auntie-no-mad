@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-19T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/19 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-19-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-18T17:49:07.899Z"
+    "liveNewsUpdatedAt": "2026-06-19T02:06:26.497Z"
   },
   "lifeRadar": [
     {
@@ -863,6 +863,66 @@
   ],
   "liveNews": [
     {
+      "title": "美國演員黛薇雀絲35歲病逝 曾為「星際寶貝」莉蘿配音",
+      "date": "2026-06-19",
+      "category": "即時娛樂",
+      "summary": "據美國媒體報導，曾在迪士尼動畫電影「星際寶貝」（Lilo & Stitch）中為主角莉蘿（Lilo）配音的女演員黛薇雀絲（Daveigh Chase）16日在洛杉磯逝世，享年35歲。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/amov/202606190023.aspx",
+      "slug": "https://www.cna.com.tw/news/amov/202606190023.aspx",
+      "sourceName": "中央社娛樂",
+      "publishedAt": "2026-06-19T01:36:40.000Z",
+      "displayTime": "06/19 09:36"
+    },
+    {
+      "title": "世足熱席捲全台 台電足球夏令營順勢迎風潮",
+      "date": "2026-06-19",
+      "category": "即時生活",
+      "summary": "世足賽掀起全台關注，台電也將在今年辦理的夏令營結合世足熱潮，加入賽事基礎認知課程，並由台電足球隊好手陳昭安、黃秋霖傳授踢球技巧，激發孩童對足球的熱情與運動潛能。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606190021.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606190021.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-19T01:03:35.000Z",
+      "displayTime": "06/19 09:03"
+    },
+    {
+      "title": "端午節連假首日國道9路段易塞 高公局籲12時後出發",
+      "date": "2026-06-19",
+      "category": "即時生活",
+      "summary": "今天是端午連假首日，高公局說，預計上午彰化系統-埔鹽系統、國5南向南港系統-頭城等9路段易塞，建議西部國道南向用路人儘量中午12時後出發，國5南向下午5時後出發。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606190020.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606190020.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-19T00:50:33.000Z",
+      "displayTime": "06/19 08:50"
+    },
+    {
+      "title": "端午連假高溫飆38度 吳德榮：熱帶擾動可能成颱",
+      "date": "2026-06-19",
+      "category": "即時生活",
+      "summary": "今天是端午連假首日，氣象專家吳德榮表示，今天至24日一天比一天熱，全台最高溫將達攝氏38度以上，約20、21日菲律賓東方有熱帶擾動發展，可能發展成颱。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606190018.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606190018.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-19T00:41:29.000Z",
+      "displayTime": "06/19 08:41"
+    },
+    {
+      "title": "「造山者」劍橋放映 凸顯台英科技連結",
+      "date": "2026-06-19",
+      "category": "即時科技",
+      "summary": "台灣半導體產業發展史紀錄片「造山者」英國巡迴放映來到劍橋，隨片前往的導演蕭菊貞在深耕英國多年的台僑帶領下，參訪當地科研機構和企業。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/ait/202606190017.aspx",
+      "slug": "https://www.cna.com.tw/news/ait/202606190017.aspx",
+      "sourceName": "中央社科技",
+      "publishedAt": "2026-06-19T00:30:26.000Z",
+      "displayTime": "06/19 08:30"
+    },
+    {
       "title": "范斯警告以色列勿襲真主黨 國際油價走勢分歧",
       "date": "2026-06-19",
       "category": "即時財經",
@@ -870,69 +930,9 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202606190010.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202606190010.aspx",
-      "sourceName": "中央社財經新聞",
+      "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-18T21:25:06.000Z",
       "displayTime": "06/19 05:25"
-    },
-    {
-      "title": "晶片股領漲美股收紅 SpaceX連2跌",
-      "date": "2026-06-19",
-      "category": "即時財經",
-      "summary": "聯準會表示今年可能升息後，美股昨天出現拋售潮，今天則在晶片股領漲下回彈，但上週創下美國史上最大宗首次公開募股（IPO）紀錄的太空探索科技公司（SpaceX）連2跌。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606190009.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606190009.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-06-18T21:19:04.000Z",
-      "displayTime": "06/19 05:19"
-    },
-    {
-      "title": "民主剛果伊拉波疫情釀逾200死 恐需一年才能控制下來",
-      "date": "2026-06-19",
-      "category": "即時生活",
-      "summary": "剛果民主共和國（民主剛果）一個多月前宣布爆發伊波拉（Ebola）疫情，非洲聯盟旗下的非洲疾病管制暨預防中心如今表示，死亡人數已超過200人。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606190004.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202606190004.aspx",
-      "sourceName": "中央社生活醫藥",
-      "publishedAt": "2026-06-18T18:08:51.000Z",
-      "displayTime": "06/19 02:08"
-    },
-    {
-      "title": "美伊簽協議拉低油價 歐股漲跌互見",
-      "date": "2026-06-19",
-      "category": "即時財經",
-      "summary": "美伊簽署協議，結束長達4個月的戰爭，並重啟荷莫茲海峽讓油輪通行。在此情況下，國際油價今天進一步下滑，拖累能源巨擘股價，倫敦股市收挫逾1%，法蘭克福、巴黎股市則收漲。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606190002.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606190002.aspx",
-      "sourceName": "中央社財經新聞",
-      "publishedAt": "2026-06-18T16:58:45.000Z",
-      "displayTime": "06/19 00:58"
-    },
-    {
-      "title": "變電箱短路釀停電影響2866戶 北市18分鐘恢復供電",
-      "date": "2026-06-19",
-      "category": "即時社會",
-      "summary": "台北市中山區今天晚間10時9分發生大規模停電，警消表示，停電主因是吉林路一處工地發生變電箱電短，也傳出濃煙；台電指出，影響約2866戶，已於晚間10時27分復電。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606180399.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606180399.aspx",
-      "sourceName": "中央社社會新聞",
-      "publishedAt": "2026-06-18T15:21:29.000Z",
-      "displayTime": "06/18 23:21"
-    },
-    {
-      "title": "警政署全國同步掃蕩毒駕 出動5000警力取締",
-      "date": "2026-06-19",
-      "category": "即時社會",
-      "summary": "為遏止施用毒品後駕車危害交通安全，內政部警政署今晚動員全國近5000名警力同步執行取締毒駕專案勤務。警政署長張榮興親赴新北市警察局，宣示中央與地方攜手打擊毒駕犯罪。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606180397.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606180397.aspx",
-      "sourceName": "中央社社會新聞",
-      "publishedAt": "2026-06-18T14:54:24.000Z",
-      "displayTime": "06/18 22:54"
     }
   ]
 }
