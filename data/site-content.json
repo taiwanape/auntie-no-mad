@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-20T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/20 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-20-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-19T17:32:08.668Z"
+    "liveNewsUpdatedAt": "2026-06-20T00:20:09.462Z"
   },
   "lifeRadar": [
     {
@@ -863,6 +863,30 @@
   ],
   "liveNews": [
     {
+      "title": "雅加達台灣學校慶端午 首辦氣球龍舟賽親子同樂",
+      "date": "2026-06-20",
+      "category": "即時生活",
+      "summary": "雅加達台灣學校19日舉辦端午節應景活動，以氣球龍舟取代傳統龍舟，在操場上展開「陸上行舟比賽」，國小學生及家長參與踴躍，親子同樂。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606200010.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606200010.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-19T23:53:09.000Z",
+      "displayTime": "06/20 07:53"
+    },
+    {
+      "title": "美伊談判遇阻及油輪通行減緩 油價走揚",
+      "date": "2026-06-20",
+      "category": "即時財經",
+      "summary": "美國與伊朗原定舉行的談判推延，加上駛出波斯灣的油輪通行量減少，油價今天走揚。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606200006.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606200006.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-19T21:50:57.000Z",
+      "displayTime": "06/20 05:50"
+    },
+    {
       "title": "美伊會談喊卡 歐股收跌",
       "date": "2026-06-20",
       "category": "即時財經",
@@ -870,7 +894,7 @@
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202606200002.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202606200002.aspx",
-      "sourceName": "中央社財經新聞",
+      "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-19T17:10:44.000Z",
       "displayTime": "06/20 01:10"
     },
@@ -882,7 +906,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202606190203.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202606190203.aspx",
-      "sourceName": "中央社生活醫藥",
+      "sourceName": "中央社生活",
       "publishedAt": "2026-06-19T14:04:20.000Z",
       "displayTime": "06/19 22:04"
     },
@@ -894,7 +918,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202606190202.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202606190202.aspx",
-      "sourceName": "中央社生活醫藥",
+      "sourceName": "中央社生活",
       "publishedAt": "2026-06-19T14:03:18.000Z",
       "displayTime": "06/19 22:03"
     },
@@ -906,33 +930,9 @@
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
       "sourceUrl": "https://www.cna.com.tw/news/afe/202606190201.aspx",
       "slug": "https://www.cna.com.tw/news/afe/202606190201.aspx",
-      "sourceName": "中央社財經新聞",
+      "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-19T14:03:15.000Z",
       "displayTime": "06/19 22:03"
-    },
-    {
-      "title": "新北八里5旬女墜3公尺施工涵洞 腳踝受傷送醫",
-      "date": "2026-06-20",
-      "category": "即時社會",
-      "summary": "新北八里區今晚傳意外，一名50多歲女子行走時墜入3公尺深施工涵洞中，警消獲報後吊掛協助脫困，女子腳踝受傷送醫。據悉涵洞周圍有圍三角錐，確切掉落原因仍待釐清。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606190196.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606190196.aspx",
-      "sourceName": "中央社社會新聞",
-      "publishedAt": "2026-06-19T13:15:00.000Z",
-      "displayTime": "06/19 21:15"
-    },
-    {
-      "title": "今彩539第115149期開獎",
-      "date": "2026-06-20",
-      "category": "即時生活",
-      "summary": "今彩539第115149期開獎，中獎號碼01、05、13、07、25。3星彩中獎號碼307，4星彩中獎號碼4194。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606190194.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606190194.aspx",
-      "sourceName": "中央社生活醫藥",
-      "publishedAt": "2026-06-19T12:45:55.000Z",
-      "displayTime": "06/19 20:45"
     }
   ]
 }
