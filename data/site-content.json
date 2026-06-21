@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-21T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/21 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-21-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-20T16:52:32.437Z"
+    "liveNewsUpdatedAt": "2026-06-21T01:39:51.826Z"
   },
   "lifeRadar": [
     {
@@ -863,6 +863,42 @@
   ],
   "liveNews": [
     {
+      "title": "澎湖濃霧能見度低 上午4航班取消",
+      "date": "2026-06-21",
+      "category": "即時地方",
+      "summary": "澎湖今天清晨濃霧籠罩，能見度不到100公尺，直到上午7時後，氣溫回升，濃霧逐漸散去。航空站表示，受到濃霧影響，已有4航班取消與多航班延誤，最快在上午10時恢復正常起降。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606210018.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606210018.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-21T01:24:09.000Z",
+      "displayTime": "06/21 09:24"
+    },
+    {
+      "title": "8縣市防高溫 吳德榮：25日前晴熱上看38度",
+      "date": "2026-06-21",
+      "category": "即時生活",
+      "summary": "氣象署今天針對雙北等8縣市發布高溫資訊。氣象專家吳德榮表示，25日前各地晴熱如盛夏，高溫上看攝氏38度；輕颱米克拉正逼近台灣東方海面，最快明天增強為中颱，路徑仍有不確定性。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606210013.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606210013.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-21T00:31:57.000Z",
+      "displayTime": "06/21 08:31"
+    },
+    {
+      "title": "中歐閱讀月 劉梓潔：在波蘭朗讀台灣的都會與傳統",
+      "date": "2026-06-21",
+      "category": "即時生活",
+      "summary": "中歐文學盛事「作家閱讀月」於波蘭與捷克邊界城市切申展開巡迴，20日由作家劉梓潔登場朗讀，並接受中央社專訪。透過「親愛的小孩」與「父後七日」兩部風格迥異的作品，劉梓潔向中歐讀者展現台灣都會女性的 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/acul/202606210010.aspx",
+      "slug": "https://www.cna.com.tw/news/acul/202606210010.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-20T23:48:50.000Z",
+      "displayTime": "06/21 07:48"
+    },
+    {
       "title": "今彩539第115150期 頭獎槓龜",
       "date": "2026-06-21",
       "category": "即時生活",
@@ -870,7 +906,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202606200194.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202606200194.aspx",
-      "sourceName": "中央社生活醫藥",
+      "sourceName": "中央社生活",
       "publishedAt": "2026-06-20T14:07:00.000Z",
       "displayTime": "06/20 22:07"
     },
@@ -882,7 +918,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/asoc/202606200186.aspx",
       "slug": "https://www.cna.com.tw/news/asoc/202606200186.aspx",
-      "sourceName": "中央社社會新聞",
+      "sourceName": "中央社社會",
       "publishedAt": "2026-06-20T13:13:38.000Z",
       "displayTime": "06/20 21:13"
     },
@@ -894,45 +930,9 @@
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202606200184.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202606200184.aspx",
-      "sourceName": "中央社生活醫藥",
+      "sourceName": "中央社生活",
       "publishedAt": "2026-06-20T13:12:34.000Z",
       "displayTime": "06/20 21:12"
-    },
-    {
-      "title": "今彩539第115150期開獎",
-      "date": "2026-06-21",
-      "category": "即時生活",
-      "summary": "今彩539第115150期開獎，中獎號碼25、24、31、04、11。3星彩中獎號碼230，4星彩中獎號碼8837。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606200181.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606200181.aspx",
-      "sourceName": "中央社生活醫藥",
-      "publishedAt": "2026-06-20T12:44:27.000Z",
-      "displayTime": "06/20 20:44"
-    },
-    {
-      "title": "藍綠拚觀光 蘇巧慧、李四川同挺水金九纜車開發",
-      "date": "2026-06-21",
-      "category": "即時地方",
-      "summary": "民主進步黨籍立法委員蘇巧慧與中國國民黨籍新北市長參選人李四川，今天不約而同主張推動瑞芳區水湳洞、金瓜石及九份地區纜車或台車建設，期盼活化土地，兼顧觀光發展與交通改善。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606200174.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606200174.aspx",
-      "sourceName": "中央社地方新聞",
-      "publishedAt": "2026-06-20T12:30:12.000Z",
-      "displayTime": "06/20 20:30"
-    },
-    {
-      "title": "祝福白家綺吳東諺婚禮 陳美鳳嗨喊：我娶媳婦",
-      "date": "2026-06-21",
-      "category": "即時娛樂",
-      "summary": "演員白家綺、吳東諺今晚在台北舉行婚宴，現場賓客超過700人，陳美鳳、胡瓜、曾國城夫妻、沈玉琳等人到場祝福。陳美鳳說，她與夫妻倆因為拍戲結緣，今天就是「娶媳婦」的心情，祝福他們白頭偕老。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/amov/202606200172.aspx",
-      "slug": "https://www.cna.com.tw/news/amov/202606200172.aspx",
-      "sourceName": "中央社娛樂新聞",
-      "publishedAt": "2026-06-20T12:00:08.000Z",
-      "displayTime": "06/20 20:00"
     }
   ]
 }
