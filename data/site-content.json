@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-21T16:55:10.363Z"
+    "liveNewsUpdatedAt": "2026-06-22T01:41:00.889Z"
   },
   "lifeRadar": [
     {
@@ -863,6 +863,30 @@
   ],
   "liveNews": [
     {
+      "title": "法人：融資餘額擴張等3訊號浮現 台股短線整理",
+      "date": "2026-06-22",
+      "category": "即時財經",
+      "summary": "台股上週五端午節休市，僅開盤4天，週四集中市場指數收在46465.20點，週漲2296.16點或5.2%，再創收盤新高。不過法人表示，台股融資餘額快速擴張、高價股與龍頭股漲勢鈍化，以及資金轉進 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606220014.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606220014.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-22T00:41:29.000Z",
+      "displayTime": "06/22 08:41"
+    },
+    {
+      "title": "吳德榮：颱風米克拉23日路徑北轉 與台保持安全距離",
+      "date": "2026-06-22",
+      "category": "即時生活",
+      "summary": "氣象署提醒，今天大台北等13縣市防攝氏36度以上高溫。氣象專家吳德榮表示，24日前各地持續晴熱上看38度；預測中颱米克拉明天北轉，24、25日沿台灣東側北上，保持安全距離。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606220013.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606220013.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-22T00:19:27.000Z",
+      "displayTime": "06/22 08:19"
+    },
+    {
       "title": "毒駕追撞2車5傷 遭桃園警驗出依托咪酯陽性送辦",
       "date": "2026-06-22",
       "category": "即時社會",
@@ -870,7 +894,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/asoc/202606210190.aspx",
       "slug": "https://www.cna.com.tw/news/asoc/202606210190.aspx",
-      "sourceName": "中央社社會新聞",
+      "sourceName": "中央社社會",
       "publishedAt": "2026-06-21T14:50:33.000Z",
       "displayTime": "06/21 22:50"
     },
@@ -882,7 +906,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/asoc/202606210189.aspx",
       "slug": "https://www.cna.com.tw/news/asoc/202606210189.aspx",
-      "sourceName": "中央社社會新聞",
+      "sourceName": "中央社社會",
       "publishedAt": "2026-06-21T14:45:31.000Z",
       "displayTime": "06/21 22:45"
     },
@@ -894,7 +918,7 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202606210181.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202606210181.aspx",
-      "sourceName": "中央社生活醫藥",
+      "sourceName": "中央社生活",
       "publishedAt": "2026-06-21T12:21:07.000Z",
       "displayTime": "06/21 20:21"
     },
@@ -906,33 +930,9 @@
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/asoc/202606210179.aspx",
       "slug": "https://www.cna.com.tw/news/asoc/202606210179.aspx",
-      "sourceName": "中央社社會新聞",
+      "sourceName": "中央社社會",
       "publishedAt": "2026-06-21T12:16:03.000Z",
       "displayTime": "06/21 20:16"
-    },
-    {
-      "title": "前海委會副主委陳陽益辭世享壽71歲 黑潮發電先驅",
-      "date": "2026-06-22",
-      "category": "即時地方",
-      "summary": "投身推動新興海洋藍色能源，完成世界首座黑潮發電系統測試平台的前海委會副主委、中山大學海工系西灣講座教授陳陽益於近日辭世，享壽71歲。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606210177.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606210177.aspx",
-      "sourceName": "中央社地方新聞",
-      "publishedAt": "2026-06-21T12:09:58.000Z",
-      "displayTime": "06/21 20:09"
-    },
-    {
-      "title": "蔣萬安：立院黨團會提無人機條例草案 支持好好討論",
-      "date": "2026-06-22",
-      "category": "即時地方",
-      "summary": "國民黨主席鄭麗文日前提及思考提出國民黨版無人機條例草案。台北市長蔣萬安今天表示，就他的了解，國民黨立院黨團也會提自己版本，屆時立法院好好討論，他一定全力支持。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aipl/202606210174.aspx",
-      "slug": "https://www.cna.com.tw/news/aipl/202606210174.aspx",
-      "sourceName": "中央社地方新聞",
-      "publishedAt": "2026-06-21T11:35:51.000Z",
-      "displayTime": "06/21 19:35"
     }
   ]
 }
