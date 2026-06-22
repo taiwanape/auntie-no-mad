@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-22T01:41:00.889Z"
+    "liveNewsUpdatedAt": "2026-06-22T07:05:11.540Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "法人：融資餘額擴張等3訊號浮現 台股短線整理",
+      "title": "知名舞台設計王世信辭世 文化部頒贈旌揚狀",
+      "date": "2026-06-22",
+      "category": "即時生活",
+      "summary": "台灣知名舞台設計師與劇場教育家王世信於6月11日辭世，享壽68歲。文化部參事陳春蘭今日出席告別式，並頒贈文化部旌揚狀，由王世信姊姊王世儀代表受贈。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/acul/202606220142.aspx",
+      "slug": "https://www.cna.com.tw/news/acul/202606220142.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-22T06:31:07.000Z",
+      "displayTime": "06/22 14:31"
+    },
+    {
+      "title": "花蓮萬里溪堰塞湖零星落石崩落 林保署監控警戒",
+      "date": "2026-06-22",
+      "category": "即時地方",
+      "summary": "林保署花蓮分署接獲通報，在萬里溪上游發現新增堰塞湖，今天空勘，崩塌面積約45公頃，湖水未蓄滿溢流，未發現明顯滲流或壩體破壞，但仍有零星落石持續崩落，持續嚴密監控警戒。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606220140.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606220140.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-22T06:25:03.000Z",
+      "displayTime": "06/22 14:25"
+    },
+    {
+      "title": "苗栗南庄民宅驚見彈孔 警逮5嫌4人遭羈押",
+      "date": "2026-06-22",
+      "category": "即時地方",
+      "summary": "苗栗縣南庄鄉1處民宅日前遭人開槍留下彈孔，警方追查發現為劉姓男子等人所為，循線在苗栗頭份、屏東墾丁逮捕5名嫌疑人，並查獲槍枝及子彈，詢後依法移送，其中4人已遭法院裁定羈押。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606220133.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606220133.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-22T06:14:48.000Z",
+      "displayTime": "06/22 14:14"
+    },
+    {
+      "title": "台股漲1276.31點",
       "date": "2026-06-22",
       "category": "即時財經",
-      "summary": "台股上週五端午節休市，僅開盤4天，週四集中市場指數收在46465.20點，週漲2296.16點或5.2%，再創收盤新高。不過法人表示，台股融資餘額快速擴張、高價股與龍頭股漲勢鈍化，以及資金轉進 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "台北股市今天開高走高，收盤漲1276.31點，為47741.51點，漲幅2.75%，成交金額新台幣1兆4414.68億元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606220014.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606220014.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606220132.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606220132.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-22T00:41:29.000Z",
-      "displayTime": "06/22 08:41"
+      "publishedAt": "2026-06-22T06:09:46.000Z",
+      "displayTime": "06/22 14:09"
     },
     {
-      "title": "吳德榮：颱風米克拉23日路徑北轉 與台保持安全距離",
+      "title": "放養犬隻肇事居民恐慌 嘉縣罰飼主逾5萬送辦",
+      "date": "2026-06-22",
+      "category": "即時地方",
+      "summary": "嘉義縣竹崎鄉許姓男子長期在果園放養5隻大型犬，不僅造成居民恐慌，還屢次攻擊並咬死其他家犬，縣府要求改善，許男仍屢勸不聽，除依法重罰5萬3000元外，已搜集證據送辦。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606220130.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606220130.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-22T06:04:41.000Z",
+      "displayTime": "06/22 14:04"
+    },
+    {
+      "title": "終於可以正常上廁所 無肛症西非女童盼行醫救人",
       "date": "2026-06-22",
       "category": "即時生活",
-      "summary": "氣象署提醒，今天大台北等13縣市防攝氏36度以上高溫。氣象專家吳德榮表示，24日前各地持續晴熱上看38度；預測中颱米克拉明天北轉，24、25日沿台灣東側北上，保持安全距離。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606220013.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606220013.aspx",
+      "summary": "「我終於可以像其他小朋友一樣上廁所了！」西非女童Miracle飽受先天無肛症折磨多年，飛越半個地球來台求助。北醫附醫團隊耗時4個月重建肛門與腸道，讓她重拾笑容與行醫夢想。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606220129.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606220129.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-06-22T00:19:27.000Z",
-      "displayTime": "06/22 08:19"
-    },
-    {
-      "title": "毒駕追撞2車5傷 遭桃園警驗出依托咪酯陽性送辦",
-      "date": "2026-06-22",
-      "category": "即時社會",
-      "summary": "桃園市警察局八德分局今天表示，20日晚間發生3車事故，張男駕駛小貨車撞上前方停等紅燈2輛自小客車，造成5人輕傷，張男經快篩呈依托咪酯陽性反應並查扣煙彈1顆，依法送辦。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606210190.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606210190.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-21T14:50:33.000Z",
-      "displayTime": "06/21 22:50"
-    },
-    {
-      "title": "阿里山登山客滑落邊坡 消防救出送醫不治",
-      "date": "2026-06-22",
-      "category": "即時社會",
-      "summary": "嘉義縣消防局今天上午獲報，1名男登山客在阿里山鄉石山引水道往瀑布方向附近跌落深約30公尺邊坡；消防人員以繩索將登山客拉上步道，但已無呼吸心跳，送往香林衛生室仍不治。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606210189.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606210189.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-21T14:45:31.000Z",
-      "displayTime": "06/21 22:45"
-    },
-    {
-      "title": "花蓮萬里溪上游疑新增堰塞湖暫無危險 林保署籲周邊勿活動",
-      "date": "2026-06-22",
-      "category": "即時生活",
-      "summary": "林保署花蓮分署今天接獲航拍通報，萬里溪上游疑新增一處堰塞湖，隨即啟動應變小組，並緊急申請空勤支援空勘；初步評估，暫無立即危險，呼籲民眾勿驚慌，近期避免至溪床周邊活動。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606210181.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606210181.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-21T12:21:07.000Z",
-      "displayTime": "06/21 20:21"
-    },
-    {
-      "title": "國5雪隧北向5車追撞 4人送醫回堵4公里",
-      "date": "2026-06-22",
-      "category": "即時社會",
-      "summary": "國道5號雪山隧道北向19.7公里處，今天晚間6時10分發生5輛自小客車追撞事故，造成4人受到輕傷送醫，現場雖已排除，但後方仍回堵約4公里，肇事原因待國道公路警察局調查釐清。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606210179.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606210179.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-21T12:16:03.000Z",
-      "displayTime": "06/21 20:16"
+      "publishedAt": "2026-06-22T06:03:39.000Z",
+      "displayTime": "06/22 14:03"
     }
   ]
 }
