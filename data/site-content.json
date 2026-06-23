@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-23T10:03:03.274Z"
+    "liveNewsUpdatedAt": "2026-06-23T12:47:10.601Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "Gogoro姜家煒：尹崇堯非常支持 給很大空間做事",
+      "title": "萬里溪堰塞湖日增20萬噸 陽明交大估19天蓄滿溢流",
+      "date": "2026-06-23",
+      "category": "即時地方",
+      "summary": "花蓮萬里溪上游堰塞湖，陽明交大防災團隊推估，目前蓄水量約37萬立方公尺，最大蓄水量420萬立方公尺，若維持目前溪水入流量，每天增加約20萬噸，預計19天後即蓄滿溢流；但期間若有較大降雨，將提前 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606230332.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606230332.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-23T11:54:20.000Z",
+      "displayTime": "06/23 19:54"
+    },
+    {
+      "title": "彰化溪州大貨車駕駛涉毒駕撞民宅 疑有改造槍械",
+      "date": "2026-06-23",
+      "category": "即時地方",
+      "summary": "陳姓大貨車駕駛今天下午行經彰化縣溪州鄉中山路四段時，不明原因跨越中央分隔島，再衝撞對向民宅，被驗出有毒品反應，且車內有疑似改造槍械，全案報請彰檢指揮偵辦。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606230325.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606230325.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-23T11:30:04.000Z",
+      "displayTime": "06/23 19:30"
+    },
+    {
+      "title": "OPENTIX年度數據報告 音樂劇「悲慘世界」售票奪冠",
+      "date": "2026-06-23",
+      "category": "即時生活",
+      "summary": "國內藝文售票平台「OPENTIX 兩廳院文化生活」2025年度數據報告出爐，寬宏藝術主辦音樂劇「悲慘世界」40周年紀念版音樂會世界巡演售票超過4萬張奪冠，堪稱表演藝術觀眾最愛。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/acul/202606230322.aspx",
+      "slug": "https://www.cna.com.tw/news/acul/202606230322.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-23T11:26:58.000Z",
+      "displayTime": "06/23 19:26"
+    },
+    {
+      "title": "裕民與江蘇韓通簽約造散裝船 總運力突破千萬載重噸",
       "date": "2026-06-23",
       "category": "即時財經",
-      "summary": "睿能創意（Gogoro）執行長姜家煒今天表示，Gogoro董事、南山人壽董事長尹崇堯非常支持Gogoro，「支持沒有變過」，尹崇堯給Gogoro很大的空間，把正確事情做好。姜家煒指出，這可說是 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "裕民航運持續擴張高標準環保船隊，旗下子公司裕民航運（新加坡）私人有限公司今天與江蘇韓通船舶重工有限公司簽署船舶建造合約，訂造2艘21萬1000載重噸（DWT）Newcastlemax散裝貨輪， 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606230271.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606230271.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606230316.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606230316.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-23T09:31:08.000Z",
-      "displayTime": "06/23 17:31"
+      "publishedAt": "2026-06-23T11:15:45.000Z",
+      "displayTime": "06/23 19:15"
     },
     {
-      "title": "5月失業率3.27%連2降 創26年同月新低",
+      "title": "率團考察新加坡經貿建設 鍾東錦擬推中台灣觀光",
+      "date": "2026-06-23",
+      "category": "即時地方",
+      "summary": "苗栗縣長鍾東錦率團赴新加坡經貿考察，對於未來開拓國際市場表示，苗栗優質文旦已有成功行銷新加坡經驗，明年進一步結合中台灣4縣市觀光資源，整合區域優勢，擴大參與國際旅展。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606230313.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606230313.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-23T11:10:39.000Z",
+      "displayTime": "06/23 19:10"
+    },
+    {
+      "title": "王座新增代理3品牌 全年營收再戰新高",
       "date": "2026-06-23",
       "category": "即時財經",
-      "summary": "主計總處今天公布5月失業率為3.27%，月減0.03個百分點，並創26年同月最低水準；經季節調整後失業率同步下滑，為3.32%。主計總處國勢普查處副處長譚文玲表示，勞動市場持續穩定，失業人數減 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "旗下擁有銀座杏子日式豬排、橋村炸雞等餐飲品牌的王座國際今天宣布，取得代理日本擁有近400間分店的連鎖鰻魚飯專賣店「鰻の成瀬」品牌、台灣港式餐飲「美利港式茶檔」及「KEN香時髦中菜」品牌，推升王 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606230269.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606230269.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606230311.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606230311.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-23T09:30:04.000Z",
-      "displayTime": "06/23 17:30"
-    },
-    {
-      "title": "威剛看好東南亞電力資源產業環境 擬泰國設算力中心",
-      "date": "2026-06-23",
-      "category": "即時財經",
-      "summary": "記憶體模組廠威剛推動全球人工智慧（AI）算力中心相關布局，瞄準東南亞地區電力資源和產業環境等優勢，初步計劃在泰國設立算力中心。威剛董事長陳立白日前前往拜訪政府部門及重要機構，並與國會進行交流。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606230251.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606230251.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-23T09:18:26.000Z",
-      "displayTime": "06/23 17:18"
-    },
-    {
-      "title": "北市延平北路男子受傷送醫 初步研判疑為槍傷",
-      "date": "2026-06-23",
-      "category": "即時社會",
-      "summary": "台北市大同區延平北路4段的國定古蹟陳悅記祖宅旁，今天下午疑似發生槍擊案。1名男子右小腿受傷。警消獲報立即派員送醫急救，初步研判疑為槍傷，警方正在調查釐清中。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606230250.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606230250.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-23T09:17:24.000Z",
-      "displayTime": "06/23 17:17"
-    },
-    {
-      "title": "台鎔擁翰陽與半導體廢棄物雙成長引擎 7月掛牌上市",
-      "date": "2026-06-23",
-      "category": "即時財經",
-      "summary": "專業廢棄物處理廠台鎔科技材料受惠子公司翰陽綠能今年初開始商轉，加上半導體客戶的先進製程推進帶動相關廢棄物處理需求大增，在兩大成長引擎推升下，台鎔今年前5月營收新台幣6.84億元，年增率逾7成， 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606230242.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606230242.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-23T09:06:05.000Z",
-      "displayTime": "06/23 17:06"
-    },
-    {
-      "title": "柯建銘涉過失傷害徐巧芯案 出庭稱捍衛憲政體制",
-      "date": "2026-06-23",
-      "category": "即時社會",
-      "summary": "民進黨立委柯建銘遭北檢起訴，於114年立院議事攻防時，持拐杖敲擊桌面傷及國民黨立委徐巧芯，涉過失傷害。台北地院今天開庭，柯建銘庭前表示，今天主要是來捍衛憲政體制。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606230232.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606230232.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-23T08:36:43.000Z",
-      "displayTime": "06/23 16:36"
+      "publishedAt": "2026-06-23T11:06:34.000Z",
+      "displayTime": "06/23 19:06"
     }
   ]
 }
