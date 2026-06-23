@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-22T17:50:56.681Z"
+    "liveNewsUpdatedAt": "2026-06-23T01:23:35.870Z"
   },
   "lifeRadar": [
     {
@@ -863,6 +863,66 @@
   ],
   "liveNews": [
     {
+      "title": "費半收紅台積電ADR漲逾1% 投顧：台股挑戰48000點",
+      "date": "2026-06-23",
+      "category": "即時財經",
+      "summary": "台股22日在台積電領軍下大漲1276.31點，站上47000點大關；而美股受多空消息交雜，主要指數22日漲跌互見，但費城半導體指數收漲2.04%，台積電ADR上漲1.2%。投顧表示，短線須觀察 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606230016.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606230016.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-23T00:28:58.000Z",
+      "displayTime": "06/23 08:28"
+    },
+    {
+      "title": "台波深化AI與電動車合作 無人機業者拓展商機",
+      "date": "2026-06-23",
+      "category": "即時財經",
+      "summary": "「2026歐洲台灣形象展」22日在波蘭華沙開幕，經濟部政務次長江文若說，今年選定波蘭，主因是業者高度看好其歐洲製造重心地位，隨著電電公會宣布於波蘭設立科技園區，將帶動台商投資熱潮，未來雙方將深 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606230012.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606230012.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-22T23:55:49.000Z",
+      "displayTime": "06/23 07:55"
+    },
+    {
+      "title": "美股多頭走勢 SpaceX續跌19兆市值蒸發",
+      "date": "2026-06-23",
+      "category": "即時財經",
+      "summary": "波灣局勢未明朗，美股今天漲跌互見，道瓊與費半指數上揚。科技股走勢分歧，AI大數據業者Alphabet與亞馬遜走低，但市場仍看好部分晶片大廠前景。SpaceX上市一週即準備發債，市場仍持懷疑態度 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606230011.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606230011.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-22T23:44:46.000Z",
+      "displayTime": "06/23 07:44"
+    },
+    {
+      "title": "多空消息交雜 美國股市收盤走勢分歧",
+      "date": "2026-06-23",
+      "category": "即時財經",
+      "summary": "美國與伊朗和平談判有所進展為投資人帶來利多消息，但大型科技股走弱， 加上美國公債殖利率攀升，使華爾街股市主要指數今天收盤漲跌互見。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606230009.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606230009.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-22T21:56:38.000Z",
+      "displayTime": "06/23 05:56"
+    },
+    {
+      "title": "美國與伊朗和談取得進展 國際油價下滑",
+      "date": "2026-06-23",
+      "category": "即時財經",
+      "summary": "有跡象顯示美伊兩國和談取得進展，包括美方發布豁免允許部分伊朗石油銷售，提振市場對於波斯灣地區石油供應持續恢復的希望，相關消息使國際油價今天滑落。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606230006.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606230006.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-22T21:06:31.000Z",
+      "displayTime": "06/23 05:06"
+    },
+    {
       "title": "投資人關注美國與伊朗談判進展 歐洲股市多收漲",
       "date": "2026-06-23",
       "category": "即時財經",
@@ -873,66 +933,6 @@
       "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-22T16:44:18.000Z",
       "displayTime": "06/23 00:44"
-    },
-    {
-      "title": "SpaceX上市後暴衝一度超車微軟 今早盤股價大跌10%",
-      "date": "2026-06-23",
-      "category": "即時財經",
-      "summary": "美國財經媒體CNBC報導，富豪馬斯克（Elon Musk）旗下太空探索科技公司（SpaceX）今天早盤股價大跌10%，連續3個交易日呈現跌勢。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606220334.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606220334.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-22T15:14:10.000Z",
-      "displayTime": "06/22 23:14"
-    },
-    {
-      "title": "新北板橋男疑遭刺殺命危送醫 警鎖定犯嫌追緝",
-      "date": "2026-06-23",
-      "category": "即時社會",
-      "summary": "劉姓男子今天晚間疑遭人用刀刺傷左下腹，倒臥新北市板橋區僑中一街某巷弄內便利商店前血泊中，當場無呼吸心跳，警消獲報到場將傷者送醫急救，全案由警方鎖定犯嫌調查偵辦。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606220333.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606220333.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-22T15:06:07.000Z",
-      "displayTime": "06/22 23:06"
-    },
-    {
-      "title": "李四川：雙北拓銷農產品 蘇巧慧：打造板橋新面貌",
-      "date": "2026-06-23",
-      "category": "即時地方",
-      "summary": "鳳梨釋迦議題延燒，李四川今天表示，雙北將合作拓銷農產品，為農民找出路；蘇巧慧今晚到板橋造勢，強調要與在地議員戴瑋姍一起努力，打造板橋新面貌。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606220330.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606220330.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-22T14:44:59.000Z",
-      "displayTime": "06/22 22:44"
-    },
-    {
-      "title": "台灣形象展華沙開幕 TEEMA科學園區落腳米恩基尼亞",
-      "date": "2026-06-23",
-      "category": "即時財經",
-      "summary": "由經濟部國際貿易署與外貿協會主辦的「2026歐洲臺灣形象展」今天在華沙開展，台灣電電公會副秘書長蔡松慧宣布，波蘭TEEMA科學園區將選擇米恩基尼亞（Miękinia）為基地，以「海外科學園區3 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606220329.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606220329.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-22T14:37:56.000Z",
-      "displayTime": "06/22 22:37"
-    },
-    {
-      "title": "今彩539第115151期 頭獎槓龜",
-      "date": "2026-06-23",
-      "category": "即時生活",
-      "summary": "今彩539第115151期開獎，中獎號碼29、34、28、01、07；派彩結果，頭獎槓龜。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606220322.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606220322.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-22T14:07:41.000Z",
-      "displayTime": "06/22 22:07"
     }
   ]
 }
