@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-25T15:13:54.866Z"
+    "liveNewsUpdatedAt": "2026-06-25T17:24:10.246Z"
   },
   "lifeRadar": [
     {
@@ -863,32 +863,68 @@
   ],
   "liveNews": [
     {
+      "title": "晨間通勤時段雨勢顯著 高雄市26日停班課",
+      "date": "2026-06-26",
+      "category": "即時地方",
+      "summary": "高雄市政府宣布，26日全市停止上班、停止上課。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606260003.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606260003.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-25T16:54:59.000Z",
+      "displayTime": "06/26 00:54"
+    },
+    {
+      "title": "新北大雨二重疏洪道積淹水 疏洪十路以北封閉",
+      "date": "2026-06-26",
+      "category": "即時地方",
+      "summary": "新北市今天晚間又下起大雨，市府發布訊息表示，二重疏洪道已積淹水，將封閉管制疏洪十路以北路段及越堤道，提醒民眾提早改道，確保安全。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606250378.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606250378.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-25T15:39:49.000Z",
+      "displayTime": "06/25 23:39"
+    },
+    {
+      "title": "高雄某市立高中校長倒臥辦公室 救護到場確認已死亡",
+      "date": "2026-06-26",
+      "category": "即時地方",
+      "summary": "高雄某市立高中校長今晚8時30分被發現倒臥在校長室廁所內，校方立即通報119。經救護人員到場檢視後，確認校長已無生命徵象，後續由相關單位接手處理，並通知家屬到場。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606250376.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606250376.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-25T15:01:44.000Z",
+      "displayTime": "06/25 23:01"
+    },
+    {
       "title": "今彩539第115154期 頭獎1注中獎",
-      "date": "2026-06-25",
-      "category": "即時財經",
+      "date": "2026-06-26",
+      "category": "即時生活",
       "summary": "今彩539第115154期開獎，中獎號碼13、21、29、34、06；派彩結果，頭獎1注中獎，獎金新台幣800萬元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202606250371.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202606250371.aspx",
-      "sourceName": "中央社產經證券",
+      "sourceName": "中央社生活",
       "publishedAt": "2026-06-25T14:04:31.000Z",
       "displayTime": "06/25 22:04"
     },
     {
       "title": "威力彩第115051期 頭獎槓龜",
-      "date": "2026-06-25",
-      "category": "即時財經",
+      "date": "2026-06-26",
+      "category": "即時生活",
       "summary": "威力彩第115051期今晚開獎，第一區中獎號碼為32、06、28、20、25、10，第二區中獎號碼為01號。派彩結果，頭獎、貳獎都槓龜。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
       "sourceUrl": "https://www.cna.com.tw/news/ahel/202606250370.aspx",
       "slug": "https://www.cna.com.tw/news/ahel/202606250370.aspx",
-      "sourceName": "中央社產經證券",
+      "sourceName": "中央社生活",
       "publishedAt": "2026-06-25T14:02:28.000Z",
       "displayTime": "06/25 22:02"
     },
     {
       "title": "投資人重拾AI樂觀情緒 美國股市開盤走揚",
-      "date": "2026-06-25",
+      "date": "2026-06-26",
       "category": "即時財經",
       "summary": "美光科技（Micron）和高通（Qualcomm）等公司公布強勁財測，重新點燃投資人的人工智慧（AI）樂觀情緒，加上美國亮眼經濟數據提振市場氛圍，使華爾街股市主要指數今天開高。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
@@ -897,42 +933,6 @@
       "sourceName": "中央社產經證券",
       "publishedAt": "2026-06-25T13:59:26.000Z",
       "displayTime": "06/25 21:59"
-    },
-    {
-      "title": "日本10家企業團體參加中國鏈博會 亞洲國家中最多",
-      "date": "2026-06-25",
-      "category": "即時財經",
-      "summary": "中國國際供應鏈促進博覽會（鏈博會）近日在北京舉行，據中國官媒央視旗下新媒體玉淵譚天，共有10家日本企業團體參加本屆鏈博會，數量居亞洲國家之首。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/acn/202606250368.aspx",
-      "slug": "https://www.cna.com.tw/news/acn/202606250368.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-25T13:59:24.000Z",
-      "displayTime": "06/25 21:59"
-    },
-    {
-      "title": "高雄商場美食街氣瓶更換意外 巨響引發驚慌躲避",
-      "date": "2026-06-25",
-      "category": "即時地方",
-      "summary": "高雄市一家百貨商場餐飲櫃位今晚發生更換氣瓶操作意外，傳出巨大聲響，引發用餐民眾驚慌躲避。商場表示，意外是因為更換可樂機氣瓶不慎，導致閥頭脫落，現場無人受傷也無財產損失。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606250363.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606250363.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-25T13:28:09.000Z",
-      "displayTime": "06/25 21:28"
-    },
-    {
-      "title": "美5月通膨創3年新高 Q1經濟成長率上修至2.1%",
-      "date": "2026-06-25",
-      "category": "即時財經",
-      "summary": "在汽油價格觸頂之下，美國聯準會（Fed）偏好的通膨指標在5月升至3年新高，顯示隨著期中選舉逼近，成本上升可能會為總統川普帶來政治難題。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606250362.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202606250362.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-25T13:27:07.000Z",
-      "displayTime": "06/25 21:27"
     }
   ]
 }
