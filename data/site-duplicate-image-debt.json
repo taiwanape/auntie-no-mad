@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "policy": "Historical duplicate primary images must be replaced before old pages are considered clean. Keep one source page per duplicate hash, regenerate every other page with fresh topic-specific art.",
-  "taipeiDate": "2026-06-26",
+  "taipeiDate": "2026-06-27",
   "summary": {
     "historicalDuplicatePrimaryImageGroups": 0,
     "pagesToRegenerate": 0,
