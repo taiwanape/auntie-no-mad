@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-26T01:30:14.570Z"
+    "liveNewsUpdatedAt": "2026-06-26T05:56:57.198Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "台南豪雨災情部分地區水深及腰 仁德交流道交通受阻",
+      "title": "陳世凱視察台鐵一級應變小組 促優先提供旅運資訊",
       "date": "2026-06-26",
-      "category": "即時地方",
-      "summary": "台南地區昨天晚間開始出現明顯雨勢，持續一夜幾乎未停歇，造成永康、東區、仁德部分地區積淹水，消防局出動橡皮艇協助撤離行動不便長者，國道1號仁德交流道周邊交通受阻。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時生活",
+      "summary": "受豪大雨影響，台鐵部分區間路段行車受阻，交通部長陳世凱今天視察台鐵一級應變小組，指示應迅速傳達列車運行資訊給旅客，及未來應全面強化路線排水系統，提升整體營運韌性。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606260037.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606260037.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-26T00:46:21.000Z",
-      "displayTime": "06/26 08:46"
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606260168.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606260168.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-26T05:27:05.000Z",
+      "displayTime": "06/26 13:27"
     },
     {
-      "title": "台積電ADR挫台指期夜盤跌 法人：台股觀察月線支撐",
+      "title": "涉跨國藝品投資詐騙 韓籍男子躲台遭通緝落網",
+      "date": "2026-06-26",
+      "category": "即時社會",
+      "summary": "52歲金姓韓籍男子涉嫌以投資藝品為名，在台、韓兩地詐騙吸金，藏匿台灣期間又因詐欺案遭通緝多年，檢警發動搜索將金男拘提到案，並在台北南港住處查扣價值初估逾千萬畫作。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606260167.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606260167.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-26T05:23:03.000Z",
+      "displayTime": "06/26 13:23"
+    },
+    {
+      "title": "全台累計487件積淹水災情 水利署支援屏東花蓮抽水機",
       "date": "2026-06-26",
       "category": "即時財經",
-      "summary": "美光（Micron）股價大漲逾15%，蘋果（Apple）宣布漲價股價跌逾6%，台積電ADR跌1.3%，美股走勢分歧，台指期夜盤下跌722點收45805點，台積電期貨夜盤下跌45點收2380點。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606260033.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606260033.aspx",
+      "summary": "豪雨影響，各地出現淹水災情。經濟部今天表示，經濟部災害緊急應變小組今早提升為一級開設，截至中午12時，全台累計487件積淹水災情，有74件尚未退水，水利署已支援屏東縣、花蓮縣各8台大型移動式抽 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606260166.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606260166.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-26T00:32:13.000Z",
-      "displayTime": "06/26 08:32"
+      "publishedAt": "2026-06-26T05:20:01.000Z",
+      "displayTime": "06/26 13:20"
     },
     {
-      "title": "AI帶動零組件成本飆升 蘋果調漲MacBook與iPad售價",
-      "date": "2026-06-26",
-      "category": "即時財經",
-      "summary": "蘋果公司（Apple）今天表示，由於人工智慧（AI）興起引發記憶體與儲存成本連番飆升，將調漲旗下MacBook電腦、iPad平板電腦及其他產品的售價。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606260030.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202606260030.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-26T00:12:06.000Z",
-      "displayTime": "06/26 08:12"
-    },
-    {
-      "title": "台鐵中洲岡山間淹水停駛 員林社頭間死傷事故暫單線雙向行車",
+      "title": "蕭副總統：以部落為起點讓國際認識台灣多元文化",
       "date": "2026-06-26",
       "category": "即時生活",
-      "summary": "受大雨影響，台鐵今天說，今晨5時25分起，台南中洲站至高雄岡山站間水淹軌面，雙線暫時停止行車。另外，台鐵今晨發生死傷事故，員林站至社頭站間因受行人侵入路線影響，暫以單線雙向行車。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606260029.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606260029.aspx",
+      "summary": "「2026台灣觀光部落嘉年華」今天在台北車站1樓大廳登場。副總統蕭美琴以中英文致詞，並希望以部落為起點，讓國際社會認識台灣多元的文化與豐富內涵。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606260165.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606260165.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-06-26T00:09:04.000Z",
-      "displayTime": "06/26 08:09"
+      "publishedAt": "2026-06-26T05:19:59.000Z",
+      "displayTime": "06/26 13:19"
     },
     {
-      "title": "高雄屏東93條土石流警戒 水保署籲紅色警戒區撤離安置",
+      "title": "國中小課後輔導鐘點費 教部：參酌兼任教師調幅",
       "date": "2026-06-26",
       "category": "即時生活",
-      "summary": "全台大雨，農業部農村發展及水土保持署今天上午發布土石流潛勢溪流紅色警戒61條、黃色警戒32條，另有3處大規模崩塌警戒，全都在高雄市及屏東縣。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606260027.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606260027.aspx",
+      "summary": "教育部近日召集縣市協調，國中小課後輔導、寒暑假學藝活動鐘點費，將參酌兼任及代課教師鐘點費調整幅度。私立學校則依私法契約關係處理。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606260162.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606260162.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-06-25T23:56:59.000Z",
-      "displayTime": "06/26 07:56"
+      "publishedAt": "2026-06-26T05:14:52.000Z",
+      "displayTime": "06/26 13:14"
     },
     {
-      "title": "氣象署發布豪雨特報 留意高屏局部大豪雨或超大豪雨",
+      "title": "台灣已36天無顯著有感地震 打破2011年紀錄",
       "date": "2026-06-26",
       "category": "即時生活",
-      "summary": "中央氣象署發布豪雨特報，第7號颱風北上，鋒面接近及西南風影響，易有短延時強降雨，今(26)日屏東縣地區、高雄市地區有局部大豪雨或超大豪雨，臺南市地區、恆春半島、新北市山區有局部豪雨或大豪雨，臺 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606260026.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606260026.aspx",
+      "summary": "根據中央氣象署資料，從5月20日編號047地震後，台灣已36天無顯著有感地震，打破2011年紀錄，地震中心主任吳健富說，沒有顯著地震不代表即將發生大地震，民眾勿過度恐慌。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606260160.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606260160.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-06-25T23:50:57.000Z",
-      "displayTime": "06/26 07:50"
+      "publishedAt": "2026-06-26T05:11:48.000Z",
+      "displayTime": "06/26 13:11"
     }
   ]
 }
