@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-26T05:56:57.198Z"
+    "liveNewsUpdatedAt": "2026-06-26T09:52:10.297Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "陳世凱視察台鐵一級應變小組 促優先提供旅運資訊",
+      "title": "屏東6月豪雨連連農損多 縣府建議救助全品項免勘",
       "date": "2026-06-26",
-      "category": "即時生活",
-      "summary": "受豪大雨影響，台鐵部分區間路段行車受阻，交通部長陳世凱今天視察台鐵一級應變小組，指示應迅速傳達列車運行資訊給旅客，及未來應全面強化路線排水系統，提升整體營運韌性。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時地方",
+      "summary": "今年6月豪雨連連，屏東縣政府今天兵分三路視察農漁損狀況。縣府表示，縣內13個測站累積雨量，超過農業部公告氣象參數受理標準，已提報建議全品項免勘。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606260168.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606260168.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-26T05:27:05.000Z",
-      "displayTime": "06/26 13:27"
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606260264.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606260264.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-26T09:08:32.000Z",
+      "displayTime": "06/26 17:08"
     },
     {
-      "title": "涉跨國藝品投資詐騙 韓籍男子躲台遭通緝落網",
+      "title": "大榕樹傾倒重生 新北深坑附幼繪本見證生命教育",
+      "date": "2026-06-26",
+      "category": "即時地方",
+      "summary": "陪伴新北市深坑國小附設幼兒園師生32年的大榕樹，去年康芮颱風來襲傾倒，老師帶領幼兒觀察記錄老樹搶救與復育歷程，近日出版繪本「大榕樹，加油！」，展現學習尊重生命成果。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606260263.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606260263.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-26T09:08:30.000Z",
+      "displayTime": "06/26 17:08"
+    },
+    {
+      "title": "豪雨來襲逾6萬戶停電 台電：98%戶數已復電",
+      "date": "2026-06-26",
+      "category": "即時生活",
+      "summary": "台電今天表示，截至下午3時，因豪大雨造成全台曾停電戶數達6萬5801戶，現已復電逾98%；另針對新竹市太原地下道抽水機故障，台電澄清，該事件為市府自有設備線路故障，並非台電送電問題。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606260261.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606260261.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-26T09:07:26.000Z",
+      "displayTime": "06/26 17:07"
+    },
+    {
+      "title": "長照服務需創新 家總籲1成經費投入研發",
+      "date": "2026-06-26",
+      "category": "即時生活",
+      "summary": "家庭照顧者關懷總會成立30年，今天舉行研討會，秘書長陳景寧表示，長照3.0應基於使用者導向鼓勵創新服務，1成經費入創新研發，避免未來長照服務停滯不前。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606260260.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606260260.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-26T09:07:24.000Z",
+      "displayTime": "06/26 17:07"
+    },
+    {
+      "title": "台北氣象站6月累積雨量估逾8百毫米 可能創史上新高",
+      "date": "2026-06-26",
+      "category": "即時生活",
+      "summary": "受鋒面及西南風影響，氣象署說，明天西部防大雨、短延時豪雨，而花東須留意大雨；目前觀測台北氣象站6月累積雨量初估逾800毫米，可能超越1991年創該站統計史6月新高。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606260259.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606260259.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-26T09:05:22.000Z",
+      "displayTime": "06/26 17:05"
+    },
+    {
+      "title": "調查局人事異動 顏成安調陞調查局副局長",
       "date": "2026-06-26",
       "category": "即時社會",
-      "summary": "52歲金姓韓籍男子涉嫌以投資藝品為名，在台、韓兩地詐騙吸金，藏匿台灣期間又因詐欺案遭通緝多年，檢警發動搜索將金男拘提到案，並在台北南港住處查扣價值初估逾千萬畫作。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606260167.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606260167.aspx",
+      "summary": "法務部調查局今天發布最新人事異動，鑑識科學處處長顏成安調陞調查局副局長；資通安全處處長張尤仁調陞主任秘書。調查局表示，本次異動共9人，將於今年7月16日到職。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606260258.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606260258.aspx",
       "sourceName": "中央社社會",
-      "publishedAt": "2026-06-26T05:23:03.000Z",
-      "displayTime": "06/26 13:23"
-    },
-    {
-      "title": "全台累計487件積淹水災情 水利署支援屏東花蓮抽水機",
-      "date": "2026-06-26",
-      "category": "即時財經",
-      "summary": "豪雨影響，各地出現淹水災情。經濟部今天表示，經濟部災害緊急應變小組今早提升為一級開設，截至中午12時，全台累計487件積淹水災情，有74件尚未退水，水利署已支援屏東縣、花蓮縣各8台大型移動式抽 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606260166.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606260166.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-26T05:20:01.000Z",
-      "displayTime": "06/26 13:20"
-    },
-    {
-      "title": "蕭副總統：以部落為起點讓國際認識台灣多元文化",
-      "date": "2026-06-26",
-      "category": "即時生活",
-      "summary": "「2026台灣觀光部落嘉年華」今天在台北車站1樓大廳登場。副總統蕭美琴以中英文致詞，並希望以部落為起點，讓國際社會認識台灣多元的文化與豐富內涵。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606260165.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606260165.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-26T05:19:59.000Z",
-      "displayTime": "06/26 13:19"
-    },
-    {
-      "title": "國中小課後輔導鐘點費 教部：參酌兼任教師調幅",
-      "date": "2026-06-26",
-      "category": "即時生活",
-      "summary": "教育部近日召集縣市協調，國中小課後輔導、寒暑假學藝活動鐘點費，將參酌兼任及代課教師鐘點費調整幅度。私立學校則依私法契約關係處理。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606260162.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606260162.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-26T05:14:52.000Z",
-      "displayTime": "06/26 13:14"
-    },
-    {
-      "title": "台灣已36天無顯著有感地震 打破2011年紀錄",
-      "date": "2026-06-26",
-      "category": "即時生活",
-      "summary": "根據中央氣象署資料，從5月20日編號047地震後，台灣已36天無顯著有感地震，打破2011年紀錄，地震中心主任吳健富說，沒有顯著地震不代表即將發生大地震，民眾勿過度恐慌。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606260160.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606260160.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-26T05:11:48.000Z",
-      "displayTime": "06/26 13:11"
+      "publishedAt": "2026-06-26T09:04:19.000Z",
+      "displayTime": "06/26 17:04"
     }
   ]
 }
