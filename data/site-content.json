@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-27T04:40:25.566Z"
+    "liveNewsUpdatedAt": "2026-06-27T07:40:08.619Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "華盛頓首航 長榮航：爭取波音加速交機、拚天天有班",
+      "title": "萬里溪堰塞湖紅色警戒 3橋封閉、台鐵即起慢行",
+      "date": "2026-06-27",
+      "category": "即時地方",
+      "summary": "因應萬里溪堰塞湖紅色警戒，包括萬里溪橋、西寶大橋及箭瑛大橋都封閉；台鐵萬里溪橋路段即起以時速60公里慢行，東部幹線列車將有延遲。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606270123.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606270123.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-27T07:04:30.000Z",
+      "displayTime": "06/27 15:04"
+    },
+    {
+      "title": "卓揆視察美濃木瓜災損 每公頃最低補償提高至25%",
+      "date": "2026-06-27",
+      "category": "即時地方",
+      "summary": "行政院長卓榮泰今天南下高雄美濃勘查木瓜豪雨災損情形，他表示，農業部已決定將每公頃最低補償由平均20%提高至25%，秉持從簡、從優、從速原則，助農民度過難關。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/aipl/202606270121.aspx",
+      "slug": "https://www.cna.com.tw/news/aipl/202606270121.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-27T07:03:25.000Z",
+      "displayTime": "06/27 15:03"
+    },
+    {
+      "title": "豪雨釀3死1失蹤 萬里溪堰塞湖中央應變中心開設",
+      "date": "2026-06-27",
+      "category": "即時社會",
+      "summary": "受鋒面及西南風影響，部分地區豪雨成災，經統計，此次豪雨災情釀3死1失蹤，多集中在新竹縣。另外，有關花蓮萬里溪堰塞湖達紅色警戒，農業部已開設中央災害應變中心。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606270117.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606270117.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-27T06:36:16.000Z",
+      "displayTime": "06/27 14:36"
+    },
+    {
+      "title": "中油宣布 29日起汽油調降1元、柴油降0.8元",
+      "date": "2026-06-27",
+      "category": "即時生活",
+      "summary": "美伊啟動協商，荷莫茲海峽通航量逐步回升，國際油價下跌。台灣中油公司今天宣布，自29日凌晨零時起至7月5日晚上12時止，汽、柴油各調降新台幣1元及0.8元 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606270114.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606270114.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-27T06:11:10.000Z",
+      "displayTime": "06/27 14:11"
+    },
+    {
+      "title": "萬里溪堰塞湖紅色警戒 花蓮6村里停班課",
+      "date": "2026-06-27",
+      "category": "即時地方",
+      "summary": "萬里溪堰塞湖紅色警戒發布，花蓮縣府宣布，萬榮鄉萬榮村、明利村，鳳林鎮長橋里、森榮里、鳳信里、山興里今天12時起停止上班、上課。鳳林鎮大榮里雖在警戒區，但警戒區無人居住。（編輯：李淑華）1150 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606270112.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606270112.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-27T06:07:06.000Z",
+      "displayTime": "06/27 14:07"
+    },
+    {
+      "title": "SpaceX將納入那斯達克100指數 帶動被動資金流入",
       "date": "2026-06-27",
       "category": "即時財經",
-      "summary": "長榮航空今天在華盛頓舉辦開航晚宴，總經理孫嘉明表示，目前桃園直飛華盛頓每週雖然只有4班，正全力向美國波音公司爭取盡快交機，盼明年某個時候，桃園飛往華盛頓特區的航班頻率，可增加到「天天有班」，也 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606270080.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606270080.aspx",
+      "summary": "那斯達克交易所（Nasdaq）今天證實，SpaceX將於7月7日被納入以科技股為主的那斯達克100指數，為馬斯克（Elon Musk）旗下火箭及人工智慧（AI）巨擘，鋪平被動投資資金湧入的道路 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606270110.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606270110.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-27T04:09:54.000Z",
-      "displayTime": "06/27 12:09"
-    },
-    {
-      "title": "卓榮泰：4年1千億治水是新計畫 通過才能如序展開",
-      "date": "2026-06-27",
-      "category": "即時地方",
-      "summary": "行政院長卓榮泰今天視察屏東縣水利設施等時表示，希望中林排水第4期工程中央與地方合作努力盡早完成，「早一天工作完成，面對的威脅就會比較少」。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aipl/202606270076.aspx",
-      "slug": "https://www.cna.com.tw/news/aipl/202606270076.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-27T03:46:45.000Z",
-      "displayTime": "06/27 11:46"
-    },
-    {
-      "title": "持續降雨 盧秀燕取消外縣市行程坐鎮台中",
-      "date": "2026-06-27",
-      "category": "即時地方",
-      "summary": "鋒面及西南風影響，台中今天持續降雨，台中市長盧秀燕取消外縣市行程、坐鎮台中表示，目前台中有小範圍積淹水、落石，其他縣市如果需要協助也願全力以赴、出動救災。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606270073.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606270073.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-27T03:43:39.000Z",
-      "displayTime": "06/27 11:43"
-    },
-    {
-      "title": "澎湖遊艇東吉海域進水翻覆 船上4人獲救",
-      "date": "2026-06-27",
-      "category": "即時社會",
-      "summary": "澎湖籍「大立海洋」遊艇，今天早上在澎湖東吉海域進水翻覆，李姓船長等4人被附近友船「三泉發」漁船救起，目前待拖船前往拖救，澎湖海巡隊則在海域警戒。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606270072.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606270072.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-27T03:40:36.000Z",
-      "displayTime": "06/27 11:40"
-    },
-    {
-      "title": "議員指災害應變平台暴雨當機 蔣萬安：未影響救災",
-      "date": "2026-06-27",
-      "category": "即時地方",
-      "summary": "民進黨台北市議員林延鳳揭露，市府花近4000萬元打造災害應變協作平台，卻在25日豪雨致災時故障。台北市長蔣萬安今天說，是因同一時段大量資訊回傳導致，沒有影響救災。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606270059.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606270059.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-27T03:19:09.000Z",
-      "displayTime": "06/27 11:19"
-    },
-    {
-      "title": "台南男子涉虐貓後疑遭毆打 警方將調查釐清",
-      "date": "2026-06-27",
-      "category": "即時社會",
-      "summary": "台南市永康區41歲李姓男子涉嫌虐貓，在網路社群平台發布影片後，疑遭另名男子找上門毆打。動保處昨天在李男家中查獲貓狗安置，將依法處理，警方也將調查釐清全案。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606270057.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606270057.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-27T03:18:05.000Z",
-      "displayTime": "06/27 11:18"
+      "publishedAt": "2026-06-27T05:59:01.000Z",
+      "displayTime": "06/27 13:59"
     }
   ]
 }
