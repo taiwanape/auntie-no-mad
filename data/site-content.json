@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-28T12:43:29.819Z"
+    "liveNewsUpdatedAt": "2026-06-28T14:27:01.590Z"
   },
   "lifeRadar": [
     {
@@ -863,6 +863,18 @@
   ],
   "liveNews": [
     {
+      "title": "台中蝴蝶谷步道落石奪4命 作家紀慧文罹難各界不捨",
+      "date": "2026-06-28",
+      "category": "即時社會",
+      "summary": "台北登山團一行昨天赴台中和平區蝴蝶谷瀑布步道，有4人遭落石砸中死亡，其中1名罹難者為作家、藏僧簽證推動改革聯盟召集人紀慧文，罹難消息也讓各界相當不捨。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606280195.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606280195.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-28T13:34:30.000Z",
+      "displayTime": "06/28 21:34"
+    },
+    {
       "title": "北市府澄清戶外噴藥須看天候 內湖淹水雨歇時已消毒",
       "date": "2026-06-28",
       "category": "即時地方",
@@ -887,6 +899,18 @@
       "displayTime": "06/28 20:06"
     },
     {
+      "title": "北市女心情差攜菜刀坐路邊 警耐心勸慰助就醫",
+      "date": "2026-06-28",
+      "category": "即時社會",
+      "summary": "台北中正紀念堂附近今天有女子坐路邊並手持菜刀，警方獲報趕赴現場處理；經查女子自稱因求職過程不順心情不好所致，經警勸說安撫後便主動交付刀具，警方也協助就醫。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606280181.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606280181.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-28T11:56:57.000Z",
+      "displayTime": "06/28 19:56"
+    },
+    {
       "title": "扶輪後援會成立 賴瑞隆：打造高雄傳統創新並行共好",
       "date": "2026-06-28",
       "category": "即時地方",
@@ -909,30 +933,6 @@
       "sourceName": "中央社地方",
       "publishedAt": "2026-06-28T11:29:50.000Z",
       "displayTime": "06/28 19:29"
-    },
-    {
-      "title": "屏東潮州連淹2天災民指堤岸太低 縣府將查致災原因",
-      "date": "2026-06-28",
-      "category": "即時地方",
-      "summary": "0625豪雨造成屏東潮州鎮連2天淹水，是這區在八八風災後最嚴重水患。有災民認為，淹水原因與光輪路側堤岸太低有關，屏東縣政府水利處則表示，將與公所調查評估。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606280175.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606280175.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-28T11:13:43.000Z",
-      "displayTime": "06/28 19:13"
-    },
-    {
-      "title": "彰化議員憂和美紅綠燈基座僅4螺栓 縣府要廠商補強",
-      "date": "2026-06-28",
-      "category": "即時地方",
-      "summary": "民進黨彰化議員賴清美今天表示，和美鎮美寮路一段與線東路四段路口有座紅綠燈號誌，基座僅以螺栓固定，遠看如漂浮空中，有安全疑慮；縣府工務處表示，要求廠商補強。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606280173.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606280173.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-28T10:59:39.000Z",
-      "displayTime": "06/28 18:59"
     }
   ]
 }
