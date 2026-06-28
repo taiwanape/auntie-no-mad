@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-28T14:27:01.590Z"
+    "liveNewsUpdatedAt": "2026-06-28T15:57:26.995Z"
   },
   "lifeRadar": [
     {
@@ -863,6 +863,18 @@
   ],
   "liveNews": [
     {
+      "title": "北市圓山保齡球館遭邊坡落石砸損 無人傷亡",
+      "date": "2026-06-28",
+      "category": "即時社會",
+      "summary": "走過一甲子的台北圓山保齡球館日前無預警停業，疑因連日大雨沖刷，鄰近山坡今晚坍塌，巨石滑落並砸穿球館，警方獲報到場查看，所幸無人傷亡。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606280201.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606280201.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-28T15:05:49.000Z",
+      "displayTime": "06/28 23:05"
+    },
+    {
       "title": "台中蝴蝶谷步道落石奪4命 作家紀慧文罹難各界不捨",
       "date": "2026-06-28",
       "category": "即時社會",
@@ -873,6 +885,30 @@
       "sourceName": "中央社社會",
       "publishedAt": "2026-06-28T13:34:30.000Z",
       "displayTime": "06/28 21:34"
+    },
+    {
+      "title": "張火爐接掌桃園市黨部 綠營力拚市長議員全壘打",
+      "date": "2026-06-28",
+      "category": "即時地方",
+      "summary": "民進黨桃園市黨部今晚舉行主委交接，新主委張火爐就任，眾人高喊團結拚勝選，力拚下屆桃園市長、議員選舉全壘打，且氣勢要持續至2028總統及立委大選，提前做好布局。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606280194.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606280194.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-28T13:31:28.000Z",
+      "displayTime": "06/28 21:31"
+    },
+    {
+      "title": "選戰搶原力 李四川推4政見、蘇巧慧強調原民媳婦",
+      "date": "2026-06-28",
+      "category": "即時地方",
+      "summary": "新北市長選戰增溫，國民黨參選人李四川提4項原力政見，並說「原民好，新北就好；原力強，新北更強」；民進黨參選人蘇巧慧表示，她是原住民的媳婦，將成為最照顧族人的首長。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606280191.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606280191.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-06-28T12:56:19.000Z",
+      "displayTime": "06/28 20:56"
     },
     {
       "title": "北市府澄清戶外噴藥須看天候 內湖淹水雨歇時已消毒",
@@ -897,42 +933,6 @@
       "sourceName": "中央社地方",
       "publishedAt": "2026-06-28T12:06:01.000Z",
       "displayTime": "06/28 20:06"
-    },
-    {
-      "title": "北市女心情差攜菜刀坐路邊 警耐心勸慰助就醫",
-      "date": "2026-06-28",
-      "category": "即時社會",
-      "summary": "台北中正紀念堂附近今天有女子坐路邊並手持菜刀，警方獲報趕赴現場處理；經查女子自稱因求職過程不順心情不好所致，經警勸說安撫後便主動交付刀具，警方也協助就醫。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606280181.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606280181.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-28T11:56:57.000Z",
-      "displayTime": "06/28 19:56"
-    },
-    {
-      "title": "扶輪後援會成立 賴瑞隆：打造高雄傳統創新並行共好",
-      "date": "2026-06-28",
-      "category": "即時地方",
-      "summary": "民進黨高雄市長參選人賴瑞隆今天成立扶輪後援會，高雄各大社團、企業界等人士站出來，支持他「南方崛起、邁向國際」市政願景。賴瑞隆表示，將打造高雄傳統與創新並行共好。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606280180.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606280180.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-28T11:36:54.000Z",
-      "displayTime": "06/28 19:36"
-    },
-    {
-      "title": "高雄豪雨補助出爐 淹水50公分以上每戶最高3.5萬",
-      "date": "2026-06-28",
-      "category": "即時地方",
-      "summary": "高雄連日豪雨，多處傳出淹水災情，市府今天公布補助措施，住屋、營業處所淹水救助50公分以上，補助最高新台幣3.5萬元、未滿50公分1萬元；另外家電受損再補助1萬元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606280178.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606280178.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-28T11:29:50.000Z",
-      "displayTime": "06/28 19:29"
     }
   ]
 }
