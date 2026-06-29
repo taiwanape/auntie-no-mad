@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-29T10:12:59.460Z"
+    "liveNewsUpdatedAt": "2026-06-29T14:19:31.791Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "孫安佐涉槍砲等罪遭訴 士院裁定100萬元交保",
+      "title": "科嶠與Brooks技術授權 攻晶圓傳載盒清洗設備",
       "date": "2026-06-29",
-      "category": "即時社會",
-      "summary": "藝人孫鵬、狄鶯兒子孫安佐（已改名孫健豪）涉嫌自製噴火槍並持有非制式霰彈槍等，今天遭士林地檢署依槍砲等罪起訴，並移審法院。士林地院裁定孫安佐100萬元交保，並限制住居、出境、出海。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時財經",
+      "summary": "印刷電路板設備廠科嶠工業今天董事會決議通過，與國際半導體設備商Brooks Automation簽訂技術授權協議，科嶠將授予Brooks全球獨家授權，雙方將結合技術與製造能力，推動半導體晶圓傳 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606290313.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606290313.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-29T13:13:45.000Z",
+      "displayTime": "06/29 21:13"
+    },
+    {
+      "title": "製藥業海外布局報捷 美時攻美、台康拓日市場",
+      "date": "2026-06-29",
+      "category": "即時財經",
+      "summary": "製藥業者海外布局再傳進展，美時取得美國食品藥物管理局（FDA）核准流感藥物Xofluza首款學名藥資格，將搶攻美國市場；台康生技則宣布與日本藥廠簽署乳癌生物相似藥EG1206A日本市場授權合作 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606290239.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606290239.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-29T09:39:06.000Z",
-      "displayTime": "06/29 17:39"
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606290311.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606290311.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-29T13:03:41.000Z",
+      "displayTime": "06/29 21:03"
     },
     {
-      "title": "涉詐欺、侵占逾5億元 余姓金融名人遭訴",
+      "title": "英美菸草集團推動AI轉型 9000個職位受影響",
       "date": "2026-06-29",
-      "category": "即時社會",
-      "summary": "67歲的金融名人余金寶涉嫌利用台玻集團林姓總裁有借貸資金需求，向英國籍商人借款，從中詐取佣金另侵占借款利息，合計超過新台幣5億元。台北地檢署今天依詐欺、侵占等罪嫌起訴余男。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606290238.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606290238.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-29T09:39:04.000Z",
-      "displayTime": "06/29 17:39"
+      "category": "即時財經",
+      "summary": "英國英美菸草集團今天表示，為推動內部人工智慧（AI）轉型計畫，以削減成本，提升獲利能力，並因應監管挑戰及新產品上市延宕等情況，集團計劃裁減約20%的員工人數。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202606290308.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202606290308.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-29T12:55:35.000Z",
+      "displayTime": "06/29 20:55"
     },
     {
-      "title": "苗栗後龍遭濫倒廢棄物 檢警環揪出假回收真棄置",
+      "title": "威力彩第115052期開獎",
       "date": "2026-06-29",
-      "category": "即時社會",
-      "summary": "苗栗後龍公司寮登山口113年遭濫倒廢棄物，檢警溯源並與環境部合作，查獲白姓回收業者與再利用機構聯手，以合法掩護，行非法清除及不實申報，檢方責令回復原狀。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606290234.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606290234.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-29T09:32:55.000Z",
-      "displayTime": "06/29 17:32"
-    },
-    {
-      "title": "失言「好老」讓嚴藝文受傷 林廷憶喊導演對不起",
-      "date": "2026-06-29",
-      "category": "即時娛樂",
-      "summary": "演員林廷憶演出嚴藝文執導的「影后」爆紅，近日嚴藝文受訪分享林廷憶有次脫口說好老，讓她很受傷，今天林廷憶出席活動急忙道歉，笑說是無意識講出這句話，本意不是字面上的意思。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時財經",
+      "summary": "威力彩第115052期今晚開獎，第一區中獎號碼為16、33、05、06、09、15，第二區中獎號碼為05。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/amov/202606290216.aspx",
-      "slug": "https://www.cna.com.tw/news/amov/202606290216.aspx",
-      "sourceName": "中央社娛樂",
-      "publishedAt": "2026-06-29T09:07:17.000Z",
-      "displayTime": "06/29 17:07"
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606290305.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606290305.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-29T12:54:28.000Z",
+      "displayTime": "06/29 20:54"
     },
     {
-      "title": "50歲女陷網戀遭誘投資醫美 台中警銀聯手阻詐2百萬",
+      "title": "台南預算較多？經部：治水是依各地需求規劃治理策略",
       "date": "2026-06-29",
-      "category": "即時社會",
-      "summary": "中市一女在網路認識自稱香港籍男網友談網戀，對方稱欲來台共同生活，有管道購買低價醫美設備邀女子一同投資，她日前匯款時行員發現有異報案，警方到場成功阻詐逾2百萬。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606290211.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606290211.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-29T08:50:04.000Z",
-      "displayTime": "06/29 16:50"
-    },
-    {
-      "title": "女凌晨拿滅火器猛噴藥妝店面 三重警鎖定對象偵辦",
-      "date": "2026-06-29",
-      "category": "即時社會",
-      "summary": "新北三重區自強路一段上某連鎖藥妝店外，今天凌晨零時許突遭一女子持滅火器猛噴後離去，造成現場一度粉塵瀰漫；警方獲報派員偵辦鎖定對象，將通知40歲女子到案說明。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時財經",
+      "summary": "網傳台南治水預算比台北還多，經濟部今天表示，1982年至2013年治水預算較集中於北部，中央並於2014年至今強化全國流域治理；治水不是哪個縣市拿比較多預算，而是依各地需求規劃合適的治理策略。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606290205.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606290205.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-29T08:36:52.000Z",
-      "displayTime": "06/29 16:36"
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606290303.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606290303.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-29T12:49:24.000Z",
+      "displayTime": "06/29 20:49"
+    },
+    {
+      "title": "今彩539第115157期開獎",
+      "date": "2026-06-29",
+      "category": "即時財經",
+      "summary": "今彩539第115157期開獎，中獎號碼36、30、15、34、11。3星彩中獎號碼067，4星彩中獎號碼7740。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606290301.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606290301.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-29T12:44:20.000Z",
+      "displayTime": "06/29 20:44"
     }
   ]
 }
