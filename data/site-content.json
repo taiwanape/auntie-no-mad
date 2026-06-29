@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-29T00:19:12.667Z"
+    "liveNewsUpdatedAt": "2026-06-29T05:18:30.913Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "舊金山同志遊行台灣花車首登場 台灣喔熊領隊受歡呼",
+      "title": "長榮航印度德里航線拚年底開航 看好台灣成亞洲轉運樞紐",
+      "date": "2026-06-29",
+      "category": "即時財經",
+      "summary": "國內航空業積極擴張北美航網，背後競逐的是連結亞洲的轉機市場。長榮航空在北美已領先開拓10個直飛航點，總經理孫嘉明表示，除評估再開波士頓，也力拚年底直飛印度德里，串聯北美、南亞與東南亞客源，看好 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606290117.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606290117.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-29T04:12:36.000Z",
+      "displayTime": "06/29 12:12"
+    },
+    {
+      "title": "AI伺服器帶旺空運 長榮航：包機、急單同步加溫",
+      "date": "2026-06-29",
+      "category": "即時財經",
+      "summary": "AI伺服器出貨爆發，帶動航空運價高檔不墜，長榮航空總經理孫嘉明表示，包機、急單需求同步增溫，北美、東南亞線擔綱重任，今年貨運AI占比已達4至5成，看好下半年傳統旺季加持，貨運量價續揚，2028 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606290116.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606290116.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-29T04:12:34.000Z",
+      "displayTime": "06/29 12:12"
+    },
+    {
+      "title": "新台幣午盤貶6.5分 暫收31.925元",
+      "date": "2026-06-29",
+      "category": "即時財經",
+      "summary": "台北外匯市場新台幣兌美元今天中午暫收31.925元，貶6.5分，成交金額11.25億美元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606290113.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606290113.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-29T04:05:27.000Z",
+      "displayTime": "06/29 12:05"
+    },
+    {
+      "title": "124校參與本土語沉浸教學 結合礦業、掃帚工藝",
       "date": "2026-06-29",
       "category": "即時生活",
-      "summary": "舊金山同志大遊行今天登場，台灣擴大參與，台美人社團組隊參加之外，觀光署與駐舊金山辦事處首度籌辦花車，由「台灣喔熊」領隊，共同彰顯台灣作為亞洲第一個同婚合法化國家，以及友善旅遊目的地的驕傲。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "教育部推動「國民中小學台灣台語/閩東語沉浸式教學計畫」，累計548校次參與，114學年有124校參與，嘉惠逾2.3萬學生，學校也將猴硐煤礦、掃帚製作工藝等在地特色融入課程。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606290012.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606290012.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606290102.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606290102.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-06-28T23:52:50.000Z",
-      "displayTime": "06/29 07:52"
+      "publishedAt": "2026-06-29T03:56:04.000Z",
+      "displayTime": "06/29 11:56"
     },
     {
-      "title": "北市圓山保齡球館遭邊坡落石砸損 無人傷亡",
+      "title": "外資上週大賣台股3312億元 減碼群創30萬張居首",
       "date": "2026-06-29",
-      "category": "即時社會",
-      "summary": "走過一甲子的台北圓山保齡球館日前無預警停業，疑因連日大雨沖刷，鄰近山坡今晚坍塌，巨石滑落並砸穿球館，警方獲報到場查看，所幸無人傷亡。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606280201.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606280201.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-28T15:05:49.000Z",
-      "displayTime": "06/28 23:05"
+      "category": "即時財經",
+      "summary": "上週台股震盪劇烈，週五集中市場指數收在44571.76點，週跌1893.44點或4.07%，跌破月線。根據台灣證券交易所統計，上週外資在集中市場賣超新台幣3312.37億元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606290100.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606290100.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-29T03:53:00.000Z",
+      "displayTime": "06/29 11:53"
     },
     {
-      "title": "台中蝴蝶谷步道落石奪4命 作家紀慧文罹難各界不捨",
+      "title": "崇友：今年營收獲利拚成長 強化汰換維保業務",
       "date": "2026-06-29",
-      "category": "即時社會",
-      "summary": "台北登山團一行昨天赴台中和平區蝴蝶谷瀑布步道，有4人遭落石砸中死亡，其中1名罹難者為作家、藏僧簽證推動改革聯盟召集人紀慧文，罹難消息也讓各界相當不捨。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時財經",
+      "summary": "電梯大廠崇友總經理游本立今天預估，今年營收獲利目標較2025年成長，持續加強汰舊換新業務速度，維修保養項目業績維持3%至5%成長幅度。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606280195.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606280195.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-06-28T13:34:30.000Z",
-      "displayTime": "06/28 21:34"
-    },
-    {
-      "title": "張火爐接掌桃園市黨部 綠營力拚市長議員全壘打",
-      "date": "2026-06-29",
-      "category": "即時地方",
-      "summary": "民進黨桃園市黨部今晚舉行主委交接，新主委張火爐就任，眾人高喊團結拚勝選，力拚下屆桃園市長、議員選舉全壘打，且氣勢要持續至2028總統及立委大選，提前做好布局。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606280194.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606280194.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-28T13:31:28.000Z",
-      "displayTime": "06/28 21:31"
-    },
-    {
-      "title": "選戰搶原力 李四川推4政見、蘇巧慧強調原民媳婦",
-      "date": "2026-06-29",
-      "category": "即時地方",
-      "summary": "新北市長選戰增溫，國民黨參選人李四川提4項原力政見，並說「原民好，新北就好；原力強，新北更強」；民進黨參選人蘇巧慧表示，她是原住民的媳婦，將成為最照顧族人的首長。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606280191.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606280191.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-28T12:56:19.000Z",
-      "displayTime": "06/28 20:56"
-    },
-    {
-      "title": "北市府澄清戶外噴藥須看天候 內湖淹水雨歇時已消毒",
-      "date": "2026-06-29",
-      "category": "即時地方",
-      "summary": "北市內湖部分地區因近日強降雨淹水受關注，環保局今天澄清，有人質疑「未第一時間戶外消毒」會混淆公衛常識，因雨會沖刷藥劑，戶外噴藥要看天候，雨勢間歇時已對淹水區噴藥。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606280188.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606280188.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-28T12:32:12.000Z",
-      "displayTime": "06/28 20:32"
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606290084.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606290084.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-29T03:41:26.000Z",
+      "displayTime": "06/29 11:41"
     }
   ]
 }
