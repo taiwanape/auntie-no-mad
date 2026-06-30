@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-30T00:19:32.847Z"
+    "liveNewsUpdatedAt": "2026-06-30T04:50:37.224Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "西雅圖同志遊行 台灣隊伍搭彩虹橋邀國際友人赴台",
+      "title": "暑假打工違法率近25% 團體籲增勞檢防剝削",
       "date": "2026-06-30",
       "category": "即時生活",
-      "summary": "西雅圖同志驕傲遊行28日登場，台裔變裝皇后Felicia Oh穿上珍奶裝坐鎮花車，駐西雅圖辦事處長林美呈到場為台灣隊伍打氣，盼讓國際友人看見台灣多元價值，並將能量延續至10月31日登場的台灣同 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606300012.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606300012.aspx",
+      "summary": "暑假是打工旺季。民進黨立委林月琴今天與勞工陣線、台少盟召開記者會指出，暑期專案勞檢違法率近1/4，籲增加風險導向勞檢、加強勞動教育、調高最低工資法罰則，避免暑假成剝削旺季。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606300116.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606300116.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-06-29T21:51:16.000Z",
-      "displayTime": "06/30 05:51"
+      "publishedAt": "2026-06-30T04:19:04.000Z",
+      "displayTime": "06/30 12:19"
     },
     {
-      "title": "投資人逢低買進科技類股 美國股市收高",
+      "title": "衛福部7月新制 寶寶篩檢升級、長照科技輔具進家裡",
       "date": "2026-06-30",
-      "category": "即時財經",
-      "summary": "投資人逢低買入近期遭受重挫的科技類股，推動美國股市從上週跌勢中反彈，4大指數今天收盤全面走高。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時生活",
+      "summary": "衛福部公布7月新制，包含兒童健康與長照升級，新生兒篩檢等補助金額加碼，增加SMA為篩檢項目，兒童預防保健服務補助次數增加至9次，失能者居家環境將導入智慧科技輔具。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606300011.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606300011.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-29T21:46:14.000Z",
-      "displayTime": "06/30 05:46"
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606300112.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606300112.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-30T04:13:55.000Z",
+      "displayTime": "06/30 12:13"
     },
     {
-      "title": "美伊停火局勢脆弱 國際油價微漲",
-      "date": "2026-06-30",
-      "category": "即時財經",
-      "summary": "儘管美國與伊朗達成諒解備忘錄延續停火並展開後續談判，但上週末的空襲再度打亂荷莫茲海峽航運，也凸顯美伊停火的脆弱。國際油價上週跌至接近戰前水準後，今天小幅回升。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606300010.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606300010.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-29T21:20:12.000Z",
-      "displayTime": "06/30 05:20"
-    },
-    {
-      "title": "投資人權衡中東局勢 歐洲股市收盤小跌",
-      "date": "2026-06-30",
-      "category": "即時財經",
-      "summary": "投資人衡量美國與伊朗暫停交火的消息之際，歐洲股市主要指數今天收盤小幅下挫。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606300003.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606300003.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-29T16:45:52.000Z",
-      "displayTime": "06/30 00:45"
-    },
-    {
-      "title": "輝達高階晶片伺服器違法賣香港 基檢再搜索約談6人",
+      "title": "台中警偵查小隊長涉毒遭拘提 法院裁押禁見獲准",
       "date": "2026-06-30",
       "category": "即時社會",
-      "summary": "游男等3人涉嫌以不實申報文件，將搭載輝達高階晶片的伺服器出口至東北亞後，再運至香港；基隆地方檢察署今天發動第2波搜索，約談另外6名被告到案說明。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "台中地檢署今天表示，台中市警局某分局偵查隊陳姓小隊長，涉犯毒品等罪，案經指揮警方搜索拘提陳姓小隊長到案，28日檢方複訊後，認定有羈押原因與必要，向法院聲押禁見獲准。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606290333.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202606290333.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606300108.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606300108.aspx",
       "sourceName": "中央社社會",
-      "publishedAt": "2026-06-29T14:15:33.000Z",
-      "displayTime": "06/29 22:15"
+      "publishedAt": "2026-06-30T04:01:47.000Z",
+      "displayTime": "06/30 12:01"
     },
     {
-      "title": "今彩539第115157期 頭獎槓龜",
+      "title": "輝達晶片伺服器銷中港澳 檢搜美超微等3公司聲押3人",
+      "date": "2026-06-30",
+      "category": "即時社會",
+      "summary": "基隆地檢署偵辦廠商涉嫌以不實文件，轉賣搭載輝達高階晶片的伺服器至中港澳，昨天搜索美超微台灣亞太總部、青雲科技、是方電訊，並約談6人，經檢察官複訊，今天凌晨聲押3人。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606300106.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606300106.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-30T03:51:42.000Z",
+      "displayTime": "06/30 11:51"
+    },
+    {
+      "title": "中東戰事陰影淡化 台經院：5月製造業景氣燈號連3綠",
+      "date": "2026-06-30",
+      "category": "即時財經",
+      "summary": "中東緊張局勢降溫，加上人工智慧（AI）需求持續強勁，帶動5月製造業景氣燈號連續3個月亮出綠燈，且分數創逾1年高點，已經接近黃紅燈區間下緣。台經院表示，在AI供應鏈需求持續支撐下，製造業景氣可望 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606300105.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606300105.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-30T03:50:40.000Z",
+      "displayTime": "06/30 11:50"
+    },
+    {
+      "title": "工研院赴台東大坡國小 用單車與地熱科技辦科普課程",
       "date": "2026-06-30",
       "category": "即時生活",
-      "summary": "今彩539第115157期開獎，中獎號碼36、30、15、34、11；派彩結果，頭獎槓龜。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606290328.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606290328.aspx",
+      "summary": "工研院前往台東大坡國小舉辦科普教育課程，帶領學童認識斷層地質景觀與成因，並設計單車結構與機械力學課程，讓學童動腦又動手。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606300103.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606300103.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-06-29T14:05:22.000Z",
-      "displayTime": "06/29 22:05"
+      "publishedAt": "2026-06-30T03:49:36.000Z",
+      "displayTime": "06/30 11:49"
     }
   ]
 }
