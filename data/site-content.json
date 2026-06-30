@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-30T13:29:37.750Z"
+    "liveNewsUpdatedAt": "2026-06-30T16:11:39.421Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "臺灣漫遊錄獲國際布克獎 賴總統親頒300萬獎金",
-      "date": "2026-06-30",
+      "title": "北市暑期青春專案開跑 蔣萬安率隊稽查公安護青少年",
+      "date": "2026-07-01",
+      "category": "即時社會",
+      "summary": "暑期青春專案今晚啟動，台北市長蔣萬安表示，各重要場所公共安全都是稽查重點，並加強查緝新興毒品依托咪酯、避免毒駕，重申支持警方依法執行公權力，會力挺大家到底。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606300401.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606300401.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-30T14:54:23.000Z",
+      "displayTime": "06/30 22:54"
+    },
+    {
+      "title": "一日手術如何賠？金管會：符合3要件可理賠住院項目",
+      "date": "2026-07-01",
+      "category": "即時財經",
+      "summary": "外界關注「一日手術」理賠，金管會今天表示，一日手術若同時滿足保單條款的住院3要件，既有保單仍可理賠住院項目；若未辦理住院手續，原則上依門診手術約定辦理，不會因是一日手術而放寬住院理賠認定。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606300399.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606300399.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-30T14:52:18.000Z",
+      "displayTime": "06/30 22:52"
+    },
+    {
+      "title": "壽險業外幣保單前4月新契約保費1909億元 創4年新高",
+      "date": "2026-07-01",
+      "category": "即時財經",
+      "summary": "金管會統計顯示，壽險業今年前4月累計外幣保單新契約保費收入折合約新台幣1909.71億元，年增53%，創4年新高。金管會指出，外幣保單新契約保費收入占整體新契約保費收入約38.93%，較去年同 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606300398.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606300398.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-30T14:45:16.000Z",
+      "displayTime": "06/30 22:45"
+    },
+    {
+      "title": "輝達晶片伺服器銷中案 青雲總經理及美超微2人收押",
+      "date": "2026-07-01",
+      "category": "即時社會",
+      "summary": "基隆地檢署偵辦違法將搭載輝達高階晶片伺服器轉賣至中港澳案，搜索美超微台灣亞太總部、青雲科技、是方電訊並約談6人，經檢察官複訊，聲押青雲科技總經理呂男及2名美超微人員獲准。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202606300397.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202606300397.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-06-30T14:29:14.000Z",
+      "displayTime": "06/30 22:29"
+    },
+    {
+      "title": "旅客辱罵列車長 台鐵擬函送警察機關促請開罰",
+      "date": "2026-07-01",
       "category": "即時生活",
-      "summary": "由楊双子執筆、金翎英譯的「臺灣漫遊錄」於5月獲英國「國際布克獎」，文化部今天共有新台幣300萬元獎勵金給作者、譯者及春山出版社，每人各100萬元，由總統賴清德親自頒贈。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/acul/202606300380.aspx",
-      "slug": "https://www.cna.com.tw/news/acul/202606300380.aspx",
+      "summary": "台鐵161次自強號28日設備故障延誤，卻有旅客以髒話辱罵列車長；台鐵今天說，將函送警察機關，促請依權限開罰，而公司備有因公涉訟輔助制度辦法，將提供員工法律協助等。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606300396.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606300396.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-06-30T13:16:33.000Z",
-      "displayTime": "06/30 21:16"
+      "publishedAt": "2026-06-30T14:27:12.000Z",
+      "displayTime": "06/30 22:27"
     },
     {
-      "title": "6月豪雨農損逾4.8億元 屏東約2.4億元最多",
-      "date": "2026-06-30",
-      "category": "即時生活",
-      "summary": "根據農業部截至今天下午5時最新統計，累計0608豪雨及6月下旬豪雨造成的農業產物及民間設施災損已超過新台幣4.8億元，以屏東縣約2.4億元最多。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606300374.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606300374.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-30T12:58:20.000Z",
-      "displayTime": "06/30 20:58"
-    },
-    {
-      "title": "澎湖花火節陸軍之夜重磅登場 展現國軍守護家園韌性",
-      "date": "2026-06-30",
-      "category": "即時地方",
-      "summary": "澎湖國際海上花火節「陸軍之夜」，配合陸軍建軍80週年慶，今晚在觀音亭園區重磅登場，現場人潮湧現，旗海飄揚，場面熱烈。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606300372.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606300372.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-06-30T12:54:15.000Z",
-      "displayTime": "06/30 20:54"
-    },
-    {
-      "title": "今彩539第115158期開獎",
-      "date": "2026-06-30",
-      "category": "即時生活",
-      "summary": "今彩539第115158期開獎，中獎號碼37、11、03、23、26。3星彩中獎號碼179，4星彩中獎號碼0999。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606300368.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606300368.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-30T12:47:07.000Z",
-      "displayTime": "06/30 20:47"
-    },
-    {
-      "title": "大樂透第115066期開獎",
-      "date": "2026-06-30",
-      "category": "即時生活",
-      "summary": "大樂透第115066期今晚開獎。中獎號碼為29、10、36、45、16、04，特別號14。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606300366.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202606300366.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-06-30T12:37:02.000Z",
-      "displayTime": "06/30 20:37"
-    },
-    {
-      "title": "謝娜演唱會壓力下喊停 港媒質疑中國官媒管很大",
-      "date": "2026-06-30",
-      "category": "即時娛樂",
-      "summary": "出道近30年的中國知名主持人謝娜原定7月舉行巡迴演唱會，一度成為今夏最搶手演出之一，但中國網上卻有聲音質疑謝娜「跨界撈金」而發起抵制，多家官媒也陸續發文批評，演唱會因此叫停。對此，港媒引述批評 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/acn/202606300360.aspx",
-      "slug": "https://www.cna.com.tw/news/acn/202606300360.aspx",
-      "sourceName": "中央社娛樂",
-      "publishedAt": "2026-06-30T12:25:50.000Z",
-      "displayTime": "06/30 20:25"
+      "title": "金管會新規確立金控獨董調查權限 緊盯高層不當行為",
+      "date": "2026-07-01",
+      "category": "即時財經",
+      "summary": "為讓獨立董事發揮監督功能，金管會今天表示，2月已發布「金控與銀行獨董協助或調查事項作業程序」，業者也要提供資源讓獨董可進行3大調查，包括檢舉高層不當行為、違反公司治理如大股東不當參與經營以及吹 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202606300394.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202606300394.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-06-30T14:11:07.000Z",
+      "displayTime": "06/30 22:11"
     }
   ]
 }
