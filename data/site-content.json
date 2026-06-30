@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-06-30T11:32:44.355Z"
+    "liveNewsUpdatedAt": "2026-06-30T13:29:37.750Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "PChome旗下拍付國際疑個資遭竊 數發部7/1行政檢查",
+      "title": "臺灣漫遊錄獲國際布克獎 賴總統親頒300萬獎金",
       "date": "2026-06-30",
-      "category": "即時財經",
-      "summary": "數發部數產署今天表示，駭客組織Settra於暗網聲稱已竊取PChome旗下拍付國際（Pi拍錢包）資料一案，數產署依個人資料保護法等規定積極應處，將於明天辦理實地行政檢查，釐清案情並持續追蹤個資 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606300326.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606300326.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-30T10:42:36.000Z",
-      "displayTime": "06/30 18:42"
-    },
-    {
-      "title": "國巨爆鉅額違約交割 金額達3880萬元",
-      "date": "2026-06-30",
-      "category": "即時財經",
-      "summary": "台股近期走勢呈現高檔震盪，台灣證券交易所今天公告，包括口袋、第一中壢、北城、國泰敦二、國泰敦南、中信託高、和富邦南屯等7家證券商通報，被動元件龍頭國巨發生鉅額違約交割，合計金額新台幣3880萬 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606300325.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606300325.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-30T10:42:34.000Z",
-      "displayTime": "06/30 18:42"
-    },
-    {
-      "title": "晶圓代工成熟製程供需結構轉變 估漲價至2027年",
-      "date": "2026-06-30",
-      "category": "即時財經",
-      "summary": "人工智慧（AI）伺服器、通用型伺服器和邊緣AI周邊需求升溫，加上部分廠商減產效應，集邦科技表示，晶圓代工成熟製程供需結構改變，預期代工報價調漲趨勢可能延續到2027年。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606300323.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606300323.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-30T10:31:30.000Z",
-      "displayTime": "06/30 18:31"
-    },
-    {
-      "title": "中油降7月電業天然氣價 台電估燃料成本仍月增110億元",
-      "date": "2026-06-30",
-      "category": "即時財經",
-      "summary": "根據台電最新財報，今年5月稅前虧損為新台幣54億元。台電表示，儘管中油宣布7月調降電業用戶天然氣價格，但受4、5月連續調漲影響，預估7月起每月燃料成本仍將增加約110億元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時生活",
+      "summary": "由楊双子執筆、金翎英譯的「臺灣漫遊錄」於5月獲英國「國際布克獎」，文化部今天共有新台幣300萬元獎勵金給作者、譯者及春山出版社，每人各100萬元，由總統賴清德親自頒贈。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606300322.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606300322.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-30T10:29:28.000Z",
-      "displayTime": "06/30 18:29"
+      "sourceUrl": "https://www.cna.com.tw/news/acul/202606300380.aspx",
+      "slug": "https://www.cna.com.tw/news/acul/202606300380.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-30T13:16:33.000Z",
+      "displayTime": "06/30 21:16"
     },
     {
-      "title": "瑞銀：去年全球個人財富成長10.8% 台灣排第16名",
+      "title": "6月豪雨農損逾4.8億元 屏東約2.4億元最多",
       "date": "2026-06-30",
-      "category": "即時財經",
-      "summary": "瑞銀報告指出，去年全球個人財富成長10.8%，連續第3年成長且增速明顯加快；台灣人均財富達33萬2533美元（約新台幣1059萬元），排名全球第16名。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202606300320.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202606300320.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-06-30T10:25:23.000Z",
-      "displayTime": "06/30 18:25"
+      "category": "即時生活",
+      "summary": "根據農業部截至今天下午5時最新統計，累計0608豪雨及6月下旬豪雨造成的農業產物及民間設施災損已超過新台幣4.8億元，以屏東縣約2.4億元最多。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606300374.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606300374.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-30T12:58:20.000Z",
+      "displayTime": "06/30 20:58"
     },
     {
-      "title": "萬里溪堰塞湖風險未解除 湖區右岸崩塌地邊坡仍不穩",
+      "title": "澎湖花火節陸軍之夜重磅登場 展現國軍守護家園韌性",
       "date": "2026-06-30",
       "category": "即時地方",
-      "summary": "萬里溪堰塞湖昨天下午暫時解除黃色警戒，但堰塞湖上游集水區仍持續入流蓄水，溢流風險尚未解除，且湖區右岸崩塌地邊坡上方仍不穩定，有持續崩落跡象，各單位持續關注。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "澎湖國際海上花火節「陸軍之夜」，配合陸軍建軍80週年慶，今晚在觀音亭園區重磅登場，現場人潮湧現，旗海飄揚，場面熱烈。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606300318.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202606300318.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202606300372.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202606300372.aspx",
       "sourceName": "中央社地方",
-      "publishedAt": "2026-06-30T10:23:19.000Z",
-      "displayTime": "06/30 18:23"
+      "publishedAt": "2026-06-30T12:54:15.000Z",
+      "displayTime": "06/30 20:54"
+    },
+    {
+      "title": "今彩539第115158期開獎",
+      "date": "2026-06-30",
+      "category": "即時生活",
+      "summary": "今彩539第115158期開獎，中獎號碼37、11、03、23、26。3星彩中獎號碼179，4星彩中獎號碼0999。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606300368.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606300368.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-30T12:47:07.000Z",
+      "displayTime": "06/30 20:47"
+    },
+    {
+      "title": "大樂透第115066期開獎",
+      "date": "2026-06-30",
+      "category": "即時生活",
+      "summary": "大樂透第115066期今晚開獎。中獎號碼為29、10、36、45、16、04，特別號14。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202606300366.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202606300366.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-06-30T12:37:02.000Z",
+      "displayTime": "06/30 20:37"
+    },
+    {
+      "title": "謝娜演唱會壓力下喊停 港媒質疑中國官媒管很大",
+      "date": "2026-06-30",
+      "category": "即時娛樂",
+      "summary": "出道近30年的中國知名主持人謝娜原定7月舉行巡迴演唱會，一度成為今夏最搶手演出之一，但中國網上卻有聲音質疑謝娜「跨界撈金」而發起抵制，多家官媒也陸續發文批評，演唱會因此叫停。對此，港媒引述批評 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/acn/202606300360.aspx",
+      "slug": "https://www.cna.com.tw/news/acn/202606300360.aspx",
+      "sourceName": "中央社娛樂",
+      "publishedAt": "2026-06-30T12:25:50.000Z",
+      "displayTime": "06/30 20:25"
     }
   ]
 }
