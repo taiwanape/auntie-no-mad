@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-02T01:25:07.197Z"
+    "liveNewsUpdatedAt": "2026-07-02T05:43:18.081Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "屏東台南防38度高溫 吳德榮：雙颱最快2日生成",
+      "title": "北高遮陽傘成話題 陳其邁：有的城市比較有錢",
       "date": "2026-07-02",
-      "category": "即時生活",
-      "summary": "氣象署今天發布10縣市高溫資訊，其中屏東、台南防攝氏38度以上高溫。氣象專家吳德榮表示，8日前各地熱如盛夏，海面上雙熱帶系統最快今天成颱，關島系統有機會發展為強颱。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607020029.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607020029.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-02T00:38:20.000Z",
-      "displayTime": "07/02 08:38"
+      "category": "即時地方",
+      "summary": "酷暑難耐，高雄、新北、台北近期陸續設置行人遮陽傘。高雄市長陳其邁說，市民利益是最重要考量，考慮到預算、維護成本因此沒有選擇電動裝置，「每個城市財政不同，有的城市就比較有錢。」 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607020145.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607020145.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-02T05:20:31.000Z",
+      "displayTime": "07/02 13:20"
     },
     {
-      "title": "費半跌6%台積電ADR挫近7% 法人：台股留意修正壓力",
+      "title": "菊島盃全國跆拳道錦標賽 266選手澎湖競技",
+      "date": "2026-07-02",
+      "category": "即時地方",
+      "summary": "2026菊島盃全國跆拳道錦標賽，來自全國14縣市266位跆拳道選手今天開打，澎湖副縣長林皆興形容為全國武林大會，期許所有參賽選手秉持跆拳道精神，展現平常訓練成果。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607020138.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607020138.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-02T05:06:14.000Z",
+      "displayTime": "07/02 13:06"
+    },
+    {
+      "title": "台股創高 富邦提醒高槓桿風險看好下半年AI續旺",
       "date": "2026-07-02",
       "category": "即時財經",
-      "summary": "科技股走弱，美股1日主要指數收黑，英特爾下跌9.03%、台積電ADR下跌6.9%，台指期夜盤下跌867點。法人指出，台股可能面臨技術性修正壓力；不過外資轉買、AI長線題材及台積電16日法說會預 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "台股今年上半年大漲17162點，創歷史紀錄，進入下半年，富邦投顧看好在傳統旺季、AI新品推陳出新，加上選舉行情助攻下，預估年底前台股指數有機會向上挑戰54500點，但也提醒籌碼面的高槓桿成為台 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607020028.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607020028.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607020135.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607020135.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-02T00:32:18.000Z",
-      "displayTime": "07/02 08:32"
+      "publishedAt": "2026-07-02T04:58:08.000Z",
+      "displayTime": "07/02 12:58"
     },
     {
-      "title": "桃園火車站2樓餐飲店清晨火警 自動灑水撲滅無傷亡",
+      "title": "強化AI雲端設施 微軟攜手5公司籌建印星馬新海纜",
       "date": "2026-07-02",
-      "category": "即時社會",
-      "summary": "桃園火車站今天清晨發生火警，位於2樓餐飲店廚房起火，桃園市消防局獲報趕往搶救，現場自動灑水設備已先行啟動將火勢撲滅，無人員傷亡或受困，起火原因仍待調查釐清。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時財經",
+      "summary": "微軟（Microsoft）與新加坡電信新創Lightstorm等6家公司合組集團，正籌劃興建一條3600公里長的海底電纜，將連結印度、馬來西亞與新加坡。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607020134.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202607020134.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-02T04:58:06.000Z",
+      "displayTime": "07/02 12:58"
+    },
+    {
+      "title": "陳素月發表競選歌曲 盼團結彰化打造更好未來",
+      "date": "2026-07-02",
+      "category": "即時地方",
+      "summary": "民主進步黨彰化縣長參選人陳素月今天公布競選歌曲「這是我們的彰化」時表示，這首曲子不僅是競選歌曲，更代表從基層一路走來對土地的感情，希望以音樂團結彰化，打造更好未來。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607020027.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202607020027.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-07-02T00:29:16.000Z",
-      "displayTime": "07/02 08:29"
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607020128.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607020128.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-02T04:42:53.000Z",
+      "displayTime": "07/02 12:42"
     },
     {
-      "title": "涉收受饋贈及洩密詐團案 新北員警羈押禁見",
+      "title": "北市動物園重新開園 馬來貘星星、小貓熊茜茜迎賓",
       "date": "2026-07-02",
-      "category": "即時社會",
-      "summary": "檢警偵辦安心幣商詐騙案，查出多名員警疑接受飲宴、饋贈並涉嫌洩密。北檢昨天聲押新北市警察局土城分局李姓偵查佐及中間人鄭男，台北地方法院今天裁定2人羈押禁見。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607020024.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202607020024.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-07-02T00:12:09.000Z",
-      "displayTime": "07/02 08:12"
-    },
-    {
-      "title": "台灣芒果荔枝首批空運抵英國 多元通路放眼歐洲",
-      "date": "2026-07-02",
-      "category": "即時生活",
-      "summary": "台灣拓展水果出口歐洲版圖，一批台南愛文芒果和台中黑葉荔枝今天在英國曼徹斯特機場成功清關入境，總計空運1盤櫃，已陸續發配各通路，且從台灣到英國維持低溫不斷鏈，以確保品質與新鮮度。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時地方",
+      "summary": "台北市立動物園表示，經過10天歲修，即日起重新開園，遊客將有機會看到來自新加坡動物園的馬來貘Bintang（意為星星）及來自日本旭山動物園的小貓熊「茜茜」。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607020020.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607020020.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-01T23:38:00.000Z",
-      "displayTime": "07/02 07:38"
-    },
-    {
-      "title": "基隆3樓民宅陷火海 61歲男子受困救出不治",
-      "date": "2026-07-02",
-      "category": "即時社會",
-      "summary": "基隆市中山二路一處3樓民宅昨天晚間發生火警，消防員抵達時已全面燃燒，61歲邱姓男子受困屋內，救出時已失去呼吸、心跳，經送醫急救後宣告不治。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607020015.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202607020015.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-07-01T22:49:46.000Z",
-      "displayTime": "07/02 06:49"
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607020127.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607020127.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-02T04:42:51.000Z",
+      "displayTime": "07/02 12:42"
     }
   ]
 }
