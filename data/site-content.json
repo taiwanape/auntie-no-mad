@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-02T05:43:18.081Z"
+    "liveNewsUpdatedAt": "2026-07-02T08:34:47.495Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "北高遮陽傘成話題 陳其邁：有的城市比較有錢",
+      "title": "大麻夾藏桂圓內走私來台 刑事局偕海關破案逮2嫌",
       "date": "2026-07-02",
-      "category": "即時地方",
-      "summary": "酷暑難耐，高雄、新北、台北近期陸續設置行人遮陽傘。高雄市長陳其邁說，市民利益是最重要考量，考慮到預算、維護成本因此沒有選擇電動裝置，「每個城市財政不同，有的城市就比較有錢。」 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時社會",
+      "summary": "非法分子欲跨境走私毒品來台，竟將逾6公斤大麻夾藏於桂圓內自泰國寄送來台，企圖干擾緝毒犬嗅覺闖關。刑事局接獲關務署通報，循線於桃園市查獲領貨的薛男與轉運手張男送辦。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607020145.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607020145.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-07-02T05:20:31.000Z",
-      "displayTime": "07/02 13:20"
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607020216.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202607020216.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-07-02T08:06:04.000Z",
+      "displayTime": "07/02 16:06"
     },
     {
-      "title": "菊島盃全國跆拳道錦標賽 266選手澎湖競技",
+      "title": "壓力型小腹難瘦 醫師揭皮質醇影響與改善5招",
       "date": "2026-07-02",
-      "category": "即時地方",
-      "summary": "2026菊島盃全國跆拳道錦標賽，來自全國14縣市266位跆拳道選手今天開打，澎湖副縣長林皆興形容為全國武林大會，期許所有參賽選手秉持跆拳道精神，展現平常訓練成果。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時生活",
+      "summary": "四肢纖細卻小腹凸出，一名30多歲女性拼命節食、狂運動仍難「腰瘦」。醫師指出，腹部脂肪對壓力荷爾蒙（皮質醇）特別敏感，過度節食反增壓力，建議調整飲食、睡眠與運動等5招改善。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607020138.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607020138.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-07-02T05:06:14.000Z",
-      "displayTime": "07/02 13:06"
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607020214.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607020214.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-02T08:00:00.000Z",
+      "displayTime": "07/02 16:00"
     },
     {
-      "title": "台股創高 富邦提醒高槓桿風險看好下半年AI續旺",
+      "title": "迎開航12週年 台灣虎航攜手魏嘉瑩推全新主題曲",
+      "date": "2026-07-02",
+      "category": "即時生活",
+      "summary": "今年9月將邁入開航12週年的台灣虎航今天宣布，攜手相信音樂旗下歌手魏嘉瑩，首度推出合作主題曲「快出來玩」，將成為登機及乘客離機時的播放音樂，完整版MV將在明天中午首播。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607020213.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607020213.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-02T07:58:58.000Z",
+      "displayTime": "07/02 15:58"
+    },
+    {
+      "title": "玉山銀推金融處方箋 攜手北市聯醫守護高齡財務安全",
       "date": "2026-07-02",
       "category": "即時財經",
-      "summary": "台股今年上半年大漲17162點，創歷史紀錄，進入下半年，富邦投顧看好在傳統旺季、AI新品推陳出新，加上選舉行情助攻下，預估年底前台股指數有機會向上挑戰54500點，但也提醒籌碼面的高槓桿成為台 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607020135.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607020135.aspx",
+      "summary": "為強化高齡金融安全與失智友善服務，玉山銀行今天宣布，將攜手台北市立聯合醫院推動「金融處方箋」合作模式，若門診發現民眾有財務安全或生活支持需求，經同意後可轉介至分行諮詢，協助安排信用卡風險控管、 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607020211.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607020211.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-02T04:58:08.000Z",
-      "displayTime": "07/02 12:58"
+      "publishedAt": "2026-07-02T07:55:53.000Z",
+      "displayTime": "07/02 15:55"
     },
     {
-      "title": "強化AI雲端設施 微軟攜手5公司籌建印星馬新海纜",
+      "title": "經長：台積電在台灣將建16座廠 美國怎麼蓋都達不到",
       "date": "2026-07-02",
       "category": "即時財經",
-      "summary": "微軟（Microsoft）與新加坡電信新創Lightstorm等6家公司合組集團，正籌劃興建一條3600公里長的海底電纜，將連結印度、馬來西亞與新加坡。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607020134.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202607020134.aspx",
+      "summary": "媒體報導美國總統川普指台積電將倍增在亞利桑那州興建中的晶圓廠規模，美晶片市占率將達50%。經濟部長龔明鑫下午表示，台積電目前已公布在台灣興建及規劃中的晶圓廠，加上CoWoS先進封裝產能共有16 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607020210.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607020210.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-02T04:58:06.000Z",
-      "displayTime": "07/02 12:58"
+      "publishedAt": "2026-07-02T07:53:51.000Z",
+      "displayTime": "07/02 15:53"
     },
     {
-      "title": "陳素月發表競選歌曲 盼團結彰化打造更好未來",
+      "title": "沙拉油原料苯駢芘超標 零售通路啟動退貨機制",
       "date": "2026-07-02",
-      "category": "即時地方",
-      "summary": "民主進步黨彰化縣長參選人陳素月今天公布競選歌曲「這是我們的彰化」時表示，這首曲子不僅是競選歌曲，更代表從基層一路走來對土地的感情，希望以音樂團結彰化，打造更好未來。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時生活",
+      "summary": "食藥署1日接獲中聯油脂通報，供應泰山、福壽及福懋油使用一批大豆沙拉油原料，自主檢出致癌物苯駢芘含量超過法規限值，原公布受影響15項產品，今天更新為18項產品、21個批號。各量販、超市及超商通路 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607020128.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607020128.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-07-02T04:42:53.000Z",
-      "displayTime": "07/02 12:42"
-    },
-    {
-      "title": "北市動物園重新開園 馬來貘星星、小貓熊茜茜迎賓",
-      "date": "2026-07-02",
-      "category": "即時地方",
-      "summary": "台北市立動物園表示，經過10天歲修，即日起重新開園，遊客將有機會看到來自新加坡動物園的馬來貘Bintang（意為星星）及來自日本旭山動物園的小貓熊「茜茜」。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607020127.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607020127.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-07-02T04:42:51.000Z",
-      "displayTime": "07/02 12:42"
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607020207.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607020207.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-02T07:52:45.000Z",
+      "displayTime": "07/02 15:52"
     }
   ]
 }
