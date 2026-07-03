@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="阿姨別生氣工具箱：單位換算、魔術方塊互動教學等日常實用工具集中放這裡。">
+  <meta name="description" content="阿姨別生氣工具箱：把公克、公斤、台斤、台兩、磅、盎司等日常單位集中換算。">
   <title>阿姨工具箱｜阿姨別生氣</title>
   <link rel="icon" href="../assets/auntie-avatar-nav.jpg">
   <style>
@@ -60,20 +60,12 @@
     .result span { font-size: 14px; font-weight: 900; color: rgba(255,255,255,.82); }
     .quick { display: flex; flex-wrap: wrap; gap: 8px; }
     .quick button { min-height: 36px; padding: 7px 10px; border: 2px solid var(--ink); border-radius: 999px; background: #fff; box-shadow: 2px 2px 0 var(--ink); color: var(--ink); font-weight: 1000; cursor: pointer; }
-    .tool-directory { margin-bottom: 18px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-    .tool-link-card { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 12px; padding: 16px; border: 3px solid var(--ink); border-radius: 14px; background: white; box-shadow: 4px 4px 0 var(--ink); color: var(--ink); text-decoration: none; }
-    .tool-link-card:hover { transform: translate(-1px, -1px); box-shadow: 6px 6px 0 var(--ink); }
-    .tool-link-card:focus-visible { outline: 4px solid var(--pink); outline-offset: 4px; }
-    .tool-icon { display: grid; place-items: center; width: 58px; aspect-ratio: 1; border: 3px solid var(--ink); border-radius: 12px; background: var(--yellow); font-size: 18px; font-weight: 1000; box-shadow: 3px 3px 0 var(--ink); }
-    .tool-meta { display: grid; gap: 4px; }
-    .tool-meta strong { font-size: 20px; line-height: 1.12; font-weight: 1000; }
-    .tool-meta span { font-size: 14px; line-height: 1.35; font-weight: 850; }
     .soon { margin-top: 18px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
     .soon div { padding: 14px; border: 3px solid var(--ink); border-radius: 14px; background: white; box-shadow: 4px 4px 0 var(--ink); font-weight: 1000; }
     @media (max-width: 760px) {
       .top { align-items: flex-start; flex-direction: column; }
       .back { width: 100%; justify-content: center; }
-      .tool-panel, .tool-directory, .converter-grid, .soon { grid-template-columns: 1fr; }
+      .tool-panel, .converter-grid, .soon { grid-template-columns: 1fr; }
       h1 { font-size: clamp(38px, 13vw, 54px); line-height: 1.08; text-shadow: 3px 3px 0 white, 5px 5px 0 var(--ink); }
     }
   </style>
@@ -87,23 +79,7 @@
     <section class="hero">
       <span class="label">阿姨工具箱</span>
       <h1>日常換算，不用再猜。</h1>
-      <p class="deck">煮菜、寄貨、學魔術方塊、看海外規格，先用工具慢慢做清楚。以後新增工具也會集中在這裡。</p>
-    </section>
-    <section class="tool-directory" aria-label="工具清單">
-      <a class="tool-link-card" href="#massTitle">
-        <span class="tool-icon">g</span>
-        <span class="tool-meta">
-          <strong>單位換算機</strong>
-          <span>公克、公斤、台斤、台兩、磅、盎司一次換好。</span>
-        </span>
-      </a>
-      <a class="tool-link-card" href="rubiks-cube/index.html">
-        <span class="tool-icon">3x3</span>
-        <span class="tool-meta">
-          <strong>魔術方塊互動教學</strong>
-          <span>可手動轉、看示範、拍照辨識，再一步一步學白色十字。</span>
-        </span>
-      </a>
+      <p class="deck">煮菜、寄貨、買二手、看海外規格，先用工具算清楚。以後新增工具也會集中在這裡。</p>
     </section>
     <section class="tool-panel" aria-labelledby="massTitle">
       <div class="tool-copy">
