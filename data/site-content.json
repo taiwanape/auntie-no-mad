@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-02T15:55:56.805Z"
+    "liveNewsUpdatedAt": "2026-07-03T00:19:08.268Z"
   },
   "lifeRadar": [
     {
@@ -863,8 +863,56 @@
   ],
   "liveNews": [
     {
+      "title": "科技股下挫、道瓊創新高 美股收盤走勢分歧",
+      "date": "2026-07-03",
+      "category": "即時財經",
+      "summary": "美股今天收盤走勢分歧，投資人將資金從科技股轉向工業類股，帶動道瓊再創新高。與此同時美元則走弱，因美國今天公布的就業數據令人失望，衝擊市場對於迅速升息的預期。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607030010.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607030010.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-02T20:57:43.000Z",
+      "displayTime": "07/03 04:57"
+    },
+    {
+      "title": "美國長週末前空頭回補買盤進場 國際油價小漲",
+      "date": "2026-07-03",
+      "category": "即時財經",
+      "summary": "國際油價今天小幅上揚，主因美國獨立日長週末將至，市場出現一些空頭回補的買盤。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607030009.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607030009.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-02T20:23:41.000Z",
+      "displayTime": "07/03 04:23"
+    },
+    {
+      "title": "世衛：郵輪漢他病毒疫情結束 最後接觸者檢測呈陰性",
+      "date": "2026-07-03",
+      "category": "即時生活",
+      "summary": "世界衛生組織（WHO）今天宣布，與郵輪「洪迪亞斯號」相關、引發國際關注的致命漢他病毒（hantavirus）疫情已經結束，最後一名接觸者已解除隔離。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607030008.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202607030008.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-02T19:31:38.000Z",
+      "displayTime": "07/03 03:31"
+    },
+    {
+      "title": "歐股收漲 法蘭克福股市創新高",
+      "date": "2026-07-03",
+      "category": "即時財經",
+      "summary": "歐洲3大股市今天均收漲，法蘭克福股市創下紀錄新高，原因包括德國執政聯盟就大規模稅制、勞動及年金改革達成共識，這些改革旨在振興疲弱的經濟及應對極右翼勢力抬頭。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607030003.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607030003.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-02T16:41:24.000Z",
+      "displayTime": "07/03 00:41"
+    },
+    {
       "title": "國1桃園段4車連環撞 大貨車疑分心撞擊釀10人傷",
-      "date": "2026-07-02",
+      "date": "2026-07-03",
       "category": "即時社會",
       "summary": "國道1號北向53公里桃園路段今晚8時40分發生4車事故，吳男駕駛大貨車疑因分心撞擊前方3輛自小客車，大貨車側翻壓住其中1輛小客車，共造成10人送醫，但無生命危險。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
@@ -875,64 +923,16 @@
       "displayTime": "07/02 23:37"
     },
     {
-      "title": "國1桃園段4車事故 大貨車壓轎車1人受困救出送醫",
-      "date": "2026-07-02",
-      "category": "即時社會",
-      "summary": "國道1號北向53.2公里桃園路段今晚8時40分許發生4車事故，其中1輛24噸大貨車側翻壓到自小客車，造成車內1人受困，經警消搶救脫困後送醫，事故一度占用外側3車道。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "title": "民主剛果伊波拉疫情逾400死 東北部大城爆首例確診",
+      "date": "2026-07-03",
+      "category": "即時生活",
+      "summary": "剛果民主共和國（DR Congo，簡稱民主剛果）最新公布的官方資料顯示，該國爆發伊波拉（Ebola）病毒疫情後，死亡人數已超過400人，且東北部大城吉桑干尼傳出首例確診。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607020380.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202607020380.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-07-02T14:47:05.000Z",
-      "displayTime": "07/02 22:47"
-    },
-    {
-      "title": "美6月就業報告削弱升息預期 美股微幅開高",
-      "date": "2026-07-02",
-      "category": "即時財經",
-      "summary": "華爾街主要股市指數今天微幅開高，稍早公布的6月就業報告表現不如預期，使市場對聯邦準備理事會（Fed）將升息的預期降溫。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607020375.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607020375.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-02T14:07:54.000Z",
-      "displayTime": "07/02 22:07"
-    },
-    {
-      "title": "今彩539第115160期 頭獎2注中獎",
-      "date": "2026-07-02",
-      "category": "即時財經",
-      "summary": "今彩539第115160期開獎，中獎號碼01、13、08、30、06；派彩結果，頭獎2注中獎，每注獎金新台幣800萬元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607020374.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607020374.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-02T14:05:52.000Z",
-      "displayTime": "07/02 22:05"
-    },
-    {
-      "title": "威力彩第115053期 頭獎槓龜",
-      "date": "2026-07-02",
-      "category": "即時財經",
-      "summary": "威力彩第115053期今晚開獎，第一區中獎號碼為11、13、22、02、21、35，第二區中獎號碼為03。派彩結果，頭獎、貳獎槓龜。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607020373.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607020373.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-02T14:04:50.000Z",
-      "displayTime": "07/02 22:04"
-    },
-    {
-      "title": "股東會委託書申報改電子化 2027年3月上路",
-      "date": "2026-07-02",
-      "category": "即時財經",
-      "summary": "金管會今天表示，考量現行股東會委託書徵求人申報資料，要用紙本方式送達公司與副本給證基會，相當耗費人力成本，預告修正「公開發行公司出席股東會使用委託書規則」，把紙本申報改為電子申報，統計到6月底 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607020371.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607020371.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-02T13:58:45.000Z",
-      "displayTime": "07/02 21:58"
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607020382.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202607020382.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-02T15:20:12.000Z",
+      "displayTime": "07/02 23:20"
     }
   ]
 }
