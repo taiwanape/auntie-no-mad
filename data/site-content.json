@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-04T14:15:31.814Z"
+    "liveNewsUpdatedAt": "2026-07-04T15:33:43.923Z"
   },
   "lifeRadar": [
     {
@@ -863,6 +863,30 @@
   ],
   "liveNews": [
     {
+      "title": "今彩539第115162期 頭獎1注中獎",
+      "date": "2026-07-04",
+      "category": "即時財經",
+      "summary": "今彩539第115162期開獎，中獎號碼15、37、10、02、31；派彩結果，頭獎1注中獎，獎金新台幣800萬元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607040193.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607040193.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-04T14:09:26.000Z",
+      "displayTime": "07/04 22:09"
+    },
+    {
+      "title": "王力宏成都開唱重摔耳朵流血 重返舞台安慰歌迷",
+      "date": "2026-07-04",
+      "category": "即時娛樂",
+      "summary": "歌手王力宏今晚在中國成都舉辦演唱會，但疑似因為在舞台上絆倒不慎踩空，導致頭部撞上舞台階梯，左臉頰與耳朵流血，但他重返舞台後安慰歌迷表示都是外傷，「大家放心」。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/amov/202607040188.aspx",
+      "slug": "https://www.cna.com.tw/news/amov/202607040188.aspx",
+      "sourceName": "中央社娛樂",
+      "publishedAt": "2026-07-04T13:28:12.000Z",
+      "displayTime": "07/04 21:28"
+    },
+    {
       "title": "衛福部：持續強化橫向連結維護食安",
       "date": "2026-07-04",
       "category": "即時生活",
@@ -909,30 +933,6 @@
       "sourceName": "中央社生活",
       "publishedAt": "2026-07-04T12:14:52.000Z",
       "displayTime": "07/04 20:14"
-    },
-    {
-      "title": "網路連署事後避孕藥轉指示藥附議成案 食藥署9/4前需回應",
-      "date": "2026-07-04",
-      "category": "即時生活",
-      "summary": "食藥署預告事後避孕藥等3款處方用藥納入追蹤或追溯系統，掀起反彈聲浪。有網友在公共政策網路參與平台發起連署，要求改列為可直接在藥局購得的指示藥，短短2天逾8000人附議已成案，食藥署須於2個月內 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607040178.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607040178.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-04T11:53:48.000Z",
-      "displayTime": "07/04 19:53"
-    },
-    {
-      "title": "方志友入戲深到夜半驚醒 禾浩辰為減重日跑10公里",
-      "date": "2026-07-04",
-      "category": "即時娛樂",
-      "summary": "影集「再見1987」特別版今晚在台北電影節首映，演員方志友透露因為太入戲，甚至半夜夢到戰爭畫面驚醒；禾浩辰因為要經歷戰爭時代，天天曬太陽練跑10公里，從78公斤瘦到70公斤。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/amov/202607040177.aspx",
-      "slug": "https://www.cna.com.tw/news/amov/202607040177.aspx",
-      "sourceName": "中央社娛樂",
-      "publishedAt": "2026-07-04T11:50:45.000Z",
-      "displayTime": "07/04 19:50"
     }
   ]
 }
