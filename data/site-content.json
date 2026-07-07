@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-07T04:38:08.142Z"
+    "liveNewsUpdatedAt": "2026-07-07T08:02:45.904Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "彈性育嬰假申請逾3萬筆 男性申辦連2月超越女性",
+      "title": "勞動部：勞資會議雙方代表應親自出席不得委託",
       "date": "2026-07-07",
       "category": "即時生活",
-      "summary": "彈性育嬰假今年1月上路，根據統計，累計申請人數已衝破1.4萬人、申請筆數也突破3萬筆，而6月單月男性申辦比重再度超越女性，促進職場爸爸共同分擔育兒責任。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607070116.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607070116.aspx",
+      "summary": "事業單位依法應召開勞資會議，勞動部今天修正注意事項，明定勞資會議雙方代表應親自出席會議、不得委託代理，若人數未過半就應改期舉行。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607070198.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607070198.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-07-07T04:27:38.000Z",
-      "displayTime": "07/07 12:27"
+      "publishedAt": "2026-07-07T07:03:34.000Z",
+      "displayTime": "07/07 15:03"
     },
     {
-      "title": "AI女星出道近1年終有作品 首度主演長片",
+      "title": "健策6月營收26億元年增57% 歷史新高",
       "date": "2026-07-07",
-      "category": "即時娛樂",
-      "summary": "虛擬「女演員」蒂莉諾伍德2025年秋天出道時曾引發好萊塢反彈，一直未獲任何演出機會，然而，她的創作團隊今天宣布將為她量身打造首部長片，可望成為她演藝生涯的突破之作。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時財經",
+      "summary": "均熱片大廠健策今天公布6月營收新台幣26.49億元，月增14.5%，年增57.64%，創單月營收歷史新高。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607070197.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607070197.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-07T07:02:32.000Z",
+      "displayTime": "07/07 15:02"
+    },
+    {
+      "title": "睿禾金碳擬8/12登興櫃 今年營收估增2位數",
+      "date": "2026-07-07",
+      "category": "即時財經",
+      "summary": "睿禾金碳預計8月12日登錄興櫃交易，今年累計前5月營收逾新台幣3億元，董事長陳坤宏表示，今年業績可望成長2位數水準。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607070194.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607070194.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-07T06:55:26.000Z",
+      "displayTime": "07/07 14:55"
+    },
+    {
+      "title": "竹市棒球場完成透水瀝青鋪設 啟動人工草皮鋪設",
+      "date": "2026-07-07",
+      "category": "即時地方",
+      "summary": "新竹市政府今天表示，市立棒球場改善工程持續推進，已完成透水瀝青鋪設並通過關鍵查驗，確認底層基礎完善，目前工程進入新階段，正進行壘包區、投手丘施作及人工草皮鋪設。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607070192.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607070192.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-07T06:47:22.000Z",
+      "displayTime": "07/07 14:47"
+    },
+    {
+      "title": "韓股慘跌一度重挫8% 觸發今年第6度熔斷",
+      "date": "2026-07-07",
+      "category": "即時財經",
+      "summary": "由於科技權值股重挫，韓國股市今天狂跌，跌幅一度達8%。韓國交易所公司（KRX）被迫啟動今年第6次熔斷機制。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/amov/202607070112.aspx",
-      "slug": "https://www.cna.com.tw/news/amov/202607070112.aspx",
-      "sourceName": "中央社娛樂",
-      "publishedAt": "2026-07-07T04:17:30.000Z",
-      "displayTime": "07/07 12:17"
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607070191.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607070191.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-07T06:45:20.000Z",
+      "displayTime": "07/07 14:45"
     },
     {
-      "title": "問題油波及165校 鄭英耀：全面停用並預防性下架",
+      "title": "三星財報引發科技股賣壓 日經指數收跌逾2%",
       "date": "2026-07-07",
-      "category": "即時生活",
-      "summary": "中聯油品致癌物苯駢芘超標，教育部長鄭英耀今天表示，目前統計有165校回報曾使用問題油品，已請各校停止使用並預防性下架，持續滾動追蹤中，一定會保護學生的安全健康。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607070108.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607070108.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-07T04:15:21.000Z",
-      "displayTime": "07/07 12:15"
-    },
-    {
-      "title": "分科測驗是否因颱風延期 鄭英耀：招聯會下午決定",
-      "date": "2026-07-07",
-      "category": "即時生活",
-      "summary": "115學年分科測驗11日到12日舉行，教育部長鄭英耀今天表示，因應颱風趨勢，大學招聯會將提前於今天召開應變會議，預計下午就會決定是否延期。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607070099.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607070099.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-07T03:59:02.000Z",
-      "displayTime": "07/07 11:59"
-    },
-    {
-      "title": "中國男攻擊矢板明夫 欲逃韓國登機前15分鐘遭逮",
-      "date": "2026-07-07",
-      "category": "即時社會",
-      "summary": "持香港護照中國籍廖姓男子昨天在台中市攻擊印太戰略智庫執行長矢板明夫後逃逸，之後趕到台中機場要飛往韓國，只差15分鐘就要登機，幸警方依刺青等特徵及時逮人送辦。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607070098.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202607070098.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-07-07T03:56:00.000Z",
-      "displayTime": "07/07 11:56"
-    },
-    {
-      "title": "高中免試入學錄取率99.21%近3年最低 956人落榜",
-      "date": "2026-07-07",
-      "category": "即時生活",
-      "summary": "115學年高中免試入學管道今天放榜，12萬620人報名，錄取11萬9664人，錄取率99.21%、是近3年最低，有956人落榜；以彰化區（98.43%）、基北區（98.58%）錄取率較低。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607070095.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607070095.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-07T03:50:54.000Z",
-      "displayTime": "07/07 11:50"
+      "category": "即時財經",
+      "summary": "日本股市日經225指數今天收跌，因三星電子公布財報後股價重挫，引發科技股賣壓，其中今年漲勢最強的半導體相關類股尤其受到重創。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607070190.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607070190.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-07T06:45:17.000Z",
+      "displayTime": "07/07 14:45"
     }
   ]
 }
