@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-07T00:20:06.957Z"
+    "liveNewsUpdatedAt": "2026-07-07T04:38:08.142Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "紐約亞洲影展 張孝全獲亞洲之星大獎",
+      "title": "彈性育嬰假申請逾3萬筆 男性申辦連2月超越女性",
+      "date": "2026-07-07",
+      "category": "即時生活",
+      "summary": "彈性育嬰假今年1月上路，根據統計，累計申請人數已衝破1.4萬人、申請筆數也突破3萬筆，而6月單月男性申辦比重再度超越女性，促進職場爸爸共同分擔育兒責任。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607070116.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607070116.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-07T04:27:38.000Z",
+      "displayTime": "07/07 12:27"
+    },
+    {
+      "title": "AI女星出道近1年終有作品 首度主演長片",
       "date": "2026-07-07",
       "category": "即時娛樂",
-      "summary": "電影「深度安靜」與「恨女的逆襲」同時入圍本屆紐約亞洲影展競賽單元，演員張孝全同時獲選「亞洲之星大獎」，成為首位獲獎的台灣演員。張孝全與導演沈可尚將出席影展活動與影迷交流。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/amov/202607070018.aspx",
-      "slug": "https://www.cna.com.tw/news/amov/202607070018.aspx",
+      "summary": "虛擬「女演員」蒂莉諾伍德2025年秋天出道時曾引發好萊塢反彈，一直未獲任何演出機會，然而，她的創作團隊今天宣布將為她量身打造首部長片，可望成為她演藝生涯的突破之作。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/amov/202607070112.aspx",
+      "slug": "https://www.cna.com.tw/news/amov/202607070112.aspx",
       "sourceName": "中央社娛樂",
-      "publishedAt": "2026-07-06T23:42:08.000Z",
-      "displayTime": "07/07 07:42"
+      "publishedAt": "2026-07-07T04:17:30.000Z",
+      "displayTime": "07/07 12:17"
     },
     {
-      "title": "長榮集團張國華涉內線交易 1億2000萬元交保",
+      "title": "問題油波及165校 鄭英耀：全面停用並預防性下架",
+      "date": "2026-07-07",
+      "category": "即時生活",
+      "summary": "中聯油品致癌物苯駢芘超標，教育部長鄭英耀今天表示，目前統計有165校回報曾使用問題油品，已請各校停止使用並預防性下架，持續滾動追蹤中，一定會保護學生的安全健康。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607070108.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607070108.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-07T04:15:21.000Z",
+      "displayTime": "07/07 12:15"
+    },
+    {
+      "title": "分科測驗是否因颱風延期 鄭英耀：招聯會下午決定",
+      "date": "2026-07-07",
+      "category": "即時生活",
+      "summary": "115學年分科測驗11日到12日舉行，教育部長鄭英耀今天表示，因應颱風趨勢，大學招聯會將提前於今天召開應變會議，預計下午就會決定是否延期。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607070099.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607070099.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-07T03:59:02.000Z",
+      "displayTime": "07/07 11:59"
+    },
+    {
+      "title": "中國男攻擊矢板明夫 欲逃韓國登機前15分鐘遭逮",
       "date": "2026-07-07",
       "category": "即時社會",
-      "summary": "長榮集團創辦人張榮發長子張國華遭控內線交易。北檢昨天搜索、約談張國華等9人到案。檢察官複訊後，今天凌晨諭令張國華1億2000萬元交保，並限制住居、出境、出海，加科技設備監控。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607070014.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202607070014.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-07-06T22:48:57.000Z",
-      "displayTime": "07/07 06:48"
-    },
-    {
-      "title": "沙烏地釋供應過剩訊號 國際油價跌至5個月新低",
-      "date": "2026-07-07",
-      "category": "即時財經",
-      "summary": "國際油價今天跌至5個月低點，主因沙烏地阿拉伯罕見下調阿拉伯輕質原油價格，為國際市場呈現供應過剩的最新跡象。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "持香港護照中國籍廖姓男子昨天在台中市攻擊印太戰略智庫執行長矢板明夫後逃逸，之後趕到台中機場要飛往韓國，只差15分鐘就要登機，幸警方依刺青等特徵及時逮人送辦。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607070012.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607070012.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-06T21:40:51.000Z",
-      "displayTime": "07/07 05:40"
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607070098.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202607070098.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-07-07T03:56:00.000Z",
+      "displayTime": "07/07 11:56"
     },
     {
-      "title": "科技股走揚 美股收漲",
+      "title": "高中免試入學錄取率99.21%近3年最低 956人落榜",
       "date": "2026-07-07",
-      "category": "即時財經",
-      "summary": "科技股走升，企業財報季正蓄勢待發，華爾街股市主要指數今天收盤上揚。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607070011.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607070011.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-06T21:10:49.000Z",
-      "displayTime": "07/07 05:10"
-    },
-    {
-      "title": "科技股反彈力道無以為繼 歐股震盪走勢不一",
-      "date": "2026-07-07",
-      "category": "即時財經",
-      "summary": "隨著季度財報季拉開序幕，科技類股漲勢正逐漸消退，歐洲股巿主要指數今天呈現震盪徘徊的格局。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607070002.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607070002.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-06T16:40:25.000Z",
-      "displayTime": "07/07 00:40"
-    },
-    {
-      "title": "微軟加入AI所掀科技業裁員潮 砍4800名人力",
-      "date": "2026-07-07",
-      "category": "即時財經",
-      "summary": "美國科技大廠微軟今天宣布裁員約4800人，相當於2.1%左右人力，成為這波科技業裁員潮最新行動。微軟正大力投資人工智慧（AI）基礎建設，並利用這項科技來提升各業務效率。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607060371.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202607060371.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-06T15:58:18.000Z",
-      "displayTime": "07/06 23:58"
+      "category": "即時生活",
+      "summary": "115學年高中免試入學管道今天放榜，12萬620人報名，錄取11萬9664人，錄取率99.21%、是近3年最低，有956人落榜；以彰化區（98.43%）、基北區（98.58%）錄取率較低。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607070095.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607070095.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-07T03:50:54.000Z",
+      "displayTime": "07/07 11:50"
     }
   ]
 }
