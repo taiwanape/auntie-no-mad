@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-08T00:11:19.600Z"
+    "liveNewsUpdatedAt": "2026-07-08T03:44:32.154Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "AI產業前景不明拖累科技股 美股收盤盡墨",
-      "date": "2026-07-08",
-      "category": "即時財經",
-      "summary": "人工智慧（AI）產業前景不明引發投資人擔憂，從而拖累科技股表現，華爾街股市今天收盤盡墨。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607080008.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607080008.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-07T21:33:42.000Z",
-      "displayTime": "07/08 05:33"
-    },
-    {
-      "title": "荷莫茲海峽船隻遇襲 國際油價收紅",
-      "date": "2026-07-08",
-      "category": "即時財經",
-      "summary": "荷莫茲海峽（Strait of Hormuz）近日傳出數艘能源運輸船遇襲後，美國撤銷對伊朗石油的臨時制裁豁免許可，國際油價今天應聲收紅。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607080007.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607080007.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-07T21:31:40.000Z",
-      "displayTime": "07/08 05:31"
-    },
-    {
-      "title": "民主剛果伊波拉疫情仍在蔓延 醫護人員也難防感染",
-      "date": "2026-07-08",
-      "category": "即時生活",
-      "summary": "世界衛生組織（WHO）官員今天表示，在剛果民主共和國爆發的伊波拉（Ebola）疫情尚未穩定，且人口流動持續助長病毒傳播，使疫情目前仍在擴大。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607080005.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202607080005.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-07T18:24:32.000Z",
-      "displayTime": "07/08 02:24"
-    },
-    {
-      "title": "財報季開跑之際AI類股降溫 歐洲股市漲跌互見",
-      "date": "2026-07-08",
-      "category": "即時財經",
-      "summary": "隨著備受矚目的財報季開跑，投資人對人工智慧（AI）類股的熱情再度冷卻，歐洲股市主要指數今天漲跌不一。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607080003.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607080003.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-07T16:53:27.000Z",
-      "displayTime": "07/08 00:53"
-    },
-    {
-      "title": "基隆幼兒園涉虐童案 負責人夫婦及教保員交保",
-      "date": "2026-07-08",
-      "category": "即時社會",
-      "summary": "檢警偵辦基隆市名人幼兒園涉嫌虐童案，今天詢問幼兒園負責人林姓男子及妻子園長劉姓女子與4名教保員，經檢察官複訊後，晚間諭令新台幣10萬元至20萬元交保，並限制出境、出海。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607070409.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202607070409.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-07-07T15:36:13.000Z",
-      "displayTime": "07/07 23:36"
-    },
-    {
-      "title": "中和新蘆線2列車升級全彩顯示器 4語言秀行車資訊",
+      "title": "印尼漁工海上作業受傷 澎湖海巡緊急救援送醫",
       "date": "2026-07-08",
       "category": "即時地方",
-      "summary": "台北捷運公司今天表示，北捷中和新蘆線列車到站顯示器預計118年完成升級，目前已有2部列車更新，以大尺寸全彩液晶螢幕（LCD）取代LED，透過4種語言完整呈現列車即時位置及行經車站。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607070406.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607070406.aspx",
+      "summary": "澎湖籍漁船「和利鱻168」一名印尼漁工昨天進行作業時，腳踝不慎遭土魠魚咬傷，鮮血直流，緊急在海上求助，澎湖海巡隊前往救援，協助醫療後送。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607080065.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607080065.aspx",
       "sourceName": "中央社地方",
-      "publishedAt": "2026-07-07T15:02:06.000Z",
-      "displayTime": "07/07 23:02"
+      "publishedAt": "2026-07-08T02:43:50.000Z",
+      "displayTime": "07/08 10:43"
+    },
+    {
+      "title": "韓國允諾對烏克蘭援助1億美元 不提供殺傷性武器",
+      "date": "2026-07-08",
+      "category": "即時財經",
+      "summary": "韓國總統李在明出席北約峰會期間，承諾對烏克蘭提供價值1億美元的全面性援助。不過，秉持人道援助立場的韓國政府已明確表示，不會提供殺傷性武器給烏克蘭。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607080064.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607080064.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-08T02:42:47.000Z",
+      "displayTime": "07/08 10:42"
+    },
+    {
+      "title": "保瑞、藥華藥海外布局發酵 6月營收齊揚",
+      "date": "2026-07-08",
+      "category": "即時財經",
+      "summary": "生技股保瑞受惠全球銷售業務與CDMO（委託開發暨製造服務）業務成長，6月營收為新台幣22.97億元，年增39.22%，創下單月新高紀錄；藥華藥受惠血癌新藥Ropeg全球銷售穩健，6月營收23. 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607080063.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607080063.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-08T02:41:45.000Z",
+      "displayTime": "07/08 10:41"
+    },
+    {
+      "title": "彭金隆：台股延長交易時間暫不實施 非現在優先事項",
+      "date": "2026-07-08",
+      "category": "即時財經",
+      "summary": "外界日前關切，台股交易時間是否可能從下午1時30分延長到3時30分，金管會主委彭金隆今天表示，目前暫不實施交易時間延長，這並非現在優先事項，也無時間表。市場有多元的參與者，在沒達成社會共識前不 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607080062.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607080062.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-08T02:37:43.000Z",
+      "displayTime": "07/08 10:37"
+    },
+    {
+      "title": "蔣萬安批中央處理問題油有愧民眾 卓榮泰：積極處理",
+      "date": "2026-07-08",
+      "category": "即時地方",
+      "summary": "中聯油脂大豆沙拉油致癌物超標，台北市長蔣萬安昨天批總統賴清德、行政院長卓榮泰有愧於民眾。卓榮泰今天表示，正積極處理，只要查到就公布，「也希望地方政府專心防颱」。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/aipl/202607080061.aspx",
+      "slug": "https://www.cna.com.tw/news/aipl/202607080061.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-08T02:31:41.000Z",
+      "displayTime": "07/08 10:31"
+    },
+    {
+      "title": "士林分署7/14拍賣名車 法拉利、勞斯萊斯受矚目",
+      "date": "2026-07-08",
+      "category": "即時社會",
+      "summary": "行政執行署士林分署今天表示，將於7月14日上午10時30分舉辦「夢幻名車拍賣會」，公開拍賣法拉利、勞斯萊斯、保時捷及賓士等名車，歡迎民眾到場競標。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607080059.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202607080059.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-07-08T02:30:37.000Z",
+      "displayTime": "07/08 10:30"
     }
   ]
 }
