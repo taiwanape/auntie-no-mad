@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-08T17:09:15.319Z"
+    "liveNewsUpdatedAt": "2026-07-09T00:20:14.479Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "中東戰火再起 歐股收跌油價升",
+      "title": "馬來西亞巴生港每只貨櫃背後 牽動全球供應鏈重組",
       "date": "2026-07-09",
       "category": "即時財經",
-      "summary": "中東再度燃起戰火，美國總統川普稱與伊朗的停火協議已經結束，歐洲主要股市今天收跌，國際油價飆升。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607090004.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607090004.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-08T16:21:14.000Z",
-      "displayTime": "07/09 00:21"
-    },
-    {
-      "title": "北市：南僑問題油相關再製食品 皆已下架退回",
-      "date": "2026-07-09",
-      "category": "即時地方",
-      "summary": "針對中聯大豆沙拉油致癌物超標案，台北市衛生局今晚更新稽查進展表示，南僑以問題批次油品再製的7項油品，共有62筆銷貨單的產品流入市售店家銷售，目前確認相關再製食品皆已下架退回。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "伴隨低沉鳴笛聲，一艘艘貨輪緩緩駛入馬來西亞巴生港。岸邊橋式起重機不停裝卸貨櫃，轉運全球貨物，隨著荷莫茲海峽局勢升溫，接連衝擊國際航運，這些看似平凡的貨櫃背後，也讓馬六甲海峽成為全球供應鏈與地緣 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607080400.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607080400.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-07-08T14:59:53.000Z",
-      "displayTime": "07/08 22:59"
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607090020.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202607090020.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-08T23:36:58.000Z",
+      "displayTime": "07/09 07:36"
     },
     {
-      "title": "中國工信部警示 Claude模型有安全後門隱患",
+      "title": "市場擔憂美國再襲伊朗 國際油價大幅上漲",
+      "date": "2026-07-09",
+      "category": "即時財經",
+      "summary": "在美國重啟攻擊伊朗的行動後，市場對中東重要產油地區原油供應是否順暢的憂慮增加，使國際油價今天攀升至兩週高點。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607090014.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607090014.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-08T21:36:41.000Z",
+      "displayTime": "07/09 05:36"
+    },
+    {
+      "title": "美伊協議生變 美股3大指數多收黑",
+      "date": "2026-07-09",
+      "category": "即時財經",
+      "summary": "美國總統川普稱旨在結束伊朗戰爭的臨時協議「已經結束」，美股3大指數今天多收黑，但博通（Broadcom）帶動近期遭重創的晶片股走高。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607090013.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607090013.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-08T21:18:38.000Z",
+      "displayTime": "07/09 05:18"
+    },
+    {
+      "title": "OpenAI推出GPT-Live語音模型 激似真人能同時聽說",
       "date": "2026-07-09",
       "category": "即時科技",
-      "summary": "陸媒今天報導，根據中國工業和信息化部網站，工信部網絡安全威脅和漏洞信息共享平台（NVDB）近日監測發現，美商的AI模型Claude Code「存在安全後門隱患，危害嚴重」。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "人工智慧（AI）新創公司OpenAI今天推出新語音模型系列GPT-Live，可同時聆聽與說話，而且會發出「嗯嗯」或「對啊」（yeah）等語句，像真人對話那樣附和與停頓。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/ait/202607080397.aspx",
-      "slug": "https://www.cna.com.tw/news/ait/202607080397.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/ait/202607090010.aspx",
+      "slug": "https://www.cna.com.tw/news/ait/202607090010.aspx",
       "sourceName": "中央社科技",
-      "publishedAt": "2026-07-08T14:33:45.000Z",
-      "displayTime": "07/08 22:33"
+      "publishedAt": "2026-07-08T19:42:31.000Z",
+      "displayTime": "07/09 03:42"
     },
     {
-      "title": "台中南屯興建中工地火警 警消灌救初勘無人受困",
-      "date": "2026-07-09",
-      "category": "即時社會",
-      "summary": "台中市南屯區一處興建中建案工地，今天晚間位於14樓處發生火警，消防局獲報派遣消防人車前往處理，初勘無人員受困，起火原因由警消調查釐清。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607080396.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202607080396.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-07-08T14:18:42.000Z",
-      "displayTime": "07/08 22:18"
-    },
-    {
-      "title": "川普稱與伊朗停火結束 美股早盤走跌道瓊挫1.0%",
+      "title": "蘋果與博通達300億美元協議 響應川普本土製造政策",
       "date": "2026-07-09",
       "category": "即時財經",
-      "summary": "美國總統川普表示，與伊朗的停火協議「已經結束」，華爾街股市今天開盤後下跌。中東地區戰事再起也推升油價飆漲。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607080394.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607080394.aspx",
+      "summary": "蘋果公司（Apple）今天宣布，已與晶片公司博通（Broadcom）達成金額超過300億美元（約新台幣9630億元）的多年期協議，將在美國設計及生產晶片。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607090007.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202607090007.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-08T14:15:38.000Z",
-      "displayTime": "07/08 22:15"
+      "publishedAt": "2026-07-08T17:44:22.000Z",
+      "displayTime": "07/09 01:44"
     },
     {
-      "title": "問題油竄全台 食藥署全面稽查抽驗中聯等4工廠",
+      "title": "美媒：中國擬允許頂尖AI公司 採購少量輝達H200晶片",
       "date": "2026-07-09",
-      "category": "即時生活",
-      "summary": "致癌物超標油品流竄全台，殃及360家業者，受影響產品已逾400項，從主食、甜點到醬料無一倖免，食藥署今晚宣布擴大稽查，針對中聯、福懋、福壽、泰山等4家油脂工廠，全面實地稽查抽驗。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607080393.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607080393.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-08T14:14:36.000Z",
-      "displayTime": "07/08 22:14"
+      "category": "即時財經",
+      "summary": "美國科技新聞網站The Information今天引述兩名知情人士報導，中國計畫允許國內頂尖人工智慧（AI）公司購買數量有限的輝達（NVIDIA）H200晶片。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607090005.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202607090005.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-08T16:52:17.000Z",
+      "displayTime": "07/09 00:52"
     }
   ]
 }
