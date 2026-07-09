@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-09T00:20:14.479Z"
+    "liveNewsUpdatedAt": "2026-07-09T04:37:41.504Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "馬來西亞巴生港每只貨櫃背後 牽動全球供應鏈重組",
+      "title": "強颱巴威逼近 勞動部：雇主應擔通勤協助責任",
       "date": "2026-07-09",
-      "category": "即時財經",
-      "summary": "伴隨低沉鳴笛聲，一艘艘貨輪緩緩駛入馬來西亞巴生港。岸邊橋式起重機不停裝卸貨櫃，轉運全球貨物，隨著荷莫茲海峽局勢升溫，接連衝擊國際航運，這些看似平凡的貨櫃背後，也讓馬六甲海峽成為全球供應鏈與地緣 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時生活",
+      "summary": "強颱巴威逼近，勞動部今天說，雇主若要求勞工出勤，應負通勤協助責任，且應避免讓勞工從事外勤、戶外施工等高風險工作，若有必要也應依照外勤安全指引置備防護措施。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607090094.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607090094.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-09T03:57:37.000Z",
+      "displayTime": "07/09 11:57"
+    },
+    {
+      "title": "颱風巴威逼近 淡江大橋風速達10級將全面封閉",
+      "date": "2026-07-09",
+      "category": "即時生活",
+      "summary": "颱風巴威持續逼近，新北市警方指出，因淡水河口風速大，當淡江大橋平均風速達8級時，將封閉機車道、人行道及自行車道，若平均風速達10級時將全面封閉，確保安全。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607090093.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607090093.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-09T03:55:35.000Z",
+      "displayTime": "07/09 11:55"
+    },
+    {
+      "title": "巴威逼近 北市建管處提3項防颱指引",
+      "date": "2026-07-09",
+      "category": "即時地方",
+      "summary": "強颱巴威逼近，台北市建管處今天表示，工地、商家和民眾務必在颱風來襲前完成防颱自主檢查。建管處提出3項防颱指引，若工地未善盡管理維護，將依建築法嚴厲裁罰。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607090091.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607090091.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-09T03:55:31.000Z",
+      "displayTime": "07/09 11:55"
+    },
+    {
+      "title": "1天1包菸等於吃50克問題油 且吸入苯駢芘直攻肺",
+      "date": "2026-07-09",
+      "category": "即時生活",
+      "summary": "苯駢芘問題油引熱議，台灣拒菸聯盟今天提醒，若民眾如此恐懼問題油，就不能忽視一個事實，就是1天1包菸相當於吃進50克問題油，甚至吸入的苯駢芘會繞過肝臟解毒防線，直攻肺部。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607090020.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202607090020.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-08T23:36:58.000Z",
-      "displayTime": "07/09 07:36"
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607090081.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607090081.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-09T03:50:10.000Z",
+      "displayTime": "07/09 11:50"
     },
     {
-      "title": "市場擔憂美國再襲伊朗 國際油價大幅上漲",
+      "title": "冠軍燴飯2款上市 農糧署掛保證使用安全食用油",
       "date": "2026-07-09",
-      "category": "即時財經",
-      "summary": "在美國重啟攻擊伊朗的行動後，市場對中東重要產油地區原油供應是否順暢的憂慮增加，使國際油價今天攀升至兩週高點。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時生活",
+      "summary": "農糧署今天舉行「第2屆台灣燴飯王爭霸戰冠軍燴飯上市」記者會，針對近日爆發部分食用油致癌物超標，農糧署掛保證，這2款燴飯使用安全的食用油，消費者可安心。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607090014.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607090014.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-08T21:36:41.000Z",
-      "displayTime": "07/09 05:36"
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607090078.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607090078.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-09T03:43:04.000Z",
+      "displayTime": "07/09 11:43"
     },
     {
-      "title": "美伊協議生變 美股3大指數多收黑",
+      "title": "中聯油品超標風波 教團籲加速完成學校午餐專法",
       "date": "2026-07-09",
-      "category": "即時財經",
-      "summary": "美國總統川普稱旨在結束伊朗戰爭的臨時協議「已經結束」，美股3大指數今天多收黑，但博通（Broadcom）帶動近期遭重創的晶片股走高。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607090013.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607090013.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-08T21:18:38.000Z",
-      "displayTime": "07/09 05:18"
-    },
-    {
-      "title": "OpenAI推出GPT-Live語音模型 激似真人能同時聽說",
-      "date": "2026-07-09",
-      "category": "即時科技",
-      "summary": "人工智慧（AI）新創公司OpenAI今天推出新語音模型系列GPT-Live，可同時聆聽與說話，而且會發出「嗯嗯」或「對啊」（yeah）等語句，像真人對話那樣附和與停頓。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/ait/202607090010.aspx",
-      "slug": "https://www.cna.com.tw/news/ait/202607090010.aspx",
-      "sourceName": "中央社科技",
-      "publishedAt": "2026-07-08T19:42:31.000Z",
-      "displayTime": "07/09 03:42"
-    },
-    {
-      "title": "蘋果與博通達300億美元協議 響應川普本土製造政策",
-      "date": "2026-07-09",
-      "category": "即時財經",
-      "summary": "蘋果公司（Apple）今天宣布，已與晶片公司博通（Broadcom）達成金額超過300億美元（約新台幣9630億元）的多年期協議，將在美國設計及生產晶片。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時生活",
+      "summary": "中聯油品致癌物超標，引發關注。國教盟今天表示，校園食材登錄平台雖有用，但相關制度也要完整，籲立院加速完成學校午餐專法，將校園午餐透明、把關及穩定財源等一併入法。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607090007.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202607090007.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-08T17:44:22.000Z",
-      "displayTime": "07/09 01:44"
-    },
-    {
-      "title": "美媒：中國擬允許頂尖AI公司 採購少量輝達H200晶片",
-      "date": "2026-07-09",
-      "category": "即時財經",
-      "summary": "美國科技新聞網站The Information今天引述兩名知情人士報導，中國計畫允許國內頂尖人工智慧（AI）公司購買數量有限的輝達（NVIDIA）H200晶片。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607090005.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202607090005.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-08T16:52:17.000Z",
-      "displayTime": "07/09 00:52"
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607090073.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607090073.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-09T03:30:53.000Z",
+      "displayTime": "07/09 11:30"
     }
   ]
 }
