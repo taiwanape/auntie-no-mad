@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-09T11:20:02.514Z"
+    "liveNewsUpdatedAt": "2026-07-09T14:16:45.342Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "聖暉、銳澤6月營收攀同期新高 朋億創歷史新高",
+      "title": "投資人緊盯美伊衝突 美股開盤走勢不一",
       "date": "2026-07-09",
       "category": "即時財經",
-      "summary": "無塵室機電整合廠聖暉工程與旗下朋億和銳澤6月營收同步攀高，聖暉營收新台幣47.7億元，銳澤營收2.85億元，皆為歷年同期新高；朋億營收19.93億元，創下歷史新高。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607090305.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607090305.aspx",
+      "summary": "投資人持續關注美國與伊朗近日再度交火在內的中東局勢發展，華爾街股市今天開盤互有漲跌。美伊再度交火恐使雙方衝突延長，進而造成市場動盪。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607090389.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607090389.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-09T10:53:12.000Z",
-      "displayTime": "07/09 18:53"
+      "publishedAt": "2026-07-09T14:00:16.000Z",
+      "displayTime": "07/09 22:00"
     },
     {
-      "title": "經濟部新大樓動土 預計2031年完成進駐",
+      "title": "週轉金5月增額3501億元 創歷年同期新高",
       "date": "2026-07-09",
       "category": "即時財經",
-      "summary": "經濟部新建辦公廳舍今天舉行動土典禮，新址位於台北市愛國東路與杭州南路口，預計2031年11月完成進駐。經濟部長龔明鑫表示，基地面積約1.9公頃，共有3棟建築，決標金額新台幣104.38億元，完 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607090303.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607090303.aspx",
+      "summary": "金管會統計顯示，以國銀5月放款狀況來看，週轉金5月增額達新台幣3501億元，創下歷年同期新高。金管會表示，AI產業鏈帶動產業需求，週轉金包含企業與個人需求，多數仍是因民營企業購料需求，部分也包 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607090386.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607090386.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-09T10:51:08.000Z",
-      "displayTime": "07/09 18:51"
+      "publishedAt": "2026-07-09T13:54:10.000Z",
+      "displayTime": "07/09 21:54"
     },
     {
-      "title": "爭取青年選票 賴瑞隆、柯志恩提政見助就業安居",
-      "date": "2026-07-09",
-      "category": "即時地方",
-      "summary": "爭取青年選票，民進黨高雄市長參選人賴瑞隆今天提出雄青五力旗艦計畫，橫跨學青及社青需求；國民黨高雄市長參選人柯志恩則提出青年安居、職輔計畫等，協助青年就業安居。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607090299.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607090299.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-07-09T10:33:57.000Z",
-      "displayTime": "07/09 18:33"
-    },
-    {
-      "title": "颱風巴威來襲 財部：災損拍照可申請稅捐減免",
+      "title": "數發部公告AI風險分類框架 助各部會識別評估與應對",
       "date": "2026-07-09",
       "category": "即時財經",
-      "summary": "颱風巴威來襲，財政部今天表示，民眾若因颱風或豪雨造成災害損失，記得先拍照存證，事後可檢附相關證明文件，向所轄稅捐稽徵機關申請各項稅捐減免。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "數發部7日公告AI風險分類框架，即日起生效。框架將人工智慧AI風險分為AI系統本身技術設計缺陷、部署後操作及人機互動問題、社會結構與環境衝擊等3大類，共20項子類別，供各部會盤點AI應用情境後 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607090384.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607090384.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-09T13:42:03.000Z",
+      "displayTime": "07/09 21:42"
+    },
+    {
+      "title": "民主剛果伊波拉疫情肆虐 3天再死百人",
+      "date": "2026-07-09",
+      "category": "即時生活",
+      "summary": "根據世界衛生組織（WHO）今天公布的最新統計，非洲國家剛果民主共和國的伊波拉（Ebola）疫情死亡人數已達到600人，距離這項數據達到500人才相隔短短3天。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607090381.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202607090381.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-09T13:29:54.000Z",
+      "displayTime": "07/09 21:29"
+    },
+    {
+      "title": "颱風巴威來襲 產險公會提醒檢視保單承保範圍",
+      "date": "2026-07-09",
+      "category": "即時生活",
+      "summary": "產險公會今天表示，109年4月起住宅火災及政策性地震基本保險已將「住宅颱風及洪水災害補償保險」納入基本承保範圍，提醒保戶確認保單是否涵蓋颱風風災、洪水淹沒或其他衍生損害。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607090298.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607090298.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-09T10:29:55.000Z",
-      "displayTime": "07/09 18:29"
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607090380.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607090380.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-09T13:23:52.000Z",
+      "displayTime": "07/09 21:23"
     },
     {
-      "title": "劉昌德任期將屆 公視代總經理謝玒玲兼華視總經理",
-      "date": "2026-07-09",
-      "category": "即時娛樂",
-      "summary": "華視總經理劉昌德6月中透過聲明表示任期將於7月31日屆滿，華視今天發布聲明表示，華視董事會今天通過公視基金會代總經理謝玒玲8月1日起兼任華視總經理。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/amov/202607090294.aspx",
-      "slug": "https://www.cna.com.tw/news/amov/202607090294.aspx",
-      "sourceName": "中央社娛樂",
-      "publishedAt": "2026-07-09T10:20:47.000Z",
-      "displayTime": "07/09 18:20"
-    },
-    {
-      "title": "財政部：上半年總出口4166億美元 年增47.1%",
+      "title": "環球晶與美光10年長期策略合作 強化美國供應鏈",
       "date": "2026-07-09",
       "category": "即時財經",
-      "summary": "財政部官員今天表示，今年上半年出口4166.6億美元創新高，年增47.1%，且若觀察第2季11項主要出口貨品表現，傳產貨類已逐漸走出外銷谷底，總出口結構分化的態勢可望慢慢獲得改善。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607090293.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607090293.aspx",
+      "summary": "半導體矽晶圓廠環球晶今天宣布，與美國記憶體廠美光（Micron）深化長期策略合作關係，就長期供應合作及相關合作架構達成合作意向；美光提供5億美元策略性資金支持，雙方規劃透過10年期長期供應協議 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607090379.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607090379.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-09T10:18:45.000Z",
-      "displayTime": "07/09 18:18"
+      "publishedAt": "2026-07-09T13:22:50.000Z",
+      "displayTime": "07/09 21:22"
     }
   ]
 }
