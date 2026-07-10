@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-10T11:19:18.488Z"
+    "liveNewsUpdatedAt": "2026-07-10T13:35:55.253Z"
   },
   "lifeRadar": [
     {
@@ -863,6 +863,66 @@
   ],
   "liveNews": [
     {
+      "title": "高鐵7/11每小時南北雙向各3班 全車採自由座",
+      "date": "2026-07-10",
+      "category": "即時生活",
+      "summary": "因應颱風巴威來襲，台灣高鐵今天晚間宣布，明天全天採每小時南港-左營雙向各3班全車自由座每站停靠的發車模式；另外，台中明天清晨加開北上3班、南下2班，共計5班。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607100233.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607100233.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-10T12:33:31.000Z",
+      "displayTime": "07/10 20:33"
+    },
+    {
+      "title": "等待一甲子82歲圓夢上太空 傳奇女飛行員馮克辭世",
+      "date": "2026-07-10",
+      "category": "即時科技",
+      "summary": "傳奇女飛行員馮克於太空時代早期曾與其他12位美國女性一同接受太空人訓練，約莫60年後成為登上太空的最年長者。這位富有開創精神的女性昨天在德州辭世，享壽87歲。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607100222.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202607100222.aspx",
+      "sourceName": "中央社科技",
+      "publishedAt": "2026-07-10T12:07:07.000Z",
+      "displayTime": "07/10 20:07"
+    },
+    {
+      "title": "一口一口吃進台灣歷史 臺灣漫遊錄等作品法譯版上市",
+      "date": "2026-07-10",
+      "category": "即時生活",
+      "summary": "法譯版「美食與文學足跡—飲食文化中的台灣史」現正於法國上市。全書從鹹蛋糕、蟹殼黃、珍奶、夜市與原住民殺豬文化角度切入，透過5篇文學作品選讀、5篇科普文章導讀，讓法語讀者一覽台灣美食自日殖時期至 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/acul/202607100217.aspx",
+      "slug": "https://www.cna.com.tw/news/acul/202607100217.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-10T11:59:57.000Z",
+      "displayTime": "07/10 19:59"
+    },
+    {
+      "title": "因應颱風8路段預警封閉 淡江大橋等5處也將封閉",
+      "date": "2026-07-10",
+      "category": "即時生活",
+      "summary": "受到颱風巴威影響，交通部公路局今天傍晚表示，台8線關原至太魯閣等8路段已預警性封閉，視風雨狀況開放；淡江大橋等5處也預計封閉，請用路人隨時留意省道即時資訊。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607100207.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607100207.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-10T11:04:35.000Z",
+      "displayTime": "07/10 19:04"
+    },
+    {
+      "title": "中聯致癌油通報拖2個月引質疑 專家：檢驗急件2天有結果",
+      "date": "2026-07-10",
+      "category": "即時生活",
+      "summary": "油品致癌物超標案，中聯油脂總經理遭聲押禁見。專家指出，急件送驗快則2天有結果，一般約10天到2週，業者之間拖2個月才通報衛生機關，推測「第一次遇到沒經驗」，是否刻意串供、隱匿，有待檢方詳查。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607100205.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607100205.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-10T11:01:31.000Z",
+      "displayTime": "07/10 19:01"
+    },
+    {
       "title": "颱風巴威影響 新竹縣7/11停止上班上課",
       "date": "2026-07-10",
       "category": "即時地方",
@@ -873,66 +933,6 @@
       "sourceName": "中央社地方",
       "publishedAt": "2026-07-10T10:50:20.000Z",
       "displayTime": "07/10 18:50"
-    },
-    {
-      "title": "颱風巴威來襲 新竹市7/11停止上班上課",
-      "date": "2026-07-10",
-      "category": "即時地方",
-      "summary": "新竹市政府今天表示，根據中央氣象署風雨預報，明天上午6時至12時資料已達天然災害停止上班及上課標準，宣布新竹市11日停止上班、停止上課。（編輯：黃名璽）1150710 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607100199.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607100199.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-07-10T10:48:18.000Z",
-      "displayTime": "07/10 18:48"
-    },
-    {
-      "title": "颱風巴威來襲 屏東山區撤離161人",
-      "date": "2026-07-10",
-      "category": "即時地方",
-      "summary": "颱風巴威來襲，屏東縣災害應變中心已提升為一級開設，山區預警性撤離161人，縣府已宣布明天停班停課，並呼籲民眾做好防颱準備。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607100198.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607100198.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-07-10T10:48:16.000Z",
-      "displayTime": "07/10 18:48"
-    },
-    {
-      "title": "中聯油品案 高雄24項油品及台糖9產品預防性下架",
-      "date": "2026-07-10",
-      "category": "即時地方",
-      "summary": "中聯油品致癌物苯駢芘超標案延燒，高雄市衛生局今天表示，除福壽、福懋及泰山等風險油品擴大至24項外，因台糖9項產品使用中聯油脂5月原料油，也列入預防性下架範圍。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607100196.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607100196.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-07-10T10:36:12.000Z",
-      "displayTime": "07/10 18:36"
-    },
-    {
-      "title": "入夜後土石流紅色警戒 農村水保署估桃竹苗共5處",
-      "date": "2026-07-10",
-      "category": "即時生活",
-      "summary": "颱風巴威來襲，農業部農村及水土保持署今天傍晚最新預報，入夜後土石流潛勢溪流可能達紅色警戒的地區，在桃園、新竹及苗栗等地共有5處。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607100194.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607100194.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-10T10:34:07.000Z",
-      "displayTime": "07/10 18:34"
-    },
-    {
-      "title": "李聖經、TREASURE接力來台 優里二度攻小巨蛋",
-      "date": "2026-07-10",
-      "category": "即時娛樂",
-      "summary": "日韓歌手接力來台，韓星李聖經8月2日將來台、韓團TREASURE將於9月26日唱進高雄巨蛋，日本歌手natori將於8月8日、9日站上北流、優里10月9日、10日二度登台北小巨蛋。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/amov/202607100193.aspx",
-      "slug": "https://www.cna.com.tw/news/amov/202607100193.aspx",
-      "sourceName": "中央社娛樂",
-      "publishedAt": "2026-07-10T10:26:05.000Z",
-      "displayTime": "07/10 18:26"
     }
   ]
 }
