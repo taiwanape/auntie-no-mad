@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-10T00:19:08.477Z"
+    "liveNewsUpdatedAt": "2026-07-10T04:39:35.116Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "颱風巴威來襲 吳德榮：防狂風致災雨",
+      "title": "颱風巴威逼近 黃偉哲：下班前宣布明天是否停班課",
       "date": "2026-07-10",
-      "category": "即時生活",
-      "summary": "氣象署今晨發布颱風巴威陸警，氣象專家吳德榮表示，巴威雖緩慢減弱，但仍維持大型中颱，各地風雨將漸增強，明天風狂雨驟，中部以北及各山區慎防破壞性強風，防致災性大量降雨。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時地方",
+      "summary": "颱風巴威逼近，台南市長黃偉哲今天視察台南市沿海防汛整備，他表示，將依中央氣象署最新預報資訊審慎評估，下班前宣布明天是否停班停課。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607100023.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607100023.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-09T23:49:55.000Z",
-      "displayTime": "07/10 07:49"
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607100077.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607100077.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-10T04:22:52.000Z",
+      "displayTime": "07/10 12:22"
     },
     {
-      "title": "颱風巴威海陸警齊發 白天北部雨勢轉強",
+      "title": "颱風逼近烏來崩塌發生率90% 侯友宜指示預防性撤離",
       "date": "2026-07-10",
-      "category": "即時生活",
-      "summary": "氣象署今晨發布中颱巴威陸警，今天白天北部及東北部雨勢轉強，慎防豪雨，而今晚至明晨降雨將最顯著，各地留意大雨或豪雨，其中北部、中部及東北部山區防豪雨等級以上降雨。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時地方",
+      "summary": "颱風巴威逼近，新北市長侯友宜今天上午坐鎮新北災害應變中心要求各單位上緊發條，據預報多地可能有土石流，其中烏來崩塌發生率逾90%，要求各區公所下午6時前完成預防性撤離。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607100020.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607100020.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-09T23:35:48.000Z",
-      "displayTime": "07/10 07:35"
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607100076.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607100076.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-10T04:15:50.000Z",
+      "displayTime": "07/10 12:15"
     },
     {
-      "title": "伊朗哈米尼葬禮現芬蘭超市冷藏車 芬蘭民眾傻眼",
-      "date": "2026-07-10",
-      "category": "即時社會",
-      "summary": "伊朗已故最高領袖哈米尼的葬禮車隊影片近期在社群媒體瘋傳，卻有個畫面讓芬蘭人難以置信、傻眼，運送靈柩的竟是一輛印有芬蘭連鎖超市K集團橘色商標的冷藏貨車，意外讓芬蘭以另一種姿態躍上國際版面。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607100018.aspx",
-      "slug": "https://www.cna.com.tw/news/asoc/202607100018.aspx",
-      "sourceName": "中央社社會",
-      "publishedAt": "2026-07-09T23:26:44.000Z",
-      "displayTime": "07/10 07:26"
-    },
-    {
-      "title": "美完成航空產業調查 川普暫緩對商用飛機課徵新關稅",
+      "title": "歐盟對中國客車輕型貨車輪胎 徵最高45.3%反傾銷稅",
       "date": "2026-07-10",
       "category": "即時財經",
-      "summary": "根據美國總統川普今天簽署的公告，美國在完成對商用飛機產業的調查後，決定暫不對商用飛機及其零組件課徵新的進口關稅。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "香港南華早報報導，歐盟執委會（European Commission）自7月8日起，對自中國進口的客車及輕型貨車輪胎課徵最高45.3%的最終反傾銷稅。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607100015.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202607100015.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/acn/202607100075.aspx",
+      "slug": "https://www.cna.com.tw/news/acn/202607100075.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-09T23:08:37.000Z",
-      "displayTime": "07/10 07:08"
+      "publishedAt": "2026-07-10T04:13:48.000Z",
+      "displayTime": "07/10 12:13"
     },
     {
-      "title": "颱風巴威陸上警報發布 新北、宜花納入警戒範圍",
-      "date": "2026-07-10",
-      "category": "即時生活",
-      "summary": "中度颱風巴威持續朝台灣逼近，中央氣象署今天清晨5時30分，發布陸上颱風警報。（編輯：楊昭彥）1150710 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607100014.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607100014.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-09T21:40:31.000Z",
-      "displayTime": "07/10 05:40"
-    },
-    {
-      "title": "晶片股領漲 美股3大指數收高",
+      "title": "巴威颱風停班 票交所7月10日退票從寬免手續費",
       "date": "2026-07-10",
       "category": "即時財經",
-      "summary": "大型晶片製造商股價回升，帶動華爾街股市反彈，同時，由於投資人淡化美伊之間的新衝突，油價下跌也促使股市走高。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607100012.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607100012.aspx",
+      "summary": "颱風巴威來襲，多縣市停班停課，台北外匯市場休市，但國際金融市場持續營運。央行今天表示，對國內外匯指定銀行、本國銀行海外分行，提供外幣資金5.85億美元，維持銀行正常運作；台灣票據交換所表示，為 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607100072.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607100072.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-09T20:32:26.000Z",
-      "displayTime": "07/10 04:32"
+      "publishedAt": "2026-07-10T04:00:41.000Z",
+      "displayTime": "07/10 12:00"
+    },
+    {
+      "title": "2金塊誤丟台南垃圾車 送焚化爐前喊停、10分鐘尋回",
+      "date": "2026-07-10",
+      "category": "即時地方",
+      "summary": "台南關廟區一民眾昨晚誤將裝著2個金塊的皮包丟進垃圾車，急如熱鍋上螞蟻；台南市環保局獲報，趕緊在垃圾送進焚化爐前喊停，經搜尋10分鐘就找到金塊，讓失主開心返家。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607100071.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607100071.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-10T03:59:39.000Z",
+      "displayTime": "07/10 11:59"
+    },
+    {
+      "title": "颱風逼近 台東蘭嶼、綠島10日下午1時起停班停課",
+      "date": "2026-07-10",
+      "category": "即時地方",
+      "summary": "颱風巴威逼近，外圍環流對離島影響漸增。台東縣府今天上午發布最新通報，蘭嶼鄉、綠島鄉已達停班課標準，下午1時起停班、停課。（編輯：梁君棣）1150710 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607100070.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607100070.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-10T03:58:37.000Z",
+      "displayTime": "07/10 11:58"
     }
   ]
 }
