@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-10T13:35:55.253Z"
+    "liveNewsUpdatedAt": "2026-07-10T16:07:00.109Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "高鐵7/11每小時南北雙向各3班 全車採自由座",
-      "date": "2026-07-10",
-      "category": "即時生活",
-      "summary": "因應颱風巴威來襲，台灣高鐵今天晚間宣布，明天全天採每小時南港-左營雙向各3班全車自由座每站停靠的發車模式；另外，台中明天清晨加開北上3班、南下2班，共計5班。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607100233.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607100233.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-10T12:33:31.000Z",
-      "displayTime": "07/10 20:33"
+      "title": "中聯問題油案涉違食安法 余姓總經理2000萬交保",
+      "date": "2026-07-11",
+      "category": "即時社會",
+      "summary": "中檢偵辦油品致癌物超標案，昨天前往中聯油脂公司等處搜索，帶回11名被告偵訊，今天依食品安全衛生管理法聲押禁見中聯公司余姓總經理，法院晚間裁定新台幣2000萬元交保。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607100269.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202607100269.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-07-10T15:04:53.000Z",
+      "displayTime": "07/10 23:04"
     },
     {
-      "title": "等待一甲子82歲圓夢上太空 傳奇女飛行員馮克辭世",
-      "date": "2026-07-10",
+      "title": "中聯油品退換貨 經部：可持發票、載具至門市辦理",
+      "date": "2026-07-11",
+      "category": "即時財經",
+      "summary": "針對中聯油品致癌物超標案，經濟部表示，民眾可持發票等消費紀錄至賣場辦理退換貨。萬家福、愛買、樂家康、楓康、萊爾富、OKmart全國門市皆可辦理，大全聯、全聯、美廉社、喜互惠可至原購物分店；向產 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607100266.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607100266.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-10T14:57:47.000Z",
+      "displayTime": "07/10 22:57"
+    },
+    {
+      "title": "中國封殺Meta收購後 英媒：騰訊洽談入股Manus",
+      "date": "2026-07-11",
       "category": "即時科技",
-      "summary": "傳奇女飛行員馮克於太空時代早期曾與其他12位美國女性一同接受太空人訓練，約莫60年後成為登上太空的最年長者。這位富有開創精神的女性昨天在德州辭世，享壽87歲。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607100222.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202607100222.aspx",
+      "summary": "在北京封殺美商收購具中國背景的人工智慧（AI）新創企業Manus後，英國媒體今天報導，中國科技巨擘騰訊有望成爲Manus的最大股東。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/ait/202607100265.aspx",
+      "slug": "https://www.cna.com.tw/news/ait/202607100265.aspx",
       "sourceName": "中央社科技",
-      "publishedAt": "2026-07-10T12:07:07.000Z",
-      "displayTime": "07/10 20:07"
+      "publishedAt": "2026-07-10T14:48:42.000Z",
+      "displayTime": "07/10 22:48"
     },
     {
-      "title": "一口一口吃進台灣歷史 臺灣漫遊錄等作品法譯版上市",
-      "date": "2026-07-10",
-      "category": "即時生活",
-      "summary": "法譯版「美食與文學足跡—飲食文化中的台灣史」現正於法國上市。全書從鹹蛋糕、蟹殼黃、珍奶、夜市與原住民殺豬文化角度切入，透過5篇文學作品選讀、5篇科普文章導讀，讓法語讀者一覽台灣美食自日殖時期至 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/acul/202607100217.aspx",
-      "slug": "https://www.cna.com.tw/news/acul/202607100217.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-10T11:59:57.000Z",
-      "displayTime": "07/10 19:59"
-    },
-    {
-      "title": "因應颱風8路段預警封閉 淡江大橋等5處也將封閉",
-      "date": "2026-07-10",
-      "category": "即時生活",
-      "summary": "受到颱風巴威影響，交通部公路局今天傍晚表示，台8線關原至太魯閣等8路段已預警性封閉，視風雨狀況開放；淡江大橋等5處也預計封閉，請用路人隨時留意省道即時資訊。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607100207.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607100207.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-10T11:04:35.000Z",
-      "displayTime": "07/10 19:04"
-    },
-    {
-      "title": "中聯致癌油通報拖2個月引質疑 專家：檢驗急件2天有結果",
-      "date": "2026-07-10",
-      "category": "即時生活",
-      "summary": "油品致癌物超標案，中聯油脂總經理遭聲押禁見。專家指出，急件送驗快則2天有結果，一般約10天到2週，業者之間拖2個月才通報衛生機關，推測「第一次遇到沒經驗」，是否刻意串供、隱匿，有待檢方詳查。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607100205.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607100205.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-10T11:01:31.000Z",
-      "displayTime": "07/10 19:01"
-    },
-    {
-      "title": "颱風巴威影響 新竹縣7/11停止上班上課",
-      "date": "2026-07-10",
+      "title": "颱風巴威來襲 苗縣南庄、獅潭預防性撤離79人",
+      "date": "2026-07-11",
       "category": "即時地方",
-      "summary": "受颱風巴威影響，新竹縣政府今天晚間表示，依據中央氣象署預測資料，新竹縣雨量及風力已達停班停課標準，新竹縣11日停班停課。（編輯：黃名璽）1150710 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "颱風巴威暴風圈逐漸接近台灣，因應豪雨及土石流黃色警戒，苗栗縣南庄、獅潭兩鄉晚間實施預防性撤離，在軍警消及公所人員協助下陸續撤離79人，多數收容安置、部分依親。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607100200.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607100200.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607100263.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607100263.aspx",
       "sourceName": "中央社地方",
-      "publishedAt": "2026-07-10T10:50:20.000Z",
-      "displayTime": "07/10 18:50"
+      "publishedAt": "2026-07-10T14:31:38.000Z",
+      "displayTime": "07/10 22:31"
+    },
+    {
+      "title": "台糖：沙拉油檢驗合格 配合政策預防性下架",
+      "date": "2026-07-11",
+      "category": "即時生活",
+      "summary": "中聯油品致癌物苯駢芘超標案延燒。台糖今天表示，台糖沙拉油僅部分採用福懋黃豆粗油，已配合政策於今天中午前全面下架。台糖強調，此舉為配合政策預防性下架，並非所有商品都含中聯油品。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607100260.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607100260.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-10T14:17:31.000Z",
+      "displayTime": "07/10 22:17"
+    },
+    {
+      "title": "今彩539第115167期 頭獎1注中獎",
+      "date": "2026-07-11",
+      "category": "即時生活",
+      "summary": "今彩539第115167期開獎，中獎號碼21、15、13、05、26；派彩結果，頭獎1注中獎，獎金新台幣800萬元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607100259.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607100259.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-10T14:11:29.000Z",
+      "displayTime": "07/10 22:11"
     }
   ]
 }
