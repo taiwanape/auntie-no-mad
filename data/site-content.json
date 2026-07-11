@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-11T15:15:30.982Z"
+    "liveNewsUpdatedAt": "2026-07-11T16:11:38.466Z"
   },
   "lifeRadar": [
     {
@@ -863,8 +863,56 @@
   ],
   "liveNews": [
     {
+      "title": "颱風及外圍環流影響 氣象署發布豪雨特報",
+      "date": "2026-07-12",
+      "category": "即時生活",
+      "summary": "中央氣象署更新豪雨特報指出，台北市、新北市、桃園市、新竹縣、台中市、南投縣、雲林縣、嘉義縣、屏東縣、宜蘭縣的山區及苗栗縣地區已有局部大豪雨或超大豪雨發生。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110225.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607110225.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-11T15:26:30.000Z",
+      "displayTime": "07/11 23:26"
+    },
+    {
+      "title": "颱風巴威影響桃園機場罕見零旅客 12日恢復正常營運",
+      "date": "2026-07-12",
+      "category": "即時地方",
+      "summary": "颱風巴威影響，桃園機場今天航班全數取消，無航班起降，罕見零旅客；桃機公司今晚表示，各航空公司航班明天正常營運，客貨運航班數預計756架次，旅客量預估達15.5萬人次。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607110222.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607110222.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-11T14:38:20.000Z",
+      "displayTime": "07/11 22:38"
+    },
+    {
+      "title": "華航放大機型赴日韓等地疏運 星宇派加班機飛沖繩",
+      "date": "2026-07-12",
+      "category": "即時生活",
+      "summary": "許多國際航班受颱風巴威影響異動，華航及華信明天安排放大機型載客赴日、韓、香港、東南亞及廈門等地；星宇航空將於7月13日增派一班「台北-沖繩」往返加班機疏運旅客。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110219.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607110219.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-11T14:11:14.000Z",
+      "displayTime": "07/11 22:11"
+    },
+    {
+      "title": "今彩539第115168期 頭獎1注中獎",
+      "date": "2026-07-12",
+      "category": "即時生活",
+      "summary": "今彩539第115168期開獎，中獎號碼10、25、27、35、38；派彩結果，頭獎1注中獎，獎金新台幣800萬元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110217.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607110217.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-11T14:06:09.000Z",
+      "displayTime": "07/11 22:06"
+    },
+    {
       "title": "土石滑落砸損民宅無人傷 基隆市府啟動住戶安置",
-      "date": "2026-07-11",
+      "date": "2026-07-12",
       "category": "即時社會",
       "summary": "基隆市中正區豐稔街1棟民宅今晚遭附近滑落的土石撞擊，建物部分受損，所幸無人受傷。市府相關單位已前往勘查，並將住戶臨時安置於旅館。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
@@ -875,64 +923,16 @@
       "displayTime": "07/11 22:05"
     },
     {
-      "title": "颱風巴威釀113傷 土石流紅色警戒增至88條",
-      "date": "2026-07-11",
-      "category": "即時生活",
-      "summary": "颱風巴威逐漸遠離，中央災害應變中心截至今晚統計顯示，襲台期間造成113人受傷，包含5名外國籍人士，無死亡或重大傷亡案。另外，全台共1萬4605人疏散撤離，其中以花蓮縣5182人最多。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110214.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607110214.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-11T13:57:03.000Z",
-      "displayTime": "07/11 21:57"
-    },
-    {
-      "title": "颱風巴威漸遠離 新北多處景點12日恢復開放迎客",
-      "date": "2026-07-11",
+      "title": "北市7/12正常上班上課 籲車輛上午8時前駛離校園",
+      "date": "2026-07-12",
       "category": "即時地方",
-      "summary": "新北市觀旅局今晚表示，中央氣象署預計明天清晨解除颱風巴威陸上颱風警報，十分瀑布公園、新北市各遊（旅）客服務中心及猴硐煤礦博物園區、深澳鐵道自行車明天將恢復開放。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "台北市政府今天宣布，依據交通部中央氣象署最新天氣預報資料，並經基北北桃共識，明天照常上班及上課。教育局表示，請車輛明天上午8時前駛離校園，以利學校整理校園場地。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607110211.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607110211.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607110215.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607110215.aspx",
       "sourceName": "中央社地方",
-      "publishedAt": "2026-07-11T13:31:54.000Z",
-      "displayTime": "07/11 21:31"
-    },
-    {
-      "title": "音樂產業推AI內容標籤 標示創作是否使用人工智慧",
-      "date": "2026-07-11",
-      "category": "即時娛樂",
-      "summary": "多個主要音樂產業組織今天共同推出一套標籤系統，供創作內容標示是否使用生成式人工智慧（AI）技術，並希望業界廣泛採用這套標籤。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607110210.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202607110210.aspx",
-      "sourceName": "中央社娛樂",
-      "publishedAt": "2026-07-11T13:31:52.000Z",
-      "displayTime": "07/11 21:31"
-    },
-    {
-      "title": "颱風巴威24萬戶停電 台電搶修逾95%復電",
-      "date": "2026-07-11",
-      "category": "即時生活",
-      "summary": "颱風巴威襲台，颱風及外圍環流影響電力設備，截至今天晚間8時，全國曾停電戶數超過24萬戶，經台電動員超過1.6萬人次搶修，至今已復電逾23萬戶，復電率超過95%。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110209.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607110209.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-11T13:23:50.000Z",
-      "displayTime": "07/11 21:23"
-    },
-    {
-      "title": "颱風巴威漸離 苗栗台中南投及中南部山區留意雨勢",
-      "date": "2026-07-11",
-      "category": "即時生活",
-      "summary": "氣象署表示，預測最快今天深夜台灣本島就有機會脫離颱風巴威暴風圈，明天凌晨至上午就會陸續解除陸上及海上颱風警報；不過，今晚苗栗、台中、南投及中南部山區仍要留意雨勢。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110207.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607110207.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-11T13:19:45.000Z",
-      "displayTime": "07/11 21:19"
+      "publishedAt": "2026-07-11T14:02:05.000Z",
+      "displayTime": "07/11 22:02"
     }
   ]
 }
