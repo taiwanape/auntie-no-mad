@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-11T00:09:28.571Z"
+    "liveNewsUpdatedAt": "2026-07-11T03:42:52.503Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "美伊衝突後似將繼續談判 油價拉回",
+      "title": "颱風巴威襲高雄仁武 清晨799戶停電已全數復電",
       "date": "2026-07-11",
-      "category": "即時財經",
-      "summary": "美國和伊朗相互攻擊導致中東局勢再度升溫，油輪通行荷莫茲海峽（Strait of Hormuz）受阻，不過雙方似乎仍將繼續談判，油價今天拉回。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "category": "即時地方",
+      "summary": "中度颱風巴威來襲，高雄市仁武區今天清晨5時許發生停電事故，仁武區文武里、新庄路、文學一街及新鳳街一帶因颱風造成發電設備故障，造成799戶停電。經搶修於8時許全數供電。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607110035.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607110035.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-11T02:23:27.000Z",
+      "displayTime": "07/11 10:23"
+    },
+    {
+      "title": "巴威颱風影響 新光三越10店遠東SOGO全台11日停業",
+      "date": "2026-07-11",
+      "category": "即時生活",
+      "summary": "受颱風巴威影響，全台多縣市連兩日停班停課，百貨商場也持續調整營業措施，台北101、新光三越、遠東百貨、遠東SOGO、微風、京站及誠品生活等今天宣布部分或全數據點暫停營業，其中北部、中部百貨多數 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110032.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607110032.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-11T02:11:21.000Z",
+      "displayTime": "07/11 10:11"
+    },
+    {
+      "title": "本土語言認證輔導班助教師考證 逾1萬人次參加",
+      "date": "2026-07-11",
+      "category": "即時生活",
+      "summary": "教育部民國111年起開辦本土語言認證輔導班、考前衝刺加強班，協助教師取得認證，至今已超過1.1萬人次參加，115年度下半年度各語別將陸續開班。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607110008.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607110008.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-10T21:41:25.000Z",
-      "displayTime": "07/11 05:41"
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110031.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607110031.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-11T01:54:19.000Z",
+      "displayTime": "07/11 09:54"
     },
     {
-      "title": "SK海力士華爾街掛牌首日勁揚13% 美股收高",
+      "title": "颱風巴威籠罩 台北市區平地風力上看11級防樹倒",
+      "date": "2026-07-11",
+      "category": "即時地方",
+      "summary": "颱風巴威暴風圈籠罩台灣，台北市長蔣萬安表示，今天將是影響最劇烈時段，平地市區風力上看11級，累積雨量也會達大豪雨甚至超大豪雨程度，估恐有許多路樹倒塌等災情。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607110030.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607110030.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-11T01:52:16.000Z",
+      "displayTime": "07/11 09:52"
+    },
+    {
+      "title": "颱風巴威暴風圈籠罩台中以北 白天降雨最劇烈",
+      "date": "2026-07-11",
+      "category": "即時生活",
+      "summary": "颱風巴威暴風圈已進入台中以北、南投、東半部陸地，氣象署表示，今天白天是降雨最猛烈時候，台中以北山區慎防超大豪雨，入夜後隨著颱風通過台灣北方，北部降雨趨緩。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110029.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607110029.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-11T01:44:14.000Z",
+      "displayTime": "07/11 09:44"
+    },
+    {
+      "title": "蘋果告OpenAI竊取商業機密 控前員工攜機密資訊跳槽",
       "date": "2026-07-11",
       "category": "即時財經",
-      "summary": "搭上人工智慧（AI）熱潮，韓國晶片大廠SK海力士（SK hynix）在華爾街掛牌首日股價大漲13%，美股今天收高。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "蘋果公司今天指控OpenAI在開發ChatGPT硬體裝置過程中竊取商業機密。蘋果於訴狀中表示，OpenAI在招募蘋果員工時，鼓勵他們分享機密資訊，甚至指導他們在跳槽至OpenAI時，如何規避蘋 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607110007.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607110007.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607110026.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202607110026.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-10T21:12:23.000Z",
-      "displayTime": "07/11 05:12"
-    },
-    {
-      "title": "中東局勢再度緊繃 歐股漲跌互見",
-      "date": "2026-07-11",
-      "category": "即時財經",
-      "summary": "中東緊張局勢持續發酵打壓市場情緒，歐洲股市今天漲跌互見，結束4週連漲格局。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/afe/202607110006.aspx",
-      "slug": "https://www.cna.com.tw/news/afe/202607110006.aspx",
-      "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-10T20:44:20.000Z",
-      "displayTime": "07/11 04:44"
-    },
-    {
-      "title": "淡江大橋晚間封閉 來往車輛可改行關渡大橋",
-      "date": "2026-07-11",
-      "category": "即時生活",
-      "summary": "因應颱風巴威來襲，淡江大橋10日晚間也預警性封閉，往來淡水及八里間車輛，可改行關渡大橋。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110003.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607110003.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-10T16:34:09.000Z",
-      "displayTime": "07/11 00:34"
-    },
-    {
-      "title": "颱風巴威速度穩定往西北移動 外圍環流帶來雨勢",
-      "date": "2026-07-11",
-      "category": "即時生活",
-      "summary": "颱風巴威襲台，氣象署表示，巴威速度穩定朝西北方向移動，目前外圍環流已經為苗栗以北地區帶來間歇性雨勢，預計11日凌晨暴風圈會進入台灣陸地。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110002.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607110002.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-10T16:26:07.000Z",
-      "displayTime": "07/11 00:26"
-    },
-    {
-      "title": "颱風巴威影響 機捷11日凌晨5時公布營運模式",
-      "date": "2026-07-11",
-      "category": "即時生活",
-      "summary": "受到颱風巴威影響，桃園大眾捷運公司今天表示，機場捷運明天營運模式，須等到凌晨完成巡軌及安全確認後決定，將於11日上午5時公布最新營運模式及班距。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607100272.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607100272.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-10T15:50:00.000Z",
-      "displayTime": "07/10 23:50"
+      "publishedAt": "2026-07-11T00:41:07.000Z",
+      "displayTime": "07/11 08:41"
     }
   ]
 }
