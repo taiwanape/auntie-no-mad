@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-11T09:50:15.815Z"
+    "liveNewsUpdatedAt": "2026-07-11T11:18:59.779Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "中聯油品案 金門下架受影響油品及食品逾千件",
+      "title": "颱風巴威影響馬祖2樹倒 12日海空交通停航",
       "date": "2026-07-11",
       "category": "即時地方",
-      "summary": "中聯油品苯駢芘超標事件延燒，金門縣衛生局統計截至今天，已下架回收受影響油品680件及使用受影響原料製成的食品593件。今天查核通路等，未發現販售及使用問題油品。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607110159.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607110159.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-07-11T09:29:59.000Z",
-      "displayTime": "07/11 17:29"
-    },
-    {
-      "title": "慶台北至曼谷航線35週年 長榮航空辦旅展推優惠",
-      "date": "2026-07-11",
-      "category": "即時生活",
-      "summary": "長榮航空為慶祝台北至曼谷航線開航35週年，從10日至12日在曼谷暹羅百麗宮（Siam Paragon）Fashion Hall舉辦「Most Loved Airline 2026」旅展活動，除 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110157.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607110157.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-11T09:15:54.000Z",
-      "displayTime": "07/11 17:15"
-    },
-    {
-      "title": "颱風巴威釀路樹倒塌及民生設施逾1400件災情 土石流紅色警戒45條",
-      "date": "2026-07-11",
-      "category": "即時生活",
-      "summary": "中央災害應變中心統計至今天下午2時，颱風巴威造成全台87人受傷，傷勢多為騎車摔傷等，無死亡或重大傷亡。土石流潛勢溪紅色警戒達45條，其中在新竹縣共28條。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "颱風巴威暴風圈正逼近馬祖，截至今天下午5時止，共2件樹倒災情，無人傷亡。連江縣政府交通旅遊局傍晚公告，明天全縣海空交通全日停航。岸巡呼籲民眾勿靠近海邊觀浪。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110144.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607110144.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-11T08:57:25.000Z",
-      "displayTime": "07/11 16:57"
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607110174.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607110174.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-11T10:25:31.000Z",
+      "displayTime": "07/11 18:25"
     },
     {
-      "title": "第3批問題油回收37.3公噸 預防性下架返場標準待議",
-      "date": "2026-07-11",
-      "category": "即時生活",
-      "summary": "中聯油品苯駢芘超標事件延燒，昨天食藥署公布發現第3批問題油，總生產量約1305.9公噸，共計16項產品，目前回收約37.3公噸；至於預防性下架返場標準，食藥署待擬定共識與專家研議。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110143.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607110143.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-11T08:52:22.000Z",
-      "displayTime": "07/11 16:52"
-    },
-    {
-      "title": "強風吹倒路樹釀停電 新北市剩143戶待台電搶修",
+      "title": "高雄山區5區雨量預測達標 7/12停班停課",
       "date": "2026-07-11",
       "category": "即時地方",
-      "summary": "台灣電力公司台北南區營業處表示，截至今天下午1時30分止，還有143戶停電搶修中，主要集中於新店、烏來、石碇、坪林山區與土城、中和區，已全面動員搶修，將儘速恢復供電。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607110139.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607110139.aspx",
+      "summary": "颱風巴威影響，高雄市政府今天公告，根據中央氣象署資訊，明天高雄市山區，包含那瑪夏、桃源、茂林、甲仙及六龜，雨量預測達250毫米，已達停班停課標準，為維護山區民眾安全，原鄉5個行政區明天停止上班 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607110173.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607110173.aspx",
       "sourceName": "中央社地方",
-      "publishedAt": "2026-07-11T08:44:14.000Z",
-      "displayTime": "07/11 16:44"
+      "publishedAt": "2026-07-11T10:13:29.000Z",
+      "displayTime": "07/11 18:13"
     },
     {
-      "title": "颱風巴威行經台灣東北方 恆春強陣風14級勝北基",
+      "title": "颱風巴威過境 宜蘭童玩節預定7/13恢復開園",
+      "date": "2026-07-11",
+      "category": "即時地方",
+      "summary": "2026宜蘭國際童玩藝術節日前受颱風巴威影響，預警性休園。宜蘭縣政府文化局今天表示，明天起投入復原園區工作，預定13日恢復開園。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607110172.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607110172.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-11T10:13:27.000Z",
+      "displayTime": "07/11 18:13"
+    },
+    {
+      "title": "江國賓拍戲嘆肌耐力退步 強調演員需保持熱情",
+      "date": "2026-07-11",
+      "category": "即時娛樂",
+      "summary": "演員江國賓演出戲劇「百味人生」，他在颱風來襲前拍攝不少外景，長時間拍攝讓他感嘆體力大不如前，肌耐力也明顯退步。雖然拍攝辛苦，但江國賓認為演員最重要的是保持熱情。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/amov/202607110171.aspx",
+      "slug": "https://www.cna.com.tw/news/amov/202607110171.aspx",
+      "sourceName": "中央社娛樂",
+      "publishedAt": "2026-07-11T10:09:24.000Z",
+      "displayTime": "07/11 18:09"
+    },
+    {
+      "title": "颱風巴威暴風範圍縮小 警報估12日清晨至上午解除",
       "date": "2026-07-11",
       "category": "即時生活",
-      "summary": "中颱巴威今天下午位於台北東北方海面，台北、基隆測得12級強陣風，不過遠在屏東恆春卻出現14級的強陣風。氣象署解釋，主要因風向、地形作用，讓恆春半島容易出現較強陣風。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "氣象署表示，隨著颱風巴威持續移動，最快明天清晨至上午會解除颱風警報，但要留意北部地區仍有局部短暫雨，中南部仍有短暫陣雨。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110137.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607110137.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110170.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607110170.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-07-11T08:37:10.000Z",
-      "displayTime": "07/11 16:37"
+      "publishedAt": "2026-07-11T10:08:22.000Z",
+      "displayTime": "07/11 18:08"
+    },
+    {
+      "title": "中聯油品案 中市公布第3批衍生品流向追查下架",
+      "date": "2026-07-11",
+      "category": "即時生活",
+      "summary": "中聯油品苯駢芘（BaP）超標案，台中市府今天說，接獲通報第3起超標油品案後，立即啟動追查並公布相關資訊。此外，同步更新第2批油產品資訊，要求相關業者立即停售下架。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607110169.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607110169.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-11T10:06:20.000Z",
+      "displayTime": "07/11 18:06"
     }
   ]
 }
