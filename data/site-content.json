@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-12T10:42:35.000Z"
+    "liveNewsUpdatedAt": "2026-07-12T11:44:09.917Z"
   },
   "lifeRadar": [
     {
@@ -863,6 +863,30 @@
   ],
   "liveNews": [
     {
+      "title": "金門機場近300旅客已候補返台 近500旅客仍在等待",
+      "date": "2026-07-12",
+      "category": "即時生活",
+      "summary": "颱風巴威遠離，金門海空交通陸續恢復，小三通航線今天部分復航，中轉金門返台旅客也湧入機場等待候補；截至晚間6時30分，已有近300名旅客成功候補上航班返台，目前機場有近500名旅客仍在等待候補。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607120174.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607120174.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-12T11:02:04.000Z",
+      "displayTime": "07/12 19:02"
+    },
+    {
+      "title": "颱風巴威致農損2034萬元 苗栗占逾7成最多",
+      "date": "2026-07-12",
+      "category": "即時生活",
+      "summary": "農業部統計，截至今天下午5時，颱風巴威致農損金額達新台幣2034萬元，以苗栗縣1572萬元最嚴重；若就農產品統計，受損作物主要為柿，損失金額1216萬元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607120165.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607120165.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-12T10:20:45.000Z",
+      "displayTime": "07/12 18:20"
+    },
+    {
       "title": "竹縣花園國小竹林分校 7/13正常上班、停止上課",
       "date": "2026-07-12",
       "category": "即時地方",
@@ -909,30 +933,6 @@
       "sourceName": "中央社生活",
       "publishedAt": "2026-07-12T09:35:27.000Z",
       "displayTime": "07/12 17:35"
-    },
-    {
-      "title": "分科測驗7/13登場 中部以北午後防大雨或豪雨",
-      "date": "2026-07-12",
-      "category": "即時生活",
-      "summary": "分科測驗將於明天及14日舉行。氣象署提醒，受南方水氣北移影響，明天中部以北地區午後防局部大雨或豪雨，14日降雨範圍稍減，但北部地區仍有大雨或豪雨發生；各地都要留意午後雷陣雨。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607120156.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607120156.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-12T09:32:25.000Z",
-      "displayTime": "07/12 17:32"
-    },
-    {
-      "title": "預防性下架油品 食藥署訂7/13公布重新上架原則",
-      "date": "2026-07-12",
-      "category": "即時生活",
-      "summary": "中聯油品含致癌物超標案，目前已知3批號異常，受影響油品共58個品項，截至今天已下架回收共144公噸；中聯4至6月共29批次產品已全面下架，食藥署表示，產品重新上架原則，預計13日對外公布。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607120155.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607120155.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-12T09:32:23.000Z",
-      "displayTime": "07/12 17:32"
     }
   ]
 }
