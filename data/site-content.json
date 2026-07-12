@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-11T16:11:38.466Z"
+    "liveNewsUpdatedAt": "2026-07-12T00:11:14.312Z"
   },
   "lifeRadar": [
     {
@@ -863,6 +863,18 @@
   ],
   "liveNews": [
     {
+      "title": "颱風巴威持續減弱縮小 台灣本島脫離暴風圈",
+      "date": "2026-07-12",
+      "category": "即時生活",
+      "summary": "氣象署表示，颱風巴威持續減弱、縮小，台灣本島11日晚間11時已脫離其暴風圈，陸上警戒範圍僅剩馬祖；最快今天清晨將解除颱風警報。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607120002.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607120002.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-11T16:09:37.000Z",
+      "displayTime": "07/12 00:09"
+    },
+    {
       "title": "颱風及外圍環流影響 氣象署發布豪雨特報",
       "date": "2026-07-12",
       "category": "即時生活",
@@ -921,18 +933,6 @@
       "sourceName": "中央社社會",
       "publishedAt": "2026-07-11T14:05:07.000Z",
       "displayTime": "07/11 22:05"
-    },
-    {
-      "title": "北市7/12正常上班上課 籲車輛上午8時前駛離校園",
-      "date": "2026-07-12",
-      "category": "即時地方",
-      "summary": "台北市政府今天宣布，依據交通部中央氣象署最新天氣預報資料，並經基北北桃共識，明天照常上班及上課。教育局表示，請車輛明天上午8時前駛離校園，以利學校整理校園場地。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607110215.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607110215.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-07-11T14:02:05.000Z",
-      "displayTime": "07/11 22:02"
     }
   ]
 }
