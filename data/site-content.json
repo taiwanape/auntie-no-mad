@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-12T06:46:00.313Z"
+    "liveNewsUpdatedAt": "2026-07-12T08:55:15.992Z"
   },
   "lifeRadar": [
     {
@@ -863,76 +863,76 @@
   ],
   "liveNews": [
     {
-      "title": "1-6月 日本三大車商在中國新車銷量下滑",
+      "title": "花蓮萬里溪堰塞湖溢流可能延後 中央降為黃色警戒",
+      "date": "2026-07-12",
+      "category": "即時社會",
+      "summary": "颱風巴威遠離，中央災害應變中心今天最新統計資料顯示，全國災情累計為3163件、135人受傷。花蓮萬里溪堰塞湖入流量降、溢流時間可能延後，下午4時起調降為「黃色警戒」。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607120125.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202607120125.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-07-12T08:05:17.000Z",
+      "displayTime": "07/12 16:05"
+    },
+    {
+      "title": "詐團偽裝戶政檢警一條龍老哏 男子財損逾1900萬",
+      "date": "2026-07-12",
+      "category": "即時社會",
+      "summary": "刑事局今天表示，一名男子接獲假戶政事務所人員致電謊稱其證件遭冒用，隨後假檢警以偵查不公開為由要求扣押財產，男子誤信後財損逾1900萬元。刑事局說，檢警不會監管財產。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607120122.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202607120122.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-07-12T07:39:10.000Z",
+      "displayTime": "07/12 15:39"
+    },
+    {
+      "title": "日本支付代行商全東信破產 店家嘆「錢恐怕拿不回來」",
       "date": "2026-07-12",
       "category": "即時財經",
-      "summary": "日本三大車商今年上半年在中國的新車銷量都下滑，本田表現尤為低迷。共同社報導，中東局勢惡化導致燃料價格上漲，受此影響燃油車需求減少，拖累了銷量。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "隨著日本信用卡代收代付公司「全東信」啟動破產程序，各簽約店家的營業收入能否順利入帳，目前仍充滿變數。對此，曾與該公司簽約的餐飲業者紛紛表示憤怒與無奈。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/acn/202607120109.aspx",
-      "slug": "https://www.cna.com.tw/news/acn/202607120109.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607120121.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202607120121.aspx",
       "sourceName": "中央社產經證券",
-      "publishedAt": "2026-07-12T06:18:41.000Z",
-      "displayTime": "07/12 14:18"
+      "publishedAt": "2026-07-12T07:39:08.000Z",
+      "displayTime": "07/12 15:39"
     },
     {
-      "title": "分科測驗7/13登場 教部：考分區已完成災損復原",
+      "title": "油品致癌物超標 中市府：第3批流向274家業者",
       "date": "2026-07-12",
       "category": "即時生活",
-      "summary": "受颱風巴威影響，115學年分科測驗延至7月13日、14日舉行，教育部今天表示，經各考區大學今天上午確認，全國各考分區已完成災損復原，並進行試場布置、設備測試等試務準備。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607120104.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607120104.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-12T06:07:30.000Z",
-      "displayTime": "07/12 14:07"
-    },
-    {
-      "title": "台鐵內灣線提前搶通 部分海運航線午後復航",
-      "date": "2026-07-12",
-      "category": "即時生活",
-      "summary": "颱風巴威遠離，台鐵今天表示，內灣線提前至下午2時52分恢復通行。交通部航港局指出，基隆-馬祖航線晚間正常開航，金門小三通的水頭-五通午後恢復航駛。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607120103.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607120103.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-12T06:06:28.000Z",
-      "displayTime": "07/12 14:06"
-    },
-    {
-      "title": "西南風沉降6縣市防高溫 花蓮玉里飆37.6度",
-      "date": "2026-07-12",
-      "category": "即時生活",
-      "summary": "氣象署今天表示，西南風沉降影響，新竹至彰化、花東地區防高溫，今天截至下午1時許，花蓮玉里已出現攝氏37.6度高溫。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607120102.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607120102.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-12T06:01:26.000Z",
-      "displayTime": "07/12 14:01"
-    },
-    {
-      "title": "紐約退伍軍人病疫情延燒 古根漢美術館檢出病菌",
-      "date": "2026-07-12",
-      "category": "即時生活",
-      "summary": "美國紐約市知名的古根漢美術館冷卻水塔近期被驗出含有可能導致退伍軍人病的細菌，成為曼哈頓最新一波疫情期間，多棟檢出相關細菌的建築物之一。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "summary": "中聯油脂大豆沙拉油苯駢芘超標，台中市政府今天表示，第3批超標油品1305公噸出貨給福壽、福懋油脂、泰山後，第2層流向274家業者，都已要求依規辦理下架回收。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
       "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607120099.aspx",
-      "slug": "https://www.cna.com.tw/news/aopl/202607120099.aspx",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607120120.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607120120.aspx",
       "sourceName": "中央社生活",
-      "publishedAt": "2026-07-12T05:54:19.000Z",
-      "displayTime": "07/12 13:54"
+      "publishedAt": "2026-07-12T07:25:05.000Z",
+      "displayTime": "07/12 15:25"
     },
     {
-      "title": "40床奇萊山屋8月試營運 科技藝術與環保的高山結晶",
+      "title": "女遭後方騎士搶手提包摔傷 屏警鎖定機車追緝中",
       "date": "2026-07-12",
-      "category": "即時生活",
-      "summary": "攀登奇萊山相當熱門，山屋通常不足以應付所有登山者需求，太管處新建「奇萊山屋」已完工，坐落海拔3345公尺高山，兼具現代化機能、採環保工法的中型山屋，預計8月開始試營運。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607120098.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607120098.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-12T05:53:17.000Z",
-      "displayTime": "07/12 13:53"
+      "category": "即時社會",
+      "summary": "屏東50多歲李姓女子，今天上午在內埔鄉遭一名男騎士從後方搶奪手提包，還因此跌倒擦挫傷，警方已鎖定機車查緝中。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607120119.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202607120119.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-07-12T07:16:03.000Z",
+      "displayTime": "07/12 15:16"
+    },
+    {
+      "title": "AI代寫悔過書檢認犯後態度不佳 基隆偷拍男判刑6月",
+      "date": "2026-07-12",
+      "category": "即時社會",
+      "summary": "范姓男子涉嫌偷拍裙底遭逮後，使用人工智慧（AI）撰寫悔過書，並下指令「幫我寫的（得）悔過一點」。檢察官認定范男犯後態度不佳建請從重量刑，基隆地方法院日前判處范男6個月徒刑，得易科罰金。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607120118.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202607120118.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-07-12T07:15:01.000Z",
+      "displayTime": "07/12 15:15"
     }
   ]
 }
