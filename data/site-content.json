@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-12T12:39:37.722Z"
+    "liveNewsUpdatedAt": "2026-07-12T14:14:52.004Z"
   },
   "lifeRadar": [
     {
@@ -863,6 +863,66 @@
   ],
   "liveNews": [
     {
+      "title": "新竹縣尖石鄉玉峰村及秀巒村交通受阻 7/13停班停課",
+      "date": "2026-07-12",
+      "category": "即時地方",
+      "summary": "新竹縣政府今天晚間宣布，尖石鄉玉峰村及秀巒村，因聯外道路交通受阻、供電不穩定，為顧及民眾安全，13日停班停課。（編輯：黃名璽）1150712 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607120195.aspx",
+      "slug": "https://www.cna.com.tw/news/aloc/202607120195.aspx",
+      "sourceName": "中央社地方",
+      "publishedAt": "2026-07-12T13:32:55.000Z",
+      "displayTime": "07/12 21:32"
+    },
+    {
+      "title": "台股5月勁揚 銀行股市未實現利得8770億創新高",
+      "date": "2026-07-12",
+      "category": "即時財經",
+      "summary": "台股5月單月大漲5806.31點，寫下史上最強5月表現，助攻金融業股市未實現獲利。銀行業5月債市減碼新台幣330億元，股市加碼356億元，受惠台股5月走揚近15%，帶動銀行業台股未實現利得衝上 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看脈絡，不要只看標題就跟著情緒跑。",
+      "sourceUrl": "https://www.cna.com.tw/news/afe/202607120191.aspx",
+      "slug": "https://www.cna.com.tw/news/afe/202607120191.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-12T13:11:44.000Z",
+      "displayTime": "07/12 21:11"
+    },
+    {
+      "title": "漫畫家林政德重新出發 號召YOUNG GUNS同學會",
+      "date": "2026-07-12",
+      "category": "即時生活",
+      "summary": "漫畫家林政德作品「 YOUNG GUNS」曾風靡1990年代，林政德近日開啟問卷調查，希望能試辦「YOUNG GUNS 同學會」，與漫迷面對面，他表示，這是他的「重新出發」。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/acul/202607120188.aspx",
+      "slug": "https://www.cna.com.tw/news/acul/202607120188.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-12T12:39:37.000Z",
+      "displayTime": "07/12 20:39"
+    },
+    {
+      "title": "中聯檢體是否造假 中檢：若衛福部提交資料將併查",
+      "date": "2026-07-12",
+      "category": "即時社會",
+      "summary": "衛福部長石崇良今天說，中聯油脂是否存在檢體遭調換或造假情形，將移交檢方釐清。台中地檢署表示，如果衛福部等相關機關提交相關資料，將會一併調查。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先查證再動作，急著信就容易被牽著走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607120186.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202607120186.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-07-12T12:23:31.000Z",
+      "displayTime": "07/12 20:23"
+    },
+    {
+      "title": "北市師大路行人穿越道行人遭撞命危 警偵辦查肇因",
+      "date": "2026-07-12",
+      "category": "即時社會",
+      "summary": "台北市吳姓女子和友人聚餐後行經大安區師大路行人穿越道時，遭駕駛賓士車的蔡姓男子疑不慎撞擊，當場無呼吸心跳，警消獲報協助送醫搶救，現仍顱內出血昏迷，全案依法偵辦。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202607120183.aspx",
+      "slug": "https://www.cna.com.tw/news/asoc/202607120183.aspx",
+      "sourceName": "中央社社會",
+      "publishedAt": "2026-07-12T12:11:24.000Z",
+      "displayTime": "07/12 20:11"
+    },
+    {
       "title": "颱風攪局五月天中午開唱 邀劉若英嗨飆「舞女」",
       "date": "2026-07-12",
       "category": "即時娛樂",
@@ -873,66 +933,6 @@
       "sourceName": "中央社娛樂",
       "publishedAt": "2026-07-12T11:55:18.000Z",
       "displayTime": "07/12 19:55"
-    },
-    {
-      "title": "苗可麗主持北影做足功課 舒淇稱遇陳玉勳難得獎",
-      "date": "2026-07-12",
-      "category": "即時娛樂",
-      "summary": "台北電影節頒獎典禮因颱風巴威延至今晚，主持人苗可麗期待能讓所有電影人賓至如歸；舒淇首部執導長片「女孩」將跟導演陳玉勳角逐多個獎項，她笑說，這讓她的得獎機會變渺茫。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/amov/202607120179.aspx",
-      "slug": "https://www.cna.com.tw/news/amov/202607120179.aspx",
-      "sourceName": "中央社娛樂",
-      "publishedAt": "2026-07-12T11:43:15.000Z",
-      "displayTime": "07/12 19:43"
-    },
-    {
-      "title": "金門機場近300旅客已候補返台 近500旅客仍在等待",
-      "date": "2026-07-12",
-      "category": "即時生活",
-      "summary": "颱風巴威遠離，金門海空交通陸續恢復，小三通航線今天部分復航，中轉金門返台旅客也湧入機場等待候補；截至晚間6時30分，已有近300名旅客成功候補上航班返台，目前機場有近500名旅客仍在等待候補。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607120174.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607120174.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-12T11:02:04.000Z",
-      "displayTime": "07/12 19:02"
-    },
-    {
-      "title": "颱風巴威致農損2034萬元 苗栗占逾7成最多",
-      "date": "2026-07-12",
-      "category": "即時生活",
-      "summary": "農業部統計，截至今天下午5時，颱風巴威致農損金額達新台幣2034萬元，以苗栗縣1572萬元最嚴重；若就農產品統計，受損作物主要為柿，損失金額1216萬元。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607120165.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607120165.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-12T10:20:45.000Z",
-      "displayTime": "07/12 18:20"
-    },
-    {
-      "title": "竹縣花園國小竹林分校 7/13正常上班、停止上課",
-      "date": "2026-07-12",
-      "category": "即時地方",
-      "summary": "颱風巴威釀災，新竹縣政府今天宣布，尖石鄉新光、秀巒、石磊、玉峰國小及五峰鄉桃山國小，13日停止上班、停止上課。傍晚再宣布，五峰花園國小竹林分校13日正常上班、停止上課。（編輯：李錫璋）1150 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607120162.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607120162.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-07-12T10:06:38.000Z",
-      "displayTime": "07/12 18:06"
-    },
-    {
-      "title": "颱風遠離 北市淡水河及新店溪疏散門陸續開啟",
-      "date": "2026-07-12",
-      "category": "即時地方",
-      "summary": "颱風巴威遠離，北市府今天表示，加速災後復原，傍晚5時起陸續開啟淡水河沿線淡1號桂林至淡6號敦煌疏散門，以及新店溪新3-2號華翠及新4號華江疏散門，提醒進入仍須注意安全。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607120161.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607120161.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-07-12T09:57:36.000Z",
-      "displayTime": "07/12 17:57"
     }
   ]
 }
