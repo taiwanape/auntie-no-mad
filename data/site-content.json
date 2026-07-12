@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-12T11:44:09.917Z"
+    "liveNewsUpdatedAt": "2026-07-12T12:39:37.722Z"
   },
   "lifeRadar": [
     {
@@ -863,6 +863,30 @@
   ],
   "liveNews": [
     {
+      "title": "颱風攪局五月天中午開唱 邀劉若英嗨飆「舞女」",
+      "date": "2026-07-12",
+      "category": "即時娛樂",
+      "summary": "巴威颱風攪局，五月天原訂11日的演唱會延至今天中午，難得中午開唱的五月天依舊給足粉絲驚喜，直擊控台邀請劉若英一起唱「舞女」，劉若英笑稱阿信把她高雄演唱會歌單破哏。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/amov/202607120180.aspx",
+      "slug": "https://www.cna.com.tw/news/amov/202607120180.aspx",
+      "sourceName": "中央社娛樂",
+      "publishedAt": "2026-07-12T11:55:18.000Z",
+      "displayTime": "07/12 19:55"
+    },
+    {
+      "title": "苗可麗主持北影做足功課 舒淇稱遇陳玉勳難得獎",
+      "date": "2026-07-12",
+      "category": "即時娛樂",
+      "summary": "台北電影節頒獎典禮因颱風巴威延至今晚，主持人苗可麗期待能讓所有電影人賓至如歸；舒淇首部執導長片「女孩」將跟導演陳玉勳角逐多個獎項，她笑說，這讓她的得獎機會變渺茫。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
+      "sourceUrl": "https://www.cna.com.tw/news/amov/202607120179.aspx",
+      "slug": "https://www.cna.com.tw/news/amov/202607120179.aspx",
+      "sourceName": "中央社娛樂",
+      "publishedAt": "2026-07-12T11:43:15.000Z",
+      "displayTime": "07/12 19:43"
+    },
+    {
       "title": "金門機場近300旅客已候補返台 近500旅客仍在等待",
       "date": "2026-07-12",
       "category": "即時生活",
@@ -909,30 +933,6 @@
       "sourceName": "中央社地方",
       "publishedAt": "2026-07-12T09:57:36.000Z",
       "displayTime": "07/12 17:57"
-    },
-    {
-      "title": "高雄國際街舞賽8月登場 首場K-POP快閃為大賽暖身",
-      "date": "2026-07-12",
-      "category": "即時地方",
-      "summary": "「2026雄爭舞鬥國際街舞大賽」8月將於高雄展覽館登場，市府青年局賽前規劃4場「K-POP」快閃活動，今天首場在高雄車站舉行，吸引街舞愛好者熱舞，提前為大賽暖身。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607120160.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607120160.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-07-12T09:55:34.000Z",
-      "displayTime": "07/12 17:55"
-    },
-    {
-      "title": "星宇航空空山銀首航東京 張國煒親自執飛",
-      "date": "2026-07-12",
-      "category": "即時生活",
-      "summary": "星宇航空推出的藝術機空山銀今天首航日本東京，由星宇航空董事長張國煒親自執飛，抵達東京後張國煒也請藝術家空山基親筆簽名落款。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607120157.aspx",
-      "slug": "https://www.cna.com.tw/news/ahel/202607120157.aspx",
-      "sourceName": "中央社生活",
-      "publishedAt": "2026-07-12T09:35:27.000Z",
-      "displayTime": "07/12 17:35"
     }
   ]
 }
