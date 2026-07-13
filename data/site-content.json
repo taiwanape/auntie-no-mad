@@ -5,7 +5,7 @@
     "updatedAt": "2026-06-22T07:00:00+08:00",
     "dailyNote": "看完整 2026/06/22 早晨市場筆記，把四檔分類、理由、風險和來源一次看完。",
     "dailyNoteUrl": "stocks/2026-06-22-market-watch.html",
-    "liveNewsUpdatedAt": "2026-07-12T16:34:55.771Z"
+    "liveNewsUpdatedAt": "2026-07-13T00:11:04.960Z"
   },
   "lifeRadar": [
     {
@@ -863,6 +863,30 @@
   ],
   "liveNews": [
     {
+      "title": "美伊衝突升溫 國際油價開盤漲逾3.5%",
+      "date": "2026-07-13",
+      "category": "即時財經",
+      "summary": "由於美國對伊朗發動一波攻擊，且德黑蘭當局宣布將關閉荷莫茲海峽（Strait of Hormuz），國際油價今天開盤大幅走高。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/aopl/202607130012.aspx",
+      "slug": "https://www.cna.com.tw/news/aopl/202607130012.aspx",
+      "sourceName": "中央社產經證券",
+      "publishedAt": "2026-07-12T23:15:14.000Z",
+      "displayTime": "07/13 07:15"
+    },
+    {
+      "title": "苗栗南庄道路中斷 東河村7/13停班停課",
+      "date": "2026-07-13",
+      "category": "即時生活",
+      "summary": "苗栗縣政府表示，晚間接獲南庄鄉公所緊急通報，因南庄鄉東河村往石壁方向（苗21線）道路中斷搶修中，百餘人受困無法通行，13日南庄鄉東河村範圍停止上班上課。（編輯：陳正健）1150712 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607120211.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607120211.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-12T15:26:32.000Z",
+      "displayTime": "07/12 23:26"
+    },
+    {
       "title": "台中沙鹿男子涉酒駕 撞3汽機車致6人受傷",
       "date": "2026-07-13",
       "category": "即時社會",
@@ -875,6 +899,30 @@
       "displayTime": "07/12 23:16"
     },
     {
+      "title": "台芬文化節赫爾辛基登場 音樂結合夜市美食人潮爆滿",
+      "date": "2026-07-13",
+      "category": "即時生活",
+      "summary": "第二屆「F:F:F-Formosa : Finland : Fest.」台芬文化節近日於赫爾辛基登場，不僅以夜市美食與多元音樂吸引爆滿人潮，更成功讓芬蘭各界參與文化活動，並用充滿歡樂的形式深化 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202607120208.aspx",
+      "slug": "https://www.cna.com.tw/news/ahel/202607120208.aspx",
+      "sourceName": "中央社生活",
+      "publishedAt": "2026-07-12T15:13:26.000Z",
+      "displayTime": "07/12 23:13"
+    },
+    {
+      "title": "2026北影評審共識度高 柯煒林差一票惜敗劉冠廷",
+      "date": "2026-07-13",
+      "category": "即時娛樂",
+      "summary": "台北電影獎今晚落幕，台北電影節總監李亞梅跟評審團主席黃建業表示，此次評審團共識度高且是近年最快結束的會議，男主角方面則是「大濛」柯煒林差一票敗給「雙囍」劉冠廷。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
+      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
+      "sourceUrl": "https://www.cna.com.tw/news/amov/202607120207.aspx",
+      "slug": "https://www.cna.com.tw/news/amov/202607120207.aspx",
+      "sourceName": "中央社娛樂",
+      "publishedAt": "2026-07-12T15:02:24.000Z",
+      "displayTime": "07/12 23:02"
+    },
+    {
       "title": "新北市長選舉李四川勤拜廟 蘇巧慧要讓三峽升級",
       "date": "2026-07-13",
       "category": "即時地方",
@@ -885,54 +933,6 @@
       "sourceName": "中央社地方",
       "publishedAt": "2026-07-12T15:00:22.000Z",
       "displayTime": "07/12 23:00"
-    },
-    {
-      "title": "五月天一天瘋狂唱2場 找草蜢嗨跳「忘情森巴舞」",
-      "date": "2026-07-13",
-      "category": "即時娛樂",
-      "summary": "樂團五月天一天舉辦2場演唱會，總計在小巨蛋嗨唱近7小時，今晚找來殿堂級唱跳天團草蜢一起嗨跳「忘情森巴舞」、「派對動物」，也當場請益成軍41年的草蜢怎麼維繫感情。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/amov/202607120204.aspx",
-      "slug": "https://www.cna.com.tw/news/amov/202607120204.aspx",
-      "sourceName": "中央社娛樂",
-      "publishedAt": "2026-07-12T14:47:15.000Z",
-      "displayTime": "07/12 22:47"
-    },
-    {
-      "title": "劉冠廷摘北影影帝淚謝太太孫可芳 林怡婷封影后",
-      "date": "2026-07-13",
-      "category": "即時娛樂",
-      "summary": "台北電影節今晚在中山堂落幕，林怡婷封影后後勉勵追夢的人永遠別放棄做喜愛的事；劉冠廷斬獲影帝後感謝演員太太孫可芳支持，「獨奏者之舞」抱回壓軸百萬首獎和最佳紀錄片。 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "新聞很多，先抓重點，不要被標題牽著鼻子走。",
-      "sourceUrl": "https://www.cna.com.tw/news/amov/202607120201.aspx",
-      "slug": "https://www.cna.com.tw/news/amov/202607120201.aspx",
-      "sourceName": "中央社娛樂",
-      "publishedAt": "2026-07-12T14:24:09.000Z",
-      "displayTime": "07/12 22:24"
-    },
-    {
-      "title": "颱風巴威災後復原 新竹縣五峰鄉7/13停班停課",
-      "date": "2026-07-13",
-      "category": "即時地方",
-      "summary": "新竹縣政府今天晚間宣布，受颱風巴威影響，五峰鄉主要道路尚未完成清整，部分電力未恢復，為維護鄉親安全及利於災後復原作業，新竹縣五峰鄉13日停班停課。（編輯：黃名璽）1150712 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607120199.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607120199.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-07-12T14:16:04.000Z",
-      "displayTime": "07/12 22:16"
-    },
-    {
-      "title": "新竹縣尖石鄉玉峰村及秀巒村交通受阻 7/13停班停課",
-      "date": "2026-07-13",
-      "category": "即時地方",
-      "summary": "新竹縣政府今天晚間宣布，尖石鄉玉峰村及秀巒村，因聯外道路交通受阻、供電不穩定，為顧及民眾安全，13日停班停課。（編輯：黃名璽）1150712 阿姨提醒：先看來源，再看這件事跟你有沒有關係。",
-      "auntieComment": "先看會不會影響今天出門，其他等下再煩。",
-      "sourceUrl": "https://www.cna.com.tw/news/aloc/202607120195.aspx",
-      "slug": "https://www.cna.com.tw/news/aloc/202607120195.aspx",
-      "sourceName": "中央社地方",
-      "publishedAt": "2026-07-12T13:32:55.000Z",
-      "displayTime": "07/12 21:32"
     }
   ]
 }
