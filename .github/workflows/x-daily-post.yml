@@ -1,9 +1,6 @@
 name: X Daily Post
 
 on:
-  schedule:
-    # 06:45 Asia/Taipei. GitHub cron is UTC.
-    - cron: "45 22 * * *"
   workflow_dispatch:
 
 permissions:
