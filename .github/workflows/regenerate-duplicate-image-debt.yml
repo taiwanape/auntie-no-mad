@@ -33,6 +33,8 @@ concurrency:
 
 jobs:
   regenerate:
+    # Billing safety: keep paid image regeneration inert while the project is paused.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

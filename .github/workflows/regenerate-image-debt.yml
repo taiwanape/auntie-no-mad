@@ -32,6 +32,8 @@ concurrency:
 
 jobs:
   regenerate:
+    # Billing safety: keep paid image regeneration inert while the project is paused.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     env:
       GENERATE_DAILY_IMAGES: "true"

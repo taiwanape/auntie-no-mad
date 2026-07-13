@@ -21,6 +21,8 @@ env:
 
 jobs:
   daily-update:
+    # Billing safety: keep the workflow inert while the project is paused.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     environment:
