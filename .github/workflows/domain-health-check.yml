@@ -1,9 +1,7 @@
 name: Domain Health Check
 
 on:
-  schedule:
-    # Recheck custom-domain HTTPS every 3 hours while GitHub Pages is provisioning the cert.
-    - cron: "17 */3 * * *"
+  # Project paused on 2026-07-13. Manual runs only.
   workflow_dispatch:
 
 permissions:

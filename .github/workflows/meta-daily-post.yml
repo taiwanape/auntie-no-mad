@@ -1,9 +1,7 @@
 name: Meta Daily Post
 
 on:
-  schedule:
-    # 07:15 Asia/Taipei. GitHub cron is UTC.
-    - cron: "15 23 * * *"
+  # Project paused on 2026-07-13. Manual runs only; no automatic social posting.
   workflow_dispatch:
     inputs:
       post:

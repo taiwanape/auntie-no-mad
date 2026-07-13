@@ -1,9 +1,7 @@
 name: Ops Health Check
 
 on:
-  schedule:
-    # 08:15 Asia/Taipei. GitHub cron is UTC.
-    - cron: "15 0 * * *"
+  # Project paused on 2026-07-13. Manual runs only.
   workflow_dispatch:
 
 permissions:

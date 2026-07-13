@@ -1,9 +1,7 @@
 name: Live News Update
 
 on:
-  schedule:
-    # About every 30 minutes from 07:17 to 23:47 Asia/Taipei, shifted off busy :00/:30 minutes.
-    - cron: "17,47 23,0-15 * * *"
+  # Project paused on 2026-07-13. Manual runs only.
   workflow_dispatch:
 
 permissions:

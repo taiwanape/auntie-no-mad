@@ -1,13 +1,7 @@
 name: Daily Auntie Update
 
 on:
-  schedule:
-    # 04:00 Asia/Taipei. GitHub cron is UTC; this leaves room for GitHub queue delays before 07:00.
-    - cron: "0 20 * * *"
-    # 05:00 Asia/Taipei retry. GitHub schedules can be delayed or skipped under load.
-    - cron: "0 21 * * *"
-    # 06:00 Asia/Taipei backup run in case GitHub's first scheduled run is delayed or skipped.
-    - cron: "0 22 * * *"
+  # Project paused on 2026-07-13. Manual runs only; no automatic API usage.
   workflow_dispatch:
     inputs:
       publish:
